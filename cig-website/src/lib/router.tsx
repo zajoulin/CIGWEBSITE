@@ -120,8 +120,7 @@ export const A = ({
       className={className}
       aria-label={ariaLabel}
       title={title}
-      onClick={(e: MouseEvent & { metaKey: boolean; ctrlKey: boolean; shiftKey: boolean; button: number; preventDefault: () => void }) => {
-        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+onClick={(e: any) => {        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
         e.preventDefault();
         onClick?.();
         router.navigate(href);
