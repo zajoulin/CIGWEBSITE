@@ -191,3 +191,4 @@ export const EcgPage = () => {
     </>
   );
 };
+export default EcgPage;

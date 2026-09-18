@@ -18,6 +18,7 @@ import { Chip } from '../components/ui/primitives';
 import { Glossary } from '../components/research/Glossary';
 import { KeyPointsGrid } from '../components/research/KeyPoints';
 import { contentStats, org } from '../lib/content';
+import LearnResourcePages from '../../app/_client/KeyPoints';
 
 /** The shared Learning Hub resource header: crest, breadcrumb back to the Hub, title. */
 const ResourceHead = ({
@@ -149,3 +150,4 @@ export const KeyPointsPage = () => {
     </>
   );
 };
+export default LearnResourcePages;

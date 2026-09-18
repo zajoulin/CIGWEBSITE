@@ -139,3 +139,4 @@ export const ExaminationPage = () => {
     </>
   );
 };
+export default ExaminationPage;

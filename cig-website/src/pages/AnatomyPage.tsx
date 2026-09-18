@@ -367,3 +367,4 @@ export const AnatomyPage = () => {
     </>
   );
 };
+export default AnatomyPage;

@@ -546,3 +546,6 @@ export const NotFoundPage = ({ path }: { path: string }) => (
     />
   </div>
 );
+export default function Pages() {
+  return null;
+}
