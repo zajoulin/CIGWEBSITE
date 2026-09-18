@@ -1,0 +1,775 @@
+[
+  {
+    "id": "president",
+    "name": "Sondos Al-Qadi",
+    "position": "President",
+    "role": "president",
+    "teamId": null,
+    "photo": "/brand/Sondos Image.jpg",
+    "bio": "5th-year medical student passionate about cardiology and clinical research. President of CIG-BAU, focusing on education, research, and student engagement.",
+    "academicInterests": [
+      "Medical education",
+      "Clinical research",
+      "Leadership"
+    ],
+    "cardiovascularInterests": [
+      "Interventional cardiology",
+      "Advanced cardiac imaging",
+      "Pediatric Cardiology"
+    ],
+    "year": "5th Year",
+    "socials": {
+      "email": "sondosalqadii1@gmail.com",
+      "x": "https://x.com/sondosalqadi_?s=11"
+    },
+    "placeholder": false
+  },
+  {
+    "id": "vice-president-1",
+    "name": "Fayez Zedat",
+    "position": "Vice President",
+    "role": "vice-president",
+    "teamId": null,
+    "photo": "/brand/Fayez1.png",
+    "bio": "I'm a 4th-year medical student at Al-Balqa Applied University in Jordan. Cardiology drew me in through research, building predictive models on real data, like Jordan's Hakeem system, for conditions like AF and heart failure, rather than just describing them. With CIG-BAU, I built our hull structure for projects and the leadership platform, planned the restructuring of our committees and project teams, and grew our membership past 300 medicine students through advertising, engagement events, and perks.",
+    "academicInterests": [
+      "Medical education",
+      "Student leadership",
+      "Clinical research"
+    ],
+    "cardiovascularInterests": [
+      "AI-assisted predictive modeling in cardiology",
+      "Interventional cardiology",
+      "Atrial fibrillation."
+    ],
+    "year": "4th Year",
+    "socials": {
+      "email": "Fayezzedat@gmail.com",
+      "x": "https://x.com/Fayez_Zedat"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "vice-president-2",
+    "name": "Georgette Kharman",
+    "position": "Vice President",
+    "role": "vice-president",
+    "teamId": null,
+    "photo": "/brand/Georgette1.png",
+    "bio": "I am a fourth-year medical student at Al-Balqa Applied University, and my interest in cardiovascular medicine has grown through discovering how diverse and impactful the field can be, from prevention and patient education to clinical care and intervention. My journey with CIG-BAU, from Committee Leader to Head of Medical Education and now Vice President, has allowed me to turn that interest into meaningful experiences by leading and organizing educational events, awareness initiatives, conferences, and opportunities that bring medical students closer to the field of cardiology.",
+    "academicInterests": [
+      "Medical Education",
+      "Clinical Research",
+      "Leadership"
+    ],
+    "cardiovascularInterests": [
+      "Pediatric Cardiology",
+      "Congenital Heart Disease",
+      "Cardio-Oncology"
+    ],
+    "year": "4th Year",
+    "socials": {
+      "email": "georgette.kh4973@gmail.com",
+      "x": "https://x.com/Georgette174969"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "head-medical",
+    "name": "Joelle Kharman",
+    "position": "Head — Medical Team",
+    "role": "team-head",
+    "teamId": "Medical",
+    "photo": "/brand/Joelle1.png",
+    "bio": "I am a second-year medical student and currently serve as the Head of the Medical Education and Workshop Committee in CIG. What drew me to cardiovascular medicine is how central the heart is to nearly every aspect of the body, and how understanding it combines physiology, clinical reasoning, prevention, and patient care. Through CIG, I contribute by developing educational initiatives, organizing workshops and awareness activities, and creating engaging opportunities for medical students.",
+    "academicInterests": [
+      "Medical education",
+      "Research",
+      "Peer-assisted learning"
+    ],
+    "cardiovascularInterests": [
+      "Interventional Cardiology",
+      "Preventive Cardiology & Cardiovascular Risk Reduction",
+      "Cardiac Electrophysiology & Arrhythmias"
+    ],
+    "year": "2nd year",
+    "socials": {
+      "email": "joelle.khrmn@gmail.com",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-edu-1",
+    "name": "Mohammad Alazzam",
+    "position": "Medical team member",
+    "role": "member",
+    "teamId": "Medical",
+    "photo": "/brand/Azzam.png",
+    "bio": " am a fourth-year medical student at Al-Balqa Applied University with a strong interest in cardiovascular diseases and cardiovascular health awareness. Through my involvement in CIG, I aim to contribute to raising awareness about cardiovascular diseases, promoting prevention, and making reliable health information more accessible to the community.",
+    "academicInterests": [
+      "Public Health",
+      "Student Leadership",
+      "Medical education"
+    ],
+    "cardiovascularInterests": [
+      "Cardiovascular Disease",
+      "Preventive Cardiology",
+      "Cardiovascular Health Awareness"
+    ],
+    "year": "4th Year",
+    "socials": {
+      "email": "alazzamm32@gmail.com",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-edu-2",
+    "name": "Shahed Nassar",
+    "position": "Medical team member",
+    "role": "member",
+    "teamId": "Medical",
+    "photo": null,
+    "bio": "I am a sixth-year medical student passionate about cardiovascular medicine, medical education, and student engagement. Through the Cardiology Interest Group, with the aim of making cardiovascular knowledge more accessible and engaging for students and the wider community.",
+    "academicInterests": [
+      "Medical Education",
+      "Educational Workshops",
+      "Clinical Research"
+    ],
+    "cardiovascularInterests": [
+      "Preventive Cardiology",
+      "Cardiovascular Risk Factors",
+      "Interventional Cardiology"
+    ],
+    "year": "6th Year",
+    "socials": {
+      "email": "Shahednassar220@gmail.com",
+      "x": ""
+    },
+    "placeholder": false
+  },
+  {
+    "id": "m-edu-3",
+    "name": "Islam Jarrar",
+    "position": "Medical team member",
+    "role": "member",
+    "teamId": "Medical",
+    "photo": "/brand/Islam1.png",
+    "bio": "I am a second-year first-generation medical student, currently part of the Medical Education & Workshops team with the Cardiology Interest Group (CIG). I was drawn to cardiovascular medicine by the heart's remarkable paradox ,a small organ carrying an outsized role in sustaining life. Through CIG, I have helped organize educational booths, attended a scientific session alongside CIG, and took part in organizing and spreading awareness on heart disease risk factors with fellow members in our most recent activity.",
+    "academicInterests": [
+      "Clinical research",
+      "Medical education",
+      "Student leadership"
+    ],
+    "cardiovascularInterests": [
+      "Preventive cardiology",
+      "Cardiac rehabilitation"
+      
+
+    ],
+    "year": "2nd Year",
+    "socials": {
+      "email": "IslamJarrar26@gmail.com",
+      "x": "https://x.com/IslamJarrar_"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-edu-4",
+    "name": "Mohammad Eid",
+    "position": "Medical team member",
+    "role": "member",
+    "teamId": "Medical",
+    "photo": null,
+    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "academicInterests": [
+      "Clinical reasoning",
+      "Curriculum design",
+      "Assessment design"
+    ],
+    "cardiovascularInterests": [
+      "Cardiac physiology",
+      "Cardiovascular pharmacology",
+      "Cardiac anatomy"
+    ],
+    "year": "Year — placeholder",
+    "socials": {
+      "email": "",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "head-research",
+    "name": "Bana Al-Kilani",
+    "position": "Head — Research Team",
+    "role": "team-head",
+    "teamId": "research",
+    "photo": null,
+    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "academicInterests": [
+      "Clinical research methods",
+      "Biostatistics",
+      "Evidence-based medicine"
+    ],
+    "cardiovascularInterests": [
+      "Preventive cardiology",
+      "Heart failure outcomes",
+      "Cardiovascular epidemiology"
+    ],
+    "year": "Year — placeholder",
+    "socials": {
+      "email": "",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-res-1",
+    "name": "Rahaf Al-Mahdi",
+    "position": "Research Team Member",
+    "role": "member",
+    "teamId": "research",
+    "photo": null,
+    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "academicInterests": [
+      "Biostatistics",
+      "Epidemiology",
+      "Clinical research methods"
+    ],
+    "cardiovascularInterests": [
+      "Cardiovascular epidemiology",
+      "Arrhythmia research",
+      "Heart failure outcomes"
+    ],
+    "year": "Year — placeholder",
+    "socials": {
+      "email": "",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-res-2",
+    "name": "Yumna Al-Krarha",
+    "position": "Research Team Member",
+    "role": "member",
+    "teamId": "research",
+    "photo": null,
+    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "academicInterests": [
+      "Evidence-based medicine",
+      "Systematic review methodology",
+      "Biostatistics"
+    ],
+    "cardiovascularInterests": [
+      "Cardiac imaging research",
+      "Preventive cardiology",
+      "Cardiovascular epidemiology"
+    ],
+    "year": "Year — placeholder",
+    "socials": {
+      "email": "",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-res-3",
+    "name": "Jwan Sallam",
+    "position": "Research Team Member",
+    "role": "member",
+    "teamId": "research",
+    "photo": null,
+    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "academicInterests": [
+      "Epidemiology",
+      "Clinical research methods",
+      "Evidence-based medicine"
+    ],
+    "cardiovascularInterests": [
+      "Arrhythmia research",
+      "Heart failure outcomes",
+      "Cardiac imaging research"
+    ],
+    "year": "Year — placeholder",
+    "socials": {
+      "email": "",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-res-4",
+    "name": "Mohammad Braizat",
+    "position": "Research Team Member",
+    "role": "member",
+    "teamId": "research",
+    "photo": "/brand/Braizat1.png",
+    "bio": "I'm a 5th-year medical student with a strong interest in cardiovascular medicine and clinical research. I’m actively involved in CIG-BAU, contributing to research activities, student education, and initiatives that help medical students explore and engage with cardiology.",
+    "academicInterests": [
+      "Medical Education",
+      "Evidence-Based Medicine",
+      "Clinical Research"
+    ],
+    "cardiovascularInterests": [
+      "Interventional Cardiology",
+      "Heart Failure"
+    ],
+    "year": "5th Year",
+    "socials": {
+      "email": "braizatdode@gmail.com",
+      "x": "https://x.com/mohalbraizat?s=11/"
+    },
+    "placeholder": false
+  },
+  {
+    "id": "head-Planning",
+    "name": "Mamoon Issa",
+    "position": "Head — Planning Team",
+    "role": "team-head",
+    "teamId": "Planning",
+    "photo": null,
+    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "academicInterests": [
+      "Programme design",
+      "Student engagement",
+      "Conference organisation"
+    ],
+    "cardiovascularInterests": [
+      "Interventional cardiology",
+      "Cardiac surgery",
+      "Emergency cardiology"
+    ],
+    "year": "Year — placeholder",
+    "socials": {
+      "email": "",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-pln-1",
+    "name": "Tala Anaqreh",
+    "position": "Planning Team Member",
+    "role": "member",
+    "teamId": "Planning",
+    "photo": "/brand/Tala1.png",
+    "bio": "Im a rising second year medical student, I have been part of the CIG team since february 2026, I was previously part of the Medical Education committee, and I am currently a leader in the Planning and Team management committee. After noticing the prevalence of cardiovascular disease in our community, I became more interested in cardiology.",
+    "academicInterests": [
+      "Clinical Research",
+      "Team work and management",
+      "Clinical exposure"
+    ],
+    "cardiovascularInterests": [
+      "Prevention and risk factors",
+      "Digital health and AI",
+      "Heart failure"
+    ],
+    "year": "2nd Year",
+    "socials": {
+      "email": "tanagreh@gmail.com",
+      "x": "https://x.com/talaanaqreh?s=11"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-pln-2",
+    "name": "Abdullah Jarrah",
+    "position": "Planning Team Member",
+    "role": "member",
+    "teamId": "Planning",
+    "photo": "/brand/Abdallah1.png",
+    "bio": "Second year medical student with a growing interest in cardiovascular medicine, particularly the importance of maintaining cardiovascular health through prevention and healthy lifestyle choices. Fascinated by the heart’s essential role in the body and advancements in cardiovascular medicine, currently contributing to the Cardiovascular Interest Group as a leader in team planning and management and active involvements in CIG projects.",
+    "academicInterests": [
+      "Medical education",
+      "Surgical sciences",
+      "Clinical research"
+    ],
+    "cardiovascularInterests": [
+      "Heart failure and transplant cardiology",
+      "Interventional cardiology",
+      "Paediatric cardiology"
+    ],
+    "year": "2nd Year",
+    "socials": {
+      "email": "jarrah.aboode@gmail.com",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-pln-3",
+    "name": "Mira MohammadAli",
+    "position": "Planning Team Member",
+    "role": "member",
+    "teamId": "Planning",
+    "photo": "brand/Mira1.png",
+    "bio": "I am a third-year medical student with a growing interest in cardiovascular medicine, drawn to the field’s depth, complexity, and the fascinating interplay between physiology and clinical practice. As part of CIG’s Planning & Team Management Team, I hope to contribute to meaningful initiatives that provide students with diverse opportunities to learn, engage, volunteer, and connect with both the medical community and the wider community, while continuing to grow within the field of cardiology.",
+    "academicInterests": [
+      "Medical Education",
+      "Clinical Research",
+      "Student Leadership"
+    ],
+    "cardiovascularInterests": [
+      "Preventive Cardiology",
+      "Cardiovascular Pharmacology",
+      "Interventional Cardiology"
+    ],
+    "year": "3rd Year",
+    "socials": {
+      "email": "mira.42006@gmail.com",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-pln-4",
+    "name": "Linda Khreisat",
+    "position": "Planning Team Member",
+    "role": "member",
+    "teamId": "Planning",
+    "photo": null,
+    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "academicInterests": [
+      "Simulation",
+      "Student engagement",
+      "Interprofessional education"
+    ],
+    "cardiovascularInterests": [
+      "Interventional cardiology",
+      "Emergency cardiology",
+      "Congenital heart disease"
+    ],
+    "year": "Year — placeholder",
+    "socials": {
+      "email": "",
+      "x": ""
+    },
+    "placeholder": true
+  },
+{
+  "id": "head-media",
+  "name": "Zaid Ajoulin",
+  "position": "Head — Social Media Team",
+  "role": "team-head",
+  "teamId": "Social Media",
+  "photo": "/brand/ZAID.png",
+  "bio": "I am a creator and strategist passionate about using short-form video, AI technology, and visual design to translate complex ideas into clear, high-yield content. As Head of Social Media, I oversee CIG’s digital presence to build a dynamic, modern learning community for medical students.",
+  "academicInterests": [
+    "Medical illustration",
+    "Extended Reality (VR/AR) in Medicine",
+    "Leadership"
+  ],
+  "cardiovascularInterests": [
+    "Interventional Cardiology",
+    "Cardio-Oncology",
+    "Cardiac Surgery"
+  ],
+  "year": "3rd Year",
+  "socials": {
+    "email": "zajoulin@gmail.com",
+    "x": "https://x.com/zaiddajoulinn?s=11&t=HWHTqzfHEkPBNMKhCTneuA"
+  },
+  "placeholder": true
+},
+  {
+    "id": "m-med-1",
+    "name": "Jehad Taha",
+    "position": "Media Team Member",
+    "role": "member",
+    "teamId": "media",
+    "photo": "/brand/Jehad1.png",
+    "bio": "I am a third-year medical student with a growing interest in cardiovascular medicine and a passion for understanding the clinical and scientific aspects of cardiovascular disease. Through my involvement in CIG, I aim to contribute to student education, cardiovascular awareness, and research while developing my skills and learning alongside colleagues who share the same interest.",
+    "academicInterests": [
+      "Clinical Research",
+      "Medical Education",
+      "Student Leadership"
+    ],
+    "cardiovascularInterests": [
+      "Interventional Cardiology",
+      "Cardiovascular Prevention",
+      "Heart Failure"
+    ],
+    "year": "3rd Year",
+    "socials": {
+      "email": "Jihad_taha@icloud.com",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-med-2",
+    "name": "Dina Al-Dabbas",
+    "position": "Media Team Member",
+    "role": "member",
+    "teamId": "media",
+    "photo": "/brand/Dina1.png",
+    "bio": "I’m a fifth year medical student with a strong interest in cardiology . As part of CIG’s social media team , I contribute to creating engaging content and promoting the group’s activities.",
+    "academicInterests": [
+      "cardiology & cardiovascular medicine.",
+      "Surgery & procedural medicine",
+      "Medical research."
+    ],
+    "cardiovascularInterests": [
+      "interventional cardiology",
+      "Cardio thoracic surgery ",
+      "Public health cardiology"
+    ],
+    "year": "5th Year",
+    "socials": {
+      "email": "dina.aldabbas2@gmail.com",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-med-3",
+    "name": "Lamar Abu Draia",
+    "position": "Media Team Member",
+    "role": "member",
+    "teamId": "media",
+    "photo": "/brand/Lamar1.png",
+    "bio": "I'm a second year student with a growing interest in raising awareness on cardiovascular diseases. Im currently a leader in the social media team",
+    "academicInterests": [
+      "Clinical research",
+      "medical education. "
+      
+    ],
+    "cardiovascularInterests": [
+      
+    ],
+    "year": "2nd Year",
+    "socials": {
+      "email": "lamar237@icloud.com",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-med-4",
+    "name": "Alaa Ayasrah",
+    "position": "Media Team Member",
+    "role": "member",
+    "teamId": "media",
+    "photo": "/brand/Alaa1.png",
+    "bio": "In every student is an interest in CV health. I decided to join the CIG social media team in an attempt to raise awareness and document events regarding CV health.",
+    "academicInterests": [
+      "Leadership",
+      "Learning and Understanding"
+    ],
+    "cardiovascularInterests": [
+      "Interventional Cardiology",
+      "Highly Invasive Surgical Procedures"
+    ],
+    "year": "2nd Year",
+    "socials": {
+      "email": "aayasrah.2007@gmail.com",
+      "x": "https://x.com/alaayasrah07?s=11"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "head-Journal",
+    "name": "Aseel Al-Dabbas",
+    "position": "Head — Journal Team",
+    "role": "team-head",
+    "teamId": "Journal",
+    "photo": "/brand/Aseel1.png",
+    "bio": "I’m a third year medical student , the head of the journal club committee at CIG BAU , my role reflects my interest in spreading knowledge between medical and non medical population on recent cardiovascular research outcomes and new guidelines.",
+    "academicInterests": [
+      "Leadership",
+      "Medical Research",
+      "Youth Advocacy"
+    ],
+    "cardiovascularInterests": [
+      "Interventional Cardiology",
+      "Catheter Procedures",
+      "EP"
+    ],
+    "year": "3rd Year",
+    "socials": {
+      "email": "aseeldabbas200@gmail.com",
+      "x": "https://x.com/aseeldabbas200?s=11"
+    },
+    "placeholder": false
+  },
+  {
+    "id": "m-jnl-1",
+    "name": "Osama Tarifi",
+    "position": "Journal Team Member",
+    "role": "member",
+    "teamId": "Journal",
+    "photo": null,
+    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "academicInterests": [
+      "Simulation-based education",
+      "Resuscitation",
+      "Clinical skills teaching"
+    ],
+    "cardiovascularInterests": [
+      "Acute coronary syndromes",
+      "Critical care cardiology",
+      "Echocardiography"
+    ],
+    "year": "Year — placeholder",
+    "socials": {
+      "email": "",
+      "x": ""
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-jnl-2",
+    "name": "Raneem Omar",
+    "position": "Journal Team Member",
+    "role": "member",
+    "teamId": "Journal",
+    "photo": "/brand/Raneem1.png",
+    "bio": "As a fifth-year medical student, my passion for cardiovascular medicine stems from a deep interest in diagnostic reasoning and the complex interplay of Cardiorenal Medicine, particularly cardiovascular disease in CKD patients. I am actively involved in clinical research and medical education, aiming to bridge evidence-based practice with compassionate patient care. Through my work with CIG, I contribute to raising cardiovascular health awareness and fostering peer-to-peer clinical engagement",
+    "academicInterests": [
+      "Clinical Research",
+      "Medical Education",
+      "Student Leadership"
+    ],
+    "cardiovascularInterests": [
+      "Cardiorenal Syndrome & CVD in CKD Patients",
+      "Preventive Cardiology",
+      "Heart Failure & Diagnostic Reasoning"
+    ],
+    "year": "5th Year",
+    "socials": {
+      "email": "RaneemRyalat2020@gmail.com",
+      "x": "https://x.com/Raneemomarabd"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-jnl-3",
+    "name": "Afnan Hasan",
+    "position": "Journal Team Member",
+    "role": "member",
+    "teamId": "Journal",
+    "photo": "/brand/Afnan1.png",
+    "bio": "Third-year medical student with a growing interest in cardiovascular medicine, particularly the intersection of clinical care and research. Through CIG, I hope to contribute to collaborative research, expand my clinical knowledge, and engage in initiatives that promote cardiovascular health and medical education.",
+    "academicInterests": [
+      "Clinical Research",
+      "Medical Education",
+      "Student Leadership"
+    ],
+    "cardiovascularInterests": [
+      "Preventive Cardiology",
+      "Cardiovascular Research",
+      "Clinical Cardiology"
+    ],
+    "year": "3rd Year",
+    "socials": {
+      "email": "afnan.a.asad2006@gmail.com",
+      "x": "https://x.com/Afnan_Hasan123"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-jnl-4",
+    "name": "Hala Arbeat",
+    "position": "Journal Team Member",
+    "role": "member",
+    "teamId": "Journal",
+    "photo": "/brand/Hala1.png",
+    "bio": "I am a third-year medical student with a growing interest in cardiovascular medicine, drawn to the complexity of the cardiovascular system and its broad impact across different areas of medicine. Through CIG, I hope to contribute to journal club activities and research while further developing my skills in scientific discussion, teamwork, and collaboration.",
+    "academicInterests": [
+      "Clinical Research",
+      "Health Education",
+      "Scientific Communication"
+    ],
+    "cardiovascularInterests": [
+      "Women’s Cardiovascular Health",
+      "Preventive Cardiology",
+      "Cardiovascular Research"
+    ],
+    "year": "3rd Year",
+    "socials": {
+      "email": "halaarbeat323@gmail.com",
+      "x": "https://x.com/halaarbeat06?s=11"
+    },
+    "placeholder": false
+  },
+  {
+    "id": "head-Affairs",
+    "name": "Aya Damlakhi",
+    "position": "Head — Affairs",
+    "role": "team-head",
+    "teamId": "Affairs",
+    "photo": "/brand/Aya1.png",
+    "bio": "I am a fifth-year medical student at Al-Balqa Applied University with a strong interest in cardiovascular medicine. My interest in cardiology has grown through clinical exposure, research, and my active involvement in CIG-BAU, where I contribute to organizing educational initiatives, fostering academic collaboration, and promoting cardiovascular health awareness.",
+    "academicInterests": [
+      "Medical education",
+      "Clinical research"
+    ],
+    "cardiovascularInterests": [
+      "Interventional Cardiology",
+      "Heart Failure",
+      "Acute Coronary Syndromes (ACS)"
+
+    ],
+    "year": "5th Year",
+    "socials": {
+      "email": "Ayaryad299@gmail.com",
+      "x": "https://x.com/Ayadamlakhi30"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "m-Affairs-1",
+    "name": "Ibrahim Maaliah",
+    "position": "Affairs Team Member",
+    "role": "member",
+    "teamId": "Affairs",
+    "photo": "/brand/Ibrahim1.png",
+    "bio": "Im a second-year medical student with a strong interest in cardiovascular medicine and a passion for expanding my knowledge in the field. As a member of the Affairs Team, I have built valuable connections with numerous doctors and healthcare professionals. I believe that learning is a collective journey, enriched by sharing knowledge, experiences, and perspectives with others",
+    "academicInterests": [
+      "Voluntary work",
+      "Medical education",
+      "Clinical research"
+    ],
+    "cardiovascularInterests": [
+      "Heart Failure",
+      "Interventional Cardiology"
+      
+    ],
+    "year": "2nd Year",
+    "socials": {
+      "email": "maaliahibrahim@gmail.com",
+      "x": ""
+    },
+    "placeholder": true
+  } ,
+ 
+{
+"id": "head-FRC",
+    "name": "Yazeed Al-Shareef",
+    "position": "Head — FRC",
+    "role": "team-head",
+    "teamId": "FRC",
+    "photo": "/brand/Yazeed1.png",
+    "bio": "I am a fourth-year medical student with a strong interest in cardiovascular medicine and clinical research. My interest in cardiology developed through studying cardiovascular physiology and disease mechanisms, as well as participating in academic and research activities. Within CIG, I contribute to organizational and financial initiatives, sponsorship development, and supporting research-related projects and events.",
+    "academicInterests": [
+      "Clinical Research",
+      "Healthcare Management",
+      "Medical Education"
+    ],
+    "cardiovascularInterests": [
+      "Cardiovascular Pharmacology",
+      "Heart Failure",
+      "Preventive Cardiology"
+
+    ],
+    "year": "4th Year",
+    "socials": {
+      "email": "yazeed@alshareef-est.com",
+      "x": "https://x.com/yazeedalshareef?s=11"
+    },
+    "placeholder": true
+}
+]

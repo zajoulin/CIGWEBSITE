@@ -1,0 +1,146 @@
+[
+  {
+    "id": "place-v1",
+    "mode": "leads",
+    "prompt": "Place V1.",
+    "targetId": "v1",
+    "successText": "Correct — V1 sits in the fourth intercostal space at the right sternal border, counted down from the sternal angle.",
+    "failText": "Not quite. Find the sternal angle, identify the second rib, then count down to the fourth space and stay immediately to the right of the sternum.",
+    "hint": "Right side of the sternum, fourth intercostal space.",
+    "difficulty": "core"
+  },
+  {
+    "id": "place-v4",
+    "mode": "leads",
+    "prompt": "Place V4.",
+    "targetId": "v4",
+    "successText": "Correct — V4 goes in the fifth intercostal space at the left midclavicular line, over the cardiac apex. V5 and V6 are then placed on its horizontal level.",
+    "failText": "Not quite. Drop a vertical line from the midpoint of the left clavicle and follow the fifth intercostal space out to meet it — one space below V1 and V2, not the same one.",
+    "hint": "Fifth space, where it crosses the midclavicular line.",
+    "difficulty": "core"
+  },
+  {
+    "id": "place-v6",
+    "mode": "leads",
+    "prompt": "Place V6.",
+    "targetId": "v6",
+    "successText": "Correct — V6 sits at the left mid-axillary line, horizontally level with V4 and V5 rather than following the curve of the ribs.",
+    "failText": "Not quite. Carry a horizontal line from V4 round to the mid-axillary line — the vertical dropped from the apex of the axilla. Do not count ribs again.",
+    "hint": "Mid-axillary line, level with V4.",
+    "difficulty": "core"
+  },
+  {
+    "id": "place-ll",
+    "mode": "leads",
+    "prompt": "Place the electrode that makes the inferior leads possible.",
+    "targetId": "ll",
+    "successText": "Correct — the left leg electrode is the positive pole of leads II, III and aVF, the three leads that look at the inferior wall.",
+    "failText": "Not quite. Think about which electrode is the positive pole of II, III and aVF — the inferior leads.",
+    "hint": "Below the umbilicus, on the patient's left.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "place-v2",
+    "mode": "leads",
+    "prompt": "Place V2.",
+    "targetId": "v2",
+    "successText": "Correct — V2 is directly opposite V1, in the fourth intercostal space at the left sternal border, level with it.",
+    "failText": "Not quite. V2 mirrors V1 across the sternum, in the same fourth intercostal space — the two should be level, not stepped.",
+    "hint": "Left side of the sternum, same space as V1.",
+    "difficulty": "core"
+  },
+  {
+    "id": "listen-aortic-stenosis",
+    "mode": "auscultation",
+    "prompt": "Where would you listen for the murmur of aortic stenosis?",
+    "targetId": "aortic",
+    "successText": "Correct — the aortic area, in the second intercostal space at the right sternal border, where the ejection jet comes closest to the chest wall. Listen for radiation to the carotids.",
+    "failText": "Not quite. The valve lies behind the left sternum, but the jet travels up and to the right into the ascending aorta — so listen where that flow approaches the chest wall.",
+    "hint": "Second intercostal space, right side.",
+    "difficulty": "core"
+  },
+  {
+    "id": "listen-mitral-stenosis",
+    "mode": "auscultation",
+    "prompt": "Where would you listen for the mid-diastolic rumble of mitral stenosis?",
+    "targetId": "mitral",
+    "successText": "Correct — the apex, in the fifth intercostal space at the midclavicular line. Use the bell lightly, with the patient rolled into the left lateral position in held expiration.",
+    "failText": "Not quite. Mitral sounds are heard where the left ventricle comes closest to the chest wall — and this murmur is localised, so it will not be audible at the base.",
+    "hint": "The apex beat, fifth space, midclavicular line.",
+    "difficulty": "core"
+  },
+  {
+    "id": "listen-aortic-regurgitation",
+    "mode": "auscultation",
+    "prompt": "Where is the early diastolic murmur of aortic regurgitation usually loudest?",
+    "targetId": "erb",
+    "successText": "Correct — Erb's point, the third intercostal space at the left sternal border. The regurgitant jet runs back down the outflow tract towards the left sternal edge rather than towards the aortic area.",
+    "failText": "Not quite. Think about where the regurgitant jet travels: backwards from the aortic valve into the left ventricle, down the left sternal border.",
+    "hint": "Third space, left sternal border.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "listen-tricuspid",
+    "mode": "auscultation",
+    "prompt": "Where would you listen for a murmur that gets louder on inspiration?",
+    "targetId": "tricuspid",
+    "successText": "Correct — the tricuspid area at the left lower sternal border. Right-sided murmurs increase with inspiration as venous return rises: Carvallo's sign.",
+    "failText": "Not quite. Inspiration increases venous return to the right heart, so the murmur that gets louder is a right-sided one — listen where the right ventricle lies against the chest wall.",
+    "hint": "Left lower sternal border, fourth to fifth space.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "listen-split-s2",
+    "mode": "auscultation",
+    "prompt": "Where is splitting of the second heart sound best assessed?",
+    "targetId": "pulmonic",
+    "successText": "Correct — the pulmonary area, second intercostal space at the left sternal border, where P2 is loudest. Listen through several respiratory cycles.",
+    "failText": "Not quite. Splitting depends on hearing the pulmonary component separately, so listen where the pulmonary trunk lies closest to the chest wall.",
+    "hint": "Second space, left of the sternum.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "identify-af",
+    "mode": "rhythm",
+    "prompt": "An irregularly irregular narrow-complex rhythm with no P waves. What is it?",
+    "targetId": "atrial-fibrillation",
+    "options": ["atrial-fibrillation", "atrial-flutter", "sinus-tachycardia", "supraventricular-tachycardia"],
+    "successText": "Correct — absent P waves with an irregularly irregular ventricular response is atrial fibrillation.",
+    "failText": "Not quite. Look for P waves first, then decide whether the R–R intervals repeat in any pattern.",
+    "hint": "No P waves, and no pattern to the irregularity.",
+    "difficulty": "core"
+  },
+  {
+    "id": "identify-vt",
+    "mode": "rhythm",
+    "prompt": "A regular broad-complex tachycardia at 176 bpm in a patient with a previous myocardial infarction. What is it?",
+    "targetId": "ventricular-tachycardia",
+    "options": ["ventricular-tachycardia", "supraventricular-tachycardia", "atrial-flutter", "ventricular-fibrillation"],
+    "successText": "Correct — a broad-complex tachycardia in a patient with known ischaemic heart disease is ventricular tachycardia until proven otherwise.",
+    "failText": "Not quite. In a broad-complex tachycardia, the safe assumption — and usually the right one — is the ventricular diagnosis.",
+    "hint": "Broad complexes plus a history of infarction.",
+    "difficulty": "core"
+  },
+  {
+    "id": "identify-mobitz-ii",
+    "mode": "rhythm",
+    "prompt": "A constant PR interval with sudden, unannounced dropped QRS complexes and a broad QRS. Which block is this?",
+    "targetId": "mobitz-ii",
+    "options": ["mobitz-ii", "mobitz-i", "first-degree-av-block", "complete-heart-block"],
+    "successText": "Correct — a fixed PR interval with abruptly dropped beats is Mobitz II, and the broad QRS places the disease in the His–Purkinje system. Prepare to pace.",
+    "failText": "Not quite. If the PR interval lengthens before the drop it is Mobitz I; if it never changes, it is the other one.",
+    "hint": "The PR interval gives nothing away before the beat is dropped.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "identify-hyperkalaemia",
+    "mode": "rhythm",
+    "prompt": "Tall, narrow, tented T waves with flattening P waves and a widening QRS. What should you treat?",
+    "targetId": "hyperkalaemia",
+    "options": ["hyperkalaemia", "hypokalaemia", "stemi", "pericarditis"],
+    "successText": "Correct — tented T waves with loss of P waves and QRS widening is hyperkalaemia. Give calcium immediately to stabilise the myocardium.",
+    "failText": "Not quite. A narrow-based, sharply peaked T wave points to potassium, and the direction of the abnormality is given away by the P wave and QRS changes.",
+    "hint": "The T wave is peaked and narrow, not broad.",
+    "difficulty": "advanced"
+  }
+]

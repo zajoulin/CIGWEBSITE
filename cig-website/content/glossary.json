@@ -1,0 +1,320 @@
+[
+  {
+    "id": "preload",
+    "term": "Preload",
+    "definition": "The degree of ventricular myocardial stretch at the end of diastole, immediately before contraction. It is determined by the volume of blood in the ventricle at end-diastole and therefore by venous return.",
+    "formula": "Approximated clinically by end-diastolic volume or pressure",
+    "typicalValue": "LV end-diastolic volume ≈ 120 mL; LVEDP ≈ 4–12 mmHg",
+    "relatedAnatomy": ["left-ventricle", "systemic-veins", "right-atrium"],
+    "relatedPhysiology": ["hemodynamics", "cardiac-cycle"],
+    "relatedDiseases": ["heart-failure", "pericardial-disease"]
+  },
+  {
+    "id": "afterload",
+    "term": "Afterload",
+    "definition": "The load the ventricle must overcome in order to eject blood. More precisely, it is ventricular wall stress during systole, which depends on chamber pressure, radius and wall thickness.",
+    "formula": "Wall stress ≈ (P × r) ÷ (2 × wall thickness) — Laplace's law",
+    "typicalValue": "Approximated by systemic vascular resistance or aortic systolic pressure",
+    "relatedAnatomy": ["left-ventricle", "aorta", "systemic-arteries"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["hypertension", "aortic-stenosis", "heart-failure"]
+  },
+  {
+    "id": "contractility",
+    "term": "Contractility (inotropy)",
+    "definition": "The intrinsic ability of cardiac muscle to generate force at a given preload and afterload, independent of loading conditions.",
+    "formula": "Best indexed by end-systolic elastance from pressure–volume loops",
+    "relatedAnatomy": ["left-ventricle"],
+    "relatedPhysiology": ["hemodynamics", "cardiac-cycle"],
+    "relatedDiseases": ["heart-failure", "cardiomyopathy"]
+  },
+  {
+    "id": "stroke-volume",
+    "term": "Stroke volume",
+    "definition": "The volume of blood ejected by a ventricle in a single contraction. It is determined by preload, afterload and contractility.",
+    "formula": "SV = end-diastolic volume − end-systolic volume",
+    "typicalValue": "Approximately 70 mL at rest",
+    "relatedAnatomy": ["left-ventricle", "aortic-valve"],
+    "relatedPhysiology": ["cardiac-cycle", "hemodynamics"],
+    "relatedDiseases": ["heart-failure", "aortic-stenosis"]
+  },
+  {
+    "id": "cardiac-output",
+    "term": "Cardiac output",
+    "definition": "The volume of blood pumped by each ventricle per minute — the fundamental measure of the circulation's delivery capacity.",
+    "formula": "CO = stroke volume × heart rate",
+    "typicalValue": "Approximately 5 L/min at rest; up to 20–25 L/min in trained athletes on maximal exercise",
+    "relatedAnatomy": ["left-ventricle", "aorta"],
+    "relatedPhysiology": ["hemodynamics", "cardiac-cycle"],
+    "relatedDiseases": ["heart-failure", "pulmonary-embolism"]
+  },
+  {
+    "id": "ejection-fraction",
+    "term": "Ejection fraction",
+    "definition": "The proportion of end-diastolic volume ejected with each beat. The single most used number in cardiology — but it is load-dependent and is not a pure measure of contractility.",
+    "formula": "EF = (SV ÷ EDV) × 100%",
+    "typicalValue": "Normal approximately 55–70%",
+    "relatedAnatomy": ["left-ventricle"],
+    "relatedPhysiology": ["hemodynamics", "cardiac-imaging"],
+    "relatedDiseases": ["heart-failure", "cardiomyopathy", "myocardial-infarction"]
+  },
+  {
+    "id": "systole",
+    "term": "Systole",
+    "definition": "The phase of ventricular contraction, comprising isovolumetric contraction and ejection. It begins with mitral and tricuspid closure (S1) and ends with aortic and pulmonary closure (S2).",
+    "typicalValue": "Roughly one third of the cycle at rest; shortens relatively little as heart rate rises",
+    "relatedAnatomy": ["left-ventricle", "aortic-valve", "mitral-valve"],
+    "relatedPhysiology": ["cardiac-cycle", "heart-sounds"],
+    "relatedDiseases": ["aortic-stenosis", "mitral-regurgitation"]
+  },
+  {
+    "id": "diastole",
+    "term": "Diastole",
+    "definition": "The phase of ventricular relaxation and filling, comprising isovolumetric relaxation, rapid filling, diastasis and atrial systole. Coronary perfusion of the left ventricle occurs almost entirely during diastole.",
+    "typicalValue": "Roughly two thirds of the cycle at rest; shortens disproportionately with tachycardia",
+    "relatedAnatomy": ["left-ventricle", "mitral-valve", "coronary-arteries"],
+    "relatedPhysiology": ["cardiac-cycle", "coronary-circulation"],
+    "relatedDiseases": ["heart-failure", "mitral-stenosis", "stable-angina"]
+  },
+  {
+    "id": "coronary-perfusion-pressure",
+    "term": "Coronary perfusion pressure",
+    "definition": "The pressure gradient driving blood through the left coronary circulation during diastole.",
+    "formula": "CPP = aortic diastolic pressure − left ventricular end-diastolic pressure",
+    "relatedAnatomy": ["coronary-arteries", "aorta", "left-ventricle"],
+    "relatedPhysiology": ["coronary-circulation", "hemodynamics"],
+    "relatedDiseases": ["myocardial-infarction", "aortic-stenosis", "aortic-regurgitation"]
+  },
+  {
+    "id": "coronary-flow-reserve",
+    "term": "Coronary flow reserve",
+    "definition": "The ratio of maximal hyperaemic coronary blood flow to resting flow — a measure of how much the coronary circulation can increase supply when demand rises.",
+    "typicalValue": "Normally about four- to five-fold",
+    "relatedAnatomy": ["coronary-arteries"],
+    "relatedPhysiology": ["coronary-circulation"],
+    "relatedDiseases": ["stable-angina", "atherosclerosis"]
+  },
+  {
+    "id": "fractional-flow-reserve",
+    "term": "Fractional flow reserve",
+    "definition": "The ratio of distal coronary pressure to aortic pressure during maximal hyperaemia, used to determine whether a stenosis is functionally significant.",
+    "formula": "FFR = distal coronary pressure ÷ aortic pressure at maximal hyperaemia",
+    "typicalValue": "Values at or below approximately 0.80 generally indicate a functionally significant lesion",
+    "relatedAnatomy": ["coronary-arteries"],
+    "relatedPhysiology": ["coronary-circulation", "interventional-cardiology"],
+    "relatedDiseases": ["stable-angina", "atherosclerosis"]
+  },
+  {
+    "id": "systemic-vascular-resistance",
+    "term": "Systemic vascular resistance",
+    "definition": "The total resistance to blood flow offered by the systemic circulation, residing predominantly in the arterioles.",
+    "formula": "SVR = (MAP − right atrial pressure) ÷ cardiac output",
+    "relatedAnatomy": ["systemic-arteries", "aorta"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["hypertension", "heart-failure"]
+  },
+  {
+    "id": "mean-arterial-pressure",
+    "term": "Mean arterial pressure",
+    "definition": "The average arterial pressure across a cardiac cycle — the pressure that actually drives organ perfusion.",
+    "formula": "MAP ≈ diastolic + ⅓ (systolic − diastolic); also MAP = CO × SVR",
+    "typicalValue": "Approximately 70–100 mmHg",
+    "relatedAnatomy": ["aorta", "systemic-arteries"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["hypertension"]
+  },
+  {
+    "id": "pulse-pressure",
+    "term": "Pulse pressure",
+    "definition": "The difference between systolic and diastolic pressure. It reflects stroke volume and large artery compliance, and widens as arteries stiffen with age.",
+    "formula": "PP = systolic − diastolic pressure",
+    "typicalValue": "Approximately 40 mmHg",
+    "relatedAnatomy": ["aorta", "systemic-arteries"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["aortic-regurgitation", "aortic-stenosis", "hypertension"]
+  },
+  {
+    "id": "frank-starling",
+    "term": "Frank–Starling mechanism",
+    "definition": "The intrinsic property by which increasing end-diastolic fibre length increases the force of the subsequent contraction, so the heart automatically matches output to venous return.",
+    "relatedAnatomy": ["left-ventricle", "right-ventricle"],
+    "relatedPhysiology": ["hemodynamics", "cardiac-cycle"],
+    "relatedDiseases": ["heart-failure"]
+  },
+  {
+    "id": "laplace",
+    "term": "Laplace's law",
+    "definition": "The relationship between wall tension, pressure and radius. It explains why dilated ventricles work harder, why hypertrophy normalises wall stress, and why aneurysms enlarge at an accelerating rate.",
+    "formula": "Wall stress ≈ (P × r) ÷ (2 × wall thickness)",
+    "relatedAnatomy": ["left-ventricle", "aorta"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["heart-failure", "aortic-aneurysm", "aortic-stenosis"]
+  },
+  {
+    "id": "atrial-kick",
+    "term": "Atrial kick",
+    "definition": "The contribution of atrial contraction to ventricular filling in late diastole. It matters little at rest with a compliant ventricle, but becomes critical when the ventricle is stiff or the heart rate is fast.",
+    "typicalValue": "Approximately 10–30% of ventricular filling",
+    "relatedAnatomy": ["left-atrium", "right-atrium", "left-ventricle"],
+    "relatedPhysiology": ["cardiac-cycle"],
+    "relatedDiseases": ["atrial-fibrillation", "aortic-stenosis", "heart-failure"]
+  },
+  {
+    "id": "stenosis",
+    "term": "Stenosis",
+    "definition": "Abnormal narrowing of a valve orifice or vessel lumen that obstructs flow. Across a stenotic valve, a pressure gradient develops that increases with flow.",
+    "relatedAnatomy": ["aortic-valve", "mitral-valve", "coronary-arteries"],
+    "relatedPhysiology": ["hemodynamics", "valvular-disease"],
+    "relatedDiseases": ["aortic-stenosis", "mitral-stenosis", "atherosclerosis"]
+  },
+  {
+    "id": "regurgitation",
+    "term": "Regurgitation (incompetence)",
+    "definition": "Backward flow through a valve that fails to close completely, so part of the stroke volume returns to the upstream chamber and effective forward output falls.",
+    "relatedAnatomy": ["mitral-valve", "aortic-valve", "tricuspid-valve"],
+    "relatedPhysiology": ["valvular-disease", "hemodynamics"],
+    "relatedDiseases": ["mitral-regurgitation", "aortic-regurgitation", "tricuspid-regurgitation"]
+  },
+  {
+    "id": "arrhythmia",
+    "term": "Arrhythmia",
+    "definition": "Any abnormality of cardiac rate, rhythm, or the sequence of activation. Mechanisms are re-entry, enhanced automaticity and triggered activity.",
+    "relatedAnatomy": ["sa-node", "av-node", "purkinje-fibers"],
+    "relatedPhysiology": ["arrhythmia-principles", "ecg-essentials"],
+    "relatedDiseases": ["atrial-fibrillation", "ventricular-arrhythmias", "supraventricular-tachycardia"]
+  },
+  {
+    "id": "automaticity",
+    "term": "Automaticity",
+    "definition": "The capacity of certain cardiac cells to depolarise spontaneously during phase 4 and reach threshold without external stimulation. The sinuatrial node has the fastest rate and therefore dominates.",
+    "relatedAnatomy": ["sa-node", "av-node", "purkinje-fibers"],
+    "relatedPhysiology": ["arrhythmia-principles"],
+    "relatedDiseases": ["conduction-disorders", "ventricular-arrhythmias"]
+  },
+  {
+    "id": "re-entry",
+    "term": "Re-entry",
+    "definition": "A self-sustaining circuit in which an impulse repeatedly re-excites tissue that has recovered. It requires two pathways, unidirectional block and slow conduction, and accounts for most clinical tachyarrhythmias.",
+    "relatedAnatomy": ["av-node", "left-atrium", "left-ventricle"],
+    "relatedPhysiology": ["arrhythmia-principles"],
+    "relatedDiseases": ["supraventricular-tachycardia", "atrial-fibrillation", "ventricular-arrhythmias"]
+  },
+  {
+    "id": "pcwp",
+    "term": "Pulmonary capillary wedge pressure",
+    "definition": "The pressure measured with a balloon-occluded pulmonary artery catheter, which approximates left atrial pressure and hence left ventricular filling pressure.",
+    "typicalValue": "Approximately 6–12 mmHg",
+    "relatedAnatomy": ["left-atrium", "pulmonary-arteries", "pulmonary-veins"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["heart-failure", "pulmonary-hypertension", "mitral-stenosis"]
+  },
+  {
+    "id": "cvp",
+    "term": "Central venous pressure",
+    "definition": "The pressure in the great veins near the right atrium, essentially equal to right atrial pressure. Estimated at the bedside from the jugular venous pressure.",
+    "typicalValue": "Approximately 0–8 mmHg",
+    "relatedAnatomy": ["right-atrium", "superior-vena-cava", "inferior-vena-cava"],
+    "relatedPhysiology": ["hemodynamics", "cardiovascular-examination"],
+    "relatedDiseases": ["heart-failure", "pericardial-disease", "tricuspid-regurgitation"]
+  },
+  {
+    "id": "pvr",
+    "term": "Pulmonary vascular resistance",
+    "definition": "Resistance to flow through the pulmonary circulation. Normally about one tenth of systemic vascular resistance, reflecting the low-pressure, high-compliance nature of the pulmonary bed.",
+    "formula": "PVR = (mean PA pressure − PCWP) ÷ cardiac output",
+    "relatedAnatomy": ["pulmonary-arteries", "pulmonary-trunk", "right-ventricle"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["pulmonary-hypertension", "pulmonary-embolism", "congenital-heart-disease"]
+  },
+  {
+    "id": "pulsus-paradoxus",
+    "term": "Pulsus paradoxus",
+    "definition": "An exaggerated fall in systolic blood pressure during inspiration, caused by enhanced ventricular interdependence within a constrained pericardial space.",
+    "typicalValue": "An inspiratory fall greater than 10 mmHg is abnormal",
+    "relatedAnatomy": ["right-ventricle", "left-ventricle"],
+    "relatedPhysiology": ["cardiovascular-examination", "hemodynamics"],
+    "relatedDiseases": ["pericardial-disease", "pulmonary-embolism"]
+  },
+  {
+    "id": "kussmaul",
+    "term": "Kussmaul's sign",
+    "definition": "A paradoxical rise in jugular venous pressure during inspiration, occurring when the right heart cannot accommodate the increased venous return that inspiration normally produces.",
+    "relatedAnatomy": ["right-atrium", "right-ventricle", "superior-vena-cava"],
+    "relatedPhysiology": ["cardiovascular-examination"],
+    "relatedDiseases": ["pericardial-disease", "myocardial-infarction", "cardiomyopathy"]
+  },
+  {
+    "id": "ventricular-interdependence",
+    "term": "Ventricular interdependence",
+    "definition": "The mechanical coupling of the two ventricles through the shared interventricular septum and the fixed pericardial space, so that filling of one influences filling of the other.",
+    "relatedAnatomy": ["interventricular-septum", "right-ventricle", "left-ventricle"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["pericardial-disease", "pulmonary-embolism", "pulmonary-hypertension"]
+  },
+  {
+    "id": "windkessel",
+    "term": "Windkessel effect",
+    "definition": "The elastic reservoir function of the aorta and large arteries, which stores energy during systole and releases it during diastole, converting pulsatile ejection into near-continuous peripheral flow.",
+    "relatedAnatomy": ["aorta", "systemic-arteries"],
+    "relatedPhysiology": ["hemodynamics", "coronary-circulation"],
+    "relatedDiseases": ["hypertension", "aortic-aneurysm"]
+  },
+  {
+    "id": "virchow",
+    "term": "Virchow's triad",
+    "definition": "The three categories of factor that predispose to thrombosis: venous stasis, endothelial injury and hypercoagulability. Nearly every risk factor for venous thromboembolism fits into one of them.",
+    "relatedAnatomy": ["systemic-veins", "left-atrium"],
+    "relatedPhysiology": ["hemodynamics"],
+    "relatedDiseases": ["deep-vein-thrombosis", "pulmonary-embolism", "atrial-fibrillation"]
+  },
+  {
+    "id": "hypertrophy",
+    "term": "Ventricular hypertrophy",
+    "definition": "Increase in myocardial mass in response to load. Concentric hypertrophy (sarcomeres in parallel) follows pressure overload; eccentric hypertrophy (sarcomeres in series) follows volume overload.",
+    "relatedAnatomy": ["left-ventricle", "interventricular-septum"],
+    "relatedPhysiology": ["hemodynamics", "valvular-disease"],
+    "relatedDiseases": ["hypertension", "aortic-stenosis", "cardiomyopathy"]
+  },
+  {
+    "id": "remodelling",
+    "term": "Ventricular remodelling",
+    "definition": "Progressive change in ventricular size, shape and composition following injury or chronic loading, involving myocyte hypertrophy, apoptosis and interstitial fibrosis. It is the structural pathway from injury to heart failure.",
+    "relatedAnatomy": ["left-ventricle", "mitral-valve"],
+    "relatedPhysiology": ["heart-failure-principles"],
+    "relatedDiseases": ["heart-failure", "myocardial-infarction", "cardiomyopathy"]
+  },
+  {
+    "id": "ischaemia",
+    "term": "Ischaemia",
+    "definition": "Inadequate blood supply relative to metabolic demand, producing reversible tissue dysfunction. Prolonged ischaemia leads to infarction — irreversible cell death.",
+    "relatedAnatomy": ["coronary-arteries", "left-ventricle"],
+    "relatedPhysiology": ["coronary-circulation"],
+    "relatedDiseases": ["stable-angina", "myocardial-infarction", "peripheral-arterial-disease"]
+  },
+  {
+    "id": "troponin",
+    "term": "Cardiac troponin",
+    "definition": "A regulatory protein of the cardiac sarcomere released into the circulation when myocytes are injured. High-sensitivity assays detect very small elevations, so results must always be interpreted with the clinical context and a serial pattern.",
+    "typicalValue": "Diagnostic threshold is the 99th percentile upper reference limit of a normal population",
+    "relatedAnatomy": ["left-ventricle"],
+    "relatedPhysiology": ["coronary-circulation"],
+    "relatedDiseases": ["myocardial-infarction", "pulmonary-embolism", "heart-failure"]
+  },
+  {
+    "id": "natriuretic-peptides",
+    "term": "Natriuretic peptides (BNP / NT-proBNP)",
+    "definition": "Hormones released by cardiac myocytes in response to wall stretch. They promote natriuresis and vasodilatation, and their measurement is central to the diagnosis and risk stratification of heart failure.",
+    "typicalValue": "Normal levels in an untreated symptomatic patient make heart failure very unlikely",
+    "relatedAnatomy": ["left-ventricle", "left-atrium"],
+    "relatedPhysiology": ["heart-failure-principles"],
+    "relatedDiseases": ["heart-failure", "pulmonary-hypertension", "aortic-stenosis"]
+  },
+  {
+    "id": "dyssynchrony",
+    "term": "Mechanical dyssynchrony",
+    "definition": "Uncoordinated contraction of ventricular segments caused by delayed electrical activation, most typically from left bundle branch block. It reduces pumping efficiency and is the target of cardiac resynchronisation therapy.",
+    "relatedAnatomy": ["bundle-of-his", "interventricular-septum", "left-ventricle"],
+    "relatedPhysiology": ["ecg-essentials", "heart-failure-principles"],
+    "relatedDiseases": ["heart-failure", "conduction-disorders"]
+  }
+]

@@ -1,0 +1,240 @@
+[
+  {
+    "id": "ventricular-tachycardia",
+    "name": "Ventricular Tachycardia",
+    "abbr": "VT",
+    "categoryId": "ventricular",
+    "featured": true,
+    "tagline": "Broad, fast and regular — assume it is ventricular until proven otherwise.",
+    "rateRange": "100–250 bpm",
+    "regularity": "Regular (monomorphic)",
+    "summary": "Three or more consecutive beats arising below the bundle of His at a rate over 100 per minute. Because the impulse spreads slowly through ventricular muscle rather than down the Purkinje network, every complex is broad and bizarre. Monomorphic VT has identical complexes; polymorphic VT changes shape beat to beat.",
+    "mechanism": "Most sustained monomorphic VT is re-entry around a scar — classically the border zone of an old myocardial infarction, where surviving muscle fibres interleaved with fibrosis conduct slowly and unidirectionally. The circuit lies entirely within ventricular myocardium, so activation bypasses the specialised conduction system and spreads cell to cell at roughly a tenth of the usual velocity. That slow, disorganised spread produces the wide QRS, and repolarisation is equally abnormal, so the T wave points opposite to the QRS. The atria continue in sinus rhythm independently, which is why atrioventricular dissociation, capture beats and fusion beats are the specific diagnostic clues.",
+    "recognition": [
+      "Broad QRS, usually over 0.14 s, at a rate above 100 bpm",
+      "Regular rhythm with uniform complexes in monomorphic VT",
+      "Atrioventricular dissociation: independent P waves marching through the trace",
+      "Capture and fusion beats — narrower complexes when a sinus impulse gets through",
+      "Concordance across the precordial leads and extreme axis deviation favour VT",
+      "A broad-complex tachycardia in a patient with known ischaemic heart disease is VT until proven otherwise"
+    ],
+    "causes": [
+      "Ischaemic heart disease and prior myocardial infarction — the commonest cause by far",
+      "Cardiomyopathy, including dilated, hypertrophic and arrhythmogenic right ventricular forms",
+      "Electrolyte disturbance: hypokalaemia, hypomagnesaemia",
+      "Drugs that prolong the QT interval, and pro-arrhythmic antiarrhythmics",
+      "Inherited channelopathies such as long QT and Brugada syndromes"
+    ],
+    "significance": "A peri-arrest rhythm. Sustained VT compromises filling and output and can degenerate into ventricular fibrillation without warning. Never dismiss a broad-complex tachycardia as supraventricular with aberrancy because the patient looks well — haemodynamic stability does not distinguish the two.",
+    "management": "Follow resuscitation algorithms. Pulseless VT is treated as cardiac arrest with immediate defibrillation. Unstable VT with a pulse requires urgent synchronised cardioversion. Stable VT may be treated with intravenous amiodarone while correcting electrolytes and ischaemia. Longer term, treat the substrate: revascularisation, an implantable defibrillator for secondary prevention, and consideration of ablation.",
+    "waveform": {
+      "rate": 176,
+      "irregularity": 0.03,
+      "atrial": "dissociated",
+      "atrialRate": 84,
+      "pAmplitude": 0.06,
+      "prInterval": 0,
+      "qrsDuration": 0.17,
+      "qrsAmplitude": 1.5,
+      "qrsShape": "monomorphic",
+      "sAmplitude": 0.5,
+      "stShift": -0.06,
+      "stShape": "downsloping",
+      "tAmplitude": -0.35,
+      "tShape": "inverted",
+      "qtInterval": 0.3,
+      "wander": 0.06,
+      "noise": 0.06
+    },
+    "vitals": {
+      "heartRate": 176,
+      "spo2": 91,
+      "respiratoryRate": 26,
+      "bpSystolic": 84,
+      "bpDiastolic": 54,
+      "temperature": 36.3,
+      "alarm": "critical",
+      "alarmText": "VENTRICULAR TACHYCARDIA",
+      "bedside": "Grey, clammy and frightened; central chest pain, cool peripheries, weak thready pulse. Crash trolley at the bedside."
+    },
+    "highlights": [
+      {
+        "feature": "qrs",
+        "label": "Broad QRS",
+        "note": "Over 0.14 s. The impulse is crawling from myocyte to myocyte instead of racing down the Purkinje network, so ventricular activation takes two to three times as long as normal.",
+        "abnormal": true
+      },
+      {
+        "feature": "t",
+        "label": "Discordant T wave",
+        "note": "Repolarisation follows the same abnormal path, so the T wave points in the opposite direction to the QRS — a large upright complex with a deeply inverted T.",
+        "abnormal": true
+      },
+      {
+        "feature": "p",
+        "label": "Dissociated P waves",
+        "note": "The sinus node carries on independently at its own rate. Independent P waves marching through the broad complexes are the most specific sign of ventricular origin.",
+        "abnormal": true
+      },
+      {
+        "feature": "rr",
+        "label": "R–R interval",
+        "note": "Regular in monomorphic VT. Filling time is severely curtailed at these rates, which is why blood pressure falls even though the ventricle is contracting.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "A circuit inside the ventricle",
+        "text": "Surviving muscle fibres threading through infarct scar conduct slowly and in one direction — the conditions for re-entry. A circuit establishes itself entirely within ventricular myocardium.",
+        "duration": 1.3,
+        "highlight": "baseline"
+      },
+      {
+        "title": "Slow, cell-to-cell spread",
+        "text": "Because the impulse never enters the His–Purkinje network, it spreads through working muscle at roughly a tenth of the normal velocity. Every QRS becomes broad and bizarre.",
+        "duration": 1.4,
+        "highlight": "qrs"
+      },
+      {
+        "title": "Repolarisation follows suit",
+        "text": "Abnormal depolarisation forces abnormal repolarisation, so the T wave is discordant — pointing away from the main QRS deflection.",
+        "duration": 1.2,
+        "highlight": "t"
+      },
+      {
+        "title": "The atria carry on regardless",
+        "text": "The sinus node is unaware of any of this and keeps firing. P waves march through the trace at their own rate, unrelated to the QRS complexes — atrioventricular dissociation.",
+        "duration": 1.4,
+        "highlight": "p"
+      },
+      {
+        "title": "Output collapses",
+        "text": "At 176 bpm with no coordinated filling and no atrial kick, stroke volume falls sharply. The rhythm may be tolerated for minutes — or degenerate into ventricular fibrillation without warning.",
+        "duration": 1.5,
+        "highlight": "rr"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "176 bpm", "normal": "60–100 bpm", "abnormal": true },
+      { "label": "QRS duration", "value": "0.17 s", "normal": "< 0.12 s", "abnormal": true },
+      { "label": "QRS morphology", "value": "Monomorphic, broad", "normal": "Narrow", "abnormal": true },
+      { "label": "AV relationship", "value": "Dissociated", "normal": "1:1", "abnormal": true },
+      { "label": "T wave", "value": "Discordant", "normal": "Concordant, upright", "abnormal": true }
+    ],
+    "relatedDiseases": ["ventricular-arrhythmias", "myocardial-infarction", "cardiomyopathy"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials"],
+    "relatedStructures": ["left-ventricle", "purkinje-fibers", "interventricular-septum"],
+    "references": ["esc-va-2022", "aha-ecg-part1", "braunwald"]
+  },
+  {
+    "id": "ventricular-fibrillation",
+    "name": "Ventricular Fibrillation",
+    "abbr": "VF",
+    "categoryId": "ventricular",
+    "tagline": "Chaotic, unsurvivable without defibrillation — and every minute counts.",
+    "rateRange": "No countable rate",
+    "regularity": "Chaotic",
+    "summary": "Completely disorganised ventricular electrical activity. Multiple wavelets propagate through the ventricular myocardium at once, so no coordinated contraction occurs. The trace shows irregular, wandering deflections of varying amplitude and frequency with no identifiable P wave, QRS complex or T wave.",
+    "mechanism": "Wavebreak and multiple simultaneous re-entrant circuits fragment ventricular activation. Different regions depolarise and repolarise independently, so the ventricle quivers rather than contracts. Cardiac output is zero from the moment it starts — this is cardiac arrest, and the patient is unconscious within seconds. Coarse VF, with larger deflections, indicates more recently oxygenated myocardium and a better response to defibrillation; as the arrest continues the trace becomes progressively finer and eventually indistinguishable from asystole.",
+    "recognition": [
+      "Irregular chaotic waveform with no discernible P waves, QRS complexes or T waves",
+      "Continuously varying amplitude and cycle length",
+      "Coarse VF early, becoming fine VF as time passes",
+      "Always confirm against the patient — a disconnected lead or movement artefact can mimic it perfectly",
+      "The patient is unresponsive, not breathing normally, and has no pulse"
+    ],
+    "causes": [
+      "Acute myocardial ischaemia and infarction — the commonest trigger",
+      "Degeneration of sustained ventricular tachycardia",
+      "Severe electrolyte disturbance and acidosis",
+      "Channelopathies: long QT, Brugada and catecholaminergic polymorphic VT",
+      "Electrocution, drowning, severe hypothermia, drug toxicity"
+    ],
+    "significance": "Ventricular fibrillation is cardiac arrest. Survival falls by roughly 7–10% for every minute that passes without defibrillation, so the only meaningful response is immediate: confirm arrest, start high-quality chest compressions, and defibrillate at the first opportunity.",
+    "management": "Call for help, start CPR, and attach a defibrillator without delay. VF is a shockable rhythm: deliver a shock and resume compressions immediately for two minutes before reassessing. Adrenaline and amiodarone are given after the third shock in adult advanced life support. Treat reversible causes throughout, and manage the underlying coronary disease after return of spontaneous circulation.",
+    "waveform": {
+      "rate": 300,
+      "irregularity": 1,
+      "atrial": "none",
+      "pAmplitude": 0,
+      "prInterval": 0,
+      "qrsDuration": 0.16,
+      "qrsAmplitude": 0.7,
+      "qrsShape": "chaotic",
+      "stShift": 0,
+      "tAmplitude": 0,
+      "qtInterval": 0.2,
+      "wander": 0.3,
+      "noise": 0.2
+    },
+    "vitals": {
+      "heartRate": 0,
+      "heartRateLabel": "- - -",
+      "spo2": 0,
+      "respiratoryRate": 0,
+      "bpSystolic": 0,
+      "bpDiastolic": 0,
+      "alarm": "critical",
+      "alarmText": "VF — CHECK PATIENT",
+      "bedside": "Unresponsive, no pulse, no normal breathing. Cardiac arrest call placed; compressions started; defibrillator attached."
+    },
+    "highlights": [
+      {
+        "feature": "baseline",
+        "label": "Chaotic waveform",
+        "note": "No P wave, no QRS, no T wave — nothing repeats. Multiple wavelets depolarise different parts of the ventricle at different moments, so nothing summates into a recognisable complex.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "Amplitude",
+        "note": "Coarse VF has large deflections and generally responds better to defibrillation. As myocardial energy stores fall the trace becomes fine and the prognosis worsens.",
+        "abnormal": true
+      },
+      {
+        "feature": "rr",
+        "label": "No cardiac output",
+        "note": "The ventricle quivers and does not eject. There is no pulse, no blood pressure and no perfusion from the moment the rhythm starts.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "Activation fragments",
+        "text": "A wavefront breaks up against tissue with unevenly recovered excitability, spawning multiple daughter wavelets that circulate independently.",
+        "duration": 1.2,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The ventricle quivers",
+        "text": "Different regions contract at different instants, so the ventricle never generates pressure. Cardiac output is zero from the first second.",
+        "duration": 1.3,
+        "highlight": "rr"
+      },
+      {
+        "title": "Coarse becomes fine",
+        "text": "Early VF shows large, coarse deflections. As myocardial oxygen and high-energy phosphate stores are consumed, the amplitude falls and defibrillation becomes less likely to succeed.",
+        "duration": 1.3,
+        "highlight": "qrs"
+      },
+      {
+        "title": "Defibrillation is the treatment",
+        "text": "A shock depolarises the whole myocardium at once, ending every circuit simultaneously and giving the sinus node a chance to resume. Good compressions between shocks keep the myocardium shockable.",
+        "duration": 1.5,
+        "highlight": "baseline"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "Not measurable", "normal": "60–100 bpm", "abnormal": true },
+      { "label": "QRS complexes", "value": "Absent", "normal": "Present, narrow", "abnormal": true },
+      { "label": "P waves", "value": "Absent", "normal": "Present", "abnormal": true },
+      { "label": "Cardiac output", "value": "Zero", "normal": "4–8 L/min", "abnormal": true },
+      { "label": "Shockable", "value": "Yes — defibrillate immediately", "normal": "—", "abnormal": true }
+    ],
+    "relatedDiseases": ["ventricular-arrhythmias", "myocardial-infarction"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials"],
+    "relatedStructures": ["left-ventricle", "right-ventricle", "purkinje-fibers"],
+    "references": ["esc-va-2022", "aha-ecg-part1", "braunwald"]
+  }
+]

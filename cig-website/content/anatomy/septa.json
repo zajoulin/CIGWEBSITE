@@ -1,0 +1,204 @@
+[
+  {
+    "id": "interventricular-septum",
+    "name": "Interventricular Septum",
+    "abbr": "IVS",
+    "latin": "Septum interventriculare",
+    "category": "septa",
+    "meshName": "heart.interventricular_septum",
+    "color": "#9aa8bd",
+    "summary": "The muscular and membranous wall separating the ventricles. It carries the bundle branches and contributes actively to the contraction of both ventricles.",
+    "synonyms": ["IVS", "ventricular septum", "membranous septum", "muscular septum"],
+    "anatomy": {
+      "location": "Runs obliquely between the two ventricular cavities, bulging into the right ventricle so that in cross-section the left ventricle appears circular and the right ventricle crescentic.",
+      "shape": "A large inferior muscular portion, thick and continuous with the left ventricular free wall, and a small superior membranous portion beneath the aortic valve. The membranous septum has an atrioventricular part separating the right atrium from the left ventricle, and an interventricular part.",
+      "relations": [
+        "To the left: the left ventricular cavity",
+        "To the right: the right ventricular cavity, with the moderator band arising from its lower part",
+        "Superiorly: the aortic valve, in continuity with the membranous septum",
+        "The bundle of His penetrates the membranous septum and divides on its crest into the bundle branches"
+      ],
+      "attachments": [
+        "Continuous with the free walls of both ventricles",
+        "Membranous portion attached to the aortic annulus and the central fibrous body",
+        "Septal papillary muscle and septal chordae of the tricuspid valve on the right side",
+        "Moderator band running from the septum to the anterior papillary muscle of the right ventricle"
+      ],
+      "bloodSupply": "The anterior two thirds are supplied by septal perforating branches of the left anterior descending artery; the posterior third is supplied by the posterior descending artery — from the right coronary artery in a right-dominant circulation.",
+      "venousDrainage": "Great and middle cardiac veins draining to the coronary sinus.",
+      "innervation": "Cardiac plexus, together with the specialised conduction tissue running within it.",
+      "function": "Contributes contractile force to both ventricles and houses the bundle branches that ensure rapid, coordinated ventricular activation."
+    },
+    "physiology": {
+      "function": "Behaves functionally as part of the left ventricle. Septal contraction is essential to normal left ventricular ejection, and its motion is a sensitive indicator of both ischaemia and conduction abnormality.",
+      "pressures": [
+        { "label": "Transseptal gradient in systole", "value": "large — LV about 120 mmHg against RV about 25 mmHg" },
+        { "label": "Normal septal thickness", "value": "approximately 6–11 mm in diastole" },
+        { "label": "Hypertrophy threshold", "value": "wall thickness of 15 mm or more raises the possibility of hypertrophic cardiomyopathy" }
+      ],
+      "electrical": "Septal depolarisation is the first event of ventricular activation and proceeds from left to right, producing the small initial q wave in the lateral leads. The right bundle branch, and the left bundle's anterior and posterior fascicles, run subendocardially on either side.",
+      "hemodynamics": [
+        "The large systolic pressure difference across the septum means any defect produces left-to-right shunting",
+        "Septal position depends on the relative pressures in the two ventricles — right ventricular pressure or volume overload flattens it, producing the D-shaped left ventricle",
+        "Left bundle branch block causes septal activation delay and dyssynchronous contraction, the substrate targeted by cardiac resynchronisation therapy"
+      ],
+      "concepts": ["Ventricular interdependence", "Septal q waves", "D-shaped left ventricle", "Mechanical dyssynchrony"]
+    },
+    "pathology": [
+      {
+        "name": "Ventricular septal defect",
+        "note": "The commonest congenital cardiac defect at birth; most occur in the membranous portion and cause left-to-right shunting.",
+        "diseaseId": "congenital-heart-disease"
+      },
+      {
+        "name": "Post-infarction ventricular septal rupture",
+        "note": "A mechanical complication typically occurring days after a large infarct, causing acute shunt and cardiogenic shock.",
+        "diseaseId": "myocardial-infarction"
+      },
+      {
+        "name": "Asymmetric septal hypertrophy",
+        "note": "Characteristic of hypertrophic cardiomyopathy; may cause dynamic left ventricular outflow tract obstruction.",
+        "diseaseId": "cardiomyopathy"
+      },
+      {
+        "name": "Bundle branch block",
+        "note": "Conduction disease within the septum delays activation of one ventricle and widens the QRS complex.",
+        "diseaseId": "conduction-disorders"
+      }
+    ],
+    "clinical": {
+      "relevance": "The septum is where anatomy, conduction and ischaemia intersect: it carries the bundle branches, it is the site of the commonest congenital defect, and its thickness and motion inform the diagnosis of cardiomyopathy and coronary disease.",
+      "conditions": ["Ventricular septal defect", "Hypertrophic cardiomyopathy", "Post-infarction septal rupture", "Bundle branch block"],
+      "examination": [
+        "Harsh pansystolic murmur at the left sternal edge with a thrill in a ventricular septal defect",
+        "Ejection systolic murmur that increases on Valsalva in obstructive hypertrophic cardiomyopathy",
+        "Wide or paradoxical splitting of the second heart sound in bundle branch block"
+      ],
+      "imaging": [
+        "Echocardiography for septal thickness, motion and colour Doppler evidence of shunting",
+        "Cardiac MRI for septal fibrosis and accurate wall thickness",
+        "Left ventriculography and oximetry runs to quantify a shunt",
+        "ECG for bundle branch block and septal q waves"
+      ],
+      "procedures": [
+        "Surgical or transcatheter closure of ventricular septal defects",
+        "Alcohol septal ablation or surgical septal myectomy in obstructive hypertrophic cardiomyopathy",
+        "Endomyocardial biopsy from the right side of the septum",
+        "His-bundle and left bundle branch area pacing"
+      ]
+    },
+    "keyPoints": [
+      "Large muscular portion plus a small membranous portion beneath the aortic valve.",
+      "Carries the bundle of His and both bundle branches.",
+      "Anterior two thirds supplied by LAD septal perforators; posterior third by the posterior descending artery.",
+      "Septal depolarisation goes left to right, producing normal septal q waves laterally.",
+      "Ventricular septal defect is the commonest congenital cardiac defect at birth."
+    ],
+    "references": ["gray", "moore", "braunwald", "guyton"],
+    "related": {
+      "structures": ["left-ventricle", "right-ventricle", "bundle-of-his", "purkinje-fibers", "coronary-arteries"],
+      "diseases": ["congenital-heart-disease", "myocardial-infarction", "cardiomyopathy", "conduction-disorders"],
+      "keyPoints": ["ecg-essentials", "cardiac-imaging", "coronary-circulation"]
+    }
+  },
+  {
+    "id": "interatrial-septum",
+    "name": "Interatrial Septum",
+    "abbr": "IAS",
+    "latin": "Septum interatriale",
+    "category": "septa",
+    "meshName": "heart.interatrial_septum",
+    "color": "#8f9db2",
+    "summary": "The thin wall between the atria. Its central depression, the fossa ovalis, marks the site of the fetal foramen ovale and remains probe-patent in a substantial minority of adults.",
+    "synonyms": ["IAS", "atrial septum", "fossa ovalis", "patent foramen ovale", "PFO"],
+    "anatomy": {
+      "location": "Between the right and left atria, oriented obliquely so that the right atrium lies anterior and to the right of the left atrium.",
+      "shape": "Thin and largely fibromuscular. Its most prominent feature on the right atrial side is the fossa ovalis, a shallow oval depression bounded superiorly and anteriorly by the limbus. The true septum is confined largely to the floor of the fossa; much of the surrounding 'septum' is infolded atrial wall containing extracardiac fat.",
+      "relations": [
+        "Right atrial surface: the fossa ovalis, with the limbus above and the tendon of Todaro below",
+        "Left atrial surface: smooth, with the valve of the fossa ovalis",
+        "Inferiorly: the triangle of Koch and the AV node",
+        "Anteriorly and superiorly: the aortic root indents the septum"
+      ],
+      "attachments": [
+        "Continuous with the walls of both atria",
+        "Contributes to the central fibrous body inferiorly",
+        "Limbus fossae ovalis marking the free edge of the embryological septum secundum"
+      ],
+      "bloodSupply": "Atrial branches of the right coronary and left circumflex arteries, including the AV nodal artery inferiorly.",
+      "venousDrainage": "Thebesian veins of the atrial walls.",
+      "innervation": "Cardiac plexus, with ganglionated plexi nearby.",
+      "function": "Separates the systemic and pulmonary venous returns after birth. In fetal life, the foramen ovale within it allows oxygenated placental blood to bypass the lungs."
+    },
+    "physiology": {
+      "function": "Maintains complete separation of the two atria in postnatal life. Its embryological arrangement of overlapping septum primum and septum secundum acts as a one-way flap valve before birth.",
+      "pressures": [
+        { "label": "Normal LA pressure", "value": "approximately 4–12 mmHg" },
+        { "label": "Normal RA pressure", "value": "approximately 0–8 mmHg" },
+        { "label": "Consequence", "value": "the small left-to-right gradient means most septal defects shunt left to right" }
+      ],
+      "electrical": "Interatrial conduction crosses principally via Bachmann's bundle superiorly; the AV node lies at the inferior margin within the triangle of Koch.",
+      "hemodynamics": [
+        "After birth, the fall in pulmonary vascular resistance and the rise in left atrial pressure press the flap of the foramen ovale closed",
+        "In roughly a quarter of adults the flap never fuses, leaving a patent foramen ovale that can open transiently when right atrial pressure rises",
+        "A persistent left-to-right shunt causes right atrial and right ventricular volume overload and, over decades, pulmonary vascular disease"
+      ],
+      "concepts": ["Fetal circulation", "Left-to-right shunt", "Paradoxical embolism", "Eisenmenger physiology"]
+    },
+    "pathology": [
+      {
+        "name": "Atrial septal defect",
+        "note": "Secundum defects at the fossa ovalis are commonest; primum and sinus venosus defects involve different parts of the septum and have distinct associations.",
+        "diseaseId": "atrial-septal-defect"
+      },
+      {
+        "name": "Patent foramen ovale",
+        "note": "Present in a substantial minority of adults; implicated in paradoxical embolism and cryptogenic stroke in selected patients.",
+        "diseaseId": "atrial-septal-defect"
+      },
+      {
+        "name": "Atrial septal aneurysm",
+        "note": "Redundant, mobile septal tissue, often found alongside a patent foramen ovale."
+      },
+      {
+        "name": "Eisenmenger syndrome",
+        "note": "Long-standing left-to-right shunting raises pulmonary vascular resistance until the shunt reverses and cyanosis develops.",
+        "diseaseId": "pulmonary-hypertension"
+      }
+    ],
+    "clinical": {
+      "relevance": "The interatrial septum is both a source of pathology and a route of access: transseptal puncture through the fossa ovalis is the standard entry to the left atrium for atrial fibrillation ablation and mitral interventions.",
+      "conditions": ["Secundum atrial septal defect", "Patent foramen ovale and cryptogenic stroke", "Sinus venosus defect with anomalous pulmonary venous drainage"],
+      "examination": [
+        "Fixed splitting of the second heart sound in a significant atrial septal defect",
+        "Pulmonary ejection systolic murmur from increased right-sided flow",
+        "Tricuspid mid-diastolic flow murmur with a large shunt",
+        "Right ventricular heave with volume overload"
+      ],
+      "imaging": [
+        "Transthoracic echocardiography with agitated saline contrast (bubble study)",
+        "Transoesophageal echocardiography for defect size, rims and suitability for device closure",
+        "Cardiac MRI or CT for anomalous pulmonary venous connections and shunt quantification"
+      ],
+      "procedures": [
+        "Transcatheter device closure of secundum defects and selected patent foramina ovale",
+        "Surgical patch closure for primum and sinus venosus defects",
+        "Transseptal puncture for left atrial access",
+        "Atrial septostomy in selected congenital lesions"
+      ]
+    },
+    "keyPoints": [
+      "The fossa ovalis is the remnant of the fetal foramen ovale and the target for transseptal puncture.",
+      "A patent foramen ovale persists in roughly a quarter of adults and is usually of no consequence.",
+      "Secundum defects at the fossa ovalis are the commonest type of atrial septal defect.",
+      "Fixed splitting of the second heart sound is the classic auscultatory sign.",
+      "The AV node lies at the inferior margin of the septum in the triangle of Koch."
+    ],
+    "references": ["gray", "moore", "braunwald", "ncbi-bookshelf"],
+    "related": {
+      "structures": ["right-atrium", "left-atrium", "av-node", "inferior-vena-cava"],
+      "diseases": ["atrial-septal-defect", "congenital-heart-disease", "pulmonary-hypertension", "atrial-fibrillation"],
+      "keyPoints": ["heart-sounds", "cardiac-imaging", "cardiac-cycle"]
+    }
+  }
+]

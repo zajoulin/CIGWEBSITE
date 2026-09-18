@@ -1,0 +1,775 @@
+[
+  {
+    "id": "cardiomyopathy",
+    "name": "Cardiomyopathies",
+    "abbr": "CMP",
+    "categoryId": "cardiomyopathies",
+    "featured": false,
+    "animationId": "cardiomyopathy",
+    "tagline": "Primary diseases of the myocardium itself — dilated, hypertrophic, restrictive and arrhythmogenic — many of them genetic and familial.",
+    "overview": "Cardiomyopathies are diseases in which the myocardium is structurally and functionally abnormal in the absence of coronary disease, hypertension, valve disease or congenital disease sufficient to explain it. The traditional morphological classification remains useful: dilated cardiomyopathy with ventricular enlargement and impaired systolic function; hypertrophic cardiomyopathy with inappropriate hypertrophy, usually from sarcomeric protein mutations; restrictive cardiomyopathy with impaired filling and preserved wall thickness in the early stages; and arrhythmogenic cardiomyopathy with fibrofatty replacement, classically of the right ventricle. Many are inherited, so identifying one has implications for the whole family.",
+    "riskFactors": {
+      "modifiable": [
+        "Excess alcohol",
+        "Cardiotoxic chemotherapy, especially anthracyclines and trastuzumab",
+        "Cocaine and other stimulant use",
+        "Uncontrolled tachyarrhythmia",
+        "Iron overload from repeated transfusion",
+        "Peripartum state",
+        "Thyroid and nutritional deficiencies"
+      ],
+      "nonModifiable": [
+        "Sarcomeric gene mutations in hypertrophic cardiomyopathy",
+        "Desmosomal gene mutations in arrhythmogenic cardiomyopathy",
+        "Titin and lamin A/C variants in dilated cardiomyopathy",
+        "Family history of cardiomyopathy or sudden death",
+        "Amyloidosis, sarcoidosis and other infiltrative disease"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Dilated cardiomyopathy",
+        "text": "Myocyte injury, loss and disarray with interstitial fibrosis lead to eccentric remodelling. The ventricle dilates and becomes spherical, wall stress rises by Laplace's law, and systolic function progressively declines."
+      },
+      {
+        "title": "Hypertrophic cardiomyopathy",
+        "text": "Sarcomeric protein mutations produce myocyte hypertrophy and disarray with interstitial fibrosis. Wall thickening is typically asymmetric and septal, impairing relaxation and reducing cavity size."
+      },
+      {
+        "title": "Dynamic outflow obstruction",
+        "text": "In obstructive hypertrophic cardiomyopathy, septal hypertrophy narrows the outflow tract; rapid flow draws the anterior mitral leaflet into it (systolic anterior motion), causing dynamic obstruction and mitral regurgitation. The gradient increases with reduced preload or increased contractility."
+      },
+      {
+        "title": "Restrictive cardiomyopathy",
+        "text": "Infiltration or fibrosis stiffens the myocardium. Ventricular volumes and systolic function are initially preserved but filling is severely impaired, producing marked atrial dilatation and high filling pressures."
+      },
+      {
+        "title": "Arrhythmogenic cardiomyopathy",
+        "text": "Desmosomal protein mutations weaken cell–cell adhesion. Myocytes are progressively replaced by fibrous and fatty tissue, creating a substrate for re-entrant ventricular arrhythmia, often exacerbated by exercise."
+      },
+      {
+        "title": "Common downstream consequences",
+        "text": "Whatever the mechanism, the shared endpoints are heart failure, arrhythmia and thromboembolism, with sudden cardiac death a particular concern in hypertrophic and arrhythmogenic forms."
+      }
+    ],
+    "anatomyInvolved": [
+      "Ventricular myocardium and its sarcomeres, desmosomes and interstitium",
+      "Interventricular septum, asymmetrically thickened in hypertrophic disease",
+      "Mitral valve apparatus, involved in systolic anterior motion",
+      "Atria, markedly dilated in restrictive disease",
+      "Right ventricular free wall in arrhythmogenic cardiomyopathy"
+    ],
+    "relatedStructures": [
+      "left-ventricle",
+      "right-ventricle",
+      "interventricular-septum",
+      "mitral-valve",
+      "purkinje-fibers"
+    ],
+    "physiologyChanges": [
+      "Reduced ejection fraction and stroke volume in dilated disease",
+      "Impaired relaxation with elevated filling pressures in hypertrophic and restrictive disease",
+      "Dynamic, load-dependent left ventricular outflow gradient in obstructive hypertrophic cardiomyopathy",
+      "Reduced coronary flow reserve despite normal epicardial arteries",
+      "Increased arrhythmic substrate from fibrosis and myocyte disarray"
+    ],
+    "progression": [
+      {
+        "stage": "Genotype positive, phenotype negative",
+        "text": "A pathogenic variant is present without detectable structural change. Requires longitudinal surveillance."
+      },
+      {
+        "stage": "Subclinical phenotype",
+        "text": "Early structural or functional abnormality detected on imaging without symptoms."
+      },
+      {
+        "stage": "Symptomatic disease",
+        "text": "Breathlessness, chest pain, palpitations or syncope, with the pattern depending on the subtype."
+      },
+      {
+        "stage": "Advanced disease",
+        "text": "Progressive heart failure, sustained arrhythmia, or the need for transplantation or mechanical support."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Exertional breathlessness and fatigue",
+        "Chest pain, often without coronary disease",
+        "Palpitations and syncope, particularly exertional in hypertrophic and arrhythmogenic disease",
+        "Symptoms of right heart failure in restrictive disease",
+        "Sudden cardiac death as a first presentation, especially in young people"
+      ],
+      "signs": [
+        "Displaced apex with a third heart sound in dilated cardiomyopathy",
+        "Jerky carotid pulse, double apical impulse, fourth heart sound and an ejection systolic murmur that increases with Valsalva in obstructive hypertrophic cardiomyopathy",
+        "Raised JVP with Kussmaul's sign in restrictive disease",
+        "Signs of systemic disease — macroglossia and periorbital purpura in amyloidosis",
+        "Frequently a normal examination in early disease"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Echocardiography",
+        "findings": "Chamber dimensions, wall thickness and distribution, systolic and diastolic function, outflow gradient with provocation, and systolic anterior motion."
+      },
+      {
+        "modality": "Cardiac MRI",
+        "findings": "Accurate volumes and mass, and tissue characterisation — late gadolinium enhancement patterns, T1 and T2 mapping and extracellular volume — which often identify the aetiology."
+      },
+      {
+        "modality": "ECG",
+        "findings": "Abnormal in most cases: voltage criteria, deep T-wave inversion, pathological Q waves, epsilon waves in ARVC, low voltage with pseudo-infarct pattern in amyloidosis."
+      },
+      {
+        "modality": "Ambulatory monitoring and exercise testing",
+        "findings": "Arrhythmia burden, blood pressure response to exercise, and functional capacity — all feeding into sudden death risk assessment."
+      },
+      {
+        "modality": "Genetic testing and family screening",
+        "findings": "Identifies the causative variant and enables cascade screening of first-degree relatives."
+      },
+      {
+        "modality": "Endomyocardial biopsy and nuclear imaging",
+        "findings": "Reserved for suspected infiltrative or inflammatory disease; bone-tracer scintigraphy is highly useful in transthyretin cardiac amyloidosis."
+      }
+    ],
+    "complications": [
+      "Progressive heart failure",
+      "Sudden cardiac death from ventricular arrhythmia",
+      "Atrial fibrillation and thromboembolism",
+      "Intracardiac thrombus and stroke",
+      "Conduction disease requiring pacing",
+      "Need for transplantation or mechanical circulatory support"
+    ],
+    "treatment": {
+      "principles": "Treatment is directed by subtype and by arrhythmic risk. Dilated cardiomyopathy is managed with guideline-directed heart failure therapy. Hypertrophic cardiomyopathy focuses on relieving obstruction and preventing sudden death. Restrictive disease requires treatment of the underlying infiltrative process. Family screening is part of the management of every inherited cardiomyopathy. Educational summary only.",
+      "groups": [
+        {
+          "name": "Heart failure therapy",
+          "detail": "Full guideline-directed medical therapy in dilated cardiomyopathy with reduced ejection fraction."
+        },
+        {
+          "name": "Obstruction relief",
+          "detail": "Beta-blockers, disopyramide and cardiac myosin inhibitors; septal myectomy or alcohol septal ablation for refractory obstruction."
+        },
+        {
+          "name": "Sudden death prevention",
+          "detail": "Risk stratification with validated tools, and implantable defibrillators for those at high risk."
+        },
+        {
+          "name": "Arrhythmia management",
+          "detail": "Antiarrhythmic drugs, catheter ablation and, in arrhythmogenic cardiomyopathy, exercise restriction."
+        },
+        {
+          "name": "Disease-specific therapy",
+          "detail": "Transthyretin stabilisers and silencers in amyloidosis; immunosuppression in cardiac sarcoidosis; iron chelation in haemochromatosis."
+        },
+        {
+          "name": "Family screening",
+          "detail": "Clinical and genetic evaluation of first-degree relatives, with longitudinal follow-up of gene carriers."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Cardiomyopathy is myocardial disease not explained by coronary, valve, hypertensive or congenital disease.",
+      "Four morphological patterns: dilated, hypertrophic, restrictive and arrhythmogenic.",
+      "Hypertrophic cardiomyopathy is the commonest inherited cardiac condition and a leading cause of sudden death in young athletes.",
+      "The outflow gradient in obstructive HCM is dynamic — it worsens with Valsalva, standing and hypovolaemia.",
+      "Cardiac MRI tissue characterisation frequently reveals the underlying aetiology.",
+      "Diagnosing a cardiomyopathy is diagnosing a family, not just a patient."
+    ],
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "aha-professional",
+      "esc-hf-2021"
+    ],
+    "relatedKeyPoints": [
+      "heart-failure-principles",
+      "cardiac-imaging",
+      "arrhythmia-principles",
+      "ecg-essentials"
+    ]
+  },
+  {
+    "id": "congenital-heart-disease",
+    "name": "Congenital Heart Disease",
+    "abbr": "CHD",
+    "categoryId": "congenital",
+    "featured": false,
+    "animationId": "congenital-heart-disease",
+    "tagline": "Structural cardiac abnormality present from birth — the commonest congenital malformation, and now a lifelong adult specialty as survival has transformed.",
+    "overview": "Congenital heart disease encompasses a wide range of structural abnormalities arising during cardiac development. It is the most common congenital malformation. Lesions are usefully grouped by their physiological consequence: left-to-right shunts, which cause pulmonary overcirculation and volume loading; obstructive lesions, which cause pressure loading; and cyanotic lesions, in which deoxygenated blood reaches the systemic circulation. Because surgical and interventional outcomes have improved so dramatically, most patients now survive to adulthood, and adult congenital heart disease has become a distinct specialty dealing with residual lesions, arrhythmia, heart failure and pregnancy.",
+    "riskFactors": {
+      "modifiable": [
+        "Maternal diabetes, particularly poorly controlled in the first trimester",
+        "Maternal rubella and other intrauterine infections",
+        "Maternal alcohol, lithium, retinoids, some antiepileptics and warfarin exposure",
+        "Maternal phenylketonuria without dietary control",
+        "Maternal obesity"
+      ],
+      "nonModifiable": [
+        "Chromosomal abnormalities such as trisomy 21, 22q11 deletion and Turner syndrome",
+        "Single-gene disorders and family history of congenital heart disease",
+        "Advanced parental age",
+        "Multiple gestation"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Disrupted embryological development",
+        "text": "Abnormal septation, valve formation, outflow tract division or conotruncal rotation between roughly weeks three and eight of gestation produces the structural lesion."
+      },
+      {
+        "title": "Transitional circulation",
+        "text": "At birth, pulmonary vascular resistance falls and systemic resistance rises. This reversal is what unmasks many left-to-right shunts, which may therefore present weeks after birth rather than immediately."
+      },
+      {
+        "title": "Left-to-right shunting",
+        "text": "A communication between systemic and pulmonary circuits directs blood towards the lower-resistance pulmonary side, causing pulmonary overcirculation and volume loading of the receiving chambers."
+      },
+      {
+        "title": "Obstructive physiology",
+        "text": "Stenotic lesions — pulmonary stenosis, aortic stenosis, coarctation — impose pressure loading, producing hypertrophy and, if severe, ventricular failure."
+      },
+      {
+        "title": "Cyanotic physiology",
+        "text": "Right-to-left shunting or abnormal mixing allows deoxygenated blood into the systemic circulation, producing hypoxaemia, secondary erythrocytosis and clubbing."
+      },
+      {
+        "title": "Eisenmenger physiology",
+        "text": "Long-standing high-flow left-to-right shunting causes pulmonary vascular remodelling and rising resistance until the shunt reverses, producing cyanosis and marking the point at which shunt closure is no longer possible."
+      }
+    ],
+    "anatomyInvolved": [
+      "Atrial and ventricular septa",
+      "Cardiac valves, particularly pulmonary and aortic",
+      "Great arteries and their connections",
+      "Aortic arch and isthmus",
+      "Ductus arteriosus and foramen ovale",
+      "Pulmonary and systemic venous connections"
+    ],
+    "relatedStructures": [
+      "interatrial-septum",
+      "interventricular-septum",
+      "pulmonary-valve",
+      "aortic-valve",
+      "aorta",
+      "pulmonary-trunk"
+    ],
+    "physiologyChanges": [
+      "Altered pulmonary-to-systemic flow ratio (Qp:Qs)",
+      "Volume or pressure loading of specific chambers according to the lesion",
+      "Progressive pulmonary vascular remodelling with sustained overcirculation",
+      "Hypoxaemia with compensatory erythrocytosis in cyanotic lesions",
+      "Long-term atrial and ventricular arrhythmia from surgical scar and chronic loading"
+    ],
+    "progression": [
+      {
+        "stage": "Fetal and neonatal",
+        "text": "Detection on antenatal ultrasound, or presentation with cyanosis, murmur, shock or failure to thrive as the ductus closes."
+      },
+      {
+        "stage": "Infancy and childhood",
+        "text": "Definitive repair or palliation for most significant lesions; some small defects close spontaneously."
+      },
+      {
+        "stage": "Adolescence and adulthood",
+        "text": "Residual and recurrent lesions, valve regurgitation, conduit degeneration and arrhythmia."
+      },
+      {
+        "stage": "Later adult life",
+        "text": "Heart failure, atrial arrhythmia, pulmonary hypertension, and pregnancy and non-cardiac surgery risk requiring specialist management."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Poor feeding, sweating and failure to thrive in infants",
+        "Recurrent chest infections with pulmonary overcirculation",
+        "Cyanosis, sometimes with hypercyanotic spells",
+        "Exertional breathlessness and reduced exercise capacity in older children and adults",
+        "Palpitations and syncope from arrhythmia",
+        "Many lesions are entirely asymptomatic and found on incidental examination"
+      ],
+      "signs": [
+        "Murmur — frequently the presenting finding",
+        "Central cyanosis and clubbing in right-to-left shunts",
+        "Fixed splitting of the second heart sound in atrial septal defect",
+        "Continuous machinery murmur in patent ductus arteriosus",
+        "Radiofemoral delay and upper limb hypertension in coarctation",
+        "Failure to thrive, tachypnoea and hepatomegaly in infants with heart failure"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Antenatal and postnatal echocardiography",
+        "findings": "The definitive anatomical and physiological assessment; fetal echocardiography allows planning of delivery and neonatal care."
+      },
+      {
+        "modality": "Pulse oximetry screening",
+        "findings": "Newborn screening that detects critical congenital heart disease before collapse."
+      },
+      {
+        "modality": "ECG and chest radiograph",
+        "findings": "Chamber enlargement patterns, axis deviation and pulmonary vascularity provide useful clues."
+      },
+      {
+        "modality": "Cardiac MRI and CT",
+        "findings": "Essential in adults for complex anatomy, right ventricular volumes, shunt quantification and conduit assessment."
+      },
+      {
+        "modality": "Cardiac catheterisation",
+        "findings": "Haemodynamic assessment including pulmonary vascular resistance and shunt calculation, and a route for intervention."
+      },
+      {
+        "modality": "Cardiopulmonary exercise testing",
+        "findings": "Objective functional capacity, valuable for surveillance and timing of reintervention."
+      }
+    ],
+    "complications": [
+      "Pulmonary hypertension and Eisenmenger syndrome",
+      "Atrial and ventricular arrhythmia, particularly after surgical repair",
+      "Heart failure in the systemic ventricle",
+      "Infective endocarditis",
+      "Paradoxical embolism and stroke",
+      "Complications of pregnancy in specific lesions",
+      "Need for reintervention and conduit replacement"
+    ],
+    "treatment": {
+      "principles": "Management depends entirely on the specific lesion and its physiology. Many defects are repaired or palliated in childhood, but repair is rarely cure — lifelong specialist follow-up is the standard of care. Educational summary only; care must be delivered by specialist congenital heart disease services.",
+      "groups": [
+        {
+          "name": "Surgical repair and palliation",
+          "detail": "From simple defect closure to complex staged palliation such as the Fontan pathway for single ventricle physiology."
+        },
+        {
+          "name": "Transcatheter intervention",
+          "detail": "Device closure of septal defects and ducts, balloon valvuloplasty, stenting of coarctation and transcatheter pulmonary valve implantation."
+        },
+        {
+          "name": "Medical therapy",
+          "detail": "Diuretics and afterload reduction for heart failure, prostaglandin to maintain ductal patency in duct-dependent lesions, and pulmonary vasodilators in selected pulmonary hypertension."
+        },
+        {
+          "name": "Arrhythmia management",
+          "detail": "Ablation and device therapy, taking account of altered anatomy and vascular access."
+        },
+        {
+          "name": "Endocarditis prevention",
+          "detail": "Meticulous oral and skin hygiene, with antibiotic prophylaxis for defined high-risk lesions."
+        },
+        {
+          "name": "Lifelong specialist follow-up",
+          "detail": "Structured transition from paediatric to adult congenital services, with pre-pregnancy counselling and contraception advice."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Congenital heart disease is the commonest congenital malformation.",
+      "Classify by physiology — shunt, obstruction or cyanosis — rather than memorising lesion lists.",
+      "Falling pulmonary vascular resistance after birth is why many shunts present weeks later.",
+      "Ventricular septal defect is the commonest lesion at birth; bicuspid aortic valve is the commonest overall.",
+      "Eisenmenger syndrome marks the point at which shunt closure becomes contraindicated.",
+      "Repair is not cure — adults with congenital heart disease need lifelong specialist follow-up."
+    ],
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "aha-professional",
+      "ncbi-bookshelf"
+    ],
+    "relatedKeyPoints": [
+      "cardiac-imaging",
+      "heart-sounds",
+      "hemodynamics"
+    ]
+  },
+  {
+    "id": "atrial-septal-defect",
+    "name": "Atrial Septal Defect",
+    "abbr": "ASD",
+    "categoryId": "congenital",
+    "featured": false,
+    "animationId": "atrial-septal-defect",
+    "tagline": "A communication between the atria causing left-to-right shunting, right heart volume overload, and the classic sign of fixed splitting of the second heart sound.",
+    "overview": "An atrial septal defect is a persistent communication between the atria, allowing shunting driven by the difference in ventricular compliance rather than by a large pressure gradient. Secundum defects at the fossa ovalis are the commonest type; primum defects lie in the inferior septum and are part of the atrioventricular septal defect spectrum; sinus venosus defects sit near the caval orifices and are frequently associated with anomalous pulmonary venous drainage. A patent foramen ovale, present in roughly a quarter of adults, is not a true defect but a persistent flap valve, relevant chiefly to paradoxical embolism. Many defects go undetected into adulthood because the shunt is well tolerated for decades.",
+    "riskFactors": {
+      "modifiable": [
+        "Maternal exposures during early pregnancy, as for congenital heart disease generally"
+      ],
+      "nonModifiable": [
+        "Female sex, with a roughly 2:1 predominance for secundum defects",
+        "Trisomy 21, particularly for primum defects",
+        "Holt–Oram syndrome and other familial syndromes",
+        "Family history of congenital heart disease"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Compliance-driven shunting",
+        "text": "The right ventricle is more compliant than the left, so during diastole the left atrium preferentially empties across the defect into the right atrium — a left-to-right shunt determined by relative ventricular compliance rather than by atrial pressures."
+      },
+      {
+        "title": "Right heart volume overload",
+        "text": "The right atrium and ventricle receive both normal systemic venous return and the shunted volume, and progressively dilate."
+      },
+      {
+        "title": "Increased pulmonary blood flow",
+        "text": "Pulmonary flow may be one and a half to three or more times systemic flow. This increased flow across normal pulmonary and tricuspid valves produces the characteristic flow murmurs."
+      },
+      {
+        "title": "Fixed splitting of S2",
+        "text": "The large, relatively fixed right ventricular volume load prolongs right ventricular ejection throughout the respiratory cycle, so the normal inspiratory variation in splitting is abolished."
+      },
+      {
+        "title": "Atrial remodelling and arrhythmia",
+        "text": "Chronic right atrial dilatation and stretch produce atrial fibrillation and flutter, typically appearing from the fourth decade onwards."
+      },
+      {
+        "title": "Pulmonary vascular disease",
+        "text": "In a minority, sustained high pulmonary flow causes vascular remodelling with rising resistance, eventually leading to shunt reversal and Eisenmenger syndrome."
+      }
+    ],
+    "anatomyInvolved": [
+      "Interatrial septum, particularly the fossa ovalis",
+      "Right atrium and right ventricle, both volume loaded",
+      "Tricuspid and pulmonary valves, carrying increased flow",
+      "Pulmonary arteries and pulmonary vascular bed",
+      "Pulmonary veins, in sinus venosus defects with anomalous drainage"
+    ],
+    "relatedStructures": [
+      "interatrial-septum",
+      "right-atrium",
+      "right-ventricle",
+      "pulmonary-arteries",
+      "pulmonary-veins"
+    ],
+    "physiologyChanges": [
+      "Left-to-right shunt with pulmonary-to-systemic flow ratio above 1",
+      "Right atrial and right ventricular volume overload with dilatation",
+      "Increased flow across the pulmonary and tricuspid valves",
+      "Paradoxical septal motion from right ventricular volume loading",
+      "Potential for paradoxical embolism when right atrial pressure transiently exceeds left"
+    ],
+    "progression": [
+      {
+        "stage": "Childhood",
+        "text": "Usually asymptomatic; often detected because of an incidental murmur. Small secundum defects may close spontaneously."
+      },
+      {
+        "stage": "Young adulthood",
+        "text": "Exercise intolerance may be present but is frequently unrecognised, having developed gradually."
+      },
+      {
+        "stage": "Fourth decade onwards",
+        "text": "Atrial arrhythmias, progressive right heart dilatation and reduced exercise capacity become apparent."
+      },
+      {
+        "stage": "Late",
+        "text": "Pulmonary hypertension, right heart failure and, in a minority, shunt reversal with Eisenmenger physiology."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Frequently asymptomatic for decades",
+        "Exertional breathlessness and fatigue",
+        "Palpitations from atrial arrhythmia",
+        "Recurrent chest infections in children with large shunts",
+        "Stroke or transient ischaemic attack from paradoxical embolism"
+      ],
+      "signs": [
+        "Wide and fixed splitting of the second heart sound — the cardinal sign",
+        "Ejection systolic murmur at the upper left sternal edge from increased pulmonary flow",
+        "Tricuspid mid-diastolic flow murmur at the lower left sternal edge with large shunts",
+        "Left parasternal heave from right ventricular volume overload",
+        "Raised JVP and signs of right heart failure in advanced disease",
+        "Cyanosis and clubbing only once the shunt has reversed"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "Defect location and size, direction of shunting, right heart dilatation, paradoxical septal motion and estimated pulmonary pressures."
+      },
+      {
+        "modality": "Agitated saline contrast study",
+        "findings": "Bubbles crossing to the left side within a few cardiac cycles confirm an interatrial communication."
+      },
+      {
+        "modality": "Transoesophageal echocardiography",
+        "findings": "Defines defect margins and rims, essential for assessing suitability for device closure, and identifies sinus venosus defects."
+      },
+      {
+        "modality": "Cardiac MRI or CT",
+        "findings": "Quantifies shunt fraction and right ventricular volumes, and identifies anomalous pulmonary venous drainage."
+      },
+      {
+        "modality": "ECG",
+        "findings": "Right axis deviation with incomplete right bundle branch block in secundum defects; left axis deviation in primum defects — a useful discriminator."
+      },
+      {
+        "modality": "Cardiac catheterisation",
+        "findings": "Oximetry step-up quantifies the shunt; pulmonary vascular resistance determines whether closure is safe."
+      }
+    ],
+    "complications": [
+      "Atrial fibrillation and flutter",
+      "Right heart failure",
+      "Pulmonary hypertension and Eisenmenger syndrome",
+      "Paradoxical embolism and stroke",
+      "Reduced exercise capacity",
+      "Device- or surgery-related complications including residual shunt and erosion"
+    ],
+    "treatment": {
+      "principles": "Closure is indicated for haemodynamically significant defects with right heart volume overload, provided pulmonary vascular resistance has not risen prohibitively. Closure improves symptoms and right ventricular size at any age, though arrhythmia risk persists if closure is late. Educational summary only.",
+      "groups": [
+        {
+          "name": "Observation",
+          "detail": "Small defects without right heart dilatation may simply be monitored."
+        },
+        {
+          "name": "Transcatheter device closure",
+          "detail": "The treatment of choice for secundum defects with adequate rims."
+        },
+        {
+          "name": "Surgical closure",
+          "detail": "Required for primum and sinus venosus defects, for very large defects, and where pulmonary venous drainage must be rerouted."
+        },
+        {
+          "name": "Arrhythmia management",
+          "detail": "Rhythm or rate control with anticoagulation; concomitant surgical ablation may be considered."
+        },
+        {
+          "name": "Pulmonary hypertension assessment",
+          "detail": "Careful haemodynamic evaluation before closure; closure is contraindicated once the shunt has reversed."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Shunting is driven by relative ventricular compliance, not by a large atrial pressure difference.",
+      "Wide fixed splitting of the second heart sound is the cardinal clinical sign.",
+      "Murmurs arise from increased flow across normal valves, not from the defect itself.",
+      "Secundum defects show right axis deviation; primum defects show left axis deviation.",
+      "Presentation is often delayed to adulthood with arrhythmia or exercise intolerance.",
+      "A patent foramen ovale is a flap valve, not a true septal defect."
+    ],
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "moore",
+      "ncbi-bookshelf"
+    ],
+    "relatedKeyPoints": [
+      "heart-sounds",
+      "cardiac-imaging",
+      "hemodynamics",
+      "ecg-essentials"
+    ]
+  },
+  {
+    "id": "hypertension",
+    "name": "Hypertension",
+    "abbr": "HTN",
+    "categoryId": "hypertension",
+    "featured": false,
+    "animationId": "hypertension",
+    "tagline": "Sustained elevation of arterial pressure — largely asymptomatic, the leading modifiable cardiovascular risk factor, and a driver of almost every other cardiac disease.",
+    "overview": "Hypertension is sustained elevation of arterial blood pressure above thresholds at which treatment reduces cardiovascular events. Roughly 90–95% of cases are primary (essential), arising from a complex interaction of genetic susceptibility, sodium handling, sympathetic and renin–angiotensin activity, vascular stiffness and lifestyle. The remainder are secondary to identifiable causes such as renal disease, renal artery stenosis, primary aldosteronism, phaeochromocytoma, Cushing's syndrome, coarctation, obstructive sleep apnoea or drugs. It is overwhelmingly asymptomatic, which is why it has been called the silent killer, and its consequences are delivered through target organ damage in the heart, brain, kidneys, retina and arteries. Diagnostic thresholds differ between major guidelines, so always state which definition is being used.",
+    "riskFactors": {
+      "modifiable": [
+        "High dietary sodium and low potassium intake",
+        "Obesity, especially central adiposity",
+        "Excess alcohol",
+        "Physical inactivity",
+        "Obstructive sleep apnoea",
+        "Psychosocial stress",
+        "NSAIDs, corticosteroids, combined oral contraceptives, decongestants and stimulants",
+        "Chronic kidney disease"
+      ],
+      "nonModifiable": [
+        "Increasing age with arterial stiffening",
+        "Family history and genetic factors",
+        "Ethnicity, with higher prevalence and earlier onset in some populations",
+        "Male sex at younger ages",
+        "Low birth weight"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Determinants of pressure",
+        "text": "Mean arterial pressure is the product of cardiac output and systemic vascular resistance. In established primary hypertension the dominant abnormality is raised systemic vascular resistance with a normal cardiac output."
+      },
+      {
+        "title": "Sodium and volume handling",
+        "text": "A rightward shift in the renal pressure–natriuresis relationship means the kidney requires a higher perfusion pressure to excrete a given sodium load, resetting pressure upward."
+      },
+      {
+        "title": "Neurohormonal activation",
+        "text": "Increased sympathetic outflow and inappropriate activation of the renin–angiotensin–aldosterone system raise vascular tone and promote sodium retention and vascular remodelling."
+      },
+      {
+        "title": "Endothelial dysfunction",
+        "text": "Reduced nitric oxide bioavailability and increased endothelin and oxidative stress shift the vascular balance towards vasoconstriction."
+      },
+      {
+        "title": "Vascular remodelling",
+        "text": "Arterioles undergo hypertrophic and eutrophic remodelling with an increased wall-to-lumen ratio, raising resistance further and creating a self-perpetuating cycle."
+      },
+      {
+        "title": "Large artery stiffening",
+        "text": "Elastin fragmentation and collagen deposition reduce aortic compliance, raising systolic and pulse pressure — the mechanism of isolated systolic hypertension in older people."
+      },
+      {
+        "title": "Cardiac consequences",
+        "text": "Chronic pressure loading produces concentric left ventricular hypertrophy with impaired relaxation, reduced coronary flow reserve, atrial dilatation and an increased risk of arrhythmia and heart failure."
+      }
+    ],
+    "anatomyInvolved": [
+      "Systemic arterioles — the resistance vessels",
+      "Large elastic arteries, which stiffen over time",
+      "Left ventricle, which hypertrophies concentrically",
+      "Kidneys, both cause and victim of hypertension",
+      "Retinal arterioles, where damage is directly visible",
+      "Cerebral vasculature"
+    ],
+    "relatedStructures": [
+      "systemic-arteries",
+      "aorta",
+      "left-ventricle",
+      "left-atrium"
+    ],
+    "physiologyChanges": [
+      "Increased systemic vascular resistance with normal cardiac output in established disease",
+      "Rightward shift of the renal pressure–natriuresis curve",
+      "Concentric left ventricular hypertrophy with diastolic dysfunction",
+      "Reduced arterial compliance with widened pulse pressure",
+      "Impaired cerebral and renal autoregulation, shifted to higher pressures",
+      "Reduced coronary flow reserve despite normal epicardial arteries"
+    ],
+    "progression": [
+      {
+        "stage": "Elevated pressure without organ damage",
+        "text": "Raised readings with no detectable target organ involvement. Lifestyle intervention is the priority."
+      },
+      {
+        "stage": "Target organ damage",
+        "text": "Left ventricular hypertrophy, albuminuria, retinopathy or increased arterial stiffness appear, still without symptoms."
+      },
+      {
+        "stage": "Established cardiovascular disease",
+        "text": "Coronary disease, heart failure, stroke, chronic kidney disease or peripheral arterial disease develop."
+      },
+      {
+        "stage": "Hypertensive emergency",
+        "text": "Severe elevation with acute target organ damage — encephalopathy, aortic dissection, acute heart failure, acute kidney injury or retinal haemorrhage — requiring immediate, controlled reduction."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Asymptomatic in the great majority — this is the defining clinical feature",
+        "Headache, usually only with severe elevation",
+        "Symptoms of a secondary cause: episodic headache, palpitations and sweating in phaeochromocytoma; muscle weakness in primary aldosteronism",
+        "Symptoms of target organ damage: chest pain, breathlessness, visual disturbance, neurological deficit"
+      ],
+      "signs": [
+        "Elevated blood pressure on repeated, properly performed measurement — correct cuff size and technique matter",
+        "Sustained, non-displaced apex beat and a fourth heart sound with left ventricular hypertrophy",
+        "Hypertensive retinopathy on fundoscopy, graded by severity",
+        "Radiofemoral delay in coarctation; renal bruits in renal artery stenosis",
+        "Features of Cushing's syndrome or thyroid disease where relevant"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Ambulatory or home blood pressure monitoring",
+        "findings": "Confirms the diagnosis and identifies white-coat and masked hypertension; better correlated with outcome than clinic readings."
+      },
+      {
+        "modality": "Blood and urine tests",
+        "findings": "Renal function, electrolytes, glucose, HbA1c, lipids and urine albumin-to-creatinine ratio to assess damage and screen for causes."
+      },
+      {
+        "modality": "ECG",
+        "findings": "Left ventricular hypertrophy, strain pattern, left atrial abnormality or atrial fibrillation."
+      },
+      {
+        "modality": "Echocardiography",
+        "findings": "Left ventricular mass, wall thickness, diastolic function and left atrial volume, where the ECG or clinical picture warrants it."
+      },
+      {
+        "modality": "Fundoscopy",
+        "findings": "Direct visualisation of arteriolar narrowing, arteriovenous nipping, haemorrhages, exudates and papilloedema."
+      },
+      {
+        "modality": "Secondary cause screening",
+        "findings": "Aldosterone-to-renin ratio, plasma or urinary metanephrines, renal imaging and sleep studies, guided by clinical suspicion — particularly in young or resistant hypertension."
+      }
+    ],
+    "complications": [
+      "Coronary artery disease and myocardial infarction",
+      "Heart failure, particularly with preserved ejection fraction",
+      "Stroke, both ischaemic and haemorrhagic",
+      "Chronic kidney disease and end-stage renal failure",
+      "Atrial fibrillation",
+      "Aortic aneurysm and dissection",
+      "Hypertensive retinopathy and visual loss",
+      "Vascular cognitive impairment and dementia",
+      "Peripheral arterial disease"
+    ],
+    "treatment": {
+      "principles": "Treatment aims to reduce cardiovascular events, not simply to normalise a number. Lifestyle modification underpins all management. Drug choice considers age, ethnicity, comorbidity and the presence of target organ damage, and combination therapy — often as a single-pill combination — is usually required to reach target. Educational summary only; thresholds and targets differ between guidelines and must be applied from current recommendations.",
+      "groups": [
+        {
+          "name": "Lifestyle modification",
+          "detail": "Sodium reduction, DASH-style diet, weight loss, regular aerobic activity, alcohol moderation and smoking cessation."
+        },
+        {
+          "name": "Renin–angiotensin system inhibitors",
+          "detail": "ACE inhibitors or angiotensin receptor blockers, particularly valuable with diabetes, albuminuria or heart failure."
+        },
+        {
+          "name": "Calcium channel blockers",
+          "detail": "Dihydropyridines, often first-line in older patients and in some ethnic groups."
+        },
+        {
+          "name": "Thiazide-like diuretics",
+          "detail": "Effective, well-studied, and useful in combination therapy."
+        },
+        {
+          "name": "Additional agents",
+          "detail": "Mineralocorticoid receptor antagonists for resistant hypertension, plus beta-blockers and alpha-blockers where there is a specific indication."
+        },
+        {
+          "name": "Treating secondary causes",
+          "detail": "Adrenalectomy or targeted therapy for aldosteronism, renal artery intervention in selected cases, CPAP for sleep apnoea."
+        },
+        {
+          "name": "Adherence support",
+          "detail": "Single-pill combinations, home monitoring and structured follow-up — adherence is a principal determinant of control."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Mean arterial pressure = cardiac output × systemic vascular resistance; raised resistance dominates in established disease.",
+      "Around 90–95% of hypertension is primary; screen for secondary causes in young, severe or resistant cases.",
+      "It is asymptomatic — the diagnosis is made by measurement, not by symptoms.",
+      "Out-of-office measurement correlates better with outcomes than clinic readings.",
+      "Isolated systolic hypertension in older adults reflects large artery stiffening.",
+      "Target organ damage — left ventricular hypertrophy, albuminuria, retinopathy — refines risk and guides urgency.",
+      "Diagnostic thresholds differ between guidelines; always state which you are applying."
+    ],
+    "references": [
+      "aha-htn-2017",
+      "esc-prevention-2021",
+      "who-cvd",
+      "guyton",
+      "braunwald"
+    ],
+    "relatedKeyPoints": [
+      "hemodynamics",
+      "cardiovascular-pharmacology",
+      "cardiovascular-examination",
+      "heart-failure-principles"
+    ]
+  }
+]

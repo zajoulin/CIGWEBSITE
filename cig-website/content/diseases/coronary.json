@@ -1,0 +1,611 @@
+[
+  {
+    "id": "atherosclerosis",
+    "name": "Atherosclerosis",
+    "categoryId": "coronary-artery-disease",
+    "featured": true,
+    "animationId": "atherosclerosis",
+    "tagline": "A chronic, lipid-driven inflammatory disease of the arterial wall — the single process underlying most cardiovascular death worldwide.",
+    "overview": "Atherosclerosis is a progressive disease of large and medium-sized arteries in which lipoproteins accumulate in the subendothelial space, provoke a chronic inflammatory response, and drive formation of a plaque containing lipid, inflammatory cells, smooth muscle cells and connective tissue. It begins in childhood as fatty streaks and develops silently over decades. Clinical events occur either when a plaque grows large enough to limit flow, or — more often and more suddenly — when it ruptures or erodes and triggers thrombosis. Because the same process affects coronary, cerebral, renal and limb arteries, atherosclerosis is best understood as a systemic disease with local manifestations.",
+    "riskFactors": {
+      "modifiable": [
+        "Elevated LDL cholesterol and other apoB-containing lipoproteins",
+        "Cigarette smoking and other tobacco use",
+        "Hypertension",
+        "Diabetes mellitus and insulin resistance",
+        "Obesity, particularly central adiposity",
+        "Physical inactivity",
+        "Unhealthy diet",
+        "Chronic kidney disease",
+        "Chronic inflammatory conditions"
+      ],
+      "nonModifiable": [
+        "Increasing age",
+        "Male sex at younger ages",
+        "Family history of premature cardiovascular disease",
+        "Genetic disorders such as familial hypercholesterolaemia",
+        "Elevated lipoprotein(a)"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Endothelial dysfunction",
+        "text": "Disturbed flow at arterial branch points, together with LDL, smoking, hypertension and hyperglycaemia, injures the endothelium. Nitric oxide availability falls, permeability rises, and adhesion molecules are expressed on the luminal surface."
+      },
+      {
+        "title": "Lipoprotein retention and modification",
+        "text": "ApoB-containing lipoproteins cross the damaged endothelium and are retained by binding to proteoglycans in the intima. Once trapped they undergo oxidative and enzymatic modification, generating molecules that are strongly pro-inflammatory."
+      },
+      {
+        "title": "Inflammatory cell recruitment",
+        "text": "Monocytes adhere to the activated endothelium, migrate into the intima and differentiate into macrophages. Scavenger receptors allow them to ingest modified LDL without the normal feedback control, so they become lipid-laden foam cells. T lymphocytes are recruited alongside them."
+      },
+      {
+        "title": "Fatty streak formation",
+        "text": "Accumulated foam cells form the fatty streak — the earliest visible lesion, present even in adolescents and at this stage still potentially reversible."
+      },
+      {
+        "title": "Smooth muscle migration and fibrous cap formation",
+        "text": "Cytokines and growth factors recruit smooth muscle cells from the media into the intima, where they secrete collagen and other matrix proteins. This produces the fibrous cap that separates the thrombogenic plaque core from flowing blood."
+      },
+      {
+        "title": "Necrotic core development",
+        "text": "Foam cells die by apoptosis and necrosis. When clearance of these dead cells is impaired, their lipid and cellular debris coalesce into a necrotic core rich in tissue factor — highly thrombogenic if it ever contacts blood."
+      },
+      {
+        "title": "Plaque growth and remodelling",
+        "text": "The artery initially remodels outwards, so the lumen is preserved despite substantial plaque burden — which is why severe disease can be invisible on angiography until late. Eventually, expansion encroaches on the lumen and begins to limit flow."
+      },
+      {
+        "title": "Plaque destabilisation",
+        "text": "Inflammatory cells release matrix metalloproteinases that degrade cap collagen while smooth muscle cells that would repair it die. A thin cap, a large necrotic core and dense inflammation define the vulnerable plaque."
+      },
+      {
+        "title": "Rupture or erosion and thrombosis",
+        "text": "Cap rupture exposes the necrotic core to blood; plaque erosion exposes subendothelial matrix. Either triggers platelet adhesion, activation and aggregation with coagulation cascade activation, producing a thrombus that may occlude the vessel or embolise downstream."
+      }
+    ],
+    "anatomyInvolved": [
+      "Arterial intima — the site of lipoprotein retention and plaque formation",
+      "Endothelium — the initiating interface",
+      "Tunica media — source of the smooth muscle cells that build the fibrous cap",
+      "Preferential sites: branch points, bifurcations and curvatures where flow is disturbed",
+      "Coronary arteries, carotid bifurcation, abdominal aorta and lower limb arteries are most affected"
+    ],
+    "relatedStructures": [
+      "coronary-arteries",
+      "aorta",
+      "systemic-arteries"
+    ],
+    "physiologyChanges": [
+      "Loss of endothelium-derived nitric oxide impairs flow-mediated vasodilatation",
+      "Coronary flow reserve falls before any resting flow limitation appears",
+      "A stenosis of roughly 70% or more of the luminal diameter typically limits flow during exertion",
+      "Arterial compliance falls, raising systolic and pulse pressure",
+      "Prothrombotic and pro-inflammatory endothelial phenotype replaces the normal antithrombotic surface"
+    ],
+    "progression": [
+      {
+        "stage": "First and second decades",
+        "text": "Fatty streaks appear, composed of intimal foam cells. Entirely asymptomatic and potentially reversible."
+      },
+      {
+        "stage": "Third decade onwards",
+        "text": "Fibrous plaques develop with a defined lipid core and fibrous cap. Outward remodelling preserves the lumen."
+      },
+      {
+        "stage": "Fourth decade onwards",
+        "text": "Plaques enlarge, calcify and begin to encroach on the lumen. Flow-limiting stenosis may cause stable angina or claudication."
+      },
+      {
+        "stage": "Any point after plaque formation",
+        "text": "Rupture or erosion with superimposed thrombosis produces an acute event — myocardial infarction, stroke or acute limb ischaemia. Crucially, most culprit lesions were not severely stenotic beforehand."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Silent for decades — the first presentation may be a myocardial infarction",
+        "Exertional chest discomfort when coronary flow becomes limiting",
+        "Intermittent claudication when lower limb arteries are affected",
+        "Transient neurological symptoms with carotid disease",
+        "Abdominal pain after eating in mesenteric involvement"
+      ],
+      "signs": [
+        "Arterial bruits over carotid, renal or femoral arteries",
+        "Reduced or absent peripheral pulses and a low ankle–brachial index",
+        "Xanthelasma, corneal arcus in younger patients, and tendon xanthomata in familial hypercholesterolaemia",
+        "Retinal arteriolar changes",
+        "Often no abnormal signs at all"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Lipid profile",
+        "findings": "Total, LDL and HDL cholesterol, triglycerides and non-HDL cholesterol; lipoprotein(a) at least once in a lifetime."
+      },
+      {
+        "modality": "Coronary artery calcium score",
+        "findings": "CT-based quantification of calcified plaque burden, used to refine risk estimates in intermediate-risk individuals."
+      },
+      {
+        "modality": "CT coronary angiography",
+        "findings": "Non-invasive assessment of stenosis severity and plaque characteristics, including high-risk features."
+      },
+      {
+        "modality": "Carotid ultrasound",
+        "findings": "Intima–media thickness and plaque; quantifies stenosis at the bifurcation."
+      },
+      {
+        "modality": "Ankle–brachial pressure index",
+        "findings": "A ratio below 0.9 indicates peripheral arterial disease and identifies systemic atherosclerosis."
+      },
+      {
+        "modality": "Invasive angiography with intravascular imaging",
+        "findings": "IVUS and optical coherence tomography characterise plaque composition, cap thickness and remodelling."
+      }
+    ],
+    "complications": [
+      "Acute coronary syndromes, including myocardial infarction",
+      "Ischaemic stroke and transient ischaemic attack",
+      "Peripheral arterial disease and critical limb ischaemia",
+      "Ischaemic cardiomyopathy and heart failure",
+      "Renal artery stenosis and ischaemic nephropathy",
+      "Aortic aneurysm formation",
+      "Sudden cardiac death"
+    ],
+    "treatment": {
+      "principles": "Management is directed at the whole patient rather than a single artery: reduce atherogenic lipoproteins, control the other risk factors, and use antithrombotic therapy where the benefit outweighs bleeding risk. Revascularisation relieves symptoms and, in specific situations, improves prognosis, but it does not treat the underlying disease. This section is a summary of therapeutic categories for study purposes; treatment decisions must follow current guidelines and individual clinical assessment.",
+      "groups": [
+        {
+          "name": "Lipid-lowering therapy",
+          "detail": "Statins are first-line, with ezetimibe and PCSK9-directed therapies added to reach risk-based targets. Intensity is matched to overall cardiovascular risk."
+        },
+        {
+          "name": "Antiplatelet therapy",
+          "detail": "Used in established atherosclerotic disease; the choice and duration depend on the clinical setting and bleeding risk."
+        },
+        {
+          "name": "Blood pressure control",
+          "detail": "Lowering blood pressure reduces both atherosclerotic progression and events."
+        },
+        {
+          "name": "Glycaemic control",
+          "detail": "In diabetes, agents with demonstrated cardiovascular benefit are preferred alongside glucose lowering."
+        },
+        {
+          "name": "Lifestyle modification",
+          "detail": "Smoking cessation, physical activity, dietary change and weight management — the foundation of every treatment plan."
+        },
+        {
+          "name": "Revascularisation",
+          "detail": "Percutaneous coronary intervention or bypass surgery for symptom relief and, in defined anatomical and clinical subsets, prognostic benefit."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Atherosclerosis is a chronic inflammatory disease of the arterial wall, not simply passive lipid deposition.",
+      "It begins in childhood and progresses silently for decades before any symptom appears.",
+      "Outward (positive) remodelling preserves the lumen early, so angiography underestimates true plaque burden.",
+      "Most myocardial infarctions arise from plaques that were not severely stenotic — vulnerability matters more than size.",
+      "It is systemic: disease found in one arterial bed should prompt evaluation of the others.",
+      "Cumulative lifetime exposure to apoB-containing lipoproteins is the central driver, which is why early and sustained lowering matters."
+    ],
+    "references": [
+      "esc-prevention-2021",
+      "esc-acs-2023",
+      "braunwald",
+      "who-cvd",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "coronary-circulation",
+      "cardiovascular-pharmacology",
+      "cardiac-imaging"
+    ]
+  },
+  {
+    "id": "stable-angina",
+    "name": "Stable Angina",
+    "abbr": "Chronic coronary syndrome",
+    "categoryId": "coronary-artery-disease",
+    "featured": false,
+    "animationId": "stable-angina",
+    "tagline": "Predictable, exertional chest discomfort caused by a fixed coronary stenosis that cannot meet increased myocardial oxygen demand.",
+    "overview": "Stable angina is the symptomatic expression of chronic coronary disease in which a flow-limiting stenosis provides adequate perfusion at rest but cannot increase supply enough to meet the demand of exertion or emotional stress. The discomfort is reproducible, provoked by a consistent level of activity, and relieved within minutes by rest or nitrates. The term chronic coronary syndrome is now often preferred, emphasising that the underlying atherosclerotic disease is dynamic even when symptoms are stable. Not all angina is caused by epicardial stenosis: microvascular dysfunction and coronary vasospasm produce identical symptoms with unobstructed arteries.",
+    "riskFactors": {
+      "modifiable": [
+        "Dyslipidaemia",
+        "Smoking",
+        "Hypertension",
+        "Diabetes mellitus",
+        "Obesity",
+        "Physical inactivity"
+      ],
+      "nonModifiable": [
+        "Age",
+        "Male sex",
+        "Family history of premature coronary disease",
+        "Prior atherosclerotic disease elsewhere"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Fixed stenosis develops",
+        "text": "An atherosclerotic plaque progressively narrows the epicardial artery. Resting flow is maintained by compensatory distal microvascular dilatation."
+      },
+      {
+        "title": "Coronary flow reserve falls",
+        "text": "Because the microvasculature is already partly dilated to maintain resting flow, the capacity for further dilatation — the coronary flow reserve — is reduced."
+      },
+      {
+        "title": "Demand rises with exertion",
+        "text": "Exercise increases heart rate, contractility and wall stress, raising myocardial oxygen demand. Tachycardia simultaneously shortens diastole, reducing perfusion time."
+      },
+      {
+        "title": "Supply–demand mismatch",
+        "text": "When demand exceeds the maximal achievable supply, the subendocardium — perfused last and compressed most — becomes ischaemic."
+      },
+      {
+        "title": "Metabolic and mechanical consequences",
+        "text": "Anaerobic metabolism, lactate production and adenosine release stimulate cardiac afferent nerves. Regional diastolic then systolic dysfunction follows, before ECG changes and finally pain — the ischaemic cascade."
+      },
+      {
+        "title": "Resolution",
+        "text": "Ceasing exertion lowers demand, flow again becomes adequate, and the process reverses within minutes without myocyte necrosis."
+      }
+    ],
+    "anatomyInvolved": [
+      "Epicardial coronary arteries, particularly proximal segments",
+      "Coronary microcirculation and its capacity to dilate",
+      "Subendocardial myocardium — the most vulnerable layer",
+      "Cardiac afferent nerves conveying the sensation of angina"
+    ],
+    "relatedStructures": [
+      "coronary-arteries",
+      "left-ventricle",
+      "aorta"
+    ],
+    "physiologyChanges": [
+      "Reduced coronary flow reserve",
+      "Subendocardial ischaemia during increased demand",
+      "Transient regional diastolic and then systolic dysfunction",
+      "Reversible ST-segment depression during ischaemia",
+      "No release of cardiac troponin, since there is no myocyte necrosis"
+    ],
+    "progression": [
+      {
+        "stage": "Subclinical",
+        "text": "Plaque present without flow limitation; entirely asymptomatic."
+      },
+      {
+        "stage": "Stable angina",
+        "text": "Reproducible exertional symptoms at a consistent threshold, relieved by rest."
+      },
+      {
+        "stage": "Progressive angina",
+        "text": "Symptoms occur at lower workloads as the stenosis or plaque burden increases."
+      },
+      {
+        "stage": "Destabilisation",
+        "text": "Plaque rupture or erosion converts stable disease into an acute coronary syndrome — a change in pattern is the clinical warning."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Central chest tightness, heaviness or pressure, often described with a clenched fist over the sternum",
+        "Radiation to the left arm, both arms, neck, jaw or back",
+        "Provoked by exertion, cold weather, heavy meals or emotion",
+        "Relieved within about five minutes by rest or sublingual nitrate",
+        "Associated breathlessness; in older adults, women and people with diabetes, breathlessness or fatigue may replace chest pain entirely"
+      ],
+      "signs": [
+        "Frequently a normal examination between episodes",
+        "During an episode: transient fourth heart sound, a murmur of ischaemic mitral regurgitation, or a rise in blood pressure",
+        "Signs of risk factors — xanthelasma, arcus, hypertensive retinopathy",
+        "Evidence of atherosclerosis elsewhere: bruits, absent pulses"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Resting 12-lead ECG",
+        "findings": "Often normal; may show prior infarction, Q waves or left ventricular hypertrophy. A normal ECG does not exclude coronary disease."
+      },
+      {
+        "modality": "CT coronary angiography",
+        "findings": "Increasingly the first-line test in patients with low to intermediate likelihood of disease; excellent negative predictive value."
+      },
+      {
+        "modality": "Functional stress testing",
+        "findings": "Stress echocardiography, perfusion imaging or stress cardiac MRI demonstrating inducible ischaemia and localising the territory."
+      },
+      {
+        "modality": "Exercise ECG",
+        "findings": "ST depression of 1 mm or more with symptoms; limited sensitivity and specificity but gives valuable functional information."
+      },
+      {
+        "modality": "Invasive angiography with physiology",
+        "findings": "Fractional flow reserve or instantaneous wave-free ratio determines whether an intermediate stenosis is functionally significant."
+      },
+      {
+        "modality": "Echocardiography",
+        "findings": "Assesses ventricular function, regional wall motion and excludes valve disease as an alternative cause."
+      }
+    ],
+    "complications": [
+      "Progression to acute coronary syndrome",
+      "Myocardial infarction",
+      "Ischaemic cardiomyopathy and heart failure",
+      "Ventricular arrhythmia",
+      "Substantially impaired quality of life and exercise capacity"
+    ],
+    "treatment": {
+      "principles": "Two parallel goals: relieve symptoms and improve prognosis. Antianginal drugs and revascularisation address symptoms; risk factor modification and secondary prevention address outcome. Educational summary only — management must follow current guidelines.",
+      "groups": [
+        {
+          "name": "Anti-ischaemic drugs",
+          "detail": "Beta-blockers and calcium channel blockers reduce demand; nitrates provide symptomatic relief. Second-line agents include ivabradine, ranolazine and nicorandil."
+        },
+        {
+          "name": "Antiplatelet therapy",
+          "detail": "Used for secondary prevention of atherothrombotic events."
+        },
+        {
+          "name": "Lipid-lowering therapy",
+          "detail": "High-intensity statin therapy with additional agents as required to reach risk-based targets."
+        },
+        {
+          "name": "Revascularisation",
+          "detail": "PCI or CABG for symptoms refractory to medical therapy, and for prognostic benefit in specific anatomical subsets such as left main disease."
+        },
+        {
+          "name": "Lifestyle and rehabilitation",
+          "detail": "Structured exercise, smoking cessation, dietary change and cardiac rehabilitation programmes."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Angina reflects a mismatch between myocardial oxygen supply and demand, not necessarily impending infarction.",
+      "It is reproducible and predictable — a change in pattern suggests destabilisation.",
+      "The subendocardium becomes ischaemic first because it is perfused last and compressed most.",
+      "Pain is the last step in the ischaemic cascade, after diastolic and systolic dysfunction and ECG change.",
+      "Troponin is not elevated, because there is no myocyte death.",
+      "Angina with unobstructed coronary arteries is common and may reflect microvascular disease or vasospasm."
+    ],
+    "references": [
+      "esc-acs-2023",
+      "acc-guidelines-hub",
+      "braunwald",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "coronary-circulation",
+      "ecg-essentials",
+      "cardiovascular-pharmacology"
+    ]
+  },
+  {
+    "id": "myocardial-infarction",
+    "name": "Myocardial Infarction",
+    "abbr": "MI",
+    "categoryId": "coronary-artery-disease",
+    "featured": true,
+    "animationId": "myocardial-infarction",
+    "tagline": "Myocardial cell death caused by prolonged ischaemia — most often from acute thrombotic occlusion of a coronary artery after plaque rupture.",
+    "overview": "Myocardial infarction is defined by the Fourth Universal Definition as myocardial injury, evidenced by a rise and/or fall of cardiac troponin with at least one value above the 99th percentile upper reference limit, together with clinical evidence of acute myocardial ischaemia. Type 1 infarction results from atherothrombosis following plaque rupture or erosion; type 2 results from a supply–demand imbalance without acute atherothrombosis, as in severe anaemia, tachyarrhythmia or hypotension. Clinically, presentations are separated into ST-elevation myocardial infarction, which usually reflects complete occlusion and demands immediate reperfusion, and non-ST-elevation acute coronary syndromes. Time is myocardium: the extent of necrosis depends on the duration of occlusion, the presence of collaterals and the size of the territory at risk.",
+    "riskFactors": {
+      "modifiable": [
+        "Smoking",
+        "Dyslipidaemia",
+        "Hypertension",
+        "Diabetes mellitus",
+        "Obesity",
+        "Physical inactivity",
+        "Psychosocial stress",
+        "Excess alcohol"
+      ],
+      "nonModifiable": [
+        "Age",
+        "Male sex",
+        "Family history of premature coronary disease",
+        "Prior coronary or other atherosclerotic disease",
+        "Elevated lipoprotein(a)"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Vulnerable plaque",
+        "text": "A plaque with a thin fibrous cap, a large necrotic core and dense inflammatory infiltrate develops. It is often not severely stenotic and may have caused no symptoms."
+      },
+      {
+        "title": "Plaque rupture or erosion",
+        "text": "The cap fissures, exposing the highly thrombogenic, tissue-factor-rich necrotic core to circulating blood. In erosion, the cap remains intact but the endothelium is denuded, exposing subendothelial matrix."
+      },
+      {
+        "title": "Platelet adhesion and activation",
+        "text": "Platelets adhere via von Willebrand factor and collagen receptors, become activated, change shape and release thromboxane A2 and ADP, recruiting further platelets."
+      },
+      {
+        "title": "Thrombus formation",
+        "text": "Activated platelets aggregate through GPIIb/IIIa receptors and fibrinogen bridges while tissue factor triggers the coagulation cascade, generating thrombin and a fibrin mesh that stabilises the clot."
+      },
+      {
+        "title": "Vessel occlusion",
+        "text": "The thrombus, often with accompanying vasospasm and distal microembolisation, occludes the artery. Complete occlusion characteristically produces ST elevation; subtotal occlusion produces non-ST-elevation presentations."
+      },
+      {
+        "title": "Ischaemic cascade",
+        "text": "Within seconds, aerobic metabolism ceases and ATP falls. Contraction stops within about a minute. Anaerobic glycolysis and lactate accumulation follow, with loss of membrane ionic gradients."
+      },
+      {
+        "title": "Wavefront of necrosis",
+        "text": "Irreversible injury begins in the subendocardium after roughly 20–30 minutes of complete occlusion and advances as a wavefront towards the epicardium over the following hours — the physiological basis of emergency reperfusion."
+      },
+      {
+        "title": "Inflammation and healing",
+        "text": "Neutrophils then macrophages clear necrotic tissue over days. Granulation tissue forms and is replaced by collagenous scar over weeks. The infarct zone is at its most mechanically fragile in the first week."
+      },
+      {
+        "title": "Ventricular remodelling",
+        "text": "Infarct expansion, thinning and dilatation of the remaining ventricle follow, with neurohormonal activation driving progressive dysfunction — the pathway from infarction to heart failure."
+      }
+    ],
+    "anatomyInvolved": [
+      "Culprit coronary artery, determining the territory at risk",
+      "LAD occlusion — anterior wall, anterior septum and apex",
+      "Right coronary occlusion — inferior wall, often the right ventricle and the AV node",
+      "Circumflex occlusion — lateral and posterior walls",
+      "Subendocardium, where necrosis begins",
+      "Conduction system, when its blood supply is involved",
+      "Papillary muscles and interventricular septum — sites of mechanical complications"
+    ],
+    "relatedStructures": [
+      "coronary-arteries",
+      "left-ventricle",
+      "right-ventricle",
+      "interventricular-septum",
+      "mitral-valve",
+      "av-node"
+    ],
+    "physiologyChanges": [
+      "Immediate loss of regional contraction with hypokinesis, akinesis or dyskinesis",
+      "Reduced stroke volume and, with large infarcts, reduced cardiac output",
+      "Rising left ventricular end-diastolic pressure causing pulmonary congestion",
+      "Loss of membrane potential stability creating a substrate for ventricular arrhythmia",
+      "Neurohormonal activation of the sympathetic nervous system and renin–angiotensin–aldosterone axis",
+      "Release of structural proteins — troponin and creatine kinase — into the circulation"
+    ],
+    "progression": [
+      {
+        "stage": "0–20 minutes",
+        "text": "Ischaemia with reversible injury. Contraction has ceased but myocytes remain viable."
+      },
+      {
+        "stage": "20 minutes – 6 hours",
+        "text": "The wavefront of necrosis advances from subendocardium towards epicardium. This is the window in which reperfusion salvages the most myocardium."
+      },
+      {
+        "stage": "6–24 hours",
+        "text": "Coagulative necrosis is established, with early neutrophil infiltration. Salvage is limited but reperfusion may still reduce infarct expansion."
+      },
+      {
+        "stage": "1–7 days",
+        "text": "Acute inflammation and macrophage-mediated clearance. The wall is at its weakest — the peak period for free wall rupture, septal rupture and papillary muscle rupture."
+      },
+      {
+        "stage": "1–4 weeks",
+        "text": "Granulation tissue and early collagen deposition. Mechanical strength gradually returns."
+      },
+      {
+        "stage": "Weeks to months",
+        "text": "Mature collagenous scar. Adverse remodelling may continue, producing dilatation, aneurysm formation and heart failure."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Severe, persistent central chest pain, typically lasting more than 20 minutes and not relieved by rest or nitrates",
+        "Radiation to the arms, neck, jaw or back",
+        "Sweating, nausea, vomiting and a sense of impending doom",
+        "Breathlessness, which may be the dominant or only symptom",
+        "Atypical or silent presentations, particularly in older adults, women and people with diabetes"
+      ],
+      "signs": [
+        "Pallor, sweating, anxiety and tachycardia",
+        "Hypotension in large infarcts or right ventricular involvement",
+        "Fourth heart sound; a third heart sound with significant dysfunction",
+        "New murmur suggesting papillary muscle rupture or ventricular septal rupture",
+        "Pulmonary crackles indicating congestion; Killip classification grades severity",
+        "Bradycardia and heart block in inferior infarction"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "12-lead ECG",
+        "findings": "Must be obtained within 10 minutes of first medical contact. ST elevation in contiguous leads localises the territory; new left bundle branch block, ST depression, T-wave inversion or hyperacute T waves may all occur. Posterior and right-sided leads should be considered."
+      },
+      {
+        "modality": "High-sensitivity cardiac troponin",
+        "findings": "A rise and/or fall with at least one value above the 99th percentile is required for the diagnosis. Serial sampling using a validated protocol distinguishes acute from chronic elevation."
+      },
+      {
+        "modality": "Echocardiography",
+        "findings": "Regional wall motion abnormality corresponding to the culprit territory; identifies mechanical complications, thrombus and ventricular function."
+      },
+      {
+        "modality": "Coronary angiography",
+        "findings": "Defines the culprit lesion and coronary anatomy, and is the route to primary percutaneous intervention."
+      },
+      {
+        "modality": "Cardiac MRI",
+        "findings": "Late gadolinium enhancement demonstrates infarct size, transmurality and microvascular obstruction; valuable when the diagnosis is uncertain."
+      },
+      {
+        "modality": "Chest radiograph and bloods",
+        "findings": "Assesses pulmonary congestion and alternative diagnoses; renal function, glucose, lipids and full blood count guide management."
+      }
+    ],
+    "complications": [
+      "Ventricular fibrillation and ventricular tachycardia — the leading cause of early death",
+      "Cardiogenic shock",
+      "Acute heart failure and pulmonary oedema",
+      "Bradyarrhythmias and atrioventricular block, particularly in inferior infarction",
+      "Papillary muscle rupture with acute severe mitral regurgitation",
+      "Ventricular septal rupture",
+      "Free wall rupture with tamponade",
+      "Left ventricular thrombus and systemic embolism",
+      "Left ventricular aneurysm",
+      "Pericarditis, including late Dressler's syndrome",
+      "Adverse remodelling progressing to chronic heart failure"
+    ],
+    "treatment": {
+      "principles": "In ST-elevation infarction the priority is immediate restoration of coronary flow, preferably by primary percutaneous coronary intervention within recommended time targets, with fibrinolysis where timely PCI is unavailable. In non-ST-elevation acute coronary syndromes, risk stratification determines the timing of invasive assessment. All patients require antithrombotic therapy, secondary prevention and cardiac rehabilitation. Educational summary only — management must follow current guidelines and local protocols.",
+      "groups": [
+        {
+          "name": "Reperfusion",
+          "detail": "Primary percutaneous coronary intervention is the preferred strategy for STEMI; fibrinolysis is used when PCI cannot be delivered in time."
+        },
+        {
+          "name": "Antithrombotic therapy",
+          "detail": "Dual antiplatelet therapy together with parenteral anticoagulation, with agent choice and duration individualised by ischaemic and bleeding risk."
+        },
+        {
+          "name": "Anti-ischaemic and supportive therapy",
+          "detail": "Oxygen only if hypoxaemic, analgesia, nitrates for symptoms, and beta-blockade where haemodynamically appropriate."
+        },
+        {
+          "name": "Secondary prevention",
+          "detail": "High-intensity statin, ACE inhibitor or ARB, beta-blocker and, in selected patients, mineralocorticoid receptor antagonists and SGLT2 inhibitors."
+        },
+        {
+          "name": "Device and surgical therapy",
+          "detail": "Revascularisation of non-culprit disease, defibrillator implantation for persistent severe dysfunction, and surgical repair of mechanical complications."
+        },
+        {
+          "name": "Rehabilitation",
+          "detail": "Structured exercise-based cardiac rehabilitation, smoking cessation and risk factor management."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Diagnosis requires a rise and/or fall of troponin plus clinical evidence of ischaemia — the Fourth Universal Definition.",
+      "Type 1 infarction is atherothrombotic; type 2 results from supply–demand mismatch without acute plaque disruption.",
+      "Necrosis begins subendocardially after roughly 20–30 minutes and advances as a wavefront — time is myocardium.",
+      "ST elevation usually indicates complete occlusion and mandates immediate reperfusion.",
+      "The ECG territory maps to the culprit artery: anterior to LAD, inferior to RCA, lateral to circumflex.",
+      "Mechanical complications cluster in the first week, when the infarcted wall is weakest.",
+      "Most culprit plaques were not severely stenotic before rupture."
+    ],
+    "references": [
+      "umdmi-2018",
+      "esc-acs-2023",
+      "braunwald",
+      "aha-professional",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "coronary-circulation",
+      "ecg-essentials",
+      "interventional-cardiology",
+      "cardiac-imaging"
+    ]
+  }
+]

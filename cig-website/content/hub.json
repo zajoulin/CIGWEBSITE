@@ -1,0 +1,66 @@
+[
+  {
+    "id": "simulation",
+    "title": "Clinical Simulation",
+    "text": "Enter the clinical environment. Examine the patient, obtain an ECG, and interpret the findings. You stand at the foot of the bed in a hospital room, read the presentation, check the bedside monitor, place all ten electrodes against real anatomical landmarks on a male or female patient, acquire a 12-lead ECG, listen at the five auscultation areas and interpret what you obtained — then get a scored breakdown of your placement, your reading of the tracing and your clinical reasoning, with every mistake explained.",
+    "href": "/learn/simulation",
+    "icon": "bed",
+    "metric": "clinicalCases",
+    "cta": "Enter the clinical environment",
+    "featured": true
+  },
+  {
+    "id": "anatomy",
+    "title": "Interactive Cardiovascular Anatomy",
+    "text": "A real-time 3D model of the heart and great vessels with 24 selectable structures. Orbit, zoom, isolate a region or switch view mode, and read referenced anatomy, physiology, pathology and clinical detail for whatever you select.",
+    "href": "/anatomy",
+    "icon": "anatomy",
+    "metric": "structures",
+    "cta": "Open the viewer"
+  },
+  {
+    "id": "diseases",
+    "title": "Cardiovascular Disease Explorer",
+    "text": "Disease modules across twelve categories, each following the same structure: overview, risk factors, step-by-step pathophysiology, progression, presentation, investigations, complications, treatment principles, key takeaways and references.",
+    "href": "/diseases",
+    "icon": "pulse",
+    "metric": "diseases",
+    "cta": "Browse the modules"
+  },
+  {
+    "id": "ecg",
+    "title": "ECG & Bedside Monitoring",
+    "text": "A realistic hospital cardiac monitor running continuously animating rhythms — sinus, atrial fibrillation, flutter, SVT, VT, VF, the AV blocks, bundle branch block, left ventricular hypertrophy, STEMI, ischaemic ST depression, pericarditis and the potassium disorders. Play, pause, scrub, step frame by frame, change speed, and read a synchronised explanation with P waves, QRS complexes, ST segments and intervals highlighted as they scroll past.",
+    "href": "/learn/ecg",
+    "icon": "monitor",
+    "metric": "ecgRhythms",
+    "cta": "Open the monitor"
+  },
+  {
+    "id": "examination",
+    "title": "Clinical Examination",
+    "text": "An interactive three-dimensional thorax, male and female, that you rotate and inspect. Place all ten ECG electrodes against real anatomical landmarks and watch the cables run to the monitor, move a stethoscope across the five auscultation areas to hear synchronised heart sounds and murmurs, and test yourself in challenge mode.",
+    "href": "/learn/examination",
+    "icon": "stethoscope",
+    "metric": "auscultationSites",
+    "cta": "Examine the patient"
+  },
+  {
+    "id": "keypoints",
+    "title": "Cardiovascular Key Points",
+    "text": "Concise, referenced revision topics covering the material students are examined on and use on the ward — from the cardiac cycle and pressure–volume loops to examination findings and ECG interpretation.",
+    "href": "/learn/keypoints",
+    "icon": "lightbulb",
+    "metric": "keyPoints",
+    "cta": "Open the key points"
+  },
+  {
+    "id": "glossary",
+    "title": "Cardiovascular Glossary",
+    "text": "Definitions, formulae and typical values for the vocabulary of cardiology, each cross-linked to the anatomy, physiology and disease modules the term belongs to.",
+    "href": "/learn/glossary",
+    "icon": "book",
+    "metric": "glossary",
+    "cta": "Look up a term"
+  }
+]

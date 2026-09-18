@@ -1,0 +1,235 @@
+/* ==========================================================================
+   CIG — Design tokens
+   --------------------------------------------------------------------------
+   The single source of truth for colour, type, space, motion and elevation.
+
+   The identity is derived directly from the official CIG crest: a deep
+   university navy (#043464, sampled from the shield) on white. The default
+   palette below is therefore LIGHT — white and near-white neutrals carrying
+   navy type and navy brand furniture.
+
+   A second, dark navy palette lives under `.stage`. Anything inside a
+   `.stage` element (the 3D anatomy viewer, the pathophysiology animation
+   canvases, the navigation bar, the footer, the navy identity bands) simply
+   re-declares the same token names, so every component works unchanged in
+   both contexts. Never hard-code a colour in a component — add it here.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- CIG brand navy (sampled from the crest) ------------------------- */
+  --navy-950: #03172c;
+  --navy-900: #05223f;
+  --navy-800: #043464; /* the crest navy */
+  --navy-700: #084079;
+  --navy-600: #0b5090;
+  --navy-500: #1063ad;
+  --navy: var(--navy-800);
+
+  /* Supporting lighter blues */
+  --sky: #4d94dd;
+  --sky-soft: #d9e7f7;
+  --sky-faint: #eef4fc;
+  --sky-line: #c6dbf1;
+
+  /* ---- Base surfaces: white and near-white ----------------------------- */
+  --void: #f4f7fb; /* page background */
+  --abyss: #e9eff7; /* recessed wells */
+  --surface: #ffffff; /* cards, panels */
+  --surface-2: #f8fafd;
+  --surface-3: #eff4fa;
+  --surface-4: #dde6f2;
+
+  /* Translucent surfaces for glass panels */
+  --glass: rgba(255, 255, 255, 0.74);
+  --glass-strong: rgba(255, 255, 255, 0.94);
+  --glass-faint: rgba(4, 52, 100, 0.045);
+
+  /* ---- Hairlines: thin academic grid ----------------------------------- */
+  --line: rgba(4, 52, 100, 0.14);
+  --line-soft: rgba(4, 52, 100, 0.075);
+  --line-strong: rgba(4, 52, 100, 0.26);
+  --grid: rgba(4, 52, 100, 0.05);
+
+  /* ---- Text ------------------------------------------------------------ */
+  --ink: #0a2440;
+  --ink-2: #44587a;
+  --ink-3: #6a7d9c;
+  --ink-4: #94a3bb;
+
+  /* ---- Interactive blue (links, focus, anatomy, data) ------------------ */
+  --blue: #0f5fa8;
+  --blue-bright: #1673c6;
+  --blue-deep: #043464;
+  --blue-wash: rgba(15, 95, 168, 0.085);
+  --blue-glow: rgba(15, 95, 168, 0.22);
+  --azure: #2563eb;
+  --azure-wash: rgba(37, 99, 235, 0.09);
+  --azure-ink: #1d4ed8;
+
+  /* ---- Cardiovascular crimson (clinical accent, used sparingly) -------- */
+  --crimson: #c02a49;
+  --crimson-bright: #d93b5d;
+  --crimson-deep: #8d1730;
+  --crimson-ink: #8d1730;
+  --crimson-wash: rgba(192, 42, 73, 0.075);
+  --crimson-glow: rgba(192, 42, 73, 0.2);
+
+  /* ---- Semantic -------------------------------------------------------- */
+  --venous: #3a6fb5;
+  --arterial: #c02a49;
+  --conduction: #a76a04;
+  --conduction-wash: rgba(167, 106, 4, 0.09);
+  --ok: #12764c;
+  --warn: #a76a04;
+  --danger: #b3261e;
+
+  /* ---- Typography ------------------------------------------------------ */
+  --font-sans:
+    'Inter', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-mono:
+    'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
+
+  --t-3xs: 0.6875rem; /* 11 */
+  --t-2xs: 0.75rem; /* 12 */
+  --t-xs: 0.8125rem; /* 13 */
+  --t-sm: 0.875rem; /* 14 */
+  --t-base: 0.9375rem; /* 15 */
+  --t-md: 1rem; /* 16 */
+  --t-lg: 1.125rem; /* 18 */
+  --t-xl: 1.3125rem; /* 21 */
+  --t-2xl: 1.625rem; /* 26 */
+  --t-3xl: 2.0625rem; /* 33 */
+  --t-4xl: 2.625rem; /* 42 */
+  --t-5xl: 3.5rem; /* 56 */
+  --t-6xl: 4.5rem; /* 72 */
+
+  /* ---- Space ---------------------------------------------------------- */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.25rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-10: 2.5rem;
+  --s-12: 3rem;
+  --s-16: 4rem;
+  --s-20: 5rem;
+  --s-24: 6rem;
+  --s-32: 8rem;
+
+  /* ---- Radii ---------------------------------------------------------- */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-pill: 999px;
+
+  /* ---- Elevation ------------------------------------------------------ */
+  --sh-1: 0 1px 2px rgba(4, 34, 63, 0.07);
+  --sh-2: 0 4px 14px -4px rgba(4, 34, 63, 0.12);
+  --sh-3: 0 14px 34px -14px rgba(4, 34, 63, 0.2);
+  --sh-4: 0 28px 66px -26px rgba(4, 34, 63, 0.26);
+  --ring: 0 0 0 1px var(--line);
+  --ring-strong: 0 0 0 1px var(--line-strong);
+
+  /* ---- Motion --------------------------------------------------------- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 340ms;
+  --dur-4: 620ms;
+
+  /* ---- Layout --------------------------------------------------------- */
+  --wrap: 1240px;
+  --wrap-narrow: 860px;
+  --wrap-wide: 1500px;
+  --nav-h: 72px;
+}
+
+/* ==========================================================================
+   Dark navy "stage" palette
+   --------------------------------------------------------------------------
+   Applied to the navigation, the footer, the navy identity bands, and every
+   place where a dark canvas is the right substrate for the science: the
+   WebGL anatomy viewer and the SVG pathophysiology animations, both of which
+   were authored for a dark ground.
+   ========================================================================== */
+.stage {
+  color-scheme: dark;
+
+  --void: #03172c;
+  --abyss: #051f3b;
+  --surface: #082747;
+  --surface-2: #0a2e53;
+  --surface-3: #0f3a66;
+  --surface-4: #16497c;
+
+  --glass: rgba(10, 46, 83, 0.66);
+  --glass-strong: rgba(5, 31, 59, 0.9);
+  --glass-faint: rgba(140, 185, 235, 0.09);
+
+  --line: rgba(150, 190, 235, 0.17);
+  --line-soft: rgba(150, 190, 235, 0.09);
+  --line-strong: rgba(160, 200, 240, 0.32);
+  --grid: rgba(140, 185, 235, 0.07);
+
+  --ink: #eaf2fb;
+  --ink-2: #b3c6de;
+  --ink-3: #8098b8;
+  --ink-4: #5c748f;
+
+  --blue: #5cb0f2;
+  --blue-bright: #92cdfb;
+  --blue-deep: #0b4f8f;
+  --blue-wash: rgba(92, 176, 242, 0.13);
+  --blue-glow: rgba(92, 176, 242, 0.3);
+  --azure: #7fa8ff;
+  --azure-wash: rgba(127, 168, 255, 0.13);
+  --azure-ink: #b6cdff;
+
+  --crimson: #e0455f;
+  --crimson-bright: #ff6c88;
+  --crimson-deep: #a3132f;
+  --crimson-ink: #ffd7de;
+  --crimson-wash: rgba(224, 69, 95, 0.13);
+  --crimson-glow: rgba(224, 69, 95, 0.34);
+
+  --venous: #6d8fd6;
+  --arterial: #e2536e;
+  --conduction: #f2b544;
+  --conduction-wash: rgba(242, 181, 68, 0.13);
+  --ok: #45c48a;
+  --warn: #f2b544;
+  --danger: #ef5350;
+
+  --sky: #6fb2ee;
+  --sky-soft: rgba(140, 185, 235, 0.18);
+  --sky-faint: rgba(140, 185, 235, 0.08);
+  --sky-line: rgba(150, 190, 235, 0.24);
+
+  --sh-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sh-2: 0 4px 16px -4px rgba(0, 0, 0, 0.55);
+  --sh-3: 0 12px 40px -12px rgba(0, 0, 0, 0.7);
+  --sh-4: 0 28px 80px -24px rgba(0, 0, 0, 0.8);
+
+  background-color: var(--void);
+  color: var(--ink);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --t-5xl: 2.5rem;
+    --t-6xl: 2.875rem;
+    --t-4xl: 2rem;
+    --t-3xl: 1.75rem;
+    --nav-h: 62px;
+  }
+}

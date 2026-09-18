@@ -1,0 +1,71 @@
+{
+  "eyebrow": "Research",
+  "title": "CIG Research",
+  "lede": "The Cardiology Interest Group is committed to cardiovascular research and to bringing students into it early. Research at CIG is student-led and supervised: members are involved from the question itself through the protocol, the data and the write-up, so that the first paper a student contributes to is one they understand end to end.",
+  "commitment": [
+    {
+      "id": "student-led",
+      "title": "Student-led, properly supervised",
+      "text": "Projects are proposed and run by CIG members with academic supervision from the Faculty, so students carry real responsibility on work that is held to a real standard.",
+      "icon": "people"
+    },
+    {
+      "id": "learn-by-doing",
+      "title": "Research skills, learned by doing",
+      "text": "Question framing, literature searching, protocol writing, ethical approval, data handling and manuscript preparation — taught alongside the project rather than in the abstract.",
+      "icon": "lightbulb"
+    },
+    {
+      "id": "cardiovascular",
+      "title": "Cardiovascular focus",
+      "text": "Preventive cardiology, cardiovascular risk in our own student and patient populations, clinical audit, cardiac imaging and electrocardiography, and medical education research.",
+      "icon": "microscope"
+    }
+  ],
+  "published": {
+    "title": "Published Research",
+    "lede": "Research that CIG has published, presented or formally submitted. Every record here is the group's own work.",
+    "emptyTitle": "CIG research publications are coming soon.",
+    "emptyDetail": "The group's first research outputs are in preparation. Published papers, conference abstracts, posters and audits will be listed here with their authors, abstracts and links as soon as they are available.",
+    "emptyCta": "Have an idea in the meantime?"
+  },
+  "idea": {
+    "eyebrow": "Get involved",
+    "title": "Have a Research Idea?",
+    "body": "Have an idea for a cardiovascular research project? We would love to hear it. Submit your idea to the CIG research team and, where appropriate, we can discuss the project with you and explore opportunities to become involved in the research process.",
+    "ctaLabel": "Submit a Research Idea",
+    "formTitle": "Submit a research idea",
+    "formLede": "A few details are enough to start a conversation. The research team reads every submission.",
+    "submitLabel": "Send to the CIG research team",
+    "disclaimer": "Submitting an idea does not guarantee acceptance or participation. The CIG research team will review submissions and contact you if there is an appropriate opportunity to discuss the idea further.",
+    "confirmationTitle": "Thank you. Your research idea has been submitted to the CIG research team.",
+    "confirmationBody": "A member of the research team will be in touch if there is an appropriate opportunity to take the idea further. You are welcome to submit another idea at any time.",
+    "mailtoTitle": "Thank you. Your research idea is ready to send to the CIG research team.",
+    "mailtoBody": "Your email application should have opened with the submission prepared. Send that message to complete the submission. If nothing opened, copy the details below into an email to the address shown.",
+    "errorTitle": "That submission could not be sent",
+    "errorBody": "Nothing was sent. Please try again in a moment, or email your idea directly to the CIG research team at the address below.",
+    "areas": [
+      "Preventive cardiology and cardiovascular risk",
+      "Coronary artery disease and acute coronary syndromes",
+      "Heart failure",
+      "Arrhythmias and electrophysiology",
+      "Valvular heart disease",
+      "Congenital heart disease",
+      "Hypertension",
+      "Cardiac imaging",
+      "Electrocardiography",
+      "Clinical audit and quality improvement",
+      "Medical education in cardiology",
+      "Other / not sure yet"
+    ],
+    "experienceOptions": [
+      "No — this would be my first research project",
+      "Some — I have taken part in a project before",
+      "Yes — I have published or presented research"
+    ],
+    "endpoint": null,
+    "emailSubjectPrefix": "CIG research idea",
+    "mailtoTitleManual": "Thank you. Your research idea is ready to send to the CIG research team.",
+    "mailtoBodyManual": "Copy the submission below into an email to the CIG research team at the address shown, and it will reach them. Nothing is stored on this website."
+  }
+}

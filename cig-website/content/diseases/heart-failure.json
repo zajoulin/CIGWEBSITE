@@ -1,0 +1,129 @@
+[
+  {
+    "id": "heart-failure",
+    "name": "Heart Failure",
+    "abbr": "HF",
+    "categoryId": "heart-failure",
+    "featured": true,
+    "animationId": "heart-failure",
+    "tagline": "A clinical syndrome in which structural or functional cardiac abnormality prevents the heart from delivering an adequate output, or does so only at raised filling pressures.",
+    "overview": "Heart failure is a syndrome, not a single disease. It is defined by symptoms such as breathlessness and fatigue, often with signs of congestion, caused by a structural or functional cardiac abnormality and corroborated by elevated natriuretic peptides or objective evidence of congestion. It is classified by left ventricular ejection fraction into heart failure with reduced ejection fraction (40% or less), mildly reduced ejection fraction (41–49%) and preserved ejection fraction (50% or more) — a classification that matters because the evidence for treatment differs substantially between them. The central paradox of heart failure is that the compensatory mechanisms recruited to maintain perfusion in the short term are precisely what drive deterioration over the long term.",
+    "riskFactors": {
+      "modifiable": [
+        "Hypertension — the most common attributable risk factor",
+        "Coronary artery disease and prior myocardial infarction",
+        "Diabetes mellitus and obesity",
+        "Excess alcohol intake",
+        "Cardiotoxic drugs, including anthracyclines and some targeted cancer therapies",
+        "Uncontrolled tachyarrhythmia",
+        "Valvular heart disease",
+        "Smoking and physical inactivity"
+      ],
+      "nonModifiable": [
+        "Increasing age",
+        "Family history of cardiomyopathy",
+        "Genetic cardiomyopathies",
+        "Prior chemotherapy or chest radiotherapy",
+        "Congenital heart disease"
+      ]
+    },
+    "pathophysiology": [
+      { "title": "Index injury", "text": "An initial insult — infarction, chronic pressure or volume overload, myocarditis, toxin exposure or a genetic cardiomyopathy — reduces the heart's ability to eject blood or to fill at normal pressures." },
+      { "title": "Fall in stroke volume and cardiac output", "text": "Effective forward output falls. Baroreceptors in the carotid sinus and aortic arch detect reduced arterial filling and reduce their inhibitory input to the brainstem." },
+      { "title": "Sympathetic activation", "text": "Increased sympathetic outflow raises heart rate, contractility and systemic vascular resistance. This supports blood pressure acutely but increases myocardial oxygen demand and afterload, and chronic catecholamine exposure is directly toxic to myocytes." },
+      { "title": "Renin–angiotensin–aldosterone activation", "text": "Reduced renal perfusion triggers renin release. Angiotensin II causes vasoconstriction and stimulates aldosterone, promoting sodium and water retention. Both angiotensin II and aldosterone directly promote myocardial fibrosis and hypertrophy." },
+      { "title": "Volume expansion and congestion", "text": "Salt and water retention raises preload. Initially this recruits the Frank–Starling mechanism to maintain stroke volume, but the failing ventricle operates on a flattened curve, so further filling raises pressure without raising output — producing pulmonary and systemic congestion." },
+      { "title": "Counter-regulatory response", "text": "Atrial and ventricular stretch releases natriuretic peptides, which promote natriuresis and vasodilatation. These beneficial effects are progressively overwhelmed. Their measurement — BNP and NT-proBNP — is central to diagnosis." },
+      { "title": "Ventricular remodelling", "text": "Chronic neurohormonal stimulation and mechanical stress cause myocyte hypertrophy, apoptosis, interstitial fibrosis and chamber dilatation. The ventricle becomes more spherical, which increases wall stress by Laplace's law and worsens efficiency." },
+      { "title": "Secondary valvular dysfunction", "text": "Annular dilatation and papillary muscle displacement produce functional mitral and tricuspid regurgitation, adding a volume load to an already failing ventricle." },
+      { "title": "Progressive decompensation", "text": "Remodelling begets further dysfunction in a self-reinforcing cycle. Arrhythmia, renal dysfunction and skeletal muscle deconditioning compound the picture, punctuated by episodes of acute decompensation." }
+    ],
+    "anatomyInvolved": [
+      "Left ventricle — dilated in HFrEF, typically thickened and stiff in HFpEF",
+      "Right ventricle, which may fail secondarily or as the primary problem",
+      "Left atrium, which dilates as filling pressures rise",
+      "Mitral and tricuspid valves, becoming functionally regurgitant",
+      "Pulmonary vasculature, developing post-capillary hypertension",
+      "Kidneys, liver and skeletal muscle as the systemic consequences develop"
+    ],
+    "relatedStructures": ["left-ventricle", "right-ventricle", "left-atrium", "mitral-valve", "tricuspid-valve", "pulmonary-veins"],
+    "physiologyChanges": [
+      "Reduced ejection fraction and stroke volume in HFrEF; impaired relaxation and raised filling pressures in HFpEF",
+      "The Frank–Starling curve is depressed and flattened, so increased preload yields little extra output",
+      "Elevated left ventricular end-diastolic pressure transmitted back to the pulmonary capillaries, causing oedema",
+      "Increased systemic vascular resistance raising afterload and further reducing output",
+      "Impaired chronotropic and inotropic reserve, limiting exercise capacity",
+      "Downregulation of beta-adrenergic receptors from chronic catecholamine exposure",
+      "Reduced renal perfusion with sodium avidity — the cardiorenal syndrome"
+    ],
+    "progression": [
+      { "stage": "Stage A — at risk", "text": "Risk factors present, such as hypertension or diabetes, with no structural disease and no symptoms." },
+      { "stage": "Stage B — pre-heart failure", "text": "Structural abnormality such as reduced ejection fraction or left ventricular hypertrophy, but no symptoms. Treatment here prevents progression." },
+      { "stage": "Stage C — symptomatic", "text": "Structural disease with current or prior symptoms. Graded by NYHA class I–IV according to functional limitation." },
+      { "stage": "Stage D — advanced", "text": "Severe symptoms at rest despite optimal therapy, with recurrent hospitalisation. Consideration of transplantation, mechanical support or palliative care." }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Exertional breathlessness, progressing to breathlessness at rest",
+        "Orthopnoea — breathlessness lying flat, quantified by the number of pillows needed",
+        "Paroxysmal nocturnal dyspnoea",
+        "Fatigue and reduced exercise tolerance",
+        "Ankle and leg swelling, abdominal distension",
+        "Early satiety, nausea and weight loss in advanced disease (cardiac cachexia)"
+      ],
+      "signs": [
+        "Elevated jugular venous pressure with hepatojugular reflux",
+        "Third heart sound — a gallop rhythm with a sensitive and fairly specific association with raised filling pressures",
+        "Displaced, diffuse apex beat in dilated ventricles",
+        "Bibasal inspiratory crackles and, in severe cases, pleural effusions",
+        "Dependent pitting oedema, tender hepatomegaly, ascites",
+        "Functional mitral or tricuspid regurgitant murmurs",
+        "Cool peripheries, narrow pulse pressure and pulsus alternans in low-output states"
+      ]
+    },
+    "investigations": [
+      { "modality": "Natriuretic peptides", "findings": "BNP or NT-proBNP; normal levels in an untreated patient make heart failure very unlikely, making this an excellent rule-out test." },
+      { "modality": "Transthoracic echocardiography", "findings": "The key diagnostic test — ejection fraction, chamber size, wall thickness, diastolic function, valve disease, right ventricular function and estimated filling pressures." },
+      { "modality": "12-lead ECG", "findings": "Rarely normal in heart failure. Shows prior infarction, left ventricular hypertrophy, atrial fibrillation or bundle branch block, which informs device eligibility." },
+      { "modality": "Chest radiograph", "findings": "Cardiomegaly, upper lobe venous diversion, Kerley B lines, interstitial and alveolar oedema, pleural effusions." },
+      { "modality": "Blood tests", "findings": "Full blood count, renal function and electrolytes, liver function, thyroid function, glucose, HbA1c, iron studies — iron deficiency is common and treatable." },
+      { "modality": "Cardiac MRI", "findings": "Accurate volumes and ejection fraction; late gadolinium enhancement and mapping identify the aetiology — infarction, myocarditis, infiltration or fibrosis." },
+      { "modality": "Ischaemia and viability assessment", "findings": "CT coronary angiography, invasive angiography or functional imaging to identify reversible ischaemic causes." }
+    ],
+    "complications": [
+      "Recurrent acute decompensation and hospitalisation",
+      "Cardiorenal syndrome and progressive renal impairment",
+      "Atrial fibrillation, which both causes and complicates heart failure",
+      "Ventricular arrhythmia and sudden cardiac death",
+      "Functional mitral and tricuspid regurgitation",
+      "Pulmonary hypertension and right heart failure",
+      "Intracardiac thrombus and thromboembolism",
+      "Cardiac cachexia, sarcopenia and frailty",
+      "Depression and substantially reduced quality of life"
+    ],
+    "treatment": {
+      "principles": "In heart failure with reduced ejection fraction, treatment aims to interrupt the neurohormonal cycle that drives remodelling; guideline-directed medical therapy improves symptoms, reduces hospitalisation and prolongs life. Diuretics relieve congestion but do not modify disease. In heart failure with preserved ejection fraction, the evidence base is narrower and centres on decongestion, SGLT2 inhibition and treatment of comorbidity. This is an educational summary; management must follow current guidelines and individual assessment.",
+      "groups": [
+        { "name": "Renin–angiotensin system inhibition", "detail": "ACE inhibitors, angiotensin receptor blockers, or an angiotensin receptor–neprilysin inhibitor as a foundational therapy in HFrEF." },
+        { "name": "Beta-blockade", "detail": "Evidence-based beta-blockers introduced when the patient is stable and uptitrated slowly; they reverse remodelling over months." },
+        { "name": "Mineralocorticoid receptor antagonists", "detail": "Spironolactone or eplerenone, with monitoring of potassium and renal function." },
+        { "name": "SGLT2 inhibitors", "detail": "Benefit demonstrated across the ejection fraction spectrum, independent of diabetes status." },
+        { "name": "Diuretics", "detail": "Loop diuretics titrated to symptom and congestion relief; they improve symptoms rather than survival." },
+        { "name": "Device therapy", "detail": "Cardiac resynchronisation therapy for selected patients with left bundle branch block; implantable defibrillators for those at high arrhythmic risk." },
+        { "name": "Advanced therapies", "detail": "Left ventricular assist devices and cardiac transplantation in stage D disease, alongside timely palliative care." },
+        { "name": "Comorbidity and self-management", "detail": "Iron deficiency correction, rhythm control, sleep-disordered breathing, cardiac rehabilitation, daily weights and salt and fluid guidance." }
+      ]
+    },
+    "keyTakeaways": [
+      "Heart failure is a clinical syndrome defined by symptoms and signs plus objective cardiac dysfunction — not by ejection fraction alone.",
+      "Classification by ejection fraction (reduced, mildly reduced, preserved) determines which treatments have proven benefit.",
+      "The compensatory neurohormonal response that preserves perfusion acutely is what drives remodelling chronically.",
+      "Natriuretic peptides are an excellent rule-out test; echocardiography establishes the diagnosis and cause.",
+      "Guideline-directed medical therapy in HFrEF reduces mortality; diuretics relieve symptoms but do not prolong life.",
+      "A third heart sound and a raised JVP are among the most useful bedside signs of elevated filling pressures.",
+      "Always look for a reversible cause: ischaemia, valve disease, arrhythmia, thyroid disease, alcohol or cardiotoxic drugs."
+    ],
+    "references": ["esc-hf-2021", "esc-hf-2023", "braunwald", "guyton", "aha-professional"],
+    "relatedKeyPoints": ["heart-failure-principles", "hemodynamics", "cardiovascular-examination", "cardiovascular-pharmacology"]
+  }
+]

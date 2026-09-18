@@ -1,0 +1,2270 @@
+[
+  {
+    "id": "atherosclerosis",
+    "scene": "atherosclerosis",
+    "title": "Atherosclerosis",
+    "subtitle": "Normal artery → endothelial dysfunction → plaque → rupture → thrombosis",
+    "references": [
+      "esc-prevention-2021",
+      "braunwald",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "Normal artery",
+        "text": "A healthy artery has a smooth, intact endothelium overlying the intima, a smooth muscle media, and an adventitia. The endothelium releases nitric oxide, keeping the vessel dilated and the surface antithrombotic. Flow is laminar and the lumen is wide.",
+        "duration": 1,
+        "markers": [
+          "Intact endothelium",
+          "Laminar flow",
+          "Wide lumen"
+        ]
+      },
+      {
+        "title": "Endothelial dysfunction",
+        "text": "Disturbed flow at branch points, together with LDL, smoking, hypertension and hyperglycaemia, injures the endothelium. Nitric oxide availability falls, permeability rises, and adhesion molecules appear on the luminal surface.",
+        "duration": 1,
+        "markers": [
+          "Reduced nitric oxide",
+          "Increased permeability",
+          "Adhesion molecules expressed"
+        ]
+      },
+      {
+        "title": "Lipid accumulation",
+        "text": "ApoB-containing lipoproteins cross the damaged endothelium and are retained by intimal proteoglycans. Once trapped they are oxidatively modified, becoming strongly pro-inflammatory.",
+        "duration": 1,
+        "markers": [
+          "LDL retention",
+          "Oxidative modification"
+        ]
+      },
+      {
+        "title": "Foam cell formation",
+        "text": "Monocytes adhere, migrate into the intima and become macrophages. Scavenger receptors let them ingest modified LDL without normal feedback control, so they become lipid-laden foam cells. Accumulated foam cells form the fatty streak.",
+        "duration": 1,
+        "markers": [
+          "Monocyte recruitment",
+          "Foam cells",
+          "Fatty streak"
+        ]
+      },
+      {
+        "title": "Plaque development",
+        "text": "Smooth muscle cells migrate from the media into the intima and secrete collagen, forming a fibrous cap. Dying foam cells release lipid and debris that coalesce into a thrombogenic necrotic core beneath it.",
+        "duration": 1,
+        "markers": [
+          "Fibrous cap forms",
+          "Necrotic core develops",
+          "Smooth muscle migration"
+        ]
+      },
+      {
+        "title": "Progressive narrowing",
+        "text": "The artery initially remodels outwards, preserving the lumen despite a growing plaque. Eventually expansion encroaches on the lumen. A stenosis of roughly 70% or more limits flow during exertion and can cause stable angina.",
+        "duration": 1,
+        "markers": [
+          "Outward remodelling first",
+          "Lumen encroachment",
+          "Flow limitation on exertion"
+        ]
+      },
+      {
+        "title": "Plaque rupture",
+        "text": "Inflammatory cells release matrix metalloproteinases that thin the fibrous cap while the smooth muscle cells that repair it die. A thin cap over a large necrotic core defines the vulnerable plaque, which fissures and exposes the core to blood.",
+        "duration": 1,
+        "markers": [
+          "Thin fibrous cap",
+          "Cap fissures",
+          "Necrotic core exposed"
+        ]
+      },
+      {
+        "title": "Thrombus formation",
+        "text": "Platelets adhere to exposed collagen and tissue factor, activate and aggregate, while the coagulation cascade generates a stabilising fibrin mesh. A thrombus forms rapidly on the plaque surface.",
+        "duration": 1,
+        "markers": [
+          "Platelet adhesion",
+          "Coagulation cascade",
+          "Fibrin mesh"
+        ]
+      },
+      {
+        "title": "Reduced blood flow",
+        "text": "The thrombus critically narrows or occludes the artery. In a coronary artery this produces an acute coronary syndrome; in a cerebral artery, stroke. Crucially, most culprit plaques were not severely stenotic before they ruptured.",
+        "duration": 1,
+        "markers": [
+          "Critical narrowing",
+          "Downstream ischaemia",
+          "Acute clinical event"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "myocardial-infarction",
+    "scene": "myocardial-infarction",
+    "title": "Myocardial Infarction",
+    "subtitle": "Normal coronary artery → plaque rupture → thrombosis → obstruction → ischaemia → myocardial injury",
+    "references": [
+      "umdmi-2018",
+      "esc-acs-2023",
+      "braunwald"
+    ],
+    "steps": [
+      {
+        "title": "Normal coronary perfusion",
+        "text": "The coronary artery supplies its territory of myocardium. Left coronary flow occurs almost entirely in diastole, and myocardial oxygen extraction is already near-maximal at rest, so any increase in demand must be met by increasing flow.",
+        "duration": 1,
+        "markers": [
+          "Diastolic coronary filling",
+          "Near-maximal oxygen extraction"
+        ]
+      },
+      {
+        "title": "Vulnerable plaque",
+        "text": "A plaque with a thin fibrous cap, a large necrotic core and dense inflammation has developed. It may not be severely stenotic and may never have caused symptoms.",
+        "duration": 1,
+        "markers": [
+          "Thin cap",
+          "Large necrotic core",
+          "Often non-obstructive"
+        ]
+      },
+      {
+        "title": "Plaque rupture",
+        "text": "The cap fissures, exposing highly thrombogenic, tissue-factor-rich core material to flowing blood. In plaque erosion the cap remains intact but the endothelium is denuded.",
+        "duration": 1,
+        "markers": [
+          "Cap fissure",
+          "Tissue factor exposed"
+        ]
+      },
+      {
+        "title": "Thrombosis",
+        "text": "Platelets adhere via von Willebrand factor and collagen receptors, activate, release thromboxane A2 and ADP, and aggregate through GPIIb/IIIa receptors. Thrombin generation produces a fibrin mesh that stabilises the growing clot.",
+        "duration": 1,
+        "markers": [
+          "Platelet activation",
+          "Thrombin generation",
+          "Clot stabilisation"
+        ]
+      },
+      {
+        "title": "Vessel obstruction",
+        "text": "The thrombus, often with accompanying vasospasm, occludes the artery. Complete occlusion typically produces ST elevation; subtotal occlusion produces a non-ST-elevation presentation.",
+        "duration": 1,
+        "markers": [
+          "Complete occlusion",
+          "ST elevation on ECG"
+        ]
+      },
+      {
+        "title": "Ischaemia",
+        "text": "Within seconds aerobic metabolism ceases and ATP falls. Contraction stops within about a minute. Anaerobic glycolysis produces lactate, membrane ionic gradients are lost, and the affected wall becomes akinetic.",
+        "duration": 1,
+        "markers": [
+          "ATP depletion",
+          "Contraction ceases",
+          "Regional wall motion abnormality"
+        ]
+      },
+      {
+        "title": "Myocardial injury",
+        "text": "Irreversible necrosis begins in the subendocardium after roughly 20–30 minutes of complete occlusion and advances as a wavefront towards the epicardium. Cardiac troponin is released into the circulation. This is why time is myocardium.",
+        "duration": 1,
+        "markers": [
+          "Wavefront of necrosis",
+          "Subendocardium first",
+          "Troponin release"
+        ]
+      },
+      {
+        "title": "Consequences and healing",
+        "text": "Loss of contracting myocardium reduces stroke volume and raises filling pressures. Arrhythmia risk peaks early. Over days macrophages clear necrotic tissue — the wall is weakest in the first week — and over weeks collagenous scar forms, with adverse remodelling driving progression towards heart failure.",
+        "duration": 1,
+        "markers": [
+          "Reduced stroke volume",
+          "Arrhythmia risk",
+          "Scar and remodelling"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "heart-failure",
+    "scene": "heart-failure",
+    "title": "Heart Failure",
+    "subtitle": "Normal function → myocardial dysfunction → reduced output → compensation → remodelling → progressive dysfunction",
+    "references": [
+      "esc-hf-2021",
+      "guyton",
+      "braunwald"
+    ],
+    "steps": [
+      {
+        "title": "Normal ventricular function",
+        "text": "The left ventricle fills at low pressure and ejects roughly 55–70% of its end-diastolic volume. Cardiac output matches metabolic demand, and filling pressures remain normal.",
+        "duration": 1,
+        "markers": [
+          "EF 55–70%",
+          "Normal filling pressures",
+          "Output matches demand"
+        ]
+      },
+      {
+        "title": "Myocardial dysfunction",
+        "text": "An index injury — infarction, chronic pressure or volume overload, myocarditis, toxin or genetic cardiomyopathy — impairs the heart's ability to eject blood or to fill at normal pressures.",
+        "duration": 1,
+        "markers": [
+          "Index injury",
+          "Impaired contraction or relaxation"
+        ]
+      },
+      {
+        "title": "Reduced cardiac output",
+        "text": "Stroke volume falls. Arterial baroreceptors detect reduced arterial filling and reduce their inhibitory signalling to the brainstem cardiovascular centres.",
+        "duration": 1,
+        "markers": [
+          "Falling stroke volume",
+          "Baroreceptor unloading"
+        ]
+      },
+      {
+        "title": "Compensatory mechanisms",
+        "text": "Sympathetic outflow rises, increasing heart rate, contractility and vascular resistance. Reduced renal perfusion activates the renin–angiotensin–aldosterone system, causing vasoconstriction and salt and water retention. Blood pressure and perfusion are defended — for now.",
+        "duration": 1,
+        "markers": [
+          "Sympathetic activation",
+          "RAAS activation",
+          "Sodium and water retention"
+        ]
+      },
+      {
+        "title": "Congestion",
+        "text": "Increased preload initially recruits the Frank–Starling mechanism, but the failing ventricle operates on a flattened curve. Further filling raises pressure without raising output, and pressure is transmitted back to the lungs and systemic veins.",
+        "duration": 1,
+        "markers": [
+          "Flattened Starling curve",
+          "Raised filling pressures",
+          "Pulmonary and systemic congestion"
+        ]
+      },
+      {
+        "title": "Ventricular remodelling",
+        "text": "Chronic neurohormonal stimulation and mechanical stress cause myocyte hypertrophy, apoptosis and interstitial fibrosis. The ventricle dilates and becomes more spherical, which by Laplace's law increases wall stress and worsens efficiency.",
+        "duration": 1,
+        "markers": [
+          "Dilatation",
+          "Fibrosis",
+          "Increased wall stress"
+        ]
+      },
+      {
+        "title": "Secondary valve dysfunction",
+        "text": "Annular dilatation and papillary muscle displacement produce functional mitral and tricuspid regurgitation, adding a volume load to an already failing ventricle.",
+        "duration": 1,
+        "markers": [
+          "Functional mitral regurgitation",
+          "Additional volume load"
+        ]
+      },
+      {
+        "title": "Progressive dysfunction",
+        "text": "Remodelling begets further dysfunction in a self-reinforcing cycle, punctuated by decompensations. Interrupting the neurohormonal limb of this cycle is precisely what guideline-directed medical therapy does — and why it prolongs life.",
+        "duration": 1,
+        "markers": [
+          "Self-reinforcing cycle",
+          "Neurohormonal blockade reverses remodelling"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aortic-stenosis",
+    "scene": "aortic-stenosis",
+    "title": "Aortic Stenosis",
+    "subtitle": "Normal valve → leaflet thickening and calcification → reduced opening → pressure gradient → ventricular adaptation → clinical consequences",
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald"
+    ],
+    "steps": [
+      {
+        "title": "Normal aortic valve",
+        "text": "Three thin, pliable semilunar cusps open widely in systole, giving an orifice area of roughly 3–4 cm² and essentially no pressure gradient between the left ventricle and the aorta.",
+        "duration": 1,
+        "markers": [
+          "Area 3–4 cm²",
+          "No gradient",
+          "Pliable cusps"
+        ]
+      },
+      {
+        "title": "Leaflet injury and lipid entry",
+        "text": "Mechanical stress, greatest on the aortic side of the cusps, damages the valvular endothelium. Lipoproteins enter the leaflet and are oxidatively modified, initiating a chronic inflammatory response.",
+        "duration": 1,
+        "markers": [
+          "Endothelial injury",
+          "Lipid infiltration",
+          "Inflammation"
+        ]
+      },
+      {
+        "title": "Calcification",
+        "text": "Valvular interstitial cells adopt an osteoblast-like phenotype and deposit calcium hydroxyapatite within the leaflet. This is an active, regulated biology — not simple wear and tear. A bicuspid valve undergoes the same process one to two decades earlier.",
+        "duration": 1,
+        "markers": [
+          "Osteogenic transformation",
+          "Hydroxyapatite deposition",
+          "Fibrosis"
+        ]
+      },
+      {
+        "title": "Reduced opening",
+        "text": "Progressive calcification stiffens the cusps and restricts their excursion. Unlike rheumatic disease, degenerative calcific stenosis characteristically spares the commissures.",
+        "duration": 1,
+        "markers": [
+          "Restricted excursion",
+          "Commissures spared",
+          "Falling orifice area"
+        ]
+      },
+      {
+        "title": "Rising pressure gradient",
+        "text": "As the effective orifice falls, a systolic gradient develops between ventricle and aorta and transvalvular velocity rises. Severe stenosis is defined by an area under 1.0 cm², a mean gradient of 40 mmHg or more, or a peak velocity of 4 m/s or more.",
+        "duration": 1,
+        "markers": [
+          "Systolic gradient",
+          "Peak velocity ≥ 4 m/s",
+          "Area < 1.0 cm²"
+        ]
+      },
+      {
+        "title": "Ventricular adaptation",
+        "text": "By Laplace's law, the ventricle adds sarcomeres in parallel to normalise wall stress. Concentric hypertrophy preserves ejection fraction and stroke volume for years — this is the long compensated, asymptomatic phase.",
+        "duration": 1,
+        "markers": [
+          "Concentric hypertrophy",
+          "Wall stress normalised",
+          "Asymptomatic phase"
+        ]
+      },
+      {
+        "title": "Ischaemia and diastolic dysfunction",
+        "text": "The hypertrophied ventricle relaxes poorly, raising filling pressures. Increased muscle mass raises oxygen demand while raised end-diastolic pressure and shortened diastole reduce coronary perfusion. Angina occurs even with normal coronary arteries.",
+        "duration": 1,
+        "markers": [
+          "Impaired relaxation",
+          "Reduced coronary perfusion",
+          "Angina without CAD"
+        ]
+      },
+      {
+        "title": "Clinical consequences",
+        "text": "Angina, exertional syncope from a fixed stroke volume, and heart failure appear. Once symptoms develop, survival without intervention falls sharply — which is why symptom onset is the trigger for valve replacement.",
+        "duration": 1,
+        "markers": [
+          "Angina",
+          "Exertional syncope",
+          "Heart failure",
+          "Time to intervene"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "atrial-fibrillation",
+    "scene": "atrial-fibrillation",
+    "title": "Atrial Fibrillation",
+    "subtitle": "Normal atrial activation → ectopic triggers → chaotic activity → loss of atrial contraction → irregular ventricular response",
+    "references": [
+      "aha-af-2023",
+      "braunwald",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "Normal atrial activation",
+        "text": "The sinuatrial node depolarises spontaneously and the impulse spreads as an organised wavefront across both atria, producing a P wave and a coordinated atrial contraction that completes ventricular filling.",
+        "duration": 1,
+        "markers": [
+          "SA node fires",
+          "Organised wavefront",
+          "P wave on ECG"
+        ]
+      },
+      {
+        "title": "Substrate development",
+        "text": "Atrial stretch, fibrosis, inflammation and ageing make conduction slow and heterogeneous, and shorten and disperse refractory periods. This is the substrate on which fibrillation can be sustained.",
+        "duration": 1,
+        "markers": [
+          "Atrial fibrosis",
+          "Heterogeneous conduction",
+          "Shortened refractoriness"
+        ]
+      },
+      {
+        "title": "Ectopic triggers",
+        "text": "Rapidly firing foci within the myocardial sleeves of the pulmonary veins generate premature atrial beats. This observation is what made pulmonary vein isolation the cornerstone of ablation.",
+        "duration": 1,
+        "markers": [
+          "Pulmonary vein foci",
+          "Premature atrial beats",
+          "Target for ablation"
+        ]
+      },
+      {
+        "title": "Chaotic electrical activity",
+        "text": "Multiple simultaneous re-entrant wavelets and rotors propagate through the atria in continually changing directions, at atrial rates of roughly 300–600 per minute. The organised P wave is replaced by a fibrillatory baseline.",
+        "duration": 1,
+        "markers": [
+          "Multiple wavelets",
+          "300–600 per minute",
+          "No P waves"
+        ]
+      },
+      {
+        "title": "Loss of atrial contraction",
+        "text": "Because activation is disorganised, the atria never contract as a unit. The atrial kick is lost, reducing ventricular filling by up to 20–30% — a loss that matters most when the ventricle is stiff.",
+        "duration": 1,
+        "markers": [
+          "Atrial kick lost",
+          "Filling reduced 20–30%",
+          "Atria quiver"
+        ]
+      },
+      {
+        "title": "Irregular ventricular response",
+        "text": "The AV node conducts some impulses and blocks others through decremental and concealed conduction, producing the irregularly irregular ventricular rhythm — typically 100–160 per minute if untreated.",
+        "duration": 1,
+        "markers": [
+          "AV node filters",
+          "Irregularly irregular",
+          "Rate 100–160"
+        ]
+      },
+      {
+        "title": "Stasis and thrombus",
+        "text": "Blood stagnates in the non-contracting atrium, particularly in the trabeculated left atrial appendage. Combined with endothelial dysfunction and a prothrombotic state, this promotes thrombus formation.",
+        "duration": 1,
+        "markers": [
+          "Stasis in the appendage",
+          "Virchow's triad",
+          "Thrombus forms"
+        ]
+      },
+      {
+        "title": "Embolism and remodelling",
+        "text": "Thrombus may embolise and cause ischaemic stroke — the reason anticoagulation decisions rest on stroke risk rather than symptoms. Meanwhile fibrillation itself promotes further remodelling: atrial fibrillation begets atrial fibrillation.",
+        "duration": 1,
+        "markers": [
+          "Cardioembolic stroke",
+          "Anticoagulation by risk",
+          "Progressive remodelling"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aortic-aneurysm",
+    "scene": "aortic-aneurysm",
+    "title": "Aortic Aneurysm",
+    "subtitle": "Medial degeneration → dilatation → Laplace amplification → mural thrombus → rupture",
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "braunwald",
+      "moore"
+    ],
+    "steps": [
+      {
+        "title": "Normal aorta",
+        "text": "The aortic wall has three layers. Elastic lamellae in the media store energy in systole and recoil in diastole, so the wall tolerates a lifetime of pulsatile stress at a stable calibre.",
+        "duration": 1,
+        "markers": [
+          "Intima · media · adventitia",
+          "Elastic recoil",
+          "Normal calibre"
+        ]
+      },
+      {
+        "title": "Medial degeneration",
+        "text": "Elastin fragmentation, smooth muscle cell loss and proteoglycan accumulation weaken the media — the common final pathway whatever the initiating cause, whether atherosclerotic, inflammatory or genetic.",
+        "duration": 1,
+        "markers": [
+          "Elastin fragmentation",
+          "Smooth muscle loss"
+        ]
+      },
+      {
+        "title": "Proteolytic activity",
+        "text": "Matrix metalloproteinases released by infiltrating inflammatory cells degrade elastin and collagen faster than they can be replaced, so each cardiac cycle leaves the wall a little weaker.",
+        "duration": 1,
+        "markers": [
+          "MMP activity",
+          "Inflammatory infiltrate",
+          "Net matrix loss"
+        ]
+      },
+      {
+        "title": "Loss of wall strength",
+        "text": "The weakened segment yields to arterial pressure and begins to dilate. Dilatation is initially slow and entirely silent, which is why aneurysms are usually found incidentally or by screening.",
+        "duration": 1,
+        "markers": [
+          "Silent dilatation",
+          "Screening matters"
+        ]
+      },
+      {
+        "title": "Laplace's law amplification",
+        "text": "Wall tension is proportional to pressure multiplied by radius. Every increment of dilatation raises tension, which accelerates further dilatation — an inherently self-accelerating process, and the reason expansion rate rises with size.",
+        "duration": 1,
+        "markers": [
+          "T ≈ P × r",
+          "Self-accelerating",
+          "Expansion rate rises"
+        ]
+      },
+      {
+        "title": "Mural thrombus",
+        "text": "Flow within the sac becomes recirculating and slow, and laminated thrombus forms along the wall. It may embolise distally, and it impairs oxygen diffusion to the already ischaemic outer media.",
+        "duration": 1,
+        "markers": [
+          "Laminated thrombus",
+          "Distal embolism",
+          "Wall hypoxia"
+        ]
+      },
+      {
+        "title": "Rupture",
+        "text": "When wall stress exceeds tensile strength the wall tears. Free rupture into the peritoneum is usually rapidly fatal; a contained retroperitoneal rupture may allow just enough time for emergency repair.",
+        "duration": 1,
+        "markers": [
+          "Wall stress > strength",
+          "Haemorrhagic shock",
+          "Surgical emergency"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aortic-dissection",
+    "scene": "aortic-dissection",
+    "title": "Aortic Dissection",
+    "subtitle": "Intimal tear → false lumen → branch malperfusion → proximal complications → rupture",
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "braunwald",
+      "moore"
+    ],
+    "steps": [
+      {
+        "title": "Medial vulnerability",
+        "text": "Cystic medial degeneration, long-standing hypertensive injury or a genetic connective tissue defect weakens the media and reduces its resistance to the shear generated by each pulse.",
+        "duration": 1,
+        "markers": [
+          "Cystic medial degeneration",
+          "Hypertension",
+          "Connective tissue disease"
+        ]
+      },
+      {
+        "title": "Intimal tear",
+        "text": "A tear opens, most often in the ascending aorta just above the sinotubular junction or just distal to the left subclavian artery — the two points of greatest hydrodynamic stress.",
+        "duration": 1,
+        "markers": [
+          "Ascending aorta",
+          "Distal to left subclavian",
+          "Points of maximal stress"
+        ]
+      },
+      {
+        "title": "False lumen propagation",
+        "text": "Blood driven by systolic pressure, and above all by the rate of pressure rise (dP/dt), enters the media and dissects along it — usually antegrade, sometimes retrograde. This is why treatment targets heart rate before pressure.",
+        "duration": 1,
+        "markers": [
+          "Blood enters the media",
+          "dP/dt drives extension",
+          "Rate control first"
+        ]
+      },
+      {
+        "title": "Branch vessel compromise",
+        "text": "The dissection flap can cover branch origins and cause malperfusion: stroke from carotid involvement, infarction from coronary involvement (classically the right), paraplegia, renal failure, mesenteric or limb ischaemia.",
+        "duration": 1,
+        "markers": [
+          "Dynamic obstruction",
+          "Malperfusion syndromes",
+          "Variable presentation"
+        ]
+      },
+      {
+        "title": "Proximal complications",
+        "text": "Retrograde extension into the root disrupts cusp support and causes acute aortic regurgitation, may rupture into the pericardium causing tamponade, or may occlude a coronary ostium.",
+        "duration": 1,
+        "markers": [
+          "Acute aortic regurgitation",
+          "Tamponade",
+          "Coronary occlusion"
+        ]
+      },
+      {
+        "title": "External rupture",
+        "text": "Rupture through the adventitia into the pericardium, pleural space or mediastinum causes rapid haemodynamic collapse — the usual mechanism of death, and the reason mortality climbs with every hour of delay.",
+        "duration": 1,
+        "markers": [
+          "Adventitial rupture",
+          "Collapse",
+          "Time-critical"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pulmonary-embolism",
+    "scene": "pulmonary-embolism",
+    "title": "Pulmonary Embolism",
+    "subtitle": "Venous thrombus → embolisation → raised pulmonary resistance → right ventricular failure → obstructive shock",
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "braunwald",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "Thrombus formation",
+        "text": "Virchow's triad — venous stasis, endothelial injury and hypercoagulability — promotes thrombus formation, most often in the deep veins of the calf and thigh.",
+        "duration": 1,
+        "markers": [
+          "Virchow's triad",
+          "Deep leg veins"
+        ]
+      },
+      {
+        "title": "Embolisation",
+        "text": "Thrombus detaches and travels through the venous system, right atrium and right ventricle into the pulmonary arteries, lodging where the vessel calibre narrows.",
+        "duration": 1,
+        "markers": [
+          "Detachment",
+          "Right heart transit",
+          "Lodges in pulmonary arteries"
+        ]
+      },
+      {
+        "title": "Pulmonary vascular resistance rises",
+        "text": "Mechanical obstruction is compounded by hypoxic vasoconstriction and by vasoactive mediators such as serotonin and thromboxane released from activated platelets, so resistance rises more than the clot burden alone would predict.",
+        "duration": 1,
+        "markers": [
+          "Mechanical obstruction",
+          "Hypoxic vasoconstriction",
+          "Platelet mediators"
+        ]
+      },
+      {
+        "title": "Right ventricular strain",
+        "text": "The thin-walled right ventricle is exquisitely afterload-sensitive. Acute pressure loading dilates it, raises wall tension and reduces right coronary perfusion, and the ventricle can fail abruptly.",
+        "duration": 1,
+        "markers": [
+          "Afterload-sensitive RV",
+          "Dilatation",
+          "Reduced RV perfusion"
+        ]
+      },
+      {
+        "title": "Ventricular interdependence",
+        "text": "Within the fixed pericardium the dilated right ventricle displaces the interventricular septum leftwards, impairing left ventricular filling and reducing cardiac output — the D-shaped septum seen on echocardiography.",
+        "duration": 1,
+        "markers": [
+          "Septal shift",
+          "Impaired LV filling",
+          "D-shaped septum"
+        ]
+      },
+      {
+        "title": "Gas exchange abnormality",
+        "text": "Perfused-but-not-ventilated and ventilated-but-not-perfused regions coexist. Dead space rises, shunt and V/Q mismatch cause hypoxaemia, and tachypnoea produces a respiratory alkalosis.",
+        "duration": 1,
+        "markers": [
+          "Dead space ↑",
+          "V/Q mismatch",
+          "Hypoxaemia"
+        ]
+      },
+      {
+        "title": "Pulmonary infarction",
+        "text": "The lung's dual blood supply makes infarction uncommon; it occurs mainly with distal emboli or coexisting cardiopulmonary disease, and then causes pleuritic pain and haemoptysis.",
+        "duration": 1,
+        "markers": [
+          "Dual blood supply",
+          "Pleuritic pain",
+          "Haemoptysis"
+        ]
+      },
+      {
+        "title": "Obstructive shock",
+        "text": "With massive embolism right ventricular output collapses, left ventricular preload falls, and systemic hypotension and cardiac arrest follow — often as pulseless electrical activity.",
+        "duration": 1,
+        "markers": [
+          "Preload failure",
+          "Hypotension",
+          "PEA arrest"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deep-vein-thrombosis",
+    "scene": "deep-vein-thrombosis",
+    "title": "Deep Vein Thrombosis",
+    "subtitle": "Valve-pocket nidus → propagation → obstruction → embolisation → post-thrombotic syndrome",
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "ncbi-bookshelf",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "Virchow's triad",
+        "text": "Stasis, endothelial injury and hypercoagulability combine to tip the balance towards thrombosis. Most clinical situations — surgery, immobility, malignancy, pregnancy — involve at least two of the three.",
+        "duration": 1,
+        "markers": [
+          "Stasis",
+          "Endothelial injury",
+          "Hypercoagulability"
+        ]
+      },
+      {
+        "title": "Initiation in valve pockets",
+        "text": "Thrombi typically begin in the low-flow, relatively hypoxic pockets behind venous valves, most often in the calf veins, where local hypoxia activates the endothelium.",
+        "duration": 1,
+        "markers": [
+          "Valve sinus",
+          "Low flow",
+          "Local hypoxia"
+        ]
+      },
+      {
+        "title": "Propagation",
+        "text": "Fibrin and trapped red cells extend the thrombus along the vein. Proximal extension above the knee substantially increases the risk of a clinically significant embolism.",
+        "duration": 1,
+        "markers": [
+          "Fibrin and red cells",
+          "Proximal extension",
+          "Embolic risk ↑"
+        ]
+      },
+      {
+        "title": "Inflammation and obstruction",
+        "text": "The thrombus provokes inflammation in the vein wall, producing pain, warmth and tenderness, while obstruction raises distal venous pressure and causes unilateral swelling.",
+        "duration": 1,
+        "markers": [
+          "Vein wall inflammation",
+          "Distal pressure ↑",
+          "Unilateral swelling"
+        ]
+      },
+      {
+        "title": "Embolisation",
+        "text": "Fragments detach and travel through the right heart to the pulmonary circulation. Proximal thrombus carries far greater risk than isolated distal calf thrombus.",
+        "duration": 1,
+        "markers": [
+          "Fragment detaches",
+          "Pulmonary embolism"
+        ]
+      },
+      {
+        "title": "Resolution and recanalisation",
+        "text": "Fibrinolysis and organisation partly clear the thrombus over weeks to months and a channel reopens, but the valve leaflets are frequently damaged in the process.",
+        "duration": 1,
+        "markers": [
+          "Organisation",
+          "Recanalisation",
+          "Valve damage"
+        ]
+      },
+      {
+        "title": "Post-thrombotic syndrome",
+        "text": "Residual obstruction and valvular incompetence cause chronic ambulatory venous hypertension, producing pain, swelling, skin changes and sometimes ulceration in a substantial minority of patients.",
+        "duration": 1,
+        "markers": [
+          "Reflux",
+          "Venous hypertension",
+          "Skin change and ulceration"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pulmonary-hypertension",
+    "scene": "pulmonary-hypertension",
+    "title": "Pulmonary Hypertension",
+    "subtitle": "Vascular injury → remodelling → rising resistance → right ventricular adaptation and decompensation",
+    "references": [
+      "esc-guidelines-hub",
+      "braunwald",
+      "guyton",
+      "aha-professional"
+    ],
+    "steps": [
+      {
+        "title": "Initiating insult",
+        "text": "Depending on the group: pulmonary arterial endothelial injury, sustained backward transmission of raised left atrial pressure, chronic alveolar hypoxia, or unresolved thromboembolic obstruction.",
+        "duration": 1,
+        "markers": [
+          "Group 1–4 mechanisms",
+          "Endothelial injury",
+          "Hypoxia or back-pressure"
+        ]
+      },
+      {
+        "title": "Vasoconstriction",
+        "text": "Reduced nitric oxide and prostacyclin with increased endothelin-1 produce sustained vasoconstriction — the three pathways targeted by modern group 1 therapies.",
+        "duration": 1,
+        "markers": [
+          "NO ↓",
+          "Prostacyclin ↓",
+          "Endothelin-1 ↑"
+        ]
+      },
+      {
+        "title": "Vascular remodelling",
+        "text": "Intimal proliferation, medial hypertrophy and adventitial fibrosis progressively narrow the small pulmonary arteries, and plexiform lesions appear in advanced group 1 disease.",
+        "duration": 1,
+        "markers": [
+          "Medial hypertrophy",
+          "Intimal proliferation",
+          "Plexiform lesions"
+        ]
+      },
+      {
+        "title": "In situ thrombosis",
+        "text": "Endothelial dysfunction and sluggish flow promote thrombosis within small vessels, obliterating further cross-sectional area.",
+        "duration": 1,
+        "markers": [
+          "Microvascular thrombosis",
+          "Cross-sectional area lost"
+        ]
+      },
+      {
+        "title": "Rising pulmonary vascular resistance",
+        "text": "The pulmonary bed normally has enormous recruitment reserve, so pressure rises appreciably only once a large proportion of the vasculature is lost — which is why presentation is late and often advanced.",
+        "duration": 1,
+        "markers": [
+          "Recruitment reserve exhausted",
+          "mPAP rises",
+          "Late presentation"
+        ]
+      },
+      {
+        "title": "Right ventricular adaptation",
+        "text": "The right ventricle hypertrophies to meet the load. This adaptive, concentric phase can be maintained for years with relatively preserved function and few symptoms.",
+        "duration": 1,
+        "markers": [
+          "Concentric RV hypertrophy",
+          "Coupling maintained"
+        ]
+      },
+      {
+        "title": "Right ventricular decompensation",
+        "text": "Eventually the ventricle dilates and becomes spherical. Rising wall tension reduces right coronary perfusion, and functional tricuspid regurgitation develops, volume-loading an already failing chamber.",
+        "duration": 1,
+        "markers": [
+          "RV dilatation",
+          "Uncoupling",
+          "Functional TR"
+        ]
+      },
+      {
+        "title": "Interdependence and low output",
+        "text": "The dilated right ventricle shifts the septum leftwards and impairs left ventricular filling. Cardiac output falls, producing exertional syncope and, ultimately, right heart failure and death.",
+        "duration": 1,
+        "markers": [
+          "Septal shift",
+          "Exertional syncope",
+          "Right heart failure"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hypertension",
+    "scene": "hypertension",
+    "title": "Hypertension",
+    "subtitle": "Resistance and sodium handling → remodelling → arterial stiffening → hypertensive heart disease",
+    "references": [
+      "aha-htn-2017",
+      "esc-prevention-2021",
+      "who-cvd",
+      "guyton",
+      "braunwald"
+    ],
+    "steps": [
+      {
+        "title": "Determinants of pressure",
+        "text": "Mean arterial pressure is the product of cardiac output and systemic vascular resistance. In established primary hypertension the dominant abnormality is raised resistance with a normal cardiac output.",
+        "duration": 1,
+        "markers": [
+          "MAP = CO × SVR",
+          "Resistance is the driver"
+        ]
+      },
+      {
+        "title": "Sodium and volume handling",
+        "text": "A rightward shift in the renal pressure–natriuresis relationship means the kidney needs a higher perfusion pressure to excrete a given sodium load, resetting arterial pressure upward.",
+        "duration": 1,
+        "markers": [
+          "Pressure–natriuresis shift",
+          "Sodium retention",
+          "Set point resets"
+        ]
+      },
+      {
+        "title": "Neurohormonal activation",
+        "text": "Increased sympathetic outflow and inappropriate activation of the renin–angiotensin–aldosterone system raise vascular tone and promote sodium retention and vascular growth.",
+        "duration": 1,
+        "markers": [
+          "Sympathetic drive",
+          "RAAS activation"
+        ]
+      },
+      {
+        "title": "Endothelial dysfunction",
+        "text": "Reduced nitric oxide bioavailability, with increased endothelin and oxidative stress, shifts the vascular balance towards vasoconstriction and away from repair.",
+        "duration": 1,
+        "markers": [
+          "NO ↓",
+          "Oxidative stress",
+          "Vasoconstriction"
+        ]
+      },
+      {
+        "title": "Vascular remodelling",
+        "text": "Resistance arterioles undergo hypertrophic and eutrophic remodelling with an increased wall-to-lumen ratio. Because resistance varies with the fourth power of the radius, small changes raise pressure sharply — and the cycle perpetuates itself.",
+        "duration": 1,
+        "markers": [
+          "Wall-to-lumen ratio ↑",
+          "R ∝ 1/r⁴",
+          "Self-perpetuating"
+        ]
+      },
+      {
+        "title": "Large artery stiffening",
+        "text": "Elastin fragmentation and collagen deposition reduce aortic compliance. Pulse waves return earlier and augment the systolic peak, raising systolic and pulse pressure — the mechanism of isolated systolic hypertension in older people.",
+        "duration": 1,
+        "markers": [
+          "Aortic compliance ↓",
+          "Early wave reflection",
+          "Pulse pressure ↑"
+        ]
+      },
+      {
+        "title": "Cardiac consequences",
+        "text": "Chronic pressure loading produces concentric left ventricular hypertrophy with impaired relaxation and reduced coronary flow reserve, atrial dilatation, and a rising risk of atrial fibrillation, heart failure and stroke.",
+        "duration": 1,
+        "markers": [
+          "Concentric LVH",
+          "Diastolic dysfunction",
+          "Atrial fibrillation risk"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "peripheral-arterial-disease",
+    "scene": "peripheral-arterial-disease",
+    "title": "Peripheral Arterial Disease",
+    "subtitle": "Limb atherosclerosis → claudication → rest pain → tissue loss → acute limb ischaemia",
+    "references": [
+      "esc-prevention-2021",
+      "esc-guidelines-hub",
+      "braunwald",
+      "moore"
+    ],
+    "steps": [
+      {
+        "title": "Atherosclerotic plaque formation",
+        "text": "The same lipid-driven inflammatory process seen in the coronary arteries develops in the aortoiliac, femoropopliteal and infrapopliteal segments — which is why peripheral disease predicts coronary and cerebrovascular events.",
+        "duration": 1,
+        "markers": [
+          "Same disease, different bed",
+          "Systemic marker"
+        ]
+      },
+      {
+        "title": "Progressive stenosis",
+        "text": "Resting flow is preserved for a long time because the distal bed vasodilates and collateral channels enlarge around the obstruction.",
+        "duration": 1,
+        "markers": [
+          "Distal vasodilatation",
+          "Collateral recruitment",
+          "Resting flow preserved"
+        ]
+      },
+      {
+        "title": "Exercise-induced ischaemia",
+        "text": "Walking raises muscular demand above the maximum deliverable flow. Anaerobic metabolism and metabolite accumulation produce the cramping pain of claudication, reproducible at a given distance and relieved by rest within minutes.",
+        "duration": 1,
+        "markers": [
+          "Demand exceeds supply",
+          "Claudication",
+          "Relieved by rest"
+        ]
+      },
+      {
+        "title": "Falling ankle pressure",
+        "text": "The pressure drop across the lesion is measurable at the ankle. A resting ankle–brachial index below 0.9 confirms disease; below 0.4 indicates severe ischaemia.",
+        "duration": 1,
+        "markers": [
+          "ABI < 0.9 diagnostic",
+          "ABI < 0.4 severe"
+        ]
+      },
+      {
+        "title": "Progression to rest pain",
+        "text": "When obstruction is severe enough that even resting metabolic demand cannot be met, ischaemic rest pain occurs — classically in the forefoot, worse lying flat and relieved by hanging the leg over the edge of the bed.",
+        "duration": 1,
+        "markers": [
+          "Rest pain",
+          "Worse supine",
+          "Dependency relieves"
+        ]
+      },
+      {
+        "title": "Tissue loss",
+        "text": "Critically reduced perfusion prevents healing of minor trauma, producing ulceration and then gangrene. In diabetes, neuropathy masks the pain and infection accelerates tissue loss.",
+        "duration": 1,
+        "markers": [
+          "Non-healing ulcer",
+          "Gangrene",
+          "Neuropathy masks pain"
+        ]
+      },
+      {
+        "title": "Acute limb ischaemia",
+        "text": "Sudden occlusion — thrombosis of a diseased segment, or embolism — produces the six Ps and threatens the limb within hours, leaving no time for collaterals to develop.",
+        "duration": 1,
+        "markers": [
+          "Six Ps",
+          "No collateral time",
+          "Limb-threatening"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chronic-venous-insufficiency",
+    "scene": "chronic-venous-insufficiency",
+    "title": "Chronic Venous Insufficiency",
+    "subtitle": "Valve failure → ambulatory venous hypertension → skin change → venous ulceration",
+    "references": [
+      "moore",
+      "guyton",
+      "ncbi-bookshelf",
+      "esc-guidelines-hub"
+    ],
+    "steps": [
+      {
+        "title": "The normal calf pump",
+        "text": "Calf contraction empties the deep veins and competent valves prevent backflow, so venous pressure at the ankle falls markedly on walking and the capillary bed is protected.",
+        "duration": 1,
+        "markers": [
+          "Muscle pump",
+          "Competent valves",
+          "Ambulatory pressure falls"
+        ]
+      },
+      {
+        "title": "Valve incompetence",
+        "text": "Vein wall weakness and dilatation separate the valve cusps so they no longer meet, allowing blood to reflux down the vein under gravity.",
+        "duration": 1,
+        "markers": [
+          "Cusp separation",
+          "Reflux"
+        ]
+      },
+      {
+        "title": "Loss of the pump advantage",
+        "text": "With incompetent valves each contraction is followed by rapid refilling from above, so ambulatory venous pressure fails to fall — the haemodynamic hallmark of the disease.",
+        "duration": 1,
+        "markers": [
+          "Rapid refill",
+          "Pressure stays high"
+        ]
+      },
+      {
+        "title": "Sustained venous hypertension",
+        "text": "Persistently high venous pressure is transmitted to the capillary bed, raising capillary hydrostatic pressure throughout standing and walking.",
+        "duration": 1,
+        "markers": [
+          "Capillary pressure ↑",
+          "Oedema"
+        ]
+      },
+      {
+        "title": "Capillary leakage and inflammation",
+        "text": "Fluid, proteins and red cells extravasate. Haemoglobin breakdown deposits haemosiderin, producing the characteristic brown staining, while trapped and activated leucocytes sustain inflammation.",
+        "duration": 1,
+        "markers": [
+          "Haemosiderin staining",
+          "Leucocyte trapping",
+          "Chronic inflammation"
+        ]
+      },
+      {
+        "title": "Fibrosis and skin change",
+        "text": "Chronic inflammation causes dermal fibrosis and subcutaneous induration — lipodermatosclerosis — producing the inverted champagne bottle contour of the lower leg.",
+        "duration": 1,
+        "markers": [
+          "Lipodermatosclerosis",
+          "Inverted champagne bottle"
+        ]
+      },
+      {
+        "title": "Ulceration",
+        "text": "Impaired microcirculation and nutrient exchange leave the skin unable to heal minor trauma, producing shallow, exudative ulcers in the gaiter area — treated by compression, which restores the pressure gradient.",
+        "duration": 1,
+        "markers": [
+          "Gaiter area ulcer",
+          "Compression is treatment"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aortic-regurgitation",
+    "scene": "aortic-regurgitation",
+    "title": "Aortic Regurgitation",
+    "subtitle": "Loss of coaptation → volume overload → eccentric hypertrophy → wide pulse pressure → decompensation",
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald"
+    ],
+    "steps": [
+      {
+        "title": "Competent valve",
+        "text": "In diastole the three cusps meet along their coaptation surfaces and the column of aortic blood holds them shut, so the ventricle fills only across the mitral valve.",
+        "duration": 1,
+        "markers": [
+          "Diastolic coaptation",
+          "Closed aortic valve"
+        ]
+      },
+      {
+        "title": "Loss of cusp coaptation",
+        "text": "Cusp disease — bicuspid, rheumatic, endocarditic — or dilatation of the annulus and root pulls the cusps apart, so they no longer seal and blood flows back into the ventricle throughout diastole.",
+        "duration": 1,
+        "markers": [
+          "Cusp or root disease",
+          "Diastolic regurgitant jet"
+        ]
+      },
+      {
+        "title": "Volume overload",
+        "text": "The ventricle receives its normal transmitral filling plus the regurgitant volume, so end-diastolic volume rises substantially and total stroke volume must rise to match.",
+        "duration": 1,
+        "markers": [
+          "End-diastolic volume ↑",
+          "Total stroke volume ↑"
+        ]
+      },
+      {
+        "title": "Eccentric hypertrophy",
+        "text": "In chronic disease the ventricle adds sarcomeres in series, dilating while remaining relatively compliant. It can accommodate a large volume at acceptable filling pressures — which is why chronic disease is tolerated for years.",
+        "duration": 1,
+        "markers": [
+          "Sarcomeres in series",
+          "Compliant dilatation",
+          "Long compensated phase"
+        ]
+      },
+      {
+        "title": "Combined pressure load",
+        "text": "Ejecting a large total stroke volume raises systolic pressure, so the ventricle faces volume loading and pressure loading together — a uniquely demanding combination.",
+        "duration": 1,
+        "markers": [
+          "Volume + pressure load",
+          "Systolic pressure ↑"
+        ]
+      },
+      {
+        "title": "Wide pulse pressure",
+        "text": "High systolic pressure with a low aortic diastolic pressure produces the wide pulse pressure, the collapsing pulse and the many named peripheral signs of chronic aortic regurgitation.",
+        "duration": 1,
+        "markers": [
+          "Collapsing pulse",
+          "Diastolic pressure ↓",
+          "Peripheral signs"
+        ]
+      },
+      {
+        "title": "Coronary compromise",
+        "text": "Coronary perfusion depends on aortic diastolic pressure, which is now low, while hypertrophy raises demand — so angina can occur with entirely normal coronary arteries.",
+        "duration": 1,
+        "markers": [
+          "Perfusion pressure ↓",
+          "Demand ↑",
+          "Angina without CAD"
+        ]
+      },
+      {
+        "title": "Decompensation",
+        "text": "Progressive dilatation eventually outstrips compensation. Contractility falls, ejection fraction declines and symptoms appear — often after irreversible myocardial change has begun, which is why surveillance triggers surgery before symptoms.",
+        "duration": 1,
+        "markers": [
+          "Contractility falls",
+          "EF declines",
+          "Operate before symptoms"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mitral-stenosis",
+    "scene": "mitral-stenosis",
+    "title": "Mitral Stenosis",
+    "subtitle": "Rheumatic valvulitis → commissural fusion → transmitral gradient → pulmonary congestion → right heart failure",
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald",
+      "who-cvd"
+    ],
+    "steps": [
+      {
+        "title": "Rheumatic valvulitis",
+        "text": "Molecular mimicry between streptococcal M protein and cardiac tissue provokes an immune response that damages the valve, often decades before any symptom appears.",
+        "duration": 1,
+        "markers": [
+          "Molecular mimicry",
+          "Silent latency of decades"
+        ]
+      },
+      {
+        "title": "Commissural fusion",
+        "text": "Chronic inflammation fuses the commissures, thickens and calcifies the leaflets and shortens the chordae, converting the funnel-shaped valve into a rigid fish-mouth orifice.",
+        "duration": 1,
+        "markers": [
+          "Commissural fusion",
+          "Leaflet thickening",
+          "Fish-mouth orifice"
+        ]
+      },
+      {
+        "title": "Transmitral gradient",
+        "text": "A diastolic pressure gradient develops between the left atrium and ventricle. Because it depends on flow and on diastolic filling time, tachycardia — exercise, fever, pregnancy — sharply worsens it.",
+        "duration": 1,
+        "markers": [
+          "Diastolic gradient",
+          "Flow and time dependent",
+          "Tachycardia is dangerous"
+        ]
+      },
+      {
+        "title": "Left atrial hypertension",
+        "text": "Raised atrial pressure dilates the chamber and, transmitted backwards through valveless pulmonary veins, raises pulmonary capillary pressure and causes exertional breathlessness and orthopnoea.",
+        "duration": 1,
+        "markers": [
+          "LA dilatation",
+          "Pulmonary capillary pressure ↑",
+          "Congestion"
+        ]
+      },
+      {
+        "title": "Pulmonary vascular change",
+        "text": "Sustained pulmonary venous hypertension causes reactive arteriolar vasoconstriction and eventually fixed remodelling, producing pulmonary hypertension on top of the venous congestion.",
+        "duration": 1,
+        "markers": [
+          "Reactive vasoconstriction",
+          "Fixed remodelling"
+        ]
+      },
+      {
+        "title": "Right heart consequences",
+        "text": "Right ventricular pressure overload leads to hypertrophy, then dilatation, functional tricuspid regurgitation and the signs of right heart failure.",
+        "duration": 1,
+        "markers": [
+          "RV pressure overload",
+          "Functional TR",
+          "Right heart failure"
+        ]
+      },
+      {
+        "title": "Atrial fibrillation and embolism",
+        "text": "Atrial dilatation and fibrosis promote atrial fibrillation, which removes the atrial contribution to filling at the very moment it is most needed and greatly raises the risk of left atrial thrombus and systemic embolism.",
+        "duration": 1,
+        "markers": [
+          "Atrial fibrillation",
+          "Atrial kick lost",
+          "Thromboembolism"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mitral-regurgitation",
+    "scene": "mitral-regurgitation",
+    "title": "Mitral Regurgitation",
+    "subtitle": "Loss of coaptation → regurgitant volume → biatrial and ventricular overload → the vicious cycle",
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald"
+    ],
+    "steps": [
+      {
+        "title": "Loss of coaptation",
+        "text": "Either the leaflets themselves are abnormal — prolapse, flail, rheumatic or infective disease — or the apparatus is geometrically distorted by ventricular dilatation, so the valve cannot seal in systole.",
+        "duration": 1,
+        "markers": [
+          "Primary vs secondary",
+          "Leaflet or geometry"
+        ]
+      },
+      {
+        "title": "Regurgitant volume",
+        "text": "Part of the stroke volume is ejected backwards into the low-pressure left atrium. Because the ventricle empties partly into a low-impedance chamber it is unloaded, so ejection fraction looks deceptively good.",
+        "duration": 1,
+        "markers": [
+          "Backward stroke volume",
+          "Ventricle unloaded",
+          "EF flatters"
+        ]
+      },
+      {
+        "title": "Left atrial volume overload",
+        "text": "The atrium receives pulmonary venous return plus the regurgitant volume. In chronic disease it dilates and stays compliant, so pressure rises only modestly and symptoms are late.",
+        "duration": 1,
+        "markers": [
+          "LA dilatation",
+          "Compliant atrium",
+          "Modest pressure rise"
+        ]
+      },
+      {
+        "title": "Left ventricular volume overload",
+        "text": "The whole regurgitant volume returns across the mitral valve in diastole, so the ventricle handles it twice over — producing eccentric hypertrophy and progressive dilatation.",
+        "duration": 1,
+        "markers": [
+          "Eccentric hypertrophy",
+          "Progressive dilatation"
+        ]
+      },
+      {
+        "title": "The vicious cycle",
+        "text": "In secondary regurgitation, ventricular dilatation tethers the leaflets and worsens the leak, which further volume-loads and dilates the ventricle — regurgitation begetting regurgitation.",
+        "duration": 1,
+        "markers": [
+          "Tethering",
+          "Annular dilatation",
+          "Self-reinforcing"
+        ]
+      },
+      {
+        "title": "Progressive myocardial dysfunction",
+        "text": "Chronic volume overload eventually impairs contractility. Because the ventricle has been chronically unloaded, an apparently normal ejection fraction may already represent significant dysfunction — hence the lower operative thresholds used in this lesion.",
+        "duration": 1,
+        "markers": [
+          "Contractility falls",
+          "'Normal' EF is not normal",
+          "Lower thresholds"
+        ]
+      },
+      {
+        "title": "Acute regurgitation",
+        "text": "With sudden severe regurgitation — chordal rupture, papillary muscle rupture, endocarditis — the small non-compliant atrium cannot accommodate the volume. Atrial and pulmonary venous pressures rise abruptly, causing flash pulmonary oedema and shock.",
+        "duration": 1,
+        "markers": [
+          "Non-compliant atrium",
+          "Giant v wave",
+          "Flash pulmonary oedema"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tricuspid-regurgitation",
+    "scene": "tricuspid-regurgitation",
+    "title": "Tricuspid Regurgitation",
+    "subtitle": "Right ventricular remodelling → annular dilatation and tethering → systemic venous congestion",
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald"
+    ],
+    "steps": [
+      {
+        "title": "Right ventricular overload",
+        "text": "Left heart disease, pulmonary hypertension or intrinsic right ventricular disease loads the thin-walled right ventricle with pressure or volume, and it dilates.",
+        "duration": 1,
+        "markers": [
+          "Pressure or volume load",
+          "RV dilatation"
+        ]
+      },
+      {
+        "title": "Annular dilatation",
+        "text": "The non-planar tricuspid annulus dilates, predominantly along its free wall where there is no fibrous support, increasing the distance the leaflets must cover to meet.",
+        "duration": 1,
+        "markers": [
+          "Free-wall dilatation",
+          "Coaptation distance ↑"
+        ]
+      },
+      {
+        "title": "Leaflet tethering",
+        "text": "As the ventricle remodels, the papillary muscles are displaced apically and outwards, tethering the leaflets away from the annular plane and further reducing coaptation.",
+        "duration": 1,
+        "markers": [
+          "Papillary displacement",
+          "Apical tethering"
+        ]
+      },
+      {
+        "title": "Regurgitant volume and atrial overload",
+        "text": "Systolic backflow raises right atrial pressure, producing a giant v wave, and transmits that pressure directly into the systemic veins — visible as a raised, pulsatile jugular venous pulse.",
+        "duration": 1,
+        "markers": [
+          "Giant v wave",
+          "Pulsatile JVP"
+        ]
+      },
+      {
+        "title": "The self-perpetuating cycle",
+        "text": "Volume overload dilates the right ventricle further, which worsens annular dilatation and tethering — regurgitation begetting regurgitation, independent of the original cause.",
+        "duration": 1,
+        "markers": [
+          "Volume overload",
+          "Cycle continues",
+          "Cause becomes irrelevant"
+        ]
+      },
+      {
+        "title": "Systemic venous congestion",
+        "text": "Sustained venous hypertension produces hepatic congestion with a pulsatile liver, ascites and peripheral oedema, and eventually cardiac cirrhosis and cardiorenal dysfunction — the reason severe tricuspid regurgitation carries an independent prognostic penalty.",
+        "duration": 1,
+        "markers": [
+          "Hepatic congestion",
+          "Ascites and oedema",
+          "Prognostic importance"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "infective-endocarditis",
+    "scene": "infective-endocarditis",
+    "title": "Infective Endocarditis",
+    "subtitle": "Endothelial injury → sterile nidus → bacterial adherence → vegetation → destruction and embolism",
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "braunwald",
+      "ncbi-bookshelf"
+    ],
+    "steps": [
+      {
+        "title": "Endothelial injury",
+        "text": "Turbulent flow across an abnormal valve, the jet lesion where a regurgitant stream strikes endocardium, or direct trauma from a catheter or pacing lead damages the endocardial surface.",
+        "duration": 1,
+        "markers": [
+          "Turbulent flow",
+          "Jet lesion",
+          "Device trauma"
+        ]
+      },
+      {
+        "title": "Sterile vegetation",
+        "text": "Platelets and fibrin deposit at the site of injury, forming non-bacterial thrombotic endocarditis — the nidus that circulating organisms can colonise.",
+        "duration": 1,
+        "markers": [
+          "Platelet–fibrin nidus",
+          "Non-bacterial thrombotic endocarditis"
+        ]
+      },
+      {
+        "title": "Bacteraemia and adherence",
+        "text": "Organisms entering the bloodstream from the mouth, skin, gut or an indwelling line adhere to the thrombus using surface adhesins. Staphylococcus aureus can also stick to intact endothelium, which is why it infects normal valves.",
+        "duration": 1,
+        "markers": [
+          "Portal of entry",
+          "Surface adhesins",
+          "S. aureus on normal valves"
+        ]
+      },
+      {
+        "title": "Vegetation growth",
+        "text": "Bacteria proliferate and are progressively encased in fibrin and platelets, sheltered from neutrophils and reaching very high local density — which is why treatment must be prolonged, bactericidal and parenteral.",
+        "duration": 1,
+        "markers": [
+          "Biofilm sanctuary",
+          "High bacterial density",
+          "Prolonged IV therapy"
+        ]
+      },
+      {
+        "title": "Local destruction",
+        "text": "Infection erodes the leaflets, causing perforation and chordal rupture with acute regurgitation, and may burrow into surrounding tissue to form abscesses, pseudoaneurysms and fistulae.",
+        "duration": 1,
+        "markers": [
+          "Leaflet perforation",
+          "Acute regurgitation",
+          "Root abscess"
+        ]
+      },
+      {
+        "title": "Conduction involvement",
+        "text": "An aortic root abscess extending towards the membranous septum can interrupt the bundle of His, so a new conduction abnormality on the ECG is an important warning of perivalvular extension.",
+        "duration": 1,
+        "markers": [
+          "Abscess near His bundle",
+          "New AV block",
+          "Warning sign"
+        ]
+      },
+      {
+        "title": "Systemic embolisation",
+        "text": "Fragments of vegetation embolise — to brain, spleen, kidneys and limbs from left-sided disease, and to the lungs from right-sided disease — causing infarction, abscess and mycotic aneurysm.",
+        "duration": 1,
+        "markers": [
+          "Septic emboli",
+          "Left vs right sided",
+          "Mycotic aneurysm"
+        ]
+      },
+      {
+        "title": "Immune phenomena",
+        "text": "Circulating immune complexes deposit in tissues, producing glomerulonephritis, Osler's nodes and Roth spots — the immunological half of the modified Duke criteria.",
+        "duration": 1,
+        "markers": [
+          "Immune complexes",
+          "Glomerulonephritis",
+          "Osler's nodes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rheumatic-heart-disease",
+    "scene": "rheumatic-heart-disease",
+    "title": "Rheumatic Heart Disease",
+    "subtitle": "Streptococcal pharyngitis → molecular mimicry → acute carditis → chronic valve scarring",
+    "references": [
+      "who-cvd",
+      "aha-professional",
+      "aha-vhd-2020",
+      "braunwald",
+      "ncbi-bookshelf"
+    ],
+    "steps": [
+      {
+        "title": "Streptococcal pharyngitis",
+        "text": "Infection of the throat with group A Streptococcus pyogenes, particularly rheumatogenic M-protein strains, in a genetically susceptible host — the single preventable step in the whole sequence.",
+        "duration": 1,
+        "markers": [
+          "Group A Streptococcus",
+          "Susceptible host",
+          "Preventable"
+        ]
+      },
+      {
+        "title": "Molecular mimicry",
+        "text": "Antibodies and T cells raised against streptococcal M protein and group A carbohydrate cross-react with human proteins including cardiac myosin and valvular laminin.",
+        "duration": 1,
+        "markers": [
+          "Cross-reactive antibodies",
+          "Cardiac myosin",
+          "Valvular laminin"
+        ]
+      },
+      {
+        "title": "Acute rheumatic fever",
+        "text": "Two to four weeks later a multisystem illness develops — carditis, migratory polyarthritis, chorea, erythema marginatum and subcutaneous nodules — recognised using the revised Jones criteria.",
+        "duration": 1,
+        "markers": [
+          "Latent period 2–4 weeks",
+          "Jones criteria",
+          "Multisystem illness"
+        ]
+      },
+      {
+        "title": "Acute carditis",
+        "text": "Pancarditis affects endocardium, myocardium and pericardium. Verrucous vegetations form along the leaflet closure lines, and the valve — most often the mitral — leaks.",
+        "duration": 1,
+        "markers": [
+          "Pancarditis",
+          "Verrucae on closure lines",
+          "Acute mitral regurgitation"
+        ]
+      },
+      {
+        "title": "Aschoff bodies",
+        "text": "Granulomatous lesions containing Anitschkow cells appear in the myocardium — the histological signature of rheumatic carditis, and evidence that the myocardium is involved as well as the valve.",
+        "duration": 1,
+        "markers": [
+          "Aschoff body",
+          "Anitschkow cells",
+          "Myocardial involvement"
+        ]
+      },
+      {
+        "title": "Chronic scarring",
+        "text": "Over years, healing produces commissural fusion, leaflet thickening and calcification, and chordal shortening and fusion — converting the acute regurgitation into predominant stenosis.",
+        "duration": 1,
+        "markers": [
+          "Commissural fusion",
+          "Chordal shortening",
+          "Regurgitation → stenosis"
+        ]
+      },
+      {
+        "title": "Effect of recurrence",
+        "text": "Each further episode of acute rheumatic fever adds damage, so the cumulative burden depends heavily on whether recurrences are prevented — which is what secondary prophylaxis with penicillin achieves.",
+        "duration": 1,
+        "markers": [
+          "Cumulative damage",
+          "Secondary prophylaxis",
+          "Preventable progression"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stable-angina",
+    "scene": "stable-angina",
+    "title": "Stable Angina",
+    "subtitle": "Fixed stenosis → exhausted flow reserve → supply–demand mismatch → the ischaemic cascade",
+    "references": [
+      "esc-acs-2023",
+      "acc-guidelines-hub",
+      "braunwald",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "Fixed stenosis develops",
+        "text": "An atherosclerotic plaque progressively narrows an epicardial artery. Resting flow is maintained because the distal microvasculature dilates to compensate.",
+        "duration": 1,
+        "markers": [
+          "Epicardial stenosis",
+          "Resting flow maintained"
+        ]
+      },
+      {
+        "title": "Coronary flow reserve falls",
+        "text": "Because the microvasculature is already partly dilated just to keep resting flow normal, the capacity for further dilatation — the coronary flow reserve — is reduced.",
+        "duration": 1,
+        "markers": [
+          "Microvascular reserve used",
+          "Flow reserve ↓"
+        ]
+      },
+      {
+        "title": "Demand rises with exertion",
+        "text": "Exercise raises heart rate, contractility and wall stress, and therefore myocardial oxygen demand. Tachycardia simultaneously shortens diastole, which is when the left ventricle is actually perfused.",
+        "duration": 1,
+        "markers": [
+          "Rate · contractility · wall stress",
+          "Diastole shortens"
+        ]
+      },
+      {
+        "title": "Supply–demand mismatch",
+        "text": "When demand exceeds the maximum achievable supply, the subendocardium — perfused last and compressed most — becomes ischaemic first.",
+        "duration": 1,
+        "markers": [
+          "Subendocardial ischaemia",
+          "Perfused last, compressed most"
+        ]
+      },
+      {
+        "title": "The ischaemic cascade",
+        "text": "Anaerobic metabolism, lactate production and adenosine release stimulate cardiac afferents. Regional diastolic then systolic dysfunction appears, followed by ECG change and only finally by pain — which is why silent ischaemia exists.",
+        "duration": 1,
+        "markers": [
+          "Diastolic → systolic dysfunction",
+          "ST depression",
+          "Pain comes last"
+        ]
+      },
+      {
+        "title": "Resolution",
+        "text": "Stopping lowers demand, flow again becomes adequate and everything reverses within minutes. No myocyte necrosis occurs and troponin stays normal — the defining difference from an acute coronary syndrome.",
+        "duration": 1,
+        "markers": [
+          "Reversible",
+          "No necrosis",
+          "Troponin normal"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cardiomyopathy",
+    "scene": "cardiomyopathy",
+    "title": "Cardiomyopathies",
+    "subtitle": "Dilated · hypertrophic · restrictive · arrhythmogenic — four phenotypes, shared endpoints",
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "aha-professional",
+      "esc-hf-2021"
+    ],
+    "steps": [
+      {
+        "title": "The normal ventricle",
+        "text": "A normal left ventricle has a wall of roughly 10 mm, an ellipsoidal cavity, brisk contraction and unimpeded early filling. Each cardiomyopathy departs from this reference in a characteristic direction.",
+        "duration": 1,
+        "markers": [
+          "Reference geometry",
+          "Normal wall and cavity"
+        ]
+      },
+      {
+        "title": "Dilated cardiomyopathy",
+        "text": "Myocyte injury, loss and disarray with interstitial fibrosis lead to eccentric remodelling. The ventricle dilates and becomes spherical, wall stress rises by Laplace's law and systolic function progressively declines.",
+        "duration": 1,
+        "markers": [
+          "Eccentric remodelling",
+          "Spherical cavity",
+          "Systolic failure"
+        ]
+      },
+      {
+        "title": "Hypertrophic cardiomyopathy",
+        "text": "Sarcomeric protein mutations produce myocyte hypertrophy and disarray with interstitial fibrosis. Wall thickening is typically asymmetric and septal, impairing relaxation and reducing cavity size.",
+        "duration": 1,
+        "markers": [
+          "Sarcomeric mutation",
+          "Asymmetric septal hypertrophy",
+          "Impaired relaxation"
+        ]
+      },
+      {
+        "title": "Dynamic outflow obstruction",
+        "text": "In the obstructive form, septal hypertrophy narrows the outflow tract and rapid flow drags the anterior mitral leaflet into it — systolic anterior motion — causing dynamic obstruction and mitral regurgitation. The gradient rises when preload falls or contractility increases.",
+        "duration": 1,
+        "markers": [
+          "Systolic anterior motion",
+          "Dynamic gradient",
+          "Load-dependent"
+        ]
+      },
+      {
+        "title": "Restrictive cardiomyopathy",
+        "text": "Infiltration or fibrosis stiffens the myocardium. Volumes and systolic function are initially preserved but filling is severely impaired, producing marked biatrial dilatation and high filling pressures.",
+        "duration": 1,
+        "markers": [
+          "Stiff myocardium",
+          "Biatrial dilatation",
+          "High filling pressures"
+        ]
+      },
+      {
+        "title": "Arrhythmogenic cardiomyopathy",
+        "text": "Desmosomal mutations weaken cell-to-cell adhesion. Myocytes are progressively replaced by fibrous and fatty tissue, mostly in the right ventricle, creating a substrate for re-entrant ventricular arrhythmia that exercise makes worse.",
+        "duration": 1,
+        "markers": [
+          "Desmosomal disease",
+          "Fibrofatty replacement",
+          "Exercise-aggravated"
+        ]
+      },
+      {
+        "title": "Shared consequences",
+        "text": "Whatever the mechanism, the endpoints converge: heart failure, arrhythmia and thromboembolism — with sudden cardiac death a particular concern in the hypertrophic and arrhythmogenic forms, and a family screening obligation in all of them.",
+        "duration": 1,
+        "markers": [
+          "Heart failure",
+          "Arrhythmia and sudden death",
+          "Screen the family"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "congenital-heart-disease",
+    "scene": "congenital-heart-disease",
+    "title": "Congenital Heart Disease",
+    "subtitle": "Embryological lesion → transitional circulation → shunt, obstruction or cyanosis → Eisenmenger",
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "aha-professional",
+      "ncbi-bookshelf"
+    ],
+    "steps": [
+      {
+        "title": "Disrupted development",
+        "text": "Abnormal septation, valve formation, outflow tract division or conotruncal rotation between roughly weeks three and eight of gestation produces the structural lesion.",
+        "duration": 1,
+        "markers": [
+          "Weeks 3–8",
+          "Septation and outflow tracts"
+        ]
+      },
+      {
+        "title": "Transitional circulation",
+        "text": "At birth pulmonary vascular resistance falls and systemic resistance rises. That reversal is what unmasks many left-to-right shunts, so lesions may present weeks after birth rather than immediately.",
+        "duration": 1,
+        "markers": [
+          "PVR falls",
+          "SVR rises",
+          "Delayed presentation"
+        ]
+      },
+      {
+        "title": "Left-to-right shunting",
+        "text": "A communication between the circuits directs blood towards the lower-resistance pulmonary side, causing pulmonary overcirculation and volume loading of the receiving chambers.",
+        "duration": 1,
+        "markers": [
+          "Acyanotic shunt",
+          "Pulmonary overcirculation",
+          "Volume loading"
+        ]
+      },
+      {
+        "title": "Obstructive physiology",
+        "text": "Stenotic lesions — pulmonary stenosis, aortic stenosis, coarctation — impose pressure loading instead, producing hypertrophy and, if severe, ventricular failure.",
+        "duration": 1,
+        "markers": [
+          "Pressure loading",
+          "Hypertrophy"
+        ]
+      },
+      {
+        "title": "Cyanotic physiology",
+        "text": "Right-to-left shunting or abnormal mixing delivers deoxygenated blood into the systemic circulation, producing hypoxaemia, secondary erythrocytosis and clubbing.",
+        "duration": 1,
+        "markers": [
+          "Right-to-left shunt",
+          "Hypoxaemia",
+          "Erythrocytosis"
+        ]
+      },
+      {
+        "title": "Eisenmenger physiology",
+        "text": "Long-standing high-flow shunting remodels the pulmonary vasculature until resistance exceeds systemic and the shunt reverses. Cyanosis appears, and closure of the defect is then no longer possible — which is why timing of repair matters so much.",
+        "duration": 1,
+        "markers": [
+          "Shunt reverses",
+          "Cyanosis",
+          "Closure contraindicated"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "atrial-septal-defect",
+    "scene": "atrial-septal-defect",
+    "title": "Atrial Septal Defect",
+    "subtitle": "Compliance-driven shunt → right heart volume overload → fixed splitting → late arrhythmia",
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "moore",
+      "ncbi-bookshelf"
+    ],
+    "steps": [
+      {
+        "title": "The defect",
+        "text": "A persistent communication in the interatrial septum — most often a secundum defect at the fossa ovalis — allows blood to cross between the atria.",
+        "duration": 1,
+        "markers": [
+          "Secundum defect",
+          "Fossa ovalis"
+        ]
+      },
+      {
+        "title": "Compliance-driven shunting",
+        "text": "The right ventricle is more compliant than the left, so in diastole the left atrium preferentially empties across the defect. The shunt is determined by relative ventricular compliance, not by a pressure difference between the atria.",
+        "duration": 1,
+        "markers": [
+          "Compliance, not pressure",
+          "Left-to-right shunt"
+        ]
+      },
+      {
+        "title": "Right heart volume overload",
+        "text": "The right atrium and ventricle receive normal systemic venous return plus the shunted volume, and progressively dilate. The left heart, by contrast, stays normal or small.",
+        "duration": 1,
+        "markers": [
+          "RA and RV dilate",
+          "Left heart spared"
+        ]
+      },
+      {
+        "title": "Increased pulmonary blood flow",
+        "text": "Pulmonary flow may be one and a half to three times systemic flow. That extra flow across structurally normal pulmonary and tricuspid valves produces the characteristic flow murmurs.",
+        "duration": 1,
+        "markers": [
+          "Qp:Qs ≥ 1.5",
+          "Pulmonary flow murmur",
+          "Tricuspid flow rumble"
+        ]
+      },
+      {
+        "title": "Fixed splitting of S2",
+        "text": "The large, relatively fixed right ventricular volume load prolongs right ventricular ejection throughout the respiratory cycle, so the normal inspiratory widening of the split disappears — the classic auscultatory sign.",
+        "duration": 1,
+        "markers": [
+          "Delayed P2",
+          "No respiratory variation",
+          "Fixed split"
+        ]
+      },
+      {
+        "title": "Atrial remodelling and arrhythmia",
+        "text": "Chronic right atrial dilatation and stretch remodel the atrial myocardium, producing atrial fibrillation and flutter, typically from the fourth decade onwards.",
+        "duration": 1,
+        "markers": [
+          "Atrial stretch",
+          "Atrial fibrillation and flutter"
+        ]
+      },
+      {
+        "title": "Pulmonary vascular disease",
+        "text": "In a minority, sustained high pulmonary flow causes vascular remodelling and rising resistance, eventually reversing the shunt — Eisenmenger syndrome — after which closure is no longer possible.",
+        "duration": 1,
+        "markers": [
+          "Vascular remodelling",
+          "Shunt reversal",
+          "Eisenmenger"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pericardial-disease",
+    "scene": "pericardial-disease",
+    "title": "Pericardial Disease",
+    "subtitle": "Pericarditis → effusion → tamponade physiology → constriction",
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "aha-professional",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "Pericardial inflammation",
+        "text": "An infectious, autoimmune, metabolic or traumatic insult inflames the pericardial layers. The roughened surfaces rub together, producing a friction rub and sharp pleuritic pain that eases on sitting forward.",
+        "duration": 1,
+        "markers": [
+          "Friction rub",
+          "Pleuritic pain",
+          "Relieved sitting forward"
+        ]
+      },
+      {
+        "title": "Pain referral",
+        "text": "Inflammation irritating the adjacent diaphragmatic pleura stimulates the phrenic nerve, referring pain to the trapezius ridge — a highly specific feature of pericarditis.",
+        "duration": 1,
+        "markers": [
+          "Phrenic nerve",
+          "Trapezius ridge pain"
+        ]
+      },
+      {
+        "title": "Effusion formation",
+        "text": "Inflammation increases capillary permeability and fluid exudes into the pericardial space. A slowly accumulating effusion can become very large without any haemodynamic effect.",
+        "duration": 1,
+        "markers": [
+          "Exudate",
+          "Slow accumulation tolerated"
+        ]
+      },
+      {
+        "title": "Rising intrapericardial pressure",
+        "text": "The parietal pericardium is relatively non-compliant in the short term. Once the pericardial reserve volume is used up, each further millilitre causes a steep rise in intrapericardial pressure.",
+        "duration": 1,
+        "markers": [
+          "Reserve volume exceeded",
+          "Steep pressure–volume curve"
+        ]
+      },
+      {
+        "title": "Tamponade physiology",
+        "text": "Raised pressure compresses the thin-walled right-sided chambers and limits diastolic filling. Filling pressures equalise across the chambers, stroke volume falls, and tachycardia and vasoconstriction hold blood pressure up until sudden decompensation.",
+        "duration": 1,
+        "markers": [
+          "Chamber collapse",
+          "Pressure equalisation",
+          "Compensation then collapse"
+        ]
+      },
+      {
+        "title": "Enhanced interdependence",
+        "text": "With total cardiac volume fixed by the sac, the inspiratory increase in right ventricular filling pushes the septum leftwards and reduces left ventricular filling — producing pulsus paradoxus.",
+        "duration": 1,
+        "markers": [
+          "Septal shift on inspiration",
+          "Pulsus paradoxus"
+        ]
+      },
+      {
+        "title": "Constriction",
+        "text": "Chronic inflammation leaves the pericardium fibrotic, thickened and sometimes calcified. Early diastolic filling is rapid and unimpeded but stops abruptly at the pericardial limit, producing the dip-and-plateau waveform and a pericardial knock.",
+        "duration": 1,
+        "markers": [
+          "Fibrosis and calcification",
+          "Dip and plateau",
+          "Pericardial knock"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "supraventricular-tachycardia",
+    "scene": "supraventricular-tachycardia",
+    "title": "Supraventricular Tachycardia",
+    "subtitle": "Dual pathways → premature beat → re-entry → rapid regular tachycardia",
+    "references": [
+      "braunwald",
+      "aha-professional",
+      "esc-guidelines-hub",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "Dual pathway physiology",
+        "text": "In AV nodal re-entrant tachycardia the AV nodal region has two functionally distinct routes: a fast pathway that conducts quickly but recovers slowly, and a slow pathway that conducts slowly but recovers quickly.",
+        "duration": 1,
+        "markers": [
+          "Fast pathway",
+          "Slow pathway",
+          "Different refractoriness"
+        ]
+      },
+      {
+        "title": "Normal sinus conduction",
+        "text": "In sinus rhythm the impulse travels down both pathways. The fast pathway arrives first, activates the ventricle and collides retrogradely with the slow-pathway wavefront, extinguishing it.",
+        "duration": 1,
+        "markers": [
+          "Fast pathway wins",
+          "Slow wavefront extinguished"
+        ]
+      },
+      {
+        "title": "Initiation by a premature beat",
+        "text": "A premature atrial beat arrives while the fast pathway is still refractory, so it can only conduct down the slow pathway — seen on the ECG as a sudden jump in the PR interval.",
+        "duration": 1,
+        "markers": [
+          "Premature atrial beat",
+          "Fast pathway blocked",
+          "PR jump"
+        ]
+      },
+      {
+        "title": "Re-entry established",
+        "text": "By the time the impulse reaches the distal node the fast pathway has recovered and conducts it retrogradely to the atrium, completing a circuit that then perpetuates itself beat after beat.",
+        "duration": 1,
+        "markers": [
+          "Retrograde fast conduction",
+          "Circuit closes",
+          "Self-sustaining"
+        ]
+      },
+      {
+        "title": "The tachycardia",
+        "text": "The circuit drives the ventricles at 150–250 per minute. Atria and ventricles activate almost simultaneously, so the retrograde P wave is buried in or just after the QRS — the pseudo-R′ in V1.",
+        "duration": 1,
+        "markers": [
+          "150–250 / min",
+          "Narrow QRS",
+          "P buried in QRS"
+        ]
+      },
+      {
+        "title": "Accessory pathway variant",
+        "text": "In AV re-entrant tachycardia the circuit uses the AV node in one direction and an accessory pathway in the other. Orthodromic conduction gives a narrow QRS; antidromic conduction gives a wide one.",
+        "duration": 1,
+        "markers": [
+          "Accessory pathway",
+          "Orthodromic vs antidromic"
+        ]
+      },
+      {
+        "title": "Haemodynamic effect",
+        "text": "Rapid rates shorten diastolic filling and reduce stroke volume. Atria contracting against closed AV valves produce cannon a waves and the sensation of pounding in the neck.",
+        "duration": 1,
+        "markers": [
+          "Filling time ↓",
+          "Cannon a waves",
+          "Neck pounding"
+        ]
+      },
+      {
+        "title": "Danger in pre-excited AF",
+        "text": "If atrial fibrillation occurs with an accessory pathway that lacks the AV node's decremental properties, conduction can be extremely rapid and irregular, and may degenerate into ventricular fibrillation — the reason AV nodal blockers are avoided here.",
+        "duration": 1,
+        "markers": [
+          "No decremental conduction",
+          "Very rapid ventricular rates",
+          "Avoid AV nodal blockade"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ventricular-arrhythmias",
+    "scene": "ventricular-arrhythmias",
+    "title": "Ventricular Arrhythmias",
+    "subtitle": "Scar, triggers and channelopathy → ventricular tachycardia → fibrillation → arrest",
+    "references": [
+      "braunwald",
+      "aha-professional",
+      "esc-guidelines-hub",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "Scar-related re-entry",
+        "text": "Surviving myocyte bundles threading through infarct scar conduct slowly and anisotropically. They form a protected isthmus around which a fixed circuit can turn, sustaining monomorphic ventricular tachycardia.",
+        "duration": 1,
+        "markers": [
+          "Protected isthmus",
+          "Slow conduction",
+          "Monomorphic VT"
+        ]
+      },
+      {
+        "title": "Triggered activity",
+        "text": "Early afterdepolarisations during a prolonged repolarisation phase can trigger torsades de pointes; delayed afterdepolarisations from calcium overload underlie catecholaminergic arrhythmias.",
+        "duration": 1,
+        "markers": [
+          "Early afterdepolarisations",
+          "Torsades de pointes",
+          "Calcium overload"
+        ]
+      },
+      {
+        "title": "Abnormal automaticity",
+        "text": "Ischaemic or injured Purkinje and ventricular tissue can develop enhanced spontaneous depolarisation and take over as an ectopic focus, generating ventricular ectopy and accelerated idioventricular rhythms.",
+        "duration": 1,
+        "markers": [
+          "Ectopic focus",
+          "Purkinje injury",
+          "Ventricular ectopy"
+        ]
+      },
+      {
+        "title": "Channelopathy substrate",
+        "text": "Inherited abnormalities of sodium, potassium or calcium handling alter action potential duration and increase dispersion of repolarisation, creating vulnerability in a structurally normal heart.",
+        "duration": 1,
+        "markers": [
+          "Ion channel mutation",
+          "Dispersion of repolarisation",
+          "Structurally normal heart"
+        ]
+      },
+      {
+        "title": "Haemodynamic collapse",
+        "text": "Even organised ventricular tachycardia at a rapid rate severely limits filling. With impaired ventricular function it quickly causes hypotension, syncope and loss of consciousness.",
+        "duration": 1,
+        "markers": [
+          "Filling time lost",
+          "Hypotension",
+          "Syncope"
+        ]
+      },
+      {
+        "title": "Degeneration to fibrillation",
+        "text": "Wavebreak fragments the organised circuit into multiple wandering wavelets. The ventricles quiver without ejecting, cardiac output ceases, and death follows within minutes unless defibrillation restores organised activation.",
+        "duration": 1,
+        "markers": [
+          "Wavebreak",
+          "Multiple wavelets",
+          "Defibrillation is the treatment"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "conduction-disorders",
+    "scene": "conduction-disorders",
+    "title": "Conduction Disorders & Bradyarrhythmias",
+    "subtitle": "Conduction system disease → Wenckebach → complete block → escape dependence",
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "aha-professional",
+      "guyton"
+    ],
+    "steps": [
+      {
+        "title": "The normal conduction system",
+        "text": "The sinus node sets the rate; the AV node delays the impulse to allow atrial contribution to filling; the His–Purkinje system then activates both ventricles almost simultaneously, giving a narrow QRS.",
+        "duration": 1,
+        "markers": [
+          "Sinus node",
+          "AV nodal delay",
+          "Rapid His–Purkinje spread"
+        ]
+      },
+      {
+        "title": "Age-related degeneration",
+        "text": "Progressive fibrosis and calcification of the conduction system — historically Lev's and Lenègre's disease — is the commonest cause of acquired block in older adults.",
+        "duration": 1,
+        "markers": [
+          "Fibrosis and calcification",
+          "Commonest acquired cause"
+        ]
+      },
+      {
+        "title": "Ischaemic injury",
+        "text": "Inferior infarction may cause nodal block through AV nodal artery involvement or vagal tone, and is usually transient. Block complicating anterior infarction implies extensive septal necrosis and carries a far worse prognosis.",
+        "duration": 1,
+        "markers": [
+          "Inferior: nodal, transient",
+          "Anterior: infranodal, ominous"
+        ]
+      },
+      {
+        "title": "Nodal versus infranodal block",
+        "text": "Block within the AV node produces a narrow-complex escape at 40–60 per minute that often improves with atropine. Infranodal block leaves a slow, unreliable wide-complex escape at 20–40 per minute that does not.",
+        "duration": 1,
+        "markers": [
+          "Narrow escape 40–60",
+          "Wide escape 20–40",
+          "Atropine responsiveness"
+        ]
+      },
+      {
+        "title": "Wenckebach physiology",
+        "text": "In Mobitz type I block, progressive fatigue of nodal conduction lengthens the PR interval beat by beat until one impulse fails entirely. The node then recovers and the cycle repeats — the grouped beating seen on the strip.",
+        "duration": 1,
+        "markers": [
+          "PR lengthens",
+          "Dropped beat",
+          "Cycle repeats"
+        ]
+      },
+      {
+        "title": "Escape rhythm dependence",
+        "text": "In complete block the atria and ventricles are fully dissociated. The ventricles depend entirely on a subsidiary pacemaker, which may be slow, unreliable or fail altogether.",
+        "duration": 1,
+        "markers": [
+          "AV dissociation",
+          "Subsidiary pacemaker",
+          "Unreliable escape"
+        ]
+      },
+      {
+        "title": "Haemodynamic consequences",
+        "text": "Bradycardia reduces cardiac output once stroke volume can no longer compensate, and loss of atrioventricular synchrony reduces filling and produces cannon a waves. Long pauses cause syncope; prolonged asystole is fatal, which is why pacing is the definitive treatment.",
+        "duration": 1,
+        "markers": [
+          "Output falls",
+          "Cannon a waves",
+          "Syncope and pacing"
+        ]
+      }
+    ]
+  }
+]

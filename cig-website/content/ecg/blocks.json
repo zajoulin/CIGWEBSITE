@@ -1,0 +1,652 @@
+[
+  {
+    "id": "first-degree-av-block",
+    "name": "First-Degree AV Block",
+    "abbr": "1° AVB",
+    "categoryId": "block",
+    "tagline": "Every impulse gets through — it just takes too long.",
+    "rateRange": "Usually 60–100 bpm",
+    "regularity": "Regular",
+    "summary": "Conduction from atria to ventricles is delayed but never fails. The PR interval is prolonged beyond 0.20 s and stays constant, with a QRS following every P wave. Strictly speaking this is delay rather than block.",
+    "mechanism": "The delay is almost always within the atrioventricular node, where decremental conduction is prolonged by high vagal tone, drugs, ischaemia or fibrosis. Each atrial impulse still reaches the His bundle and the ventricles, so the 1:1 relationship is preserved. When the delay is very long the P wave can drift back into the preceding T wave, and atrial systole ends up occurring against closed atrioventricular valves — the reason a markedly long PR interval can cause a soft first heart sound and pacemaker-syndrome-like symptoms.",
+    "recognition": [
+      "PR interval greater than 0.20 s (over one large square)",
+      "PR interval constant from beat to beat",
+      "Every P wave is followed by a QRS — nothing is dropped",
+      "Regular rhythm, normal rate",
+      "Narrow QRS if the delay is nodal"
+    ],
+    "causes": [
+      "High vagal tone, including in trained athletes",
+      "Atrioventricular nodal blocking drugs: beta blockers, diltiazem, verapamil, digoxin",
+      "Inferior myocardial infarction",
+      "Age-related conduction system fibrosis",
+      "Myocarditis, including Lyme carditis, and infiltrative disease"
+    ],
+    "significance": "Usually benign and often an incidental finding. It matters as a marker: it may be the first sign of drug effect, of conduction system disease that will progress, or of acute myocarditis. Marked prolongation beyond about 0.30 s can be symptomatic in its own right by desynchronising atrial and ventricular systole.",
+    "management": "No specific treatment for asymptomatic first-degree block. Review rate-limiting drugs, look for and treat myocarditis or ischaemia, and monitor for progression when it appears alongside bundle branch block or in the context of acute infarction.",
+    "waveform": {
+      "rate": 68,
+      "irregularity": 0.02,
+      "sinusArrhythmia": 0.08,
+      "atrial": "sinus",
+      "pAmplitude": 0.15,
+      "pDuration": 0.1,
+      "prInterval": 0.3,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.12,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.05,
+      "sAmplitude": 0.24,
+      "stShift": 0,
+      "stShape": "flat",
+      "tAmplitude": 0.29,
+      "tShape": "normal",
+      "qtInterval": 0.39,
+      "wander": 0.1,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 68,
+      "spo2": 98,
+      "respiratoryRate": 14,
+      "bpSystolic": 128,
+      "bpDiastolic": 78,
+      "temperature": 36.7,
+      "alarm": "normal",
+      "bedside": "Asymptomatic; picked up on a pre-operative ECG. Takes bisoprolol for hypertension."
+    },
+    "highlights": [
+      {
+        "feature": "pr",
+        "label": "Prolonged PR interval",
+        "note": "0.30 s here — one and a half large squares. Constant on every beat, which is what distinguishes first-degree block from the lengthening pattern of Mobitz I.",
+        "abnormal": true
+      },
+      {
+        "feature": "p",
+        "label": "P wave",
+        "note": "Normal in shape and always followed by a QRS. The atria are depolarising normally; only transmission to the ventricles is slow."
+      },
+      {
+        "feature": "qrs",
+        "label": "QRS complex",
+        "note": "Narrow, placing the delay at or above the His bundle. A broad QRS with a long PR interval suggests more distal, and more dangerous, conduction disease."
+      },
+      {
+        "feature": "rr",
+        "label": "R–R interval",
+        "note": "Regular. Nothing is dropped, so the ventricular rhythm is entirely undisturbed."
+      }
+    ],
+    "narration": [
+      {
+        "title": "Delay in the AV node",
+        "text": "Decremental conduction through the atrioventricular node is prolonged — by vagal tone, by drugs, by ischaemia or by fibrosis.",
+        "duration": 1.2,
+        "highlight": "pr"
+      },
+      {
+        "title": "Nothing is lost",
+        "text": "Every atrial impulse still reaches the ventricles. The 1:1 relationship between P waves and QRS complexes is preserved, so the rhythm stays regular.",
+        "duration": 1.3,
+        "highlight": "p"
+      },
+      {
+        "title": "Measure the interval",
+        "text": "From the start of the P wave to the start of the QRS is more than one large square — over 0.20 s — and it is identical on every beat.",
+        "duration": 1.3,
+        "highlight": "pr"
+      },
+      {
+        "title": "Why it still matters",
+        "text": "On its own it is usually harmless. Alongside bundle branch block, acute infarction or myocarditis it is a warning that the conduction system is failing and may progress.",
+        "duration": 1.4,
+        "highlight": "qrs"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Rate",
+        "value": "68 bpm",
+        "normal": "60–100 bpm"
+      },
+      {
+        "label": "PR interval",
+        "value": "0.30 s",
+        "normal": "0.12–0.20 s",
+        "abnormal": true
+      },
+      {
+        "label": "P : QRS ratio",
+        "value": "1 : 1",
+        "normal": "1 : 1"
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.09 s",
+        "normal": "< 0.12 s"
+      },
+      {
+        "label": "Dropped beats",
+        "value": "None",
+        "normal": "None"
+      }
+    ],
+    "relatedDiseases": [
+      "conduction-disorders"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials",
+      "arrhythmia-principles"
+    ],
+    "relatedStructures": [
+      "av-node",
+      "bundle-of-his"
+    ],
+    "references": [
+      "esc-pacing-2021",
+      "aha-ecg-part1",
+      "braunwald"
+    ]
+  },
+  {
+    "id": "mobitz-i",
+    "name": "Second-Degree AV Block, Mobitz I",
+    "abbr": "Wenckebach",
+    "categoryId": "block",
+    "tagline": "Longer, longer, longer, drop — then the cycle repeats.",
+    "rateRange": "Atrial rate normal; ventricular rate slightly lower",
+    "regularity": "Regularly irregular, in repeating groups",
+    "summary": "The PR interval lengthens progressively with each successive beat until one P wave fails to conduct and a QRS is dropped. The cycle then resets and repeats. The R–R interval paradoxically shortens through the cycle, because the increment added to each PR interval gets smaller.",
+    "mechanism": "This is decremental conduction in the atrioventricular node. Each impulse arrives while the node is still incompletely recovered from the last, so conduction takes progressively longer, until an impulse arrives during absolute refractoriness and is blocked entirely. The dropped beat gives the node a long recovery period, and the following PR interval is the shortest of the group. Because the block is nodal, it is highly responsive to vagal tone and to atropine, and the escape mechanism below it is reliable — which is why Mobitz I is usually benign.",
+    "recognition": [
+      "Progressive PR lengthening across consecutive beats",
+      "One non-conducted P wave — a P with no QRS after it",
+      "Grouped beating: the pattern repeats in a predictable cycle",
+      "The R–R interval shortens progressively before the dropped beat",
+      "The PR interval after the dropped beat is the shortest of the group",
+      "Narrow QRS in most cases"
+    ],
+    "causes": [
+      "High vagal tone, including in athletes and during sleep",
+      "AV nodal blocking drugs: beta blockers, diltiazem, verapamil, digoxin",
+      "Inferior myocardial infarction — the right coronary artery usually supplies the AV node",
+      "Myocarditis and post-cardiac-surgery states"
+    ],
+    "significance": "Generally benign, particularly when asymptomatic and when the QRS is narrow. It rarely progresses to complete heart block, and when it does the escape rhythm is usually a reliable junctional one. Symptoms matter more than the pattern: dizziness, fatigue or syncope change the assessment entirely.",
+    "management": "Observation and drug review for the asymptomatic patient. Withhold or reduce atrioventricular nodal blocking drugs. Atropine for symptomatic bradycardia. Permanent pacing is only indicated when symptoms are attributable to the block and there is no reversible cause.",
+    "waveform": {
+      "rate": 62,
+      "irregularity": 0.02,
+      "atrial": "sinus",
+      "atrialRate": 78,
+      "pAmplitude": 0.18,
+      "pDuration": 0.1,
+      "prInterval": 0.18,
+      "prIncrement": 0.06,
+      "dropEvery": 4,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.12,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.05,
+      "sAmplitude": 0.24,
+      "stShift": 0,
+      "stShape": "flat",
+      "tAmplitude": 0.29,
+      "tShape": "normal",
+      "qtInterval": 0.39,
+      "wander": 0.1,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 62,
+      "spo2": 97,
+      "respiratoryRate": 14,
+      "bpSystolic": 118,
+      "bpDiastolic": 72,
+      "temperature": 36.6,
+      "alarm": "advisory",
+      "alarmText": "IRREGULAR RHYTHM",
+      "bedside": "Occasional light-headedness, no syncope. Day two after an inferior myocardial infarction."
+    },
+    "highlights": [
+      {
+        "feature": "pr",
+        "label": "Progressive PR lengthening",
+        "note": "Each PR interval is longer than the last — 0.18, 0.24, 0.30 s — until conduction fails altogether. The increment itself gets smaller with each beat, which is why the R–R intervals shorten.",
+        "abnormal": true
+      },
+      {
+        "feature": "p",
+        "label": "The non-conducted P wave",
+        "note": "One P wave stands alone with no QRS after it. Marching out the P waves confirms the atrial rate has stayed perfectly regular throughout.",
+        "abnormal": true
+      },
+      {
+        "feature": "rr",
+        "label": "Grouped beating",
+        "note": "The pause makes the trace look irregular at a glance, but the irregularity is regular — the same group of beats repeats over and over.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "QRS complex",
+        "note": "Narrow, placing the block in the atrioventricular node rather than in the distal conduction system — the main reason Mobitz I is usually benign."
+      }
+    ],
+    "narration": [
+      {
+        "title": "Incomplete recovery",
+        "text": "Each impulse reaches the atrioventricular node before it has fully recovered from the previous one, so conduction takes a little longer every time.",
+        "duration": 1.3,
+        "highlight": "pr"
+      },
+      {
+        "title": "Longer, longer, longer",
+        "text": "The PR interval stretches beat by beat. Watch the gap between the P wave and the QRS grow across the group.",
+        "duration": 1.4,
+        "highlight": "pr"
+      },
+      {
+        "title": "Drop",
+        "text": "Eventually an impulse arrives while the node is absolutely refractory. It is blocked completely — a P wave with no QRS.",
+        "duration": 1.2,
+        "highlight": "p"
+      },
+      {
+        "title": "Reset",
+        "text": "The pause lets the node recover fully, so the next PR interval is the shortest of the sequence and the cycle begins again.",
+        "duration": 1.3,
+        "highlight": "rr"
+      },
+      {
+        "title": "Usually benign",
+        "text": "Because the block sits in the node, it responds to atropine and rarely progresses. Narrow complexes and no symptoms make observation the right answer.",
+        "duration": 1.3,
+        "highlight": "qrs"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Atrial rate",
+        "value": "78 per minute, regular",
+        "normal": "60–100 per minute"
+      },
+      {
+        "label": "Ventricular rate",
+        "value": "62 bpm",
+        "normal": "60–100 bpm"
+      },
+      {
+        "label": "PR interval",
+        "value": "0.18 → 0.36 s, then drops",
+        "normal": "0.12–0.20 s, constant",
+        "abnormal": true
+      },
+      {
+        "label": "P : QRS ratio",
+        "value": "4 : 3",
+        "normal": "1 : 1",
+        "abnormal": true
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.09 s",
+        "normal": "< 0.12 s"
+      }
+    ],
+    "relatedDiseases": [
+      "conduction-disorders",
+      "myocardial-infarction"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials",
+      "arrhythmia-principles"
+    ],
+    "relatedStructures": [
+      "av-node",
+      "bundle-of-his",
+      "coronary-arteries"
+    ],
+    "references": [
+      "esc-pacing-2021",
+      "aha-ecg-part1",
+      "braunwald"
+    ]
+  },
+  {
+    "id": "mobitz-ii",
+    "name": "Second-Degree AV Block, Mobitz II",
+    "abbr": "2° AVB Type II",
+    "categoryId": "block",
+    "tagline": "A constant PR interval and sudden, unannounced dropped beats — this one needs a pacemaker.",
+    "rateRange": "Ventricular rate depends on the conduction ratio",
+    "regularity": "Regular atrial rate with intermittent dropped ventricular beats",
+    "summary": "Intermittent failure of conduction with no preceding PR lengthening. The PR interval is identical on every conducted beat, and then without warning a P wave is not followed by a QRS. The QRS is often broad, because the block is in the His–Purkinje system rather than the atrioventricular node.",
+    "mechanism": "The lesion lies distal to the atrioventricular node, in the His bundle or, more often, in both bundle branches. Distal conduction tissue behaves in an all-or-none fashion rather than decrementally: it either conducts normally or it fails completely. That is why the PR interval never changes and the drop is abrupt. The same diseased tissue would have to supply any escape rhythm, so the escape — if it comes at all — is slow, unreliable and ventricular. This is the reason Mobitz II carries a real risk of progressing suddenly to complete heart block, asystole and Stokes–Adams attacks.",
+    "recognition": [
+      "Constant PR interval on all conducted beats",
+      "Sudden non-conducted P waves with no preceding lengthening",
+      "Often a broad QRS, reflecting distal conduction disease",
+      "The pause containing the dropped beat is an exact multiple of the P–P interval",
+      "May occur in fixed ratios such as 2:1 or 3:1"
+    ],
+    "causes": [
+      "Anterior myocardial infarction with septal involvement — the classic and most urgent cause",
+      "Idiopathic fibrosis of the conduction system (Lenègre and Lev disease)",
+      "Cardiac surgery, particularly aortic valve surgery",
+      "Infiltrative disease: sarcoidosis, amyloidosis; myocarditis including Lyme carditis"
+    ],
+    "significance": "Far more serious than Mobitz I. It reflects structural disease of the His–Purkinje system, does not respond reliably to atropine, and can deteriorate abruptly into complete heart block with an inadequate escape rhythm. In the setting of an anterior infarct it signals a large territory of septal damage.",
+    "management": "Admit and monitor continuously. Stop atrioventricular nodal blocking drugs, correct electrolytes and ischaemia. Have transcutaneous pacing pads applied and be ready to pace; atropine may not work and can occasionally worsen distal block. Mobitz II is an indication for permanent pacing unless a clearly reversible cause is found.",
+    "waveform": {
+      "rate": 56,
+      "irregularity": 0.02,
+      "atrial": "sinus",
+      "atrialRate": 75,
+      "pAmplitude": 0.18,
+      "pDuration": 0.1,
+      "prInterval": 0.19,
+      "dropEvery": 4,
+      "qrsDuration": 0.14,
+      "qrsAmplitude": 1.2,
+      "qrsShape": "wide",
+      "qAmplitude": 0.05,
+      "sAmplitude": 0.3,
+      "stShift": -0.03,
+      "stShape": "downsloping",
+      "tAmplitude": -0.2,
+      "tShape": "inverted",
+      "qtInterval": 0.42,
+      "wander": 0.1,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 56,
+      "spo2": 96,
+      "respiratoryRate": 18,
+      "bpSystolic": 104,
+      "bpDiastolic": 66,
+      "temperature": 36.5,
+      "alarm": "warning",
+      "alarmText": "AV BLOCK — PACING PADS ON",
+      "bedside": "Two episodes of sudden dizziness this morning. External pacing pads applied; cardiology contacted."
+    },
+    "highlights": [
+      {
+        "feature": "pr",
+        "label": "Constant PR interval",
+        "note": "Identical on every conducted beat, right up to the dropped one. No warning, no lengthening — the hallmark that separates Mobitz II from Wenckebach.",
+        "abnormal": true
+      },
+      {
+        "feature": "p",
+        "label": "The dropped beat",
+        "note": "A P wave arrives on time and simply produces nothing. The pause is exactly two P–P intervals, because the atria never faltered.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "Broad QRS",
+        "note": "Widening points to disease in the bundle branches. Distal tissue conducts all-or-none, which is why failure is sudden and why the escape rhythm below it cannot be trusted.",
+        "abnormal": true
+      },
+      {
+        "feature": "rr",
+        "label": "R–R interval",
+        "note": "Regular between conducted beats, then interrupted by a pause of exactly double length — quite unlike the shortening R–R intervals of Mobitz I.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "Disease below the node",
+        "text": "The block lies in the His bundle or the bundle branches. This tissue does not conduct decrementally — it works or it does not.",
+        "duration": 1.3,
+        "highlight": "qrs"
+      },
+      {
+        "title": "No warning",
+        "text": "Every conducted beat has an identical PR interval. There is no progressive lengthening to alert you that a drop is coming.",
+        "duration": 1.3,
+        "highlight": "pr"
+      },
+      {
+        "title": "A beat vanishes",
+        "text": "A P wave arrives exactly on schedule and no QRS follows. The resulting pause is precisely two P–P intervals long.",
+        "duration": 1.3,
+        "highlight": "p"
+      },
+      {
+        "title": "Why this one is dangerous",
+        "text": "The same diseased His–Purkinje tissue would have to provide any escape rhythm. If conduction fails completely, the backup is slow, broad and unreliable — or absent.",
+        "duration": 1.5,
+        "highlight": "rr"
+      },
+      {
+        "title": "Prepare to pace",
+        "text": "Atropine acts on the atrioventricular node and often fails here. Apply pacing pads, monitor continuously, and treat this as an indication for permanent pacing.",
+        "duration": 1.4,
+        "highlight": "qrs"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Atrial rate",
+        "value": "75 per minute, regular",
+        "normal": "60–100 per minute"
+      },
+      {
+        "label": "Ventricular rate",
+        "value": "56 bpm",
+        "normal": "60–100 bpm",
+        "abnormal": true
+      },
+      {
+        "label": "PR interval",
+        "value": "0.19 s, constant",
+        "normal": "0.12–0.20 s"
+      },
+      {
+        "label": "P : QRS ratio",
+        "value": "4 : 3",
+        "normal": "1 : 1",
+        "abnormal": true
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.14 s",
+        "normal": "< 0.12 s",
+        "abnormal": true
+      }
+    ],
+    "relatedDiseases": [
+      "conduction-disorders",
+      "myocardial-infarction"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials",
+      "arrhythmia-principles"
+    ],
+    "relatedStructures": [
+      "bundle-of-his",
+      "purkinje-fibers",
+      "interventricular-septum"
+    ],
+    "references": [
+      "esc-pacing-2021",
+      "aha-ecg-part1",
+      "braunwald"
+    ]
+  },
+  {
+    "id": "complete-heart-block",
+    "name": "Complete (Third-Degree) Heart Block",
+    "abbr": "CHB",
+    "categoryId": "block",
+    "tagline": "Atria and ventricles beating independently — nothing crosses the node.",
+    "rateRange": "Ventricular escape 20–50 bpm",
+    "regularity": "Both rhythms regular, but unrelated to each other",
+    "summary": "No atrial impulse reaches the ventricles. The atria continue under sinus control while a subsidiary pacemaker below the block drives the ventricles at its own intrinsic rate. P waves and QRS complexes are each regular, but completely dissociated — the PR interval varies randomly and P waves march through and into the QRS complexes.",
+    "mechanism": "Conduction fails entirely at the atrioventricular node, the His bundle or both bundle branches. Survival then depends on a subsidiary pacemaker taking over. A junctional escape arising above the bifurcation gives a narrow QRS at 40–60 bpm and is comparatively stable. A ventricular escape from below gives a broad QRS at 20–40 bpm and is slow, unreliable and prone to sudden failure — producing Stokes–Adams syncope or asystole. Because atrial contraction now occurs at random points in the cardiac cycle, it sometimes fires against closed atrioventricular valves, producing intermittent cannon a waves in the jugular venous pulse and a variable-intensity first heart sound.",
+    "recognition": [
+      "P waves regular at the sinus rate, QRS complexes regular at a slower rate",
+      "No relationship between them — the PR interval varies randomly",
+      "March out the P waves: some fall inside QRS complexes and T waves",
+      "Ventricular rate typically 20–50 bpm",
+      "QRS width indicates the level of the escape pacemaker and the urgency",
+      "Cannon a waves and a variable first heart sound on examination"
+    ],
+    "causes": [
+      "Age-related fibrosis of the conduction system",
+      "Acute myocardial infarction — inferior infarcts affect the node and often recover; anterior infarcts imply extensive septal damage",
+      "Drugs: beta blockers, calcium channel blockers, digoxin toxicity",
+      "Infiltrative and inflammatory disease: sarcoidosis, amyloidosis, Lyme carditis, endocarditis with aortic root abscess",
+      "Iatrogenic: after aortic valve surgery or septal ablation; congenital in neonatal lupus"
+    ],
+    "significance": "A medical emergency when it produces bradycardia, hypotension, heart failure or syncope. The escape rhythm is the patient's only cardiac output and may stop without warning. The width of the QRS is the most useful bedside guide to how precarious the situation is.",
+    "management": "Continuous monitoring with pacing pads applied. Stop all rate-limiting drugs. Atropine may help nodal block but is unreliable in infranodal disease; adrenaline or isoprenaline infusions and transcutaneous pacing bridge to temporary transvenous pacing. Unless a clearly reversible cause is found, complete heart block is an indication for a permanent pacemaker.",
+    "waveform": {
+      "rate": 38,
+      "irregularity": 0.02,
+      "atrial": "dissociated",
+      "atrialRate": 88,
+      "pAmplitude": 0.17,
+      "pDuration": 0.1,
+      "prInterval": 0,
+      "qrsDuration": 0.15,
+      "qrsAmplitude": 1.25,
+      "qrsShape": "wide",
+      "qAmplitude": 0.04,
+      "sAmplitude": 0.34,
+      "stShift": -0.04,
+      "stShape": "downsloping",
+      "tAmplitude": -0.28,
+      "tShape": "inverted",
+      "qtInterval": 0.5,
+      "wander": 0.1,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 38,
+      "spo2": 94,
+      "respiratoryRate": 20,
+      "bpSystolic": 88,
+      "bpDiastolic": 52,
+      "temperature": 36.2,
+      "alarm": "critical",
+      "alarmText": "COMPLETE HEART BLOCK",
+      "bedside": "Collapsed at home, now confused and cool peripherally. Cannon a waves visible in the neck; temporary pacing wire being prepared."
+    },
+    "highlights": [
+      {
+        "feature": "p",
+        "label": "Independent P waves",
+        "note": "Regular at the sinus rate, marching straight through the trace. Some land inside QRS complexes and T waves and deform them — find them by measuring out the P–P interval.",
+        "abnormal": true
+      },
+      {
+        "feature": "pr",
+        "label": "No PR relationship",
+        "note": "The interval between each P wave and the next QRS is different every time, because the two are entirely unrelated. There is no PR interval to measure.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "Escape complexes",
+        "note": "Broad at about 0.15 s, so the escape pacemaker sits below the bifurcation of the His bundle: slow, unreliable and liable to fail.",
+        "abnormal": true
+      },
+      {
+        "feature": "rr",
+        "label": "Ventricular rate",
+        "note": "Regular but only 38 bpm. Stroke volume rises to compensate — hence the large-volume pulse — but cardiac output still falls and the patient becomes hypotensive.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "Conduction stops entirely",
+        "text": "No atrial impulse crosses to the ventricles. The atrioventricular junction is electrically silent as a conduit.",
+        "duration": 1.2,
+        "highlight": "pr"
+      },
+      {
+        "title": "The atria carry on",
+        "text": "The sinus node keeps firing at its usual rate, so regular P waves continue to appear throughout the trace, unaware that nothing is getting through.",
+        "duration": 1.3,
+        "highlight": "p"
+      },
+      {
+        "title": "An escape pacemaker takes over",
+        "text": "Subsidiary pacemaker tissue below the block depolarises at its own intrinsic rate — 40–60 bpm from the junction, 20–40 bpm from the ventricle.",
+        "duration": 1.4,
+        "highlight": "qrs"
+      },
+      {
+        "title": "Two rhythms, no relationship",
+        "text": "Both are regular; neither influences the other. Marching out the P waves shows them sliding through and into the QRS complexes — complete dissociation.",
+        "duration": 1.4,
+        "highlight": "rr"
+      },
+      {
+        "title": "A fragile output",
+        "text": "The escape rhythm is the patient's only cardiac output, and a broad escape can stop without warning. Pacing pads on, drugs stopped, and pacing arranged urgently.",
+        "duration": 1.5,
+        "highlight": "qrs"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Atrial rate",
+        "value": "88 per minute, regular",
+        "normal": "60–100 per minute"
+      },
+      {
+        "label": "Ventricular rate",
+        "value": "38 bpm, regular",
+        "normal": "60–100 bpm",
+        "abnormal": true
+      },
+      {
+        "label": "AV relationship",
+        "value": "Completely dissociated",
+        "normal": "1 : 1",
+        "abnormal": true
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.15 s",
+        "normal": "< 0.12 s",
+        "abnormal": true
+      },
+      {
+        "label": "Escape origin",
+        "value": "Infranodal (broad)",
+        "normal": "—",
+        "abnormal": true
+      }
+    ],
+    "relatedDiseases": [
+      "conduction-disorders",
+      "myocardial-infarction",
+      "infective-endocarditis"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials",
+      "arrhythmia-principles"
+    ],
+    "relatedStructures": [
+      "av-node",
+      "bundle-of-his",
+      "purkinje-fibers",
+      "sa-node"
+    ],
+    "references": [
+      "esc-pacing-2021",
+      "aha-ecg-part1",
+      "braunwald"
+    ]
+  }
+]

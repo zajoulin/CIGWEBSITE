@@ -1,0 +1,191 @@
+[
+  {
+    "id": "who-cvd",
+    "citation": "World Health Organization. Cardiovascular diseases (CVDs) — fact sheet. Updated 31 July 2025.",
+    "source": "WHO",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)",
+    "verified": true
+  },
+  {
+    "id": "umdmi-2018",
+    "citation": "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth Universal Definition of Myocardial Infarction (2018). Circulation. 2018;138(20):e618–e651.",
+    "source": "ESC / ACC / AHA / WHF",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000617",
+    "verified": true
+  },
+  {
+    "id": "esc-acs-2023",
+    "citation": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720–3826.",
+    "source": "European Society of Cardiology",
+    "url": "https://academic.oup.com/eurheartj/article/44/38/3720/7243210",
+    "verified": true
+  },
+  {
+    "id": "esc-hf-2021",
+    "citation": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599–3726.",
+    "source": "European Society of Cardiology",
+    "url": "https://academic.oup.com/eurheartj/article/42/36/3599/6358045",
+    "verified": true
+  },
+  {
+    "id": "esc-hf-2023",
+    "citation": "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627–3639.",
+    "source": "European Society of Cardiology",
+    "url": "https://academic.oup.com/eurheartj/article/44/37/3627/7246292",
+    "verified": true
+  },
+  {
+    "id": "aha-af-2023",
+    "citation": "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation. 2024;149(1):e1–e156.",
+    "source": "ACC / AHA / ACCP / HRS",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193",
+    "verified": true
+  },
+  {
+    "id": "aha-vhd-2020",
+    "citation": "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72–e227.",
+    "source": "ACC / AHA",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000923",
+    "verified": true
+  },
+  {
+    "id": "esc-vhd-2021",
+    "citation": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561–632.",
+    "source": "ESC / EACTS",
+    "url": "https://academic.oup.com/eurheartj/article/43/7/561/6358470",
+    "verified": true
+  },
+  {
+    "id": "esc-prevention-2021",
+    "citation": "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227–3337.",
+    "source": "European Society of Cardiology",
+    "url": "https://academic.oup.com/eurheartj/article/42/34/3227/6358713",
+    "verified": true
+  },
+  {
+    "id": "aha-htn-2017",
+    "citation": "Whelton PK, Carey RM, Aronow WS, et al. 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. Hypertension. 2018;71(6):e13–e115.",
+    "source": "ACC / AHA and collaborating societies",
+    "url": "https://www.ahajournals.org/doi/10.1161/hyp.0000000000000065",
+    "verified": true
+  },
+  {
+    "id": "gray",
+    "citation": "Standring S (ed). Gray's Anatomy: The Anatomical Basis of Clinical Practice. 42nd ed. Elsevier.",
+    "source": "Textbook — anatomy",
+    "url": "",
+    "verified": true
+  },
+  {
+    "id": "moore",
+    "citation": "Moore KL, Dalley AF, Agur AMR. Clinically Oriented Anatomy. 9th ed. Wolters Kluwer.",
+    "source": "Textbook — clinical anatomy",
+    "url": "",
+    "verified": true
+  },
+  {
+    "id": "guyton",
+    "citation": "Hall JE, Hall ME. Guyton and Hall Textbook of Medical Physiology. 14th ed. Elsevier.",
+    "source": "Textbook — physiology",
+    "url": "",
+    "verified": true
+  },
+  {
+    "id": "braunwald",
+    "citation": "Libby P, Bonow RO, Mann DL, Tomaselli GF, Bhatt DL, Solomon SD (eds). Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine. 12th ed. Elsevier.",
+    "source": "Textbook — cardiology",
+    "url": "",
+    "verified": true
+  },
+  {
+    "id": "esc-guidelines-hub",
+    "citation": "European Society of Cardiology. Clinical Practice Guidelines library.",
+    "source": "European Society of Cardiology",
+    "url": "https://www.escardio.org/Guidelines",
+    "verified": true
+  },
+  {
+    "id": "acc-guidelines-hub",
+    "citation": "American College of Cardiology. Clinical Guidelines and Documents.",
+    "source": "American College of Cardiology",
+    "url": "https://www.acc.org/Guidelines",
+    "verified": true
+  },
+  {
+    "id": "aha-professional",
+    "citation": "American Heart Association. Guidelines and Statements (Professional Heart Daily).",
+    "source": "American Heart Association",
+    "url": "https://professional.heart.org/en/guidelines-and-statements",
+    "verified": true
+  },
+  {
+    "id": "ncbi-bookshelf",
+    "citation": "National Center for Biotechnology Information. NCBI Bookshelf (StatPearls and other open access medical texts).",
+    "source": "NIH / NCBI",
+    "url": "https://www.ncbi.nlm.nih.gov/books/",
+    "verified": true
+  },
+  {
+    "id": "aha-ecg-part1",
+    "citation": "Kligfield P, Gettes LS, Bailey JJ, et al. Recommendations for the Standardization and Interpretation of the Electrocardiogram: Part I: The Electrocardiogram and Its Technology. Circulation. 2007;115(10):1306–1324.",
+    "source": "AHA / ACCF / HRS",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.106.180200",
+    "verified": true
+  },
+  {
+    "id": "aha-ecg-part4",
+    "citation": "Rautaharju PM, Surawicz B, Gettes LS, et al. Recommendations for the Standardization and Interpretation of the Electrocardiogram: Part IV: The ST Segment, T and U Waves, and the QT Interval. Circulation. 2009;119(10):e241–e250.",
+    "source": "AHA / ACCF / HRS",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.108.191096",
+    "verified": true
+  },
+  {
+    "id": "aha-ecg-part6",
+    "citation": "Wagner GS, Macfarlane P, Wellens H, et al. Recommendations for the Standardization and Interpretation of the Electrocardiogram: Part VI: Acute Ischemia/Infarction. Circulation. 2009;119(10):e262–e270.",
+    "source": "AHA / ACCF / HRS",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.108.191098",
+    "verified": true
+  },
+  {
+    "id": "aha-ecg-monitoring-2017",
+    "citation": "Sandau KE, Funk M, Auerbach A, et al. Update to Practice Standards for Electrocardiographic Monitoring in Hospital Settings: A Scientific Statement From the American Heart Association. Circulation. 2017;136(19):e273–e344.",
+    "source": "American Heart Association",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000527",
+    "verified": true
+  },
+  {
+    "id": "esc-pacing-2021",
+    "citation": "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427–3520.",
+    "source": "European Society of Cardiology",
+    "url": "https://academic.oup.com/eurheartj/article/42/35/3427/6358547",
+    "verified": true
+  },
+  {
+    "id": "esc-svt-2019",
+    "citation": "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655–720.",
+    "source": "European Society of Cardiology",
+    "url": "https://academic.oup.com/eurheartj/article/41/5/655/5556821",
+    "verified": true
+  },
+  {
+    "id": "esc-va-2022",
+    "citation": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997–4126.",
+    "source": "European Society of Cardiology",
+    "url": "https://academic.oup.com/eurheartj/article/43/40/3997/6675633",
+    "verified": true
+  },
+  {
+    "id": "esc-pericardial-2015",
+    "citation": "Adler Y, Charron P, Imazio M, et al. 2015 ESC Guidelines for the diagnosis and management of pericardial diseases. Eur Heart J. 2015;36(42):2921–2964.",
+    "source": "European Society of Cardiology",
+    "url": "https://academic.oup.com/eurheartj/article/36/42/2921/2293375",
+    "verified": true
+  },
+  {
+    "id": "bates",
+    "citation": "Bickley LS, Szilagyi PG, Hoffman RM, Soriano RP. Bates' Guide to Physical Examination and History Taking. 14th ed. Wolters Kluwer.",
+    "source": "Textbook — clinical examination",
+    "url": "",
+    "verified": true
+  }
+]

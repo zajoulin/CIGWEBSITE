@@ -1,0 +1,999 @@
+[
+  {
+    "id": "aortic-aneurysm",
+    "name": "Aortic Aneurysm",
+    "abbr": "AA",
+    "categoryId": "aortic",
+    "featured": false,
+    "animationId": "aortic-aneurysm",
+    "tagline": "Permanent localised dilatation of the aorta — usually silent until it ruptures, which is why screening and surveillance matter so much.",
+    "overview": "An aortic aneurysm is a permanent, localised dilatation to more than one and a half times the expected normal diameter, involving all three layers of the wall. Abdominal aneurysms, most commonly infrarenal, are far more frequent than thoracic ones and are strongly associated with smoking and atherosclerotic risk factors. Thoracic aneurysms are more often related to connective tissue disorders, bicuspid aortic valve aortopathy and inflammatory aortitis. The clinical problem is that aneurysms are usually asymptomatic until rupture, an event with very high mortality — so management depends on identifying them early through screening and intervening electively at a diameter where the risk of rupture exceeds the risk of repair.",
+    "riskFactors": {
+      "modifiable": [
+        "Smoking — by far the strongest modifiable risk factor for abdominal aneurysm",
+        "Hypertension",
+        "Dyslipidaemia and atherosclerosis",
+        "Chronic obstructive pulmonary disease"
+      ],
+      "nonModifiable": [
+        "Increasing age",
+        "Male sex, though rupture risk at a given diameter is higher in women",
+        "Family history of aortic aneurysm",
+        "Marfan, Loeys–Dietz and vascular Ehlers–Danlos syndromes",
+        "Bicuspid aortic valve",
+        "Inflammatory aortitis including giant cell and Takayasu arteritis"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Medial degeneration",
+        "text": "Elastin fragmentation, smooth muscle cell loss and proteoglycan accumulation weaken the aortic media — the common final pathway whatever the initiating cause."
+      },
+      {
+        "title": "Proteolytic activity",
+        "text": "Matrix metalloproteinases released by inflammatory cells degrade elastin and collagen faster than they can be replaced."
+      },
+      {
+        "title": "Loss of wall strength",
+        "text": "The weakened wall yields to arterial pressure and begins to dilate, initially slowly."
+      },
+      {
+        "title": "Laplace's law amplification",
+        "text": "Wall tension is proportional to pressure multiplied by radius. As the aneurysm dilates, wall tension rises, which accelerates further dilatation — an inherently self-accelerating process."
+      },
+      {
+        "title": "Mural thrombus",
+        "text": "Disturbed flow within the aneurysm sac promotes laminated thrombus formation, which may embolise distally and further impairs oxygen diffusion to the wall."
+      },
+      {
+        "title": "Rupture",
+        "text": "When wall stress exceeds tensile strength, the wall tears. Free rupture into the peritoneum is usually rapidly fatal; contained retroperitoneal rupture may allow time for emergency repair."
+      }
+    ],
+    "anatomyInvolved": [
+      "Infrarenal abdominal aorta — the commonest site",
+      "Aortic root and ascending aorta in connective tissue disease and bicuspid aortopathy",
+      "Aortic arch and descending thoracic aorta",
+      "Aortic media, the layer whose degeneration underlies the disease",
+      "Iliac arteries, frequently involved concurrently"
+    ],
+    "relatedStructures": [
+      "aorta",
+      "aortic-valve",
+      "systemic-arteries"
+    ],
+    "physiologyChanges": [
+      "Increased wall tension proportional to radius by Laplace's law",
+      "Turbulent flow and mural thrombus formation within the sac",
+      "Loss of aortic compliance in the affected segment",
+      "Aortic regurgitation when root dilatation prevents cusp coaptation",
+      "Distal embolisation of thrombus and atheromatous debris"
+    ],
+    "progression": [
+      {
+        "stage": "Small aneurysm",
+        "text": "Detected on screening or incidentally; managed by surveillance and risk factor modification."
+      },
+      {
+        "stage": "Progressive enlargement",
+        "text": "Growth accelerates with size; rapid expansion is itself an indication for intervention."
+      },
+      {
+        "stage": "Threshold for repair",
+        "text": "Elective repair is considered once diameter or growth rate crosses accepted thresholds, adjusted for sex, aetiology and body size."
+      },
+      {
+        "stage": "Symptomatic or ruptured",
+        "text": "Pain signals impending rupture; rupture carries very high mortality, with many patients dying before reaching hospital."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Asymptomatic in the great majority — the central clinical problem",
+        "New or changing back, flank or abdominal pain suggesting expansion or impending rupture",
+        "Chest or interscapular pain with thoracic aneurysms",
+        "Hoarseness from left recurrent laryngeal nerve stretch in arch aneurysms",
+        "Sudden severe pain with collapse in rupture"
+      ],
+      "signs": [
+        "Pulsatile, expansile abdominal mass — expansile rather than merely transmitted is the key distinction",
+        "Abdominal bruit",
+        "Signs of distal embolisation such as blue toes with palpable pulses",
+        "In rupture: hypotension, tachycardia, abdominal or back pain and a pulsatile mass — though the classic triad is often incomplete",
+        "Features of an underlying connective tissue disorder"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Abdominal ultrasound",
+        "findings": "The screening and surveillance test of choice — safe, inexpensive and accurate for maximum diameter."
+      },
+      {
+        "modality": "CT angiography",
+        "findings": "Defines full anatomy, neck morphology and iliac access for repair planning, and is the test in suspected rupture in a stable patient."
+      },
+      {
+        "modality": "MR angiography",
+        "findings": "Avoids ionising radiation, useful for surveillance in younger patients with connective tissue disorders."
+      },
+      {
+        "modality": "Echocardiography",
+        "findings": "Assesses the aortic root and valve, particularly in bicuspid valve aortopathy and Marfan syndrome."
+      },
+      {
+        "modality": "Genetic assessment",
+        "findings": "Testing and family screening where a heritable thoracic aortic disease is suspected."
+      }
+    ],
+    "complications": [
+      "Rupture with exsanguination",
+      "Aortic dissection",
+      "Distal embolisation causing limb or visceral ischaemia",
+      "Aortic regurgitation from root dilatation",
+      "Compression of adjacent structures",
+      "Aortoenteric or aortocaval fistula",
+      "Complications of repair including endoleak and graft infection"
+    ],
+    "treatment": {
+      "principles": "Below the intervention threshold, management is surveillance plus risk factor control — above all smoking cessation. At threshold diameter or growth rate, elective repair is offered, choosing between endovascular and open techniques based on anatomy, age and comorbidity. Educational summary only; thresholds must be taken from current guidelines.",
+      "groups": [
+        {
+          "name": "Screening and surveillance",
+          "detail": "Population ultrasound screening programmes and interval imaging with frequency determined by size."
+        },
+        {
+          "name": "Risk factor modification",
+          "detail": "Smoking cessation, blood pressure control and statin therapy."
+        },
+        {
+          "name": "Endovascular aneurysm repair",
+          "detail": "Stent graft placement, with lower perioperative mortality but a requirement for lifelong imaging surveillance."
+        },
+        {
+          "name": "Open surgical repair",
+          "detail": "Graft replacement, more durable but with higher perioperative risk; often preferred in younger, fitter patients."
+        },
+        {
+          "name": "Root and ascending aortic surgery",
+          "detail": "Composite or valve-sparing root replacement, at lower thresholds in connective tissue disorders."
+        },
+        {
+          "name": "Emergency management of rupture",
+          "detail": "Immediate vascular surgical involvement, permissive hypotension and urgent repair."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Defined as dilatation to more than one and a half times the normal diameter, involving all three wall layers.",
+      "Infrarenal abdominal aneurysm is the commonest form; smoking is the strongest modifiable risk factor.",
+      "Laplace's law explains why growth accelerates as the aneurysm enlarges.",
+      "Almost always asymptomatic until rupture, which makes screening and surveillance essential.",
+      "New pain in a known aneurysm suggests expansion or impending rupture until proven otherwise.",
+      "Elective repair is offered when rupture risk exceeds operative risk — a size- and growth-based decision."
+    ],
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "braunwald",
+      "moore"
+    ],
+    "relatedKeyPoints": [
+      "hemodynamics",
+      "cardiovascular-examination",
+      "cardiac-imaging"
+    ]
+  },
+  {
+    "id": "aortic-dissection",
+    "name": "Aortic Dissection",
+    "abbr": "AD",
+    "categoryId": "aortic",
+    "featured": false,
+    "animationId": "aortic-dissection",
+    "tagline": "An intimal tear allowing blood to split the aortic media and create a false lumen — a time-critical emergency where mortality rises with every hour of delay.",
+    "overview": "Aortic dissection begins with a tear in the intima, allowing pressurised blood to enter and split the media, creating a false lumen that propagates along the aorta. Classification determines management: Stanford type A involves the ascending aorta and is a surgical emergency; type B does not and is usually managed medically unless complicated. Mortality in untreated type A dissection rises steeply in the first hours, so the essential clinical skill is to think of the diagnosis in any patient with severe chest, back or abdominal pain, particularly when there are pulse deficits, a blood pressure difference between arms, or neurological signs. It is frequently misdiagnosed as acute coronary syndrome — an error with serious consequences if antithrombotic therapy is given.",
+    "riskFactors": {
+      "modifiable": [
+        "Hypertension — present in the large majority of cases",
+        "Cocaine and amphetamine use",
+        "Intense isometric exertion",
+        "Smoking",
+        "Iatrogenic injury during cardiac catheterisation or surgery"
+      ],
+      "nonModifiable": [
+        "Marfan, Loeys–Dietz and vascular Ehlers–Danlos syndromes",
+        "Bicuspid aortic valve and associated aortopathy",
+        "Existing aortic aneurysm",
+        "Turner syndrome and coarctation",
+        "Family history of aortic dissection",
+        "Pregnancy, particularly in the third trimester with underlying aortopathy",
+        "Inflammatory aortitis"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Medial vulnerability",
+        "text": "Cystic medial degeneration, hypertensive damage or a genetic connective tissue defect weakens the media and reduces its resistance to shear."
+      },
+      {
+        "title": "Intimal tear",
+        "text": "A tear develops, most often in the ascending aorta just above the sinotubular junction or just distal to the left subclavian artery — the two points of greatest hydrodynamic stress."
+      },
+      {
+        "title": "False lumen propagation",
+        "text": "Blood driven by systolic pressure and by the rate of pressure rise (dP/dt) enters the media and dissects along it, usually antegrade but sometimes retrograde."
+      },
+      {
+        "title": "Branch vessel compromise",
+        "text": "The dissection flap can occlude branch origins, producing malperfusion — stroke from carotid involvement, myocardial infarction from coronary involvement (classically the right coronary), paraplegia, renal failure, mesenteric ischaemia or limb ischaemia."
+      },
+      {
+        "title": "Proximal complications",
+        "text": "Retrograde extension into the root can disrupt cusp support causing acute aortic regurgitation, rupture into the pericardium causing tamponade, or occlude a coronary ostium."
+      },
+      {
+        "title": "External rupture",
+        "text": "Rupture through the adventitia into the pericardium, pleural space or mediastinum causes rapid haemodynamic collapse and is the usual mechanism of death."
+      }
+    ],
+    "anatomyInvolved": [
+      "Aortic intima and media",
+      "Ascending aorta and aortic root, including the coronary ostia and valve",
+      "Aortic arch and its branch vessels",
+      "Descending thoracic and abdominal aorta with visceral and renal branches",
+      "Pericardium, into which proximal rupture occurs"
+    ],
+    "relatedStructures": [
+      "aorta",
+      "aortic-valve",
+      "coronary-arteries",
+      "systemic-arteries"
+    ],
+    "physiologyChanges": [
+      "Creation of a false lumen with altered flow dynamics",
+      "Branch vessel malperfusion, either static or dynamic",
+      "Acute aortic regurgitation with a rapid rise in left ventricular filling pressure",
+      "Cardiac tamponade physiology with proximal rupture",
+      "Blood pressure differential between limbs from subclavian or iliac involvement"
+    ],
+    "progression": [
+      {
+        "stage": "Acute — within 14 days",
+        "text": "The period of highest mortality, particularly the first 48 hours in type A dissection."
+      },
+      {
+        "stage": "Subacute — 15 to 90 days",
+        "text": "Risk declines but complications including malperfusion and expansion continue."
+      },
+      {
+        "stage": "Chronic — beyond 90 days",
+        "text": "The dissection flap stabilises; the principal long-term risk is progressive false lumen aneurysmal dilatation."
+      },
+      {
+        "stage": "Late complications",
+        "text": "Aneurysm formation requiring reintervention, recurrent dissection and progressive aortic regurgitation."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Sudden, severe, tearing or ripping chest pain, maximal at onset — a crucial distinction from the crescendo pain of infarction",
+        "Interscapular or back pain, more typical of type B dissection",
+        "Migrating pain as the dissection propagates",
+        "Syncope, suggesting tamponade or arch vessel involvement",
+        "Focal neurological deficit, abdominal pain or limb pain from malperfusion"
+      ],
+      "signs": [
+        "Hypertension is common; hypotension suggests tamponade, rupture or severe aortic regurgitation",
+        "Blood pressure differential of more than 20 mmHg between arms, and pulse deficits",
+        "Early diastolic murmur of acute aortic regurgitation",
+        "Signs of tamponade — raised JVP, muffled heart sounds, pulsus paradoxus",
+        "Focal neurological signs, including paraplegia from spinal artery involvement",
+        "Note that classic findings are frequently absent — a normal examination does not exclude dissection"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "CT angiography",
+        "findings": "The investigation of choice in the stable patient — rapidly available, defines the intimal flap, entry tear, extent and branch involvement."
+      },
+      {
+        "modality": "Transoesophageal echocardiography",
+        "findings": "Excellent for the ascending aorta and root, and performable at the bedside in an unstable patient."
+      },
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "May show a dilated root, aortic regurgitation, pericardial effusion or a visible flap; useful but not sufficient to exclude the diagnosis."
+      },
+      {
+        "modality": "D-dimer",
+        "findings": "A very low level in a low-probability patient argues against dissection, but it must never be used alone to exclude it."
+      },
+      {
+        "modality": "ECG and chest radiograph",
+        "findings": "ECG may be normal or show inferior infarction from right coronary involvement; the radiograph may show a widened mediastinum but is normal in a substantial minority."
+      },
+      {
+        "modality": "MR angiography",
+        "findings": "Excellent detail; generally reserved for stable and chronic cases because of access and time constraints."
+      }
+    ],
+    "complications": [
+      "Cardiac tamponade and death",
+      "Acute severe aortic regurgitation",
+      "Myocardial infarction from coronary ostial involvement",
+      "Stroke and spinal cord infarction with paraplegia",
+      "Mesenteric, renal and limb ischaemia",
+      "Aortic rupture with haemothorax or haemoperitoneum",
+      "Late false lumen aneurysm formation"
+    ],
+    "treatment": {
+      "principles": "Immediate priorities are analgesia and rapid reduction of both blood pressure and the rate of pressure rise, using beta-blockade first so that heart rate is controlled before any vasodilator is added. Type A dissection requires emergency surgery. Uncomplicated type B dissection is managed medically, with endovascular intervention for complications. Educational summary only — follow current guidelines and local emergency protocols.",
+      "groups": [
+        {
+          "name": "Anti-impulse therapy",
+          "detail": "Intravenous beta-blockade to lower heart rate and dP/dt, with a vasodilator added afterwards if pressure remains high. Never give a vasodilator first — reflex tachycardia increases shear stress."
+        },
+        {
+          "name": "Analgesia",
+          "detail": "Effective opioid analgesia, which also reduces sympathetic drive and blood pressure."
+        },
+        {
+          "name": "Emergency surgery for type A",
+          "detail": "Replacement of the ascending aorta, with root replacement or valve repair and arch surgery as anatomy dictates."
+        },
+        {
+          "name": "Medical management for uncomplicated type B",
+          "detail": "Strict blood pressure and heart rate control with close imaging surveillance."
+        },
+        {
+          "name": "Endovascular repair (TEVAR)",
+          "detail": "For complicated type B dissection with malperfusion, rupture, refractory pain or rapid expansion."
+        },
+        {
+          "name": "Long-term surveillance",
+          "detail": "Lifelong blood pressure control and serial imaging for late aneurysmal degeneration, with genetic assessment and family screening where indicated."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Stanford type A involves the ascending aorta and needs emergency surgery; type B does not and is usually managed medically.",
+      "Pain is characteristically sudden and maximal at onset, unlike the crescendo pain of infarction.",
+      "Pulse deficits, an inter-arm blood pressure difference, or a new aortic regurgitant murmur should raise immediate suspicion.",
+      "Hypertension is the commonest risk factor; connective tissue disorders cause dissection in younger patients.",
+      "Give beta-blockade before any vasodilator — vasodilator-first increases shear stress through reflex tachycardia.",
+      "It is frequently misdiagnosed as acute coronary syndrome, with potentially catastrophic consequences.",
+      "A normal chest radiograph and a normal ECG do not exclude the diagnosis."
+    ],
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "braunwald",
+      "moore"
+    ],
+    "relatedKeyPoints": [
+      "cardiovascular-examination",
+      "cardiac-imaging",
+      "hemodynamics"
+    ]
+  },
+  {
+    "id": "pulmonary-embolism",
+    "name": "Pulmonary Embolism",
+    "abbr": "PE",
+    "categoryId": "thromboembolic",
+    "featured": false,
+    "animationId": "pulmonary-embolism",
+    "tagline": "Obstruction of the pulmonary arterial tree by embolised thrombus — one of the most commonly missed causes of preventable in-hospital death.",
+    "overview": "Pulmonary embolism occurs when thrombus, usually originating in the deep veins of the legs or pelvis, embolises through the right heart into the pulmonary arterial circulation. The clinical consequences depend on the size of the embolic burden and on the patient's baseline cardiopulmonary reserve: a small embolus in a healthy person may be well tolerated, while the same clot in someone with existing disease may cause collapse. Two mechanisms drive the physiology — increased pulmonary vascular resistance with right ventricular strain, and ventilation–perfusion mismatch with dead space ventilation. Diagnosis rests on structured clinical probability assessment combined with D-dimer and imaging, since the symptoms are notoriously non-specific.",
+    "riskFactors": {
+      "modifiable": [
+        "Immobility, including hospitalisation and long-distance travel",
+        "Recent surgery, particularly orthopaedic and pelvic",
+        "Oestrogen-containing contraception and hormone replacement therapy",
+        "Obesity",
+        "Smoking",
+        "Central venous catheters",
+        "Dehydration"
+      ],
+      "nonModifiable": [
+        "Active malignancy",
+        "Previous venous thromboembolism",
+        "Inherited thrombophilia such as factor V Leiden",
+        "Antiphospholipid syndrome",
+        "Pregnancy and the puerperium",
+        "Increasing age",
+        "Major trauma or fracture"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Thrombus formation",
+        "text": "Virchow's triad — venous stasis, endothelial injury and hypercoagulability — promotes thrombus formation, most often in the deep veins of the calf and thigh."
+      },
+      {
+        "title": "Embolisation",
+        "text": "Thrombus detaches and travels through the venous system, right atrium and right ventricle into the pulmonary arteries, lodging where the vessel calibre narrows."
+      },
+      {
+        "title": "Increased pulmonary vascular resistance",
+        "text": "Mechanical obstruction is compounded by hypoxic vasoconstriction and release of vasoactive mediators such as serotonin and thromboxane from activated platelets."
+      },
+      {
+        "title": "Right ventricular strain",
+        "text": "The thin-walled right ventricle is highly afterload-sensitive. Acute pressure loading causes dilatation, raised wall tension and reduced right coronary perfusion, and the ventricle can fail abruptly."
+      },
+      {
+        "title": "Ventricular interdependence",
+        "text": "The dilated right ventricle displaces the interventricular septum leftwards within the fixed pericardium, impairing left ventricular filling and reducing cardiac output."
+      },
+      {
+        "title": "Gas exchange abnormality",
+        "text": "Perfused-but-not-ventilated and ventilated-but-not-perfused regions coexist. Dead space ventilation increases, shunt and V/Q mismatch cause hypoxaemia, and tachypnoea produces a respiratory alkalosis."
+      },
+      {
+        "title": "Pulmonary infarction",
+        "text": "Because of the lung's dual blood supply, infarction is uncommon and occurs mainly with distal emboli or coexisting cardiopulmonary disease. When it occurs it causes pleuritic pain and haemoptysis."
+      },
+      {
+        "title": "Obstructive shock",
+        "text": "With massive embolism, right ventricular output collapses, left ventricular preload falls, and systemic hypotension and cardiac arrest follow — often with pulseless electrical activity."
+      }
+    ],
+    "anatomyInvolved": [
+      "Deep veins of the calf, thigh and pelvis — the usual source",
+      "Inferior vena cava and right heart chambers, the route of travel",
+      "Main, lobar, segmental and subsegmental pulmonary arteries",
+      "Right ventricle, which bears the haemodynamic consequence",
+      "Pulmonary parenchyma and pleura in infarction"
+    ],
+    "relatedStructures": [
+      "pulmonary-arteries",
+      "pulmonary-trunk",
+      "right-ventricle",
+      "systemic-veins",
+      "inferior-vena-cava"
+    ],
+    "physiologyChanges": [
+      "Acute rise in pulmonary vascular resistance and pulmonary artery pressure",
+      "Right ventricular dilatation, strain and, if severe, failure",
+      "Reduced left ventricular preload through ventricular interdependence",
+      "Increased alveolar dead space with V/Q mismatch and hypoxaemia",
+      "Respiratory alkalosis from compensatory hyperventilation",
+      "Elevated troponin and natriuretic peptides reflecting right ventricular injury and stretch"
+    ],
+    "progression": [
+      {
+        "stage": "Deep vein thrombosis",
+        "text": "Thrombus forms, often silently, in the deep veins."
+      },
+      {
+        "stage": "Embolisation",
+        "text": "Fragmentation and travel to the pulmonary circulation, which may be asymptomatic or catastrophic."
+      },
+      {
+        "stage": "Risk-stratified acute PE",
+        "text": "Categorised as low risk, intermediate risk with right ventricular dysfunction or biomarker elevation, or high risk with haemodynamic instability."
+      },
+      {
+        "stage": "Resolution or chronicity",
+        "text": "Most thrombus resolves with anticoagulation; in a small proportion it organises, causing chronic thromboembolic pulmonary hypertension."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Sudden breathlessness — the most common symptom",
+        "Pleuritic chest pain",
+        "Haemoptysis, usually with pulmonary infarction",
+        "Presyncope or syncope, which indicates a large embolic burden",
+        "Calf pain or swelling suggesting the source",
+        "Symptoms are frequently mild or absent, which is why structured risk assessment matters"
+      ],
+      "signs": [
+        "Tachypnoea and tachycardia — the most frequent signs",
+        "Hypoxaemia, sometimes with a clear chest on examination",
+        "Raised JVP, a left parasternal heave and a loud P2 with significant right heart strain",
+        "Pleural rub in pulmonary infarction",
+        "Hypotension and shock in high-risk PE",
+        "Unilateral leg swelling and tenderness"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Clinical probability assessment",
+        "findings": "Validated scores such as Wells or Geneva applied before testing; the PERC rule can exclude PE in carefully selected very low risk patients."
+      },
+      {
+        "modality": "D-dimer",
+        "findings": "High sensitivity and low specificity. A negative result in a low or intermediate probability patient excludes PE; age-adjusted thresholds improve specificity in older patients."
+      },
+      {
+        "modality": "CT pulmonary angiography",
+        "findings": "The first-line diagnostic imaging test — demonstrates filling defects and gives an RV:LV diameter ratio indicating strain."
+      },
+      {
+        "modality": "Ventilation–perfusion scanning",
+        "findings": "Preferred where contrast or radiation is a concern, notably in pregnancy and renal impairment, and the standard for chronic thromboembolic disease."
+      },
+      {
+        "modality": "Echocardiography",
+        "findings": "Bedside assessment of right ventricular size and function in the unstable patient; may show McConnell's sign and allows exclusion of alternative causes of shock."
+      },
+      {
+        "modality": "ECG and biomarkers",
+        "findings": "Sinus tachycardia is commonest; S1Q3T3, right axis deviation and anterior T-wave inversion may occur. Troponin and natriuretic peptides guide risk stratification."
+      },
+      {
+        "modality": "Lower limb ultrasound",
+        "findings": "Confirms a proximal deep vein thrombosis, which in the right clinical context is sufficient to justify treatment."
+      }
+    ],
+    "complications": [
+      "Obstructive shock and cardiac arrest",
+      "Right ventricular failure",
+      "Pulmonary infarction",
+      "Chronic thromboembolic pulmonary hypertension",
+      "Recurrent venous thromboembolism",
+      "Bleeding complications of anticoagulation and thrombolysis",
+      "Post-PE syndrome with persistent breathlessness and reduced exercise capacity"
+    ],
+    "treatment": {
+      "principles": "Anticoagulation is the foundation of treatment and should be started on clinical suspicion when the probability is high and bleeding risk permits, without waiting for confirmation. Risk stratification determines whether reperfusion therapy is needed and whether outpatient management is appropriate. Educational summary only — follow current guidelines and local protocols.",
+      "groups": [
+        {
+          "name": "Anticoagulation",
+          "detail": "Direct oral anticoagulants for most patients; low molecular weight heparin in pregnancy and selected malignancy; unfractionated heparin where rapid reversibility is needed."
+        },
+        {
+          "name": "Systemic thrombolysis",
+          "detail": "For high-risk PE with haemodynamic instability, weighing the substantial bleeding risk."
+        },
+        {
+          "name": "Catheter-directed and surgical therapy",
+          "detail": "Catheter-directed thrombolysis or thrombectomy, and surgical embolectomy where thrombolysis is contraindicated or has failed."
+        },
+        {
+          "name": "Supportive care",
+          "detail": "Oxygen, cautious fluid administration — over-filling worsens right ventricular function — vasopressors and, in extremis, extracorporeal support."
+        },
+        {
+          "name": "Duration and secondary prevention",
+          "detail": "Treatment duration determined by whether the event was provoked, with extended therapy for unprovoked or recurrent events."
+        },
+        {
+          "name": "IVC filters",
+          "detail": "Reserved for patients with a genuine contraindication to anticoagulation, with a plan for retrieval."
+        },
+        {
+          "name": "Prevention",
+          "detail": "Risk assessment and thromboprophylaxis for every hospital admission — the highest-impact intervention of all."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Symptoms are non-specific: use structured clinical probability assessment before ordering tests.",
+      "D-dimer rules out PE in low-probability patients but never rules it in.",
+      "The right ventricle is highly afterload-sensitive, which is why a sudden pressure load causes abrupt failure.",
+      "Because the lung has a dual blood supply, infarction is relatively uncommon.",
+      "Syncope or hypotension indicates a large embolic burden and high risk.",
+      "Give fluids cautiously — over-filling a strained right ventricle worsens the haemodynamics.",
+      "Thromboprophylaxis prevents far more deaths than any treatment."
+    ],
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "braunwald",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "hemodynamics",
+      "ecg-essentials",
+      "cardiac-imaging",
+      "cardiovascular-examination"
+    ]
+  },
+  {
+    "id": "deep-vein-thrombosis",
+    "name": "Deep Vein Thrombosis",
+    "abbr": "DVT",
+    "categoryId": "thromboembolic",
+    "featured": false,
+    "animationId": "deep-vein-thrombosis",
+    "tagline": "Thrombosis within the deep venous system, most often of the leg — the usual source of pulmonary embolism and a cause of long-term venous disability.",
+    "overview": "Deep vein thrombosis is the formation of thrombus within a deep vein, most commonly in the calf, with proximal extension into the popliteal, femoral and iliac veins carrying the greatest embolic risk. Together with pulmonary embolism it forms the spectrum of venous thromboembolism. Its two major consequences are embolisation to the lungs and, in the longer term, post-thrombotic syndrome from valvular damage and residual obstruction. Diagnosis combines clinical probability scoring with D-dimer and compression ultrasound, since clinical features alone are unreliable — many swollen legs are not thrombosis, and many thromboses cause no signs at all.",
+    "riskFactors": {
+      "modifiable": [
+        "Immobility, hospitalisation and prolonged travel",
+        "Recent surgery, especially orthopaedic",
+        "Oestrogen-containing contraception and hormone replacement therapy",
+        "Obesity",
+        "Smoking",
+        "Central venous catheters",
+        "Dehydration"
+      ],
+      "nonModifiable": [
+        "Active malignancy and its treatment",
+        "Previous venous thromboembolism",
+        "Inherited thrombophilia",
+        "Antiphospholipid syndrome",
+        "Pregnancy and the puerperium",
+        "Increasing age",
+        "Anatomical variants such as May–Thurner compression of the left iliac vein"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Virchow's triad",
+        "text": "Stasis, endothelial injury and hypercoagulability combine to tip the balance towards thrombosis. Most clinical situations involve at least two of the three."
+      },
+      {
+        "title": "Initiation in valve pockets",
+        "text": "Thrombi typically begin in the low-flow, relatively hypoxic pockets behind venous valves, most often in the calf veins."
+      },
+      {
+        "title": "Propagation",
+        "text": "The thrombus extends along the vein as fibrin and red cells accumulate. Proximal extension above the knee substantially increases embolic risk."
+      },
+      {
+        "title": "Inflammation and obstruction",
+        "text": "Thrombus provokes an inflammatory response in the vein wall, producing pain, warmth and tenderness, while obstruction raises distal venous pressure and causes swelling."
+      },
+      {
+        "title": "Embolisation",
+        "text": "Fragments detach and travel to the pulmonary circulation. Proximal thrombus poses far greater risk than isolated distal calf thrombus."
+      },
+      {
+        "title": "Resolution and recanalisation",
+        "text": "Fibrinolysis and organisation partly clear the thrombus over weeks to months, but valve leaflets are frequently damaged in the process."
+      },
+      {
+        "title": "Post-thrombotic syndrome",
+        "text": "Residual obstruction and valvular incompetence cause chronic ambulatory venous hypertension, producing pain, swelling, skin changes and sometimes ulceration in a substantial minority of patients."
+      }
+    ],
+    "anatomyInvolved": [
+      "Deep calf veins — posterior tibial, peroneal and soleal",
+      "Popliteal, femoral and common femoral veins",
+      "Iliac veins and inferior vena cava",
+      "Venous valves and valve pockets",
+      "Upper limb deep veins in catheter-associated thrombosis"
+    ],
+    "relatedStructures": [
+      "systemic-veins",
+      "inferior-vena-cava",
+      "pulmonary-arteries"
+    ],
+    "physiologyChanges": [
+      "Increased venous pressure distal to the obstruction",
+      "Increased capillary hydrostatic pressure with interstitial oedema",
+      "Diversion of flow through superficial collateral veins",
+      "Loss of valve competence after recanalisation",
+      "Systemic activation of coagulation with elevated D-dimer"
+    ],
+    "progression": [
+      {
+        "stage": "Distal (calf) thrombosis",
+        "text": "Often asymptomatic; many resolve spontaneously, but a proportion extend proximally."
+      },
+      {
+        "stage": "Proximal extension",
+        "text": "Involvement of the popliteal vein and above substantially increases the risk of pulmonary embolism."
+      },
+      {
+        "stage": "Embolisation",
+        "text": "Fragmentation and travel to the lungs, which may be silent or life-threatening."
+      },
+      {
+        "stage": "Post-thrombotic syndrome",
+        "text": "Chronic venous hypertension developing over months to years in a significant minority."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Unilateral leg pain, often aching and worse on standing or walking",
+        "Unilateral swelling of the calf or whole leg",
+        "Warmth and redness over the affected limb",
+        "Sometimes entirely asymptomatic, with pulmonary embolism the first presentation",
+        "Sudden severe pain with a blue, swollen leg in phlegmasia cerulea dolens — a limb-threatening emergency"
+      ],
+      "signs": [
+        "Unilateral calf or thigh swelling with a measurable circumference difference",
+        "Warmth, erythema and tenderness along the deep venous tract",
+        "Dilated superficial collateral veins",
+        "Pitting oedema confined to the affected limb",
+        "Homans' sign is unreliable and should not be used to make or exclude the diagnosis"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Clinical probability score",
+        "findings": "The Wells score for DVT stratifies patients before testing and determines the diagnostic pathway."
+      },
+      {
+        "modality": "D-dimer",
+        "findings": "A negative result in a low-probability patient safely excludes DVT; it is non-specific and raised in many conditions."
+      },
+      {
+        "modality": "Compression duplex ultrasound",
+        "findings": "The definitive test — non-compressibility of the vein under probe pressure is the diagnostic criterion. Repeat scanning at one week is used where initial imaging is negative but probability is high."
+      },
+      {
+        "modality": "CT or MR venography",
+        "findings": "For suspected iliac or caval thrombosis not adequately assessed by ultrasound."
+      },
+      {
+        "modality": "Thrombophilia and malignancy assessment",
+        "findings": "Selective testing in unprovoked events, young patients or those with a strong family history; age-appropriate cancer screening in unprovoked thrombosis."
+      }
+    ],
+    "complications": [
+      "Pulmonary embolism",
+      "Post-thrombotic syndrome with chronic pain, swelling and ulceration",
+      "Recurrent venous thromboembolism",
+      "Phlegmasia cerulea dolens and venous gangrene",
+      "Bleeding from anticoagulation",
+      "Chronic thromboembolic pulmonary hypertension"
+    ],
+    "treatment": {
+      "principles": "Anticoagulation prevents extension and embolisation and reduces recurrence. Duration depends on whether the event was provoked by a transient risk factor, and on bleeding risk. Compression therapy addresses symptoms. Educational summary only.",
+      "groups": [
+        {
+          "name": "Anticoagulation",
+          "detail": "Direct oral anticoagulants for most patients; low molecular weight heparin in pregnancy and some cancer-associated thrombosis."
+        },
+        {
+          "name": "Duration of therapy",
+          "detail": "Typically three months for a provoked event, with extended or indefinite therapy considered for unprovoked or recurrent thrombosis."
+        },
+        {
+          "name": "Compression therapy",
+          "detail": "Graduated compression stockings for symptom relief and management of post-thrombotic syndrome."
+        },
+        {
+          "name": "Catheter-directed thrombolysis",
+          "detail": "Considered in extensive iliofemoral thrombosis in selected younger patients, and in limb-threatening phlegmasia."
+        },
+        {
+          "name": "IVC filter",
+          "detail": "Only where anticoagulation is genuinely contraindicated, with a retrieval plan."
+        },
+        {
+          "name": "Prevention",
+          "detail": "Risk assessment and thromboprophylaxis on hospital admission, early mobilisation and mechanical prophylaxis where anticoagulation is unsuitable."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Virchow's triad — stasis, endothelial injury and hypercoagulability — explains nearly every risk factor.",
+      "Thrombi usually start in calf vein valve pockets; proximal extension is what raises embolic risk.",
+      "Diagnosis requires a probability score plus D-dimer and compression ultrasound — clinical signs alone are unreliable.",
+      "Non-compressibility on ultrasound is the diagnostic criterion.",
+      "Homans' sign is neither sensitive nor specific and should not be relied upon.",
+      "Post-thrombotic syndrome affects a substantial minority and is a major cause of long-term disability.",
+      "Consider whether the event was provoked — it determines how long to anticoagulate."
+    ],
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "ncbi-bookshelf",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "hemodynamics",
+      "cardiovascular-examination"
+    ]
+  },
+  {
+    "id": "pulmonary-hypertension",
+    "name": "Pulmonary Hypertension",
+    "abbr": "PH",
+    "categoryId": "thromboembolic",
+    "featured": false,
+    "animationId": "pulmonary-hypertension",
+    "tagline": "Elevated pulmonary artery pressure from a range of causes, imposing an afterload on the right ventricle that ultimately determines survival.",
+    "overview": "Pulmonary hypertension is defined haemodynamically by an elevated mean pulmonary artery pressure measured at right heart catheterisation. It is not a single disease but a haemodynamic state produced by five distinct groups of causes: pulmonary arterial hypertension (group 1); pulmonary hypertension due to left heart disease (group 2, by far the commonest); due to lung disease and hypoxia (group 3); chronic thromboembolic pulmonary hypertension (group 4, the only potentially curable form); and pulmonary hypertension with unclear or multifactorial mechanisms (group 5). Distinguishing pre-capillary from post-capillary disease is fundamental, because pulmonary vasodilators that help group 1 can be harmful in group 2. Whatever the cause, right ventricular function is the principal determinant of outcome.",
+    "riskFactors": {
+      "modifiable": [
+        "Left heart disease — valvular disease and heart failure",
+        "Chronic obstructive pulmonary disease and interstitial lung disease",
+        "Obstructive sleep apnoea and obesity hypoventilation",
+        "Untreated venous thromboembolism",
+        "Anorexigen and some stimulant drug exposure",
+        "Schistosomiasis and HIV infection in endemic settings"
+      ],
+      "nonModifiable": [
+        "BMPR2 and other genetic mutations in heritable pulmonary arterial hypertension",
+        "Connective tissue disease, especially systemic sclerosis",
+        "Congenital heart disease with systemic-to-pulmonary shunts",
+        "Portal hypertension",
+        "Female sex for group 1 disease",
+        "Sickle cell disease and chronic haemolytic anaemia"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Initiating insult",
+        "text": "Depending on group: pulmonary arterial endothelial injury, sustained backward transmission of raised left atrial pressure, chronic alveolar hypoxia, or unresolved thromboembolic obstruction."
+      },
+      {
+        "title": "Vasoconstriction",
+        "text": "Reduced nitric oxide and prostacyclin with increased endothelin-1 produce sustained vasoconstriction — the three pathways targeted by modern group 1 therapies."
+      },
+      {
+        "title": "Vascular remodelling",
+        "text": "Intimal proliferation, medial hypertrophy and adventitial fibrosis progressively narrow small pulmonary arteries, and plexiform lesions develop in advanced group 1 disease."
+      },
+      {
+        "title": "In situ thrombosis",
+        "text": "Endothelial dysfunction and sluggish flow promote thrombosis within small vessels, further increasing resistance."
+      },
+      {
+        "title": "Rising pulmonary vascular resistance",
+        "text": "Because the pulmonary bed normally has enormous recruitment reserve, pressure rises appreciably only once a substantial proportion of the vasculature is lost — which is why presentation is late."
+      },
+      {
+        "title": "Right ventricular adaptation",
+        "text": "The right ventricle hypertrophies to meet the load. This adaptive phase can be maintained for years and is associated with relatively preserved function."
+      },
+      {
+        "title": "Right ventricular decompensation",
+        "text": "Eventually the ventricle dilates, becomes more spherical, and its rising wall tension reduces right coronary perfusion. Functional tricuspid regurgitation develops, further volume-loading a failing chamber."
+      },
+      {
+        "title": "Ventricular interdependence and low output",
+        "text": "The dilated right ventricle shifts the septum leftwards, impairing left ventricular filling. Cardiac output falls, producing exertional syncope and, ultimately, right heart failure and death."
+      }
+    ],
+    "anatomyInvolved": [
+      "Small pulmonary arteries and arterioles, the site of remodelling",
+      "Pulmonary trunk and main pulmonary arteries, which dilate",
+      "Right ventricle, which hypertrophies then fails",
+      "Tricuspid valve, becoming functionally regurgitant",
+      "Left heart and pulmonary veins in post-capillary disease"
+    ],
+    "relatedStructures": [
+      "pulmonary-arteries",
+      "pulmonary-trunk",
+      "right-ventricle",
+      "tricuspid-valve",
+      "left-atrium"
+    ],
+    "physiologyChanges": [
+      "Elevated mean pulmonary artery pressure and pulmonary vascular resistance",
+      "Loss of the normal recruitment and distension reserve of the pulmonary bed",
+      "Right ventricular hypertrophy followed by dilatation and failure",
+      "Reduced right coronary perfusion as right ventricular wall tension rises",
+      "Impaired left ventricular filling through ventricular interdependence",
+      "Fixed cardiac output that cannot rise with exertion, causing exertional syncope"
+    ],
+    "progression": [
+      {
+        "stage": "Preclinical",
+        "text": "Vascular remodelling in progress with normal resting haemodynamics; may be detectable only on exercise."
+      },
+      {
+        "stage": "Symptomatic compensated",
+        "text": "Exertional breathlessness and fatigue with a hypertrophied but still adapted right ventricle."
+      },
+      {
+        "stage": "Decompensating",
+        "text": "Right ventricular dilatation, tricuspid regurgitation, syncope and rising natriuretic peptides."
+      },
+      {
+        "stage": "Right heart failure",
+        "text": "Systemic congestion, ascites, renal and hepatic dysfunction, and a fixed low cardiac output."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Progressive exertional breathlessness — usually the first and most persistent symptom",
+        "Fatigue and reduced exercise capacity",
+        "Exertional chest pain from right ventricular ischaemia",
+        "Exertional presyncope and syncope, an ominous sign of fixed output",
+        "Ankle swelling and abdominal distension in right heart failure",
+        "Symptoms are non-specific, which is why diagnosis is typically delayed by years"
+      ],
+      "signs": [
+        "Loud pulmonary component of the second heart sound, sometimes palpable",
+        "Left parasternal heave from right ventricular hypertrophy",
+        "Raised JVP with a prominent a wave, and giant v waves once tricuspid regurgitation develops",
+        "Pansystolic murmur of tricuspid regurgitation increasing on inspiration",
+        "Right ventricular third or fourth heart sound",
+        "Hepatomegaly, ascites and peripheral oedema",
+        "Features of an underlying cause such as systemic sclerosis or chronic lung disease"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "The principal screening test — estimated pulmonary artery systolic pressure from tricuspid regurgitant velocity, right ventricular size and function, septal flattening and IVC assessment."
+      },
+      {
+        "modality": "Right heart catheterisation",
+        "findings": "Mandatory for definitive diagnosis and classification. Wedge pressure separates pre-capillary from post-capillary disease, and vasoreactivity testing guides therapy in group 1."
+      },
+      {
+        "modality": "Ventilation–perfusion scanning",
+        "findings": "Essential to exclude chronic thromboembolic disease — the potentially curable group. It is more sensitive than CT for this purpose."
+      },
+      {
+        "modality": "Pulmonary function tests and CT chest",
+        "findings": "Identify lung disease as a cause and characterise parenchymal and vascular abnormalities."
+      },
+      {
+        "modality": "ECG",
+        "findings": "Right axis deviation, right ventricular hypertrophy with strain, P pulmonale and right bundle branch block."
+      },
+      {
+        "modality": "Blood tests",
+        "findings": "Natriuretic peptides for risk stratification, connective tissue disease serology, HIV testing and liver function."
+      },
+      {
+        "modality": "Six-minute walk test and cardiopulmonary exercise testing",
+        "findings": "Objective functional capacity used for risk stratification and treatment monitoring."
+      }
+    ],
+    "complications": [
+      "Progressive right ventricular failure — the usual cause of death",
+      "Arrhythmia, particularly atrial flutter and fibrillation, which are poorly tolerated",
+      "Syncope and sudden death",
+      "Haemoptysis from dilated bronchial vessels",
+      "Hepatic congestion and cardiorenal syndrome",
+      "Left main coronary compression by a dilated pulmonary trunk",
+      "High-risk pregnancy, which is generally contraindicated in significant pulmonary hypertension"
+    ],
+    "treatment": {
+      "principles": "Correct classification is the first and most important step, because treatment differs fundamentally between groups. Group 1 disease is treated with targeted pulmonary vasodilators, increasingly as upfront combination therapy. Group 2 is treated by managing the left heart disease — pulmonary vasodilators can be harmful. Group 3 is treated by optimising lung disease and oxygenation. Group 4 should always be assessed for pulmonary endarterectomy, which can be curative. Educational summary only — care should be delivered through specialist centres.",
+      "groups": [
+        {
+          "name": "Targeted therapy for group 1",
+          "detail": "Endothelin receptor antagonists, phosphodiesterase-5 inhibitors and guanylate cyclase stimulators, and prostacyclin pathway agents, guided by risk assessment."
+        },
+        {
+          "name": "Treating left heart disease",
+          "detail": "In group 2, decongestion and management of the underlying valve or myocardial disease; targeted vasodilators are not indicated."
+        },
+        {
+          "name": "Optimising lung disease",
+          "detail": "In group 3, long-term oxygen therapy, treatment of the underlying disease and pulmonary rehabilitation."
+        },
+        {
+          "name": "Pulmonary endarterectomy",
+          "detail": "For chronic thromboembolic pulmonary hypertension — potentially curative, with balloon pulmonary angioplasty and riociguat for inoperable disease."
+        },
+        {
+          "name": "Supportive therapy",
+          "detail": "Diuretics for right heart failure, oxygen for hypoxaemia, anticoagulation in selected groups, and iron repletion."
+        },
+        {
+          "name": "Advanced options",
+          "detail": "Atrial septostomy and lung or heart–lung transplantation in refractory disease."
+        },
+        {
+          "name": "Counselling",
+          "detail": "Pregnancy avoidance and contraception advice, vaccination, and supervised exercise training."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Pulmonary hypertension is a haemodynamic state with five aetiological groups, not a single disease.",
+      "Group 2, due to left heart disease, is by far the commonest.",
+      "Distinguishing pre-capillary from post-capillary disease requires a wedge pressure at catheterisation.",
+      "Group 4 chronic thromboembolic disease is the only potentially curable form — always perform a V/Q scan.",
+      "Pulmonary vasodilators can be harmful in group 2 disease.",
+      "Right ventricular function is the principal determinant of survival.",
+      "Symptoms are non-specific and diagnosis is typically delayed by years."
+    ],
+    "references": [
+      "esc-guidelines-hub",
+      "braunwald",
+      "guyton",
+      "aha-professional"
+    ],
+    "relatedKeyPoints": [
+      "hemodynamics",
+      "cardiovascular-examination",
+      "cardiac-imaging",
+      "heart-failure-principles"
+    ]
+  }
+]

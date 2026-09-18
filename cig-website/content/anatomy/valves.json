@@ -1,0 +1,423 @@
+[
+  {
+    "id": "tricuspid-valve",
+    "name": "Tricuspid Valve",
+    "abbr": "TV",
+    "latin": "Valva atrioventricularis dextra",
+    "category": "valves",
+    "meshName": "heart.tricuspid_valve",
+    "color": "#a8dbe8",
+    "summary": "The right atrioventricular valve. Its three leaflets, chordae tendineae and papillary muscles prevent regurgitation into the right atrium during ventricular systole.",
+    "synonyms": ["TV", "right atrioventricular valve", "tricuspid apparatus"],
+    "anatomy": {
+      "location": "At the right atrioventricular junction, set slightly more apically than the mitral valve — an offset that identifies the morphological right ventricle and is exaggerated in Ebstein's anomaly.",
+      "shape": "Three leaflets — anterior (usually largest), posterior and septal — attached to a saddle-shaped, non-planar annulus. The largest of the four valve orifices.",
+      "relations": [
+        "Superiorly: the right atrium",
+        "Inferiorly: the right ventricular cavity and its papillary muscles",
+        "Medially: the membranous interventricular septum and, immediately adjacent, the AV node and bundle of His",
+        "The triangle of Koch, bounded by the septal leaflet, the tendon of Todaro and the coronary sinus ostium, contains the AV node"
+      ],
+      "attachments": [
+        "Tricuspid annulus, part of the fibrous skeleton",
+        "Chordae tendineae from anterior, posterior and septal papillary muscles",
+        "Septal leaflet chordae attaching directly to the interventricular septum"
+      ],
+      "bloodSupply": "Right coronary artery; the valve leaflets themselves are largely avascular and nourished by diffusion.",
+      "venousDrainage": "Small cardiac vein territory, draining to the coronary sinus.",
+      "innervation": "Cardiac plexus fibres reach the annulus and subvalvular apparatus; leaflet tissue is minimally innervated.",
+      "function": "Opens passively in diastole when right atrial pressure exceeds right ventricular pressure, and closes at the onset of systole when that gradient reverses."
+    },
+    "physiology": {
+      "function": "Enforces unidirectional flow from right atrium to right ventricle. Competent closure depends on the whole apparatus — annulus, leaflets, chordae, papillary muscles and the ventricular wall that anchors them.",
+      "pressures": [
+        { "label": "Opening", "value": "when RA pressure exceeds RV pressure in early diastole" },
+        { "label": "Closure", "value": "at the onset of right ventricular systole" },
+        { "label": "Normal diastolic gradient", "value": "minimal — under about 2 mmHg" },
+        { "label": "Orifice area", "value": "approximately 4–6 cm², the largest cardiac valve" }
+      ],
+      "electrical": "Not electrically active itself, but the AV node and penetrating bundle lie immediately adjacent to the septal leaflet, which is why tricuspid annular surgery and ablation risk heart block.",
+      "hemodynamics": [
+        "Contributes to the first heart sound, closing marginally after the mitral valve",
+        "Tricuspid regurgitant velocity is used to estimate pulmonary artery systolic pressure by echocardiography",
+        "Right-sided murmurs characteristically increase with inspiration — Carvallo's sign",
+        "Annular dilatation from right ventricular enlargement is the commonest cause of tricuspid regurgitation"
+      ],
+      "concepts": ["Atrioventricular pressure gradients", "Carvallo's sign", "Estimation of pulmonary artery pressure"]
+    },
+    "pathology": [
+      {
+        "name": "Tricuspid regurgitation",
+        "note": "Most often secondary (functional), caused by annular dilatation and right ventricular remodelling rather than primary leaflet disease.",
+        "diseaseId": "tricuspid-regurgitation"
+      },
+      {
+        "name": "Infective endocarditis",
+        "note": "The right-sided valve most often involved, particularly in injection drug use and with intracardiac devices.",
+        "diseaseId": "infective-endocarditis"
+      },
+      {
+        "name": "Ebstein's anomaly",
+        "note": "Congenital apical displacement of the septal and posterior leaflets, atrialising part of the right ventricle.",
+        "diseaseId": "congenital-heart-disease"
+      },
+      {
+        "name": "Rheumatic tricuspid disease",
+        "note": "Uncommon in isolation; usually accompanies rheumatic mitral disease.",
+        "diseaseId": "rheumatic-heart-disease"
+      }
+    ],
+    "clinical": {
+      "relevance": "Long regarded as the 'forgotten valve', tricuspid regurgitation is now recognised as an independent predictor of poor outcome, and transcatheter repair and replacement are a rapidly developing field.",
+      "conditions": ["Functional tricuspid regurgitation", "Right-sided infective endocarditis", "Ebstein's anomaly", "Carcinoid heart disease"],
+      "examination": [
+        "Pansystolic murmur at the lower left sternal edge increasing on inspiration",
+        "Giant v waves in the jugular venous pulse",
+        "Pulsatile, tender hepatomegaly",
+        "Peripheral oedema and ascites in severe chronic regurgitation"
+      ],
+      "imaging": [
+        "Transthoracic echocardiography for leaflet morphology, annular diameter and regurgitation severity",
+        "Three-dimensional echocardiography for the non-planar annulus",
+        "Cardiac MRI for right ventricular volumes and regurgitant fraction"
+      ],
+      "procedures": [
+        "Surgical annuloplasty, commonly performed at the time of left-sided valve surgery",
+        "Transcatheter edge-to-edge repair and transcatheter tricuspid valve replacement",
+        "Careful lead management, since pacing leads crossing the valve can cause regurgitation"
+      ]
+    },
+    "keyPoints": [
+      "Three leaflets — anterior, posterior and septal — and the largest valve orifice in the heart.",
+      "Sits slightly more apically than the mitral valve; this offset defines the morphological right ventricle.",
+      "The AV node lies in the triangle of Koch adjacent to the septal leaflet — a surgical and ablation hazard.",
+      "Most tricuspid regurgitation is functional, driven by annular dilatation.",
+      "Right-sided murmurs increase on inspiration (Carvallo's sign)."
+    ],
+    "references": ["gray", "moore", "braunwald", "aha-vhd-2020"],
+    "related": {
+      "structures": ["right-atrium", "right-ventricle", "av-node", "coronary-veins"],
+      "diseases": ["tricuspid-regurgitation", "infective-endocarditis", "heart-failure"],
+      "keyPoints": ["heart-sounds", "valvular-disease", "cardiovascular-examination"]
+    }
+  },
+  {
+    "id": "mitral-valve",
+    "name": "Mitral Valve",
+    "abbr": "MV",
+    "latin": "Valva atrioventricularis sinistra",
+    "category": "valves",
+    "meshName": "heart.mitral_valve",
+    "color": "#8fd0e0",
+    "summary": "The left atrioventricular valve. Two leaflets, a saddle-shaped annulus, chordae tendineae and two papillary muscles keep flow moving from left atrium to left ventricle only.",
+    "synonyms": ["MV", "bicuspid valve", "left atrioventricular valve", "mitral apparatus", "anterior mitral leaflet"],
+    "anatomy": {
+      "location": "At the left atrioventricular junction, positioned slightly more basally than the tricuspid valve.",
+      "shape": "Two leaflets: a large, deep anterior (aortic) leaflet occupying about one third of the annular circumference, and a shallower posterior (mural) leaflet divided into three scallops conventionally labelled P1, P2 and P3, with corresponding anterior segments A1–A3. The annulus is saddle-shaped rather than planar.",
+      "relations": [
+        "Superiorly: the left atrium",
+        "Inferiorly: the left ventricular cavity and its papillary muscles",
+        "Anteriorly: fibrous continuity with the non-coronary and left coronary cusps of the aortic valve — the aortomitral curtain",
+        "The left circumflex artery and coronary sinus run close to the posterior annulus"
+      ],
+      "attachments": [
+        "Mitral annulus, a component of the cardiac fibrous skeleton",
+        "Chordae tendineae from the anterolateral and posteromedial papillary muscles — each papillary muscle sends chordae to both leaflets",
+        "Aortomitral fibrous continuity anteriorly"
+      ],
+      "bloodSupply": "Anterolateral papillary muscle has dual supply from the left anterior descending and left circumflex arteries; the posteromedial papillary muscle usually has a single supply from the posterior descending artery, making it far more vulnerable to ischaemic rupture.",
+      "venousDrainage": "Great cardiac vein and coronary sinus territory.",
+      "innervation": "Cardiac plexus fibres to the annulus and subvalvular apparatus.",
+      "function": "Opens when left atrial pressure exceeds left ventricular pressure and closes at the onset of ventricular systole; leaflet coaptation depends on coordinated function of every component of the apparatus."
+    },
+    "physiology": {
+      "function": "Permits low-resistance ventricular filling in diastole and seals the left ventricle during systole so that the full stroke volume is directed to the aorta.",
+      "pressures": [
+        { "label": "Opening", "value": "when LA pressure exceeds LV pressure in early diastole" },
+        { "label": "Closure", "value": "at the onset of left ventricular systole, generating the first heart sound" },
+        { "label": "Normal orifice area", "value": "approximately 4–6 cm²" },
+        { "label": "Severe stenosis", "value": "orifice area of about 1.5 cm² or less" }
+      ],
+      "electrical": "Not electrically active. Mitral annular disjunction and mitral valve prolapse have been associated with ventricular arrhythmia in a minority of patients.",
+      "hemodynamics": [
+        "Mitral closure produces the dominant component of the first heart sound",
+        "In stenosis, the transmitral gradient rises steeply with heart rate because diastolic filling time shortens",
+        "In regurgitation, part of the stroke volume is ejected backwards into the left atrium, so total stroke volume rises while forward output falls",
+        "Systolic anterior motion of the anterior leaflet contributes to outflow obstruction in hypertrophic cardiomyopathy"
+      ],
+      "concepts": ["Transmitral gradient", "Regurgitant fraction", "Effective regurgitant orifice area", "Pressure half-time"]
+    },
+    "pathology": [
+      {
+        "name": "Mitral regurgitation",
+        "note": "Primary (degenerative, prolapse, chordal rupture) or secondary (annular dilatation and leaflet tethering from ventricular remodelling).",
+        "diseaseId": "mitral-regurgitation"
+      },
+      {
+        "name": "Mitral stenosis",
+        "note": "Overwhelmingly rheumatic in origin worldwide, with commissural fusion and leaflet thickening.",
+        "diseaseId": "mitral-stenosis"
+      },
+      {
+        "name": "Mitral valve prolapse",
+        "note": "Myxomatous leaflet degeneration with billowing into the left atrium; the commonest cause of primary mitral regurgitation in high-income settings.",
+        "diseaseId": "mitral-regurgitation"
+      },
+      {
+        "name": "Papillary muscle rupture",
+        "note": "A mechanical complication of myocardial infarction producing acute, severe mitral regurgitation and cardiogenic shock.",
+        "diseaseId": "myocardial-infarction"
+      },
+      {
+        "name": "Infective endocarditis",
+        "note": "Vegetations may cause leaflet perforation or chordal rupture with acute regurgitation.",
+        "diseaseId": "infective-endocarditis"
+      }
+    ],
+    "clinical": {
+      "relevance": "The mitral valve is the most common target of structural heart intervention after the aortic valve, and its assessment — leaflet segment, mechanism and severity — directly determines whether repair, replacement or transcatheter therapy is appropriate.",
+      "conditions": ["Degenerative mitral regurgitation", "Rheumatic mitral stenosis", "Secondary (functional) mitral regurgitation", "Infective endocarditis"],
+      "examination": [
+        "Pansystolic murmur at the apex radiating to the axilla in regurgitation",
+        "Mid-diastolic rumble with an opening snap and loud first heart sound in stenosis",
+        "Mid-systolic click with a late systolic murmur in prolapse",
+        "Malar flush and atrial fibrillation in longstanding rheumatic stenosis"
+      ],
+      "imaging": [
+        "Transthoracic echocardiography for mechanism and severity",
+        "Transoesophageal and three-dimensional echocardiography for segmental analysis and procedural guidance",
+        "Cardiac MRI for regurgitant volume and ventricular remodelling",
+        "Exercise echocardiography where symptoms and resting findings disagree"
+      ],
+      "procedures": [
+        "Surgical mitral repair — the preferred option in suitable degenerative disease",
+        "Mitral valve replacement with mechanical or bioprosthetic valves",
+        "Transcatheter edge-to-edge repair",
+        "Percutaneous mitral balloon commissurotomy for suitable rheumatic stenosis"
+      ]
+    },
+    "keyPoints": [
+      "Two leaflets: a deep anterior leaflet in fibrous continuity with the aortic valve, and a three-scalloped posterior leaflet.",
+      "Each papillary muscle supplies chordae to both leaflets, so a single papillary rupture affects the whole valve.",
+      "The posteromedial papillary muscle has a single coronary supply and is the one that ruptures after infarction.",
+      "Mitral closure produces the first heart sound.",
+      "Severe stenosis is generally defined by a valve area of about 1.5 cm² or less."
+    ],
+    "references": ["gray", "moore", "braunwald", "aha-vhd-2020", "esc-vhd-2021"],
+    "related": {
+      "structures": ["left-atrium", "left-ventricle", "aortic-valve", "coronary-arteries"],
+      "diseases": ["mitral-regurgitation", "mitral-stenosis", "infective-endocarditis", "myocardial-infarction", "atrial-fibrillation"],
+      "keyPoints": ["heart-sounds", "valvular-disease", "cardiac-cycle"]
+    }
+  },
+  {
+    "id": "pulmonary-valve",
+    "name": "Pulmonary Valve",
+    "abbr": "PV",
+    "latin": "Valva trunci pulmonalis",
+    "category": "valves",
+    "meshName": "heart.pulmonary_valve",
+    "color": "#7cc3d8",
+    "summary": "A three-cusped semilunar valve between the right ventricular outflow tract and the pulmonary trunk, preventing regurgitation back into the right ventricle during diastole.",
+    "synonyms": ["PV", "pulmonic valve", "pulmonary semilunar valve"],
+    "anatomy": {
+      "location": "The most superior and anterior of the cardiac valves, at the summit of the right ventricular infundibulum. Auscultated in the second left intercostal space at the sternal edge.",
+      "shape": "Three semilunar cusps — anterior, right and left — each with a lunule and a central nodule (nodule of Arantius). Behind each cusp the pulmonary trunk is slightly dilated, forming a sinus.",
+      "relations": [
+        "Superiorly: the pulmonary trunk and its bifurcation",
+        "Posteriorly and to the right: the aortic root",
+        "Inferiorly: the right ventricular infundibulum",
+        "Separated from the tricuspid valve by the supraventricular crest, so there is no fibrous continuity between them"
+      ],
+      "attachments": [
+        "Semilunar attachment to the wall of the right ventricular outflow tract and pulmonary trunk in a crown-like configuration",
+        "No chordae tendineae or papillary muscles"
+      ],
+      "bloodSupply": "Small branches from the right coronary artery and the vasa vasorum of the pulmonary trunk; the cusps are essentially avascular.",
+      "venousDrainage": "Anterior cardiac veins and Thebesian veins of the right ventricular outflow tract.",
+      "innervation": "Cardiac plexus fibres reach the surrounding vessel wall rather than the cusps themselves.",
+      "function": "Opens when right ventricular pressure exceeds pulmonary arterial pressure, and closes when that gradient reverses at the end of systole."
+    },
+    "physiology": {
+      "function": "Maintains forward flow into the pulmonary circulation and prevents diastolic backflow into the right ventricle. Closure produces the pulmonary component of the second heart sound.",
+      "pressures": [
+        { "label": "Opening", "value": "RV pressure above pulmonary artery pressure — roughly 10–15 mmHg" },
+        { "label": "Closure", "value": "at end-systole, generating P2" },
+        { "label": "Normal peak gradient", "value": "under about 10 mmHg" },
+        { "label": "Pulmonary artery diastolic pressure", "value": "approximately 8–15 mmHg" }
+      ],
+      "electrical": "Not electrically active, though the right ventricular outflow tract is a common origin of idiopathic ventricular tachycardia and ectopy.",
+      "hemodynamics": [
+        "Pulmonary valve closure (P2) normally follows aortic closure (A2), and the interval widens on inspiration to produce physiological splitting of the second heart sound",
+        "Because right ventricular ejection is longer during inspiration, splitting is inspiratory",
+        "Chronic pulmonary regurgitation causes right ventricular volume overload — the dominant late problem after tetralogy of Fallot repair"
+      ],
+      "concepts": ["Physiological splitting of S2", "Right ventricular outflow obstruction", "Pulmonary regurgitation"]
+    },
+    "pathology": [
+      {
+        "name": "Pulmonary stenosis",
+        "note": "Usually congenital; produces right ventricular pressure overload and hypertrophy.",
+        "diseaseId": "congenital-heart-disease"
+      },
+      {
+        "name": "Pulmonary regurgitation",
+        "note": "Commonly a long-term consequence of surgical repair of tetralogy of Fallot or balloon valvuloplasty; causes progressive right ventricular dilatation.",
+        "diseaseId": "congenital-heart-disease"
+      },
+      {
+        "name": "Carcinoid heart disease",
+        "note": "Fibrous plaque deposition on right-sided valves causing mixed stenosis and regurgitation."
+      },
+      {
+        "name": "Infective endocarditis",
+        "note": "Uncommon at this valve, but occurs with congenital lesions and indwelling devices.",
+        "diseaseId": "infective-endocarditis"
+      }
+    ],
+    "clinical": {
+      "relevance": "Pulmonary valve disease is largely the territory of congenital and adult congenital cardiology, and transcatheter pulmonary valve implantation has substantially changed the management of the post-repair right ventricle.",
+      "conditions": ["Congenital pulmonary stenosis", "Pulmonary regurgitation after tetralogy of Fallot repair", "Carcinoid heart disease"],
+      "examination": [
+        "Ejection systolic murmur in the second left intercostal space, louder on inspiration",
+        "Widely split second heart sound with a soft P2 in severe stenosis",
+        "Early diastolic Graham Steell murmur in pulmonary regurgitation with pulmonary hypertension",
+        "Right ventricular heave when the ventricle is pressure- or volume-loaded"
+      ],
+      "imaging": [
+        "Echocardiography for cusp morphology, peak gradient and regurgitation",
+        "Cardiac MRI for pulmonary regurgitant fraction and right ventricular volumes — the key data for timing intervention",
+        "CT for conduit anatomy and coronary proximity before transcatheter valve implantation"
+      ],
+      "procedures": [
+        "Balloon pulmonary valvuloplasty for congenital stenosis",
+        "Surgical valve repair or replacement",
+        "Transcatheter pulmonary valve implantation",
+        "Right ventricular outflow tract ablation for arrhythmia arising nearby"
+      ]
+    },
+    "keyPoints": [
+      "Three semilunar cusps; no chordae or papillary muscles.",
+      "The most superior and anterior cardiac valve, auscultated in the second left intercostal space.",
+      "Closure generates P2 — physiological splitting of S2 widens on inspiration.",
+      "Pulmonary stenosis is usually congenital rather than acquired.",
+      "Late pulmonary regurgitation after tetralogy of Fallot repair is a major cause of right ventricular dilatation."
+    ],
+    "references": ["gray", "moore", "braunwald", "esc-vhd-2021"],
+    "related": {
+      "structures": ["right-ventricle", "pulmonary-trunk", "pulmonary-arteries", "aortic-valve"],
+      "diseases": ["congenital-heart-disease", "infective-endocarditis", "pulmonary-hypertension"],
+      "keyPoints": ["heart-sounds", "valvular-disease", "cardiac-cycle"]
+    }
+  },
+  {
+    "id": "aortic-valve",
+    "name": "Aortic Valve",
+    "abbr": "AV",
+    "latin": "Valva aortae",
+    "category": "valves",
+    "meshName": "heart.aortic_valve",
+    "color": "#9ad8e6",
+    "summary": "A three-cusped semilunar valve between the left ventricular outflow tract and the aorta. Two of its sinuses give rise to the coronary arteries.",
+    "synonyms": ["AV", "aortic semilunar valve", "aortic root", "sinuses of Valsalva"],
+    "anatomy": {
+      "location": "At the junction of the left ventricular outflow tract and the ascending aorta, occupying a central position within the heart with all other valves arranged around it. Auscultated in the second right intercostal space.",
+      "shape": "Three semilunar cusps — right coronary, left coronary and non-coronary — attached in a crown-shaped configuration. Behind each lies a sinus of Valsalva; the right and left sinuses give origin to the right and left coronary arteries respectively. A congenitally bicuspid valve occurs in roughly 1–2% of the population.",
+      "relations": [
+        "Anteriorly and to the right: the right ventricular outflow tract",
+        "Posteriorly and to the left: the left atrium and the anterior mitral leaflet, in fibrous continuity",
+        "Inferiorly: the membranous interventricular septum and, immediately beneath it, the bundle of His",
+        "The valve sits at the centre of the cardiac fibrous skeleton"
+      ],
+      "attachments": [
+        "Crown-shaped semilunar attachment spanning the ventriculo-arterial junction",
+        "Aortomitral fibrous continuity with the anterior mitral leaflet",
+        "Membranous septum inferiorly, adjacent to the conduction system",
+        "No chordae tendineae or papillary muscles"
+      ],
+      "bloodSupply": "The cusps are avascular and nourished by diffusion; the surrounding root receives vasa vasorum and small coronary branches.",
+      "venousDrainage": "Thebesian veins of the outflow tract and the vasa vasorum of the aortic root.",
+      "innervation": "Cardiac plexus fibres to the aortic root wall; cusps are essentially uninnervated.",
+      "function": "Opens when left ventricular pressure exceeds aortic pressure, and closes as ventricular pressure falls below it, producing the aortic component of the second heart sound and initiating diastolic coronary perfusion."
+    },
+    "physiology": {
+      "function": "Directs the entire left ventricular stroke volume into the aorta and, on closing, sustains the aortic diastolic pressure that drives coronary flow.",
+      "pressures": [
+        { "label": "Opening", "value": "LV pressure above aortic pressure — around 80 mmHg" },
+        { "label": "Closure", "value": "at the dicrotic notch, generating A2" },
+        { "label": "Normal orifice area", "value": "approximately 3–4 cm²" },
+        { "label": "Severe stenosis", "value": "area under 1.0 cm², mean gradient of 40 mmHg or more, peak velocity of 4 m/s or more" }
+      ],
+      "electrical": "Not electrically active, but the bundle of His runs immediately beneath the membranous septum — hence the risk of conduction block after surgical or transcatheter aortic valve replacement.",
+      "hemodynamics": [
+        "Coronary flow occurs predominantly in diastole, sustained by the closed aortic valve and the elastic recoil of the aorta",
+        "Vortices within the sinuses of Valsalva help the cusps close smoothly and keep the coronary ostia patent",
+        "In stenosis, the pressure gradient is flow-dependent, so a low-output state can mask severe disease — the basis of low-flow, low-gradient aortic stenosis",
+        "In regurgitation, diastolic backflow widens the pulse pressure and reduces coronary perfusion pressure"
+      ],
+      "concepts": ["Diastolic coronary perfusion", "Pressure gradient and valve area", "Pulse pressure", "Dicrotic notch"]
+    },
+    "pathology": [
+      {
+        "name": "Aortic stenosis",
+        "note": "Calcific degenerative disease is the commonest cause in older adults; bicuspid morphology causes earlier presentation.",
+        "diseaseId": "aortic-stenosis"
+      },
+      {
+        "name": "Aortic regurgitation",
+        "note": "From cusp disease (bicuspid, rheumatic, endocarditis) or aortic root dilatation.",
+        "diseaseId": "aortic-regurgitation"
+      },
+      {
+        "name": "Bicuspid aortic valve",
+        "note": "The commonest congenital cardiac malformation, associated with accelerated calcification and with aortopathy.",
+        "diseaseId": "congenital-heart-disease"
+      },
+      {
+        "name": "Infective endocarditis",
+        "note": "May cause cusp destruction, root abscess and conduction disturbance.",
+        "diseaseId": "infective-endocarditis"
+      },
+      {
+        "name": "Aortic dissection",
+        "note": "Proximal dissection can disrupt cusp support and produce acute severe regurgitation.",
+        "diseaseId": "aortic-dissection"
+      }
+    ],
+    "clinical": {
+      "relevance": "Aortic stenosis is among the most common valve lesions requiring intervention, and the development of transcatheter aortic valve implantation has transformed treatment of older and higher-risk patients.",
+      "conditions": ["Calcific aortic stenosis", "Bicuspid aortic valve disease", "Aortic regurgitation", "Infective endocarditis with root abscess"],
+      "examination": [
+        "Ejection systolic murmur radiating to the carotids, with a slow-rising, low-volume pulse in severe stenosis",
+        "Soft or absent A2 and a narrow pulse pressure in severe stenosis",
+        "Early diastolic decrescendo murmur at the left sternal edge with a wide pulse pressure and collapsing pulse in regurgitation",
+        "The classic triad of angina, syncope and dyspnoea marking symptomatic severe stenosis"
+      ],
+      "imaging": [
+        "Transthoracic echocardiography for peak velocity, mean gradient, valve area and ventricular response",
+        "Dobutamine stress echocardiography in low-flow, low-gradient stenosis",
+        "Cardiac CT for calcium scoring, annular sizing and access planning before intervention",
+        "Cardiac MRI for regurgitant fraction and ventricular volumes"
+      ],
+      "procedures": [
+        "Surgical aortic valve replacement with mechanical or bioprosthetic valves",
+        "Transcatheter aortic valve implantation",
+        "Aortic valve repair and valve-sparing root replacement in selected regurgitation",
+        "The Ross procedure in selected younger patients"
+      ]
+    },
+    "keyPoints": [
+      "Three cusps — right coronary, left coronary and non-coronary; the first two sinuses give rise to the coronary arteries.",
+      "Sits at the centre of the heart, in fibrous continuity with the anterior mitral leaflet.",
+      "The bundle of His lies just beneath it, explaining conduction block after valve intervention.",
+      "Closure produces A2 and sustains the diastolic pressure that drives coronary perfusion.",
+      "A bicuspid valve is the commonest congenital cardiac malformation, in roughly 1–2% of people."
+    ],
+    "references": ["gray", "moore", "braunwald", "aha-vhd-2020", "esc-vhd-2021"],
+    "related": {
+      "structures": ["left-ventricle", "aorta", "coronary-arteries", "mitral-valve", "bundle-of-his"],
+      "diseases": ["aortic-stenosis", "aortic-regurgitation", "infective-endocarditis", "aortic-dissection", "heart-failure"],
+      "keyPoints": ["heart-sounds", "valvular-disease", "coronary-circulation", "cardiac-cycle"]
+    }
+  }
+]

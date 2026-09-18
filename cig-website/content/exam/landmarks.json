@@ -1,0 +1,98 @@
+[
+  {
+    "id": "suprasternal-notch",
+    "name": "Suprasternal notch",
+    "short": "Jugular notch",
+    "position": [0, 1.92, 0.98],
+    "kind": "bony",
+    "note": "The hollow at the top of the manubrium between the two clavicles. The starting point for counting down the chest wall, and the surface marking for the trachea and the arch of the aorta behind it."
+  },
+  {
+    "id": "sternal-angle",
+    "name": "Sternal angle (angle of Louis)",
+    "short": "Sternal angle",
+    "position": [0, 1.35, 1.02],
+    "kind": "bony",
+    "note": "The palpable transverse ridge where the manubrium meets the body of the sternum. The second costal cartilage joins here, so it identifies the second rib — the single most useful landmark for counting intercostal spaces. It also marks the level of the carina, the aortic arch and the T4/T5 disc."
+  },
+  {
+    "id": "second-ics",
+    "name": "Second intercostal space",
+    "short": "2nd ICS",
+    "position": [0.42, 1.15, 1.02],
+    "kind": "space",
+    "note": "The space immediately below the second rib, found by sliding off the sternal angle. Home of the aortic area on the right and the pulmonary area on the left."
+  },
+  {
+    "id": "fourth-ics",
+    "name": "Fourth intercostal space",
+    "short": "4th ICS",
+    "position": [0.32, 0.45, 1.04],
+    "kind": "space",
+    "note": "Counted down from the sternal angle: 2nd space, 3rd rib, 3rd space, 4th rib, 4th space. Site of V1 and V2, and the upper limit of the tricuspid area."
+  },
+  {
+    "id": "fifth-ics",
+    "name": "Fifth intercostal space",
+    "short": "5th ICS",
+    "position": [0.4, 0.1, 1.03],
+    "kind": "space",
+    "note": "One space below the fourth. Where it crosses the midclavicular line lies the cardiac apex — the site of V4 and of the mitral area."
+  },
+  {
+    "id": "xiphisternum",
+    "name": "Xiphisternum",
+    "short": "Xiphoid process",
+    "position": [0, -0.42, 0.94],
+    "kind": "bony",
+    "note": "The cartilaginous tip at the lower end of the sternum. Marks the inferior border of the heart's surface projection and the upper limit of the epigastrium; the landmark for hand position in chest compressions."
+  },
+  {
+    "id": "midclavicular-line",
+    "name": "Left midclavicular line",
+    "short": "MCL",
+    "position": [1.12, 0.7, 0.9],
+    "kind": "line",
+    "note": "A vertical line dropped from the midpoint of the clavicle. Where it crosses the fifth intercostal space is the normal position of the apex beat — displacement laterally or inferiorly indicates ventricular dilatation."
+  },
+  {
+    "id": "anterior-axillary-line",
+    "name": "Left anterior axillary line",
+    "short": "AAL",
+    "position": [1.62, 0.55, 0.65],
+    "kind": "line",
+    "note": "A vertical line dropped from the anterior axillary fold, formed by the lower border of pectoralis major. Defines the position of V5."
+  },
+  {
+    "id": "mid-axillary-line",
+    "name": "Left mid-axillary line",
+    "short": "MAL",
+    "position": [1.88, 0.55, 0.38],
+    "kind": "line",
+    "note": "A vertical line dropped from the apex of the axilla, midway between the anterior and posterior folds. Defines the position of V6."
+  },
+  {
+    "id": "apex-beat",
+    "name": "Cardiac apex",
+    "short": "Apex beat",
+    "position": [1.1, 0.02, 0.88],
+    "kind": "organ",
+    "note": "The point of maximal impulse, normally in the fifth intercostal space at the midclavicular line. Its position, size and character — tapping, heaving or thrusting — carry as much information as any murmur."
+  },
+  {
+    "id": "sternal-borders",
+    "name": "Sternal borders",
+    "short": "Sternal edge",
+    "position": [-0.34, 0.9, 1.04],
+    "kind": "line",
+    "note": "The right and left edges of the sternum. Almost every praecordial landmark is described in relation to them: V1 and V2 sit immediately beside them in the fourth space, and the aortic, pulmonary, Erb's and tricuspid areas all lie along them."
+  },
+  {
+    "id": "clavicle",
+    "name": "Clavicles",
+    "short": "Clavicle",
+    "position": [1.1, 2.1, 0.72],
+    "kind": "bony",
+    "note": "Palpable along their whole length from the sternoclavicular to the acromioclavicular joint. Their midpoint defines the midclavicular line, and their lateral thirds carry the arm electrodes in torso placement."
+  }
+]

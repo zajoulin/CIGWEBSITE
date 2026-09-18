@@ -1,0 +1,451 @@
+[
+  {
+    "id": "right-atrium",
+    "name": "Right Atrium",
+    "abbr": "RA",
+    "latin": "Atrium dextrum",
+    "category": "chambers",
+    "meshName": "heart.right_atrium",
+    "color": "#4f7fc4",
+    "summary": "Receives deoxygenated systemic venous blood from the superior and inferior venae cavae and the coronary sinus, and delivers it across the tricuspid valve to the right ventricle.",
+    "synonyms": ["RA", "atrium dextrum", "right atrial appendage", "sinus venarum", "crista terminalis"],
+    "anatomy": {
+      "location": "Forms the right border of the heart, lying anterior and to the right of the left atrium. It occupies the right side of the cardiac base and extends anteriorly as the right auricle.",
+      "shape": "A thin-walled, roughly cuboidal chamber with two developmentally distinct parts: the smooth-walled posterior sinus venarum, derived from the sinus venosus, and the anterior trabeculated part bearing pectinate muscles and the right auricle. The crista terminalis, a muscular ridge, marks the internal junction between them; it corresponds externally to the sulcus terminalis.",
+      "relations": [
+        "Posteriorly and to the left: the left atrium, separated by the interatrial septum",
+        "Anteriorly: the right ventricle and the anterior chest wall",
+        "Superiorly: the opening of the superior vena cava and the ascending aorta to its left",
+        "Inferiorly: the opening of the inferior vena cava and the coronary sinus",
+        "Right lateral: the right lung and pleura, and the right phrenic nerve"
+      ],
+      "attachments": [
+        "Superior vena cava — opens into the superior posterior wall, with no valve",
+        "Inferior vena cava — opens inferiorly, guarded by the rudimentary Eustachian valve",
+        "Coronary sinus — opens between the IVC orifice and the tricuspid annulus, guarded by the Thebesian valve",
+        "Tricuspid annulus — the fibrous ring at the atrioventricular junction"
+      ],
+      "bloodSupply": "Predominantly the right coronary artery, including the sinuatrial nodal branch (arising from the RCA in roughly 60% of hearts and from the left circumflex artery in the remainder).",
+      "venousDrainage": "Small anterior cardiac veins draining directly into the chamber, together with the Thebesian (smallest cardiac) veins.",
+      "innervation": "Autonomic supply from the cardiac plexus. Parasympathetic fibres travel in the vagus nerve and are dense around the sinuatrial node; sympathetic fibres arise from the upper thoracic sympathetic trunk (roughly T1–T4/T5).",
+      "function": "Acts as a low-pressure receiving chamber and reservoir for systemic venous return, then contributes an atrial contraction that tops up right ventricular filling in late diastole."
+    },
+    "physiology": {
+      "function": "Collects systemic venous return continuously through the cardiac cycle and delivers it to the right ventricle — mostly passively during early diastole, with a final active contribution from atrial systole.",
+      "pressures": [
+        { "label": "Mean right atrial pressure", "value": "approximately 0–8 mmHg", "note": "Effectively equal to central venous pressure in the absence of obstruction." },
+        { "label": "a wave", "value": "atrial contraction" },
+        { "label": "c wave", "value": "tricuspid valve bulging during early ventricular systole" },
+        { "label": "v wave", "value": "atrial filling against a closed tricuspid valve" }
+      ],
+      "electrical": "Contains the sinuatrial node near the superior cavoatrial junction, the dominant pacemaker of the heart. Depolarisation spreads through atrial myocardium to the atrioventricular node, producing the P wave on the surface ECG.",
+      "hemodynamics": [
+        "Right atrial pressure sets the downstream end of the systemic venous pressure gradient and therefore strongly influences venous return",
+        "The atrial contribution to ventricular filling is modest at rest but becomes important at high heart rates and with a stiff ventricle",
+        "Right atrial pressure normally falls slightly with inspiration as intrathoracic pressure becomes more negative"
+      ],
+      "concepts": [
+        "Central venous pressure",
+        "Preload",
+        "Atrial kick",
+        "Jugular venous pressure waveform"
+      ]
+    },
+    "pathology": [
+      {
+        "name": "Atrial fibrillation",
+        "note": "Disorganised atrial electrical activity abolishes coordinated atrial contraction and predisposes to thrombus formation, classically in the left atrial appendage.",
+        "diseaseId": "atrial-fibrillation"
+      },
+      {
+        "name": "Right atrial dilatation",
+        "note": "Follows chronic pressure or volume loading — for example tricuspid regurgitation, pulmonary hypertension or right heart failure."
+      },
+      {
+        "name": "Atrial septal defect",
+        "note": "A communication in the interatrial septum produces left-to-right shunting and right atrial volume loading.",
+        "diseaseId": "atrial-septal-defect"
+      }
+    ],
+    "clinical": {
+      "relevance": "The right atrium is the physiological window onto systemic venous pressure. Its pressure is estimated at the bedside from the jugular venous pulse and measured directly by central venous or right heart catheterisation.",
+      "conditions": [
+        "Right heart failure with systemic venous congestion",
+        "Tricuspid regurgitation producing giant v waves",
+        "Atrial fibrillation and atrial flutter",
+        "Atrial septal defect"
+      ],
+      "examination": [
+        "Elevated jugular venous pressure with a visible waveform",
+        "Large a waves in tricuspid stenosis or pulmonary hypertension; absent a waves in atrial fibrillation",
+        "Giant v waves in significant tricuspid regurgitation",
+        "Hepatojugular reflux and peripheral oedema in venous congestion"
+      ],
+      "imaging": [
+        "Transthoracic echocardiography for chamber size, and IVC diameter and collapsibility to estimate right atrial pressure",
+        "Transoesophageal echocardiography for the interatrial septum and appendage",
+        "Cardiac MRI for volumes and shunt quantification"
+      ],
+      "procedures": [
+        "Central venous catheterisation and right heart catheterisation",
+        "Transvenous pacemaker and defibrillator lead placement",
+        "Cavotricuspid isthmus ablation for typical atrial flutter",
+        "Transseptal puncture as access to the left atrium"
+      ]
+    },
+    "keyPoints": [
+      "Receives the SVC, IVC and coronary sinus; delivers blood to the right ventricle through the tricuspid valve.",
+      "Contains the sinuatrial node — the heart's dominant pacemaker.",
+      "The crista terminalis divides the smooth sinus venarum from the trabeculated pectinate portion.",
+      "Right atrial pressure is essentially central venous pressure and is read at the bedside from the JVP.",
+      "Normal mean pressure is low, roughly 0–8 mmHg."
+    ],
+    "references": ["gray", "moore", "guyton", "braunwald"],
+    "related": {
+      "structures": ["tricuspid-valve", "superior-vena-cava", "inferior-vena-cava", "sa-node", "interatrial-septum"],
+      "diseases": ["atrial-fibrillation", "heart-failure", "tricuspid-regurgitation"],
+      "keyPoints": ["cardiac-cycle", "hemodynamics", "ecg-essentials"]
+    }
+  },
+  {
+    "id": "left-atrium",
+    "name": "Left Atrium",
+    "abbr": "LA",
+    "latin": "Atrium sinistrum",
+    "category": "chambers",
+    "meshName": "heart.left_atrium",
+    "color": "#d4576f",
+    "summary": "Receives oxygenated blood from the four pulmonary veins and delivers it across the mitral valve to the left ventricle; it is the most posterior cardiac chamber.",
+    "synonyms": ["LA", "atrium sinistrum", "left atrial appendage", "LAA"],
+    "anatomy": {
+      "location": "The most posterior chamber of the heart, lying immediately anterior to the oesophagus and forming the greater part of the cardiac base.",
+      "shape": "A thin-walled chamber with a smooth interior derived largely from incorporated pulmonary venous tissue, and a small trabeculated left auricle (appendage) that projects anteriorly over the pulmonary trunk. The appendage is narrow-necked and multilobed.",
+      "relations": [
+        "Posteriorly: the oesophagus and descending thoracic aorta — the basis of transoesophageal imaging",
+        "Anteriorly: the ascending aorta and pulmonary trunk",
+        "To the right: the right atrium, across the interatrial septum",
+        "Inferiorly: the coronary sinus running in the atrioventricular groove"
+      ],
+      "attachments": [
+        "Four pulmonary veins — typically two right and two left, opening into the posterior wall without valves",
+        "Mitral annulus — the fibrous ring at the left atrioventricular junction",
+        "Continuity with the aortic root through the aortomitral (mitral–aortic) fibrous continuity"
+      ],
+      "bloodSupply": "Mainly branches of the left circumflex artery; the sinuatrial nodal artery may cross the anterior left atrial wall.",
+      "venousDrainage": "Thebesian veins draining directly into the chamber.",
+      "innervation": "Cardiac plexus, with ganglionated plexi clustered around the pulmonary vein ostia — an important substrate in atrial fibrillation.",
+      "function": "Serves as a reservoir during ventricular systole, a conduit in early diastole, and a booster pump during atrial contraction."
+    },
+    "physiology": {
+      "function": "Buffers pulmonary venous return during ventricular systole, then empties into the left ventricle — first passively, then by atrial contraction.",
+      "pressures": [
+        { "label": "Mean left atrial pressure", "value": "approximately 4–12 mmHg", "note": "Approximated clinically by the pulmonary capillary wedge pressure." },
+        { "label": "v wave", "value": "peak filling pressure before mitral opening" },
+        { "label": "Transmitral gradient", "value": "normally minimal in diastole" }
+      ],
+      "electrical": "Activated after the right atrium via interatrial connections, principally Bachmann's bundle. Myocardial sleeves extending into the pulmonary veins are the dominant source of the ectopic triggers that initiate atrial fibrillation.",
+      "hemodynamics": [
+        "Left atrial pressure is the principal determinant of pulmonary venous and pulmonary capillary pressure — elevation causes pulmonary congestion",
+        "The atrial booster pump contributes a larger share of filling when the ventricle is stiff, which is why atrial fibrillation is poorly tolerated in diastolic dysfunction",
+        "Left atrial size is a sensitive integrated marker of chronically elevated filling pressures"
+      ],
+      "concepts": [
+        "Pulmonary capillary wedge pressure",
+        "Left ventricular filling pressure",
+        "Atrial kick",
+        "Reservoir, conduit and booster-pump function"
+      ]
+    },
+    "pathology": [
+      {
+        "name": "Atrial fibrillation",
+        "note": "Triggered most often by ectopic activity from pulmonary vein sleeves; the left atrial appendage is the principal site of thrombus and therefore of cardioembolic stroke.",
+        "diseaseId": "atrial-fibrillation"
+      },
+      {
+        "name": "Left atrial enlargement",
+        "note": "A consequence of mitral valve disease, hypertension and any cause of chronically raised left ventricular filling pressure.",
+        "diseaseId": "mitral-regurgitation"
+      },
+      {
+        "name": "Mitral stenosis",
+        "note": "Obstruction at the mitral valve raises left atrial pressure and progressively dilates the chamber.",
+        "diseaseId": "mitral-stenosis"
+      }
+    ],
+    "clinical": {
+      "relevance": "Left atrial size and pressure integrate the effects of mitral valve disease, hypertension and diastolic dysfunction, and left atrial appendage thrombus is a leading source of cardioembolic stroke.",
+      "conditions": [
+        "Atrial fibrillation and atrial flutter",
+        "Mitral stenosis and mitral regurgitation",
+        "Heart failure with preserved ejection fraction",
+        "Cardioembolic stroke from appendage thrombus"
+      ],
+      "examination": [
+        "Irregularly irregular pulse in atrial fibrillation",
+        "Loud first heart sound and an opening snap in mitral stenosis",
+        "Signs of pulmonary congestion when left atrial pressure is high"
+      ],
+      "imaging": [
+        "Transthoracic echocardiography for left atrial volume index and diastolic function",
+        "Transoesophageal echocardiography — the standard for excluding appendage thrombus before cardioversion or ablation",
+        "Cardiac CT and MRI for pulmonary vein and appendage anatomy before ablation"
+      ],
+      "procedures": [
+        "Pulmonary vein isolation for atrial fibrillation",
+        "Left atrial appendage occlusion or exclusion",
+        "Transseptal catheterisation for mitral interventions",
+        "Percutaneous mitral balloon valvuloplasty"
+      ]
+    },
+    "keyPoints": [
+      "Receives four pulmonary veins and is the most posterior chamber, sitting directly on the oesophagus.",
+      "Left atrial pressure is estimated clinically by the pulmonary capillary wedge pressure.",
+      "Pulmonary vein myocardial sleeves generate the triggers for most atrial fibrillation.",
+      "The left atrial appendage is the dominant site of thrombus in atrial fibrillation.",
+      "Left atrial volume index is a durable marker of chronically raised filling pressures."
+    ],
+    "references": ["gray", "moore", "braunwald", "aha-af-2023"],
+    "related": {
+      "structures": ["mitral-valve", "pulmonary-veins", "left-ventricle", "interatrial-septum"],
+      "diseases": ["atrial-fibrillation", "mitral-stenosis", "mitral-regurgitation", "heart-failure"],
+      "keyPoints": ["cardiac-cycle", "heart-sounds", "arrhythmia-principles"]
+    }
+  },
+  {
+    "id": "right-ventricle",
+    "name": "Right Ventricle",
+    "abbr": "RV",
+    "latin": "Ventriculus dexter",
+    "category": "chambers",
+    "meshName": "heart.right_ventricle",
+    "color": "#5b8fd6",
+    "summary": "A thin-walled, crescentic pump that ejects systemic venous blood into the low-resistance pulmonary circulation through the pulmonary valve.",
+    "synonyms": ["RV", "ventriculus dexter", "right ventricular outflow tract", "RVOT", "infundibulum"],
+    "anatomy": {
+      "location": "Forms most of the anterior surface of the heart and lies directly behind the sternum and left costal cartilages, making it the chamber most often injured in blunt chest trauma.",
+      "shape": "Crescentic in cross-section, wrapping around the thick-walled left ventricle. The wall is approximately 3–5 mm thick — roughly one third that of the left ventricle. It has an inlet portion containing the tricuspid apparatus, a heavily trabeculated apical portion, and a smooth-walled outflow tract (the conus arteriosus or infundibulum) leading to the pulmonary valve.",
+      "relations": [
+        "Anteriorly: the sternum, costal cartilages and anterior chest wall",
+        "To the left and posteriorly: the left ventricle, across the interventricular septum",
+        "Superiorly: the pulmonary trunk arising from the infundibulum",
+        "Inferiorly: the diaphragmatic surface of the heart"
+      ],
+      "attachments": [
+        "Tricuspid annulus at the inlet",
+        "Anterior, posterior and septal papillary muscles giving rise to chordae tendineae",
+        "The moderator band (septomarginal trabecula), carrying the right bundle branch from the septum to the anterior papillary muscle",
+        "Supraventricular crest separating the inlet from the outflow tract"
+      ],
+      "bloodSupply": "Right coronary artery, principally via the acute marginal branches; the anterior interventricular (left anterior descending) artery supplies the adjacent anterior septum.",
+      "venousDrainage": "Small cardiac vein and anterior cardiac veins, draining to the coronary sinus and right atrium respectively.",
+      "innervation": "Sympathetic fibres from the upper thoracic sympathetic chain and parasympathetic fibres from the vagus, via the cardiac plexus.",
+      "function": "Generates the modest pressure needed to drive the entire cardiac output through the pulmonary circulation, ejecting largely by a bellows-like and longitudinal shortening motion rather than by circumferential squeeze."
+    },
+    "physiology": {
+      "function": "Ejects a stroke volume identical to that of the left ventricle, but against roughly one fifth of the resistance — so it performs far less stroke work.",
+      "pressures": [
+        { "label": "Systolic pressure", "value": "approximately 15–30 mmHg" },
+        { "label": "End-diastolic pressure", "value": "approximately 0–8 mmHg" },
+        { "label": "Wall thickness", "value": "approximately 3–5 mm" },
+        { "label": "Ejection fraction", "value": "normally greater than about 45–50%" }
+      ],
+      "electrical": "Depolarised through the right bundle branch, part of which is carried across the cavity in the moderator band, allowing rapid activation of the anterior papillary muscle.",
+      "hemodynamics": [
+        "Highly sensitive to afterload: a sudden rise in pulmonary vascular resistance, as in acute pulmonary embolism, can cause abrupt right ventricular failure",
+        "Very compliant, so it tolerates chronic volume overload better than pressure overload",
+        "Shares the interventricular septum and pericardial space with the left ventricle, producing ventricular interdependence",
+        "Right ventricular systolic function is often assessed longitudinally, for example by tricuspid annular plane systolic excursion"
+      ],
+      "concepts": [
+        "Afterload sensitivity",
+        "Ventricular interdependence",
+        "Pulmonary vascular resistance",
+        "TAPSE"
+      ]
+    },
+    "pathology": [
+      {
+        "name": "Right ventricular failure",
+        "note": "May follow left heart failure, chronic lung disease with pulmonary hypertension (cor pulmonale), or right ventricular infarction.",
+        "diseaseId": "heart-failure"
+      },
+      {
+        "name": "Right ventricular infarction",
+        "note": "Complicates inferior myocardial infarction from proximal right coronary occlusion; produces hypotension with clear lung fields and raised JVP.",
+        "diseaseId": "myocardial-infarction"
+      },
+      {
+        "name": "Pulmonary embolism",
+        "note": "Acute rise in pulmonary vascular resistance causes right ventricular dilatation, strain and, when severe, obstructive shock.",
+        "diseaseId": "pulmonary-embolism"
+      },
+      {
+        "name": "Arrhythmogenic right ventricular cardiomyopathy",
+        "note": "Fibrofatty replacement of right ventricular myocardium causing ventricular arrhythmia and sudden death.",
+        "diseaseId": "cardiomyopathy"
+      }
+    ],
+    "clinical": {
+      "relevance": "Right ventricular function is a powerful prognostic marker across pulmonary hypertension, heart failure and pulmonary embolism, and its anterior position makes it the chamber sampled at endomyocardial biopsy and injured in penetrating or blunt trauma.",
+      "conditions": [
+        "Cor pulmonale from chronic lung disease",
+        "Right ventricular infarction",
+        "Acute and chronic pulmonary embolism",
+        "Arrhythmogenic right ventricular cardiomyopathy"
+      ],
+      "examination": [
+        "Left parasternal heave indicating right ventricular hypertrophy or dilatation",
+        "Raised jugular venous pressure, hepatomegaly, ascites and peripheral oedema",
+        "Right ventricular third heart sound or a tricuspid regurgitant murmur increasing on inspiration"
+      ],
+      "imaging": [
+        "Echocardiography — chamber size, TAPSE, S′ velocity and fractional area change",
+        "Cardiac MRI, the reference standard for right ventricular volumes and tissue characterisation",
+        "CT pulmonary angiography, where a raised RV:LV diameter ratio indicates strain",
+        "ECG showing right axis deviation, right bundle branch block or an S1Q3T3 pattern"
+      ],
+      "procedures": [
+        "Right heart catheterisation for pressures and cardiac output",
+        "Endomyocardial biopsy, usually from the right ventricular septum",
+        "Pacemaker and defibrillator lead implantation",
+        "Mechanical circulatory support in refractory right ventricular failure"
+      ]
+    },
+    "keyPoints": [
+      "Thin-walled and crescentic, roughly one third the wall thickness of the left ventricle.",
+      "Ejects the same stroke volume as the left ventricle against about one fifth of the resistance.",
+      "Tolerates volume overload well but pressure overload poorly.",
+      "The moderator band carries the right bundle branch across the cavity.",
+      "Forms most of the anterior cardiac surface — the chamber closest to the sternum."
+    ],
+    "references": ["gray", "moore", "guyton", "braunwald"],
+    "related": {
+      "structures": ["tricuspid-valve", "pulmonary-valve", "pulmonary-trunk", "interventricular-septum", "right-atrium"],
+      "diseases": ["heart-failure", "pulmonary-embolism", "myocardial-infarction", "cardiomyopathy"],
+      "keyPoints": ["hemodynamics", "cardiac-cycle", "cardiovascular-examination"]
+    }
+  },
+  {
+    "id": "left-ventricle",
+    "name": "Left Ventricle",
+    "abbr": "LV",
+    "latin": "Ventriculus sinister",
+    "category": "chambers",
+    "meshName": "heart.left_ventricle",
+    "color": "#d84a63",
+    "summary": "Receives oxygenated blood from the left atrium and generates the pressure that drives it into the systemic circulation through the aortic valve — the thickest-walled and highest-pressure chamber.",
+    "synonyms": ["LV", "ventriculus sinister", "left ventricular outflow tract", "LVOT", "apex"],
+    "anatomy": {
+      "location": "Forms the apex of the heart and most of its left border and diaphragmatic surface. The apex normally lies in the fifth left intercostal space in the midclavicular line.",
+      "shape": "A thick-walled, conical or prolate ellipsoid chamber. The wall is approximately 8–12 mm thick in diastole — around three times that of the right ventricle. Its inlet contains the mitral apparatus, its apex is finely trabeculated, and its outflow tract is smooth-walled and leads to the aortic valve. Myocardial fibres are arranged helically, producing the wringing motion that underlies efficient ejection.",
+      "relations": [
+        "To the right and anteriorly: the right ventricle, across the interventricular septum",
+        "Superiorly and posteriorly: the left atrium",
+        "Inferiorly: the diaphragm",
+        "Laterally: the left lung and pleura"
+      ],
+      "attachments": [
+        "Mitral annulus at the inlet",
+        "Anterolateral and posteromedial papillary muscles, each sending chordae to both mitral leaflets",
+        "Aortic annulus at the outflow, in fibrous continuity with the anterior mitral leaflet"
+      ],
+      "bloodSupply": "The anterior interventricular (left anterior descending) artery supplies the anterior wall, anterior septum and apex; the left circumflex supplies the lateral wall; the posterior descending artery — from the right coronary in the roughly 85% of people with right dominance — supplies the inferior wall and inferior septum.",
+      "venousDrainage": "Great, middle and posterior cardiac veins draining into the coronary sinus.",
+      "innervation": "Sympathetic fibres from the upper thoracic sympathetic trunk increase contractility and rate; vagal parasympathetic innervation of ventricular myocardium is comparatively sparse.",
+      "function": "Converts electrical activation into the pressure and stroke volume that perfuse every organ, including — through the coronary arteries — the heart itself."
+    },
+    "physiology": {
+      "function": "Fills at low pressure during diastole and ejects roughly 55–70% of its end-diastolic volume during systole, generating systemic arterial pressure.",
+      "pressures": [
+        { "label": "Systolic pressure", "value": "approximately 100–140 mmHg", "note": "Equal to aortic systolic pressure when the aortic valve is normal." },
+        { "label": "End-diastolic pressure", "value": "approximately 4–12 mmHg" },
+        { "label": "Wall thickness", "value": "approximately 8–12 mm" },
+        { "label": "Ejection fraction", "value": "normally about 55–70%" }
+      ],
+      "electrical": "Activated by the left bundle branch, which divides into anterior and posterior fascicles; the septum depolarises first, from left to right. Delayed activation, as in left bundle branch block, produces mechanical dyssynchrony that cardiac resynchronisation therapy aims to correct.",
+      "hemodynamics": [
+        "Stroke volume is determined by preload, afterload and contractility; cardiac output is stroke volume multiplied by heart rate",
+        "The Frank–Starling relationship links increased end-diastolic fibre length to increased force of contraction",
+        "Pressure–volume loops describe the full cycle; end-systolic elastance is a load-independent index of contractility",
+        "Laplace's law explains why dilatation and pressure overload both increase wall stress and myocardial oxygen demand",
+        "Subendocardial myocardium is perfused almost entirely in diastole and is the region most vulnerable to ischaemia"
+      ],
+      "concepts": [
+        "Ejection fraction",
+        "Stroke volume",
+        "Cardiac output",
+        "Preload and afterload",
+        "Frank–Starling mechanism",
+        "Pressure–volume loop"
+      ]
+    },
+    "pathology": [
+      {
+        "name": "Heart failure",
+        "note": "Classified by ejection fraction into reduced, mildly reduced and preserved categories, each with distinct mechanisms and treatment evidence.",
+        "diseaseId": "heart-failure"
+      },
+      {
+        "name": "Myocardial infarction",
+        "note": "Coronary occlusion produces regional wall motion abnormality corresponding to the territory of the occluded artery.",
+        "diseaseId": "myocardial-infarction"
+      },
+      {
+        "name": "Left ventricular hypertrophy",
+        "note": "A response to chronic pressure overload from hypertension or aortic stenosis; increases wall stress tolerance but impairs relaxation and coronary reserve.",
+        "diseaseId": "hypertension"
+      },
+      {
+        "name": "Hypertrophic cardiomyopathy",
+        "note": "Sarcomeric protein disease causing inappropriate hypertrophy, sometimes with dynamic outflow tract obstruction.",
+        "diseaseId": "cardiomyopathy"
+      },
+      {
+        "name": "Aortic stenosis",
+        "note": "Fixed outflow obstruction imposing a chronic pressure load on the left ventricle.",
+        "diseaseId": "aortic-stenosis"
+      }
+    ],
+    "clinical": {
+      "relevance": "Left ventricular size, wall thickness and ejection fraction drive diagnosis, prognosis and treatment eligibility across almost all of cardiology — from device therapy thresholds to timing of valve intervention.",
+      "conditions": [
+        "Heart failure with reduced or preserved ejection fraction",
+        "Myocardial infarction and ischaemic cardiomyopathy",
+        "Hypertrophic and dilated cardiomyopathies",
+        "Left ventricular hypertrophy from hypertension or aortic stenosis"
+      ],
+      "examination": [
+        "Displaced and sustained apex beat suggesting dilatation or pressure overload",
+        "Third heart sound in volume overload; fourth heart sound with a stiff ventricle",
+        "Signs of pulmonary congestion — basal crackles, orthopnoea",
+        "Narrow pulse pressure and delayed carotid upstroke in severe aortic stenosis"
+      ],
+      "imaging": [
+        "Transthoracic echocardiography for volumes, ejection fraction, wall motion, strain and diastolic function",
+        "Cardiac MRI as the reference standard for volumes, and for late gadolinium enhancement showing scar or fibrosis",
+        "Nuclear perfusion imaging and stress echocardiography for ischaemia and viability",
+        "Left ventriculography during catheterisation"
+      ],
+      "procedures": [
+        "Percutaneous coronary intervention and coronary artery bypass grafting for ischaemic disease",
+        "Cardiac resynchronisation therapy and implantable defibrillators in selected heart failure",
+        "Left ventricular assist device implantation and transplantation in advanced failure",
+        "Septal reduction therapy in obstructive hypertrophic cardiomyopathy"
+      ]
+    },
+    "keyPoints": [
+      "Wall thickness of roughly 8–12 mm — about three times the right ventricle — reflecting the systemic pressure it must generate.",
+      "Normal ejection fraction is approximately 55–70%; it is the single most used number in cardiology.",
+      "Ejects the same stroke volume as the right ventricle but performs several times the stroke work.",
+      "The subendocardium is perfused in diastole and is the first myocardium to become ischaemic.",
+      "Forms the cardiac apex, palpable in the fifth left intercostal space in the midclavicular line."
+    ],
+    "references": ["gray", "moore", "guyton", "braunwald", "esc-hf-2021"],
+    "related": {
+      "structures": ["mitral-valve", "aortic-valve", "aorta", "interventricular-septum", "coronary-arteries", "left-atrium"],
+      "diseases": ["heart-failure", "myocardial-infarction", "aortic-stenosis", "cardiomyopathy", "hypertension"],
+      "keyPoints": ["cardiac-cycle", "hemodynamics", "heart-failure-principles", "cardiac-imaging"]
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "coronary-artery-disease",
+    "label": "Coronary Artery Disease",
+    "blurb": "Atherosclerotic narrowing and occlusion of the coronary arteries — from silent plaque to acute infarction.",
+    "icon": "vessel"
+  },
+  {
+    "id": "heart-failure",
+    "label": "Heart Failure",
+    "blurb": "The clinical syndrome that results when the heart cannot meet the body's demands at normal filling pressures.",
+    "icon": "heart"
+  },
+  {
+    "id": "arrhythmias",
+    "label": "Arrhythmias",
+    "blurb": "Disorders of impulse formation and conduction, from benign ectopy to life-threatening ventricular rhythms.",
+    "icon": "ecg"
+  },
+  {
+    "id": "valvular",
+    "label": "Valvular Heart Disease",
+    "blurb": "Stenosis and regurgitation of the four cardiac valves, and the ventricular remodelling that follows.",
+    "icon": "valve"
+  },
+  {
+    "id": "cardiomyopathies",
+    "label": "Cardiomyopathies",
+    "blurb": "Primary diseases of the myocardium itself — dilated, hypertrophic, restrictive and arrhythmogenic.",
+    "icon": "layers"
+  },
+  {
+    "id": "congenital",
+    "label": "Congenital Heart Disease",
+    "blurb": "Structural abnormalities present from birth, and the lifelong physiology they create.",
+    "icon": "network"
+  },
+  {
+    "id": "hypertension",
+    "label": "Hypertension",
+    "blurb": "The commonest modifiable cardiovascular risk factor and a driver of nearly every other cardiac disease.",
+    "icon": "trending"
+  },
+  {
+    "id": "vascular",
+    "label": "Vascular Disease",
+    "blurb": "Arterial and venous disease beyond the heart — limb ischaemia, venous insufficiency and their consequences.",
+    "icon": "vessel"
+  },
+  {
+    "id": "pericardial",
+    "label": "Pericardial Disease",
+    "blurb": "Inflammation, effusion and constriction of the sac surrounding the heart.",
+    "icon": "shield"
+  },
+  {
+    "id": "endocardial",
+    "label": "Endocardial Disease",
+    "blurb": "Infection and inflammation of the endocardium and valves, including endocarditis and rheumatic disease.",
+    "icon": "microscope"
+  },
+  {
+    "id": "aortic",
+    "label": "Aortic Disease",
+    "blurb": "Aneurysm, dissection and acute aortic syndromes affecting the body's largest artery.",
+    "icon": "warning"
+  },
+  {
+    "id": "thromboembolic",
+    "label": "Thromboembolic Disease",
+    "blurb": "Venous thrombosis, pulmonary embolism and the pulmonary vascular consequences of obstruction.",
+    "icon": "flask"
+  }
+]

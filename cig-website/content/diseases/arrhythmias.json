@@ -1,0 +1,755 @@
+[
+  {
+    "id": "atrial-fibrillation",
+    "name": "Atrial Fibrillation",
+    "abbr": "AF",
+    "categoryId": "arrhythmias",
+    "featured": true,
+    "animationId": "atrial-fibrillation",
+    "tagline": "Disorganised atrial electrical activity that abolishes effective atrial contraction, producing an irregularly irregular ventricular response and a substantial risk of stroke.",
+    "overview": "Atrial fibrillation is the most common sustained arrhythmia in clinical practice. Coordinated atrial depolarisation is replaced by rapid, chaotic electrical activity, so the atria quiver rather than contract. The atrioventricular node filters this chaotic input, producing an irregularly irregular ventricular response. Two consequences dominate management: loss of the atrial contribution to ventricular filling, which reduces cardiac output particularly when the ventricle is stiff or the rate is fast; and stasis of blood in the fibrillating atrium, especially the left atrial appendage, which predisposes to thrombus formation and cardioembolic stroke. Management rests on three pillars — anticoagulation guided by stroke risk, symptom control by rate or rhythm strategy, and treatment of the underlying substrate and risk factors.",
+    "riskFactors": {
+      "modifiable": [
+        "Hypertension",
+        "Obesity and obstructive sleep apnoea",
+        "Excess alcohol intake",
+        "Diabetes mellitus",
+        "Physical inactivity, and also extreme endurance exercise",
+        "Hyperthyroidism",
+        "Heart failure and valvular heart disease",
+        "Acute illness, sepsis, surgery and electrolyte disturbance"
+      ],
+      "nonModifiable": [
+        "Increasing age — the dominant risk factor",
+        "Male sex",
+        "Family history and genetic predisposition",
+        "Congenital heart disease",
+        "Chronic kidney disease"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Substrate development",
+        "text": "Atrial stretch, fibrosis, inflammation and ageing alter atrial structure and electrophysiology. Conduction becomes slow and heterogeneous, and refractory periods shorten and disperse — the substrate on which fibrillation can be sustained."
+      },
+      {
+        "title": "Triggering ectopy",
+        "text": "Rapidly firing foci, most often within the myocardial sleeves of the pulmonary veins, generate premature atrial beats that initiate the arrhythmia. This is the observation that made pulmonary vein isolation possible."
+      },
+      {
+        "title": "Multiple re-entrant wavelets",
+        "text": "Once initiated, multiple simultaneous re-entrant wavelets and rotors propagate through the atria in continually changing directions, producing atrial rates of roughly 300–600 per minute."
+      },
+      {
+        "title": "Loss of coordinated contraction",
+        "text": "Because activation is disorganised, the atria never contract as a unit. The atrial kick is lost, reducing ventricular filling by up to 20–30% — more when the ventricle is non-compliant."
+      },
+      {
+        "title": "Irregular ventricular response",
+        "text": "The AV node conducts some impulses and blocks others through decremental conduction and concealed conduction, producing the irregularly irregular ventricular rhythm. Without treatment the rate is often 100–160 per minute."
+      },
+      {
+        "title": "Haemodynamic consequences",
+        "text": "Loss of atrial kick plus a rapid, irregular rate shortens diastolic filling time and reduces cardiac output. Sustained tachycardia can itself cause a reversible tachycardia-induced cardiomyopathy."
+      },
+      {
+        "title": "Thrombus formation",
+        "text": "Stasis in the fibrillating atrium — particularly the trabeculated, narrow-necked left atrial appendage — combines with endothelial dysfunction and a prothrombotic state (Virchow's triad) to promote thrombus, the source of cardioembolic stroke."
+      },
+      {
+        "title": "Atrial remodelling",
+        "text": "Fibrillation itself shortens atrial refractoriness and promotes further fibrosis and dilatation — 'atrial fibrillation begets atrial fibrillation' — so paroxysmal episodes tend to become persistent over time."
+      }
+    ],
+    "anatomyInvolved": [
+      "Left atrium and its myocardium, the principal site of the arrhythmic substrate",
+      "Pulmonary vein sleeves, the dominant source of triggers",
+      "Left atrial appendage, the main site of thrombus formation",
+      "Atrioventricular node, which determines the ventricular response",
+      "Left ventricle, whose filling depends partly on atrial contraction"
+    ],
+    "relatedStructures": [
+      "left-atrium",
+      "pulmonary-veins",
+      "av-node",
+      "right-atrium",
+      "mitral-valve"
+    ],
+    "physiologyChanges": [
+      "Loss of the atrial contribution to ventricular filling, reducing stroke volume",
+      "Shortened and variable diastolic filling time with rapid, irregular ventricular response",
+      "Beat-to-beat variation in stroke volume, producing a pulse deficit between apical and radial rates",
+      "Elevated left atrial pressure and progressive atrial dilatation",
+      "Electrical remodelling with shortened atrial refractory periods",
+      "Prothrombotic milieu within the atrium"
+    ],
+    "progression": [
+      {
+        "stage": "First diagnosed",
+        "text": "The first documented episode, regardless of duration or symptoms."
+      },
+      {
+        "stage": "Paroxysmal",
+        "text": "Episodes that terminate spontaneously or with intervention within seven days, usually trigger-driven."
+      },
+      {
+        "stage": "Persistent",
+        "text": "Episodes sustained beyond seven days, or requiring cardioversion to terminate. Reflects a more developed substrate."
+      },
+      {
+        "stage": "Long-standing persistent",
+        "text": "Continuous atrial fibrillation for a year or more where a rhythm control strategy is still being pursued."
+      },
+      {
+        "stage": "Permanent",
+        "text": "Atrial fibrillation accepted by patient and clinician, with no further attempts at rhythm control. A therapeutic decision rather than a pathological stage."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Palpitations, often described as an irregular or racing heartbeat",
+        "Breathlessness and reduced exercise tolerance",
+        "Fatigue, dizziness and, less commonly, syncope",
+        "Chest discomfort",
+        "Entirely asymptomatic in a substantial proportion — the first presentation may be stroke or heart failure"
+      ],
+      "signs": [
+        "Irregularly irregular pulse — the defining bedside sign",
+        "Apical–radial pulse deficit from beats too weak to generate a palpable pulse",
+        "Variable intensity of the first heart sound",
+        "Absent a waves in the jugular venous pulse",
+        "Signs of heart failure, thyrotoxicosis or valve disease as underlying causes"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "12-lead ECG",
+        "findings": "Absent P waves replaced by a fibrillatory baseline, with an irregularly irregular QRS rhythm. A single documented ECG is sufficient for diagnosis."
+      },
+      {
+        "modality": "Ambulatory monitoring",
+        "findings": "Holter monitoring, event recorders, patch monitors or implantable loop recorders to capture paroxysmal episodes and assess rate control."
+      },
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "Left atrial size, ventricular function, and valve disease — particularly rheumatic mitral stenosis, which changes anticoagulation decisions."
+      },
+      {
+        "modality": "Transoesophageal echocardiography",
+        "findings": "The standard for excluding left atrial appendage thrombus before cardioversion or ablation when anticoagulation has not been adequate."
+      },
+      {
+        "modality": "Blood tests",
+        "findings": "Thyroid function, full blood count, renal and liver function, electrolytes — both to find causes and to guide anticoagulant dosing."
+      },
+      {
+        "modality": "Risk scores",
+        "findings": "Validated stroke risk scores guide anticoagulation, and bleeding risk assessment identifies modifiable bleeding factors rather than reasons to withhold therapy."
+      }
+    ],
+    "complications": [
+      "Ischaemic stroke and systemic thromboembolism",
+      "Heart failure, including tachycardia-induced cardiomyopathy",
+      "Reduced exercise capacity and quality of life",
+      "Cognitive decline and vascular dementia",
+      "Bleeding as a complication of anticoagulation",
+      "Increased all-cause mortality"
+    ],
+    "treatment": {
+      "principles": "Modern management follows a structured approach: assess and treat stroke risk with anticoagulation, control symptoms with a rate or rhythm strategy, and address the substrate through comorbidity and risk factor management. Aspirin is not an adequate substitute for anticoagulation for stroke prevention in atrial fibrillation. This is an educational summary; management must follow current guidelines and individual assessment.",
+      "groups": [
+        {
+          "name": "Stroke prevention",
+          "detail": "Oral anticoagulation based on validated stroke risk assessment; direct oral anticoagulants are preferred over vitamin K antagonists for most patients, with warfarin retained for mechanical valves and moderate-to-severe rheumatic mitral stenosis."
+        },
+        {
+          "name": "Rate control",
+          "detail": "Beta-blockers, non-dihydropyridine calcium channel blockers or digoxin to control the ventricular response."
+        },
+        {
+          "name": "Rhythm control — pharmacological",
+          "detail": "Antiarrhythmic drugs selected according to the presence and type of structural heart disease."
+        },
+        {
+          "name": "Cardioversion",
+          "detail": "Electrical or pharmacological restoration of sinus rhythm, with attention to anticoagulation timing and thrombus exclusion."
+        },
+        {
+          "name": "Catheter ablation",
+          "detail": "Pulmonary vein isolation, increasingly offered early in symptomatic patients and of particular benefit in atrial fibrillation with heart failure."
+        },
+        {
+          "name": "Left atrial appendage occlusion",
+          "detail": "Considered for patients with a genuine long-term contraindication to anticoagulation."
+        },
+        {
+          "name": "Risk factor management",
+          "detail": "Weight reduction, treatment of sleep apnoea, blood pressure control, alcohol reduction and exercise — all shown to reduce arrhythmia burden."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "The commonest sustained arrhythmia; incidence rises steeply with age.",
+      "ECG diagnosis: absent P waves with an irregularly irregular ventricular response.",
+      "Most triggers arise from pulmonary vein myocardial sleeves — the rationale for pulmonary vein isolation.",
+      "Loss of the atrial kick can reduce cardiac output by 20–30%, and matters most when the ventricle is stiff.",
+      "The left atrial appendage is the dominant source of thrombus and of cardioembolic stroke.",
+      "Anticoagulation decisions rest on stroke risk, not on the pattern or symptoms of the arrhythmia.",
+      "Atrial fibrillation begets atrial fibrillation — remodelling makes episodes progressively more sustained."
+    ],
+    "references": [
+      "aha-af-2023",
+      "braunwald",
+      "guyton",
+      "esc-guidelines-hub"
+    ],
+    "relatedKeyPoints": [
+      "arrhythmia-principles",
+      "ecg-essentials",
+      "cardiac-cycle",
+      "cardiovascular-pharmacology"
+    ]
+  },
+  {
+    "id": "supraventricular-tachycardia",
+    "name": "Supraventricular Tachycardia",
+    "abbr": "SVT",
+    "categoryId": "arrhythmias",
+    "featured": false,
+    "animationId": "supraventricular-tachycardia",
+    "tagline": "Regular, rapid tachycardias arising above the ventricles — most commonly re-entrant circuits involving the AV node or an accessory pathway.",
+    "overview": "Supraventricular tachycardia describes regular tachycardias whose maintenance depends on tissue at or above the level of the bundle of His. The two commonest forms are atrioventricular nodal re-entrant tachycardia, which uses dual pathways within and adjacent to the AV node, and atrioventricular re-entrant tachycardia, which uses an accessory pathway connecting atrium and ventricle — the mechanism underlying Wolff–Parkinson–White syndrome. Atrial tachycardia and atrial flutter are also supraventricular. Most SVT is not life-threatening, but it can be highly symptomatic, and pre-excited atrial fibrillation in Wolff–Parkinson–White is genuinely dangerous.",
+    "riskFactors": {
+      "modifiable": [
+        "Caffeine, alcohol and stimulant use",
+        "Emotional and physical stress",
+        "Thyrotoxicosis",
+        "Electrolyte disturbance"
+      ],
+      "nonModifiable": [
+        "Congenital accessory pathways",
+        "Female sex (for AVNRT)",
+        "Younger age at presentation",
+        "Congenital heart disease"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Dual pathway physiology",
+        "text": "In AVNRT, the AV node region has a fast pathway with a long refractory period and a slow pathway with a short refractory period."
+      },
+      {
+        "title": "Initiation by a premature beat",
+        "text": "A premature atrial beat arrives when the fast pathway is still refractory, so it conducts down the slow pathway alone."
+      },
+      {
+        "title": "Re-entry established",
+        "text": "By the time the impulse reaches the distal node, the fast pathway has recovered and conducts retrogradely to the atrium, completing a circuit that then perpetuates itself."
+      },
+      {
+        "title": "Accessory pathway variant",
+        "text": "In AVRT, the circuit uses the AV node in one direction and an accessory pathway in the other. Orthodromic conduction gives a narrow QRS; antidromic conduction gives a wide one."
+      },
+      {
+        "title": "Haemodynamic effect",
+        "text": "Rapid rates shorten diastolic filling, reducing stroke volume. Simultaneous atrial and ventricular contraction against closed AV valves produces cannon a waves and the sensation of neck pounding."
+      },
+      {
+        "title": "Danger in pre-excited AF",
+        "text": "If atrial fibrillation occurs in a patient with an accessory pathway that lacks decremental properties, very rapid ventricular rates can degenerate into ventricular fibrillation."
+      }
+    ],
+    "anatomyInvolved": [
+      "Atrioventricular node and its fast and slow pathway inputs",
+      "Accessory atrioventricular connections such as the bundle of Kent",
+      "Atrial myocardium in focal atrial tachycardia",
+      "Cavotricuspid isthmus in typical atrial flutter"
+    ],
+    "relatedStructures": [
+      "av-node",
+      "right-atrium",
+      "left-atrium",
+      "bundle-of-his",
+      "tricuspid-valve"
+    ],
+    "physiologyChanges": [
+      "Sustained rapid regular rate, typically 150–250 per minute",
+      "Shortened diastolic filling time reducing stroke volume",
+      "Loss of normal atrioventricular timing",
+      "Reduced coronary perfusion time, which may provoke angina",
+      "Ventricular pre-excitation with a delta wave in sinus rhythm in Wolff–Parkinson–White"
+    ],
+    "progression": [
+      {
+        "stage": "Paroxysms",
+        "text": "Sudden onset and offset episodes, often since adolescence, with long asymptomatic intervals."
+      },
+      {
+        "stage": "Increasing frequency",
+        "text": "Episodes become more frequent or prolonged, affecting daily life and work."
+      },
+      {
+        "stage": "Complications",
+        "text": "Rarely, incessant tachycardia causes a tachycardia-induced cardiomyopathy; pre-excited atrial fibrillation risks sudden death."
+      },
+      {
+        "stage": "Definitive treatment",
+        "text": "Catheter ablation offers high cure rates and is increasingly chosen early rather than after years of drug therapy."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Abrupt onset and offset palpitations",
+        "Neck pounding or fluttering",
+        "Breathlessness, chest discomfort and anxiety",
+        "Dizziness and, occasionally, syncope",
+        "Polyuria after termination, from natriuretic peptide release"
+      ],
+      "signs": [
+        "Regular rapid pulse, typically 150–250 per minute",
+        "Cannon a waves in the jugular venous pulse — the frog sign",
+        "Usually normal blood pressure, but hypotension if rate is very fast or there is structural disease",
+        "Termination with vagal manoeuvres or adenosine"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "12-lead ECG during tachycardia",
+        "findings": "Regular narrow-complex tachycardia; retrograde P waves may be buried in or distort the QRS (pseudo-R′ in V1, pseudo-S in inferior leads)."
+      },
+      {
+        "modality": "12-lead ECG in sinus rhythm",
+        "findings": "May reveal a short PR interval with a delta wave, indicating ventricular pre-excitation."
+      },
+      {
+        "modality": "Ambulatory monitoring",
+        "findings": "Captures paroxysmal episodes and documents onset and offset."
+      },
+      {
+        "modality": "Echocardiography",
+        "findings": "Excludes structural heart disease, particularly Ebstein's anomaly, which is associated with accessory pathways."
+      },
+      {
+        "modality": "Electrophysiology study",
+        "findings": "Defines the mechanism precisely and permits ablation in the same procedure."
+      }
+    ],
+    "complications": [
+      "Syncope and injury",
+      "Tachycardia-induced cardiomyopathy",
+      "Ventricular fibrillation in pre-excited atrial fibrillation",
+      "Marked impairment of quality of life",
+      "Procedural risk of AV block during ablation near the node"
+    ],
+    "treatment": {
+      "principles": "Acute termination uses vagal manoeuvres and AV nodal blockade; long-term management balances drug therapy against catheter ablation, which is often curative. AV nodal blocking drugs must be avoided in pre-excited atrial fibrillation. Educational summary only.",
+      "groups": [
+        {
+          "name": "Vagal manoeuvres",
+          "detail": "Valsalva — particularly the modified Valsalva — and carotid sinus massage in appropriate patients."
+        },
+        {
+          "name": "Adenosine",
+          "detail": "Transient AV nodal block that terminates node-dependent tachycardias and unmasks atrial arrhythmias."
+        },
+        {
+          "name": "Rate-slowing drugs",
+          "detail": "Beta-blockers and non-dihydropyridine calcium channel blockers for acute and chronic management of node-dependent SVT."
+        },
+        {
+          "name": "Synchronised cardioversion",
+          "detail": "For haemodynamic instability, and in pre-excited atrial fibrillation."
+        },
+        {
+          "name": "Catheter ablation",
+          "detail": "Slow pathway modification for AVNRT and accessory pathway ablation for AVRT, with high success and low complication rates."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "AVNRT is the commonest regular SVT; AVRT uses an accessory pathway.",
+      "Sudden onset and offset with neck pounding is a classic history.",
+      "Adenosine both terminates node-dependent SVT and reveals atrial arrhythmias.",
+      "Avoid AV nodal blocking drugs in pre-excited atrial fibrillation — they can precipitate ventricular fibrillation.",
+      "Catheter ablation is curative in the great majority and is increasingly offered early."
+    ],
+    "references": [
+      "braunwald",
+      "aha-professional",
+      "esc-guidelines-hub",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "arrhythmia-principles",
+      "ecg-essentials",
+      "cardiovascular-pharmacology"
+    ]
+  },
+  {
+    "id": "ventricular-arrhythmias",
+    "name": "Ventricular Arrhythmias",
+    "abbr": "VT / VF",
+    "categoryId": "arrhythmias",
+    "featured": false,
+    "animationId": "ventricular-arrhythmias",
+    "tagline": "Rhythms arising below the bundle of His, ranging from benign ectopy to ventricular fibrillation and sudden cardiac death.",
+    "overview": "Ventricular arrhythmias originate in ventricular myocardium or the distal conduction system. They range from isolated ventricular ectopic beats, which are common and usually benign, through non-sustained and sustained ventricular tachycardia, to ventricular fibrillation — a disorganised rhythm that produces no cardiac output and is the immediate mechanism of most sudden cardiac deaths. The critical clinical distinction is between arrhythmias occurring in a structurally normal heart, which are generally of good prognosis, and those occurring in the presence of scar, cardiomyopathy or an inherited channelopathy, which carry a substantial risk of sudden death.",
+    "riskFactors": {
+      "modifiable": [
+        "Myocardial ischaemia and infarction",
+        "Electrolyte disturbance, especially potassium and magnesium",
+        "QT-prolonging drugs",
+        "Heart failure with reduced ejection fraction",
+        "Excess alcohol and stimulant use"
+      ],
+      "nonModifiable": [
+        "Prior myocardial infarction with scar",
+        "Inherited channelopathies such as long QT and Brugada syndromes",
+        "Genetic cardiomyopathies including ARVC and HCM",
+        "Family history of sudden cardiac death",
+        "Structural congenital heart disease"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Scar-related re-entry",
+        "text": "Surviving myocyte bundles within and around infarct scar conduct slowly and anisotropically, creating fixed circuits that sustain monomorphic ventricular tachycardia."
+      },
+      {
+        "title": "Triggered activity",
+        "text": "Early afterdepolarisations occurring during a prolonged repolarisation phase can trigger torsades de pointes; delayed afterdepolarisations from calcium overload underlie some catecholaminergic arrhythmias."
+      },
+      {
+        "title": "Abnormal automaticity",
+        "text": "Ischaemic or injured Purkinje and ventricular tissue can develop enhanced spontaneous depolarisation and generate ectopic rhythms."
+      },
+      {
+        "title": "Channelopathy substrate",
+        "text": "Inherited abnormalities of sodium, potassium or calcium handling alter action potential duration and dispersion of repolarisation, creating vulnerability without structural disease."
+      },
+      {
+        "title": "Degeneration to fibrillation",
+        "text": "Wavebreak and multiple wandering wavelets replace organised activation. The ventricles quiver, cardiac output ceases, and death follows within minutes without defibrillation."
+      },
+      {
+        "title": "Haemodynamic collapse",
+        "text": "Even organised ventricular tachycardia at rapid rates severely limits filling; with poor ventricular function it rapidly causes hypotension and loss of consciousness."
+      }
+    ],
+    "anatomyInvolved": [
+      "Ventricular myocardium, particularly peri-infarct border zones",
+      "Purkinje network, a source of triggering ectopy",
+      "Right ventricular outflow tract, the commonest site of idiopathic ventricular tachycardia",
+      "Interventricular septum in fascicular tachycardia"
+    ],
+    "relatedStructures": [
+      "left-ventricle",
+      "right-ventricle",
+      "purkinje-fibers",
+      "interventricular-septum",
+      "coronary-arteries"
+    ],
+    "physiologyChanges": [
+      "Loss of coordinated ventricular activation, producing a wide QRS complex",
+      "Severely shortened diastolic filling with markedly reduced stroke volume",
+      "Loss of atrioventricular synchrony, causing cannon a waves and variable first heart sound",
+      "Complete loss of cardiac output in ventricular fibrillation",
+      "Prolonged or abnormal repolarisation in channelopathies"
+    ],
+    "progression": [
+      {
+        "stage": "Ventricular ectopy",
+        "text": "Isolated premature ventricular complexes; frequently benign, but a very high burden can cause cardiomyopathy."
+      },
+      {
+        "stage": "Non-sustained VT",
+        "text": "Three or more consecutive ventricular beats lasting under 30 seconds. Prognostic significance depends entirely on the underlying substrate."
+      },
+      {
+        "stage": "Sustained VT",
+        "text": "Lasting 30 seconds or longer, or requiring intervention. Usually indicates significant structural disease."
+      },
+      {
+        "stage": "Ventricular fibrillation",
+        "text": "Chaotic activity with no output. Immediate defibrillation is the only effective treatment."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Palpitations or an awareness of skipped beats",
+        "Presyncope and syncope, often without warning",
+        "Chest pain and breathlessness",
+        "Sudden collapse with no preceding symptoms in ventricular fibrillation"
+      ],
+      "signs": [
+        "Rapid regular pulse in monomorphic VT; absent pulse in VF",
+        "Cannon a waves and variable first heart sound from atrioventricular dissociation",
+        "Hypotension, poor perfusion and reduced consciousness",
+        "Cardiac arrest with absent pulse and respiration"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "12-lead ECG",
+        "findings": "Wide-complex tachycardia; features favouring VT include AV dissociation, capture and fusion beats, and extreme axis. Assume a wide-complex tachycardia is VT until proven otherwise."
+      },
+      {
+        "modality": "Ambulatory and event monitoring",
+        "findings": "Quantifies ectopic burden and documents non-sustained episodes."
+      },
+      {
+        "modality": "Echocardiography and cardiac MRI",
+        "findings": "Identify structural substrate — scar, cardiomyopathy, ARVC — with late gadolinium enhancement being particularly informative."
+      },
+      {
+        "modality": "Ischaemia assessment",
+        "findings": "Coronary imaging or functional testing, since ischaemia is a common and treatable trigger."
+      },
+      {
+        "modality": "Genetic testing and family screening",
+        "findings": "Where a channelopathy or inherited cardiomyopathy is suspected, with cascade screening of relatives."
+      },
+      {
+        "modality": "Electrophysiology study",
+        "findings": "Substrate mapping and inducibility testing; enables ablation of the critical isthmus."
+      }
+    ],
+    "complications": [
+      "Sudden cardiac death",
+      "Hypoxic brain injury after resuscitated arrest",
+      "Recurrent shocks and electrical storm in ICD recipients",
+      "Tachycardia-induced cardiomyopathy from high ectopic burden",
+      "Psychological consequences including anxiety and post-traumatic stress"
+    ],
+    "treatment": {
+      "principles": "Acute management follows resuscitation algorithms: immediate defibrillation for pulseless VT and VF, and synchronised cardioversion for unstable VT with a pulse. Long-term management centres on treating the substrate, correcting reversible triggers, and defibrillator implantation for those at high risk. Educational summary only — follow current resuscitation guidelines and local protocols.",
+      "groups": [
+        {
+          "name": "Immediate resuscitation",
+          "detail": "High-quality CPR and prompt defibrillation, following current advanced life support algorithms."
+        },
+        {
+          "name": "Reversible cause correction",
+          "detail": "Revascularisation for ischaemia, correction of potassium and magnesium, withdrawal of QT-prolonging drugs."
+        },
+        {
+          "name": "Antiarrhythmic drugs",
+          "detail": "Beta-blockers are foundational; amiodarone and other agents are used for suppression, with awareness of proarrhythmia."
+        },
+        {
+          "name": "Implantable cardioverter defibrillator",
+          "detail": "For secondary prevention after a survived arrest and for primary prevention in defined high-risk groups."
+        },
+        {
+          "name": "Catheter ablation",
+          "detail": "For recurrent monomorphic VT, electrical storm and idiopathic outflow tract or fascicular tachycardias."
+        },
+        {
+          "name": "Family screening",
+          "detail": "Clinical and genetic evaluation of relatives when an inherited condition is identified."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Treat any wide-complex tachycardia as ventricular tachycardia until proven otherwise.",
+      "AV dissociation, capture beats and fusion beats strongly favour VT over SVT with aberrancy.",
+      "Prognosis depends far more on the underlying substrate than on the arrhythmia itself.",
+      "Ventricular fibrillation is the immediate mechanism of most sudden cardiac deaths; only defibrillation reverses it.",
+      "Always search for reversible triggers: ischaemia, electrolytes and QT-prolonging drugs.",
+      "A sustained ventricular arrhythmia should prompt evaluation of the patient's family."
+    ],
+    "references": [
+      "braunwald",
+      "aha-professional",
+      "esc-guidelines-hub",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "arrhythmia-principles",
+      "ecg-essentials",
+      "heart-failure-principles"
+    ]
+  },
+  {
+    "id": "conduction-disorders",
+    "name": "Conduction Disorders & Bradyarrhythmias",
+    "abbr": "AV block",
+    "categoryId": "arrhythmias",
+    "featured": false,
+    "animationId": "conduction-disorders",
+    "tagline": "Failure of impulse generation or transmission — from sinus node dysfunction to complete atrioventricular block.",
+    "overview": "Conduction disorders result from failure at any point in the pathway from sinus node to Purkinje network. Sinus node dysfunction produces inappropriate bradycardia, pauses or chronotropic incompetence. Atrioventricular block is graded first, second or third degree, and the level of block — within the AV node or below it — determines both prognosis and the need for pacing. Nodal block is often vagally mediated, responds to atropine and may be benign; infranodal block is unpredictable, tends to progress, and generally requires pacing. Bundle branch and fascicular blocks are usually markers of underlying disease rather than problems in themselves.",
+    "riskFactors": {
+      "modifiable": [
+        "Rate-slowing drugs — beta-blockers, calcium channel blockers, digoxin, amiodarone",
+        "Electrolyte disturbance, especially hyperkalaemia",
+        "Myocardial ischaemia and infarction",
+        "Infection such as Lyme carditis",
+        "Hypothyroidism"
+      ],
+      "nonModifiable": [
+        "Increasing age with idiopathic fibrosis of the conduction system",
+        "Prior cardiac surgery or transcatheter valve intervention",
+        "Infiltrative disease such as amyloidosis and sarcoidosis",
+        "Congenital complete heart block",
+        "Genetic conduction disease"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Age-related degeneration",
+        "text": "Progressive fibrosis and calcification of the conduction system — historically termed Lev's and Lenègre's disease — is the commonest cause of acquired block in older adults."
+      },
+      {
+        "title": "Ischaemic injury",
+        "text": "Inferior infarction may cause nodal block through AV nodal artery involvement or increased vagal tone; this is usually transient. Anterior infarction causing block implies extensive septal necrosis and carries a worse prognosis."
+      },
+      {
+        "title": "Nodal versus infranodal block",
+        "text": "Block within the AV node produces a narrow-complex escape at 40–60 per minute and often improves with atropine. Infranodal block yields a slow, unreliable wide-complex escape at 20–40 per minute."
+      },
+      {
+        "title": "Wenckebach physiology",
+        "text": "In Mobitz type I block, progressive fatigue of nodal conduction lengthens the PR interval until a beat fails, after which the node recovers and the cycle repeats."
+      },
+      {
+        "title": "Escape rhythm dependence",
+        "text": "In complete block, atrial and ventricular activity become dissociated and the ventricles depend entirely on a subsidiary pacemaker, which may be slow, unreliable or absent."
+      },
+      {
+        "title": "Haemodynamic consequences",
+        "text": "Bradycardia reduces cardiac output when stroke volume cannot compensate; loss of atrioventricular synchrony reduces filling and produces cannon a waves. Long pauses cause syncope, and prolonged asystole causes death."
+      }
+    ],
+    "anatomyInvolved": [
+      "Sinuatrial node and the surrounding atrial tissue",
+      "Atrioventricular node in the triangle of Koch",
+      "Bundle of His and its branches within the interventricular septum",
+      "Fascicles of the left bundle and the Purkinje network",
+      "Coronary supply to the nodes — sinuatrial and AV nodal arteries"
+    ],
+    "relatedStructures": [
+      "sa-node",
+      "av-node",
+      "bundle-of-his",
+      "purkinje-fibers",
+      "interventricular-septum"
+    ],
+    "physiologyChanges": [
+      "Reduced heart rate with a fall in cardiac output when stroke volume cannot compensate",
+      "Loss of atrioventricular synchrony and of the atrial contribution to filling",
+      "Prolonged PR interval, dropped beats, or complete atrioventricular dissociation",
+      "Dependence on subsidiary pacemakers with slower and less reliable intrinsic rates",
+      "Widened QRS when the escape focus lies below the bundle of His"
+    ],
+    "progression": [
+      {
+        "stage": "First-degree block",
+        "text": "PR interval greater than 200 ms with every impulse conducted. Usually asymptomatic; marked prolongation can impair AV timing."
+      },
+      {
+        "stage": "Second-degree Mobitz I",
+        "text": "Progressive PR prolongation until a beat is dropped. Usually nodal and often benign."
+      },
+      {
+        "stage": "Second-degree Mobitz II",
+        "text": "Sudden non-conducted P waves without PR prolongation. Usually infranodal, unpredictable, and an indication for pacing."
+      },
+      {
+        "stage": "Complete (third-degree) block",
+        "text": "No atrioventricular conduction; atria and ventricles beat independently. Requires pacing unless a clearly reversible cause is found."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Dizziness, presyncope and syncope, often abrupt and without warning (Stokes–Adams attacks)",
+        "Fatigue and exertional breathlessness",
+        "Reduced exercise capacity from chronotropic incompetence",
+        "Often entirely asymptomatic and found incidentally"
+      ],
+      "signs": [
+        "Bradycardia, sometimes profound",
+        "Cannon a waves in the jugular venous pulse in complete block",
+        "Variable intensity of the first heart sound",
+        "Wide or paradoxical splitting of the second heart sound in bundle branch block",
+        "Hypotension and signs of poor perfusion if severe"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "12-lead ECG",
+        "findings": "The primary test — PR interval, pattern of dropped beats, QRS width and escape rhythm rate all localise the level of block."
+      },
+      {
+        "modality": "Ambulatory and prolonged monitoring",
+        "findings": "Holter, patch and implantable loop recorders to capture intermittent block, particularly in unexplained syncope."
+      },
+      {
+        "modality": "Blood tests",
+        "findings": "Potassium, thyroid function, digoxin level, and inflammatory or infective markers including Lyme serology in the right setting."
+      },
+      {
+        "modality": "Echocardiography",
+        "findings": "Identifies structural heart disease and infiltrative cardiomyopathy."
+      },
+      {
+        "modality": "Exercise testing",
+        "findings": "Assesses chronotropic competence and whether block worsens with exercise, which suggests an infranodal level."
+      },
+      {
+        "modality": "Electrophysiology study",
+        "findings": "His-bundle recording precisely localises the site of block when non-invasive testing is inconclusive."
+      }
+    ],
+    "complications": [
+      "Syncope with injury",
+      "Asystole and sudden death",
+      "Bradycardia-induced heart failure",
+      "Ventricular arrhythmia in the setting of profound bradycardia and QT prolongation",
+      "Pacemaker-related complications including lead problems, infection and pacing-induced cardiomyopathy"
+    ],
+    "treatment": {
+      "principles": "Identify and reverse the treatable — drugs, electrolytes, ischaemia, infection — then decide whether permanent pacing is required based on symptoms and the level of block. Educational summary only; follow current guidelines and resuscitation protocols.",
+      "groups": [
+        {
+          "name": "Reversible cause management",
+          "detail": "Withdraw offending drugs, correct hyperkalaemia and hypothyroidism, treat ischaemia and infection."
+        },
+        {
+          "name": "Acute measures",
+          "detail": "Atropine for nodal block, chronotropic infusions, and temporary transcutaneous or transvenous pacing for haemodynamically significant bradycardia."
+        },
+        {
+          "name": "Permanent pacing",
+          "detail": "For symptomatic sinus node dysfunction, Mobitz II and complete block; single- or dual-chamber devices selected by rhythm and clinical need."
+        },
+        {
+          "name": "Physiological pacing",
+          "detail": "His-bundle and left bundle branch area pacing preserve native activation and reduce the risk of pacing-induced cardiomyopathy."
+        },
+        {
+          "name": "Cardiac resynchronisation",
+          "detail": "Considered where a high burden of ventricular pacing is expected in patients with impaired ventricular function."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "The site of block matters more than the degree: nodal block is often benign, infranodal is not.",
+      "Mobitz I shows progressive PR prolongation; Mobitz II shows sudden dropped beats.",
+      "A narrow escape at 40–60 per minute suggests a junctional origin; a wide escape at 20–40 suggests ventricular.",
+      "Always exclude drugs, hyperkalaemia, ischaemia and hypothyroidism before implanting a pacemaker.",
+      "Block after inferior infarction is usually transient; after anterior infarction it implies extensive damage."
+    ],
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "aha-professional",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials",
+      "arrhythmia-principles",
+      "cardiovascular-examination"
+    ]
+  }
+]

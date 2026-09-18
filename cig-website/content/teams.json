@@ -1,0 +1,73 @@
+[
+  {
+    "id": "Medical",
+    "name": "Medical Team",
+    "shortName": "Medical",
+    "description": "Designs and delivers CIG's peer teaching programme — anatomy and physiology sessions, ECG workshops, exam-focused revision and the written teaching resources on this platform.",
+    "headId": "head-medical",
+    "memberIds": ["m-edu-1", "m-edu-2", "m-edu-3", "m-edu-4", "m-edu-5"],
+    "icon": "stethoscope",
+    "accent": "crimson"
+  },
+{
+   "id": "Social Media",
+  "name": "Social Media Team", 
+  "shortName": "Social Media", 
+  "description": "Owns CIG's visual identity and voice: design, photography, social media, the newsletter and this platform's content presentation.", 
+  "headId": "head-media", 
+  "memberIds": ["m-med-1", "m-med-2", "m-med-3", "m-med-4"], 
+  "icon": "globe", 
+  "accent": "azure" 
+  },  
+  {
+    "id": "Affairs",
+    "name": "Affairs Team",
+    "shortName": "Affairs",
+    "description": "Plans and runs CIG's calendar — symposia, guest lectures, skills workshops, conference participation and the group's flagship annual event.",
+    "headId": "head-Affairs",
+    "memberIds": ["m-Affairs-1", "m-Affairs-2", "m-Affairs-3", "m-Affairs-4"],
+    "icon": "calendar",
+    "accent": "amber"
+  },
+  {
+    "id": "research",
+    "name": "Research Team",
+    "shortName": "Research",
+    "description": "Supports students through the research process: question design, literature review, ethics and approvals, data handling, abstract writing and presentation.",
+    "headId": "head-research",
+    "memberIds": ["m-res-1", "m-res-2", "m-res-3", "m-res-4"],
+    "icon": "brain",
+    "accent": "blue"
+  },
+  {
+    "id": "Journal",
+    "name": "Journal Team",
+    "shortName": "Journal",
+    "description": "Manages the publication and dissemination of CIG's research and academic content.",
+    "headId": "head-Journal",
+    "memberIds": ["m-jnl-1", "m-jnl-2", "m-jnl-3", "m-jnl-4", "m-jnl-5"],
+    "icon": "book",
+    "accent": "crimson"
+  },
+  {
+    "id": "Planning",
+    "name": "Planning Team",
+    "shortName": "Planning",
+    "description": "Oversees the strategic planning and coordination of CIG's activities and initiatives.",
+    "headId": "head-Planning",
+    "memberIds": ["m-pln-1", "m-pln-2", "m-pln-3", "m-pln-4"],
+
+    "icon": "compass",
+    "accent": "blue"
+  },
+  {
+  "id": "FRC",
+  "name": "FRC Team",
+  "shortName": "FRC",
+  "description": "Oversees CIG's financial planning, budgeting, and sponsorship management while coordinating research grants and faculty relations to keep all group initiatives fully funded.",
+  "headId": "head-FRC",
+  "memberIds": ["m-FRC-1", "m-FRC-2"],
+  "icon": "target",
+  "accent": "Green"
+}
+]

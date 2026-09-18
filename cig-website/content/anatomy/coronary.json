@@ -1,0 +1,209 @@
+[
+  {
+    "id": "coronary-arteries",
+    "name": "Coronary Arteries",
+    "abbr": "LCA / RCA",
+    "latin": "Arteriae coronariae",
+    "category": "coronary",
+    "meshName": "heart.coronary_arteries",
+    "color": "#ef5350",
+    "summary": "The heart's own arterial supply. Left and right coronary arteries arise from the aortic sinuses and fill predominantly during diastole.",
+    "synonyms": [
+      "LAD", "left anterior descending", "left circumflex", "LCx", "right coronary artery", "RCA",
+      "left main stem", "posterior descending artery", "PDA", "obtuse marginal", "diagonal"
+    ],
+    "anatomy": {
+      "location": "Arise from the right and left sinuses of Valsalva immediately above the aortic valve, then run in the atrioventricular and interventricular grooves, giving branches that penetrate the myocardium from epicardium towards endocardium.",
+      "shape": "The left main coronary artery is short and divides into the left anterior descending artery, which runs in the anterior interventricular groove to the apex, and the left circumflex artery, which runs in the left atrioventricular groove. The right coronary artery runs in the right atrioventricular groove. In roughly 85% of hearts the posterior descending artery arises from the right coronary artery (right dominance); in about 8% from the circumflex (left dominance), with the remainder co-dominant.",
+      "relations": [
+        "Left main artery passes between the pulmonary trunk and the left atrial appendage",
+        "Left anterior descending artery lies in the anterior interventricular groove with the great cardiac vein",
+        "Left circumflex artery accompanies the coronary sinus in the left atrioventricular groove",
+        "Right coronary artery gives the sinuatrial nodal branch, the acute marginal branches and, usually, the AV nodal branch at the crux"
+      ],
+      "attachments": [
+        "Ostia in the right and left aortic sinuses",
+        "Epicardial course beneath a variable amount of fat, with penetrating branches entering the myocardium",
+        "Septal perforators from the LAD supplying the anterior two thirds of the interventricular septum"
+      ],
+      "bloodSupply": "The coronary arteries are themselves supplied by vasa vasorum in their adventitia.",
+      "venousDrainage": "Accompanying cardiac veins drain to the coronary sinus and thence the right atrium.",
+      "innervation": "Rich sympathetic and parasympathetic innervation; however, flow is dominated by local metabolic regulation rather than neural tone.",
+      "function": "Deliver oxygen and substrate to the myocardium at rest and increase flow several-fold during exercise to meet the rise in myocardial oxygen demand."
+    },
+    "physiology": {
+      "function": "Match myocardial oxygen supply to demand. Because myocardial oxygen extraction is already near-maximal at rest, any increase in demand must be met almost entirely by increasing coronary flow.",
+      "pressures": [
+        { "label": "Resting coronary blood flow", "value": "approximately 250 mL/min, around 5% of cardiac output" },
+        { "label": "Myocardial oxygen extraction", "value": "roughly 70–80% at rest — near maximal" },
+        { "label": "Coronary flow reserve", "value": "flow can rise about four- to five-fold above resting values" },
+        { "label": "Coronary perfusion pressure", "value": "aortic diastolic pressure minus left ventricular end-diastolic pressure" }
+      ],
+      "electrical": "The sinuatrial nodal artery arises from the right coronary artery in roughly 60% of hearts and from the circumflex in the remainder; the AV nodal artery arises from whichever artery is dominant. This explains the bradyarrhythmias that accompany inferior infarction.",
+      "hemodynamics": [
+        "Left coronary flow occurs almost entirely in diastole, because systolic myocardial compression collapses intramural vessels; right coronary flow is more evenly distributed because right ventricular pressure is low",
+        "Tachycardia shortens diastole disproportionately and therefore reduces the time available for coronary perfusion",
+        "The subendocardium is compressed most and perfused last, making it the first region to become ischaemic",
+        "Flow is regulated by local metabolites — adenosine, nitric oxide and others — producing autoregulation across a wide range of perfusion pressures",
+        "Fractional flow reserve compares distal to aortic pressure during maximal hyperaemia to judge whether a stenosis is functionally significant"
+      ],
+      "concepts": ["Coronary flow reserve", "Fractional flow reserve", "Myocardial oxygen supply and demand", "Autoregulation", "Subendocardial vulnerability"]
+    },
+    "pathology": [
+      {
+        "name": "Atherosclerosis",
+        "note": "Lipid-driven, inflammatory arterial wall disease — the substrate for almost all coronary artery disease.",
+        "diseaseId": "atherosclerosis"
+      },
+      {
+        "name": "Myocardial infarction",
+        "note": "Plaque rupture or erosion with superimposed thrombus causing acute occlusion and myocardial necrosis.",
+        "diseaseId": "myocardial-infarction"
+      },
+      {
+        "name": "Stable angina",
+        "note": "A flow-limiting stenosis that is adequate at rest but cannot meet the demand of exertion.",
+        "diseaseId": "stable-angina"
+      },
+      {
+        "name": "Coronary artery spasm",
+        "note": "Vasospastic (Prinzmetal) angina causing transient occlusion, often with ST elevation, in the absence of a fixed obstruction."
+      },
+      {
+        "name": "Spontaneous coronary artery dissection",
+        "note": "Intramural haematoma separating the arterial wall layers; an important cause of infarction in younger women."
+      },
+      {
+        "name": "Coronary anomalies",
+        "note": "Anomalous origin with an interarterial course is a recognised cause of sudden cardiac death in young athletes."
+      }
+    ],
+    "clinical": {
+      "relevance": "Coronary anatomy determines the ECG territory, the myocardium at risk and the revascularisation strategy — which is why every student should be able to map an artery to a set of ECG leads and a region of wall.",
+      "conditions": ["Chronic coronary syndromes", "ST-elevation and non-ST-elevation myocardial infarction", "Vasospastic angina", "Coronary microvascular dysfunction"],
+      "examination": [
+        "Often entirely normal between events — the diagnosis is largely historical and investigative",
+        "Levine's sign and exertional chest discomfort relieved by rest or nitrates",
+        "Signs of a complication: new murmur, third heart sound, pulmonary oedema, hypotension",
+        "Evidence of risk factors — xanthelasma, tendon xanthomata, retinopathy, absent peripheral pulses"
+      ],
+      "imaging": [
+        "Invasive coronary angiography, with fractional flow reserve for intermediate lesions",
+        "CT coronary angiography and coronary artery calcium scoring",
+        "Stress testing — exercise ECG, stress echocardiography, perfusion imaging, stress cardiac MRI",
+        "Intravascular ultrasound and optical coherence tomography for plaque characterisation"
+      ],
+      "procedures": [
+        "Percutaneous coronary intervention with stent implantation",
+        "Coronary artery bypass grafting, typically with the left internal mammary artery to the LAD",
+        "Thrombolysis where timely primary PCI is unavailable",
+        "Intracoronary imaging and physiology to guide intervention"
+      ]
+    },
+    "keyPoints": [
+      "Arise from the right and left aortic sinuses, immediately above the aortic valve cusps.",
+      "LAD supplies the anterior wall, anterior septum and apex; circumflex the lateral wall; RCA the inferior wall and, usually, the AV node.",
+      "Right dominance — the posterior descending artery from the RCA — occurs in roughly 85% of hearts.",
+      "Left coronary perfusion occurs almost entirely in diastole; tachycardia therefore reduces supply.",
+      "Oxygen extraction is near-maximal at rest, so increased demand must be met by increased flow."
+    ],
+    "references": ["gray", "moore", "braunwald", "esc-acs-2023", "umdmi-2018"],
+    "related": {
+      "structures": ["aorta", "aortic-valve", "left-ventricle", "coronary-veins", "sa-node", "av-node"],
+      "diseases": ["atherosclerosis", "myocardial-infarction", "stable-angina", "heart-failure"],
+      "keyPoints": ["coronary-circulation", "ecg-essentials", "interventional-cardiology", "cardiac-imaging"]
+    }
+  },
+  {
+    "id": "coronary-veins",
+    "name": "Coronary Veins & Coronary Sinus",
+    "abbr": "CS",
+    "latin": "Sinus coronarius",
+    "category": "coronary",
+    "meshName": "heart.coronary_veins",
+    "color": "#5f86c9",
+    "summary": "The venous drainage of the myocardium. Most returns through the coronary sinus into the right atrium; the remainder drains directly by anterior cardiac and Thebesian veins.",
+    "synonyms": ["coronary sinus", "great cardiac vein", "middle cardiac vein", "Thebesian veins", "anterior cardiac veins"],
+    "anatomy": {
+      "location": "The coronary sinus lies in the posterior part of the left atrioventricular groove and opens into the right atrium between the inferior vena caval orifice and the tricuspid annulus.",
+      "shape": "A short, wide venous channel roughly 2–3 cm long, guarded at its ostium by the Thebesian valve. It receives the great cardiac vein (which accompanies the LAD and then the circumflex), the middle cardiac vein (in the posterior interventricular groove), the small cardiac vein, the posterior vein of the left ventricle and the oblique vein of the left atrium (vein of Marshall).",
+      "relations": [
+        "Runs in the left atrioventricular groove alongside the left circumflex artery",
+        "Lies posterior and inferior to the left atrium",
+        "Its ostium forms one border of the triangle of Koch, which contains the AV node",
+        "Related inferiorly to the diaphragmatic surface of the heart"
+      ],
+      "attachments": [
+        "Opens into the right atrium at the coronary sinus ostium",
+        "Continuous with the great cardiac vein at the point where the oblique vein of the left atrium joins",
+        "Tributaries running alongside the major coronary arteries"
+      ],
+      "bloodSupply": "Vasa vasorum of the venous wall.",
+      "venousDrainage": "Delivers approximately 60–70% of myocardial venous return to the right atrium; anterior cardiac veins drain the right ventricle directly into the right atrium, and Thebesian veins drain small volumes into all four chambers.",
+      "innervation": "Cardiac plexus; the vein of Marshall region is rich in autonomic ganglia and has arrhythmic relevance.",
+      "function": "Returns deoxygenated blood and metabolic products from the myocardium to the right atrium."
+    },
+    "physiology": {
+      "function": "Completes the coronary circulation. Coronary sinus blood has the lowest oxygen saturation in the body, reflecting the near-maximal extraction of oxygen by working myocardium.",
+      "pressures": [
+        { "label": "Coronary sinus oxygen saturation", "value": "approximately 30% — the lowest of any sampled blood" },
+        { "label": "Coronary sinus pressure", "value": "close to right atrial pressure, roughly 0–8 mmHg" },
+        { "label": "Share of myocardial venous return", "value": "approximately 60–70%" }
+      ],
+      "electrical": "Muscular sleeves around the coronary sinus and the ligament of Marshall can act as arrhythmic triggers, and the sinus is an important mapping landmark during electrophysiology studies.",
+      "hemodynamics": [
+        "Venous drainage occurs predominantly in systole, the mirror image of arterial inflow, because myocardial compression squeezes blood out of intramural veins",
+        "Thebesian venous drainage into the left heart contributes a small physiological right-to-left shunt",
+        "Because coronary sinus saturation is already very low, myocardial oxygen consumption is estimated from flow rather than extraction"
+      ],
+      "concepts": ["Myocardial oxygen extraction", "Physiological shunt", "Coronary sinus sampling"]
+    },
+    "pathology": [
+      {
+        "name": "Coronary sinus dilatation",
+        "note": "Most often caused by a persistent left superior vena cava draining into it, or by raised right atrial pressure."
+      },
+      {
+        "name": "Unroofed coronary sinus",
+        "note": "A rare defect creating a communication with the left atrium and a right-to-left shunt.",
+        "diseaseId": "congenital-heart-disease"
+      },
+      {
+        "name": "Lead-related complications",
+        "note": "Coronary sinus dissection or perforation during left ventricular lead placement for resynchronisation therapy."
+      }
+    ],
+    "clinical": {
+      "relevance": "The coronary sinus is the access route for the left ventricular lead in cardiac resynchronisation therapy, a landmark in electrophysiology, and the conduit for retrograde cardioplegia in cardiac surgery.",
+      "conditions": ["Persistent left superior vena cava", "Unroofed coronary sinus", "Coronary sinus thrombosis (rare)"],
+      "examination": [
+        "No direct physical signs; abnormalities are identified on imaging",
+        "Agitated saline injected into a left arm vein opacifying the coronary sinus before the right atrium suggests a persistent left SVC"
+      ],
+      "imaging": [
+        "Echocardiography showing a dilated coronary sinus in the parasternal long-axis view",
+        "Cardiac CT or venography for tributary anatomy before device implantation",
+        "Contrast venography during resynchronisation lead placement"
+      ],
+      "procedures": [
+        "Left ventricular lead placement via a coronary sinus tributary for cardiac resynchronisation therapy",
+        "Retrograde cardioplegia delivery during cardiac surgery",
+        "Coronary sinus catheterisation as a reference during electrophysiology studies",
+        "Ethanol infusion into the vein of Marshall in selected ablation procedures"
+      ]
+    },
+    "keyPoints": [
+      "The coronary sinus carries roughly 60–70% of myocardial venous return into the right atrium.",
+      "Its ostium sits in the triangle of Koch, next to the AV node.",
+      "Coronary sinus blood has the lowest oxygen saturation in the body, around 30%.",
+      "It is the access route for the left ventricular lead in cardiac resynchronisation therapy.",
+      "A dilated coronary sinus should prompt a search for a persistent left superior vena cava."
+    ],
+    "references": ["gray", "moore", "braunwald", "guyton"],
+    "related": {
+      "structures": ["right-atrium", "coronary-arteries", "av-node", "left-ventricle"],
+      "diseases": ["heart-failure", "congenital-heart-disease", "conduction-disorders"],
+      "keyPoints": ["coronary-circulation", "hemodynamics"]
+    }
+  }
+]

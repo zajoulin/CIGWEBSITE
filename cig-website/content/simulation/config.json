@@ -1,0 +1,97 @@
+{
+  "eyebrow": "Learning Hub · Clinical simulation",
+  "title": "Clinical Simulation",
+  "lede": "Enter the clinical environment. Examine the patient, obtain an ECG, and interpret the findings. Every case is a fictional teaching case drawn from a reviewed library, and the patient in front of you — the history, the observations, the tracing and the heart sounds — is one coherent picture.",
+  "cardTitle": "Clinical Simulation",
+  "cardText": "Enter the clinical environment. Examine the patient, obtain an ECG, and interpret the findings. You stand at the bedside, read the presentation, check the monitor, place all ten electrodes against real anatomical landmarks, acquire a twelve-lead ECG, interpret it systematically and answer for your clinical reasoning — then get a scored breakdown of everything you did.",
+  "cardCta": "Enter the clinical environment",
+  "safetyNote": "Educational simulation — not a real patient and not medical advice. Every case is fictional and written for teaching.",
+  "audioNote": "Heart sounds are synthesised from CIG's acoustic teaching model. They are educational representations of the timing, pitch and shape of each sound, not recordings of any patient.",
+  "levels": [
+    {
+      "id": "beginner",
+      "label": "Beginner",
+      "tagline": "Basic rhythm recognition",
+      "blurb": "The landmarks are outlined on the chest while you place the electrodes, the tolerance is generous, and the ECG question asks only what the rhythm is.",
+      "stages": ["brief", "electrodes", "acquire", "interpret", "score"],
+      "questionKinds": ["rhythm"],
+      "toleranceScale": 1.7,
+      "showPlacementGuides": true,
+      "showVitalsUpfront": true
+    },
+    {
+      "id": "intermediate",
+      "label": "Intermediate",
+      "tagline": "Systematic ECG interpretation",
+      "blurb": "No outlines on the chest. After acquisition you work through the ECG the way it should always be read: rate, rhythm, P waves, PR interval, QRS, axis, ST segment, T waves.",
+      "stages": ["brief", "electrodes", "acquire", "interpret", "score"],
+      "questionKinds": ["rhythm", "systematic"],
+      "toleranceScale": 1.15,
+      "showPlacementGuides": false,
+      "showVitalsUpfront": true
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced",
+      "tagline": "ECG in clinical context",
+      "blurb": "Symptoms, observations and the twelve-lead tracing together — then the question every clinician actually has to answer: what is the most likely interpretation?",
+      "stages": ["brief", "examination", "electrodes", "acquire", "interpret", "score"],
+      "questionKinds": ["rhythm", "systematic", "interpretation"],
+      "toleranceScale": 1,
+      "showPlacementGuides": false,
+      "showVitalsUpfront": true
+    },
+    {
+      "id": "simulation",
+      "label": "Clinical Simulation",
+      "tagline": "Full patient assessment",
+      "blurb": "The whole encounter. Read the presentation, examine the patient, place the electrodes, acquire the ECG, listen at the auscultation areas, interpret the findings and reason about what matters — with the observations withheld until you look at the monitor yourself.",
+      "stages": [
+        "brief",
+        "examination",
+        "electrodes",
+        "acquire",
+        "auscultation",
+        "interpret",
+        "score"
+      ],
+      "questionKinds": ["rhythm", "systematic", "interpretation", "action"],
+      "toleranceScale": 0.95,
+      "showPlacementGuides": false,
+      "showVitalsUpfront": false
+    }
+  ],
+  "stageLabels": [
+    {
+      "id": "brief",
+      "label": "Patient",
+      "task": "Read the presentation and take in the bedside."
+    },
+    {
+      "id": "examination",
+      "label": "Examination",
+      "task": "Examine the patient and check the observations on the monitor."
+    },
+    {
+      "id": "electrodes",
+      "label": "Electrodes",
+      "task": "Obtain a 12-lead ECG: place all ten electrodes correctly."
+    },
+    {
+      "id": "acquire",
+      "label": "Acquire",
+      "task": "Acquire the 12-lead ECG and read the tracing."
+    },
+    {
+      "id": "auscultation",
+      "label": "Auscultation",
+      "task": "Listen at each cardiac auscultation area."
+    },
+    {
+      "id": "interpret",
+      "label": "Interpret",
+      "task": "Interpret the ECG and answer the clinical questions."
+    },
+    { "id": "score", "label": "Debrief", "task": "Review your score and your mistakes." }
+  ]
+}

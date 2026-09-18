@@ -1,0 +1,188 @@
+[
+  {
+    "id": "systemic-arteries",
+    "name": "Major Systemic Arteries",
+    "abbr": "Arterial tree",
+    "latin": "Arteriae",
+    "category": "peripheral-arteries",
+    "meshName": "vessels.systemic_arteries",
+    "color": "#d94f68",
+    "summary": "The branching arterial tree that distributes blood from the aorta to every organ, and whose arterioles set systemic vascular resistance and therefore arterial pressure.",
+    "synonyms": [
+      "carotid artery", "subclavian artery", "brachial artery", "radial artery", "femoral artery",
+      "popliteal artery", "renal artery", "mesenteric artery", "arterioles", "resistance vessels"
+    ],
+    "anatomy": {
+      "location": "Extends from the aortic arch and descending aorta throughout the body. Principal named vessels include the common carotid and vertebral arteries to the head and brain, the subclavian–axillary–brachial–radial/ulnar chain to the upper limb, the coeliac, superior and inferior mesenteric and renal arteries to the viscera, and the common iliac–femoral–popliteal–tibial chain to the lower limb.",
+      "shape": "Three functional classes. Elastic conducting arteries (aorta, carotid, iliac) have abundant elastin. Muscular distributing arteries (brachial, radial, femoral) have a thick smooth muscle media. Arterioles are small, highly muscular vessels with a large wall-to-lumen ratio — the principal resistance vessels.",
+      "relations": [
+        "Arteries typically travel in neurovascular bundles with accompanying veins and nerves",
+        "Carotid arteries lie within the carotid sheath with the internal jugular vein and vagus nerve",
+        "The femoral artery lies lateral to the femoral vein and medial to the femoral nerve in the femoral triangle",
+        "Superficial sites — radial, brachial, carotid, femoral, popliteal, dorsalis pedis, posterior tibial — are the clinical pulse points"
+      ],
+      "attachments": [
+        "Arise sequentially from the aorta and its branches",
+        "Anastomoses form collateral networks — for example the circle of Willis and the palmar arches",
+        "Terminate in arterioles supplying capillary beds"
+      ],
+      "bloodSupply": "Vasa vasorum supply the adventitia and outer media of larger arteries; the intima is nourished by diffusion from the lumen — a fact central to the pathogenesis of atherosclerosis.",
+      "venousDrainage": "Accompanying venae comitantes and named deep veins.",
+      "innervation": "Sympathetic vasoconstrictor fibres are the dominant neural control; there is little vasodilator innervation, so vasodilatation occurs mainly by withdrawing sympathetic tone or through local metabolites.",
+      "function": "Conduct blood at high pressure, distribute it according to regional need, and — at arteriolar level — regulate both organ blood flow and total peripheral resistance."
+    },
+    "physiology": {
+      "function": "Deliver oxygenated blood to capillary beds while maintaining arterial pressure. Arteriolar tone determines both the distribution of cardiac output and the resistance against which the left ventricle works.",
+      "pressures": [
+        { "label": "Large artery pressure", "value": "approximately 120/80 mmHg" },
+        { "label": "Arteriolar pressure drop", "value": "the steepest fall in the circulation — most of systemic resistance resides here" },
+        { "label": "Capillary pressure", "value": "approximately 35 mmHg arteriolar end to 15 mmHg venular end" },
+        { "label": "Systemic vascular resistance", "value": "(mean arterial pressure − right atrial pressure) ÷ cardiac output" }
+      ],
+      "electrical": "Vascular smooth muscle exhibits myogenic tone — it constricts in response to stretch, contributing to autoregulation of organ blood flow.",
+      "hemodynamics": [
+        "Poiseuille's law: resistance is inversely proportional to the fourth power of radius, so small changes in arteriolar diameter have large effects on flow",
+        "Mean arterial pressure equals cardiac output multiplied by systemic vascular resistance",
+        "Autoregulation keeps flow to brain, heart and kidney relatively constant across a range of perfusion pressures",
+        "Endothelium-derived nitric oxide is a key vasodilator; its loss is an early event in vascular disease",
+        "Pulse wave reflection from the periphery augments central systolic pressure, increasingly so as arteries stiffen with age"
+      ],
+      "concepts": ["Systemic vascular resistance", "Poiseuille's law", "Mean arterial pressure", "Autoregulation", "Endothelial function", "Myogenic tone"]
+    },
+    "pathology": [
+      { "name": "Atherosclerosis", "note": "Systemic disease of large and medium arteries; the same process underlies coronary, cerebrovascular and peripheral arterial disease.", "diseaseId": "atherosclerosis" },
+      { "name": "Peripheral arterial disease", "note": "Atherosclerotic limb ischaemia causing claudication and, when severe, rest pain and tissue loss.", "diseaseId": "peripheral-arterial-disease" },
+      { "name": "Hypertension", "note": "Chronic elevation of arterial pressure with arteriolar remodelling and target organ damage.", "diseaseId": "hypertension" },
+      { "name": "Carotid stenosis", "note": "Atherosclerosis at the carotid bifurcation, a source of thromboembolic stroke.", "diseaseId": "atherosclerosis" },
+      { "name": "Vasculitis", "note": "Inflammatory arterial disease such as giant cell arteritis and Takayasu arteritis affecting large vessels." }
+    ],
+    "clinical": {
+      "relevance": "Atherosclerosis is a systemic disease: finding it in one arterial bed should prompt assessment of the others, and peripheral pulse examination remains one of the highest-yield bedside skills in medicine.",
+      "conditions": ["Peripheral arterial disease and critical limb ischaemia", "Carotid artery stenosis", "Renal artery stenosis", "Large vessel vasculitis"],
+      "examination": [
+        "Systematic palpation of radial, brachial, carotid, femoral, popliteal, dorsalis pedis and posterior tibial pulses",
+        "Auscultation for carotid, renal and femoral bruits",
+        "Ankle–brachial pressure index for peripheral arterial disease",
+        "Capillary refill, hair loss, cool skin and ulceration in chronic limb ischaemia",
+        "Blood pressure in both arms, and radiofemoral delay"
+      ],
+      "imaging": [
+        "Duplex ultrasound as the first-line vascular imaging test",
+        "CT and MR angiography for anatomy and planning",
+        "Digital subtraction angiography during intervention",
+        "Ankle–brachial and toe–brachial pressure measurement"
+      ],
+      "procedures": [
+        "Angioplasty and stenting",
+        "Bypass grafting for extensive occlusive disease",
+        "Carotid endarterectomy and carotid stenting",
+        "Arterial access for coronary and structural intervention — radial and femoral"
+      ]
+    },
+    "keyPoints": [
+      "Arterioles are the principal resistance vessels and set systemic vascular resistance.",
+      "Resistance varies with the fourth power of radius — tiny calibre changes matter enormously.",
+      "Mean arterial pressure = cardiac output × systemic vascular resistance.",
+      "Atherosclerosis is systemic; disease in one bed predicts disease in others.",
+      "Sympathetic tone is the dominant neural control; vasodilatation is mostly local and metabolic."
+    ],
+    "references": ["gray", "moore", "guyton", "esc-prevention-2021"],
+    "related": {
+      "structures": ["aorta", "systemic-veins", "coronary-arteries", "left-ventricle"],
+      "diseases": ["atherosclerosis", "hypertension", "peripheral-arterial-disease", "aortic-dissection"],
+      "keyPoints": ["hemodynamics", "cardiovascular-examination", "cardiovascular-pharmacology"]
+    }
+  },
+  {
+    "id": "systemic-veins",
+    "name": "Major Systemic Veins",
+    "abbr": "Venous system",
+    "latin": "Venae",
+    "category": "peripheral-veins",
+    "meshName": "vessels.systemic_veins",
+    "color": "#5d84c8",
+    "summary": "The low-pressure return circuit and the body's principal blood reservoir, holding roughly two thirds of total blood volume at any moment.",
+    "synonyms": [
+      "jugular vein", "subclavian vein", "brachiocephalic vein", "azygos vein", "portal vein",
+      "femoral vein", "great saphenous vein", "venous capacitance", "venules"
+    ],
+    "anatomy": {
+      "location": "Runs throughout the body in parallel with the arterial tree. Major channels include the internal jugular and subclavian veins uniting as the brachiocephalic veins, the azygos system draining the thoracic wall, the hepatic portal system draining the gut to the liver, and the iliofemoral system draining the lower limbs.",
+      "shape": "Thin-walled and highly distensible, with much larger lumens than their companion arteries. Limb veins contain bicuspid valves that enforce flow towards the heart. There are superficial and deep systems connected by perforating veins.",
+      "relations": [
+        "Deep veins accompany arteries as venae comitantes within neurovascular bundles",
+        "Superficial veins — great and small saphenous, cephalic, basilic — run in subcutaneous tissue",
+        "The internal jugular vein lies in the carotid sheath, lateral to the common carotid artery",
+        "The portal vein forms behind the pancreatic neck from the splenic and superior mesenteric veins"
+      ],
+      "attachments": [
+        "Converge on the superior and inferior venae cavae",
+        "Valves anchored to the vein wall in limb veins",
+        "Perforating veins connecting superficial to deep systems"
+      ],
+      "bloodSupply": "Vasa vasorum penetrating relatively deeply, since venous walls are thin and oxygen tension is low.",
+      "venousDrainage": "They constitute the venous drainage of the body.",
+      "innervation": "Sympathetic innervation of venous smooth muscle controls venous tone and therefore the distribution of blood between the reservoir and the central circulation.",
+      "function": "Return blood to the heart at low pressure and act as a variable-capacity reservoir that can be recruited to increase venous return when needed."
+    },
+    "physiology": {
+      "function": "Serve as capacitance vessels. Sympathetically mediated venoconstriction shifts blood from the periphery to the central circulation, increasing preload without any change in total blood volume.",
+      "pressures": [
+        { "label": "Venule pressure", "value": "approximately 15 mmHg" },
+        { "label": "Central venous pressure", "value": "approximately 0–8 mmHg" },
+        { "label": "Share of total blood volume", "value": "approximately 60–70% at any moment" },
+        { "label": "Compliance", "value": "roughly 20 times that of arteries" }
+      ],
+      "electrical": "Not electrically active.",
+      "hemodynamics": [
+        "Venous return depends on the pressure gradient between the peripheral venous reservoir (mean systemic filling pressure) and the right atrium",
+        "The skeletal muscle pump, aided by venous valves, is essential for return from the lower limbs during standing and walking",
+        "The respiratory pump augments return: inspiration lowers intrathoracic pressure and draws blood centrally",
+        "Venoconstriction increases preload and is a major compensatory mechanism in haemorrhage",
+        "Venodilators such as nitrates reduce preload, which is how they relieve pulmonary congestion and angina"
+      ],
+      "concepts": ["Venous capacitance", "Preload", "Mean systemic filling pressure", "Muscle pump", "Respiratory pump"]
+    },
+    "pathology": [
+      { "name": "Deep vein thrombosis", "note": "Thrombosis in deep limb veins, driven by Virchow's triad of stasis, endothelial injury and hypercoagulability.", "diseaseId": "deep-vein-thrombosis" },
+      { "name": "Pulmonary embolism", "note": "Embolisation of venous thrombus to the pulmonary arterial tree.", "diseaseId": "pulmonary-embolism" },
+      { "name": "Chronic venous insufficiency", "note": "Valvular incompetence causing venous hypertension, varicose veins, skin changes and ulceration.", "diseaseId": "chronic-venous-insufficiency" },
+      { "name": "Varicose veins", "note": "Dilated, tortuous superficial veins resulting from valve failure and sustained venous hypertension.", "diseaseId": "chronic-venous-insufficiency" }
+    ],
+    "clinical": {
+      "relevance": "Venous thromboembolism links the peripheral veins to the pulmonary circulation and is one of the leading preventable causes of hospital death — which is why risk assessment and thromboprophylaxis are routine on every admission.",
+      "conditions": ["Deep vein thrombosis and venous thromboembolism", "Chronic venous insufficiency and venous ulceration", "Superficial thrombophlebitis", "Post-thrombotic syndrome"],
+      "examination": [
+        "Unilateral limb swelling, warmth, tenderness and dilated superficial veins in DVT",
+        "Varicosities, haemosiderin staining, lipodermatosclerosis and gaiter-area ulceration in chronic insufficiency",
+        "Jugular venous pressure assessment for central venous pressure",
+        "Trendelenburg and tourniquet tests for the site of venous incompetence"
+      ],
+      "imaging": [
+        "Compression duplex ultrasound — the standard test for DVT",
+        "D-dimer testing within a validated clinical probability score",
+        "CT or MR venography for pelvic and central veins",
+        "Venous reflux studies for chronic insufficiency"
+      ],
+      "procedures": [
+        "Anticoagulation as the mainstay of venous thromboembolism treatment",
+        "Catheter-directed thrombolysis for extensive iliofemoral thrombosis",
+        "Endovenous ablation, sclerotherapy and surgical stripping for varicose veins",
+        "Compression therapy for venous ulceration and post-thrombotic syndrome"
+      ]
+    },
+    "keyPoints": [
+      "Hold roughly 60–70% of total blood volume — the body's capacitance reservoir.",
+      "About 20 times more compliant than arteries.",
+      "Limb veins have valves; the skeletal muscle pump is essential for return against gravity.",
+      "Venoconstriction increases preload without changing blood volume.",
+      "Virchow's triad — stasis, endothelial injury, hypercoagulability — explains venous thrombosis."
+    ],
+    "references": ["gray", "moore", "guyton", "ncbi-bookshelf"],
+    "related": {
+      "structures": ["inferior-vena-cava", "superior-vena-cava", "right-atrium", "systemic-arteries"],
+      "diseases": ["deep-vein-thrombosis", "pulmonary-embolism", "chronic-venous-insufficiency", "heart-failure"],
+      "keyPoints": ["hemodynamics", "cardiovascular-examination"]
+    }
+  }
+]

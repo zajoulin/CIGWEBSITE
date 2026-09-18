@@ -1,0 +1,406 @@
+[
+  {
+    "id": "sa-node",
+    "name": "Sinuatrial Node",
+    "abbr": "SA node",
+    "latin": "Nodus sinuatrialis",
+    "category": "conduction",
+    "meshName": "heart.sa_node",
+    "color": "#f2b544",
+    "summary": "The heart's dominant pacemaker: a crescent of specialised myocytes near the superior cavoatrial junction that spontaneously depolarises and sets heart rate.",
+    "synonyms": ["SA node", "SAN", "sinus node", "sinoatrial node", "pacemaker of the heart"],
+    "anatomy": {
+      "location": "In the subepicardium of the right atrium at the superior end of the crista terminalis, near the junction of the superior vena cava with the right atrial appendage — corresponding externally to the upper end of the sulcus terminalis.",
+      "shape": "A spindle- or crescent-shaped structure roughly 10–20 mm long, composed of small, pale, poorly contractile pacemaker cells embedded in a dense collagen matrix, with a central nodal artery running through it.",
+      "relations": [
+        "Superficial to the crista terminalis at the superior cavoatrial junction",
+        "Immediately deep to the epicardium, making it vulnerable in cannulation and surgery",
+        "Traversed by the sinuatrial nodal artery",
+        "Surrounded by a transitional zone of cells connecting it to working atrial myocardium"
+      ],
+      "attachments": [
+        "Continuous with atrial myocardium through transitional cells",
+        "No discrete insulating sheath, unlike the AV node"
+      ],
+      "bloodSupply": "The sinuatrial nodal artery — from the right coronary artery in roughly 60% of hearts and from the left circumflex artery in the remainder.",
+      "venousDrainage": "Small atrial veins draining into the right atrium and coronary sinus.",
+      "innervation": "Densely innervated. Vagal (parasympathetic) fibres, predominantly from the right vagus, slow the rate; sympathetic fibres from the upper thoracic chain accelerate it.",
+      "function": "Generates the spontaneous action potentials that initiate every normal heartbeat and adjusts rate continuously in response to autonomic tone."
+    },
+    "physiology": {
+      "function": "Exhibits automaticity — spontaneous phase 4 depolarisation that carries the membrane to threshold without external stimulus, at a rate faster than any other pacemaker, so it dominates the heart.",
+      "pressures": [
+        { "label": "Intrinsic rate", "value": "approximately 60–100 beats per minute" },
+        { "label": "Resting membrane potential", "value": "approximately −60 mV — less negative than working myocardium" },
+        { "label": "Upstroke", "value": "calcium-dependent, mediated by L-type calcium channels" },
+        { "label": "Pacemaker current", "value": "the funny current (If), carried by HCN channels" }
+      ],
+      "electrical": "Phase 4 depolarisation is driven by the funny current together with a calcium clock of rhythmic sarcoplasmic reticulum calcium release. There is no true phase 1 or 2. Depolarisation spreads through atrial myocardium to produce the P wave, and preferentially along Bachmann's bundle to the left atrium.",
+      "hemodynamics": [
+        "Sympathetic stimulation steepens phase 4 and increases rate; vagal stimulation hyperpolarises the cell and flattens phase 4, slowing it",
+        "Heart rate is a principal determinant of cardiac output and of myocardial oxygen demand",
+        "Because coronary perfusion occurs largely in diastole, rate control has direct consequences for myocardial supply",
+        "Sinus arrhythmia — rate increasing on inspiration — is a normal finding, especially in the young"
+      ],
+      "concepts": ["Automaticity", "Funny current (If)", "Chronotropy", "Sinus arrhythmia", "Overdrive suppression"]
+    },
+    "pathology": [
+      {
+        "name": "Sick sinus syndrome",
+        "note": "Sinus node dysfunction producing inappropriate bradycardia, sinus pauses, chronotropic incompetence, or the tachycardia–bradycardia syndrome.",
+        "diseaseId": "conduction-disorders"
+      },
+      {
+        "name": "Sinus bradycardia and sinus tachycardia",
+        "note": "Physiological in athletes and in exercise or illness respectively; pathological when inappropriate to context.",
+        "diseaseId": "conduction-disorders"
+      },
+      {
+        "name": "Atrial fibrillation",
+        "note": "Chaotic atrial activity overrides sinus node control; sinus node dysfunction and atrial fibrillation frequently coexist.",
+        "diseaseId": "atrial-fibrillation"
+      },
+      {
+        "name": "Ischaemic sinus node dysfunction",
+        "note": "Occlusion proximal to the sinuatrial nodal artery, usually in inferior infarction, can cause sinus bradycardia or arrest.",
+        "diseaseId": "myocardial-infarction"
+      }
+    ],
+    "clinical": {
+      "relevance": "Sinus node dysfunction is one of the commonest indications for permanent pacing, and the ability to distinguish physiological from pathological bradycardia is a core clinical skill.",
+      "conditions": ["Sick sinus syndrome", "Tachycardia–bradycardia syndrome", "Inappropriate sinus tachycardia", "Chronotropic incompetence"],
+      "examination": [
+        "Slow or irregular pulse, sometimes with pauses",
+        "Symptoms of dizziness, presyncope, syncope or exertional fatigue",
+        "Absence of an appropriate rate rise with exertion"
+      ],
+      "imaging": [
+        "12-lead ECG showing sinus bradycardia, sinus pauses or sinoatrial exit block",
+        "Ambulatory Holter monitoring and implantable loop recorders to capture intermittent events",
+        "Exercise testing for chronotropic competence",
+        "Electrophysiology study with sinus node recovery time in selected cases"
+      ],
+      "procedures": [
+        "Permanent pacemaker implantation for symptomatic sinus node dysfunction",
+        "Withdrawal of rate-slowing drugs where they are the cause",
+        "Ivabradine, which acts directly on the funny current, for selected inappropriate sinus tachycardia"
+      ]
+    },
+    "keyPoints": [
+      "Located at the superior end of the crista terminalis at the cavoatrial junction.",
+      "Intrinsic rate approximately 60–100 beats per minute — the fastest pacemaker, so it dominates.",
+      "Depolarisation is calcium-dependent, with phase 4 driven by the funny current.",
+      "Supplied by the sinuatrial nodal artery, from the RCA in about 60% of hearts.",
+      "Its activity produces the P wave; it generates no signal visible on the surface ECG itself."
+    ],
+    "references": ["gray", "guyton", "braunwald", "aha-af-2023"],
+    "related": {
+      "structures": ["right-atrium", "av-node", "coronary-arteries", "superior-vena-cava"],
+      "diseases": ["conduction-disorders", "atrial-fibrillation", "myocardial-infarction"],
+      "keyPoints": ["ecg-essentials", "arrhythmia-principles", "cardiac-cycle"]
+    }
+  },
+  {
+    "id": "av-node",
+    "name": "Atrioventricular Node",
+    "abbr": "AV node",
+    "latin": "Nodus atrioventricularis",
+    "category": "conduction",
+    "meshName": "heart.av_node",
+    "color": "#f2b544",
+    "summary": "The sole normal electrical connection between atria and ventricles. It deliberately delays conduction, allowing the atria to finish emptying before ventricular systole.",
+    "synonyms": ["AV node", "AVN", "atrioventricular node", "triangle of Koch", "node of Tawara"],
+    "anatomy": {
+      "location": "In the right atrial subendocardium within the triangle of Koch — bounded by the tendon of Todaro, the septal leaflet of the tricuspid valve and the coronary sinus ostium.",
+      "shape": "A small, flattened oval structure a few millimetres across, with compact and transitional zones. Slow and fast conduction pathways enter it, providing the substrate for atrioventricular nodal re-entrant tachycardia.",
+      "relations": [
+        "Anterior to the coronary sinus ostium and superior to the tricuspid septal leaflet attachment",
+        "Continues anteriorly as the bundle of His, penetrating the central fibrous body",
+        "Lies close to the membranous interventricular septum and aortic root",
+        "Insulated from ventricular myocardium by the fibrous skeleton except through the bundle of His"
+      ],
+      "attachments": [
+        "Receives atrial input through transitional cells via fast and slow pathways",
+        "Continuous distally with the penetrating bundle of His",
+        "Surrounded by the insulating central fibrous body"
+      ],
+      "bloodSupply": "The AV nodal artery, arising from the dominant coronary artery at the crux — the right coronary artery in roughly 85% of hearts. It also receives a contribution from septal perforators of the LAD in many people.",
+      "venousDrainage": "Small veins draining to the coronary sinus.",
+      "innervation": "Rich autonomic innervation. Vagal stimulation — predominantly from the left vagus — slows conduction and prolongs the PR interval; sympathetic stimulation enhances conduction.",
+      "function": "Delays impulse transmission between atria and ventricles and protects the ventricles from excessively rapid atrial rates."
+    },
+    "physiology": {
+      "function": "Introduces a conduction delay of roughly 100 ms, contributing most of the PR interval. This ensures atrial contraction is complete before the ventricles contract, optimising ventricular filling.",
+      "pressures": [
+        { "label": "Conduction velocity", "value": "approximately 0.05 m/s — the slowest in the heart" },
+        { "label": "Intrinsic escape rate", "value": "approximately 40–60 beats per minute" },
+        { "label": "Normal PR interval", "value": "120–200 ms" },
+        { "label": "Upstroke", "value": "calcium-dependent, like the sinus node" }
+      ],
+      "electrical": "Slow conduction results from calcium-dependent action potentials and poor gap-junction coupling. Decremental conduction — progressive slowing at faster rates — protects the ventricle during atrial fibrillation or flutter. Dual pathway physiology underlies AV nodal re-entrant tachycardia.",
+      "hemodynamics": [
+        "The AV delay preserves the atrial contribution to ventricular filling",
+        "In atrial fibrillation the node filters a chaotic atrial rate into an irregular but survivable ventricular response",
+        "Excessive delay or block causes loss of AV synchrony and can produce cannon a waves and pacemaker syndrome",
+        "AV nodal blocking drugs — beta-blockers, non-dihydropyridine calcium channel blockers, digoxin — are the basis of rate control"
+      ],
+      "concepts": ["AV delay", "Decremental conduction", "Dual AV nodal pathways", "AV synchrony", "Escape rhythm"]
+    },
+    "pathology": [
+      {
+        "name": "Atrioventricular block",
+        "note": "First-degree (prolonged PR), second-degree (Mobitz I typically nodal, Mobitz II typically infranodal) and third-degree (complete) block.",
+        "diseaseId": "conduction-disorders"
+      },
+      {
+        "name": "AV nodal re-entrant tachycardia",
+        "note": "The commonest regular supraventricular tachycardia, using fast and slow pathways in a re-entrant circuit.",
+        "diseaseId": "supraventricular-tachycardia"
+      },
+      {
+        "name": "Inferior myocardial infarction",
+        "note": "Occlusion of a right-dominant coronary artery may cause AV nodal ischaemia and heart block, usually transient and responsive to atropine.",
+        "diseaseId": "myocardial-infarction"
+      },
+      {
+        "name": "Drug-induced AV block",
+        "note": "Beta-blockers, verapamil, diltiazem, digoxin and adenosine all suppress nodal conduction."
+      }
+    ],
+    "clinical": {
+      "relevance": "The AV node is the target of rate-control drugs, the circuit of the commonest supraventricular tachycardia, and the structure at risk during tricuspid annular surgery, septal ablation and slow pathway ablation.",
+      "conditions": ["Second- and third-degree AV block", "AV nodal re-entrant tachycardia", "Drug-induced bradycardia", "Iatrogenic heart block after valve intervention"],
+      "examination": [
+        "Bradycardia with cannon a waves and variable first heart sound intensity in complete heart block",
+        "Regular tachycardia at roughly 150–250 per minute in AVNRT, sometimes with visible neck pulsations (frog sign)",
+        "Termination of AVNRT with vagal manoeuvres or adenosine"
+      ],
+      "imaging": [
+        "12-lead ECG — the primary tool; PR interval, block pattern and QRS width localise the level of block",
+        "Ambulatory monitoring for intermittent block",
+        "Electrophysiology study with His-bundle recording to distinguish nodal from infranodal block"
+      ],
+      "procedures": [
+        "Slow pathway ablation for AV nodal re-entrant tachycardia",
+        "Permanent pacemaker implantation for high-grade or symptomatic block",
+        "AV node ablation with pacing in refractory atrial fibrillation",
+        "Careful avoidance during tricuspid surgery and transcatheter aortic valve implantation"
+      ]
+    },
+    "keyPoints": [
+      "Sits in the triangle of Koch — tendon of Todaro, tricuspid septal leaflet, coronary sinus ostium.",
+      "Conducts at roughly 0.05 m/s, the slowest tissue in the heart; this delay produces the PR interval.",
+      "Protects the ventricles from rapid atrial rates by decremental conduction.",
+      "Intrinsic escape rate is approximately 40–60 beats per minute.",
+      "Supplied by the AV nodal artery from the dominant coronary artery — usually the RCA."
+    ],
+    "references": ["gray", "guyton", "braunwald", "aha-af-2023"],
+    "related": {
+      "structures": ["right-atrium", "tricuspid-valve", "bundle-of-his", "sa-node", "coronary-veins"],
+      "diseases": ["conduction-disorders", "supraventricular-tachycardia", "myocardial-infarction", "atrial-fibrillation"],
+      "keyPoints": ["ecg-essentials", "arrhythmia-principles", "cardiac-cycle"]
+    }
+  },
+  {
+    "id": "bundle-of-his",
+    "name": "Bundle of His & Bundle Branches",
+    "abbr": "His",
+    "latin": "Fasciculus atrioventricularis",
+    "category": "conduction",
+    "meshName": "heart.bundle_of_his",
+    "color": "#f5c65f",
+    "summary": "The only muscular bridge across the fibrous skeleton. It penetrates the central fibrous body and divides into right and left bundle branches on the ventricular septum.",
+    "synonyms": ["bundle of His", "AV bundle", "penetrating bundle", "right bundle branch", "left bundle branch", "fascicles"],
+    "anatomy": {
+      "location": "Begins at the distal AV node, penetrates the central fibrous body and membranous interventricular septum, then runs along the crest of the muscular septum before dividing.",
+      "shape": "A short trunk roughly 1–2 cm long, giving a thin, cord-like right bundle branch that runs subendocardially down the right side of the septum — partly within the moderator band — and a broad, sheet-like left bundle branch that fans out on the left septal surface into anterior and posterior fascicles, with a variable septal fascicle.",
+      "relations": [
+        "Passes immediately beneath the membranous septum and the aortic valve — specifically near the junction of the right and non-coronary cusps",
+        "Right bundle branch travels to the anterior papillary muscle via the moderator band",
+        "Left bundle fascicles run subendocardially on the septal surface of the left ventricle",
+        "Insulated from surrounding working myocardium along its penetrating course"
+      ],
+      "attachments": [
+        "Proximally continuous with the compact AV node",
+        "Distally continuous with the Purkinje network",
+        "Anchored within the central fibrous body and membranous septum"
+      ],
+      "bloodSupply": "Dual supply in most people — septal perforators from the left anterior descending artery and branches of the AV nodal artery. The left anterior fascicle has a relatively sparse single supply and is the most vulnerable.",
+      "venousDrainage": "Septal veins draining to the great and middle cardiac veins.",
+      "innervation": "Sparse autonomic innervation compared with the nodes; conduction here is little affected by vagal tone.",
+      "function": "Transmits the impulse rapidly from the AV node to the ventricular myocardium, and provides a subsidiary pacemaker if higher pacemakers fail."
+    },
+    "physiology": {
+      "function": "Conducts rapidly — several metres per second — so that after the deliberate AV nodal delay the ventricles are activated almost simultaneously, producing a narrow QRS complex.",
+      "pressures": [
+        { "label": "Conduction velocity", "value": "approximately 2–4 m/s" },
+        { "label": "Intrinsic escape rate", "value": "approximately 20–40 beats per minute" },
+        { "label": "Normal QRS duration", "value": "under 120 ms" },
+        { "label": "Bundle branch block", "value": "QRS of 120 ms or more" }
+      ],
+      "electrical": "Sodium-dependent fast action potentials with abundant gap junctions permit rapid conduction. Loss of one bundle branch delays activation of that ventricle, which is then depolarised slowly cell-to-cell, widening the QRS and altering its morphology.",
+      "hemodynamics": [
+        "Left bundle branch block causes septal-to-lateral activation delay and mechanical dyssynchrony, worsening ventricular efficiency",
+        "This dyssynchrony is the target of cardiac resynchronisation therapy in selected heart failure",
+        "Infranodal block is less responsive to atropine and more likely to progress than nodal block, so it more often requires pacing",
+        "His-bundle and left bundle branch area pacing recruit the native conduction system and preserve physiological activation"
+      ],
+      "concepts": ["Fast conduction", "Bundle branch block", "Mechanical dyssynchrony", "Conduction system pacing"]
+    },
+    "pathology": [
+      {
+        "name": "Left bundle branch block",
+        "note": "Usually indicates underlying structural heart disease; also a key criterion for resynchronisation therapy.",
+        "diseaseId": "conduction-disorders"
+      },
+      {
+        "name": "Right bundle branch block",
+        "note": "May be a normal variant, but also occurs with right heart strain, pulmonary embolism and Brugada syndrome.",
+        "diseaseId": "conduction-disorders"
+      },
+      {
+        "name": "Infranodal (Mobitz II) block",
+        "note": "Block below the node; unpredictable, often progresses to complete block, and generally requires pacing.",
+        "diseaseId": "conduction-disorders"
+      },
+      {
+        "name": "Procedural conduction injury",
+        "note": "The bundle's position beneath the aortic valve explains conduction block after transcatheter aortic valve implantation, septal myectomy and alcohol septal ablation.",
+        "diseaseId": "aortic-stenosis"
+      }
+    ],
+    "clinical": {
+      "relevance": "QRS width and morphology localise disease within the conduction system, guide pacing decisions, and identify patients who may benefit from resynchronisation therapy.",
+      "conditions": ["Bundle branch and fascicular block", "Trifascicular disease", "Complete heart block", "Post-procedural conduction disturbance"],
+      "examination": [
+        "Wide or paradoxically split second heart sound in left bundle branch block",
+        "Wide splitting of the second heart sound in right bundle branch block",
+        "Bradycardia with cannon a waves if complete block develops"
+      ],
+      "imaging": [
+        "12-lead ECG for QRS duration, morphology and axis",
+        "His-bundle electrogram during electrophysiology study to localise block precisely",
+        "Echocardiography to identify the underlying structural disease",
+        "Cardiac MRI for septal fibrosis or infiltration"
+      ],
+      "procedures": [
+        "Permanent pacing for high-grade infranodal block",
+        "Cardiac resynchronisation therapy for left bundle branch block with reduced ejection fraction",
+        "His-bundle and left bundle branch area pacing",
+        "Temporary pacing cover during high-risk valve intervention"
+      ]
+    },
+    "keyPoints": [
+      "The only muscular connection between atrial and ventricular myocardium.",
+      "Penetrates the central fibrous body just beneath the aortic valve — hence procedural block risk.",
+      "Right bundle branch is cord-like; the left divides into anterior and posterior fascicles.",
+      "Conducts at 2–4 m/s; intrinsic escape rate is only about 20–40 per minute.",
+      "A QRS of 120 ms or more defines bundle branch block."
+    ],
+    "references": ["gray", "guyton", "braunwald", "ncbi-bookshelf"],
+    "related": {
+      "structures": ["av-node", "purkinje-fibers", "interventricular-septum", "aortic-valve", "right-ventricle"],
+      "diseases": ["conduction-disorders", "heart-failure", "myocardial-infarction", "aortic-stenosis"],
+      "keyPoints": ["ecg-essentials", "arrhythmia-principles", "heart-failure-principles"]
+    }
+  },
+  {
+    "id": "purkinje-fibers",
+    "name": "Purkinje Fibres",
+    "abbr": "PF",
+    "latin": "Rami subendocardiales",
+    "category": "conduction",
+    "meshName": "heart.purkinje_fibers",
+    "color": "#f8d98a",
+    "summary": "The terminal subendocardial network that distributes the impulse throughout both ventricles, producing rapid, coordinated, apex-to-base contraction.",
+    "synonyms": ["Purkinje fibers", "Purkinje network", "subendocardial conducting network", "false tendons"],
+    "anatomy": {
+      "location": "Ramify beneath the endocardium of both ventricles, most densely at the apex and over the papillary muscles, penetrating a variable depth into the inner third of the myocardium.",
+      "shape": "Large-diameter, pale cells with abundant glycogen and relatively few myofibrils, joined by numerous gap junctions. They are the largest cells in the conduction system, and their size contributes to their rapid conduction.",
+      "relations": [
+        "Continuous proximally with the bundle branches and their fascicles",
+        "Run within the subendocardium and along false tendons crossing the ventricular cavities",
+        "Dense over the papillary muscles, ensuring they contract just before the free walls"
+      ],
+      "attachments": [
+        "Arise from the terminal ramifications of the bundle branches",
+        "Couple to working ventricular myocytes at Purkinje–myocyte junctions"
+      ],
+      "bloodSupply": "Supplied by the subendocardial plexus of the coronary arteries — the very region most vulnerable to ischaemia.",
+      "venousDrainage": "Subendocardial and Thebesian venous drainage.",
+      "innervation": "Sparse autonomic innervation; excitability is influenced far more by ischaemia, electrolytes and drugs than by autonomic tone.",
+      "function": "Distributes activation almost simultaneously to the entire ventricular endocardium, producing the coordinated contraction that generates an effective stroke volume."
+    },
+    "physiology": {
+      "function": "Provides the fastest conduction in the heart, allowing the ventricles to be activated within roughly 60–80 ms — the mechanical basis of a narrow QRS and an efficient squeeze.",
+      "pressures": [
+        { "label": "Conduction velocity", "value": "approximately 2–4 m/s, the fastest in the heart" },
+        { "label": "Intrinsic escape rate", "value": "approximately 20–40 beats per minute" },
+        { "label": "Action potential duration", "value": "longer than working myocardium, contributing to protection against re-entry" },
+        { "label": "Activation sequence", "value": "endocardium to epicardium, apex towards base" }
+      ],
+      "electrical": "Sodium-dependent fast upstroke with pronounced phase 4 depolarisation in some cells, conferring latent automaticity. Under ischaemia or digoxin toxicity this automaticity can become manifest and generate ventricular ectopy.",
+      "hemodynamics": [
+        "Apex-to-base activation directs blood towards the outflow tracts and improves ejection efficiency",
+        "Early papillary muscle activation tensions the chordae before ventricular pressure rises, preventing leaflet prolapse",
+        "Loss of Purkinje distribution — as in ventricular pacing or ectopy — produces slow cell-to-cell spread, a wide QRS and less efficient contraction",
+        "The Purkinje network participates in the initiation of some idiopathic ventricular fibrillation and fascicular tachycardias"
+      ],
+      "concepts": ["Rapid ventricular activation", "Latent automaticity", "Apex-to-base contraction", "Purkinje–myocyte junction"]
+    },
+    "pathology": [
+      {
+        "name": "Ventricular ectopy and tachycardia",
+        "note": "Purkinje tissue can act as a trigger, particularly in ischaemia, and is the origin of fascicular ventricular tachycardia.",
+        "diseaseId": "ventricular-arrhythmias"
+      },
+      {
+        "name": "Ischaemia-related arrhythmia",
+        "note": "Subendocardial location makes the network highly susceptible to ischaemia, contributing to arrhythmia in acute infarction.",
+        "diseaseId": "myocardial-infarction"
+      },
+      {
+        "name": "Digoxin toxicity",
+        "note": "Enhances Purkinje automaticity, producing characteristic ventricular ectopy and bidirectional ventricular tachycardia."
+      },
+      {
+        "name": "Idiopathic ventricular fibrillation",
+        "note": "Purkinje-derived premature beats can trigger ventricular fibrillation in structurally normal hearts; ablation of these triggers is sometimes effective.",
+        "diseaseId": "ventricular-arrhythmias"
+      }
+    ],
+    "clinical": {
+      "relevance": "The Purkinje network explains why a normal QRS is narrow, why paced or ectopic beats are wide, and why some life-threatening ventricular arrhythmias can be cured by ablating a small trigger.",
+      "conditions": ["Fascicular ventricular tachycardia", "Purkinje-triggered ventricular fibrillation", "Ventricular ectopy in ischaemia", "Digoxin toxicity"],
+      "examination": [
+        "Irregular pulse from frequent ectopy",
+        "Haemodynamic collapse in sustained ventricular arrhythmia",
+        "No specific physical sign for the network itself"
+      ],
+      "imaging": [
+        "12-lead ECG — QRS morphology localises the site of ventricular origin",
+        "Ambulatory monitoring to quantify ectopic burden",
+        "Electroanatomic mapping identifying Purkinje potentials during ablation",
+        "Cardiac MRI for underlying scar"
+      ],
+      "procedures": [
+        "Catheter ablation of Purkinje triggers and fascicular tachycardia",
+        "Implantable cardioverter defibrillator for high-risk ventricular arrhythmia",
+        "Correction of ischaemia and electrolyte abnormality as first-line management"
+      ]
+    },
+    "keyPoints": [
+      "The fastest-conducting tissue in the heart at roughly 2–4 m/s.",
+      "Distributes activation subendocardially, apex to base, giving a narrow QRS.",
+      "Densest over the papillary muscles, which contract first to prevent leaflet prolapse.",
+      "Possesses latent automaticity at about 20–40 per minute — a last-resort escape pacemaker.",
+      "Subendocardial position makes it especially vulnerable to ischaemia."
+    ],
+    "references": ["gray", "guyton", "braunwald", "ncbi-bookshelf"],
+    "related": {
+      "structures": ["bundle-of-his", "left-ventricle", "right-ventricle", "interventricular-septum"],
+      "diseases": ["ventricular-arrhythmias", "myocardial-infarction", "conduction-disorders", "cardiomyopathy"],
+      "keyPoints": ["ecg-essentials", "arrhythmia-principles", "cardiac-cycle"]
+    }
+  }
+]

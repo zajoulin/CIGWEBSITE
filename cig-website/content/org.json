@@ -1,0 +1,221 @@
+{
+  "abbr": "CIG",
+  "name": "Cardiology Interest Group",
+  "shortName": "CIG",
+  "legalName": "Cardiology Interest Group — Al-Balqa' Applied University",
+  "university": {
+    "name": "Al-Balqa' Applied University",
+    "short": "BAU",
+    "faculty": "Faculty of Medicine",
+    "placeholder": false
+  },
+  "crest": {
+    "alt": "Cardiology Interest Group crest — Al-Balqa' Applied University",
+    "caption": "The official crest of the Cardiology Interest Group at Al-Balqa' Applied University."
+  },
+  "tagline": "Learn. Research. Collaborate. Lead.",
+  "heroHeadline": {
+    "lead": "The student home of ",
+    "accent": "cardiovascular medicine",
+    "tail": " at Al-Balqa' Applied University."
+  },
+  "heroSub": "The Cardiology Interest Group is a student-led society for everyone drawn to the heart and circulation. We teach, we run research and clinical exposure, and we build open cardiovascular learning resources for the whole student body.",
+  "heroKicker": "Student-led · Faculty of Medicine",
+  "missionStatement": "CIG exists to make cardiovascular medicine accessible, rigorous and exciting for students — connecting classroom physiology to the clinic, the catheterisation laboratory and the research bench.",
+  "visionStatement": "A student community that produces the next generation of cardiovascular physicians and scientists: clinically curious, research-literate, and confident enough to lead.",
+  "whoWeAre": "We are a student-led interest group for anyone drawn to the heart and circulation — from first-year students meeting the cardiac cycle for the first time to senior students preparing for a cardiology career. We run teaching sessions, journal clubs, skills workshops, research mentorship and clinical exposure activities, and we build open educational resources like the interactive anatomy and disease modules on this platform.",
+  "joinCta": {
+    "eyebrow": "Get involved",
+    "title": "Join the Cardiology Interest Group",
+    "body": "Membership is open to students across the Faculty of Medicine, whatever year you are in and whatever you eventually specialise in. Come to a session, bring a question, and see whether cardiology is for you.",
+    "primaryLabel": "How to join",
+    "secondaryLabel": "Explore the Learning Hub",
+    "note": "Membership details, intake dates and the application route are placeholders until CIG supplies them."
+  },
+  "learningHub": {
+    "name": "CIG Cardiovascular Learning Hub",
+    "short": "Learning Hub",
+    "eyebrow": "Education",
+    "lede": "The Learning Hub is CIG's open education programme, built and maintained by the Education Team: an interactive 3D cardiovascular model, disease modules with animated pathophysiology, referenced key-point topics and a cardiovascular glossary — free for every student.",
+    "blurb": "CIG's open cardiovascular education programme: interactive anatomy, disease modules, animated pathophysiology, key points and a glossary."
+  },
+  "nav": [
+    {
+      "href": "/",
+      "label": "Home",
+      "short": "Home"
+    },
+    {
+      "href": "/about",
+      "label": "About CIG",
+      "short": "About"
+    },
+    {
+      "href": "/activities",
+      "label": "Activities",
+      "short": "Activities"
+    },
+    {
+      "href": "/leadership",
+      "label": "Leadership",
+      "short": "Leadership"
+    },
+    {
+      "href": "/journal",
+      "label": "Journal",
+      "short": "Journal"
+    },
+    {
+      "href": "/research",
+      "label": "Research",
+      "short": "Research"
+    },
+    {
+      "href": "/learn",
+      "label": "Learning Hub",
+      "short": "Learning Hub"
+    }
+  ],
+  "mission": [
+    {
+      "id": "education",
+      "title": "Education",
+      "text": "High-quality peer teaching in cardiovascular anatomy, physiology, pathology and pharmacology — built around how students actually learn, not around lecture slides.",
+      "icon": "graduation"
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "text": "Introducing students to cardiovascular research: reading a paper critically, designing a question, handling data, and taking work through to presentation and publication.",
+      "icon": "microscope"
+    },
+    {
+      "id": "clinical",
+      "title": "Clinical Exposure",
+      "text": "Structured exposure to cardiology in practice — ward rounds, echocardiography, ECG interpretation, catheterisation laboratory observation and cardiac surgery sessions.",
+      "icon": "stethoscope"
+    },
+    {
+      "id": "collaboration",
+      "title": "Collaboration",
+      "text": "Connecting students with clinicians, researchers and each other, across years and across institutions, so that no one has to find cardiology on their own.",
+      "icon": "network"
+    },
+    {
+      "id": "leadership",
+      "title": "Leadership",
+      "text": "Real responsibility for students: running teams, designing events, mentoring juniors and representing the group — the skills a clinical career quietly demands.",
+      "icon": "compass"
+    },
+    {
+      "id": "innovation",
+      "title": "Innovation",
+      "text": "Building better ways to learn cardiovascular medicine, from interactive 3D anatomy to open teaching resources the whole student body can use.",
+      "icon": "sparkles"
+    }
+  ],
+  "activities": [
+    {
+      "title": "Teaching sessions & workshops",
+      "text": "Regular peer-led sessions on cardiac anatomy, the cardiac cycle, haemodynamics, ECG interpretation and heart sounds, pitched at the year group in the room.",
+      "icon": "graduation"
+    },
+    {
+      "title": "Journal club",
+      "text": "Critical appraisal of landmark and current cardiovascular literature, with a focus on how to read a trial rather than how to memorise its result.",
+      "icon": "book"
+    },
+    {
+      "title": "Research mentorship",
+      "text": "Pairing students with faculty and senior students to develop a question, obtain approvals, collect data and present it.",
+      "icon": "microscope"
+    },
+    {
+      "title": "Clinical skills",
+      "text": "Cardiovascular examination practice, ECG reading drills, basic and advanced life support, and simulation sessions.",
+      "icon": "stethoscope"
+    },
+    {
+      "title": "Clinical exposure",
+      "text": "Observation opportunities in cardiology clinics, echocardiography, the catheterisation laboratory and cardiothoracic theatre.",
+      "icon": "eye"
+    },
+    {
+      "title": "Community & outreach",
+      "text": "Cardiovascular risk awareness, CPR training for the public, and student-led health promotion in the wider community.",
+      "icon": "megaphone"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "Placeholder — founding",
+      "title": "CIG is founded",
+      "text": "Replace this entry with the date CIG was established and a sentence on why it was started."
+    },
+    {
+      "date": "Placeholder — milestone",
+      "title": "First teaching programme",
+      "text": "Replace with the first structured educational programme the group delivered."
+    },
+    {
+      "date": "Placeholder — milestone",
+      "title": "Research pathway launched",
+      "text": "Replace with the point at which CIG began supporting student research projects."
+    },
+    {
+      "date": "Placeholder — current",
+      "title": "This platform",
+      "text": "Replace with the current academic year and what the group is focused on now."
+    }
+  ],
+  "contact": {
+    "email": "Acccigbau@gmail.com",
+    "institution": "Al-Balqa' Applied University — Faculty of Medicine",
+    "address": "Faculty of Medicine, BAU, Al-Salt, Jordan",
+    "placeholder": false
+  },
+  "socials": [
+  {
+    "label": "Instagram",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/cig.bau?stkn=MXdveHkzcXdmZm04MA%3D%3D&utm_source=qr"
+  },
+  {
+    "label": "LinkedIn",
+    "icon": "linkedin",
+    "url": "#"
+  },
+  {
+    "label": "X",
+    "icon": "x",
+    "url": "https://x.com/baucig?s=11&t=HWHTqzfHEkPBNMKhCTneuA"
+  },
+  {
+    "label": "Email",
+    "icon": "mail",
+    "url": "mailto:Acccigbau@gmail.com"
+  }
+],
+  "disclaimer": {
+    "title": "Educational use only",
+    "body": "The information on this platform is provided for the education of students and is not a substitute for professional medical advice, diagnosis or treatment. It does not describe the care of any individual patient. Always seek the guidance of a qualified health professional with any questions about a medical condition, and rely on current clinical guidelines and your own institution's protocols for clinical decisions."
+  },
+  "stats": [
+    {
+      "value": "24",
+      "label": "Anatomical structures"
+    },
+    {
+      "value": "27",
+      "label": "Disease modules"
+    },
+    {
+      "value": "27",
+      "label": "Pathophysiology animations"
+    },
+    {
+      "value": "6",
+      "label": "Student teams"
+    }
+  ]
+}

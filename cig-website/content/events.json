@@ -1,0 +1,46 @@
+[
+  {
+    "id": "event-placeholder-1",
+    "title": "Teaching session — placeholder",
+    "kind": "Teaching session",
+    "icon": "graduation",
+    "when": "Placeholder — date and time",
+    "where": "Placeholder — venue",
+    "audience": "Open to all years",
+    "text": "Replace this entry with a real CIG teaching session: the topic, who is delivering it, the year groups it is pitched at and how students sign up.",
+    "placeholder": true
+  },
+  {
+    "id": "event-placeholder-2",
+    "title": "Journal club — placeholder",
+    "kind": "Journal club",
+    "icon": "book",
+    "when": "Placeholder — date and time",
+    "where": "Placeholder — venue",
+    "audience": "Open to all years",
+    "text": "Replace this entry with the paper being appraised, who is leading the discussion and any pre-reading. No paper, result or finding is claimed here.",
+    "placeholder": true
+  },
+  {
+    "id": "event-placeholder-3",
+    "title": "Skills workshop — placeholder",
+    "kind": "Workshop",
+    "icon": "stethoscope",
+    "when": "Placeholder — date and time",
+    "where": "Placeholder — venue",
+    "audience": "Placeholder — capacity and year groups",
+    "text": "Replace this entry with a real skills workshop: ECG interpretation, cardiovascular examination, life support or simulation, plus the sign-up route and capacity.",
+    "placeholder": true
+  },
+  {
+    "id": "event-placeholder-4",
+    "title": "Clinical exposure day — placeholder",
+    "kind": "Clinical exposure",
+    "icon": "eye",
+    "when": "Placeholder — date",
+    "where": "Placeholder — department",
+    "audience": "Placeholder — eligibility",
+    "text": "Replace this entry with a real observation opportunity, the supervising clinician, the number of places and any requirements students must meet first.",
+    "placeholder": true
+  }
+]

@@ -1,0 +1,195 @@
+[
+  {
+    "id": "ra",
+    "code": "RA",
+    "name": "Right arm electrode",
+    "group": "limb",
+    "color": "#f2f5f8",
+    "colorName": "White (AHA)",
+    "position": [-1.55, 2.0, 0.66],
+    "landmark": "Right infraclavicular fossa, or the right forearm/wrist",
+    "howToFind": "Feel the lateral third of the right clavicle and place the electrode just below it over the deltopectoral groove, on flat skin away from bone and large muscle bellies.",
+    "why": "RA is the negative pole of leads I and II and the positive pole of aVR. Because the limb leads record the frontal plane, moving this electrode rotates the entire calculated axis — the commonest reason a computer reports an 'axis deviation' that is not real.",
+    "views": "Frontal plane — contributes to leads I, II, III, aVR and aVL",
+    "pitfalls": [
+      "Swapping RA and LA inverts lead I and produces a global negative in lead I with an upright aVR — a classic artefact mistaken for dextrocardia",
+      "Placing it over the deltoid muscle belly adds movement artefact",
+      "Torso placement shortens the recorded limb-lead amplitudes; keep placement consistent between serial ECGs"
+    ],
+    "order": 1
+  },
+  {
+    "id": "la",
+    "code": "LA",
+    "name": "Left arm electrode",
+    "group": "limb",
+    "color": "#1b2430",
+    "colorName": "Black (AHA)",
+    "position": [1.55, 2.0, 0.66],
+    "landmark": "Left infraclavicular fossa, or the left forearm/wrist",
+    "howToFind": "Mirror the right arm electrode: just below the lateral third of the left clavicle, on flat skin.",
+    "why": "LA is the positive pole of lead I and the negative pole of lead III. With RA and LL it forms Einthoven's triangle, whose geometry is the basis of the entire frontal-plane axis calculation.",
+    "views": "Frontal plane — contributes to leads I, II, III, aVR and aVL",
+    "pitfalls": [
+      "Reversal with RA is the single commonest limb-lead error",
+      "Asymmetric placement between the two arms distorts the axis",
+      "Avoid placing over an arteriovenous fistula or a lymphoedematous limb"
+    ],
+    "order": 2
+  },
+  {
+    "id": "rl",
+    "code": "RL",
+    "name": "Right leg electrode (neutral)",
+    "group": "limb",
+    "color": "#2f9e5f",
+    "colorName": "Green (AHA)",
+    "position": [-1.2, -2.3, 0.62],
+    "landmark": "Right lower abdomen or right leg, below the level of the umbilicus",
+    "howToFind": "Place on the right lower abdominal wall or the right thigh — anywhere below the umbilicus and away from bony prominences.",
+    "why": "RL does not contribute to any recorded lead. It is the driven right-leg electrode: the amplifier feeds an inverted version of the common-mode signal back through it, actively cancelling mains interference. Removing it does not change the waveform's shape but does make the trace noisy.",
+    "views": "None — reference and noise-cancellation electrode",
+    "pitfalls": [
+      "Often blamed for artefact when in fact it is the electrode preventing it",
+      "Poor skin contact here degrades every lead at once",
+      "Reversal with LL produces a near-flat lead II"
+    ],
+    "order": 3
+  },
+  {
+    "id": "ll",
+    "code": "LL",
+    "name": "Left leg electrode",
+    "group": "limb",
+    "color": "#d8352a",
+    "colorName": "Red (AHA)",
+    "position": [1.2, -2.3, 0.62],
+    "landmark": "Left lower abdomen or left leg, below the level of the umbilicus",
+    "howToFind": "Mirror the right leg electrode on the left lower abdominal wall or left thigh.",
+    "why": "LL is the positive pole of leads II, III and aVF — the three inferior leads. Together they look at the inferior wall of the left ventricle, so this electrode is what makes an inferior infarct visible.",
+    "views": "Inferior wall — leads II, III and aVF",
+    "pitfalls": [
+      "Reversal with RL flattens lead II",
+      "Placing it too high on the abdomen adds respiratory baseline wander",
+      "Consistency matters for serial comparison in a patient with evolving inferior changes"
+    ],
+    "order": 4
+  },
+  {
+    "id": "v1",
+    "code": "V1",
+    "name": "Precordial lead V1",
+    "group": "precordial",
+    "color": "#8b5a2b",
+    "colorName": "Brown with red marker (AHA)",
+    "position": [-0.32, 0.45, 1.04],
+    "landmark": "Fourth intercostal space, right sternal border",
+    "howToFind": "Find the suprasternal notch, slide down to the ridge of the sternal angle — that is the second costal cartilage and the second rib. Walk down: second space, third rib, third space, fourth rib, fourth space. Place V1 immediately to the right of the sternum in that fourth space.",
+    "why": "V1 sits directly over the right ventricle and interventricular septum, so it is the lead that reports septal activation, right-sided conduction and right ventricular strain. It is where the bundle branch block pattern, the P wave morphology and posterior infarction as tall R waves are read.",
+    "views": "Septum and right ventricle — with V2, the anteroseptal wall",
+    "pitfalls": [
+      "Placed too high — a common error — V1 and V2 record an rSr′ pattern and inverted T waves that mimic septal infarction or Brugada pattern",
+      "Counting from the clavicle instead of the sternal angle causes systematic misplacement",
+      "V1 and V2 misplacement is the most frequently repeated electrode error in practice"
+    ],
+    "order": 5
+  },
+  {
+    "id": "v2",
+    "code": "V2",
+    "name": "Precordial lead V2",
+    "group": "precordial",
+    "color": "#8b5a2b",
+    "colorName": "Brown with yellow marker (AHA)",
+    "position": [0.32, 0.45, 1.04],
+    "landmark": "Fourth intercostal space, left sternal border",
+    "howToFind": "Directly opposite V1, on the left side of the sternum in the same fourth intercostal space. The two should sit level with each other.",
+    "why": "V2 overlies the anteroseptal wall and gives the largest S wave of the precordial leads in most people. It is central to R wave progression across the chest, and with V1 it is where posterior infarction is detected as tall R waves and ST depression.",
+    "views": "Anteroseptal wall",
+    "pitfalls": [
+      "High placement produces poor R wave progression and pseudo-infarct patterns",
+      "V1 and V2 placed above the fourth space can imitate anteroseptal infarction or a Brugada pattern",
+      "Check that V1 and V2 are level with each other, not stepped"
+    ],
+    "order": 6
+  },
+  {
+    "id": "v3",
+    "code": "V3",
+    "name": "Precordial lead V3",
+    "group": "precordial",
+    "color": "#8b5a2b",
+    "colorName": "Brown with green marker (AHA)",
+    "position": [0.72, 0.28, 0.98],
+    "landmark": "Midway between V2 and V4, on a straight line between them",
+    "howToFind": "Place V4 first, then position V3 at the midpoint of the line joining V2 and V4. It is the only electrode defined by other electrodes rather than by an anatomical landmark.",
+    "why": "V3 covers the anterior wall and the transition zone, where the QRS changes from predominantly negative to predominantly positive across the precordium. Its position is derived, so an error in V4 automatically displaces V3 as well.",
+    "views": "Anterior wall — the precordial transition zone",
+    "pitfalls": [
+      "Placing V3 before V4 guarantees it ends up in the wrong place",
+      "It is the usual site for prominent U waves in hypokalaemia, so misplacement can hide them",
+      "Small displacements alter R wave progression and can suggest anterior infarction"
+    ],
+    "order": 7
+  },
+  {
+    "id": "v4",
+    "code": "V4",
+    "name": "Precordial lead V4",
+    "group": "precordial",
+    "color": "#8b5a2b",
+    "colorName": "Brown with blue marker (AHA)",
+    "position": [1.12, 0.1, 0.87],
+    "positionFemale": [1.12, -0.05, 0.87],
+    "landmark": "Fifth intercostal space, left midclavicular line",
+    "howToFind": "Find the midpoint of the left clavicle and drop a vertical line from it. Follow the fourth space found for V1 and V2 down over the next rib into the fifth space, and place V4 where that space crosses the midclavicular line. In women, place it on the chest wall beneath the breast, not on breast tissue.",
+    "why": "V4 sits over the cardiac apex and the anterior and apical left ventricular wall, so it is the reference point for the whole lateral group — V5 and V6 are placed on its horizontal level, not by following the curve of the ribs. Getting V4 wrong therefore displaces three leads at once.",
+    "views": "Anterior wall and cardiac apex",
+    "pitfalls": [
+      "Placing V4 in the fourth space is the commonest single precordial error and shifts V5 and V6 with it",
+      "Placing electrodes on breast tissue attenuates the signal and reduces reproducibility — go under the breast",
+      "Following the rib line rather than a horizontal plane sends V5 and V6 too low"
+    ],
+    "order": 8
+  },
+  {
+    "id": "v5",
+    "code": "V5",
+    "name": "Precordial lead V5",
+    "group": "precordial",
+    "color": "#8b5a2b",
+    "colorName": "Brown with orange marker (AHA)",
+    "position": [1.62, 0.1, 0.62],
+    "positionFemale": [1.62, -0.05, 0.62],
+    "landmark": "Left anterior axillary line, horizontally level with V4",
+    "howToFind": "Draw an imaginary horizontal line from V4 around the chest. Place V5 where that line meets the anterior axillary fold — not by counting ribs again.",
+    "why": "V5 and V6 look at the lateral wall of the left ventricle, supplied largely by the circumflex artery. V5 also carries the largest R wave in most people, so it is used in voltage criteria for left ventricular hypertrophy.",
+    "views": "Lateral wall of the left ventricle",
+    "pitfalls": [
+      "Placing V5 by rib-counting instead of on V4's horizontal level puts it too low",
+      "Inconsistent placement between recordings invalidates serial comparison of lateral ST changes",
+      "Voltage criteria for hypertrophy are meaningless if V5 is misplaced"
+    ],
+    "order": 9
+  },
+  {
+    "id": "v6",
+    "code": "V6",
+    "name": "Precordial lead V6",
+    "group": "precordial",
+    "color": "#8b5a2b",
+    "colorName": "Brown with purple marker (AHA)",
+    "position": [1.88, 0.1, 0.36],
+    "positionFemale": [1.88, -0.05, 0.36],
+    "landmark": "Left mid-axillary line, horizontally level with V4 and V5",
+    "howToFind": "Continue the same horizontal line laterally to the mid-axillary line — the vertical line dropped from the apex of the axilla. With the arm at the side, this is roughly in line with the middle of the armpit.",
+    "why": "V6 is the most lateral of the standard chest leads and, with V5 and lead I, forms the lateral group. It usually shows a tall R with a small Q from normal septal depolarisation, and the loss of that septal Q is itself a clue to conduction disease.",
+    "views": "Lateral wall of the left ventricle",
+    "pitfalls": [
+      "Placed too posteriorly it produces artificially small complexes",
+      "Placed too low it exaggerates the apparent inferior extension of lateral changes",
+      "Should be level with V4 and V5, forming a horizontal row, not a curve"
+    ],
+    "order": 10
+  }
+]

@@ -1,0 +1,1198 @@
+/* ==========================================================================
+   CIG — Clinical Simulation
+   --------------------------------------------------------------------------
+   The bedside module: the difficulty bar, the stage stepper, the patient's
+   chest, the acquired 12-lead ECG, the question cards and the debrief.
+
+   Mobile first throughout. Every two-column layout starts as one column and
+   only splits when there is room, the twelve-lead reflows from four columns
+   to two to one, and nothing has a fixed pixel width — so there is no
+   horizontal overflow at any viewport, on any of these screens.
+   ========================================================================== */
+
+:root {
+  /* The patient model. Deliberately neutral and diagrammatic. */
+  --torso-skin-1: #e3cdbb;
+  --torso-skin-2: #d3b49d;
+  --torso-skin-3: #c19f88;
+  --torso-edge: rgba(120, 84, 62, 0.5);
+  --torso-line: rgba(96, 66, 48, 0.55);
+  --torso-guide: rgba(15, 95, 168, 0.75);
+  --torso-guide-wash: rgba(15, 95, 168, 0.1);
+}
+
+.stage {
+  --torso-skin-1: #cbb1a0;
+  --torso-skin-2: #b3937e;
+  --torso-skin-3: #9d7d69;
+  --torso-edge: rgba(20, 40, 60, 0.6);
+  --torso-line: rgba(40, 26, 18, 0.5);
+  --torso-guide: #7fd4ff;
+  --torso-guide-wash: rgba(127, 212, 255, 0.14);
+}
+
+/* ======================= PAGE HEAD ======================================= */
+
+.sim-safety {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  margin-top: var(--s-5);
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--glass-faint);
+  font-size: var(--t-xs);
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 78ch;
+}
+.sim-safety svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+/* ======================= MODULE SHELL ==================================== */
+
+.sim {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  min-width: 0;
+}
+
+.sim-bar {
+  display: grid;
+  gap: var(--s-3);
+  padding: var(--s-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-1, 0 1px 2px rgba(4, 52, 100, 0.06));
+}
+.sim-bar-label {
+  display: block;
+  font-size: var(--t-3xs);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: var(--s-2);
+}
+.sim-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+.sim-level {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--ink-2);
+  border-radius: var(--r-pill);
+  padding: 6px 14px;
+  font: inherit;
+  font-size: var(--t-xs);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background var(--dur-2, 0.18s) var(--ease, ease),
+    color var(--dur-2, 0.18s) var(--ease, ease),
+    border-color var(--dur-2, 0.18s) var(--ease, ease);
+}
+.sim-level:hover {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+.sim-level.active {
+  background: var(--navy-800);
+  border-color: var(--navy-800);
+  color: #fff;
+}
+.sim-bar-blurb {
+  font-size: var(--t-xs);
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 80ch;
+}
+.sim-bar-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+@media (min-width: 900px) {
+  .sim-bar {
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr) minmax(0, auto);
+    align-items: center;
+    gap: var(--s-6);
+  }
+}
+
+/* ---- stepper ---- */
+
+.sim-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sim-step button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--ink-3);
+  border-radius: var(--r-pill);
+  padding: 5px 12px 5px 6px;
+  font: inherit;
+  font-size: var(--t-2xs);
+  font-weight: 600;
+  cursor: pointer;
+}
+.sim-step button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+.sim-step-num {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--surface-4);
+  color: var(--ink-2);
+  font-size: var(--t-3xs);
+}
+.sim-step.is-current button {
+  border-color: var(--crimson);
+  background: var(--crimson-wash);
+  color: var(--crimson-ink);
+}
+.sim-step.is-current .sim-step-num {
+  background: var(--crimson);
+  color: #fff;
+}
+.sim-step.is-done button {
+  color: var(--ink-2);
+  border-color: var(--line-strong);
+}
+.sim-step.is-done .sim-step-num {
+  background: var(--ok);
+  color: #fff;
+}
+
+/* ======================= STAGE LAYOUT ==================================== */
+
+.sim-split {
+  display: grid;
+  gap: var(--s-5);
+  min-width: 0;
+}
+.sim-stage-main,
+.sim-stage-side {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+@media (min-width: 1000px) {
+  .sim-split {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.sim-panel {
+  min-width: 0;
+}
+.sim-panel h3 {
+  font-size: var(--t-lg);
+  letter-spacing: -0.015em;
+  margin: var(--s-2) 0 var(--s-3);
+}
+.sim-panel p {
+  font-size: var(--t-sm);
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.sim-sub {
+  margin: var(--s-5) 0 var(--s-2);
+  font-size: var(--t-2xs);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.sim-list {
+  margin: 0;
+  padding-left: 1.1em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  font-size: var(--t-sm);
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.sim-complaint {
+  font-size: var(--t-base) !important;
+  color: var(--ink) !important;
+}
+.sim-note {
+  font-size: var(--t-2xs) !important;
+  line-height: 1.6 !important;
+  color: var(--ink-3) !important;
+}
+.sim-note-strong {
+  font-size: var(--t-xs) !important;
+  color: var(--ink) !important;
+  font-weight: 600;
+}
+.sim-finding {
+  margin-top: var(--s-3);
+  padding: var(--s-3);
+  border-left: 3px solid var(--crimson);
+  background: var(--crimson-wash);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  font-size: var(--t-xs) !important;
+  color: var(--ink) !important;
+}
+
+/* ---- vitals ---- */
+
+.sim-vitals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+}
+.sim-vital {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: var(--s-3);
+  background: var(--surface-2);
+  min-width: 0;
+}
+.sim-vital-label {
+  display: block;
+  font-size: var(--t-3xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.sim-vital-value {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--t-xl);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+.sim-vital-value em {
+  font-style: normal;
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+  margin-left: 5px;
+}
+
+/* ======================= THE ROOM ======================================== */
+
+.sim-room {
+  min-width: 0;
+}
+.sim-task {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--crimson);
+  border-bottom: none;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  background: var(--crimson-wash);
+  color: var(--crimson-ink);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.sim-task svg {
+  flex: none;
+}
+.sim-room .room-scene {
+  border-radius: 0;
+}
+.room-monitor.is-masked .room-monitor-numbers {
+  opacity: 0.45;
+}
+
+/* ======================= THE TORSO ======================================= */
+
+.torso {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: linear-gradient(180deg, var(--surface-2), var(--surface-3));
+  padding: var(--s-3);
+  min-width: 0;
+}
+.torso-svg {
+  display: block;
+  /* Width and height are constrained proportionally rather than separately, so
+     the drawing never letterboxes inside its own box — which keeps the
+     mapping from a tap back to torso coordinates a single uniform scale. */
+  width: 100%;
+  max-width: calc(64vh * 400 / 560);
+  height: auto;
+  margin: 0 auto;
+  touch-action: manipulation;
+}
+.torso-electrodes .torso-svg,
+.torso-auscultation .torso-svg {
+  cursor: crosshair;
+}
+.torso-caption {
+  margin: var(--s-3) 0 0;
+  font-size: var(--t-2xs);
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+.torso-caption svg {
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+
+.torso-landmarks {
+  stroke: var(--torso-line);
+  stroke-width: 1.4;
+  opacity: 0.55;
+}
+.torso-landmark-key {
+  stroke-width: 2.4;
+  opacity: 0.9;
+}
+circle.torso-landmark-key {
+  fill: none;
+}
+
+.torso-guide {
+  fill: var(--torso-guide-wash);
+  stroke: var(--torso-guide);
+  stroke-width: 1.6;
+  stroke-dasharray: 5 5;
+  opacity: 0.55;
+}
+.torso-guide.is-active {
+  opacity: 1;
+  stroke-width: 2.4;
+  animation: torso-pulse 1.8s ease-in-out infinite;
+}
+@keyframes torso-pulse {
+  50% {
+    stroke-opacity: 0.35;
+  }
+}
+
+.torso-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  fill: #0a2440;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 3.2px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.torso-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.torso-site-halo {
+  fill: var(--torso-guide-wash);
+  stroke: var(--torso-guide);
+  stroke-width: 1.6;
+  stroke-dasharray: 4 5;
+}
+.torso-site-dot {
+  fill: var(--torso-guide);
+  opacity: 0.8;
+}
+.torso-site-initial {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  fill: #fff;
+  pointer-events: none;
+}
+.torso-site-leader {
+  stroke: var(--torso-guide);
+  stroke-width: 1.4;
+}
+.torso-site.is-visited .torso-site-dot {
+  fill: var(--ok);
+  opacity: 1;
+}
+.torso-site.is-active .torso-site-halo {
+  stroke-dasharray: none;
+  stroke-width: 3;
+  fill: rgba(15, 95, 168, 0.2);
+}
+
+.torso-error circle {
+  fill: rgba(179, 38, 30, 0.16);
+  stroke: var(--danger);
+  stroke-width: 2;
+}
+.torso-error path {
+  stroke: var(--danger);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+
+/* ======================= ELECTRODE PANEL ================================= */
+
+.sim-progress-line {
+  margin: 0 0 var(--s-2);
+  font-size: var(--t-xs) !important;
+}
+.sim-progress {
+  height: 7px;
+  border-radius: var(--r-pill);
+  background: var(--surface-4);
+  overflow: hidden;
+}
+.sim-progress > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--blue), var(--azure));
+  transition: width var(--dur-3, 0.28s) var(--ease, ease);
+}
+
+.sim-active-lead {
+  display: flex;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+  padding: var(--s-3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+}
+.sim-active-lead h4 {
+  font-size: var(--t-sm);
+  margin: 0 0 4px;
+}
+.sim-active-lead p {
+  margin: 0;
+  font-size: var(--t-xs) !important;
+}
+.sim-lead-swatch {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  margin-top: 2px;
+}
+.sim-hint-text {
+  margin-top: var(--s-2) !important;
+  color: var(--conduction) !important;
+}
+
+.sim-feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+  padding: var(--s-3);
+  border-radius: var(--r-md);
+  font-size: var(--t-xs) !important;
+  line-height: 1.6 !important;
+}
+.sim-feedback svg {
+  flex: none;
+  margin-top: 2px;
+}
+.sim-feedback.is-good {
+  background: rgba(18, 118, 76, 0.1);
+  color: var(--ok) !important;
+}
+.sim-feedback.is-bad {
+  background: rgba(179, 38, 30, 0.09);
+  color: var(--danger) !important;
+}
+
+.sim-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-4);
+}
+
+.sim-electrode-list,
+.sim-site-list {
+  list-style: none;
+  margin: var(--s-2) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sim-electrode,
+.sim-site {
+  appearance: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s-2);
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  border-radius: var(--r-md);
+  padding: 8px 10px;
+  font: inherit;
+  cursor: pointer;
+  color: var(--ink-2);
+}
+.sim-electrode:hover,
+.sim-site:hover {
+  border-color: var(--line-strong);
+}
+.sim-electrode.is-active {
+  border-color: var(--blue);
+  background: var(--blue-wash);
+}
+.sim-electrode.is-done {
+  border-color: rgba(18, 118, 76, 0.4);
+}
+.sim-electrode-code {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--t-xs);
+  color: var(--ink);
+  min-width: 2.2em;
+}
+.sim-electrode-name {
+  font-size: var(--t-2xs);
+  line-height: 1.4;
+  color: var(--ink-3);
+  min-width: 0;
+}
+.sim-electrode-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--t-3xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.sim-electrode.is-done .sim-electrode-state {
+  color: var(--ok);
+}
+
+.sim-site {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
+}
+.sim-site.is-active {
+  border-color: var(--blue);
+  background: var(--blue-wash);
+}
+.sim-site.is-done {
+  border-color: rgba(18, 118, 76, 0.4);
+}
+.sim-site-name {
+  font-size: var(--t-xs);
+  font-weight: 600;
+  color: var(--ink);
+}
+.sim-site-loc {
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+}
+
+.sim-sound {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+  padding: var(--s-3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+}
+.sim-sound h4 {
+  margin: 0;
+  font-size: var(--t-sm);
+}
+.sim-sound p {
+  margin: 2px 0 0;
+}
+
+/* ======================= ACQUISITION ===================================== */
+
+.sim-acquire {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  min-width: 0;
+}
+.sim-acquire-head h3 {
+  font-size: var(--t-lg);
+}
+.sim-monitor-wrap {
+  min-width: 0;
+}
+
+.sim-interpret {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  min-width: 0;
+}
+
+/* ======================= THE 12-LEAD ===================================== */
+
+.twelve {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  padding: var(--s-4);
+  min-width: 0;
+}
+.twelve-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.twelve-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-2) var(--s-4);
+  margin-bottom: var(--s-3);
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+}
+.twelve-head .mono {
+  font-family: var(--font-mono);
+  color: var(--ink-2);
+  font-weight: 600;
+}
+.twelve-head-note {
+  line-height: 1.5;
+}
+
+.twelve-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-2);
+}
+@media (min-width: 560px) {
+  .twelve-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1000px) {
+  .twelve-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.twelve-lead {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: var(--ecg-paper);
+}
+.twelve-lead svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.twelve-lead.is-key {
+  border-color: var(--ecg-mark);
+  box-shadow: 0 0 0 2px var(--ecg-mark-wash);
+}
+.twelve-code {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--t-2xs);
+  font-weight: 700;
+  color: var(--ecg-trace);
+  background: color-mix(in srgb, var(--ecg-paper) 82%, transparent);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.twelve-flag {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: var(--t-3xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ecg-mark);
+  background: color-mix(in srgb, var(--ecg-paper) 82%, transparent);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.twelve-views {
+  display: block;
+  padding: 4px 8px 6px;
+  font-size: var(--t-3xs);
+  line-height: 1.45;
+  color: var(--ink-3);
+  background: var(--surface);
+  border-top: 1px solid var(--line-soft);
+}
+.twelve-trace {
+  fill: none;
+  stroke: var(--ecg-trace);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.twelve-cal {
+  fill: none;
+  stroke: var(--ecg-trace);
+  stroke-width: 1;
+  opacity: 0.5;
+}
+.twelve-window {
+  fill: var(--ecg-mark-wash);
+  stroke: var(--ecg-mark);
+  stroke-width: 0.8;
+}
+.twelve-strip {
+  position: relative;
+  margin-top: var(--s-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: var(--ecg-paper);
+}
+.twelve-strip svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.twelve-strip .twelve-code {
+  top: auto;
+  bottom: 4px;
+}
+
+/* ======================= QUESTIONS ======================================= */
+
+.sim-question-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+}
+.sim-question-count {
+  font-family: var(--font-mono);
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+}
+.sim-question h3 {
+  font-size: var(--t-lg);
+  line-height: 1.4;
+}
+
+.sim-options {
+  list-style: none;
+  margin: var(--s-4) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.sim-option {
+  appearance: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--s-3);
+  align-items: start;
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  border-radius: var(--r-md);
+  padding: var(--s-3);
+  font: inherit;
+  font-size: var(--t-sm);
+  line-height: 1.6;
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    border-color var(--dur-2, 0.18s) var(--ease, ease),
+    background var(--dur-2, 0.18s) var(--ease, ease);
+}
+.sim-option:hover:not(:disabled) {
+  border-color: var(--blue);
+  background: var(--blue-wash);
+}
+.sim-option:disabled {
+  cursor: default;
+}
+.sim-option-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--surface-4);
+  color: var(--ink-2);
+  font-size: var(--t-2xs);
+  font-weight: 700;
+}
+.sim-option.is-correct {
+  border-color: var(--ok);
+  background: rgba(18, 118, 76, 0.08);
+}
+.sim-option.is-correct .sim-option-mark {
+  background: var(--ok);
+  color: #fff;
+}
+.sim-option.is-wrong {
+  border-color: var(--danger);
+  background: rgba(179, 38, 30, 0.07);
+}
+.sim-option.is-wrong .sim-option-mark {
+  background: var(--danger);
+  color: #fff;
+}
+.sim-option.is-dim {
+  opacity: 0.55;
+}
+.sim-option-feedback {
+  margin: 6px 0 0 38px;
+  font-size: var(--t-xs);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.sim-option-feedback.is-good {
+  color: var(--ok);
+}
+.sim-option-feedback.is-bad {
+  color: var(--danger);
+}
+
+.sim-answer-foot {
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+.sim-explain {
+  margin: 0;
+  flex: 1 1 22rem;
+  font-size: var(--t-sm) !important;
+}
+
+/* ======================= FOOTER ACTION =================================== */
+
+/* Deliberately not sticky: the chest is a tap target that runs to the bottom
+   of its panel, and a bar floating over the lower abdomen would sit exactly
+   on top of the right and left leg electrodes. */
+.sim-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+
+/* ======================= DEBRIEF ========================================= */
+
+.sim-debrief {
+  display: grid;
+  gap: var(--s-5);
+  min-width: 0;
+}
+@media (min-width: 1000px) {
+  .sim-debrief {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+  .sim-debrief-wide,
+  .sim-debrief > .card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+.sim-debrief-wide {
+  min-width: 0;
+}
+
+.sim-scorecard {
+  border-color: var(--navy-800);
+}
+.sim-score-total {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-4);
+  margin: var(--s-4) 0;
+  padding: var(--s-4);
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+  color: #fff;
+}
+.sim-score-number {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1;
+}
+.sim-score-number em {
+  font-style: normal;
+  font-size: var(--t-md);
+  opacity: 0.7;
+  margin-left: 6px;
+}
+.sim-score-total strong {
+  display: block;
+  font-size: var(--t-md);
+}
+.sim-score-total p {
+  margin: 4px 0 0;
+  font-size: var(--t-xs);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.sim-score-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.sim-score-line-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-bottom: 6px;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+.sim-score-line-head .mono {
+  font-family: var(--font-mono);
+}
+.sim-score-lines p {
+  margin: 6px 0 0;
+}
+.sim-score-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-5);
+}
+
+.sim-mistakes {
+  margin: var(--s-3) 0 0;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.sim-mistakes h4 {
+  margin: 4px 0;
+  font-size: var(--t-sm);
+  line-height: 1.5;
+}
+.sim-mistakes p {
+  margin: 4px 0 0;
+  font-size: var(--t-xs);
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.sim-mistake-tag {
+  display: inline-block;
+  font-size: var(--t-3xs);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  background: var(--surface-4);
+  color: var(--ink-2);
+}
+.sim-mistake-placement {
+  background: var(--conduction-wash);
+  color: var(--conduction);
+}
+.sim-mistake-analysis {
+  background: var(--blue-wash);
+  color: var(--blue);
+}
+.sim-mistake-reasoning {
+  background: var(--crimson-wash);
+  color: var(--crimson-ink);
+}
+.sim-clean {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+  color: var(--ok) !important;
+  font-weight: 600;
+}
+
+.sim-reading {
+  margin: var(--s-4) 0 0;
+  display: grid;
+  gap: 1px;
+  background: var(--line-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.sim-reading > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
+  background: var(--surface);
+  padding: var(--s-3);
+}
+@media (min-width: 520px) {
+  .sim-reading > div {
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: var(--s-3);
+    align-items: baseline;
+  }
+}
+.sim-reading dt {
+  font-size: var(--t-2xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.sim-reading dd {
+  margin: 0;
+  font-size: var(--t-xs);
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+/* ======================= HUB FEATURE CARD ================================ */
+
+.hub-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+  margin-bottom: var(--s-4);
+  border-color: var(--line-strong);
+}
+.hub-feature-art {
+  min-height: 180px;
+  background: var(--navy-950);
+}
+.hub-feature-art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+}
+.hub-feature-art .clinical-trace {
+  fill: none;
+  stroke: #3ff09a;
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.hub-feature-body {
+  padding: var(--s-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  min-width: 0;
+}
+.hub-feature-body h3 {
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.hub-feature-body p {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.hub-feature-body .hub-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-top: auto;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: var(--t-3xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+@media (min-width: 820px) {
+  .hub-feature {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: stretch;
+  }
+  .hub-feature-art {
+    min-height: 100%;
+  }
+}
+
+/* ======================= ECG PAGE LINK =================================== */
+
+.ecg-head-sim {
+  white-space: nowrap;
+}
+
+/* ======================= REDUCED MOTION ================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .torso-guide.is-active {
+    animation: none;
+  }
+  .sim-progress > span {
+    transition: none;
+  }
+}

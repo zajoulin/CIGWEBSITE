@@ -1,0 +1,524 @@
+[
+  {
+    "id": "aorta",
+    "name": "Aorta",
+    "abbr": "Ao",
+    "latin": "Aorta",
+    "category": "great-vessels",
+    "meshName": "vessels.aorta",
+    "color": "#e05a70",
+    "summary": "The largest artery in the body. It receives the entire left ventricular output and, through elastic recoil, converts pulsatile ejection into continuous peripheral flow.",
+    "synonyms": ["ascending aorta", "aortic arch", "descending aorta", "aortic root", "thoracic aorta", "abdominal aorta"],
+    "anatomy": {
+      "location": "Begins at the aortic valve, ascends behind the sternum, arches posteriorly and to the left over the left main bronchus, descends through the posterior mediastinum, and passes through the diaphragm at the level of T12 to become the abdominal aorta.",
+      "shape": "Divided into the root (with the sinuses of Valsalva), the ascending aorta, the arch, and the descending thoracic and abdominal segments. Its wall is rich in elastic lamellae, giving it the compliance on which the Windkessel effect depends. Normal ascending aortic diameter in adults is roughly 2.5–3.5 cm.",
+      "relations": [
+        "Ascending aorta lies within the pericardium, anterior to the right pulmonary artery and to the right of the pulmonary trunk",
+        "The arch gives the brachiocephalic trunk, left common carotid and left subclavian arteries",
+        "The ligamentum arteriosum tethers the arch at the isthmus, just distal to the left subclavian — the classic site of traumatic transection and of coarctation",
+        "The left recurrent laryngeal nerve hooks beneath the arch, which is why aneurysm can cause hoarseness",
+        "The descending thoracic aorta lies behind the left atrium and adjacent to the oesophagus"
+      ],
+      "attachments": [
+        "Aortic annulus and the crown-shaped attachment of the aortic valve cusps",
+        "Ligamentum arteriosum at the isthmus",
+        "Aortic hiatus of the diaphragm at T12"
+      ],
+      "bloodSupply": "Vasa vasorum supplying the outer media and adventitia; the inner media is nourished by diffusion from the lumen.",
+      "venousDrainage": "Small veins accompanying the vasa vasorum.",
+      "innervation": "Sympathetic and vagal fibres; baroreceptors in the aortic arch are innervated by the vagus nerve and signal to the brainstem cardiovascular centres.",
+      "function": "Conducts blood to the systemic circulation and, critically, stores energy in its elastic wall during systole, releasing it in diastole to maintain forward flow and coronary perfusion."
+    },
+    "physiology": {
+      "function": "Acts as an elastic reservoir (the Windkessel), damping the pulsatile output of the left ventricle so that capillary flow is near-continuous, and sustaining the diastolic pressure that drives coronary perfusion.",
+      "pressures": [
+        { "label": "Systolic pressure", "value": "approximately 100–140 mmHg" },
+        { "label": "Diastolic pressure", "value": "approximately 60–90 mmHg" },
+        { "label": "Mean arterial pressure", "value": "roughly diastolic pressure plus one third of pulse pressure" },
+        { "label": "Pulse pressure", "value": "approximately 40 mmHg; widens with age as the wall stiffens" }
+      ],
+      "electrical": "Not electrically active. Aortic arch baroreceptors provide the afferent limb of the baroreflex through the vagus nerve.",
+      "hemodynamics": [
+        "Windkessel function converts intermittent ejection into continuous peripheral flow",
+        "Arterial stiffening with age reduces compliance, raising systolic pressure and widening pulse pressure — the basis of isolated systolic hypertension",
+        "Pulse wave velocity increases with stiffness and is an independent cardiovascular risk marker",
+        "Laplace's law means wall tension rises with radius, so a dilating aneurysm becomes progressively more likely to rupture",
+        "The dicrotic notch on the aortic pressure trace marks aortic valve closure"
+      ],
+      "concepts": ["Windkessel effect", "Pulse pressure", "Mean arterial pressure", "Arterial compliance", "Baroreflex", "Laplace's law"]
+    },
+    "pathology": [
+      { "name": "Aortic aneurysm", "note": "Progressive dilatation with risk of rupture, related to hypertension, atherosclerosis, bicuspid valve aortopathy and connective tissue disease.", "diseaseId": "aortic-aneurysm" },
+      { "name": "Aortic dissection", "note": "An intimal tear allowing blood into the media, creating a false lumen; a time-critical emergency.", "diseaseId": "aortic-dissection" },
+      { "name": "Coarctation of the aorta", "note": "Narrowing near the isthmus producing upper limb hypertension and radiofemoral delay.", "diseaseId": "congenital-heart-disease" },
+      { "name": "Atherosclerosis", "note": "Plaque throughout the aorta, a source of atheroembolism and a marker of systemic disease.", "diseaseId": "atherosclerosis" }
+    ],
+    "clinical": {
+      "relevance": "Aortic disease is often silent until catastrophic; recognising the presentation of dissection and knowing who to screen for aneurysm are core clinical competencies.",
+      "conditions": ["Thoracic and abdominal aortic aneurysm", "Acute aortic dissection", "Coarctation", "Aortitis"],
+      "examination": [
+        "Blood pressure difference between arms, and radiofemoral delay in coarctation",
+        "Tearing interscapular or chest pain with pulse deficits in dissection",
+        "Expansile pulsatile abdominal mass in abdominal aortic aneurysm",
+        "Early diastolic murmur if dissection involves the root and causes aortic regurgitation"
+      ],
+      "imaging": [
+        "CT angiography — the first-line investigation in suspected acute aortic syndrome",
+        "Transoesophageal echocardiography for the root and descending aorta",
+        "MR angiography for surveillance in younger patients and connective tissue disease",
+        "Abdominal ultrasound for aneurysm screening and follow-up"
+      ],
+      "procedures": [
+        "Open surgical repair and endovascular stent grafting (TEVAR and EVAR)",
+        "Valve-sparing root replacement and composite root replacement",
+        "Balloon angioplasty or stenting for coarctation",
+        "Aggressive blood pressure and heart rate control in type B dissection"
+      ]
+    },
+    "keyPoints": [
+      "Root, ascending, arch, descending thoracic and abdominal segments.",
+      "Arch branches: brachiocephalic trunk, left common carotid, left subclavian.",
+      "The isthmus, tethered by the ligamentum arteriosum, is the classic site of coarctation and traumatic transection.",
+      "Elastic recoil (Windkessel) maintains diastolic pressure and therefore coronary perfusion.",
+      "Aortic stiffening with age widens pulse pressure and causes isolated systolic hypertension."
+    ],
+    "references": ["gray", "moore", "guyton", "braunwald"],
+    "related": {
+      "structures": ["aortic-valve", "left-ventricle", "coronary-arteries", "systemic-arteries"],
+      "diseases": ["aortic-dissection", "aortic-aneurysm", "atherosclerosis", "hypertension", "aortic-stenosis"],
+      "keyPoints": ["hemodynamics", "coronary-circulation", "cardiovascular-examination"]
+    }
+  },
+  {
+    "id": "pulmonary-trunk",
+    "name": "Pulmonary Trunk",
+    "abbr": "PT",
+    "latin": "Truncus pulmonalis",
+    "category": "great-vessels",
+    "meshName": "vessels.pulmonary_trunk",
+    "color": "#6d8fd6",
+    "summary": "Carries deoxygenated blood from the right ventricle towards the lungs — the only large artery in the adult carrying deoxygenated blood.",
+    "synonyms": ["pulmonary artery trunk", "main pulmonary artery", "MPA", "truncus pulmonalis"],
+    "anatomy": {
+      "location": "Arises from the right ventricular infundibulum at the level of the third left costal cartilage, and runs superiorly and posteriorly for roughly 5 cm before bifurcating beneath the aortic arch.",
+      "shape": "A short, wide vessel about 5 cm long and 2.5–3 cm in diameter, with a thinner and more compliant wall than the aorta because it operates at far lower pressure. It lies within the pericardium along with the ascending aorta.",
+      "relations": [
+        "Begins anterior and to the left of the ascending aorta, then spirals posteriorly",
+        "Enclosed with the ascending aorta in a common sleeve of pericardium — the basis of the transverse pericardial sinus behind them",
+        "Bifurcates beneath the aortic arch into right and left pulmonary arteries",
+        "The ligamentum arteriosum connects the bifurcation or left pulmonary artery to the undersurface of the arch"
+      ],
+      "attachments": [
+        "Pulmonary valve annulus at its origin",
+        "Ligamentum arteriosum at the bifurcation, the remnant of the ductus arteriosus",
+        "Pericardial reflection enclosing it with the aorta"
+      ],
+      "bloodSupply": "Vasa vasorum from bronchial arteries and small branches of the coronary circulation.",
+      "venousDrainage": "Small veins accompanying the vasa vasorum.",
+      "innervation": "Cardiac and pulmonary plexuses; stretch receptors in the wall contribute to reflex responses.",
+      "function": "Conducts the entire right ventricular output into the pulmonary circulation while providing compliance that buffers right ventricular ejection."
+    },
+    "physiology": {
+      "function": "Delivers the whole cardiac output to the lungs at roughly one fifth of systemic pressure, reflecting the very low resistance and high compliance of the pulmonary vascular bed.",
+      "pressures": [
+        { "label": "Systolic pressure", "value": "approximately 15–30 mmHg" },
+        { "label": "Diastolic pressure", "value": "approximately 8–15 mmHg" },
+        { "label": "Mean pulmonary artery pressure", "value": "normally under about 20 mmHg" },
+        { "label": "Pulmonary vascular resistance", "value": "roughly one tenth of systemic vascular resistance" }
+      ],
+      "electrical": "Not electrically active, although myocardial sleeves extend a short distance into its wall and are an occasional arrhythmic source.",
+      "hemodynamics": [
+        "The pulmonary circulation is a low-pressure, high-compliance, low-resistance system able to accommodate large increases in flow with only small pressure rises",
+        "Hypoxic pulmonary vasoconstriction diverts blood from poorly ventilated regions, in contrast to the systemic circulation where hypoxia causes vasodilatation",
+        "Chronic pressure elevation causes vascular remodelling and right ventricular hypertrophy",
+        "Dilatation of the trunk can compress the left main coronary artery in severe pulmonary hypertension"
+      ],
+      "concepts": ["Pulmonary vascular resistance", "Hypoxic pulmonary vasoconstriction", "Right ventricular afterload"]
+    },
+    "pathology": [
+      { "name": "Pulmonary hypertension", "note": "Mean pulmonary artery pressure above normal, from left heart disease, lung disease, thromboembolism or pulmonary arterial disease itself.", "diseaseId": "pulmonary-hypertension" },
+      { "name": "Pulmonary embolism", "note": "Saddle embolus at the bifurcation causes acute obstruction and right ventricular failure.", "diseaseId": "pulmonary-embolism" },
+      { "name": "Patent ductus arteriosus", "note": "Persistence of the fetal ductus produces a continuous left-to-right shunt into the pulmonary trunk.", "diseaseId": "congenital-heart-disease" },
+      { "name": "Pulmonary artery dilatation", "note": "Post-stenotic dilatation in pulmonary stenosis, or dilatation secondary to chronic pulmonary hypertension." }
+    ],
+    "clinical": {
+      "relevance": "The pulmonary trunk is the entry point for pulmonary artery catheters and the target of catheter-directed therapy in massive pulmonary embolism; its size on imaging is a useful clue to pulmonary hypertension.",
+      "conditions": ["Pulmonary arterial hypertension", "Acute and chronic thromboembolic disease", "Patent ductus arteriosus"],
+      "examination": [
+        "Loud pulmonary component of the second heart sound",
+        "Left parasternal heave and a palpable P2",
+        "Continuous machinery murmur in patent ductus arteriosus",
+        "Raised JVP with a prominent a wave"
+      ],
+      "imaging": [
+        "CT pulmonary angiography for embolism and vessel calibre — a trunk wider than the adjacent ascending aorta suggests pulmonary hypertension",
+        "Echocardiography with tricuspid regurgitant velocity to estimate pulmonary artery systolic pressure",
+        "Ventilation–perfusion scanning for chronic thromboembolic disease",
+        "Right heart catheterisation — the definitive measurement"
+      ],
+      "procedures": [
+        "Right heart catheterisation and pulmonary artery catheter placement",
+        "Catheter-directed thrombolysis or embolectomy",
+        "Pulmonary endarterectomy for chronic thromboembolic pulmonary hypertension",
+        "Device or surgical closure of a patent ductus arteriosus"
+      ]
+    },
+    "keyPoints": [
+      "The only large artery in the adult carrying deoxygenated blood.",
+      "Arises from the right ventricular infundibulum and bifurcates beneath the aortic arch.",
+      "Normal mean pressure is under about 20 mmHg — roughly one fifth of systemic.",
+      "Enclosed with the ascending aorta in a common pericardial sleeve.",
+      "The ligamentum arteriosum is the remnant of the fetal ductus arteriosus."
+    ],
+    "references": ["gray", "moore", "guyton", "braunwald"],
+    "related": {
+      "structures": ["right-ventricle", "pulmonary-valve", "pulmonary-arteries", "aorta"],
+      "diseases": ["pulmonary-hypertension", "pulmonary-embolism", "congenital-heart-disease", "heart-failure"],
+      "keyPoints": ["hemodynamics", "cardiac-cycle"]
+    }
+  },
+  {
+    "id": "pulmonary-arteries",
+    "name": "Pulmonary Arteries",
+    "abbr": "RPA / LPA",
+    "latin": "Arteriae pulmonales",
+    "category": "great-vessels",
+    "meshName": "vessels.pulmonary_arteries",
+    "color": "#6d8fd6",
+    "summary": "The right and left branches of the pulmonary trunk, distributing deoxygenated blood through progressively smaller vessels to the alveolar capillary bed for gas exchange.",
+    "synonyms": ["right pulmonary artery", "left pulmonary artery", "RPA", "LPA", "lobar pulmonary arteries"],
+    "anatomy": {
+      "location": "The right pulmonary artery is longer and runs horizontally to the right behind the ascending aorta and superior vena cava; the shorter left pulmonary artery passes anterior to the descending aorta to reach the left hilum.",
+      "shape": "Thin-walled, highly compliant vessels that branch with the bronchial tree — lobar, then segmental, then arterioles, ending in the dense pulmonary capillary network surrounding the alveoli.",
+      "relations": [
+        "Right pulmonary artery passes posterior to the ascending aorta and superior vena cava and anterior to the right main bronchus",
+        "Left pulmonary artery arches over the left main bronchus and is connected to the aortic arch by the ligamentum arteriosum",
+        "Within each hilum the artery lies in a constant relationship to the bronchus and pulmonary veins",
+        "Accompany the bronchial tree throughout the lung"
+      ],
+      "attachments": [
+        "Continuous proximally with the pulmonary trunk",
+        "Ligamentum arteriosum tethering the left pulmonary artery",
+        "Fixed at the pulmonary hila"
+      ],
+      "bloodSupply": "Bronchial arteries supply the walls of the larger pulmonary arteries and the conducting airways — a dual blood supply that allows lung tissue to survive some embolic occlusion without infarction.",
+      "venousDrainage": "Bronchial veins, draining partly to the azygos system and partly to the pulmonary veins.",
+      "innervation": "Pulmonary plexus, with sympathetic and vagal contributions.",
+      "function": "Distribute deoxygenated blood evenly through the lung, matching perfusion to ventilation."
+    },
+    "physiology": {
+      "function": "Deliver the entire cardiac output to the alveolar capillaries, where the very large surface area and thin blood–gas barrier allow rapid oxygen uptake and carbon dioxide release.",
+      "pressures": [
+        { "label": "Mean pressure", "value": "normally under about 20 mmHg" },
+        { "label": "Pulmonary capillary pressure", "value": "approximately 8–12 mmHg — low enough to prevent oedema" },
+        { "label": "Transit time", "value": "roughly 0.75 s at rest; equilibration takes only about 0.25 s" },
+        { "label": "Vascular recruitment", "value": "resistance falls as flow rises, through recruitment and distension" }
+      ],
+      "electrical": "Not electrically active.",
+      "hemodynamics": [
+        "Ventilation–perfusion matching depends on hypoxic pulmonary vasoconstriction redirecting flow away from poorly ventilated alveoli",
+        "Gravity produces regional differences in perfusion, classically described as West zones",
+        "Recruitment and distension allow flow to increase several-fold on exercise with minimal pressure rise",
+        "Because pulmonary capillary pressure is low, a rise in left atrial pressure is transmitted back and causes pulmonary oedema"
+      ],
+      "concepts": ["Ventilation–perfusion matching", "Hypoxic pulmonary vasoconstriction", "West zones", "Vascular recruitment"]
+    },
+    "pathology": [
+      { "name": "Pulmonary embolism", "note": "Thrombus, usually from deep leg veins, lodging in the pulmonary arterial tree and causing dead-space ventilation and right ventricular strain.", "diseaseId": "pulmonary-embolism" },
+      { "name": "Pulmonary arterial hypertension", "note": "Remodelling of small pulmonary arteries with intimal proliferation and plexiform lesions, raising resistance.", "diseaseId": "pulmonary-hypertension" },
+      { "name": "Chronic thromboembolic pulmonary hypertension", "note": "Organised, non-resolving thrombus causing fixed obstruction — potentially curable by endarterectomy.", "diseaseId": "pulmonary-hypertension" },
+      { "name": "Peripheral pulmonary stenosis", "note": "Branch narrowing seen in congenital syndromes such as Williams and Alagille.", "diseaseId": "congenital-heart-disease" }
+    ],
+    "clinical": {
+      "relevance": "Pulmonary embolism is among the most common causes of preventable in-hospital death, and pulmonary artery pressure is a key haemodynamic variable in heart failure and shock.",
+      "conditions": ["Acute pulmonary embolism", "Chronic thromboembolic pulmonary hypertension", "Pulmonary arterial hypertension"],
+      "examination": [
+        "Tachypnoea, tachycardia and pleuritic pain in acute embolism",
+        "Loud P2 and a right ventricular heave in pulmonary hypertension",
+        "Signs of deep vein thrombosis in the legs",
+        "Hypoxaemia with a clear chest in significant embolism"
+      ],
+      "imaging": [
+        "CT pulmonary angiography — the first-line test for suspected embolism",
+        "Ventilation–perfusion scanning, preferred for chronic thromboembolic disease and in pregnancy",
+        "Echocardiography for right ventricular strain and pressure estimation",
+        "Right heart catheterisation with pulmonary angiography"
+      ],
+      "procedures": [
+        "Systemic or catheter-directed thrombolysis",
+        "Percutaneous or surgical embolectomy",
+        "Pulmonary endarterectomy and balloon pulmonary angioplasty",
+        "Anticoagulation as the mainstay of treatment and prevention"
+      ]
+    },
+    "keyPoints": [
+      "The right pulmonary artery is longer and passes behind the ascending aorta and SVC.",
+      "Pulmonary arteries branch with the bronchial tree to reach the alveolar capillary bed.",
+      "The lung has a dual blood supply, so embolism does not always cause infarction.",
+      "Hypoxia causes pulmonary vasoconstriction — the opposite of the systemic response.",
+      "Low capillary pressure keeps alveoli dry; raised left atrial pressure causes pulmonary oedema."
+    ],
+    "references": ["gray", "moore", "guyton", "braunwald"],
+    "related": {
+      "structures": ["pulmonary-trunk", "pulmonary-veins", "right-ventricle", "pulmonary-valve"],
+      "diseases": ["pulmonary-embolism", "pulmonary-hypertension", "heart-failure", "congenital-heart-disease"],
+      "keyPoints": ["hemodynamics", "cardiac-imaging"]
+    }
+  },
+  {
+    "id": "pulmonary-veins",
+    "name": "Pulmonary Veins",
+    "abbr": "PV",
+    "latin": "Venae pulmonales",
+    "category": "great-vessels",
+    "meshName": "vessels.pulmonary_veins",
+    "color": "#e0697c",
+    "summary": "Four veins returning oxygenated blood from the lungs to the left atrium — the only veins in the adult carrying oxygenated blood, and the source of most atrial fibrillation triggers.",
+    "synonyms": ["pulmonary veins", "PV ostia", "right superior pulmonary vein", "left inferior pulmonary vein", "PV sleeves"],
+    "anatomy": {
+      "location": "Two from each lung — superior and inferior — running from the hila to enter the posterior wall of the left atrium.",
+      "shape": "Thin-walled vessels without valves. Their proximal portions are invested by sleeves of left atrial myocardium extending 1–3 cm into the vein, which are electrically active. Variant anatomy is common, including a common left trunk and supernumerary right veins.",
+      "relations": [
+        "Enter the posterior left atrial wall, which lies directly anterior to the oesophagus",
+        "At each hilum, the veins lie anterior and inferior to the bronchus and artery",
+        "The right veins pass behind the right atrium and superior vena cava",
+        "The left atrial appendage lies adjacent to the left superior pulmonary vein, separated by a ridge"
+      ],
+      "attachments": [
+        "Open into the posterior left atrium without valves",
+        "Myocardial sleeves continuous with left atrial muscle"
+      ],
+      "bloodSupply": "Vasa vasorum; also receive some bronchial venous return, which accounts for a small physiological shunt.",
+      "venousDrainage": "They are the venous drainage of the pulmonary circulation.",
+      "innervation": "Ganglionated plexi cluster around the pulmonary vein–atrial junctions and modulate atrial electrophysiology.",
+      "function": "Return oxygenated blood to the left heart and provide a compliant reservoir between the pulmonary capillary bed and the left atrium."
+    },
+    "physiology": {
+      "function": "Carry oxygenated blood at low pressure to the left atrium. Their pressure is effectively continuous with left atrial pressure because there are no intervening valves.",
+      "pressures": [
+        { "label": "Pulmonary venous pressure", "value": "approximately 4–12 mmHg, equal to left atrial pressure" },
+        { "label": "Oxygen saturation", "value": "approximately 95–100%" },
+        { "label": "Threshold for pulmonary oedema", "value": "capillary pressure rising above roughly 20–25 mmHg" }
+      ],
+      "electrical": "Myocardial sleeves have shortened refractory periods and abnormal automaticity, generating the ectopic beats that initiate most paroxysmal atrial fibrillation. Their electrical isolation from the atrium is the cornerstone of ablation therapy.",
+      "hemodynamics": [
+        "Pulmonary venous Doppler flow patterns are used to assess left atrial pressure and diastolic function",
+        "Because there are no valves, elevated left atrial pressure is transmitted directly back to the pulmonary capillaries",
+        "A small amount of bronchial venous drainage into the pulmonary veins creates a physiological right-to-left shunt"
+      ],
+      "concepts": ["Pulmonary venous pressure", "Physiological shunt", "Pulmonary vein triggers", "Diastolic function assessment"]
+    },
+    "pathology": [
+      { "name": "Atrial fibrillation", "note": "Pulmonary vein sleeves are the dominant source of triggering ectopy; isolating them is the basis of ablation.", "diseaseId": "atrial-fibrillation" },
+      { "name": "Pulmonary vein stenosis", "note": "An uncommon but serious complication of ablation, causing dyspnoea, haemoptysis and localised congestion." },
+      { "name": "Anomalous pulmonary venous drainage", "note": "Partial or total drainage into the systemic venous system, producing a left-to-right shunt.", "diseaseId": "congenital-heart-disease" },
+      { "name": "Pulmonary venous hypertension", "note": "Raised left atrial pressure from left heart disease transmitted backwards, causing pulmonary congestion.", "diseaseId": "heart-failure" }
+    ],
+    "clinical": {
+      "relevance": "Pulmonary vein anatomy is central to modern electrophysiology: every atrial fibrillation ablation begins with the question of how many veins there are and where their ostia lie.",
+      "conditions": ["Paroxysmal and persistent atrial fibrillation", "Post-ablation pulmonary vein stenosis", "Anomalous pulmonary venous connection"],
+      "examination": [
+        "No specific signs; findings reflect the underlying condition",
+        "Irregularly irregular pulse in atrial fibrillation",
+        "Fixed splitting of the second heart sound with an associated atrial septal defect in partial anomalous drainage"
+      ],
+      "imaging": [
+        "Cardiac CT or MR venography to map ostia and variants before ablation",
+        "Transoesophageal echocardiography for vein flow and appendage assessment",
+        "Pulmonary venous Doppler on transthoracic echocardiography for diastolic function"
+      ],
+      "procedures": [
+        "Pulmonary vein isolation by radiofrequency, cryoballoon or pulsed-field ablation",
+        "Balloon angioplasty or stenting for post-ablation stenosis",
+        "Surgical rerouting for anomalous venous connections"
+      ]
+    },
+    "keyPoints": [
+      "Four veins — two from each lung — entering the posterior left atrium without valves.",
+      "The only veins in the adult carrying oxygenated blood.",
+      "Myocardial sleeves in their walls generate most atrial fibrillation triggers.",
+      "Pulmonary venous pressure equals left atrial pressure, so left heart disease causes pulmonary congestion.",
+      "Anatomical variants are common and must be mapped before ablation."
+    ],
+    "references": ["gray", "moore", "braunwald", "aha-af-2023"],
+    "related": {
+      "structures": ["left-atrium", "pulmonary-arteries", "left-ventricle", "mitral-valve"],
+      "diseases": ["atrial-fibrillation", "heart-failure", "congenital-heart-disease", "pulmonary-hypertension"],
+      "keyPoints": ["arrhythmia-principles", "hemodynamics", "cardiac-imaging"]
+    }
+  },
+  {
+    "id": "superior-vena-cava",
+    "name": "Superior Vena Cava",
+    "abbr": "SVC",
+    "latin": "Vena cava superior",
+    "category": "great-vessels",
+    "meshName": "vessels.svc",
+    "color": "#4a70b0",
+    "summary": "Returns venous blood from the head, neck, upper limbs and thorax to the right atrium; the main route for central venous access and cardiac device leads.",
+    "synonyms": ["SVC", "vena cava superior", "cavoatrial junction"],
+    "anatomy": {
+      "location": "Formed behind the lower border of the right first costal cartilage by the union of the right and left brachiocephalic veins, and descending to enter the superior aspect of the right atrium at about the level of the third costal cartilage.",
+      "shape": "A short, wide, thin-walled and valveless vessel roughly 7 cm long. Its lower half lies within the pericardium.",
+      "relations": [
+        "Anterior and to the right of the ascending aorta",
+        "The right phrenic nerve runs along its right side",
+        "The azygos vein arches forward over the right main bronchus to join its posterior aspect just above the pericardium",
+        "Surrounded by mediastinal lymph nodes, which is why bronchogenic carcinoma and lymphoma cause obstruction"
+      ],
+      "attachments": [
+        "Continuous above with the brachiocephalic veins",
+        "Receives the azygos vein posteriorly",
+        "Opens into the right atrium at the cavoatrial junction, without a valve"
+      ],
+      "bloodSupply": "Vasa vasorum from mediastinal vessels.",
+      "venousDrainage": "It is itself a venous channel; the wall drains via small mediastinal veins.",
+      "innervation": "Autonomic fibres from the cardiac plexus; the adjacent right phrenic nerve is a key surgical landmark.",
+      "function": "Conducts roughly one third of systemic venous return to the right atrium."
+    },
+    "physiology": {
+      "function": "Provides a low-pressure, valveless conduit whose pressure closely reflects right atrial pressure and which responds to changes in intrathoracic pressure.",
+      "pressures": [
+        { "label": "Pressure", "value": "essentially equal to right atrial pressure, approximately 0–8 mmHg" },
+        { "label": "Respiratory variation", "value": "flow increases and pressure falls with inspiration" },
+        { "label": "Share of venous return", "value": "roughly one third of systemic venous return" }
+      ],
+      "electrical": "Not electrically active, but myocardial sleeves at the cavoatrial junction, adjacent to the sinus node, can occasionally be an arrhythmic focus.",
+      "hemodynamics": [
+        "Because it is valveless, right atrial pressure waves are transmitted directly into the jugular veins — the basis of the JVP",
+        "Negative intrathoracic pressure during inspiration augments venous return through the SVC",
+        "Obstruction raises pressure in the head, neck and upper limbs and forces flow through collaterals such as the azygos system"
+      ],
+      "concepts": ["Central venous pressure", "Jugular venous pulse", "Respiratory variation in venous return"]
+    },
+    "pathology": [
+      { "name": "Superior vena cava obstruction", "note": "Most often from malignant mediastinal disease, and increasingly from indwelling catheters and device leads; causes facial swelling and distended neck veins." },
+      { "name": "Persistent left superior vena cava", "note": "A common thoracic venous variant draining into a dilated coronary sinus; usually asymptomatic but important for device implantation." },
+      { "name": "Catheter-related thrombosis", "note": "Thrombus around central lines and pacing leads, which may propagate or embolise." },
+      { "name": "Sinus venosus defect", "note": "A defect near the SVC orifice, frequently with partial anomalous pulmonary venous drainage.", "diseaseId": "atrial-septal-defect" }
+    ],
+    "clinical": {
+      "relevance": "The SVC is the highway for central lines, pacing leads and pulmonary artery catheters, and its obstruction is an oncological emergency that students should recognise on sight.",
+      "conditions": ["Superior vena cava obstruction", "Catheter- and lead-related thrombosis", "Persistent left SVC"],
+      "examination": [
+        "Facial and upper limb swelling with plethora",
+        "Distended, non-pulsatile neck veins and dilated chest wall collateral veins",
+        "Pemberton's sign — facial congestion on raising the arms",
+        "Elevated JVP without a visible waveform in obstruction"
+      ],
+      "imaging": [
+        "Contrast CT of the chest to identify the level and cause of obstruction",
+        "Venography before device implantation where obstruction is suspected",
+        "Echocardiography with agitated saline to detect a persistent left SVC",
+        "Ultrasound for catheter-related thrombosis"
+      ],
+      "procedures": [
+        "Endovascular stenting for malignant obstruction",
+        "Central venous and pulmonary artery catheter insertion",
+        "Transvenous pacing and defibrillator lead placement",
+        "Lead extraction, in which the SVC is the site of greatest risk"
+      ]
+    },
+    "keyPoints": [
+      "Formed by the union of the two brachiocephalic veins; drains head, neck, upper limbs and thorax.",
+      "Valveless — so right atrial pressure is transmitted directly to the jugular veins.",
+      "Receives the azygos vein just before entering the pericardium.",
+      "Obstruction causes facial swelling, distended neck veins and collateral chest wall veins.",
+      "The main route for central venous access and cardiac device leads."
+    ],
+    "references": ["gray", "moore", "braunwald"],
+    "related": {
+      "structures": ["right-atrium", "sa-node", "inferior-vena-cava", "systemic-veins"],
+      "diseases": ["heart-failure", "atrial-septal-defect", "pulmonary-embolism"],
+      "keyPoints": ["cardiovascular-examination", "hemodynamics"]
+    }
+  },
+  {
+    "id": "inferior-vena-cava",
+    "name": "Inferior Vena Cava",
+    "abbr": "IVC",
+    "latin": "Vena cava inferior",
+    "category": "great-vessels",
+    "meshName": "vessels.ivc",
+    "color": "#4a70b0",
+    "summary": "The largest vein in the body, returning blood from the abdomen, pelvis and lower limbs to the right atrium; its diameter and collapsibility are used to estimate right atrial pressure.",
+    "synonyms": ["IVC", "vena cava inferior", "Eustachian valve"],
+    "anatomy": {
+      "location": "Formed by the union of the common iliac veins at approximately L5, ascending to the right of the aorta, grooving the posterior liver, and piercing the central tendon of the diaphragm at T8 before entering the right atrium almost immediately.",
+      "shape": "A large, thin-walled, valveless vessel. Its right atrial orifice is guarded by the rudimentary Eustachian valve, which in fetal life directed oxygenated blood towards the foramen ovale.",
+      "relations": [
+        "Lies to the right of the abdominal aorta throughout its abdominal course",
+        "Grooves the bare area of the liver and receives the hepatic veins just below the diaphragm",
+        "Passes through the caval opening of the diaphragm at T8",
+        "Retroperitoneal, with the right renal artery, right adrenal gland and duodenum among its anterior and posterior relations"
+      ],
+      "attachments": [
+        "Formed by the confluence of the common iliac veins",
+        "Receives renal, hepatic, gonadal, lumbar and adrenal tributaries",
+        "Opens into the inferior aspect of the right atrium, guarded by the Eustachian valve"
+      ],
+      "bloodSupply": "Vasa vasorum from adjacent lumbar and renal vessels.",
+      "venousDrainage": "It is the principal venous channel of the lower body.",
+      "innervation": "Autonomic fibres from surrounding plexuses.",
+      "function": "Returns roughly two thirds of systemic venous return to the right atrium."
+    },
+    "physiology": {
+      "function": "Carries the largest share of venous return and serves, with the rest of the venous system, as the body's principal blood reservoir.",
+      "pressures": [
+        { "label": "Pressure", "value": "close to right atrial pressure, approximately 0–8 mmHg" },
+        { "label": "Normal diameter", "value": "approximately 1.5–2.1 cm at end-expiration" },
+        { "label": "Inspiratory collapse", "value": "greater than 50% collapse suggests a normal right atrial pressure" },
+        { "label": "Share of venous return", "value": "roughly two thirds" }
+      ],
+      "electrical": "Not electrically active. The cavotricuspid isthmus between the IVC orifice and the tricuspid annulus is the critical zone in typical atrial flutter.",
+      "hemodynamics": [
+        "Inspiration lowers intrathoracic pressure and raises intra-abdominal pressure, both of which augment IVC flow",
+        "IVC diameter and collapsibility are used at the bedside to estimate right atrial pressure and assess volume status",
+        "Compression by a gravid uterus in the supine position reduces venous return — the basis of left lateral tilt in pregnancy",
+        "Raised right atrial pressure causes hepatic venous congestion, hepatomegaly and ascites"
+      ],
+      "concepts": ["Venous capacitance", "Volume status assessment", "Aortocaval compression", "Hepatic congestion"]
+    },
+    "pathology": [
+      { "name": "Deep vein thrombosis and IVC thrombosis", "note": "Thrombus propagating from iliofemoral veins, with risk of pulmonary embolism.", "diseaseId": "deep-vein-thrombosis" },
+      { "name": "IVC plethora", "note": "A dilated, non-collapsing IVC indicating raised right atrial pressure, as in right heart failure or tamponade.", "diseaseId": "heart-failure" },
+      { "name": "Budd–Chiari syndrome", "note": "Hepatic venous outflow obstruction, sometimes involving the IVC, causing congestive hepatopathy." },
+      { "name": "Tumour extension", "note": "Renal cell carcinoma and hepatocellular carcinoma can extend into and along the IVC lumen." }
+    ],
+    "clinical": {
+      "relevance": "Bedside ultrasound of the IVC has become a routine part of assessing volume status in acute care, and the cavotricuspid isthmus adjacent to its orifice is the standard ablation target for typical atrial flutter.",
+      "conditions": ["Right heart failure with venous congestion", "Cardiac tamponade", "IVC thrombosis", "Typical atrial flutter"],
+      "examination": [
+        "Raised jugular venous pressure and hepatojugular reflux",
+        "Tender, pulsatile hepatomegaly, ascites and peripheral oedema",
+        "Dilated abdominal wall veins in chronic obstruction",
+        "Kussmaul's sign — a paradoxical rise in JVP on inspiration — in constrictive physiology"
+      ],
+      "imaging": [
+        "Point-of-care ultrasound for IVC diameter and collapsibility",
+        "CT or MR venography for thrombosis and tumour extension",
+        "Echocardiography from the subcostal window",
+        "Fluoroscopy during flutter ablation and filter placement"
+      ],
+      "procedures": [
+        "Cavotricuspid isthmus ablation for typical atrial flutter",
+        "IVC filter placement in selected patients who cannot be anticoagulated",
+        "Femoral venous access for right heart catheterisation and electrophysiology",
+        "Surgical caval resection or reconstruction in tumour extension"
+      ]
+    },
+    "keyPoints": [
+      "The largest vein in the body, carrying roughly two thirds of systemic venous return.",
+      "Passes through the diaphragm at T8 and enters the right atrium almost immediately.",
+      "Its orifice bears the rudimentary Eustachian valve, important in fetal circulation.",
+      "IVC diameter and collapsibility estimate right atrial pressure on bedside ultrasound.",
+      "The cavotricuspid isthmus next to its orifice is the ablation target in typical atrial flutter."
+    ],
+    "references": ["gray", "moore", "guyton", "braunwald"],
+    "related": {
+      "structures": ["right-atrium", "superior-vena-cava", "tricuspid-valve", "systemic-veins"],
+      "diseases": ["heart-failure", "deep-vein-thrombosis", "pulmonary-embolism", "pericardial-disease"],
+      "keyPoints": ["cardiovascular-examination", "hemodynamics", "cardiac-imaging"]
+    }
+  }
+]

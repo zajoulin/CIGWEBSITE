@@ -1,0 +1,151 @@
+[
+  {
+    "id": "left-ventricular-hypertrophy",
+    "name": "Left Ventricular Hypertrophy pattern",
+    "abbr": "LVH",
+    "categoryId": "chamber",
+    "tagline": "Tall left-sided R waves, deep right-sided S waves, and lateral repolarisation strain.",
+    "rateRange": "Usually normal; the rhythm is typically sinus",
+    "regularity": "Regular",
+    "summary": "A thickened left ventricle generates a larger electrical vector, so the leads that look at it record taller R waves and the leads opposite it record deeper S waves. With more established hypertrophy the repolarisation sequence also changes, producing downsloping ST depression and asymmetrical T wave inversion in the lateral leads — the 'strain' pattern. The ECG is specific but insensitive: a normal tracing does not exclude hypertrophy, and voltage criteria alone are supportive evidence rather than a diagnosis. Echocardiography measures the muscle.",
+    "mechanism": "Chronic pressure overload — most often systemic hypertension or aortic stenosis — makes left ventricular myocytes add sarcomeres in parallel, thickening the wall. A thicker wall means more depolarising tissue and a larger, more leftward and posteriorly directed QRS vector, which is what raises R wave amplitude in I, aVL, V5 and V6 and deepens the S wave in V1 and V2. Activation of the thickened wall also takes marginally longer, prolonging the R wave peak time. The repolarisation changes have a different origin: subendocardial myocardium in a hypertrophied, high-pressure ventricle is relatively underperfused, and the repolarisation sequence is reversed, so the ST segment sags away from the tall R wave and the T wave inverts asymmetrically — steeply downsloping, then a rapid return. Left atrial abnormality often accompanies it, because the stiff ventricle raises filling pressure.",
+    "recognition": [
+      "Sokolow–Lyon: S in V1 plus R in V5 or V6 greater than 35 mm",
+      "Cornell: R in aVL plus S in V3 greater than 28 mm in men, 20 mm in women",
+      "R wave in aVL greater than 11 mm on its own is reasonably specific",
+      "Lateral 'strain': downsloping ST depression with asymmetrical T wave inversion in I, aVL, V5 and V6",
+      "Left axis deviation and prolonged R wave peak time",
+      "Left atrial abnormality — a broad, notched P wave in II and a deep terminal negativity in V1"
+    ],
+    "causes": [
+      "Systemic hypertension — by far the commonest cause",
+      "Aortic stenosis and other fixed outflow obstruction",
+      "Hypertrophic cardiomyopathy",
+      "Chronic aortic or mitral regurgitation, where volume load also enlarges the chamber",
+      "Athletic remodelling, which is physiological and should not show a strain pattern"
+    ],
+    "significance": "Electrocardiographic left ventricular hypertrophy is an independent predictor of heart failure, atrial fibrillation, stroke and cardiovascular death, and the strain pattern carries the worst prognosis of the ECG findings. Voltage criteria are limited by body habitus: they over-call in thin young people and under-call in obesity, emphysema and pericardial effusion. Importantly, lateral ST depression and T wave inversion in this setting can be mistaken for ischaemia — and can equally mask it — so serial tracings and clinical context matter.",
+    "management": "Treat the cause. Blood pressure control regresses hypertrophy and improves outcomes, with renin–angiotensin system blockers and calcium channel blockers having the most consistent effect on regression; intervene on severe aortic stenosis according to guideline criteria. Confirm and quantify wall thickness with echocardiography, and consider cardiac magnetic resonance where hypertrophic cardiomyopathy or an infiltrative cause is suspected.",
+    "waveform": {
+      "rate": 70,
+      "irregularity": 0.02,
+      "atrial": "sinus",
+      "pAmplitude": 0.18,
+      "pDuration": 0.12,
+      "prInterval": 0.17,
+      "qrsDuration": 0.1,
+      "qrsAmplitude": 2.1,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.12,
+      "sAmplitude": 0.35,
+      "stShift": -0.12,
+      "stShape": "downsloping",
+      "tAmplitude": -0.32,
+      "tShape": "inverted",
+      "qtInterval": 0.4,
+      "wander": 0.06,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 70,
+      "spo2": 97,
+      "respiratoryRate": 16,
+      "bpSystolic": 172,
+      "bpDiastolic": 98,
+      "temperature": 36.6,
+      "alarm": "advisory",
+      "alarmText": "HIGH VOLTAGE — CHECK BP",
+      "bedside": "Long-standing hypertension, poorly controlled. Comfortable at rest, with a forceful and sustained apex beat displaced laterally."
+    },
+    "highlights": [
+      {
+        "feature": "qrs",
+        "label": "High voltage",
+        "note": "A thickened wall depolarises more tissue, so the QRS amplitude rises: tall R waves in the leftward leads and deep S waves in V1 and V2. Amplitude is measured against explicit criteria, not eyeballed.",
+        "abnormal": true
+      },
+      {
+        "feature": "st",
+        "label": "Strain — ST depression",
+        "note": "Downsloping ST depression in the leads with the tallest R waves. Note the shape: it sags away from the J point rather than being flat, which distinguishes it from many other causes of depression.",
+        "abnormal": true
+      },
+      {
+        "feature": "t",
+        "label": "Asymmetrical T inversion",
+        "note": "The T wave descends slowly and returns steeply — asymmetrical inversion. Symmetrical, deep inversion is more suggestive of ischaemia than of strain.",
+        "abnormal": true
+      },
+      {
+        "feature": "p",
+        "label": "Left atrial abnormality",
+        "note": "A stiff ventricle raises left atrial pressure and the atrium dilates, broadening and notching the P wave in lead II and deepening its terminal negative component in V1.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "Chronic pressure overload",
+        "text": "Years of high afterload make the left ventricle add sarcomeres in parallel. The wall thickens and the chamber becomes stiff.",
+        "duration": 1.3,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The atrium works harder",
+        "text": "Filling a stiff ventricle raises left atrial pressure, and the atrium dilates. The P wave becomes broad and notched in lead II.",
+        "duration": 1.2,
+        "highlight": "p"
+      },
+      {
+        "title": "A larger vector",
+        "text": "More myocardium means a bigger depolarisation vector pointing left and posteriorly, so R waves grow in I, aVL, V5 and V6 and S waves deepen in V1 and V2.",
+        "duration": 1.4,
+        "highlight": "qrs"
+      },
+      {
+        "title": "Repolarisation strain",
+        "text": "The subendocardium of a thick, high-pressure wall repolarises abnormally. The ST segment sags downward in the same lateral leads.",
+        "duration": 1.4,
+        "highlight": "st"
+      },
+      {
+        "title": "Asymmetrical inversion",
+        "text": "The T wave inverts with a slow downstroke and a rapid return. It looks like ischaemia and can hide it — which is why the tracing is read against the patient and against previous ECGs.",
+        "duration": 1.4,
+        "highlight": "t"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "70 bpm", "normal": "60–100 bpm" },
+      {
+        "label": "R wave amplitude (V5)",
+        "value": "≈21 mm",
+        "normal": "< 26 mm",
+        "abnormal": true
+      },
+      {
+        "label": "Sokolow–Lyon (SV1 + RV5)",
+        "value": "≈38 mm",
+        "normal": "< 35 mm",
+        "abnormal": true
+      },
+      { "label": "QRS duration", "value": "0.10 s", "normal": "< 0.12 s" },
+      {
+        "label": "ST segment (lateral)",
+        "value": "≈1.2 mm downsloping depression",
+        "normal": "Isoelectric",
+        "abnormal": true
+      },
+      {
+        "label": "T wave (lateral)",
+        "value": "Asymmetrically inverted",
+        "normal": "Upright",
+        "abnormal": true
+      }
+    ],
+    "relatedDiseases": ["hypertension", "aortic-stenosis", "cardiomyopathy", "heart-failure"],
+    "relatedKeyPoints": ["ecg-essentials", "hemodynamics", "cardiac-imaging"],
+    "relatedStructures": ["left-ventricle", "left-atrium", "aortic-valve"],
+    "references": ["aha-ecg-part4", "aha-htn-2017", "braunwald"]
+  }
+]

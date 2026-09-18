@@ -1,0 +1,262 @@
+[
+  {
+    "id": "case-lvh-hypertension",
+    "title": "Big voltages and a sagging ST segment",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "advanced",
+    "patient": {
+      "age": 57,
+      "sex": "male",
+      "descriptor": "57-year-old man",
+      "setting": "Hypertension clinic"
+    },
+    "presentingComplaint": "Referred with blood pressure repeatedly above 170/100 mmHg despite two agents. He reports mild breathlessness on hills but no chest pain.",
+    "history": [
+      "Hypertension diagnosed nine years ago, adherence variable",
+      "On amlodipine and ramipril; home readings consistently 165–180 systolic",
+      "Mild exertional breathlessness on hills over the past year",
+      "No chest pain, no orthopnoea, no syncope; non-smoker"
+    ],
+    "symptoms": [
+      "Breathlessness on inclines",
+      "No chest pain at rest or on exertion",
+      "No palpitations or syncope"
+    ],
+    "examinationFindings": [
+      "Well, normal body habitus",
+      "Blood pressure 172/98 mmHg in both arms",
+      "Apex beat displaced laterally, forceful and sustained — a pressure-loaded apex",
+      "Fourth heart sound at the apex; no murmur",
+      "No signs of fluid overload; no radiofemoral delay"
+    ],
+    "vitals": {
+      "heartRate": 70,
+      "spo2": 97,
+      "respiratoryRate": 16,
+      "bpSystolic": 172,
+      "bpDiastolic": 98,
+      "temperature": 36.6,
+      "alarm": "advisory",
+      "alarmText": "HIGH VOLTAGE — CHECK BP",
+      "bedside": "Comfortable at rest with a markedly raised blood pressure. The forceful sustained apex beat is the physical sign that matches the tracing."
+    },
+    "ecgRhythmId": "left-ventricular-hypertrophy",
+    "ecg": {
+      "rate": "70 bpm",
+      "rhythm": "Regular sinus rhythm",
+      "pWaves": "Broad and notched in lead II with a deep terminal negative component in V1 — left atrial abnormality",
+      "prInterval": "0.17 s, normal",
+      "qrs": "0.10 s, narrow, but of high amplitude: tall R waves in I, aVL, V5 and V6 with deep S waves in V1 and V2",
+      "axis": "Leftward",
+      "stSegment": "Downsloping depression in I, aVL, V5 and V6, with reciprocal elevation over the deep S waves in V1 and V2",
+      "tWaves": "Asymmetrically inverted in the lateral leads — a slow downstroke and a rapid return",
+      "keyFindings": [
+        "Voltage criteria met: the sum of S in V1 and R in V5 exceeds 35 mm",
+        "Lateral strain pattern — downsloping ST depression with asymmetrical T wave inversion",
+        "Left atrial abnormality on the P wave, reflecting a stiff ventricle and raised filling pressure",
+        "A narrow QRS, which distinguishes this from bundle branch block as a cause of the repolarisation change"
+      ],
+      "keyLeads": ["V1", "V2", "V5", "V6", "aVL"],
+      "highlight": "st",
+      "leadOverrides": {
+        "V1": { "r": 0.35, "s": 2.3, "st": -0.3, "t": -0.6 },
+        "V2": { "r": 0.45, "s": 2.5, "st": -0.4, "t": -0.8 },
+        "V3": { "r": 0.8, "s": 1.7, "st": -0.15, "t": -0.35 },
+        "V4": { "r": 1.1, "s": 0.9, "st": 0.5, "t": 0.55 },
+        "V5": { "r": 1.2, "s": 0.45, "st": 1.2, "t": 1.2 },
+        "V6": { "r": 1.05, "s": 0.35, "st": 1.2, "t": 1.2 },
+        "I": { "r": 1.05, "st": 1.1, "t": 1.1 },
+        "aVL": { "r": 1.3, "st": 1.15, "t": 1.15 },
+        "II": { "st": 0.5, "t": 0.5 },
+        "III": { "st": 0.4, "t": 0.4 },
+        "aVF": { "st": 0.45, "t": 0.45 }
+      }
+    },
+    "interpretation": "Sinus rhythm with voltage criteria for left ventricular hypertrophy and a lateral repolarisation (strain) pattern, together with left atrial abnormality. Findings are consistent with hypertensive heart disease; the ECG supports but does not establish the diagnosis, which is made by echocardiography.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "s4",
+        "note": "A low-pitched fourth heart sound just before S1, heard with the bell at the apex. It is the atrium contracting forcefully into a stiff, non-compliant ventricle — and it cannot exist in atrial fibrillation."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No ejection systolic murmur, which makes aortic stenosis unlikely as the cause of the hypertrophy."
+      },
+      {
+        "siteId": "erb",
+        "soundId": "normal-s1-s2",
+        "note": "No early diastolic murmur; aortic regurgitation would be another cause of left ventricular enlargement."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus rhythm",
+            "correct": true,
+            "feedback": "Correct. The abnormality here is of voltage and repolarisation, not of rhythm."
+          },
+          {
+            "id": "b",
+            "text": "Atrial fibrillation",
+            "feedback": "The rhythm is regular and there are clear, if broad, P waves before every QRS."
+          },
+          {
+            "id": "c",
+            "text": "Junctional rhythm",
+            "feedback": "Upright, conducted P waves precede each QRS in lead II."
+          },
+          {
+            "id": "d",
+            "text": "Accelerated idioventricular rhythm",
+            "feedback": "The QRS is narrow at 0.10 s and follows a P wave."
+          }
+        ],
+        "explanation": "Naming the rhythm first, before commenting on morphology, keeps the systematic approach intact even when a striking abnormality catches the eye.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-voltage",
+        "kind": "systematic",
+        "step": "QRS voltage",
+        "prompt": "Which measurement supports left ventricular hypertrophy here?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The sum of the S wave in V1 and the R wave in V5 exceeds 35 mm",
+            "correct": true,
+            "feedback": "Correct — the Sokolow–Lyon index. The Cornell criteria, using R in aVL plus S in V3, perform slightly better."
+          },
+          {
+            "id": "b",
+            "text": "The QRS duration exceeds 0.12 s",
+            "feedback": "That would indicate a conduction abnormality. The QRS here is 0.10 s."
+          },
+          {
+            "id": "c",
+            "text": "The PR interval exceeds 0.20 s",
+            "feedback": "The PR interval relates to atrioventricular conduction, not to ventricular mass."
+          },
+          {
+            "id": "d",
+            "text": "The presence of Q waves in the inferior leads",
+            "feedback": "Inferior Q waves suggest previous infarction, not hypertrophy."
+          }
+        ],
+        "explanation": "Voltage criteria are specific but insensitive. They over-call in thin young people and under-call in obesity, emphysema and pericardial effusion.",
+        "highlight": "qrs",
+        "leads": ["V1", "V5"]
+      },
+      {
+        "id": "q-strain",
+        "kind": "systematic",
+        "step": "ST segment and T waves",
+        "prompt": "How would you characterise the lateral ST and T wave changes?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Downsloping ST depression with asymmetrical T wave inversion — a strain pattern",
+            "correct": true,
+            "feedback": "Correct. The shape matters: strain T waves descend slowly and return steeply, whereas ischaemic inversion tends to be symmetrical."
+          },
+          {
+            "id": "b",
+            "text": "Concave ST elevation in all leads",
+            "feedback": "That is the pattern of acute pericarditis."
+          },
+          {
+            "id": "c",
+            "text": "Symmetrical deep T wave inversion in V2–V4 with preserved R waves",
+            "feedback": "That describes Wellens' pattern, which points to critical proximal left anterior descending stenosis and is a different, urgent finding."
+          },
+          {
+            "id": "d",
+            "text": "Peaked, narrow-based T waves",
+            "feedback": "That suggests hyperkalaemia."
+          }
+        ],
+        "explanation": "Describing T wave inversion as symmetrical or asymmetrical is a small habit that carries real diagnostic weight.",
+        "highlight": "t",
+        "leads": ["V5", "V6", "aVL"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given the uncontrolled hypertension, the sustained apex beat and this tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Hypertensive left ventricular hypertrophy with a repolarisation strain pattern",
+            "correct": true,
+            "feedback": "Correct. The history, the pressure-loaded apex, the fourth heart sound and the ECG all point the same way."
+          },
+          {
+            "id": "b",
+            "text": "Acute non-ST-elevation myocardial infarction",
+            "feedback": "The lateral ST depression is a real trap, but there is no chest pain, the changes are chronic in character and the voltages explain them. Serial troponin would settle any doubt."
+          },
+          {
+            "id": "c",
+            "text": "Left bundle branch block",
+            "feedback": "The QRS is 0.10 s — narrow. Left bundle branch block requires 0.12 s or more."
+          },
+          {
+            "id": "d",
+            "text": "Hypertrophic cardiomyopathy",
+            "feedback": "Possible on the ECG alone, and worth excluding by imaging — but nine years of poorly controlled hypertension is the simpler explanation."
+          }
+        ],
+        "explanation": "The same ECG in a young athlete with a normal blood pressure would raise very different possibilities. Context does most of the work.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the most appropriate next step in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Optimise blood pressure control and arrange echocardiography to confirm and quantify the hypertrophy",
+            "correct": true,
+            "feedback": "Correct. Imaging measures wall thickness and function directly, and blood pressure control can regress hypertrophy and improve outcomes."
+          },
+          {
+            "id": "b",
+            "text": "Activate the primary percutaneous coronary intervention pathway",
+            "feedback": "There is no ST elevation and no acute ischaemic presentation."
+          },
+          {
+            "id": "c",
+            "text": "Reassure and repeat the ECG in five years",
+            "feedback": "Electrocardiographic hypertrophy with a strain pattern is an independent marker of cardiovascular risk and warrants action now."
+          },
+          {
+            "id": "d",
+            "text": "Stop his antihypertensives because the ECG explains the readings",
+            "feedback": "The ECG is a consequence of the raised pressure, not an alternative to treating it."
+          }
+        ],
+        "explanation": "Educational scenario only. Hypertension management follows current guidelines and the assessment of the treating clinician.",
+        "highlight": "qrs"
+      }
+    ],
+    "explanation": "Chronic pressure overload makes the left ventricle add sarcomeres in parallel, thickening its wall. More myocardium generates a larger vector directed leftward and posteriorly, so the leads that face the left ventricle record taller R waves and those on the right record deeper S waves — the basis of every voltage criterion. The repolarisation changes have a different cause: the subendocardium of a thick, high-pressure wall is relatively underperfused and repolarises out of sequence, producing downsloping ST depression and asymmetrical T inversion in the same lateral leads. A stiff ventricle also raises left atrial pressure, which is why the P wave is broad and notched and why there is an audible fourth heart sound. The tracing is supportive evidence: echocardiography measures the muscle.",
+    "learningObjectives": [
+      "Apply the Sokolow–Lyon and Cornell voltage criteria correctly",
+      "Distinguish a strain pattern from ischaemic repolarisation change by T wave symmetry",
+      "Recognise left atrial abnormality and explain why it accompanies hypertrophy",
+      "State the limits of the ECG in diagnosing hypertrophy compared with imaging"
+    ],
+    "clinicalContext": "Voltage criteria are affected by body habitus, lung disease and lead placement. The ECG raises the possibility of hypertrophy; echocardiography or cardiac magnetic resonance confirms it and distinguishes hypertensive remodelling from hypertrophic cardiomyopathy or infiltration.",
+    "relatedDiseases": ["hypertension", "aortic-stenosis", "cardiomyopathy", "heart-failure"],
+    "relatedKeyPoints": ["ecg-essentials", "hemodynamics", "cardiac-imaging", "heart-sounds"],
+    "references": ["aha-ecg-part4", "aha-htn-2017", "esc-prevention-2021"]
+  }
+]
