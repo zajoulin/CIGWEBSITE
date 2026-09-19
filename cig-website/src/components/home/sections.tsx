@@ -282,12 +282,10 @@ export const HubCards = () => {
                   </defs>
                   <rect width="320" height="200" fill="url(#hub-feature-sky)" />
                   <path d="M0 116 H320" stroke="rgba(150,190,235,0.16)" strokeWidth="1.4" />
-                  {/* floor lines converging behind the bed head */}
                   <g stroke="rgba(150,190,235,0.07)" strokeWidth="1.2">
                     <path d="M-20 200 L118 116" />
                     <path d="M340 200 L202 116" />
                   </g>
-                  {/* bed, narrowing away from the viewer */}
                   <path d="M96 196 L128 118 H192 L224 196 Z" fill="url(#hub-feature-sheet)" />
                   <path d="M128 118 H192 L186 84 q-26 -5 -52 0 Z" fill="#e9f0f8" />
                   <path d="M138 92 q22 -5 44 0 q8 14 -22 15 q-30 -1 -22 -15 Z" fill="#f4f8fc" />
@@ -298,7 +296,6 @@ export const HubCards = () => {
                   />
                   <path d="M118 176 L136 136 q24 5 48 0 L202 176 q-42 8 -84 0 Z" fill="url(#hub-feature-blanket)" />
                   <rect x="88" y="186" width="144" height="8" rx="4" fill="#7f93aa" />
-                  {/* monitor on its stand, screen square to the viewer */}
                   <rect x="238" y="38" width="74" height="56" rx="6" fill="#0b1a26" stroke="rgba(150,200,235,0.4)" strokeWidth="2" />
                   <path
                     className="clinical-trace"
@@ -306,7 +303,6 @@ export const HubCards = () => {
                   />
                   <rect x="272" y="94" width="6" height="76" rx="3" fill="#7f93aa" />
                   <path d="M250 172 H298" stroke="#7f93aa" strokeWidth="6" strokeLinecap="round" />
-                  {/* IV stand */}
                   <rect x="46" y="52" width="5" height="118" rx="2.5" fill="#7f93aa" />
                   <path d="M32 56 H64" stroke="#7f93aa" strokeWidth="4" strokeLinecap="round" />
                   <rect x="32" y="60" width="32" height="42" rx="6" fill="rgba(206,230,248,0.5)" />
@@ -333,7 +329,7 @@ export const HubCards = () => {
         );
       })}
 
-<div className="hub-grid">
+      <div className="hub-grid">
         {rest.map((h, i) => {
           const count = contentStats[h.metric as keyof typeof contentStats];
           return (
@@ -361,36 +357,10 @@ export const HubCards = () => {
             </Reveal>
           );
         })}
-
-        {/* USMLE Step 1 Flashcard Card — Placed Last */}
-        <Reveal delay={1}>
-          <A
-            href="/step1"
-            className="card card-hover card-action card-accent hub-card"
-            aria-label="USMLE Step 1 Prep"
-          >
-            <div className="hub-icon">
-              <Icon name="book" size={21} />
-            </div>
-            <h4>USMLE Step 1</h4>
-            <p>
-              Interactive 3D flashcards covering high-yield cardiovascular pathology,
-              pharmacology, and clinical triads.
-            </p>
-            <div className="hub-foot">
-              <span>Flashcard deck</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                Start Reviewing
-                <Icon name="arrow-right" size={12} />
-              </span>
-            </div>
-          </A>
-        </Reveal>
       </div>
     </>
   );
 };
-/* -------------------------------------------------------- Anatomy preview -- */
 
 const FULL_VIEW = VIEW_MODES[0];
 
