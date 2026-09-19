@@ -548,6 +548,7 @@ export const NotFoundPage = ({ path }: { path: string }) => (
 );
 
 
+export { Step1Page } from './step1';
 
 export default function Pages() {
   return null;
