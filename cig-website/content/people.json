@@ -256,21 +256,21 @@
     "position": "Research Team Member",
     "role": "member",
     "teamId": "research",
-    "photo": null,
-    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "photo": "/brand/Yumna1.png",
+    "bio": "I am a 6th-year medical student at BAU, driven by a deep passion for surgical innovation and advanced interventional cardiovascular medicine. Through my role as the Leader of the Research committee, I actively lead research initiatives, mentor my peers, and contribute to advancing student-led academic projects in cardiology.",
     "academicInterests": [
-      "Evidence-based medicine",
-      "Systematic review methodology",
-      "Biostatistics"
+      "Clinical Research",
+      "Systematic Reviews & Meta-Analysis",
+      "Medical Education"
     ],
     "cardiovascularInterests": [
-      "Cardiac imaging research",
-      "Preventive cardiology",
-      "Cardiovascular epidemiology"
+      "Interventional Cardiology",
+      "Cardiothoracic Surgery",
+      "Heart Failure"
     ],
-    "year": "Year — placeholder",
+    "year": "6th Year",
     "socials": {
-      "email": "",
+      "email": "yumnaqararah@gmail.com",
       "x": ""
     },
     "placeholder": true
