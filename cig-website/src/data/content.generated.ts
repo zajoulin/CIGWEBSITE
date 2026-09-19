@@ -4,7 +4,7 @@
  * Produced by scripts/gen-content.mjs from the JSON files in /content.
  * Edit the JSON, then run: npm run gen:content
  *
- * Generated: 2026-09-18
+ * Generated: 2026-09-19
  * Contains: 24 anatomical structures, 27 diseases,
  * 27 animations, 20 ECG rhythms,
  * 8 heart sounds, 20 clinical simulation cases,

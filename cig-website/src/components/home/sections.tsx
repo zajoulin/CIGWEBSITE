@@ -334,6 +334,31 @@ export const HubCards = () => {
       })}
 
       <div className="hub-grid">
+        {/* USMLE Step 1 Flashcard Card */}
+        <Reveal delay={1}>
+          <A
+            href="/step1"
+            className="card card-hover card-action card-accent hub-card"
+            aria-label="USMLE Step 1 Prep"
+          >
+            <div className="hub-icon">
+              <Icon name="book" size={21} />
+            </div>
+            <h4>USMLE Step 1</h4>
+            <p>
+              Interactive 3D flashcards covering high-yield cardiovascular pathology,
+              pharmacology, and clinical triads.
+            </p>
+            <div className="hub-foot">
+              <span>Flashcard deck</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                Start Reviewing
+                <Icon name="arrow-right" size={12} />
+              </span>
+            </div>
+          </A>
+        </Reveal>
+
         {rest.map((h, i) => {
           const count = contentStats[h.metric as keyof typeof contentStats];
           return (
