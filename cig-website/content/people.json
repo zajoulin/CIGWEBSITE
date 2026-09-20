@@ -430,21 +430,20 @@
     "position": "Planning Team Member",
     "role": "member",
     "teamId": "Planning",
-    "photo": null,
-    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "photo": "/brand/Linda1.png",
+    "bio": "I am a second-year medical student with a strong interest in cardiovascular medicine and its impact on patient health. Through CIG, I aim to contribute to cardiovascular awareness initiatives while developing my knowledge, research, and leadership skills.",
     "academicInterests": [
-      "Simulation",
-      "Student engagement",
-      "Interprofessional education"
+      "Clinical Research",
+      "Global Health",
+      "Medical Innovation"
     ],
     "cardiovascularInterests": [
-      "Interventional cardiology",
-      "Emergency cardiology",
-      "Congenital heart disease"
+      "Women’s Cardiovascular Health",
+      "Congenital Heart Disease"
     ],
-    "year": "Year — placeholder",
+    "year": "2nd Year",
     "socials": {
-      "email": "",
+      "email": "linda07kh@gmail.com",
       "x": ""
     },
     "placeholder": true
