@@ -257,6 +257,7 @@ export const HubCards = () => {
     <>
       {featured.map((h) => {
         const count = contentStats[h.metric as keyof typeof contentStats];
+        const badgeText = (h as any).badge;
         return (
           <Reveal key={h.id} delay={1}>
             <A
@@ -311,7 +312,10 @@ export const HubCards = () => {
                 </svg>
               </div>
               <div className="hub-feature-body">
-                <span className="eyebrow eyebrow-crimson">Flagship module</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span className="eyebrow eyebrow-crimson">Flagship module</span>
+                  {badgeText ? <Chip tone="blue">{badgeText}</Chip> : null}
+                </div>
                 <h3>{h.title}</h3>
                 <p>{h.text}</p>
                 <div className="hub-foot">
@@ -332,6 +336,7 @@ export const HubCards = () => {
       <div className="hub-grid">
         {rest.map((h, i) => {
           const count = contentStats[h.metric as keyof typeof contentStats];
+          const badgeText = (h as any).badge;
           return (
             <Reveal key={h.id} delay={((i % 6) + 1) as 1}>
               <A
@@ -339,10 +344,13 @@ export const HubCards = () => {
                 className="card card-hover card-action card-accent hub-card"
                 aria-label={`${h.title} — ${h.cta}`}
               >
-                <div className="hub-icon">
-                  <Icon name={h.icon} size={21} />
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div className="hub-icon">
+                    <Icon name={h.icon} size={21} />
+                  </div>
+                  {badgeText ? <Chip tone="blue">{badgeText}</Chip> : null}
                 </div>
-                <h4>{h.title}</h4>
+                <h4 style={{ marginTop: 'var(--s-3)' }}>{h.title}</h4>
                 <p>{h.text}</p>
                 <div className="hub-foot">
                   <span>
