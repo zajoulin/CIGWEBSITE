@@ -34,7 +34,7 @@
         { "label": "Opening", "value": "when RA pressure exceeds RV pressure in early diastole" },
         { "label": "Closure", "value": "at the onset of right ventricular systole" },
         { "label": "Normal diastolic gradient", "value": "minimal — under about 2 mmHg" },
-        { "label": "Orifice area", "value": "approximately 4–6 cm², the largest cardiac valve" }
+        { "label": "Orifice area", "value": "approximately 7–9 cm², the largest cardiac valve" }
       ],
       "electrical": "Not electrically active itself, but the AV node and penetrating bundle lie immediately adjacent to the septal leaflet, which is why tricuspid annular surgery and ablation risk heart block.",
       "hemodynamics": [

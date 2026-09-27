@@ -178,7 +178,7 @@
       "Venoconstriction increases preload without changing blood volume.",
       "Virchow's triad — stasis, endothelial injury, hypercoagulability — explains venous thrombosis."
     ],
-    "references": ["gray", "moore", "guyton", "ncbi-bookshelf"],
+    "references": ["gray", "moore", "guyton"],
     "related": {
       "structures": ["inferior-vena-cava", "superior-vena-cava", "right-atrium", "systemic-arteries"],
       "diseases": ["deep-vein-thrombosis", "pulmonary-embolism", "chronic-venous-insufficiency", "heart-failure"],

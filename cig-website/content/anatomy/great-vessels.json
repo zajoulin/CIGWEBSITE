@@ -11,8 +11,7 @@
     "synonyms": ["ascending aorta", "aortic arch", "descending aorta", "aortic root", "thoracic aorta", "abdominal aorta"],
     "anatomy": {
       "location": "Begins at the aortic valve, ascends behind the sternum, arches posteriorly and to the left over the left main bronchus, descends through the posterior mediastinum, and passes through the diaphragm at the level of T12 to become the abdominal aorta.",
-      "shape": "Divided into the root (with the sinuses of Valsalva), the ascending aorta, the arch, and the descending thoracic and abdominal segments. Its wall is rich in elastic lamellae, giving it the compliance on which the Windkessel effect depends. Normal ascending aortic diameter in adults is roughly 2.5–3.5 cm.",
-      "relations": [
+"shape": "Divided into the root (with the sinuses of Valsalva), the ascending aorta, the arch, and the descending thoracic and abdominal segments. Its wall is rich in elastic lamellae, giving it the compliance on which the Windkessel effect depends. Normal ascending aortic diameter in adults is roughly <3.5–4.0 cm, indexed to age, sex, and body size.",      "relations": [
         "Ascending aorta lies within the pericardium, anterior to the right pulmonary artery and to the right of the pulmonary trunk",
         "The arch gives the brachiocephalic trunk, left common carotid and left subclavian arteries",
         "The ligamentum arteriosum tethers the arch at the isthmus, just distal to the left subclavian — the classic site of traumatic transection and of coarctation",
@@ -62,18 +61,17 @@
         "Expansile pulsatile abdominal mass in abdominal aortic aneurysm",
         "Early diastolic murmur if dissection involves the root and causes aortic regurgitation"
       ],
-      "imaging": [
-        "CT angiography — the first-line investigation in suspected acute aortic syndrome",
-        "Transoesophageal echocardiography for the root and descending aorta",
-        "MR angiography for surveillance in younger patients and connective tissue disease",
-        "Abdominal ultrasound for aneurysm screening and follow-up"
-      ],
+"imaging": [
+  "CT angiography — the first-line investigation in suspected acute aortic syndrome",
+  "Transoesophageal echocardiography (TEE) images the root and descending aorta, but has a blind spot in the distal ascending aorta and proximal arch",
+  "MR angiography for surveillance in younger patients and connective tissue disease",
+  "Abdominal ultrasound for aneurysm screening and follow-up"
+],
       "procedures": [
         "Open surgical repair and endovascular stent grafting (TEVAR and EVAR)",
         "Valve-sparing root replacement and composite root replacement",
         "Balloon angioplasty or stenting for coarctation",
-        "Aggressive blood pressure and heart rate control in type B dissection"
-      ]
+"Type A dissection is a surgical emergency; anti-impulse therapy (SBP < 120 mmHg, HR ≤ 60 bpm) applies to all dissections initially"      ]
     },
     "keyPoints": [
       "Root, ascending, arch, descending thoracic and abdominal segments.",
@@ -122,7 +120,7 @@
       "function": "Delivers the whole cardiac output to the lungs at roughly one fifth of systemic pressure, reflecting the very low resistance and high compliance of the pulmonary vascular bed.",
       "pressures": [
         { "label": "Systolic pressure", "value": "approximately 15–30 mmHg" },
-        { "label": "Diastolic pressure", "value": "approximately 8–15 mmHg" },
+        { "label": "Diastolic pressure", "value": "approximately ~4–12 mmHg" },
         { "label": "Mean pulmonary artery pressure", "value": "normally under about 20 mmHg" },
         { "label": "Pulmonary vascular resistance", "value": "roughly one tenth of systemic vascular resistance" }
       ],

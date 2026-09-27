@@ -194,7 +194,7 @@
       "Fixed splitting of the second heart sound is the classic auscultatory sign.",
       "The AV node lies at the inferior margin of the septum in the triangle of Koch."
     ],
-    "references": ["gray", "moore", "braunwald", "ncbi-bookshelf"],
+    "references": ["gray", "moore", "braunwald"],
     "related": {
       "structures": ["right-atrium", "left-atrium", "av-node", "inferior-vena-cava"],
       "diseases": ["atrial-septal-defect", "congenital-heart-disease", "pulmonary-hypertension", "atrial-fibrillation"],

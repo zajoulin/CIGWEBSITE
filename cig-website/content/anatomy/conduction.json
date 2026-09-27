@@ -83,7 +83,7 @@
       "procedures": [
         "Permanent pacemaker implantation for symptomatic sinus node dysfunction",
         "Withdrawal of rate-slowing drugs where they are the cause",
-        "Ivabradine, which acts directly on the funny current, for selected inappropriate sinus tachycardia"
+        "Beta-blockers remain first-line therapy; ivabradine has been discontinued"
       ]
     },
     "keyPoints": [
@@ -93,7 +93,7 @@
       "Supplied by the sinuatrial nodal artery, from the RCA in about 60% of hearts.",
       "Its activity produces the P wave; it generates no signal visible on the surface ECG itself."
     ],
-    "references": ["gray", "guyton", "braunwald", "aha-af-2023"],
+    "references": ["gray", "guyton", "braunwald", "esc-pacing-2021"],
     "related": {
       "structures": ["right-atrium", "av-node", "coronary-arteries", "superior-vena-cava"],
       "diseases": ["conduction-disorders", "atrial-fibrillation", "myocardial-infarction"],
@@ -194,7 +194,7 @@
       "Intrinsic escape rate is approximately 40–60 beats per minute.",
       "Supplied by the AV nodal artery from the dominant coronary artery — usually the RCA."
     ],
-    "references": ["gray", "guyton", "braunwald", "aha-af-2023"],
+    "references": ["gray", "guyton", "braunwald", "acc-aha-bradycardia-2018"],
     "related": {
       "structures": ["right-atrium", "tricuspid-valve", "bundle-of-his", "sa-node", "coronary-veins"],
       "diseases": ["conduction-disorders", "supraventricular-tachycardia", "myocardial-infarction", "atrial-fibrillation"],
@@ -297,7 +297,7 @@
       "Conducts at 2–4 m/s; intrinsic escape rate is only about 20–40 per minute.",
       "A QRS of 120 ms or more defines bundle branch block."
     ],
-    "references": ["gray", "guyton", "braunwald", "ncbi-bookshelf"],
+    "references": ["gray", "guyton", "braunwald"],
     "related": {
       "structures": ["av-node", "purkinje-fibers", "interventricular-septum", "aortic-valve", "right-ventricle"],
       "diseases": ["conduction-disorders", "heart-failure", "myocardial-infarction", "aortic-stenosis"],
@@ -396,7 +396,7 @@
       "Possesses latent automaticity at about 20–40 per minute — a last-resort escape pacemaker.",
       "Subendocardial position makes it especially vulnerable to ischaemia."
     ],
-    "references": ["gray", "guyton", "braunwald", "ncbi-bookshelf"],
+    "references": ["gray", "guyton", "braunwald"],
     "related": {
       "structures": ["bundle-of-his", "left-ventricle", "right-ventricle", "interventricular-septum"],
       "diseases": ["ventricular-arrhythmias", "myocardial-infarction", "conduction-disorders", "cardiomyopathy"],

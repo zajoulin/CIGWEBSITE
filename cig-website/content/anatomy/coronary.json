@@ -126,7 +126,7 @@
     "synonyms": ["coronary sinus", "great cardiac vein", "middle cardiac vein", "Thebesian veins", "anterior cardiac veins"],
     "anatomy": {
       "location": "The coronary sinus lies in the posterior part of the left atrioventricular groove and opens into the right atrium between the inferior vena caval orifice and the tricuspid annulus.",
-      "shape": "A short, wide venous channel roughly 2–3 cm long, guarded at its ostium by the Thebesian valve. It receives the great cardiac vein (which accompanies the LAD and then the circumflex), the middle cardiac vein (in the posterior interventricular groove), the small cardiac vein, the posterior vein of the left ventricle and the oblique vein of the left atrium (vein of Marshall).",
+      "shape": "A short, wide venous channel roughly 3-4 cm long, guarded at its ostium by the Thebesian valve. It receives the great cardiac vein (which accompanies the LAD and then the circumflex), the middle cardiac vein (in the posterior interventricular groove), the small cardiac vein, the posterior vein of the left ventricle and the oblique vein of the left atrium (vein of Marshall).",
       "relations": [
         "Runs in the left atrioventricular groove alongside the left circumflex artery",
         "Lies posterior and inferior to the left atrium",
@@ -139,7 +139,7 @@
         "Tributaries running alongside the major coronary arteries"
       ],
       "bloodSupply": "Vasa vasorum of the venous wall.",
-      "venousDrainage": "Delivers approximately 60–70% of myocardial venous return to the right atrium; anterior cardiac veins drain the right ventricle directly into the right atrium, and Thebesian veins drain small volumes into all four chambers.",
+      "venousDrainage": "Delivers approximately 55-60% of myocardial venous return to the right atrium; anterior cardiac veins drain the right ventricle directly into the right atrium, and Thebesian veins drain small volumes into all four chambers.",
       "innervation": "Cardiac plexus; the vein of Marshall region is rich in autonomic ganglia and has arrhythmic relevance.",
       "function": "Returns deoxygenated blood and metabolic products from the myocardium to the right atrium."
     },
@@ -148,7 +148,7 @@
       "pressures": [
         { "label": "Coronary sinus oxygen saturation", "value": "approximately 30% — the lowest of any sampled blood" },
         { "label": "Coronary sinus pressure", "value": "close to right atrial pressure, roughly 0–8 mmHg" },
-        { "label": "Share of myocardial venous return", "value": "approximately 60–70%" }
+        { "label": "Share of myocardial venous return", "value": "approximately 55-60%" }
       ],
       "electrical": "Muscular sleeves around the coronary sinus and the ligament of Marshall can act as arrhythmic triggers, and the sinus is an important mapping landmark during electrophysiology studies.",
       "hemodynamics": [
@@ -193,7 +193,7 @@
       ]
     },
     "keyPoints": [
-      "The coronary sinus carries roughly 60–70% of myocardial venous return into the right atrium.",
+      "The coronary sinus carries roughly 55-60% of myocardial venous return into the right atrium.",
       "Its ostium sits in the triangle of Koch, next to the AV node.",
       "Coronary sinus blood has the lowest oxygen saturation in the body, around 30%.",
       "It is the access route for the left ventricular lead in cardiac resynchronisation therapy.",
