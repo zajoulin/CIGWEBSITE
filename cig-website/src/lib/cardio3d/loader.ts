@@ -31,6 +31,7 @@
 
 import { buildCardiovascularModel, type ModelPart } from './model';
 import { HEART_ATTRIBUTION } from './heart-meta';
+import type { SectionData } from './heart';
 
 export type ModelSource =
   | { kind: 'procedural' }
@@ -50,6 +51,8 @@ export interface LoadedModel {
   attribution: string | null;
   /** True when the model is the built-in diagrammatic one. */
   procedural: boolean;
+  /** Cross-section plane and labels, when the model provides them. */
+  section: SectionData | null;
 }
 
 /**
@@ -59,11 +62,12 @@ export interface LoadedModel {
 export const loadModel = async (source: ModelSource = MODEL_SOURCE): Promise<LoadedModel> => {
   if (source.kind === 'anatomical') {
     // Loaded on demand so the geometry stays out of the page's main bundle.
-    const { buildAnatomicalHeart } = await import('./heart');
+    const { buildAnatomicalHeart, heartSection } = await import('./heart');
     return {
       parts: buildAnatomicalHeart(),
       attribution: HEART_ATTRIBUTION,
       procedural: false,
+      section: heartSection(),
     };
   }
 
@@ -74,6 +78,7 @@ export const loadModel = async (source: ModelSource = MODEL_SOURCE): Promise<Loa
       parts: buildCardiovascularModel(),
       attribution: null,
       procedural: true,
+      section: null,
     };
   }
 

@@ -43,6 +43,11 @@ export interface BakedHeart {
     rightBundle: number[][];
     purkinje: number[][][];
   };
+  /** Four-chamber cross-section: the cut plane and labelled internal landmarks. */
+  section: {
+    plane: number[];
+    labels: { text: string; point: number[] }[];
+  };
   data: string;
 }
 
@@ -103,6 +108,17 @@ const buildConduction = (): Record<string, Geometry> => {
     ),
   };
 };
+
+export interface SectionData {
+  plane: [number, number, number, number];
+  labels: { text: string; point: Vec3 }[];
+}
+
+/** The baked four-chamber section. */
+export const heartSection = (): SectionData => ({
+  plane: BAKED_HEART.section.plane.slice(0, 4) as [number, number, number, number],
+  labels: BAKED_HEART.section.labels.map((l) => ({ text: l.text, point: v(l.point) })),
+});
 
 let cached: ModelPart[] | null = null;
 

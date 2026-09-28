@@ -172,6 +172,55 @@ const simplify = (mesh, cell) => {
   return { P: outP, I: finalI };
 };
 
+/**
+ * Makes triangle winding consistent across each connected surface, flipping
+ * neighbours so shared edges run in opposite directions. The Z-Anatomy source
+ * is already consistent; this repairs the folds vertex clustering introduces
+ * in the simplified vessels and valve leaflets. (It deliberately does not
+ * force surfaces "outward": a chamber's inner wall must face its cavity.)
+ */
+const orient = (mesh) => {
+  const { P } = mesh;
+  const I = mesh.I.slice();
+  const T = I.length / 3;
+  const edges = new Map();
+  const ek = (a, b) => (a < b ? `${a}_${b}` : `${b}_${a}`);
+  for (let t = 0; t < T; t++) {
+    for (let e = 0; e < 3; e++) {
+      const k = ek(I[t * 3 + e], I[t * 3 + ((e + 1) % 3)]);
+      if (!edges.has(k)) edges.set(k, []);
+      edges.get(k).push(t);
+    }
+  }
+  const has = (t, a, b) => {
+    for (let e = 0; e < 3; e++) if (I[t * 3 + e] === a && I[t * 3 + ((e + 1) % 3)] === b) return true;
+    return false;
+  };
+  const flip = (t) => { const x = I[t * 3 + 1]; I[t * 3 + 1] = I[t * 3 + 2]; I[t * 3 + 2] = x; };
+  const seen = new Uint8Array(T);
+  let flipped = 0;
+  for (let seed = 0; seed < T; seed++) {
+    if (seen[seed]) continue;
+    const comp = [seed];
+    seen[seed] = 1;
+    for (let q = 0; q < comp.length; q++) {
+      const t = comp[q];
+      for (let e = 0; e < 3; e++) {
+        const a = I[t * 3 + e], b = I[t * 3 + ((e + 1) % 3)];
+        const list = edges.get(ek(a, b));
+        if (list.length !== 2) continue; // boundary or non-manifold: don't propagate
+        const n = list[0] === t ? list[1] : list[0];
+        if (seen[n]) continue;
+        // Consistent neighbours traverse the shared edge in the opposite direction.
+        if (has(n, a, b)) { flip(n); flipped++; }
+        seen[n] = 1;
+        comp.push(n);
+      }
+    }
+  }
+  return { P, I, flipped };
+};
+
 const bbox = (P) => {
   const mn = [Infinity, Infinity, Infinity], mx = [-Infinity, -Infinity, -Infinity];
   for (let i = 0; i < P.length; i += 3) for (let k = 0; k < 3; k++) { mn[k] = Math.min(mn[k], P[i + k]); mx[k] = Math.max(mx[k], P[i + k]); }
@@ -180,6 +229,7 @@ const bbox = (P) => {
 const pts = (P) => { const o = []; for (let i = 0; i < P.length; i += 3) o.push([P[i], P[i + 1], P[i + 2]]); return o; };
 const add = (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
 const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
 const mulS = (a, s) => [a[0] * s, a[1] * s, a[2] * s];
 const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
 const len = (a) => Math.hypot(a[0], a[1], a[2]);
@@ -253,17 +303,17 @@ log(`scale ×${S.toFixed(2)}, chambers centred at [${centre.map((v) => v.toFixed
 const baked = [];
 for (const part of PARTS) {
   const merged = concat(part.from.map(get));
-  const simple = toView(part.cell ? simplify(merged, part.cell) : simplify(merged, 0.00001));
+  const { flipped, ...simple } = orient(toView(part.cell ? simplify(merged, part.cell) : simplify(merged, 0.00001)));
   baked.push({ name: part.name, ...simple });
-  log(`${part.name.padEnd(30)} ${String(merged.I.length / 3).padStart(6)} → ${String(simple.I.length / 3).padStart(6)} triangles`);
+  log(`${part.name.padEnd(30)} ${String(merged.I.length / 3).padStart(6)} → ${String(simple.I.length / 3).padStart(6)} triangles, ${flipped} re-oriented`);
 }
 
 // Septa — derived from where the left and right walls meet.
 const SEPTUM_REACH = 0.007; // metres
-const ivs = toView(simplify(septum(get('Left ventricle'), get('Right ventricle'), SEPTUM_REACH), 0.0024));
-const ias = toView(simplify(septum(get('Left atrium'), get('Right atrium'), SEPTUM_REACH), 0.002));
-baked.push({ name: 'heart.interventricular_septum', ...ivs });
-baked.push({ name: 'heart.interatrial_septum', ...ias });
+const ivs = orient(toView(simplify(septum(get('Left ventricle'), get('Right ventricle'), SEPTUM_REACH), 0.0024)));
+const ias = orient(toView(simplify(septum(get('Left atrium'), get('Right atrium'), SEPTUM_REACH), 0.002)));
+baked.push({ name: 'heart.interventricular_septum', P: ivs.P, I: ivs.I });
+baked.push({ name: 'heart.interatrial_septum', P: ias.P, I: ias.I });
 log(`septa: interventricular ${ivs.I.length / 3}, interatrial ${ias.I.length / 3} triangles`);
 
 /* ------------------------------------------- Conduction-system paths ---- */
@@ -339,6 +389,66 @@ const purkinje = [
   ...spread(rv, 6, rightBundle, rvC, lvLen * 0.45),
 ];
 
+
+/* ------------------------------------------------ Four-chamber section ---- */
+// The four-chamber plane contains the long axis (mitral valve → apex) and the
+// line joining the two ventricles, so it opens all four chambers side by side.
+const la = V('Left atrium');
+const tricuspid = centroid([...V('Inferior leaflet of right atrioventricular valve'), ...V('Septal leaflet of right atrioventricular valve')]);
+const across = sub(lvC, rvC);
+let sn = norm(cross(axis, sub(across, mulS(axis, dot(across, axis)))));
+if (sn[2] < 0) sn = mulS(sn, -1); // cut away the anterior side
+const sc = centroid([lvC, rvC, mitral, tricuspid, centroid(la), centroid(ra)]);
+const sd = -dot(sn, sc);
+const sdist = (p) => dot(sn, p) + sd;
+log(`section plane n=[${sn.map((v) => v.toFixed(3))}] d=${sd.toFixed(3)}`);
+
+/** A label anchor: the part of a structure lying on the cut (or just behind it). */
+const onCut = (verts, slab = 0.3) => {
+  const kept = verts.filter((p) => sdist(p) <= 0.02);
+  if (!kept.length) return null;
+  const near = kept.filter((p) => sdist(p) > -slab);
+  return centroid(near.length >= 3 ? near : kept.sort((a, b) => sdist(b) - sdist(a)).slice(0, 20));
+};
+/** Moves a point onto the cut plane. */
+const toPlane = (p) => sub(p, mulS(sn, sdist(p)));
+/** The vertex of `verts` lying on the cut that is closest to `q`. */
+const cutNearest = (verts, q) => {
+  const slab = verts.filter((p) => Math.abs(sdist(p)) < 0.1);
+  return slab.length ? nearest(slab, toPlane(q)) : null;
+};
+/** Only for structures the plane actually passes through. */
+const cutThrough = (verts) => (verts.some((p) => sdist(p) > 0.02) && verts.some((p) => sdist(p) < -0.02) ? onCut(verts, 0.2) : null);
+const lvPapV = V('Inferior papillary muscle of left ventricle');
+const mitralV = V('Posterior leaflet of left atrioventricular valve');
+const lvSlab = lv.filter((p) => Math.abs(sdist(p)) < 0.08);
+const lvWall = lvSlab.length ? lvSlab.reduce((b, p) => (dot(sub(p, lvC), toLeft) > dot(sub(b, lvC), toLeft) ? p : b), lvSlab[0]) : null;
+const cand = [
+  ['Right atrium', onCut(ra, 0.35)],
+  ['Left atrium', onCut(la, 0.35)],
+  ['Right ventricle', onCut(rv, 0.35)],
+  ['Left ventricle', onCut(lv, 0.35)],
+  ['Interventricular septum', cutNearest(pts(ivs.P), lerp(lerp(lvC, rvC, 0.5), apex, 0.25))],
+  ['Interatrial septum', cutNearest(pts(ias.P), lerp(centroid(la), centroid(ra), 0.5))],
+  ['Tricuspid valve', onCut([...V('Inferior leaflet of right atrioventricular valve'), ...V('Septal leaflet of right atrioventricular valve')], 0.4)],
+  ['Mitral valve', onCut(mitralV, 0.4)],
+  ['Chordae tendineae', (() => { const a = onCut(mitralV, 0.4), b = onCut(lvPapV, 0.5); return a && b ? lerp(a, b, 0.5) : null; })()],
+  ['Papillary muscle (LV)', onCut(lvPapV, 0.5)],
+  ['Anterior papillary muscle (RV)', onCut(V('Anterior papillary muscle of right ventricle'), 0.5)],
+  ['Septal papillary muscle (RV)', onCut(V('Septal papillary muscle of right ventricle'), 0.5)],
+  ['Apex', sdist(apex) <= 0.05 ? apex : onCut(lv.filter((p) => len(sub(p, apex)) < 0.25))],
+  ['Myocardium (LV wall)', lvWall],
+  ['Coronary sinus', sdist(csOst) <= 0.05 ? csOst : onCut(cs, 0.4)],
+  ['Sinuatrial node', sdist(saNode) <= 0.05 ? saNode : null],
+  ['Atrioventricular node', sdist(avNode) <= 0.05 ? avNode : null],
+  ['Superior vena cava', cutThrough(svc)],
+  ['Inferior vena cava', cutThrough(V('Inferior vena cava (thoracic part)'))],
+  ['Descending aorta', cutThrough(V('Thoracic aorta'))],
+  ['Pulmonary veins', onCut([...V('Left inferior pulmonary vein'), ...V('Right inferior pulmonary vein'), ...V('Left superior pulmonary vein'), ...V('Right superior pulmonary vein')], 0.4)],
+];
+const sectionLabels = cand.filter(([, p]) => p).map(([text, p]) => ({ text, point: p }));
+log(`section labels: ${sectionLabels.map((l) => l.text).join(', ')}`);
+
 /* ----------------------------------------------------------- Encode ---- */
 const all = bbox(baked.flatMap((b) => b.P));
 const qMin = all.mn, qSpan = all.mx.map((v, k) => v - qMin[k]);
@@ -384,6 +494,10 @@ export const BAKED_HEART: BakedHeart = {
     leftBundle: ${JSON.stringify(leftBundle.map(r))},
     rightBundle: ${JSON.stringify(rightBundle.map(r))},
     purkinje: ${JSON.stringify(purkinje.map((p) => p.map(r)))},
+  },
+  section: {
+    plane: ${JSON.stringify(r([...sn, sd]))},
+    labels: ${JSON.stringify(sectionLabels.map((l) => ({ text: l.text, point: r(l.point) })))},
   },
   data: '${data}',
 };

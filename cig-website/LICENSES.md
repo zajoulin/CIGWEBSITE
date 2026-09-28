@@ -47,7 +47,8 @@ The heart and great vessels are from **Z-Anatomy**, simplified for the web.
   exported from the Z-Anatomy Blender template.
 - `scripts/bake-heart-model.mjs` converts it into
   `src/lib/cardio3d/heart.generated.ts`. It simplifies the meshes, derives the
-  septa, and derives the conduction-system pathways from the anatomy.
+  septa and the conduction-system pathways from the anatomy, and computes the
+  four-chamber cross-section plane and its label positions.
 - **Share-alike:** the adapted model (the GLB, the generated file and anything
   else derived from it) must stay under **CC BY-SA 4.0** with the attribution
   above. This applies to the model only, not to the rest of the site's code.

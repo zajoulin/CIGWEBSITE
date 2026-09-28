@@ -454,7 +454,7 @@ export const AnatomyPreviewSection = () => {
             )}
 
             <div className="tag-row" style={{ marginTop: 'var(--s-6)' }}>
-              {VIEW_MODES.map((m) => (
+              {VIEW_MODES.filter((m) => !m.section).map((m) => (
                 <Chip key={m.id} tone="blue">
                   {m.label}
                 </Chip>

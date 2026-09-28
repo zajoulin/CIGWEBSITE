@@ -817,7 +817,8 @@ export type ViewModeId =
   | 'arteries'
   | 'veins'
   | 'coronary'
-  | 'conduction';
+  | 'conduction'
+  | 'section';
 
 export interface ViewMode {
   id: ViewModeId;
@@ -829,6 +830,8 @@ export interface ViewMode {
   context: PartGroup[];
   /** Camera framing applied when the mode is selected. */
   camera: { radius: number; target: Vec3 };
+  /** Cuts the model along the model's cross-section plane and labels what is inside. */
+  section?: boolean;
 }
 
 export const VIEW_MODES: ViewMode[] = [
@@ -879,5 +882,14 @@ export const VIEW_MODES: ViewMode[] = [
     emphasise: ['conduction'],
     context: ['chambers', 'septa'],
       camera: { radius: 6.0, target: [0.0, -0.05, 0] } as ViewMode['camera'],
+  },
+  {
+    id: 'section',
+    label: 'Cross Section',
+    description: 'A four-chamber slice through the heart, with the structures inside labelled.',
+    emphasise: ['chambers', 'valves', 'septa', 'coronary', 'conduction', 'great-vessels'],
+    context: [],
+    camera: { radius: 5.4, target: [0.05, -0.05, 0] } as ViewMode['camera'],
+    section: true,
   },
 ];

@@ -52,6 +52,8 @@ uniform vec3 uCamera;
 uniform float uOpacity;
 uniform float uHighlight;   // 0 = normal, 1 = fully highlighted
 uniform float uDim;         // 0 = normal, 1 = desaturated context
+uniform vec4 uClip;         // cross-section plane: fragments with dot(n, p) + d > 0 are cut away
+uniform float uClipOn;
 out vec4 outColor;
 
 const vec3 KEY_DIR  = normalize(vec3(-0.45, 0.72, 0.95));
@@ -64,8 +66,20 @@ const vec3 RIM_COL  = vec3(0.42, 0.82, 0.95);
 const vec3 HL_COL   = vec3(0.36, 0.90, 1.0);
 
 void main() {
+  if (uClipOn > 0.5 && dot(uClip.xyz, vWorld) + uClip.w > 0.0) discard;
+
   vec3 N = normalize(vNormal);
   vec3 V = normalize(uCamera - vWorld);
+
+  // In a cross-section, looking through the cut into a wall shows the inside
+  // (back faces) of its surfaces: shade those flat so the cut reads as a
+  // solid slice of tissue.
+  if (uClipOn > 0.5 && !gl_FrontFacing) {
+    vec3 cut = mix(uColor, vec3(0.96, 0.86, 0.84), 0.38) * 0.78;
+    cut = mix(cut, mix(cut, HL_COL, 0.35), uHighlight);
+    outColor = vec4(cut, 1.0);
+    return;
+  }
   if (!gl_FrontFacing) N = -N;
 
   vec3 base = uColor;
@@ -101,9 +115,16 @@ void main() {
 
 const PICK_FRAG = `#version 300 es
 precision highp float;
+in vec3 vNormal;
+in vec3 vWorld;
 uniform vec3 uPickColor;
+uniform vec4 uClip;
+uniform float uClipOn;
 out vec4 outColor;
-void main() { outColor = vec4(uPickColor, 1.0); }`;
+void main() {
+  if (uClipOn > 0.5 && dot(uClip.xyz, vWorld) + uClip.w > 0.0) discard;
+  outColor = vec4(uPickColor, 1.0);
+}`;
 
 /* ------------------------------------------------------------- Internals -- */
 
@@ -192,6 +213,8 @@ export class CardioViewer {
   private isolated: string | null = null;
   private hidden = new Set<string>();
   private viewMode: ViewMode | null = null;
+  /** Cross-section plane [nx, ny, nz, d]; the side where n·p + d > 0 is cut away. */
+  private clip: [number, number, number, number] | null = null;
   private autoRotate: boolean;
   private reducedMotion: boolean;
 
@@ -228,10 +251,10 @@ export class CardioViewer {
     this.program = this.buildProgram(VERT, FRAG);
     this.pickProgram = this.buildProgram(VERT, PICK_FRAG);
 
-    for (const key of ['uProjection', 'uView', 'uColor', 'uCamera', 'uOpacity', 'uHighlight', 'uDim']) {
+    for (const key of ['uProjection', 'uView', 'uColor', 'uCamera', 'uOpacity', 'uHighlight', 'uDim', 'uClip', 'uClipOn']) {
       this.uniforms[key] = gl.getUniformLocation(this.program, key);
     }
-    for (const key of ['uProjection', 'uView', 'uPickColor']) {
+    for (const key of ['uProjection', 'uView', 'uPickColor', 'uClip', 'uClipOn']) {
       this.pickUniforms[key] = gl.getUniformLocation(this.pickProgram, key);
     }
 
@@ -538,6 +561,36 @@ export class CardioViewer {
     this.needsRender = true;
   }
 
+  /**
+   * Cuts the model with a plane (null removes the cut). While cut, the model
+   * is drawn solid so the slice reads clearly. With `face`, the camera turns
+   * to look straight at the cut surface.
+   */
+  setSection(plane: [number, number, number, number] | null, face = false): void {
+    this.clip = plane;
+    if (plane && face) {
+      const [nx, ny, nz] = plane;
+      const l = Math.hypot(nx, ny, nz) || 1;
+      this.desired.azimuth = Math.atan2(nx / l, nz / l);
+      this.desired.elevation = Math.asin(clamp(ny / l, -0.95, 0.95));
+      // Take the shortest way round from the current angle.
+      while (this.desired.azimuth - this.camera.azimuth > Math.PI) this.desired.azimuth -= Math.PI * 2;
+      while (this.desired.azimuth - this.camera.azimuth < -Math.PI) this.desired.azimuth += Math.PI * 2;
+    }
+    this.applyVisualState();
+  }
+
+  /** Screen position of an arbitrary model-space point, for HTML labels. */
+  projectPoint(p: Vec3): { x: number; y: number; visible: boolean } | null {
+    const { projection, view } = this.matrices();
+    const clip = transformPoint(multiply(projection, view), p);
+    if (clip[3] <= 0.001) return null;
+    const rect = this.canvas.getBoundingClientRect();
+    const x = ((clip[0] / clip[3]) * 0.5 + 0.5) * rect.width;
+    const y = (0.5 - (clip[1] / clip[3]) * 0.5) * rect.height;
+    return { x, y, visible: x >= 0 && y >= 0 && x <= rect.width && y <= rect.height };
+  }
+
   setSelected(name: string | null): void {
     this.selected = name;
     this.applyVisualState();
@@ -649,7 +702,7 @@ export class CardioViewer {
         const emphasised = this.inGroups(part, this.viewMode.emphasise);
         const context = this.inGroups(part, this.viewMode.context);
         if (emphasised) {
-          opacity = part.opacity;
+          opacity = this.clip ? 1 : part.opacity;
         } else if (context) {
           opacity = 0.13;
           dim = 1;
@@ -764,9 +817,9 @@ export class CardioViewer {
     gl.uniformMatrix4fv(this.pickUniforms.uProjection!, false, projection);
     gl.uniformMatrix4fv(this.pickUniforms.uView!, false, view);
 
-    for (const p of this.parts) {
-      // Only pick what the user can actually see.
-      if (p.opacity < 0.12) continue;
+    this.setClipUniforms(this.pickUniforms);
+
+    const drawId = (p: GpuPart): void => {
       const id = p.pickId;
       gl.uniform3f(
         this.pickUniforms.uPickColor!,
@@ -776,16 +829,69 @@ export class CardioViewer {
       );
       gl.bindVertexArray(p.vao);
       gl.drawElements(gl.TRIANGLES, p.count, gl.UNSIGNED_INT, 0);
+    };
+    const readId = (): number => {
+      const pixel = new Uint8Array(4);
+      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixel);
+      return (pixel[0] << 16) | (pixel[1] << 8) | pixel[2];
+    };
+
+    // Only pick what the user can actually see.
+    const pickable = this.parts.filter((p) => p.opacity >= 0.12);
+    // Faded context structures (e.g. the ghosted chambers in the Coronary or
+    // Conduction views) never block a click on something solid.
+    const faint = pickable.filter((p) => p.opacity < 0.5);
+    const seeThrough = pickable.filter((p) => p.opacity >= 0.5 && p.opacity <= 0.985);
+    const solid = pickable.filter((p) => p.opacity > 0.985);
+
+    // Pass 1 — see through translucent walls. The chambers are hollow shells,
+    // so first record the FARTHEST translucent surface under each pixel; then
+    // any solid structure in front of it (a valve, papillary muscle,
+    // conduction tissue, a surface vessel) wins the click, while vessels on
+    // the far side of the heart stay behind it.
+    let found = 0;
+    const solidIds = new Set(solid.map((p) => p.pickId));
+    if (solid.length && (seeThrough.length || faint.length)) {
+      let covered = false;
+      if (seeThrough.length) {
+        // Record the farthest translucent surface (and whether one is here)…
+        gl.clearDepth(0);
+        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+        gl.depthFunc(gl.GREATER);
+        gl.disable(gl.CULL_FACE);
+        for (const p of seeThrough) drawId(p);
+        covered = readId() !== 0;
+        // …then only solids in front of it can win.
+        gl.depthFunc(gl.LEQUAL);
+        this.setClipUniforms(this.pickUniforms);
+        if (covered) {
+          for (const p of solid) drawId(p);
+          const id = readId();
+          if (solidIds.has(id)) found = id;
+        }
+        gl.clearDepth(1);
+        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      }
+      // Outside any translucent chamber: the nearest solid, ignoring faded parts.
+      if (!found && !covered) {
+        for (const p of solid) drawId(p);
+        found = readId();
+        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      }
     }
 
-    const pixel = new Uint8Array(4);
-    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixel);
+    // Pass 2 — nothing solid inside: pick the nearest surface, walls included.
+    if (!found) {
+      for (const p of pickable) drawId(p);
+      found = readId();
+    }
+
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
     gl.bindVertexArray(null);
     gl.viewport(0, 0, this.canvas.width, this.canvas.height);
     gl.clearColor(0, 0, 0, 0);
 
-    const id = (pixel[0] << 16) | (pixel[1] << 8) | pixel[2];
+    const id = found;
     if (!id) return null;
     return this.parts.find((p) => p.pickId === id)?.part.name ?? null;
   }
@@ -851,6 +957,7 @@ export class CardioViewer {
     gl.uniformMatrix4fv(this.uniforms.uProjection!, false, projection);
     gl.uniformMatrix4fv(this.uniforms.uView!, false, view);
     gl.uniform3f(this.uniforms.uCamera!, eye[0], eye[1], eye[2]);
+    this.setClipUniforms(this.uniforms);
 
     const visible = this.parts.filter((p) => p.opacity > 0.004);
     const opaque = visible.filter((p) => p.opacity > 0.985);
@@ -874,16 +981,35 @@ export class CardioViewer {
     transparent.sort((a, b) => depthOf(b) - depthOf(a) || a.part.order - b.part.order);
 
     // Draw back faces first so translucent chambers show their far wall.
+    // Then lay down the part's nearest front surface in depth only and draw
+    // just that layer: anatomical meshes fold over themselves (auricles,
+    // trabeculae, overlapping walls), and blending every layer produced
+    // blotchy, faceted patches.
     for (const p of transparent) {
       gl.cullFace(gl.FRONT);
       this.draw(p);
       gl.cullFace(gl.BACK);
+      gl.colorMask(false, false, false, false);
+      gl.depthMask(true);
+      this.draw(p);
+      gl.colorMask(true, true, true, true);
+      gl.depthMask(false);
       this.draw(p);
     }
 
     gl.depthMask(true);
     gl.disable(gl.BLEND);
     gl.bindVertexArray(null);
+  }
+
+  private setClipUniforms(u: Record<string, WebGLUniformLocation | null>): void {
+    const gl = this.gl;
+    const c = this.clip ?? [0, 0, 0, 1];
+    gl.uniform4f(u.uClip!, c[0], c[1], c[2], c[3]);
+    gl.uniform1f(u.uClipOn!, this.clip ? 1 : 0);
+    // A cut model shows its insides, so both faces must be drawn.
+    if (this.clip) gl.disable(gl.CULL_FACE);
+    else gl.enable(gl.CULL_FACE);
   }
 
   private draw(p: GpuPart): void {
