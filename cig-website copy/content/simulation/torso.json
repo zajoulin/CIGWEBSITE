@@ -1,0 +1,239 @@
+{
+  "id": "anterior-torso",
+  "width": 400,
+  "height": 560,
+  "electrodes": [
+    {
+      "leadId": "ra",
+      "code": "RA",
+      "group": "limb",
+      "order": 1,
+      "male": [
+        126,
+        118
+      ],
+      "female": [
+        124,
+        118
+      ],
+      "tolerance": 28,
+      "cue": "Right arm electrode — the right infraclavicular fossa, just below the lateral third of the clavicle, on flat skin off the deltoid.",
+      "correction": "RA placement incorrect — move to the right infraclavicular fossa, just below the lateral third of the right clavicle, on flat skin away from the deltoid muscle belly."
+    },
+    {
+      "leadId": "la",
+      "code": "LA",
+      "group": "limb",
+      "order": 2,
+      "male": [
+        274,
+        118
+      ],
+      "female": [
+        276,
+        118
+      ],
+      "tolerance": 28,
+      "cue": "Left arm electrode — the left infraclavicular fossa, mirroring RA.",
+      "correction": "LA placement incorrect — move to the left infraclavicular fossa, just below the lateral third of the left clavicle, mirroring the right arm electrode."
+    },
+    {
+      "leadId": "rl",
+      "code": "RL",
+      "group": "limb",
+      "order": 3,
+      "male": [
+        142,
+        454
+      ],
+      "female": [
+        142,
+        454
+      ],
+      "tolerance": 30,
+      "cue": "Right leg electrode — the right lower abdomen below the umbilicus, or the right thigh. This is the driven reference electrode.",
+      "correction": "RL placement incorrect — move to the right lower abdomen below the level of the umbilicus, or the right thigh. It is the reference electrode rather than a recording one, but the tracing is noisy without it."
+    },
+    {
+      "leadId": "ll",
+      "code": "LL",
+      "group": "limb",
+      "order": 4,
+      "male": [
+        258,
+        454
+      ],
+      "female": [
+        258,
+        454
+      ],
+      "tolerance": 30,
+      "cue": "Left leg electrode — the left lower abdomen below the umbilicus, or the left thigh, mirroring RL.",
+      "correction": "LL placement incorrect — move to the left lower abdomen below the level of the umbilicus, or the left thigh, mirroring the right leg electrode."
+    },
+    {
+      "leadId": "v1",
+      "code": "V1",
+      "group": "precordial",
+      "order": 5,
+      "male": [
+        182,
+        250
+      ],
+      "female": [
+        182,
+        250
+      ],
+      "tolerance": 18,
+      "cue": "V1 — fourth intercostal space at the right sternal border. Find the sternal angle: the space beside it is the second, then count down two more.",
+      "correction": "V1 placement incorrect — move to the fourth intercostal space at the right sternal border."
+    },
+    {
+      "leadId": "v2",
+      "code": "V2",
+      "group": "precordial",
+      "order": 6,
+      "male": [
+        218,
+        250
+      ],
+      "female": [
+        218,
+        250
+      ],
+      "tolerance": 18,
+      "cue": "V2 — fourth intercostal space at the left sternal border, directly opposite V1.",
+      "correction": "V2 placement incorrect — move to the fourth intercostal space at the left sternal border, mirroring V1 across the sternum."
+    },
+    {
+      "leadId": "v3",
+      "code": "V3",
+      "group": "precordial",
+      "order": 7,
+      "male": [
+        237,
+        264
+      ],
+      "female": [
+        237,
+        268
+      ],
+      "tolerance": 18,
+      "cue": "V3 — midway between V2 and V4. Place V4 first, then put V3 between them.",
+      "correction": "V3 placement incorrect — move it midway along a straight line between V2 and V4. Position V4 first, then place V3 between them."
+    },
+    {
+      "leadId": "v4",
+      "code": "V4",
+      "group": "precordial",
+      "order": 8,
+      "male": [
+        256,
+        278
+      ],
+      "female": [
+        256,
+        286
+      ],
+      "tolerance": 18,
+      "cue": "V4 — fifth intercostal space in the left midclavicular line. On a female patient it goes on the chest wall beneath the breast, not on it.",
+      "correction": "V4 placement incorrect — move to the fifth intercostal space in the left midclavicular line. On a female patient, displace breast tissue upwards and place the electrode on the chest wall beneath it."
+    },
+    {
+      "leadId": "v5",
+      "code": "V5",
+      "group": "precordial",
+      "order": 9,
+      "male": [
+        278,
+        280
+      ],
+      "female": [
+        278,
+        288
+      ],
+      "tolerance": 18,
+      "cue": "V5 — left anterior axillary line, horizontally level with V4.",
+      "correction": "V5 placement incorrect — move to the left anterior axillary line at the same horizontal level as V4, not down along the rib below it."
+    },
+    {
+      "leadId": "v6",
+      "code": "V6",
+      "group": "precordial",
+      "order": 10,
+      "male": [
+        304,
+        282
+      ],
+      "female": [
+        300,
+        290
+      ],
+      "tolerance": 18,
+      "cue": "V6 — left midaxillary line, horizontally level with V4 and V5.",
+      "correction": "V6 placement incorrect — move to the left midaxillary line, level with V4 and V5. V4, V5 and V6 sit on one horizontal line rather than following the curve of a rib."
+    }
+  ],
+  "auscultation": [
+    {
+      "siteId": "aortic",
+      "male": [
+        180,
+        192
+      ],
+      "female": [
+        180,
+        192
+      ],
+      "tolerance": 22
+    },
+    {
+      "siteId": "pulmonic",
+      "male": [
+        220,
+        192
+      ],
+      "female": [
+        220,
+        192
+      ],
+      "tolerance": 22
+    },
+    {
+      "siteId": "erb",
+      "male": [
+        220,
+        222
+      ],
+      "female": [
+        220,
+        224
+      ],
+      "tolerance": 22
+    },
+    {
+      "siteId": "tricuspid",
+      "male": [
+        220,
+        254
+      ],
+      "female": [
+        220,
+        258
+      ],
+      "tolerance": 22
+    },
+    {
+      "siteId": "mitral",
+      "male": [
+        258,
+        282
+      ],
+      "female": [
+        258,
+        290
+      ],
+      "tolerance": 24
+    }
+  ]
+}

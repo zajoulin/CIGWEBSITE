@@ -406,8 +406,8 @@ export const AnatomyPreviewSection = () => {
               hidden={new Set()}
               onSelect={setMesh}
               autoRotate
-              initialRadius={10.4}
-              initialTarget={[0, 0.12, 0]}
+              initialRadius={7.8}
+              initialTarget={[0, -0.15, 0]}
             />
           </div>
 

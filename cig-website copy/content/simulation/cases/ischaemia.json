@@ -1,0 +1,1079 @@
+[
+  {
+    "id": "case-inferior-stemi",
+    "title": "Crushing chest pain, elevation in II, III and aVF",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "intermediate",
+    "patient": {
+      "age": 62,
+      "sex": "male",
+      "descriptor": "62-year-old man",
+      "setting": "Emergency department, resuscitation area"
+    },
+    "presentingComplaint": "Fifty minutes of crushing central chest pain radiating to the jaw and left arm, with sweating and nausea.",
+    "history": [
+      "Pain began abruptly at rest, constant since, unrelieved by sublingual glyceryl trinitrate",
+      "Smoker of 25 cigarettes a day; hypercholesterolaemia; father had a myocardial infarction at 58",
+      "No previous cardiac events and no regular cardiac medication",
+      "Vomited twice on the way to hospital"
+    ],
+    "symptoms": [
+      "Severe crushing central chest pain radiating to jaw and left arm",
+      "Profuse sweating",
+      "Nausea and vomiting",
+      "A sense of impending doom"
+    ],
+    "examinationFindings": [
+      "Grey, clammy, clearly distressed and in pain",
+      "Regular pulse; peripheries cool",
+      "Jugular venous pressure normal",
+      "Heart sounds normal; no murmur; no third heart sound",
+      "Chest clear; no peripheral oedema"
+    ],
+    "vitals": {
+      "heartRate": 96,
+      "spo2": 95,
+      "respiratoryRate": 22,
+      "bpSystolic": 138,
+      "bpDiastolic": 84,
+      "temperature": 36.8,
+      "alarm": "critical",
+      "alarmText": "ST ELEVATION — ACTIVATE PPCI",
+      "bedside": "In severe pain, sweating and nauseated. The clock started when the pain started; every minute of delay costs myocardium."
+    },
+    "ecgRhythmId": "stemi",
+    "ecg": {
+      "rate": "96 bpm",
+      "rhythm": "Regular sinus rhythm",
+      "pWaves": "Normal, one before each QRS",
+      "prInterval": "0.16 s, constant",
+      "qrs": "0.10 s, narrow, with developing pathological Q waves in the inferior leads",
+      "axis": "Normal",
+      "stSegment": "Convex ST elevation of 3–4 mm in II, III and aVF, with reciprocal depression in I and aVL",
+      "tWaves": "Broad and tall in the inferior leads — hyperacute",
+      "keyFindings": [
+        "Convex ST elevation in II, III and aVF — three contiguous inferior leads",
+        "Reciprocal ST depression in I and aVL, which is strong evidence that the elevation is genuine",
+        "Elevation greater in III than in II, favouring a right coronary artery occlusion",
+        "Developing pathological Q waves inferiorly"
+      ],
+      "keyLeads": ["II", "III", "aVF", "I", "aVL"],
+      "highlight": "st",
+      "leadOverrides": {
+        "I": { "st": -0.85, "q": 0.2, "t": 0.4 },
+        "II": { "st": 1, "q": 1.6 },
+        "III": { "st": 1.2, "q": 1.8 },
+        "aVR": { "st": 0.45, "q": 0.2 },
+        "aVL": { "st": -1.5, "q": 0.2, "t": 0.3 },
+        "aVF": { "st": 1.1, "q": 1.7 },
+        "V1": { "st": 0.12, "q": 0.2 },
+        "V2": { "st": -0.2, "q": 0.2 },
+        "V3": { "st": 0.05, "q": 0.2 },
+        "V4": { "st": 0.1, "q": 0.3 },
+        "V5": { "st": 0.2, "q": 0.4 },
+        "V6": { "st": 0.35, "q": 0.5 }
+      }
+    },
+    "interpretation": "ECG findings consistent with acute inferior ST-elevation myocardial infarction: convex ST elevation in II, III and aVF with reciprocal depression in I and aVL. The pattern favours a right coronary artery occlusion.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Normal S1 and S2 with no murmur. A new pansystolic murmur here would raise ischaemic mitral regurgitation from papillary muscle dysfunction — a mechanical complication."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No pansystolic murmur; a new one at the left sternal edge could indicate ventricular septal rupture, which typically appears days after infarction."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No ejection murmur. Repeat auscultation is part of monitoring for mechanical complications."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus rhythm at 96 bpm",
+            "correct": true,
+            "feedback": "Correct. Name the rhythm before describing the ST segments — the systematic order protects you when something dramatic grabs your attention."
+          },
+          {
+            "id": "b",
+            "text": "Sinus tachycardia",
+            "feedback": "96 bpm is below 100, so this is sinus rhythm at the upper end of normal."
+          },
+          {
+            "id": "c",
+            "text": "Atrial fibrillation",
+            "feedback": "The rhythm is regular with a P wave before every QRS."
+          },
+          {
+            "id": "d",
+            "text": "Accelerated idioventricular rhythm",
+            "feedback": "That is a reperfusion rhythm with a broad QRS and no P waves. The QRS here is 0.10 s and P waves are present."
+          }
+        ],
+        "explanation": "Even with obvious ST elevation, state the rhythm first. It matters: ventricular arrhythmia is the commonest early cause of death in infarction.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-st",
+        "kind": "systematic",
+        "step": "ST segment",
+        "prompt": "In which leads is the ST elevation, and what territory does that identify?",
+        "options": [
+          {
+            "id": "a",
+            "text": "II, III and aVF — the inferior wall",
+            "correct": true,
+            "feedback": "Correct. These three leads look at the inferior surface, most often supplied by the right coronary artery."
+          },
+          {
+            "id": "b",
+            "text": "V1 to V4 — the anteroseptal wall",
+            "feedback": "That distribution would indicate a left anterior descending occlusion. The elevation here is in the limb leads."
+          },
+          {
+            "id": "c",
+            "text": "I, aVL, V5 and V6 — the lateral wall",
+            "feedback": "Those leads show reciprocal depression on this tracing, not elevation."
+          },
+          {
+            "id": "d",
+            "text": "All leads — a global pattern",
+            "feedback": "Widespread concave elevation with PR depression would suggest pericarditis. This elevation is regional and convex."
+          }
+        ],
+        "explanation": "Learn the three territories: II/III/aVF inferior, V1–V4 anteroseptal, I/aVL/V5/V6 lateral. Contiguity is what makes elevation meaningful.",
+        "highlight": "st",
+        "leads": ["II", "III", "aVF"]
+      },
+      {
+        "id": "q-reciprocal",
+        "kind": "systematic",
+        "step": "Reciprocal change",
+        "prompt": "There is ST depression in I and aVL. What does that signify?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Reciprocal change, which strongly supports true infarction",
+            "correct": true,
+            "feedback": "Correct. Leads looking at the injured wall from the opposite side record the same injury current in the opposite direction. Its presence helps distinguish infarction from pericarditis or early repolarisation."
+          },
+          {
+            "id": "b",
+            "text": "A separate lateral infarction occurring at the same time",
+            "feedback": "Two simultaneous infarcts in opposing territories would be extraordinary. This is the electrical mirror of the inferior injury."
+          },
+          {
+            "id": "c",
+            "text": "Digoxin effect",
+            "feedback": "He is not taking digoxin, and the morphology is not the scooped 'reverse tick'."
+          },
+          {
+            "id": "d",
+            "text": "An artefact of electrode misplacement",
+            "feedback": "Reciprocal change is a genuine and expected electrical phenomenon, not an artefact."
+          }
+        ],
+        "explanation": "Reciprocal depression is one of the most useful discriminators available. Pericarditis and benign early repolarisation do not produce it.",
+        "highlight": "st",
+        "leads": ["I", "aVL"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Taking the presentation and the tracing together, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Acute inferior ST-elevation myocardial infarction",
+            "correct": true,
+            "feedback": "Correct. Ischaemic symptoms with convex ST elevation in contiguous inferior leads and reciprocal depression."
+          },
+          {
+            "id": "b",
+            "text": "Acute pericarditis",
+            "feedback": "Pericarditis gives widespread concave elevation with PR depression and no reciprocal change, and the pain is typically pleuritic and positional."
+          },
+          {
+            "id": "c",
+            "text": "Benign early repolarisation",
+            "feedback": "Early repolarisation gives concave elevation with a notched J point in a well young patient, without reciprocal depression or symptoms like these."
+          },
+          {
+            "id": "d",
+            "text": "Aortic dissection",
+            "feedback": "It must always be considered before anticoagulation in severe chest pain, particularly with a pulse or pressure difference between arms — but the ECG here shows a clear regional infarct pattern."
+          }
+        ],
+        "explanation": "ST elevation in contiguous leads, with reciprocal change, in a patient with ischaemic symptoms, is a STEMI until proved otherwise.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-extra",
+        "kind": "action",
+        "prompt": "Which additional recording should be considered in every inferior STEMI?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Right-sided chest leads, particularly V4R, to look for right ventricular involvement",
+            "correct": true,
+            "feedback": "Correct. Right ventricular infarction complicates up to half of inferior infarcts and changes management — these patients are preload-dependent and can become profoundly hypotensive with nitrates."
+          },
+          {
+            "id": "b",
+            "text": "A 24-hour ambulatory monitor before any treatment",
+            "feedback": "Delaying reperfusion for ambulatory monitoring would be harmful."
+          },
+          {
+            "id": "c",
+            "text": "An exercise ECG to confirm ischaemia",
+            "feedback": "Exercise testing is absolutely contraindicated in acute infarction."
+          },
+          {
+            "id": "d",
+            "text": "Nothing further; the standard twelve leads are always sufficient",
+            "feedback": "Right-sided and posterior leads are recommended when the standard twelve leads suggest inferior or posterior involvement."
+          }
+        ],
+        "explanation": "Educational scenario only. Reperfusion and adjunctive treatment follow current guidelines and the local primary PCI pathway.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the single most time-critical priority in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Immediate activation of the reperfusion pathway",
+            "correct": true,
+            "feedback": "Correct. Myocardium infarcts progressively from the subendocardium outwards; the entire management is built around minimising the time to reperfusion."
+          },
+          {
+            "id": "b",
+            "text": "Waiting for the troponin result before doing anything",
+            "feedback": "Troponin can be normal in the first hours and never delays reperfusion in a STEMI. The ECG plus the symptoms are enough."
+          },
+          {
+            "id": "c",
+            "text": "Arranging an outpatient echocardiogram",
+            "feedback": "Echocardiography has a role, but not before reperfusion."
+          },
+          {
+            "id": "d",
+            "text": "High-flow oxygen for everyone with chest pain",
+            "feedback": "Oxygen is given only for hypoxaemia; routine oxygen in normoxaemic patients confers no benefit and may cause harm."
+          }
+        ],
+        "explanation": "Educational scenario only. Actual treatment follows current ESC/AHA guidance and your institution's protocols.",
+        "highlight": "st"
+      }
+    ],
+    "explanation": "Complete occlusion of an epicardial artery causes transmural ischaemia. Injured myocardium cannot maintain its resting potential or repolarise normally, so a current of injury flows between injured and healthy tissue and displaces the ST segment upward in the leads facing the infarcting wall — convex, merging into the T wave — and downward in the leads facing it from the opposite side. Here the elevation sits in II, III and aVF with reciprocal depression in I and aVL, which localises the infarct to the inferior wall. Elevation greater in III than in II, with depression in I and aVL, favours the right coronary artery over the circumflex. Because the right coronary artery also supplies the atrioventricular node in most people, inferior infarction is commonly complicated by bradycardia and nodal block; and because it may supply the right ventricle, right-sided leads should always be recorded.",
+    "learningObjectives": [
+      "Map ST elevation onto a coronary territory using contiguous leads",
+      "Use reciprocal change to distinguish infarction from pericarditis and early repolarisation",
+      "Recognise the specific complications of inferior infarction — nodal block and right ventricular involvement",
+      "State why reperfusion time, not troponin, drives management in STEMI"
+    ],
+    "clinicalContext": "The ECG identifies the pattern and the territory. It does not tell you the culprit vessel with certainty, the extent of myocardium at risk, or whether a mechanical complication has occurred — those need angiography and echocardiography.",
+    "relatedDiseases": ["myocardial-infarction", "atherosclerosis", "conduction-disorders"],
+    "relatedKeyPoints": ["ecg-essentials", "coronary-circulation", "interventional-cardiology"],
+    "references": ["esc-acs-2023", "aha-ecg-part6", "umdmi-2018"]
+  },
+  {
+    "id": "case-anterior-stemi",
+    "title": "The same rhythm, a different territory",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "advanced",
+    "patient": {
+      "age": 55,
+      "sex": "female",
+      "descriptor": "55-year-old woman",
+      "setting": "Emergency department, resuscitation area"
+    },
+    "presentingComplaint": "Ninety minutes of heavy central chest pressure with breathlessness, beginning while she was gardening.",
+    "history": [
+      "Type 2 diabetes for nine years; hypertension; ex-smoker",
+      "Pain heavy rather than sharp, unchanged by position or breathing",
+      "Increasingly breathless over the last thirty minutes",
+      "No previous cardiac history"
+    ],
+    "symptoms": [
+      "Heavy central chest pressure",
+      "Breathlessness at rest",
+      "Sweating",
+      "Light-headedness on standing"
+    ],
+    "examinationFindings": [
+      "Pale and sweating, sitting forward, breathing rapidly",
+      "Regular pulse, thready; cool peripheries",
+      "Jugular venous pressure raised 3 cm",
+      "Third heart sound at the apex; no murmur",
+      "Fine bibasal crackles"
+    ],
+    "vitals": {
+      "heartRate": 104,
+      "spo2": 92,
+      "respiratoryRate": 26,
+      "bpSystolic": 104,
+      "bpDiastolic": 68,
+      "temperature": 36.6,
+      "alarm": "critical",
+      "alarmText": "ANTERIOR ST ELEVATION — ACTIVATE PPCI",
+      "bedside": "In pain and breathless, with a raised venous pressure and crackles at both bases. A large anterior infarct with early pulmonary congestion."
+    },
+    "ecgRhythmId": "stemi",
+    "ecg": {
+      "rate": "104 bpm",
+      "rhythm": "Sinus rhythm",
+      "pWaves": "Normal, one before each QRS",
+      "prInterval": "0.16 s, constant",
+      "qrs": "0.10 s, with poor R wave progression across the anterior leads and developing Q waves in V2 to V4",
+      "axis": "Normal",
+      "stSegment": "Marked convex ST elevation in V1 to V4, extending into I and aVL, with reciprocal depression in II, III and aVF",
+      "tWaves": "Broad and hyperacute anteriorly",
+      "keyFindings": [
+        "Convex ST elevation across V1 to V4 — the anteroseptal territory",
+        "Reciprocal ST depression in the inferior leads",
+        "Loss of R wave height across the anterior leads with developing Q waves",
+        "Clinical evidence of pulmonary congestion, indicating a large area of myocardium at risk"
+      ],
+      "keyLeads": ["V1", "V2", "V3", "V4", "II", "III", "aVF"],
+      "highlight": "st",
+      "leadOverrides": {
+        "I": { "st": 0.45, "q": 0.3 },
+        "II": { "st": -0.5, "q": 0.2, "t": 0.5 },
+        "III": { "st": -0.6, "q": 0.2, "t": 0.4 },
+        "aVR": { "st": 0.3, "q": 0.2 },
+        "aVL": { "st": 0.7, "q": 0.3 },
+        "aVF": { "st": -0.55, "q": 0.2, "t": 0.45 },
+        "V1": { "st": 1.05, "r": 0.5, "q": 2.2 },
+        "V2": { "st": 1.25, "r": 0.4, "q": 2.6 },
+        "V3": { "st": 1.3, "r": 0.5, "q": 2.6 },
+        "V4": { "st": 1.15, "r": 0.7, "q": 2.2 },
+        "V5": { "st": 0.6, "r": 0.9, "q": 1.2 },
+        "V6": { "st": 0.3, "q": 0.8 }
+      }
+    },
+    "interpretation": "ECG findings consistent with acute anteroseptal ST-elevation myocardial infarction with lateral extension: convex ST elevation in V1 to V4, I and aVL with reciprocal inferior depression. The distribution suggests occlusion of the left anterior descending artery.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "s3",
+        "note": "A third heart sound at the apex — rapid early filling into a stiff, acutely failing ventricle. In this setting it is a marker of a large infarct and a worse prognosis."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No pansystolic murmur at present. A new murmur here after an anterior infarct would raise ventricular septal rupture."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No ejection murmur; S2 is soft, in keeping with a low stroke volume."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus tachycardia at 104 bpm",
+            "correct": true,
+            "feedback": "Correct — and the tachycardia matters, because in an infarct it usually reflects pain, anxiety or a falling stroke volume."
+          },
+          {
+            "id": "b",
+            "text": "Atrial flutter with 2:1 block",
+            "feedback": "That would give a ventricular rate near 150 with sawtooth atrial activity."
+          },
+          {
+            "id": "c",
+            "text": "Ventricular tachycardia",
+            "feedback": "The QRS is narrow at 0.10 s with visible P waves."
+          },
+          {
+            "id": "d",
+            "text": "Complete heart block",
+            "feedback": "Each P wave conducts at a constant PR interval."
+          }
+        ],
+        "explanation": "In infarction, tachycardia is a warning sign: it suggests a large infarct, pain, or impending cardiogenic shock.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-territory",
+        "kind": "systematic",
+        "step": "ST segment",
+        "prompt": "Which territory and which artery does this distribution point to?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Anteroseptal with lateral extension — the left anterior descending artery",
+            "correct": true,
+            "feedback": "Correct. V1–V4 is anteroseptal; extension into I and aVL indicates a large proximal left anterior descending occlusion."
+          },
+          {
+            "id": "b",
+            "text": "Inferior — the right coronary artery",
+            "feedback": "The inferior leads here show reciprocal depression, not elevation."
+          },
+          {
+            "id": "c",
+            "text": "Posterior — the circumflex artery",
+            "feedback": "A posterior infarct produces tall R waves and ST depression in V1–V3, the mirror image of elevation. Here V1–V3 show elevation."
+          },
+          {
+            "id": "d",
+            "text": "Global ischaemia from left main disease",
+            "feedback": "That classically produces widespread ST depression with ST elevation in aVR, not regional anterior elevation."
+          }
+        ],
+        "explanation": "Compare this tracing with the inferior STEMI case: identical rhythm and identical waveform physiology, but a completely different territory and a different set of complications.",
+        "highlight": "st",
+        "leads": ["V2", "V3", "V4"]
+      },
+      {
+        "id": "q-rwave",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "R wave height fails to increase across V1 to V4. What does that indicate here?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Loss of anterior myocardial forces from infarction",
+            "correct": true,
+            "feedback": "Correct. Infarcted myocardium generates no electrical signal, so the R wave fails to grow and pathological Q waves develop."
+          },
+          {
+            "id": "b",
+            "text": "Right ventricular hypertrophy",
+            "feedback": "That produces a dominant R wave in V1 with right axis deviation."
+          },
+          {
+            "id": "c",
+            "text": "Normal variation in lead placement",
+            "feedback": "Lead placement can affect R wave progression, which is exactly why placement must be accurate — but here it comes with ST elevation and Q waves."
+          },
+          {
+            "id": "d",
+            "text": "Left bundle branch block",
+            "feedback": "The QRS is 0.10 s — too narrow for bundle branch block."
+          }
+        ],
+        "explanation": "Poor R wave progression has several causes, including electrode misplacement. This is one more reason accurate V lead placement matters.",
+        "highlight": "qrs",
+        "leads": ["V1", "V2", "V3", "V4"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Taking the raised venous pressure, the third heart sound and the crackles together with the tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Large anterior ST-elevation myocardial infarction with early left ventricular failure",
+            "correct": true,
+            "feedback": "Correct. Anterior infarcts involve the most myocardium, and pulmonary congestion at presentation marks a higher-risk patient."
+          },
+          {
+            "id": "b",
+            "text": "Acute pericarditis with an effusion",
+            "feedback": "The elevation is regional and convex with reciprocal change, and the pain is not pleuritic or positional."
+          },
+          {
+            "id": "c",
+            "text": "Pulmonary embolism",
+            "feedback": "Breathlessness fits, but pulmonary embolism does not produce convex regional ST elevation with developing Q waves."
+          },
+          {
+            "id": "d",
+            "text": "Takotsubo syndrome",
+            "feedback": "It can mimic anterior STEMI closely and is only distinguished at angiography — which is another reason the pathway is activated first."
+          }
+        ],
+        "explanation": "Signs of failure at presentation change the risk profile substantially and should be documented explicitly.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "She is hypotensive at 104/68 mmHg with crackles. Which statement is most accurate in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Reperfusion is the priority, and nitrates must be used cautiously because of the borderline blood pressure",
+            "correct": true,
+            "feedback": "Correct. Opening the artery is the treatment; nitrates are symptomatic and can drop preload dangerously in a hypotensive patient."
+          },
+          {
+            "id": "b",
+            "text": "Give a large intravenous fluid bolus for the low blood pressure",
+            "feedback": "She has pulmonary congestion from left ventricular failure. Aggressive fluid would worsen it."
+          },
+          {
+            "id": "c",
+            "text": "Withhold antiplatelet therapy until angiography",
+            "feedback": "Antiplatelet therapy is given as early as possible in acute coronary syndrome."
+          },
+          {
+            "id": "d",
+            "text": "Treat with a high-dose intravenous beta blocker immediately",
+            "feedback": "Intravenous beta blockade is avoided in patients with signs of heart failure or haemodynamic instability."
+          }
+        ],
+        "explanation": "Educational scenario only. Management follows current guidelines and the judgement of the treating team.",
+        "highlight": "st"
+      }
+    ],
+    "explanation": "This case exists to make one point: the underlying electrophysiology is exactly the same as in the inferior infarct, but the territory changes both the tracing and the clinical problem. Occlusion of the left anterior descending artery injures the septum and anterior wall, so the injury current is directed anteriorly and the precordial leads facing that wall record convex ST elevation, with reciprocal depression in the inferior leads that face it from below. Because the anterior wall is the largest single territory, these infarcts cause the greatest loss of myocardium — which is why this patient already has a third heart sound, a raised venous pressure and crackles. Conduction disturbance after anterior infarction is infranodal and carries a far worse prognosis than the nodal block seen after inferior infarction.",
+    "learningObjectives": [
+      "Recognise the anteroseptal pattern and distinguish it from the inferior pattern",
+      "Explain reciprocal change as the mirror of the same injury current",
+      "Interpret poor R wave progression in the context of ST elevation",
+      "Relate infarct territory to the complications that follow"
+    ],
+    "clinicalContext": "The ECG localises the injury. Left ventricular function, the culprit lesion and the presence of mechanical complications require echocardiography and angiography.",
+    "relatedDiseases": ["myocardial-infarction", "atherosclerosis", "heart-failure"],
+    "relatedKeyPoints": ["ecg-essentials", "coronary-circulation", "interventional-cardiology"],
+    "references": ["esc-acs-2023", "aha-ecg-part6", "umdmi-2018"]
+  },
+  {
+    "id": "case-nstemi-lateral",
+    "title": "Chest pain with depression, not elevation",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "advanced",
+    "patient": {
+      "age": 68,
+      "sex": "female",
+      "descriptor": "68-year-old woman",
+      "setting": "Emergency department, majors"
+    },
+    "presentingComplaint": "Forty minutes of central chest tightness at rest, now easing, on a background of two weeks of increasingly easily provoked exertional angina.",
+    "history": [
+      "Known stable angina for three years, previously predictable on climbing two flights",
+      "Over the past fortnight the pain has come on at rest and lasted longer",
+      "Hypertension, hypercholesterolaemia, ex-smoker",
+      "On aspirin, atorvastatin and bisoprolol"
+    ],
+    "symptoms": [
+      "Central chest tightness at rest, same character as her usual angina but longer",
+      "Mild breathlessness with the pain",
+      "Clammy during the episode",
+      "No syncope"
+    ],
+    "examinationFindings": [
+      "Anxious but comfortable now, pain settling",
+      "Regular pulse of normal volume; warm peripheries",
+      "Jugular venous pressure normal",
+      "Heart sounds normal; no murmur; no third heart sound",
+      "Chest clear"
+    ],
+    "vitals": {
+      "heartRate": 94,
+      "spo2": 96,
+      "respiratoryRate": 20,
+      "bpSystolic": 148,
+      "bpDiastolic": 88,
+      "temperature": 36.7,
+      "alarm": "warning",
+      "alarmText": "ST DEPRESSION — ISCHAEMIA",
+      "bedside": "Settling, but the ECG is changing with the pain. Serial tracings during and after symptoms are what make this diagnosis."
+    },
+    "ecgRhythmId": "nstemi-ischaemia",
+    "ecg": {
+      "rate": "94 bpm",
+      "rhythm": "Regular sinus rhythm",
+      "pWaves": "Normal",
+      "prInterval": "0.16 s",
+      "qrs": "0.09 s, narrow, with no pathological Q waves",
+      "axis": "Normal",
+      "stSegment": "Downsloping ST depression of up to 2 mm in I, aVL, V4, V5 and V6, with slight elevation in aVR",
+      "tWaves": "Symmetrically inverted in the lateral leads",
+      "keyFindings": [
+        "Horizontal to downsloping ST depression in contiguous lateral leads — an ischaemic pattern",
+        "Symmetrical T wave inversion in the same territory",
+        "No ST elevation meeting STEMI criteria and no pathological Q waves",
+        "The changes are dynamic, most marked during pain — which is why serial tracings matter"
+      ],
+      "keyLeads": ["I", "aVL", "V4", "V5", "V6"],
+      "highlight": "st",
+      "leadOverrides": {
+        "I": { "st": 1.25, "t": 1.2 },
+        "II": { "st": 0.9, "t": 0.8 },
+        "III": { "st": 0.4, "t": 0.35 },
+        "aVL": { "st": 1.15, "t": 1.1 },
+        "aVF": { "st": 0.7, "t": 0.6 },
+        "V1": { "st": 0.15, "t": -0.3 },
+        "V2": { "st": 0.35, "t": -0.2 },
+        "V3": { "st": 0.8, "t": 0.5 },
+        "V4": { "st": 1.2, "t": 1.1 },
+        "V5": { "st": 1.35, "t": 1.25 },
+        "V6": { "st": 1.25, "t": 1.2 }
+      }
+    },
+    "interpretation": "ECG findings consistent with acute myocardial ischaemia in the lateral territory: downsloping ST depression with symmetrical T wave inversion in I, aVL and V4–V6, without ST elevation. The ECG cannot distinguish unstable angina from non-ST-elevation myocardial infarction — that requires serial high-sensitivity troponin.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Normal heart sounds with no murmur. Transient mitral regurgitation during ischaemia is a recognised finding and would be a marker of higher risk."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No ejection systolic murmur; aortic stenosis is an important alternative cause of exertional chest pain in this age group."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No fourth heart sound audible today, though it is commonly heard during an ischaemic episode."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus rhythm at 94 bpm",
+            "correct": true,
+            "feedback": "Correct. Sinus rhythm, with the abnormality confined to repolarisation."
+          },
+          {
+            "id": "b",
+            "text": "Atrial fibrillation",
+            "feedback": "The rhythm is regular and P waves precede every QRS."
+          },
+          {
+            "id": "c",
+            "text": "Supraventricular tachycardia",
+            "feedback": "94 bpm is not a tachycardia, and P waves are visible before each QRS."
+          },
+          {
+            "id": "d",
+            "text": "Sinus rhythm with second-degree block",
+            "feedback": "No QRS complexes are dropped and the PR interval is constant."
+          }
+        ],
+        "explanation": "Keeping the order — rhythm, then rate, then intervals, then repolarisation — stops you jumping straight to the ST segments and missing something else.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-shape",
+        "kind": "systematic",
+        "step": "ST segment",
+        "prompt": "Why does the shape of the ST depression matter?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Horizontal or downsloping depression is an ischaemic criterion; upsloping depression is non-specific",
+            "correct": true,
+            "feedback": "Correct. Shape and magnitude at the J point together determine whether depression counts as ischaemic."
+          },
+          {
+            "id": "b",
+            "text": "Shape is irrelevant; only the depth matters",
+            "feedback": "Depth alone is not enough — upsloping depression of the same depth is common at high rates and non-specific."
+          },
+          {
+            "id": "c",
+            "text": "Upsloping depression is the most specific for ischaemia",
+            "feedback": "It is the least specific of the three shapes."
+          },
+          {
+            "id": "d",
+            "text": "Only depression seen in the inferior leads is significant",
+            "feedback": "Ischaemic depression can appear in any territory; contiguity is what matters."
+          }
+        ],
+        "explanation": "Measure depression at the J point against the T–P baseline, and describe it as horizontal, downsloping or upsloping every time.",
+        "highlight": "st",
+        "leads": ["V5", "V6"]
+      },
+      {
+        "id": "q-t",
+        "kind": "systematic",
+        "step": "T waves",
+        "prompt": "The T waves are symmetrically inverted laterally. How does that differ from a ventricular strain pattern?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Ischaemic inversion is symmetrical; strain inversion is asymmetrical, with a slow downstroke and rapid return",
+            "correct": true,
+            "feedback": "Correct. Strain also occurs in the leads with the tallest R waves, which is a useful additional clue."
+          },
+          {
+            "id": "b",
+            "text": "There is no morphological difference",
+            "feedback": "The difference is real, well described and clinically useful."
+          },
+          {
+            "id": "c",
+            "text": "Strain inversion is always deeper",
+            "feedback": "Depth does not distinguish them; shape and the accompanying voltages do."
+          },
+          {
+            "id": "d",
+            "text": "Ischaemic inversion only occurs in the inferior leads",
+            "feedback": "It follows the ischaemic territory, wherever that is."
+          }
+        ],
+        "explanation": "Neither pattern is diagnostic on its own. Voltage criteria, the clinical history and serial change resolve most cases.",
+        "highlight": "t",
+        "leads": ["V5", "V6", "aVL"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given the crescendo angina and this tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Non-ST-elevation acute coronary syndrome",
+            "correct": true,
+            "feedback": "Correct. Ischaemic symptoms with ischaemic ST depression and no ST elevation. Serial troponin decides whether this is unstable angina or a non-ST-elevation infarct."
+          },
+          {
+            "id": "b",
+            "text": "ST-elevation myocardial infarction",
+            "feedback": "No lead meets ST elevation criteria. Do check for posterior infarction if depression were maximal in V1–V3, but here it is lateral."
+          },
+          {
+            "id": "c",
+            "text": "Left ventricular hypertrophy with strain",
+            "feedback": "The T wave inversion is symmetrical, the voltages are normal, and the symptoms are acute and crescendo."
+          },
+          {
+            "id": "d",
+            "text": "Musculoskeletal chest pain",
+            "feedback": "Neither the crescendo pattern of the symptoms nor the dynamic lateral ST depression supports this."
+          }
+        ],
+        "explanation": "The ECG says ischaemia. Only serial troponin says whether myocardium has been lost — and that distinction is what separates unstable angina from NSTEMI.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "Which combination is most appropriate in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Continuous monitoring with serial ECGs and serial high-sensitivity troponin, plus formal risk stratification",
+            "correct": true,
+            "feedback": "Correct. Risk score, troponin trajectory, dynamic ECG change and haemodynamic status together decide the timing of an invasive strategy."
+          },
+          {
+            "id": "b",
+            "text": "Immediate fibrinolysis",
+            "feedback": "Fibrinolysis is for ST-elevation infarction. In non-ST-elevation acute coronary syndrome it does not improve outcomes and increases bleeding."
+          },
+          {
+            "id": "c",
+            "text": "Discharge with outpatient exercise testing since the pain has settled",
+            "feedback": "Resolution of pain does not lower the risk; this presentation requires admission and troponin measurement."
+          },
+          {
+            "id": "d",
+            "text": "A single troponin at presentation is sufficient to exclude infarction",
+            "feedback": "Serial sampling using a validated pathway is required — a single early value can be normal."
+          }
+        ],
+        "explanation": "Educational scenario only. Risk stratification and the timing of angiography follow current guidelines and specialist assessment.",
+        "highlight": "st"
+      }
+    ],
+    "explanation": "The subendocardium is the least well perfused layer of the ventricular wall, so when coronary flow is reduced but not abolished it becomes ischaemic first. Its injury current is directed away from the overlying electrodes, so the ST segment is depressed rather than elevated — the mirror of transmural injury. The changes here are regional, in I, aVL and V4–V6, which points to the lateral wall, and they are dynamic: most marked during pain and improving as it settles. Two traps are worth remembering. Depression maximal in V1–V3 may be the reciprocal image of a posterior infarction, and posterior leads should be recorded. And widespread depression with ST elevation in aVR suggests left main or severe three-vessel disease. The ECG cannot separate unstable angina from non-ST-elevation infarction; serial troponin does that.",
+    "learningObjectives": [
+      "Apply the shape and magnitude criteria for ischaemic ST depression",
+      "Distinguish symmetrical ischaemic T inversion from asymmetrical strain",
+      "Recognise the patterns that need extra leads — posterior involvement and left main disease",
+      "State what troponin adds that the ECG cannot provide"
+    ],
+    "clinicalContext": "A normal ECG never excludes acute coronary syndrome, and ST depression has many non-coronary causes — hypertrophy, digoxin, hypokalaemia, bundle branch block. The tracing is interpreted with the history, serial change and biomarkers.",
+    "relatedDiseases": ["myocardial-infarction", "stable-angina", "atherosclerosis"],
+    "relatedKeyPoints": ["ecg-essentials", "coronary-circulation", "interventional-cardiology"],
+    "references": ["esc-acs-2023", "aha-ecg-part4", "umdmi-2018"]
+  },
+  {
+    "id": "case-pericarditis-young-man",
+    "title": "Sharp pain, better sitting forward",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "intermediate",
+    "patient": {
+      "age": 29,
+      "sex": "male",
+      "descriptor": "29-year-old man",
+      "setting": "Emergency department, majors"
+    },
+    "presentingComplaint": "Two days of sharp central chest pain, worse lying flat and on deep inspiration, relieved by sitting forward.",
+    "history": [
+      "Coryzal illness ten days ago with fever and sore throat",
+      "Pain sharp and pleuritic, clearly positional",
+      "No exertional component; no risk factors for coronary disease",
+      "No previous cardiac history; no medication"
+    ],
+    "symptoms": [
+      "Sharp central chest pain radiating to the left trapezius ridge",
+      "Worse lying flat and on inspiration, better sitting forward",
+      "Low-grade fever",
+      "No breathlessness at rest"
+    ],
+    "examinationFindings": [
+      "Uncomfortable, sitting forward on the trolley",
+      "Regular pulse of normal volume; no pulsus paradoxus",
+      "Jugular venous pressure normal",
+      "A scratchy, three-component friction rub at the left sternal edge, best on expiration leaning forward",
+      "Chest clear; heart sounds otherwise normal"
+    ],
+    "vitals": {
+      "heartRate": 92,
+      "spo2": 98,
+      "respiratoryRate": 18,
+      "bpSystolic": 122,
+      "bpDiastolic": 74,
+      "temperature": 37.8,
+      "alarm": "advisory",
+      "alarmText": "ST ELEVATION — WIDESPREAD",
+      "bedside": "In pain but not distressed, and clearly more comfortable leaning forward. The ST elevation here is widespread rather than regional, which is the key distinction."
+    },
+    "ecgRhythmId": "pericarditis",
+    "ecg": {
+      "rate": "92 bpm",
+      "rhythm": "Regular sinus rhythm",
+      "pWaves": "Normal in morphology; the PR segment is depressed in the limb leads and elevated in aVR",
+      "prInterval": "0.15 s",
+      "qrs": "0.09 s, narrow, of normal amplitude with no Q waves",
+      "axis": "Normal",
+      "stSegment": "Widespread concave (saddle-shaped) ST elevation of 1–2 mm in almost every lead, with depression in aVR",
+      "tWaves": "Upright throughout in this early stage",
+      "keyFindings": [
+        "Concave, saddle-shaped ST elevation across multiple territories rather than in one",
+        "PR segment depression — the most specific ECG sign of pericarditis",
+        "Reciprocal change confined to aVR, which is not a true reciprocal territory",
+        "No pathological Q waves and preserved QRS voltage"
+      ],
+      "keyLeads": ["II", "V5", "V6", "aVR"],
+      "highlight": "st",
+      "leadOverrides": {
+        "I": { "st": 1.1 },
+        "II": { "st": 1.15 },
+        "III": { "st": 0.6 },
+        "aVR": { "st": 1.2 },
+        "aVL": { "st": 0.8 },
+        "aVF": { "st": 1 },
+        "V1": { "st": 0.3 },
+        "V2": { "st": 0.85 },
+        "V3": { "st": 1 },
+        "V4": { "st": 1.05 },
+        "V5": { "st": 1.15 },
+        "V6": { "st": 1.15 }
+      }
+    },
+    "interpretation": "ECG findings consistent with acute pericarditis: widespread concave ST elevation with PR segment depression, and reciprocal change confined to aVR. The distribution does not follow a coronary territory.",
+    "auscultation": [
+      {
+        "siteId": "erb",
+        "soundId": "normal-s1-s2",
+        "note": "A pericardial friction rub is scratchy and superficial, with up to three components in the cardiac cycle. It is best heard at the left sternal edge with the diaphragm, in held expiration, leaning forward — and it comes and goes."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "The rub is often audible here too. Underlying heart sounds are normal, which helps distinguish a rub from a murmur."
+      },
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Normal S1 and S2 with no murmur; muffled heart sounds would raise the possibility of a significant pericardial effusion."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus rhythm",
+            "correct": true,
+            "feedback": "Correct. Pericarditis rarely disturbs the rhythm itself; a sustained atrial arrhythmia would suggest myocardial involvement."
+          },
+          {
+            "id": "b",
+            "text": "Atrial fibrillation",
+            "feedback": "The rhythm is regular with P waves before every QRS."
+          },
+          {
+            "id": "c",
+            "text": "Junctional tachycardia",
+            "feedback": "Upright conducted P waves precede each QRS in lead II."
+          },
+          {
+            "id": "d",
+            "text": "Sinus rhythm with first-degree block",
+            "feedback": "The PR interval is 0.15 s. Note, though, that the PR *segment* is depressed — a different finding entirely."
+          }
+        ],
+        "explanation": "Distinguish the PR interval, which is a duration, from the PR segment, which is a level. Pericarditis affects the segment.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-distribution",
+        "kind": "systematic",
+        "step": "ST segment",
+        "prompt": "Which feature best distinguishes this from an ST-elevation infarct?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The elevation is widespread and concave, without reciprocal depression outside aVR",
+            "correct": true,
+            "feedback": "Correct. Infarction is regional, convex, and produces genuine reciprocal depression in the opposing territory."
+          },
+          {
+            "id": "b",
+            "text": "The heart rate is faster",
+            "feedback": "Rate does not distinguish them; both are commonly accompanied by tachycardia."
+          },
+          {
+            "id": "c",
+            "text": "The QRS is narrow",
+            "feedback": "The QRS is narrow in most infarcts too."
+          },
+          {
+            "id": "d",
+            "text": "There are P waves",
+            "feedback": "P waves are present in both."
+          }
+        ],
+        "explanation": "Ask three questions of any ST elevation: is it regional or widespread, is it concave or convex, and is there reciprocal depression?",
+        "highlight": "st",
+        "leads": ["II", "V5", "aVR"]
+      },
+      {
+        "id": "q-pr",
+        "kind": "systematic",
+        "step": "PR segment",
+        "prompt": "The PR segment is depressed in the limb leads and elevated in aVR. What does this indicate?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Atrial involvement in the inflammatory process — the most specific ECG sign of pericarditis",
+            "correct": true,
+            "feedback": "Correct. Inflammation of the atrial epicardium produces an atrial injury current that displaces the PR segment."
+          },
+          {
+            "id": "b",
+            "text": "First-degree atrioventricular block",
+            "feedback": "That is a prolonged PR interval, which is a duration rather than a displacement."
+          },
+          {
+            "id": "c",
+            "text": "Atrial fibrillation",
+            "feedback": "There are organised P waves and a regular rhythm."
+          },
+          {
+            "id": "d",
+            "text": "An artefact of poor electrode contact",
+            "feedback": "PR depression here is consistent across leads and reciprocal in aVR — the signature of a genuine atrial injury current."
+          }
+        ],
+        "explanation": "PR segment depression is easy to overlook and highly specific. Look for it in lead II and for the reciprocal elevation in aVR.",
+        "highlight": "pr",
+        "leads": ["II", "aVR"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Taking the positional pleuritic pain, the friction rub and the tracing together, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Acute pericarditis, probably viral",
+            "correct": true,
+            "feedback": "Correct. Two of four criteria are enough — characteristic pain, a rub, typical ECG change, or a new effusion — and three are present here."
+          },
+          {
+            "id": "b",
+            "text": "Acute anterior ST-elevation myocardial infarction",
+            "feedback": "The elevation crosses territories, is concave, has no reciprocal depression, and the pain is positional and pleuritic in a young man with no risk factors."
+          },
+          {
+            "id": "c",
+            "text": "Pulmonary embolism",
+            "feedback": "Pleuritic pain fits, but the friction rub, the positional relief and the widespread concave elevation with PR depression do not."
+          },
+          {
+            "id": "d",
+            "text": "Benign early repolarisation",
+            "feedback": "It can look similar and is a genuine differential — but early repolarisation causes no symptoms, no rub, no PR depression and no fever."
+          }
+        ],
+        "explanation": "The diagnosis of pericarditis is clinical, supported by the ECG. The history and the rub carry as much weight as the tracing.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "Which assessment is most important before concluding this is uncomplicated pericarditis, in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Look for features of a significant effusion or tamponade, and check for myocardial involvement",
+            "correct": true,
+            "feedback": "Correct. Tamponade is the immediate danger, and a raised troponin indicates myopericarditis, which changes both prognosis and advice about exercise."
+          },
+          {
+            "id": "b",
+            "text": "Immediate fibrinolysis for the ST elevation",
+            "feedback": "Fibrinolysis in pericarditis risks haemorrhagic effusion and tamponade, and treats nothing."
+          },
+          {
+            "id": "c",
+            "text": "No further assessment; the diagnosis is certain from the ECG alone",
+            "feedback": "The ECG supports the diagnosis but cannot exclude an effusion or myocardial involvement."
+          },
+          {
+            "id": "d",
+            "text": "Start long-term anticoagulation",
+            "feedback": "Anticoagulation is not indicated and can precipitate haemorrhagic pericardial effusion."
+          }
+        ],
+        "explanation": "Educational scenario only. Pericarditis is managed according to current guidelines with attention to the high-risk features that require admission.",
+        "highlight": "st"
+      }
+    ],
+    "explanation": "Pericardial inflammation involves the epicardial surface of both the atria and the ventricles, and it does so diffusely rather than in the distribution of one artery. The ventricular injury current lifts the ST segment in almost every lead, concave upward — the saddle shape — with reciprocal depression only in aVR, which looks at the heart from outside all the territories. The atrial injury current is the more specific finding: it depresses the PR segment in the limb leads and elevates it in aVR. Because the process is not regional there are no pathological Q waves and QRS voltage is preserved, unless a large effusion accumulates and damps the signal. The pain is positional and pleuritic because the parietal pericardium and adjacent pleura are innervated by the phrenic nerve, which also explains radiation to the trapezius ridge.",
+    "learningObjectives": [
+      "Distinguish pericarditis from infarction by distribution, ST shape and reciprocal change",
+      "Identify PR segment depression and explain the atrial injury current that produces it",
+      "Describe the characteristics of a pericardial friction rub and how to elicit it",
+      "Recognise the complications that must be excluded — effusion, tamponade and myocardial involvement"
+    ],
+    "clinicalContext": "The ECG evolves through recognised stages over days to weeks, so a single tracing is a snapshot. Echocardiography is required to assess for effusion, and troponin to assess for myocardial involvement.",
+    "relatedDiseases": ["pericardial-disease"],
+    "relatedKeyPoints": ["ecg-essentials", "heart-sounds"],
+    "references": ["esc-pericardial-2015", "aha-ecg-part4", "bates"]
+  }
+]

@@ -1,0 +1,739 @@
+[
+  {
+    "id": "case-atrial-fibrillation-palpitations",
+    "title": "Irregularly irregular palpitations",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "core",
+    "patient": {
+      "age": 71,
+      "sex": "male",
+      "descriptor": "71-year-old man",
+      "setting": "Emergency department, majors"
+    },
+    "presentingComplaint": "Sudden onset of a fluttering, irregular heartbeat this morning, with mild breathlessness on walking.",
+    "history": [
+      "Palpitations began abruptly at about 07:00 and have been continuous since",
+      "Hypertension for twelve years, on amlodipine",
+      "Two units of alcohol most evenings; three glasses of wine last night",
+      "No previous documented arrhythmia; no chest pain, no syncope"
+    ],
+    "symptoms": [
+      "Irregular thumping in the chest",
+      "Breathless on climbing one flight of stairs",
+      "No chest pain, no dizziness"
+    ],
+    "examinationFindings": [
+      "Alert, comfortable at rest",
+      "Pulse irregularly irregular with varying volume; apex rate exceeds the radial rate",
+      "Jugular venous pressure not raised, with no visible a waves",
+      "Heart sounds of varying intensity; no murmur",
+      "Chest clear, no peripheral oedema"
+    ],
+    "vitals": {
+      "heartRate": 118,
+      "spo2": 96,
+      "respiratoryRate": 18,
+      "bpSystolic": 132,
+      "bpDiastolic": 78,
+      "temperature": 36.7,
+      "alarm": "warning",
+      "alarmText": "IRREGULAR RHYTHM · RAPID VENTRICULAR RESPONSE",
+      "bedside": "Comfortable but aware of every beat. The monitor's rate readout jumps around because the ventricular response is genuinely irregular."
+    },
+    "ecgRhythmId": "atrial-fibrillation",
+    "ecg": {
+      "rate": "Ventricular rate averaging 118 bpm, but varying beat to beat — count over six seconds",
+      "rhythm": "Irregularly irregular, with no repeating pattern to the R–R intervals",
+      "pWaves": "Absent. The baseline shows fine fibrillatory undulation, best seen in V1",
+      "prInterval": "Not measurable — there are no P waves to measure from",
+      "qrs": "0.09 s, narrow and of normal morphology",
+      "axis": "Normal",
+      "stSegment": "Isoelectric, with minor rate-related upsloping depression",
+      "tWaves": "Upright, varying slightly in amplitude with the changing cycle length",
+      "keyFindings": [
+        "No organised atrial activity: no P waves, only a fibrillatory baseline",
+        "Irregularly irregular ventricular response — no repeating pattern at all",
+        "Narrow QRS complexes, confirming conduction through the normal His–Purkinje system",
+        "Beat-to-beat variation in the pulse waveform, because short cycles allow less ventricular filling"
+      ],
+      "keyLeads": ["V1", "II"],
+      "highlight": "rr",
+      "leadOverrides": {
+        "V1": { "p": 1.6 },
+        "V2": { "p": 1.3 }
+      }
+    },
+    "interpretation": "Atrial fibrillation with a rapid ventricular response at an average of 118 bpm, with a narrow QRS and no acute ischaemic change.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "S1 varies in intensity from beat to beat because the position of the mitral leaflets at the onset of systole depends on the length of the preceding diastole."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No fourth heart sound — there cannot be one, because S4 is produced by atrial contraction and the atria are fibrillating."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No murmur. Listen for aortic stenosis in any older patient with new atrial fibrillation, since valve disease is a common substrate."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Atrial fibrillation",
+            "correct": true,
+            "feedback": "Correct. Absent P waves, a fibrillatory baseline and an irregularly irregular ventricular response are the three defining features."
+          },
+          {
+            "id": "b",
+            "text": "Atrial flutter with variable block",
+            "feedback": "Flutter with variable block is also irregular, but the baseline shows organised sawtooth waves at about 300 per minute rather than chaotic undulation."
+          },
+          {
+            "id": "c",
+            "text": "Multifocal atrial tachycardia",
+            "feedback": "Multifocal atrial tachycardia is irregular but has visible P waves of at least three different morphologies. There are no P waves here."
+          },
+          {
+            "id": "d",
+            "text": "Sinus rhythm with frequent ectopic beats",
+            "feedback": "Frequent ectopics interrupt an otherwise regular underlying rhythm with identifiable P waves. Neither is present."
+          }
+        ],
+        "explanation": "Three questions settle it: are there P waves, is the baseline organised, and is the ventricular response irregularly irregular?",
+        "highlight": "p",
+        "leads": ["V1"]
+      },
+      {
+        "id": "q-rate",
+        "kind": "systematic",
+        "step": "Rate",
+        "prompt": "How should the ventricular rate be measured in this rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Count the QRS complexes in a 6-second strip and multiply by 10",
+            "correct": true,
+            "feedback": "Correct. Dividing 300 by large squares assumes a regular rhythm, which this is not."
+          },
+          {
+            "id": "b",
+            "text": "Divide 300 by the number of large squares between two adjacent R waves",
+            "feedback": "That gives the instantaneous rate for one cycle only, and every cycle here is a different length."
+          },
+          {
+            "id": "c",
+            "text": "Use the atrial rate, since it is more consistent",
+            "feedback": "The atrial rate in fibrillation is 400–600 per minute and is not what determines cardiac output."
+          },
+          {
+            "id": "d",
+            "text": "Take the radial pulse rate",
+            "feedback": "The radial rate underestimates the true ventricular rate in atrial fibrillation, because short cycles produce beats too weak to reach the wrist — the pulse deficit."
+          }
+        ],
+        "explanation": "Whenever a rhythm is irregular, average over at least six seconds. And auscultate at the apex rather than palpating the radial pulse.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-qrs",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "The QRS complexes are narrow at 0.09 s. What does that tell you?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The ventricles are being activated through the normal conducting system",
+            "correct": true,
+            "feedback": "Correct. A narrow QRS means the impulse reached the ventricles through the His–Purkinje system, so the rhythm originates at or above the atrioventricular node."
+          },
+          {
+            "id": "b",
+            "text": "The rhythm must be ventricular in origin",
+            "feedback": "The opposite: ventricular rhythms have broad QRS complexes because activation spreads slowly, cell to cell."
+          },
+          {
+            "id": "c",
+            "text": "There is a bundle branch block",
+            "feedback": "Bundle branch block widens the QRS to 0.12 s or more."
+          },
+          {
+            "id": "d",
+            "text": "It excludes any structural heart disease",
+            "feedback": "QRS width says nothing about structure — plenty of structurally abnormal hearts have narrow complexes."
+          }
+        ],
+        "explanation": "QRS width is the single most useful discriminator between supraventricular and ventricular origin, and it should be checked on every tracing.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given the history, the observations and the tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "New-onset atrial fibrillation with a rapid ventricular response, possibly alcohol-related",
+            "correct": true,
+            "feedback": "Correct. Abrupt onset, a clear temporal relationship with alcohol, hypertension as a substrate, and a classic tracing."
+          },
+          {
+            "id": "b",
+            "text": "Ventricular tachycardia",
+            "feedback": "Ventricular tachycardia is broad-complex and usually regular. These complexes are narrow and the rhythm is irregular."
+          },
+          {
+            "id": "c",
+            "text": "Acute ST-elevation myocardial infarction",
+            "feedback": "There is no ST elevation and no chest pain. Atrial fibrillation can complicate infarction, but nothing here points to it."
+          },
+          {
+            "id": "d",
+            "text": "Complete heart block with an escape rhythm",
+            "feedback": "Complete heart block gives a slow, regular ventricular escape rhythm with dissociated P waves."
+          }
+        ],
+        "explanation": "The tracing gives you the rhythm; the history gives you the trigger and the substrate. Both are needed before the encounter is complete.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "Beyond rate control, which assessment is essential in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Formal thromboembolic risk assessment to decide about anticoagulation",
+            "correct": true,
+            "feedback": "Correct. Stroke prevention is the intervention that changes outcome most in atrial fibrillation, and risk is assessed with a validated score rather than by impression."
+          },
+          {
+            "id": "b",
+            "text": "Immediate DC cardioversion regardless of symptom duration",
+            "feedback": "Cardioversion is reserved for haemodynamic instability, or is planned with attention to the duration of the episode and anticoagulation status because of thromboembolic risk."
+          },
+          {
+            "id": "c",
+            "text": "Start an antiplatelet agent instead of anticoagulation",
+            "feedback": "Antiplatelet therapy is substantially less effective than anticoagulation for stroke prevention in atrial fibrillation and is not a substitute for it."
+          },
+          {
+            "id": "d",
+            "text": "No further assessment is needed once the rate is below 100 bpm",
+            "feedback": "Rate control treats symptoms. It does not address the risk of stroke."
+          }
+        ],
+        "explanation": "Educational scenario only. Anticoagulation and rhythm decisions follow validated risk scores and current guidelines, applied by the treating team.",
+        "highlight": "baseline"
+      }
+    ],
+    "explanation": "Atrial fibrillation. The atria are depolarising chaotically at 400–600 per minute from multiple re-entrant wavelets, so there is no coordinated atrial contraction and no P wave — only a fibrillatory baseline, seen best in V1. The atrioventricular node is bombarded and conducts unpredictably, which is what makes the ventricular response irregularly irregular. The QRS stays narrow because conduction below the node is normal. The loss of atrial systole removes roughly a fifth of ventricular filling and, more importantly, allows stasis in the left atrial appendage — which is why the central clinical question is thromboembolic risk rather than rate.",
+    "learningObjectives": [
+      "Recognise atrial fibrillation from absent P waves plus an irregularly irregular ventricular response",
+      "Use lead V1 to examine atrial activity",
+      "Measure rate over six seconds whenever the rhythm is irregular",
+      "Explain why stroke prevention, not rate, is the decision that changes outcome"
+    ],
+    "clinicalContext": "The ECG establishes the rhythm. It cannot establish how long the patient has been in it, whether there is structural heart disease, or what the stroke risk is — that requires the history, echocardiography and a validated risk score.",
+    "relatedDiseases": ["atrial-fibrillation", "hypertension", "heart-failure"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials"],
+    "references": ["aha-af-2023", "aha-ecg-part1"]
+  },
+  {
+    "id": "case-atrial-flutter-breathless",
+    "title": "A regular tachycardia at exactly 150",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "intermediate",
+    "patient": {
+      "age": 66,
+      "sex": "male",
+      "descriptor": "66-year-old man",
+      "setting": "Acute medical unit"
+    },
+    "presentingComplaint": "Three days of breathlessness on exertion and a persistent fast heartbeat.",
+    "history": [
+      "Chronic obstructive pulmonary disease, ex-smoker of 40 pack-years",
+      "Admitted twice in the past year with infective exacerbations",
+      "No chest pain; ankle swelling for a week",
+      "Not anticoagulated"
+    ],
+    "symptoms": [
+      "Breathless walking across the room",
+      "Continuous awareness of a fast, regular heartbeat",
+      "Ankle swelling"
+    ],
+    "examinationFindings": [
+      "Mildly tachypnoeic, speaking in short sentences",
+      "Regular fast pulse at 150 bpm",
+      "Jugular venous pressure raised with rapid flutter waves visible",
+      "Heart sounds normal; no murmur",
+      "Bilateral pitting ankle oedema; scattered wheeze"
+    ],
+    "vitals": {
+      "heartRate": 150,
+      "spo2": 93,
+      "respiratoryRate": 22,
+      "bpSystolic": 124,
+      "bpDiastolic": 76,
+      "temperature": 36.8,
+      "alarm": "warning",
+      "alarmText": "SVT — RATE 150",
+      "bedside": "Breathless but not distressed. A ventricular rate sitting stubbornly at almost exactly 150 should always make you look for flutter waves."
+    },
+    "ecgRhythmId": "atrial-flutter",
+    "ecg": {
+      "rate": "Ventricular rate 150 bpm; atrial rate approximately 300 per minute",
+      "rhythm": "Regular, with 2:1 atrioventricular conduction",
+      "pWaves": "No discrete P waves. A continuous sawtooth flutter baseline with no isoelectric interval, negative in the inferior leads",
+      "prInterval": "Not applicable — flutter waves, not P waves",
+      "qrs": "0.09 s, narrow",
+      "axis": "Normal",
+      "stSegment": "Difficult to assess, because flutter waves deform the segment. Do not over-call ischaemia here",
+      "tWaves": "Superimposed on flutter waves; individually hard to define",
+      "keyFindings": [
+        "A ventricular rate of almost exactly 150 bpm — always suspect flutter with 2:1 block",
+        "Sawtooth atrial activity at about 300 per minute, best seen in II, III and aVF",
+        "Alternate flutter waves are hidden inside the QRS and the T wave, which is why they are so easily missed",
+        "The QRS is narrow: this is a supraventricular rhythm"
+      ],
+      "keyLeads": ["II", "III", "aVF", "V1"],
+      "highlight": "p",
+      "leadOverrides": {
+        "II": { "p": 1.2 },
+        "III": { "p": 1.5 },
+        "aVF": { "p": 1.35 },
+        "V1": { "p": 0.9 },
+        "V6": { "p": 0.3 }
+      }
+    },
+    "interpretation": "Atrial flutter with 2:1 atrioventricular conduction, atrial rate approximately 300 per minute and ventricular rate 150 bpm, with a narrow QRS.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Regular, fast heart sounds of constant intensity — unlike atrial fibrillation, where S1 varies from beat to beat."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "Nothing added. Look at the neck rather than listening: rapid flutter waves are often visible in the jugular venous pulse."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Atrial flutter with 2:1 conduction",
+            "correct": true,
+            "feedback": "Correct. Organised sawtooth atrial activity at about 300 per minute with every second impulse conducted gives a ventricular rate of 150."
+          },
+          {
+            "id": "b",
+            "text": "Sinus tachycardia",
+            "feedback": "Sinus tachycardia has discrete upright P waves in lead II with an isoelectric baseline between them, and the rate varies with activity rather than sitting fixed at 150."
+          },
+          {
+            "id": "c",
+            "text": "Atrial fibrillation",
+            "feedback": "Atrial fibrillation is irregularly irregular with a chaotic baseline. This rhythm is strikingly regular and the atrial activity is organised."
+          },
+          {
+            "id": "d",
+            "text": "Ventricular tachycardia",
+            "feedback": "Ventricular tachycardia is broad-complex. The QRS here is 0.09 s."
+          }
+        ],
+        "explanation": "A regular narrow-complex tachycardia at 150 bpm is atrial flutter until you have proved otherwise by finding the flutter waves.",
+        "highlight": "p",
+        "leads": ["II", "III", "aVF"]
+      },
+      {
+        "id": "q-atrialrate",
+        "kind": "systematic",
+        "step": "Atrial activity",
+        "prompt": "How do you demonstrate the flutter waves hidden inside the QRS complexes?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Increase atrioventricular block transiently — vagal manoeuvres or adenosine — and watch the baseline",
+            "correct": true,
+            "feedback": "Correct. Slowing conduction through the node exposes the atrial activity without terminating the flutter, because the circuit is in the atrium."
+          },
+          {
+            "id": "b",
+            "text": "Give a synchronised DC shock and look at the tracing afterwards",
+            "feedback": "Cardioversion is a treatment, not a diagnostic manoeuvre, and it is not used simply to clarify a rhythm in a stable patient."
+          },
+          {
+            "id": "c",
+            "text": "Increase the paper speed to 50 mm/s",
+            "feedback": "This does spread the complexes out and can help, but it does not reveal waves buried inside the QRS."
+          },
+          {
+            "id": "d",
+            "text": "Record only lead V6",
+            "feedback": "V6 has the smallest atrial signal of any lead. The inferior leads and V1 are where flutter waves are seen."
+          }
+        ],
+        "explanation": "Adenosine in a regular narrow tachycardia is both diagnostic and potentially therapeutic: it terminates nodal re-entry and unmasks flutter.",
+        "highlight": "p"
+      },
+      {
+        "id": "q-qrs",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "Why is the QRS narrow despite a ventricular rate of 150?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Because the impulse still reaches the ventricles through the His–Purkinje system",
+            "correct": true,
+            "feedback": "Correct. The flutter circuit is confined to the atrium; below the atrioventricular node conduction is entirely normal."
+          },
+          {
+            "id": "b",
+            "text": "Because the rate is too fast for the QRS to widen",
+            "feedback": "Rate does not narrow a QRS. If anything, very fast rates can produce rate-related aberrant conduction and widen it."
+          },
+          {
+            "id": "c",
+            "text": "Because the atria are contributing to ventricular depolarisation",
+            "feedback": "The atria never depolarise the ventricles directly; the impulse must pass through the conduction system."
+          },
+          {
+            "id": "d",
+            "text": "Because there is 2:1 block",
+            "feedback": "The conduction ratio determines the ventricular rate, not the QRS width."
+          }
+        ],
+        "explanation": "Narrow QRS means normal ventricular activation, which localises the arrhythmia to the atria or the atrioventricular junction.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Putting the chronic lung disease, the raised venous pressure and the tracing together, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Atrial flutter in the context of chronic lung disease and right atrial stretch",
+            "correct": true,
+            "feedback": "Correct. Chronic lung disease raises right heart pressures and dilates the right atrium, which is the substrate for the typical cavotricuspid isthmus-dependent flutter circuit."
+          },
+          {
+            "id": "b",
+            "text": "Sinus tachycardia secondary to hypoxia",
+            "feedback": "Hypoxia is present, but the atrial activity is organised at 300 per minute with a sawtooth baseline — this is not sinus."
+          },
+          {
+            "id": "c",
+            "text": "Acute coronary syndrome",
+            "feedback": "There is no chest pain and no ischaemic ST change that can be interpreted through the flutter waves."
+          },
+          {
+            "id": "d",
+            "text": "Pulmonary embolism causing right heart strain",
+            "feedback": "Worth considering in any breathless patient with a new atrial arrhythmia, but the three-day history in known chronic lung disease with fluid overload fits flutter secondary to atrial stretch better."
+          }
+        ],
+        "explanation": "Atrial arrhythmias arise where atria are stretched. The lungs, the valves and the ventricles are all worth examining when flutter appears.",
+        "highlight": "p"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "Which statement about management in this educational scenario is most accurate?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Thromboembolic risk in atrial flutter is managed as it is in atrial fibrillation",
+            "correct": true,
+            "feedback": "Correct. Flutter carries a comparable stroke risk, and the same anticoagulation assessment applies — a point that is frequently forgotten."
+          },
+          {
+            "id": "b",
+            "text": "Atrial flutter does not require any consideration of anticoagulation",
+            "feedback": "This is a common and dangerous misconception. Flutter and fibrillation are assessed the same way, and the two often coexist."
+          },
+          {
+            "id": "c",
+            "text": "Adenosine reliably terminates atrial flutter",
+            "feedback": "Adenosine blocks the atrioventricular node. The flutter circuit is in the atrium, so it unmasks the flutter rather than stopping it."
+          },
+          {
+            "id": "d",
+            "text": "Rate control in flutter is usually easier to achieve than in fibrillation",
+            "feedback": "The opposite is generally true: flutter is often more resistant to rate control, which is one reason ablation of the isthmus is attractive."
+          }
+        ],
+        "explanation": "Educational scenario only. Anticoagulation, rate control and ablation decisions follow current guidelines and specialist assessment.",
+        "highlight": "baseline"
+      }
+    ],
+    "explanation": "Typical atrial flutter is a single macro-re-entrant circuit rotating around the tricuspid annulus at about 300 per minute. Because the circuit is continuous there is no isoelectric baseline: the atrial deflections run into one another as a sawtooth, negative in II, III and aVF and positive in V1. The atrioventricular node cannot conduct 300 impulses a minute, so it blocks — most often two to one, giving the characteristic ventricular rate of 150. That fixed rate is the clue, because alternate flutter waves hide inside the QRS and the T wave and are genuinely easy to miss. Transient atrioventricular block, from a vagal manoeuvre or adenosine, exposes them.",
+    "learningObjectives": [
+      "Treat a regular narrow tachycardia at 150 bpm as flutter until proved otherwise",
+      "Identify sawtooth flutter waves in the inferior leads and V1",
+      "Explain why increasing atrioventricular block unmasks rather than terminates flutter",
+      "Apply the same thromboembolic risk assessment to flutter as to fibrillation"
+    ],
+    "clinicalContext": "The ECG shows the rhythm and the conduction ratio. It does not show the atrial size, the right heart pressures or the stroke risk, all of which need separate assessment.",
+    "relatedDiseases": ["atrial-fibrillation", "pulmonary-hypertension", "heart-failure"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials"],
+    "references": ["esc-svt-2019", "aha-af-2023"]
+  },
+  {
+    "id": "case-svt-young-woman",
+    "title": "Abrupt onset, very fast, very regular",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "core",
+    "patient": {
+      "age": 27,
+      "sex": "female",
+      "descriptor": "27-year-old woman",
+      "setting": "Emergency department, majors"
+    },
+    "presentingComplaint": "Sudden onset of a racing heartbeat 40 minutes ago while sitting at her desk, with a fluttering sensation in the neck.",
+    "history": [
+      "Three similar episodes over two years, each starting and stopping abruptly and lasting minutes",
+      "Previous episodes stopped spontaneously or with breath-holding",
+      "No structural heart disease; no medication",
+      "No chest pain, no syncope"
+    ],
+    "symptoms": [
+      "Racing, regular palpitations of instantaneous onset",
+      "Fluttering sensation in the neck",
+      "Mild light-headedness but no loss of consciousness"
+    ],
+    "examinationFindings": [
+      "Anxious, alert, warm and well perfused",
+      "Regular pulse, too fast to count accurately at the wrist",
+      "Prominent regular neck pulsation — the 'frog sign' of simultaneous atrial and ventricular contraction",
+      "Heart sounds fast and regular; no murmur",
+      "Chest clear"
+    ],
+    "vitals": {
+      "heartRate": 186,
+      "spo2": 98,
+      "respiratoryRate": 20,
+      "bpSystolic": 106,
+      "bpDiastolic": 68,
+      "temperature": 36.6,
+      "alarm": "warning",
+      "alarmText": "SVT — RATE 186",
+      "bedside": "Alert and talking, with a stable blood pressure. Stable enough for vagal manoeuvres first — a sudden onset and offset is the history that defines this rhythm."
+    },
+    "ecgRhythmId": "supraventricular-tachycardia",
+    "ecg": {
+      "rate": "186 bpm",
+      "rhythm": "Absolutely regular — the R–R intervals do not vary at all",
+      "pWaves": "No P wave visible before the QRS. A small deflection distorts the terminal QRS — a retrograde P wave conducted backwards to the atria",
+      "prInterval": "Not measurable",
+      "qrs": "0.085 s, narrow",
+      "axis": "Normal",
+      "stSegment": "Up to 1 mm of downsloping depression in the inferolateral leads — common at this rate and usually not ischaemic",
+      "tWaves": "Small and partly merged with the following P wave",
+      "keyFindings": [
+        "A very fast, absolutely regular, narrow-complex tachycardia",
+        "No discernible preceding P wave; retrograde atrial activation distorts the end of the QRS",
+        "Rate-related ST depression, which frequently resolves completely once the rhythm terminates",
+        "Abrupt onset and abrupt offset in the history — the hallmark of re-entry"
+      ],
+      "keyLeads": ["II", "V1"],
+      "highlight": "qrs"
+    },
+    "interpretation": "Regular narrow-complex tachycardia at 186 bpm with no visible preceding P wave — findings consistent with atrioventricular nodal re-entrant tachycardia. Rate-related ST depression is present and should be reassessed after the rhythm converts.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Very fast, regular and of constant intensity. Diastole is so short that S2 and the next S1 nearly merge."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No added sound. The regular cannon waves in the neck come from the atria contracting against closed atrioventricular valves."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Supraventricular tachycardia — most likely atrioventricular nodal re-entry",
+            "correct": true,
+            "feedback": "Correct. A regular narrow-complex tachycardia at 186 bpm with abrupt onset and no preceding P wave is nodal re-entry until proved otherwise."
+          },
+          {
+            "id": "b",
+            "text": "Sinus tachycardia",
+            "feedback": "Sinus tachycardia rarely exceeds about 220 minus age at rest, has visible upright P waves, and warms up and cools down rather than starting instantly."
+          },
+          {
+            "id": "c",
+            "text": "Atrial fibrillation with rapid ventricular response",
+            "feedback": "Atrial fibrillation is irregularly irregular. This rhythm is absolutely regular."
+          },
+          {
+            "id": "d",
+            "text": "Ventricular tachycardia",
+            "feedback": "The QRS is 0.085 s. Ventricular tachycardia is broad-complex, above 0.12 s."
+          }
+        ],
+        "explanation": "Regular, narrow, very fast, no P waves, instantaneous onset — that combination is re-entry involving the atrioventricular node.",
+        "highlight": "qrs",
+        "leads": ["II", "V1"]
+      },
+      {
+        "id": "q-pwaves",
+        "kind": "systematic",
+        "step": "P waves",
+        "prompt": "Where are the atrial complexes in this rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Buried within or just after the QRS, because atria and ventricles are activated almost simultaneously",
+            "correct": true,
+            "feedback": "Correct. In typical nodal re-entry the retrograde P wave is hidden in the QRS or appears as a pseudo-R′ in V1 or a pseudo-S in the inferior leads."
+          },
+          {
+            "id": "b",
+            "text": "Immediately before each QRS with a short PR interval",
+            "feedback": "That would suggest an atrial tachycardia or pre-excitation, not typical nodal re-entry."
+          },
+          {
+            "id": "c",
+            "text": "Absent entirely — the atria are not depolarising",
+            "feedback": "The atria are depolarising, retrogradely, on every beat of the circuit. The deflection is simply hidden."
+          },
+          {
+            "id": "d",
+            "text": "Occurring at 300 per minute as flutter waves",
+            "feedback": "There is no sawtooth baseline, and the ventricular rate of 186 does not fit a simple division of 300."
+          }
+        ],
+        "explanation": "Comparing the tachycardia tracing with the patient's own tracing in sinus rhythm afterwards is the classic way to reveal a hidden retrograde P wave.",
+        "highlight": "qrs",
+        "leads": ["V1"]
+      },
+      {
+        "id": "q-st",
+        "kind": "systematic",
+        "step": "ST segment",
+        "prompt": "There is 1 mm of ST depression inferolaterally. What is the most appropriate way to report this?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Rate-related ST depression, to be reassessed once the rhythm has converted",
+            "correct": true,
+            "feedback": "Correct. ST depression during a fast supraventricular tachycardia is common, is often not ischaemic, and usually resolves on conversion."
+          },
+          {
+            "id": "b",
+            "text": "Definite acute coronary syndrome",
+            "feedback": "In a 27-year-old with no chest pain and no risk factors, calling this ischaemia on the tachycardic tracing alone would be wrong."
+          },
+          {
+            "id": "c",
+            "text": "Normal, and not worth mentioning",
+            "feedback": "It should be described, and reassessed afterwards — but described accurately as rate-related."
+          },
+          {
+            "id": "d",
+            "text": "A digoxin effect",
+            "feedback": "She takes no digoxin, and the scooped 'reverse tick' morphology is not present."
+          }
+        ],
+        "explanation": "Always repeat the ECG in sinus rhythm after a tachyarrhythmia. Changes that persist matter; changes that vanish usually did not.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Taking the recurrent, abruptly starting episodes together with this tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Paroxysmal supraventricular tachycardia due to atrioventricular nodal re-entry",
+            "correct": true,
+            "feedback": "Correct. Recurrent, self-limiting, abruptly starting and stopping episodes in a young patient with a structurally normal heart is the classic history."
+          },
+          {
+            "id": "b",
+            "text": "Inappropriate sinus tachycardia",
+            "feedback": "That is a persistent tachycardia disproportionate to activity, not discrete episodes with instantaneous onset and offset."
+          },
+          {
+            "id": "c",
+            "text": "Panic disorder",
+            "feedback": "Anxiety commonly accompanies these episodes and is often blamed for them — but the ECG shows a genuine re-entrant arrhythmia at 186 bpm."
+          },
+          {
+            "id": "d",
+            "text": "Thyrotoxicosis",
+            "feedback": "Thyrotoxicosis produces sinus tachycardia or atrial fibrillation, not a regular re-entrant tachycardia with abrupt onset."
+          }
+        ],
+        "explanation": "The history of abrupt onset and offset is diagnostically powerful. Ask about it in every patient with palpitations.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "The patient is alert with a systolic pressure of 106 mmHg. What is the appropriate first step in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A vagal manoeuvre, such as the modified Valsalva",
+            "correct": true,
+            "feedback": "Correct. In a haemodynamically stable patient, vagal manoeuvres are first line, and the modified Valsalva with leg elevation is more effective than the standard technique."
+          },
+          {
+            "id": "b",
+            "text": "Immediate unsynchronised defibrillation",
+            "feedback": "Unsynchronised shocks are for ventricular fibrillation and pulseless ventricular tachycardia. This patient has a pulse and is stable."
+          },
+          {
+            "id": "c",
+            "text": "Intravenous amiodarone as the first agent",
+            "feedback": "Amiodarone is not first line for a stable regular narrow-complex tachycardia; vagal manoeuvres and then adenosine come first."
+          },
+          {
+            "id": "d",
+            "text": "Observe for six hours without intervention",
+            "feedback": "The rhythm can be terminated safely and simply, and prolonged tachycardia at 186 bpm is not benign."
+          }
+        ],
+        "explanation": "Educational scenario only. Follow current resuscitation council and society guidance, and escalate immediately if the patient becomes unstable.",
+        "highlight": "rr"
+      }
+    ],
+    "explanation": "In atrioventricular nodal re-entrant tachycardia the atrioventricular node contains two functionally distinct pathways with different conduction speeds and refractory periods. A well-timed atrial ectopic finds one pathway refractory, travels down the other, and returns up the first, establishing a self-sustaining circuit. Because both atria and ventricles are activated almost simultaneously, the retrograde P wave is buried in the QRS or distorts its terminal portion — the pseudo-R′ in V1. The circuit involves the node, which is why blocking the node with a vagal manoeuvre or adenosine terminates it, unlike atrial flutter where the circuit sits above the node.",
+    "learningObjectives": [
+      "Recognise a regular narrow-complex tachycardia and reason about where the P waves have gone",
+      "Explain why nodal blockade terminates nodal re-entry but only unmasks flutter",
+      "Interpret rate-related ST depression cautiously and repeat the ECG after conversion",
+      "State the stepwise approach for a stable regular narrow-complex tachycardia"
+    ],
+    "clinicalContext": "The surface ECG cannot definitively distinguish nodal re-entry from an accessory-pathway tachycardia or an atrial tachycardia. That distinction is made by the response to adenosine, by comparing with a sinus tracing, and definitively by electrophysiological study.",
+    "relatedDiseases": ["supraventricular-tachycardia"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials"],
+    "references": ["esc-svt-2019", "aha-ecg-part1"]
+  }
+]

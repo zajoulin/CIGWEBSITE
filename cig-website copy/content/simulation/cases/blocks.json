@@ -1,0 +1,937 @@
+[
+  {
+    "id": "case-first-degree-block",
+    "title": "A long PR interval on a routine tracing",
+    "levels": ["beginner", "intermediate", "advanced"],
+    "difficulty": "core",
+    "patient": {
+      "age": 69,
+      "sex": "male",
+      "descriptor": "69-year-old man",
+      "setting": "General practice, annual hypertension review"
+    },
+    "presentingComplaint": "No cardiac symptoms. An ECG was recorded as part of a routine review and the machine reported a prolonged PR interval.",
+    "history": [
+      "Hypertension for eight years, on ramipril and bendroflumethiazide",
+      "No dizziness, presyncope or syncope",
+      "No breathlessness or chest pain; walks two miles daily without difficulty",
+      "No history of rheumatic fever, Lyme disease or cardiac surgery"
+    ],
+    "symptoms": ["Asymptomatic"],
+    "examinationFindings": [
+      "Well, comfortable at rest",
+      "Regular pulse of normal volume",
+      "Jugular venous pressure normal",
+      "Soft first heart sound; second heart sound normal, no murmur",
+      "No signs of heart failure"
+    ],
+    "vitals": {
+      "heartRate": 68,
+      "spo2": 98,
+      "respiratoryRate": 14,
+      "bpSystolic": 138,
+      "bpDiastolic": 82,
+      "temperature": 36.6,
+      "alarm": "normal",
+      "bedside": "Entirely well. This is a finding on a tracing rather than a clinical problem, which is exactly why it needs to be interpreted carefully."
+    },
+    "ecgRhythmId": "first-degree-av-block",
+    "ecg": {
+      "rate": "68 bpm",
+      "rhythm": "Regular sinus rhythm; every P wave is followed by a QRS",
+      "pWaves": "Normal morphology, upright in II",
+      "prInterval": "0.28 s — prolonged, but constant from beat to beat",
+      "qrs": "0.09 s, narrow",
+      "axis": "Normal",
+      "stSegment": "Isoelectric",
+      "tWaves": "Upright and normal",
+      "keyFindings": [
+        "PR interval greater than 0.20 s — more than one large square",
+        "The interval is the same on every beat and no QRS is dropped",
+        "The QRS is narrow, so the delay is most likely within the atrioventricular node itself",
+        "A soft first heart sound, because the valve leaflets have drifted back together before systole"
+      ],
+      "keyLeads": ["II"],
+      "highlight": "pr"
+    },
+    "interpretation": "Sinus rhythm at 68 bpm with first-degree atrioventricular block (PR interval 0.28 s). No dropped beats and a narrow QRS.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "S1 is quieter than usual: the long PR interval lets the mitral leaflets float back towards closure before the ventricle contracts, so they have less distance to travel and close more softly."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "Normal S2, with no murmur to suggest valve disease as a cause of conduction tissue involvement."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus rhythm with first-degree atrioventricular block",
+            "correct": true,
+            "feedback": "Correct. Every P wave conducts, and the PR interval is constant at 0.28 s."
+          },
+          {
+            "id": "b",
+            "text": "Second-degree block, Mobitz type I",
+            "feedback": "Mobitz I shows a progressively lengthening PR interval until a beat is dropped. Nothing is dropped here and the interval does not change."
+          },
+          {
+            "id": "c",
+            "text": "Complete heart block",
+            "feedback": "In complete block the P waves and QRS complexes are entirely dissociated. Here they are locked together at a fixed interval."
+          },
+          {
+            "id": "d",
+            "text": "Junctional rhythm",
+            "feedback": "A junctional rhythm lacks a preceding upright P wave. These P waves are normal, upright and conducted."
+          }
+        ],
+        "explanation": "First-degree block is not really a block at all: every impulse gets through, just slowly. The word is a historical convention.",
+        "highlight": "pr",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-pr",
+        "kind": "systematic",
+        "step": "PR interval",
+        "prompt": "The PR interval spans seven small squares. What is that in seconds, and is it normal?",
+        "options": [
+          {
+            "id": "a",
+            "text": "0.28 s — prolonged",
+            "correct": true,
+            "feedback": "Correct. Each small square is 0.04 s at 25 mm/s, so seven small squares is 0.28 s, above the 0.20 s upper limit."
+          },
+          {
+            "id": "b",
+            "text": "0.14 s — normal",
+            "feedback": "That would be three and a half small squares."
+          },
+          {
+            "id": "c",
+            "text": "0.07 s — short",
+            "feedback": "Seven small squares is 0.28 s, not 0.07 s. Each small square is 0.04 s, not 0.01 s."
+          },
+          {
+            "id": "d",
+            "text": "0.35 s — prolonged",
+            "feedback": "Close, but 0.35 s would be almost nine small squares. Count carefully from the start of the P wave to the start of the QRS."
+          }
+        ],
+        "explanation": "One small square is 0.04 s and one large square is 0.20 s. A PR interval that exceeds one large square is prolonged.",
+        "highlight": "pr",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-conduction",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "The QRS is narrow at 0.09 s. What does that suggest about where the delay is?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Within the atrioventricular node, which is usually benign",
+            "correct": true,
+            "feedback": "Correct. A narrow QRS with first-degree block points to nodal delay. A broad QRS raises the possibility of infranodal disease, which behaves less predictably."
+          },
+          {
+            "id": "b",
+            "text": "In the sinoatrial node",
+            "feedback": "Sinoatrial disease affects the rate and regularity of P waves, not the PR interval."
+          },
+          {
+            "id": "c",
+            "text": "In both bundle branches",
+            "feedback": "Disease of both bundle branches widens the QRS and typically produces higher-grade block."
+          },
+          {
+            "id": "d",
+            "text": "In the atrial muscle only",
+            "feedback": "Intra-atrial delay broadens the P wave rather than lengthening the PR interval in isolation."
+          }
+        ],
+        "explanation": "The width of the QRS tells you the level of the conduction problem, which is what determines prognosis in atrioventricular block.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given that he is asymptomatic with a narrow QRS, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Isolated first-degree atrioventricular block, most likely age-related nodal conduction delay",
+            "correct": true,
+            "feedback": "Correct. It is common with increasing age, frequently asymptomatic, and in isolation carries a good prognosis."
+          },
+          {
+            "id": "b",
+            "text": "Imminent complete heart block requiring urgent pacing",
+            "feedback": "Isolated first-degree block with a narrow QRS progresses to high-grade block only rarely."
+          },
+          {
+            "id": "c",
+            "text": "Acute myocardial infarction",
+            "feedback": "There is no ST or T wave abnormality and no symptoms."
+          },
+          {
+            "id": "d",
+            "text": "Digoxin toxicity",
+            "feedback": "A reasonable cause of atrioventricular block in general, but he is not taking digoxin."
+          }
+        ],
+        "explanation": "Context decides. The same PR interval in a patient with syncope, a broad QRS or an acute inferior infarct would be a much more serious finding.",
+        "highlight": "pr"
+      }
+    ],
+    "explanation": "First-degree atrioventricular block means every atrial impulse reaches the ventricles, but conduction takes longer than 0.20 s. With a narrow QRS the delay is almost always in the atrioventricular node, where it is influenced by vagal tone, drugs and age. The examination correlate is worth knowing: a long PR interval gives the mitral leaflets time to drift back towards apposition before ventricular systole, so the first heart sound is soft. In isolation and without symptoms it needs no treatment — but it should prompt a look at rate-slowing medication, and a lower threshold for concern if the QRS is broad or the patient has syncope.",
+    "learningObjectives": [
+      "Measure the PR interval accurately in small squares",
+      "Distinguish first-degree block from higher grades by checking whether any beat is dropped",
+      "Use QRS width to infer whether conduction delay is nodal or infranodal",
+      "Link the long PR interval to the soft first heart sound at the bedside"
+    ],
+    "clinicalContext": "An ECG finding is not a diagnosis. First-degree block matters only in the light of symptoms, medication, QRS width and any accompanying conduction disease.",
+    "relatedDiseases": ["conduction-disorders"],
+    "relatedKeyPoints": ["ecg-essentials", "arrhythmia-principles", "heart-sounds"],
+    "references": ["esc-pacing-2021", "aha-ecg-part1"]
+  },
+  {
+    "id": "case-mobitz-i-inferior",
+    "title": "Lengthening PR, then a dropped beat",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "intermediate",
+    "patient": {
+      "age": 63,
+      "sex": "male",
+      "descriptor": "63-year-old man",
+      "setting": "Coronary care unit, day two after an inferior myocardial infarction"
+    },
+    "presentingComplaint": "Under observation after reperfusion for an inferior infarct. The monitor has shown intermittent pauses overnight.",
+    "history": [
+      "Inferior ST-elevation myocardial infarction treated with primary percutaneous coronary intervention 36 hours ago",
+      "Right coronary artery was the culprit vessel",
+      "No chest pain since the procedure",
+      "On aspirin, ticagrelor, atorvastatin and a low-dose beta blocker"
+    ],
+    "symptoms": [
+      "Occasional brief 'missed beat' sensation",
+      "No dizziness, no syncope",
+      "Comfortable and mobilising on the unit"
+    ],
+    "examinationFindings": [
+      "Comfortable, well perfused",
+      "Pulse regularly irregular, with an intermittently dropped beat",
+      "Jugular venous pressure normal",
+      "Heart sounds normal; no murmur",
+      "Chest clear"
+    ],
+    "vitals": {
+      "heartRate": 62,
+      "spo2": 97,
+      "respiratoryRate": 15,
+      "bpSystolic": 118,
+      "bpDiastolic": 70,
+      "temperature": 36.7,
+      "alarm": "advisory",
+      "alarmText": "INTERMITTENT AV BLOCK",
+      "bedside": "Stable and asymptomatic. Second-degree block after an inferior infarct is common and is usually at nodal level, where it tends to recover."
+    },
+    "ecgRhythmId": "mobitz-i",
+    "ecg": {
+      "rate": "Atrial rate 62 per minute; ventricular rate slightly lower because of the dropped beats",
+      "rhythm": "Regularly irregular — the pattern repeats in groups",
+      "pWaves": "Normal and regular, marching through at a constant P–P interval",
+      "prInterval": "Progressively lengthens across each group until one P wave fails to conduct, then resets",
+      "qrs": "0.09 s, narrow",
+      "axis": "Normal",
+      "stSegment": "Residual minor inferior ST change from the recent infarct; no new elevation",
+      "tWaves": "Inverted inferiorly, consistent with an evolving inferior infarct",
+      "keyFindings": [
+        "Progressive PR lengthening before a dropped QRS — the Wenckebach phenomenon",
+        "The R–R interval shortens through the group, because each PR increment gets smaller",
+        "The pause containing the dropped beat is less than two P–P intervals",
+        "P waves march through the pause undisturbed and the QRS is narrow"
+      ],
+      "keyLeads": ["II"],
+      "highlight": "pr"
+    },
+    "interpretation": "Second-degree atrioventricular block, Mobitz type I (Wenckebach), with a narrow QRS, in the context of a recent inferior myocardial infarction.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "S1 becomes progressively softer through each group as the PR interval lengthens, and then a beat is missing altogether. Listening while watching the monitor makes the pattern obvious."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No added sounds; no evidence of right ventricular involvement on auscultation."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Second-degree atrioventricular block, Mobitz type I (Wenckebach)",
+            "correct": true,
+            "feedback": "Correct. The PR interval lengthens progressively until a P wave is not conducted, and then the cycle restarts."
+          },
+          {
+            "id": "b",
+            "text": "Second-degree atrioventricular block, Mobitz type II",
+            "feedback": "In Mobitz II the PR interval is constant on the conducted beats and a QRS drops without warning. Here the PR interval clearly lengthens first."
+          },
+          {
+            "id": "c",
+            "text": "Sinus arrhythmia",
+            "feedback": "Sinus arrhythmia varies the P–P interval with respiration; every P wave still conducts and the PR interval is fixed."
+          },
+          {
+            "id": "d",
+            "text": "Atrial ectopic beats that are not conducted",
+            "feedback": "Non-conducted atrial ectopics interrupt the P–P rhythm with an early, differently shaped P wave. Here the P waves are regular and identical."
+          }
+        ],
+        "explanation": "Look at the PR interval of the beat before the pause and the beat after it. If the interval after is shorter, this is Wenckebach.",
+        "highlight": "pr",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-pattern",
+        "kind": "systematic",
+        "step": "Rhythm and grouping",
+        "prompt": "What happens to the R–R interval as each Wenckebach group progresses?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It shortens, because each successive increase in the PR interval is smaller than the last",
+            "correct": true,
+            "feedback": "Correct — a beautifully counter-intuitive point. The PR interval keeps lengthening, but by progressively smaller amounts, so the R–R interval actually gets shorter."
+          },
+          {
+            "id": "b",
+            "text": "It lengthens steadily, matching the PR interval",
+            "feedback": "This is the intuitive answer and the wrong one. The increments in PR interval decrease, so the R–R interval shortens."
+          },
+          {
+            "id": "c",
+            "text": "It stays exactly constant",
+            "feedback": "A constant R–R interval with dropped beats would suggest a fixed conduction ratio, not Wenckebach."
+          },
+          {
+            "id": "d",
+            "text": "It varies randomly",
+            "feedback": "Wenckebach is highly patterned — it is the grouping that gives it away at a glance."
+          }
+        ],
+        "explanation": "Group beating — clusters of QRS complexes separated by pauses — should always prompt a careful look at the PR intervals.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-level",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "The QRS is narrow. What does that indicate about the site of block, and why does it matter?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Block within the atrioventricular node, which usually responds to atropine and often recovers",
+            "correct": true,
+            "feedback": "Correct. Nodal block has a reliable junctional escape and is far less likely to progress abruptly to asystole than infranodal block."
+          },
+          {
+            "id": "b",
+            "text": "Block below the His bundle, which requires urgent pacing",
+            "feedback": "Infranodal block usually produces a broad QRS and behaves much less predictably. This QRS is narrow."
+          },
+          {
+            "id": "c",
+            "text": "Block in the sinoatrial node",
+            "feedback": "Sinoatrial block affects P waves, which are regular and unaffected here."
+          },
+          {
+            "id": "d",
+            "text": "QRS width has no bearing on the site of block",
+            "feedback": "It is one of the most useful clues available on the surface ECG."
+          }
+        ],
+        "explanation": "Site of block determines behaviour: nodal block is usually vagally influenced and reversible, infranodal block is structural and unstable.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Why is Wenckebach particularly common after this patient's infarct?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The right coronary artery supplies the atrioventricular node in most people",
+            "correct": true,
+            "feedback": "Correct. The atrioventricular nodal artery arises from the right coronary artery in roughly 90% of hearts, so inferior infarction commonly produces nodal block. Increased vagal tone contributes as well."
+          },
+          {
+            "id": "b",
+            "text": "The left anterior descending artery supplies the atrioventricular node",
+            "feedback": "The left anterior descending supplies the bundle branches. Block complicating anterior infarction is infranodal and far more ominous."
+          },
+          {
+            "id": "c",
+            "text": "Beta blockers always cause Wenckebach",
+            "feedback": "Beta blockade contributes to nodal conduction delay but is not the primary explanation here."
+          },
+          {
+            "id": "d",
+            "text": "It is coincidental and unrelated to the infarct",
+            "feedback": "The anatomical relationship is direct and well described."
+          }
+        ],
+        "explanation": "Knowing which artery supplies which part of the conduction system explains why the same degree of block means very different things after inferior and anterior infarction.",
+        "highlight": "pr"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "He is asymptomatic and haemodynamically stable. What is the most appropriate approach in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Continue monitoring, review rate-slowing medication, and treat only if symptomatic or haemodynamically compromised",
+            "correct": true,
+            "feedback": "Correct. Asymptomatic nodal Wenckebach after inferior infarction usually resolves as the infarct settles."
+          },
+          {
+            "id": "b",
+            "text": "Insert a permanent pacemaker today",
+            "feedback": "Permanent pacing is not indicated for asymptomatic nodal block expected to recover; a decision would be deferred until the acute phase has passed."
+          },
+          {
+            "id": "c",
+            "text": "Give intravenous atropine now",
+            "feedback": "Atropine is used for symptomatic bradycardia or haemodynamic compromise, neither of which is present."
+          },
+          {
+            "id": "d",
+            "text": "Stop all monitoring, since the rhythm is benign",
+            "feedback": "It is usually benign, but he is 36 hours into an infarct and progression must be detected if it happens."
+          }
+        ],
+        "explanation": "Educational scenario only. Post-infarct conduction disturbance is managed by the treating cardiology team following current guidelines.",
+        "highlight": "pr"
+      }
+    ],
+    "explanation": "Wenckebach conduction reflects progressive fatigue of the atrioventricular node: each successive impulse arrives while the node is still partly refractory, so it conducts more slowly than the last, until one impulse arrives too early to conduct at all. The pause allows the node to recover, and the cycle restarts with a short PR interval. Two details are worth committing to memory. First, the PR increments get smaller through the group, so the R–R interval shortens rather than lengthens. Second, the pause is shorter than two P–P intervals — which distinguishes it from a sinus pause, where the atrium itself has not fired.",
+    "learningObjectives": [
+      "Identify Wenckebach by progressive PR lengthening ending in a dropped QRS",
+      "Explain why the R–R interval shortens within a Wenckebach group",
+      "Use QRS width to infer the site of block and therefore the prognosis",
+      "Relate the coronary supply of the conduction system to the type of block after infarction"
+    ],
+    "clinicalContext": "The ECG shows the pattern and the level of block. It cannot tell you whether the patient is symptomatic, which is what decides treatment.",
+    "relatedDiseases": ["conduction-disorders", "myocardial-infarction"],
+    "relatedKeyPoints": ["arrhythmia-principles", "coronary-circulation"],
+    "references": ["esc-pacing-2021", "esc-acs-2023"]
+  },
+  {
+    "id": "case-mobitz-ii-syncope",
+    "title": "Dropped beats without warning",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "advanced",
+    "patient": {
+      "age": 78,
+      "sex": "female",
+      "descriptor": "78-year-old woman",
+      "setting": "Emergency department, resuscitation area"
+    },
+    "presentingComplaint": "Two episodes of collapse without warning in the past week, the second witnessed by her daughter, with rapid full recovery.",
+    "history": [
+      "Both episodes occurred while standing still, with no prodrome and no post-ictal confusion",
+      "Increasing fatigue and breathlessness on exertion over two months",
+      "Hypertension and type 2 diabetes; no known coronary disease",
+      "Not on any rate-slowing medication"
+    ],
+    "symptoms": [
+      "Sudden collapse without warning, twice",
+      "Fatigue and exertional breathlessness",
+      "No chest pain and no palpitations before the episodes"
+    ],
+    "examinationFindings": [
+      "Alert, pale, well perfused between pauses",
+      "Pulse irregular with sudden long pauses and no preceding change in rhythm",
+      "Jugular venous pressure normal, with occasional cannon a waves",
+      "Heart sounds normal; no murmur",
+      "No focal neurology"
+    ],
+    "vitals": {
+      "heartRate": 56,
+      "spo2": 96,
+      "respiratoryRate": 16,
+      "bpSystolic": 108,
+      "bpDiastolic": 64,
+      "temperature": 36.4,
+      "alarm": "warning",
+      "alarmText": "HIGH-GRADE AV BLOCK",
+      "bedside": "Frail but alert. Sudden collapse with no prodrome, and dropped beats with no warning on the monitor — this combination is the reason she is in the resuscitation area."
+    },
+    "ecgRhythmId": "mobitz-ii",
+    "ecg": {
+      "rate": "Atrial rate about 74 per minute; ventricular rate 56 bpm because of intermittently dropped beats",
+      "rhythm": "Regular P waves with intermittent, unheralded failure of conduction",
+      "pWaves": "Regular and normal in morphology; some are not followed by a QRS",
+      "prInterval": "0.19 s and absolutely constant on every conducted beat — it does not lengthen before a drop",
+      "qrs": "0.14 s, broad, with the morphology of bundle branch block",
+      "axis": "Left axis deviation",
+      "stSegment": "Minor discordant depression, secondary to the abnormal ventricular activation",
+      "tWaves": "Discordant inversion, secondary to the broad QRS",
+      "keyFindings": [
+        "A constant PR interval on conducted beats, with sudden failure of conduction",
+        "The pause is an exact multiple of the P–P interval",
+        "A broad QRS, indicating that the block is below the atrioventricular node",
+        "Syncope without prodrome — the clinical marker of an unreliable escape mechanism"
+      ],
+      "keyLeads": ["II", "V1"],
+      "highlight": "pr"
+    },
+    "interpretation": "Second-degree atrioventricular block, Mobitz type II, with a broad QRS — findings consistent with infranodal conduction disease. This carries a substantial risk of progression to complete heart block.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Normal S1 and S2 on conducted beats, with sudden complete silence where a beat is dropped. The intensity of S1 does not change beforehand, unlike Wenckebach."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No added sound. Occasional cannon a waves in the neck mark atrial contraction against a closed tricuspid valve."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Second-degree atrioventricular block, Mobitz type II",
+            "correct": true,
+            "feedback": "Correct. The PR interval is constant on conducted beats and a QRS drops without any preceding change."
+          },
+          {
+            "id": "b",
+            "text": "Mobitz type I (Wenckebach)",
+            "feedback": "Wenckebach shows progressive PR lengthening before the drop. Here the PR interval is fixed at 0.19 s on every conducted beat."
+          },
+          {
+            "id": "c",
+            "text": "Complete heart block",
+            "feedback": "In complete block no P wave conducts and there is no fixed PR relationship. Here most P waves do conduct, at a constant interval."
+          },
+          {
+            "id": "d",
+            "text": "Sinus pause",
+            "feedback": "In a sinus pause the P wave itself is missing. Here the P wave arrives on time but is not followed by a QRS."
+          }
+        ],
+        "explanation": "Mobitz II is defined by what does *not* change: the PR interval. That, plus the abrupt loss of a QRS, is the whole diagnosis.",
+        "highlight": "pr",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-pause",
+        "kind": "systematic",
+        "step": "Rhythm",
+        "prompt": "What is the relationship between the pause and the P–P interval?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The pause is an exact multiple of the P–P interval, because the atria continue undisturbed",
+            "correct": true,
+            "feedback": "Correct. The sinus node is unaffected, so the P waves march straight through the pause. Mapping them out with calipers is the classic technique."
+          },
+          {
+            "id": "b",
+            "text": "The pause is shorter than two P–P intervals",
+            "feedback": "That describes Wenckebach, where the PR interval resets after the pause."
+          },
+          {
+            "id": "c",
+            "text": "The pause is unrelated to the P–P interval",
+            "feedback": "The atrial rhythm is undisturbed, so the relationship is exact and is a useful diagnostic check."
+          },
+          {
+            "id": "d",
+            "text": "There is no P wave during the pause",
+            "feedback": "There is — that is precisely the point. A P wave arrives on time and simply fails to conduct."
+          }
+        ],
+        "explanation": "March the P waves out across the pause. If they arrive on time, the sinus node is fine and the problem is conduction.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-qrs",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "The QRS is 0.14 s. Why does that make this tracing more concerning?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It indicates disease below the atrioventricular node, where escape rhythms are slow and unreliable",
+            "correct": true,
+            "feedback": "Correct. Infranodal escape rhythms are ventricular, slow and prone to failure — which is why Mobitz II with a broad QRS causes syncope without warning."
+          },
+          {
+            "id": "b",
+            "text": "It shows the atrioventricular node is failing but the bundles are healthy",
+            "feedback": "A broad QRS means the opposite: the ventricular conduction system itself is diseased."
+          },
+          {
+            "id": "c",
+            "text": "It suggests hyperkalaemia rather than block",
+            "feedback": "Hyperkalaemia does broaden the QRS, but with peaked T waves and flattened P waves — a different picture."
+          },
+          {
+            "id": "d",
+            "text": "It has no prognostic significance",
+            "feedback": "QRS width is one of the most important prognostic features in atrioventricular block."
+          }
+        ],
+        "explanation": "The lower the block, the slower and less reliable the escape rhythm below it — and the greater the risk of asystole.",
+        "highlight": "qrs",
+        "leads": ["V1"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Combining the two episodes of collapse without prodrome with this tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Syncope caused by infranodal atrioventricular block, with a high risk of progression to complete block",
+            "correct": true,
+            "feedback": "Correct. Abrupt syncope with no warning is characteristic of a sudden loss of cardiac output — a Stokes–Adams attack."
+          },
+          {
+            "id": "b",
+            "text": "Vasovagal syncope",
+            "feedback": "Vasovagal syncope has a prodrome — nausea, warmth, visual greying — and a clear trigger. Both were absent."
+          },
+          {
+            "id": "c",
+            "text": "Orthostatic hypotension",
+            "feedback": "Orthostatic syncope occurs on standing up, not while standing still, and would be reproducible on postural blood pressure measurement."
+          },
+          {
+            "id": "d",
+            "text": "Epileptic seizure",
+            "feedback": "The absence of any post-ictal phase and the rapid full recovery argue strongly against this — although prolonged asystole can itself cause convulsive movements."
+          }
+        ],
+        "explanation": "Syncope with no prodrome, no trigger and instant recovery is cardiac until proved otherwise.",
+        "highlight": "pr"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the most appropriate management priority in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Continuous monitoring in a resuscitation area with immediate referral for pacing assessment",
+            "correct": true,
+            "feedback": "Correct. Mobitz II with a broad QRS and syncope is a class I indication for permanent pacing, with temporary pacing available in the interim."
+          },
+          {
+            "id": "b",
+            "text": "Discharge with an ambulatory monitor and outpatient follow-up",
+            "feedback": "The risk of progression to complete heart block or asystole makes discharge unsafe."
+          },
+          {
+            "id": "c",
+            "text": "Start a beta blocker to stabilise the rhythm",
+            "feedback": "Beta blockade would slow conduction further and could precipitate complete block."
+          },
+          {
+            "id": "d",
+            "text": "Rely on atropine to maintain the rate",
+            "feedback": "Atropine acts on the atrioventricular node. In infranodal block it may increase the atrial rate without improving conduction, and can worsen the block."
+          }
+        ],
+        "explanation": "Educational scenario only. Pacing decisions follow current society guidance and are made by the cardiology team.",
+        "highlight": "pr"
+      }
+    ],
+    "explanation": "Mobitz type II block is a failure of conduction below the atrioventricular node, in the His bundle or in both bundle branches. Conduction is all-or-nothing rather than progressively fatiguing, so the PR interval on conducted beats never varies and a QRS simply disappears without warning. Because the diseased tissue is distal, any escape rhythm arises low in the ventricle: it is slow, unreliable and may fail entirely, which is why these patients faint with no prodrome. The broad QRS confirms the level of disease. Unlike Wenckebach, Mobitz II does not improve with atropine and does not resolve on its own — it is an indication for pacing.",
+    "learningObjectives": [
+      "Distinguish Mobitz II from Wenckebach by the constancy of the PR interval",
+      "March out P waves across a pause to confirm the atrial rhythm is undisturbed",
+      "Explain why a broad QRS worsens the prognosis of atrioventricular block",
+      "Recognise syncope without prodrome as a marker of abrupt loss of cardiac output"
+    ],
+    "clinicalContext": "The ECG establishes the type and the level of block. Whether pacing is required depends on symptoms, reversible causes and current guideline criteria, assessed by the cardiology team.",
+    "relatedDiseases": ["conduction-disorders"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials"],
+    "references": ["esc-pacing-2021", "aha-ecg-part1"]
+  },
+  {
+    "id": "case-complete-heart-block",
+    "title": "Slow, wide, and completely dissociated",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "intermediate",
+    "patient": {
+      "age": 82,
+      "sex": "male",
+      "descriptor": "82-year-old man",
+      "setting": "Emergency department, resuscitation area"
+    },
+    "presentingComplaint": "Found on the floor at home by a neighbour, confused and very slow-pulsed, after several weeks of increasing tiredness.",
+    "history": [
+      "Progressive fatigue and exertional breathlessness over six weeks",
+      "Two falls in the past month, described as 'legs giving way' with no memory of falling",
+      "Hypertension; no known coronary disease",
+      "Not on digoxin or any rate-slowing drug"
+    ],
+    "symptoms": [
+      "Profound fatigue",
+      "Falls without warning",
+      "Breathless on minimal exertion",
+      "Confusion on arrival"
+    ],
+    "examinationFindings": [
+      "Drowsy but rousable, cool peripheries, capillary refill 4 seconds",
+      "Very slow regular pulse of large volume",
+      "Jugular venous pressure raised with intermittent cannon a waves",
+      "Variable intensity of the first heart sound",
+      "Bibasal crackles; mild peripheral oedema"
+    ],
+    "vitals": {
+      "heartRate": 38,
+      "spo2": 93,
+      "respiratoryRate": 22,
+      "bpSystolic": 88,
+      "bpDiastolic": 52,
+      "temperature": 36.1,
+      "alarm": "critical",
+      "alarmText": "COMPLETE HEART BLOCK · RATE 38",
+      "bedside": "Drowsy, cold and hypotensive with a ventricular rate in the thirties. This is a bradycardia causing harm, and it needs treating now."
+    },
+    "ecgRhythmId": "complete-heart-block",
+    "ecg": {
+      "rate": "Atrial rate about 88 per minute; ventricular rate 38 bpm — two independent rates",
+      "rhythm": "Regular P waves and regular QRS complexes, with no relationship between them",
+      "pWaves": "Normal and regular, appearing at varying distances from the QRS and sometimes buried within it",
+      "prInterval": "There is no PR interval — the P waves and QRS complexes are dissociated",
+      "qrs": "0.15 s, broad, with the morphology of a ventricular escape rhythm",
+      "axis": "Left axis deviation",
+      "stSegment": "Discordant depression, secondary to abnormal ventricular activation",
+      "tWaves": "Discordant inversion",
+      "keyFindings": [
+        "Two independent rhythms: the atria at 88 and the ventricles at 38",
+        "The PR interval varies randomly because there is no conduction at all",
+        "A broad escape QRS, indicating a low ventricular escape focus",
+        "Cannon a waves in the neck, produced when the atria contract against closed valves"
+      ],
+      "keyLeads": ["II", "V1"],
+      "highlight": "p"
+    },
+    "interpretation": "Third-degree (complete) atrioventricular block with a broad-complex ventricular escape rhythm at 38 bpm, with clinical evidence of inadequate cardiac output.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "The intensity of S1 varies from beat to beat because the atria and ventricles contract at random relation to one another, so the mitral leaflets are in a different position at the onset of each systole."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "Intermittently loud sounds, and cannon a waves in the neck, occur when atrial systole happens to coincide with a closed tricuspid valve."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "The large stroke volume of a long diastole can produce a soft flow murmur; none is prominent here."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Complete (third-degree) heart block with a ventricular escape rhythm",
+            "correct": true,
+            "feedback": "Correct. Regular P waves and regular QRS complexes at different rates, with no consistent relationship between them."
+          },
+          {
+            "id": "b",
+            "text": "Sinus bradycardia",
+            "feedback": "In sinus bradycardia every P wave conducts at a fixed PR interval and the QRS is narrow. Here the atrial rate is 88 and the ventricular rate is 38."
+          },
+          {
+            "id": "c",
+            "text": "Mobitz type II block",
+            "feedback": "In Mobitz II some beats still conduct with a constant PR interval. Here none conduct."
+          },
+          {
+            "id": "d",
+            "text": "Atrial fibrillation with slow ventricular response",
+            "feedback": "That would have no P waves and an irregular ventricular response. Both P waves and a regular escape rhythm are present."
+          }
+        ],
+        "explanation": "The diagnostic step is to measure the P–P intervals and the R–R intervals separately. If each is regular but they bear no relation to one another, the block is complete.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-dissociation",
+        "kind": "systematic",
+        "step": "P waves and PR interval",
+        "prompt": "What is the most reliable way to demonstrate atrioventricular dissociation on this tracing?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Show that the P–P and R–R intervals are each regular but unrelated, with a varying PR interval",
+            "correct": true,
+            "feedback": "Correct. Set calipers to the P–P interval and march the P waves through the whole strip: they arrive on time regardless of where the QRS complexes fall."
+          },
+          {
+            "id": "b",
+            "text": "Show that no P waves are visible",
+            "feedback": "P waves are present and regular; they are just not conducting. Some are hidden inside QRS complexes and T waves."
+          },
+          {
+            "id": "c",
+            "text": "Show that the QRS complexes are irregular",
+            "feedback": "A ventricular escape rhythm is characteristically regular, which is part of the picture."
+          },
+          {
+            "id": "d",
+            "text": "Measure the QT interval",
+            "feedback": "The QT interval says nothing about atrioventricular relationships."
+          }
+        ],
+        "explanation": "Calipers and a long rhythm strip resolve almost every difficult bradycardia.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-escape",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "The escape QRS is broad at 0.15 s and the rate is 38. What does that tell you about the escape focus?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It arises low in the ventricular conducting tissue, so it is slow and unreliable",
+            "correct": true,
+            "feedback": "Correct. Junctional escape rhythms are narrow and run at 40–60 bpm; ventricular escape rhythms are broad, run at 20–40 bpm and may fail without warning."
+          },
+          {
+            "id": "b",
+            "text": "It arises in the atrioventricular junction",
+            "feedback": "A junctional escape would give a narrow QRS at a faster rate."
+          },
+          {
+            "id": "c",
+            "text": "It arises in the sinoatrial node",
+            "feedback": "The sinoatrial node is producing the P waves at 88 per minute; it is not the escape focus."
+          },
+          {
+            "id": "d",
+            "text": "The QRS width does not indicate the origin of the escape rhythm",
+            "feedback": "It is the primary clue to where the escape focus sits."
+          }
+        ],
+        "explanation": "The lower the escape focus, the broader the QRS, the slower the rate and the less dependable the rhythm.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Taking the confusion, the hypotension and the tracing together, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Complete heart block causing inadequate cardiac output — an unstable bradycardia",
+            "correct": true,
+            "feedback": "Correct. Confusion, hypotension and cool peripheries are the adverse features that define an unstable bradycardia."
+          },
+          {
+            "id": "b",
+            "text": "Asymptomatic conduction disease found incidentally",
+            "feedback": "He is drowsy, hypotensive and poorly perfused. This is anything but incidental."
+          },
+          {
+            "id": "c",
+            "text": "Sepsis with a compensatory bradycardia",
+            "feedback": "Sepsis produces tachycardia, not bradycardia, and there is no infective history."
+          },
+          {
+            "id": "d",
+            "text": "Stroke causing the falls and confusion",
+            "feedback": "There is no focal neurology, and cerebral hypoperfusion from a rate of 38 explains the confusion completely."
+          }
+        ],
+        "explanation": "Bradycardia is judged by its consequences. Adverse features — shock, syncope, myocardial ischaemia, heart failure — turn a rhythm finding into an emergency.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the most appropriate immediate priority in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Treat as an unstable bradycardia: atropine, then transcutaneous pacing if no response, with urgent referral for temporary and then permanent pacing",
+            "correct": true,
+            "feedback": "Correct. Adverse features are present, so the sequence follows the peri-arrest bradycardia algorithm while definitive pacing is arranged."
+          },
+          {
+            "id": "b",
+            "text": "Observe on telemetry and review in the morning",
+            "feedback": "A hypotensive, confused patient with complete heart block at 38 bpm cannot wait."
+          },
+          {
+            "id": "c",
+            "text": "Give a fluid bolus alone and reassess",
+            "feedback": "The problem is rate, not volume. Fluid will not correct a ventricular rate of 38."
+          },
+          {
+            "id": "d",
+            "text": "Start oral bisoprolol",
+            "feedback": "A beta blocker would slow the escape rhythm further and could precipitate asystole."
+          }
+        ],
+        "explanation": "Educational scenario only. Peri-arrest bradycardia is managed with a defibrillator to hand, following current resuscitation council guidance.",
+        "highlight": "rr"
+      }
+    ],
+    "explanation": "In complete heart block no atrial impulse reaches the ventricles. The sinus node continues at its own rate — here 88 per minute — and a subsidiary pacemaker below the block takes over. Because the block in this case is infranodal, the escape focus is ventricular: broad, slow at 38 bpm, and inherently unstable. The two rhythms are entirely independent, which is why the PR interval varies randomly and why some P waves are lost inside QRS complexes and T waves. The bedside signs follow directly: variable intensity of the first heart sound and intermittent cannon a waves both come from atria contracting at random against closed atrioventricular valves.",
+    "learningObjectives": [
+      "Recognise atrioventricular dissociation by measuring P–P and R–R intervals separately",
+      "Infer the level of the escape focus from QRS width and rate",
+      "Connect the ECG to the physical signs — variable S1 and cannon a waves",
+      "Identify the adverse features that make a bradycardia an emergency"
+    ],
+    "clinicalContext": "The ECG establishes the block. Reversible contributors — drugs, hyperkalaemia, ischaemia, hypothyroidism, Lyme disease — must be sought before concluding that permanent pacing is the answer.",
+    "relatedDiseases": ["conduction-disorders", "heart-failure"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials", "heart-sounds"],
+    "references": ["esc-pacing-2021", "aha-ecg-part1", "bates"]
+  }
+]

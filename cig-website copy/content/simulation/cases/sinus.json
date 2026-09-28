@@ -1,0 +1,771 @@
+[
+  {
+    "id": "case-normal-preop",
+    "title": "Routine pre-operative ECG",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "core",
+    "patient": {
+      "age": 34,
+      "sex": "female",
+      "descriptor": "34-year-old woman",
+      "setting": "Pre-operative assessment clinic"
+    },
+    "presentingComplaint": "Attending for a pre-operative ECG before elective cholecystectomy. She has no cardiac symptoms.",
+    "history": [
+      "Symptomatic gallstones for eight months, listed for laparoscopic cholecystectomy",
+      "No chest pain, palpitations, syncope or breathlessness at any time",
+      "No cardiac history, no regular medication other than the combined oral contraceptive",
+      "Non-smoker; no family history of sudden cardiac death"
+    ],
+    "symptoms": ["Asymptomatic", "Exercise tolerance unlimited"],
+    "examinationFindings": [
+      "Comfortable at rest, well perfused",
+      "Pulse regular and of normal volume",
+      "Jugular venous pressure not raised",
+      "Apex beat undisplaced; heart sounds normal with no murmur",
+      "Chest clear, no peripheral oedema"
+    ],
+    "vitals": {
+      "heartRate": 72,
+      "spo2": 99,
+      "respiratoryRate": 14,
+      "bpSystolic": 118,
+      "bpDiastolic": 74,
+      "temperature": 36.6,
+      "alarm": "normal",
+      "bedside": "Sitting comfortably on the couch, entirely well. This is a screening tracing, not an investigation of a symptom."
+    },
+    "ecgRhythmId": "normal-sinus-rhythm",
+    "ecg": {
+      "rate": "72 bpm — count the large squares between two R waves and divide 300 by that number",
+      "rhythm": "Regular sinus rhythm; every QRS is preceded by a P wave and every P wave is followed by a QRS",
+      "pWaves": "Upright in II and biphasic in V1, normal duration and amplitude",
+      "prInterval": "0.16 s — within the normal 0.12–0.20 s and constant from beat to beat",
+      "qrs": "0.09 s, narrow, with small septal Q waves in the lateral leads and normal R wave progression across the precordium",
+      "axis": "Normal — the QRS is positive in both I and II",
+      "stSegment": "Isoelectric in every lead",
+      "tWaves": "Upright and asymmetrical in all leads except aVR and V1",
+      "keyFindings": [
+        "Every interval and every amplitude falls inside the normal range",
+        "The relationship between P waves and QRS complexes is one to one and constant",
+        "There is no ST deviation and no pathological Q wave"
+      ],
+      "keyLeads": ["II", "V2", "V5"],
+      "highlight": "pr"
+    },
+    "interpretation": "Normal 12-lead ECG. Normal sinus rhythm at 72 bpm with normal axis, intervals, R wave progression and repolarisation.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "S1 is loudest here, at the apex: it is mitral and tricuspid closure at the start of systole."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "S2 dominates in the second right intercostal space — aortic valve closure, crisp and unsplit in expiration."
+      },
+      {
+        "siteId": "pulmonic",
+        "soundId": "normal-s1-s2",
+        "note": "Listen through a breath: physiological splitting of S2 widens on inspiration as increased venous return delays pulmonary valve closure."
+      },
+      {
+        "siteId": "erb",
+        "soundId": "normal-s1-s2",
+        "note": "Erb's point is where both components of S2 are usually heard best together, and where a soft aortic regurgitant murmur would be found."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "Nothing added at the lower left sternal edge — no murmur, no gallop."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Normal sinus rhythm",
+            "correct": true,
+            "feedback": "Correct. A P wave precedes every QRS, the PR interval is constant, and the rate is between 60 and 100 bpm."
+          },
+          {
+            "id": "b",
+            "text": "Sinus arrhythmia",
+            "feedback": "Sinus arrhythmia describes beat-to-beat variation in cycle length with respiration. There is mild variation here, but the rhythm is regular enough to be reported simply as sinus rhythm."
+          },
+          {
+            "id": "c",
+            "text": "Atrial fibrillation",
+            "feedback": "Atrial fibrillation has no organised P waves and an irregularly irregular ventricular response. Both P waves and a constant PR interval are present here."
+          },
+          {
+            "id": "d",
+            "text": "Junctional rhythm",
+            "feedback": "A junctional rhythm has absent, inverted or retrograde P waves and usually a slower rate. Upright P waves in lead II with a normal PR interval exclude it."
+          }
+        ],
+        "explanation": "Sinus rhythm is defined by the relationship, not by the rate: an upright P wave in lead II before every QRS, with a constant PR interval.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-rate",
+        "kind": "systematic",
+        "step": "Rate",
+        "prompt": "The R–R interval spans just over four large squares. What is the ventricular rate?",
+        "options": [
+          {
+            "id": "a",
+            "text": "About 72 bpm",
+            "correct": true,
+            "feedback": "Correct. 300 divided by roughly 4.2 large squares gives approximately 72 bpm."
+          },
+          {
+            "id": "b",
+            "text": "About 50 bpm",
+            "feedback": "50 bpm would need six large squares between R waves."
+          },
+          {
+            "id": "c",
+            "text": "About 100 bpm",
+            "feedback": "100 bpm is three large squares between R waves."
+          },
+          {
+            "id": "d",
+            "text": "About 150 bpm",
+            "feedback": "150 bpm is two large squares between R waves — that would be a tachycardia."
+          }
+        ],
+        "explanation": "At 25 mm/s each large square is 0.20 s, so the rate in a regular rhythm is 300 divided by the number of large squares between successive R waves.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-pr",
+        "kind": "systematic",
+        "step": "PR interval",
+        "prompt": "The PR interval measures 0.16 s. How should that be reported?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Normal",
+            "correct": true,
+            "feedback": "Correct. The normal PR interval is 0.12–0.20 s, or three to five small squares."
+          },
+          {
+            "id": "b",
+            "text": "Short, suggesting pre-excitation",
+            "feedback": "A short PR interval is below 0.12 s, and in pre-excitation it is accompanied by a delta wave slurring the QRS upstroke."
+          },
+          {
+            "id": "c",
+            "text": "Prolonged, first-degree atrioventricular block",
+            "feedback": "First-degree block requires a PR interval above 0.20 s — more than one large square."
+          },
+          {
+            "id": "d",
+            "text": "It cannot be measured because P waves are absent",
+            "feedback": "P waves are clearly present in lead II here."
+          }
+        ],
+        "explanation": "Measure the PR interval from the start of the P wave to the start of the QRS, in the lead where the P wave is clearest — usually lead II.",
+        "highlight": "pr",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-st",
+        "kind": "systematic",
+        "step": "ST segment and T waves",
+        "prompt": "How would you describe repolarisation on this tracing?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Isoelectric ST segments with upright, asymmetrical T waves",
+            "correct": true,
+            "feedback": "Correct — and note that T wave inversion in aVR, and often in V1, is normal."
+          },
+          {
+            "id": "b",
+            "text": "Widespread concave ST elevation",
+            "feedback": "That is the pattern of acute pericarditis. There is no ST deviation here."
+          },
+          {
+            "id": "c",
+            "text": "Downsloping ST depression in the lateral leads",
+            "feedback": "That would suggest ischaemia or ventricular strain. The ST segments here sit on the baseline."
+          },
+          {
+            "id": "d",
+            "text": "Peaked T waves throughout",
+            "feedback": "Tall, narrow-based peaked T waves suggest hyperkalaemia. These T waves have a normal, asymmetrical shape."
+          }
+        ],
+        "explanation": "The ST segment should sit on the T–P baseline, and normal T waves rise slowly and fall more steeply.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Taking the presentation, the observations and the tracing together, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Normal ECG in an asymptomatic patient",
+            "correct": true,
+            "feedback": "Correct. Everything measurable is normal and there are no symptoms to explain."
+          },
+          {
+            "id": "b",
+            "text": "Early ischaemic change requiring troponin measurement",
+            "feedback": "There are no ST or T wave abnormalities and no symptoms suggestive of ischaemia."
+          },
+          {
+            "id": "c",
+            "text": "Left ventricular hypertrophy by voltage criteria",
+            "feedback": "The precordial voltages here are well within normal limits."
+          },
+          {
+            "id": "d",
+            "text": "First-degree atrioventricular block",
+            "feedback": "The PR interval is 0.16 s, which is normal."
+          }
+        ],
+        "explanation": "Being able to state confidently that a tracing is normal is as important as spotting an abnormality — it is what makes an abnormal ECG stand out later.",
+        "highlight": "baseline"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the most appropriate next step in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "File the tracing as a normal baseline and proceed with the planned pathway",
+            "correct": true,
+            "feedback": "Correct. A normal pre-operative ECG in an asymptomatic patient needs no further cardiac investigation, and it is a valuable comparison if a future tracing is abnormal."
+          },
+          {
+            "id": "b",
+            "text": "Request urgent echocardiography",
+            "feedback": "There is no symptom, sign or ECG finding to investigate."
+          },
+          {
+            "id": "c",
+            "text": "Start a beta blocker before surgery",
+            "feedback": "Initiating a beta blocker purely for surgery in a patient with no indication is not supported by current evidence."
+          },
+          {
+            "id": "d",
+            "text": "Repeat the ECG hourly",
+            "feedback": "Serial ECGs are for evolving symptoms, not for a normal screening tracing."
+          }
+        ],
+        "explanation": "Educational scenario only. Real decisions follow your local pre-operative assessment protocol and current guidelines.",
+        "highlight": "baseline"
+      }
+    ],
+    "explanation": "This is the reference tracing every other ECG is read against. The rate is 72 bpm, the rhythm is sinus, each P wave is upright in II and followed by a QRS at a constant PR interval of 0.16 s, the QRS is narrow at 0.09 s with normal R wave progression, the axis is normal, the ST segments are isoelectric and the T waves are upright and asymmetrical. Learn the shape of this and abnormality becomes obvious by contrast.",
+    "learningObjectives": [
+      "State the criteria for normal sinus rhythm rather than recognising it by impression",
+      "Calculate rate from the R–R interval on a 25 mm/s tracing",
+      "Work through a 12-lead ECG in a fixed order so that nothing is skipped",
+      "Recognise which findings — T inversion in aVR and V1, small septal Q waves — are normal"
+    ],
+    "clinicalContext": "A normal ECG does not exclude cardiac disease, and an abnormal ECG in an asymptomatic person often means nothing. The tracing is interpreted alongside the history, the examination and, where relevant, imaging and biochemistry.",
+    "relatedDiseases": [],
+    "relatedKeyPoints": ["ecg-essentials", "cardiac-cycle"],
+    "references": ["aha-ecg-part1", "braunwald"]
+  },
+  {
+    "id": "case-sinus-bradycardia-athlete",
+    "title": "Slow pulse in a trained athlete",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "core",
+    "patient": {
+      "age": 24,
+      "sex": "male",
+      "descriptor": "24-year-old man",
+      "setting": "University sports medicine clinic"
+    },
+    "presentingComplaint": "Referred after a resting pulse of 46 bpm was recorded at a routine screening. He is a competitive distance runner and feels completely well.",
+    "history": [
+      "Trains eleven hours a week; running 90 km a week for the past three years",
+      "No dizziness, no presyncope, no syncope and no exertional symptoms",
+      "No palpitations; no chest pain",
+      "No medication, no recreational drug use, no family history of sudden death"
+    ],
+    "symptoms": ["Asymptomatic", "Heart rate rises normally with exertion"],
+    "examinationFindings": [
+      "Lean, well; resting bradycardia with a regular pulse of good volume",
+      "Blood pressure normal with no postural drop",
+      "Apex beat undisplaced and non-sustained",
+      "Heart sounds normal; no murmur, no third or fourth heart sound",
+      "No signs of thyroid disease"
+    ],
+    "vitals": {
+      "heartRate": 46,
+      "spo2": 99,
+      "respiratoryRate": 12,
+      "bpSystolic": 112,
+      "bpDiastolic": 68,
+      "temperature": 36.5,
+      "alarm": "advisory",
+      "alarmText": "LOW HEART RATE",
+      "bedside": "Fit and entirely comfortable. The monitor's low-rate alarm is sounding because of the threshold it is set to, not because of anything the patient feels."
+    },
+    "ecgRhythmId": "sinus-bradycardia",
+    "ecg": {
+      "rate": "46 bpm — more than six large squares between R waves",
+      "rhythm": "Regular sinus rhythm, with slight phasic variation in cycle length with respiration",
+      "pWaves": "Normal morphology, upright in II, one before every QRS",
+      "prInterval": "0.18 s, constant",
+      "qrs": "0.09 s, narrow, normal progression",
+      "axis": "Normal",
+      "stSegment": "Isoelectric, with a slightly high take-off at the J point in V2–V4 — a common benign finding in young athletic men",
+      "tWaves": "Upright; tall in the mid-precordial leads",
+      "keyFindings": [
+        "Sinus rate below 60 bpm with an otherwise entirely normal tracing",
+        "One P wave before every QRS and a constant PR interval — this is slow sinus, not block",
+        "Long diastole, and therefore a long QT interval by absolute measurement, which corrects to normal"
+      ],
+      "keyLeads": ["II", "V4"],
+      "highlight": "rr"
+    },
+    "interpretation": "Sinus bradycardia at 46 bpm in a trained athlete, with an otherwise normal ECG. Findings are consistent with physiological athletic bradycardia; there is no conduction abnormality.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Normal S1 and S2, widely spaced because diastole is long. Nothing added."
+      },
+      {
+        "siteId": "pulmonic",
+        "soundId": "normal-s1-s2",
+        "note": "Physiological splitting of S2 is easier to hear at slow rates because the two components are not rushed together."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No ejection systolic murmur; a large stroke volume can produce a soft flow murmur in athletes, but there is none here."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus bradycardia",
+            "correct": true,
+            "feedback": "Correct. Normal P waves, a constant PR interval and one QRS per P wave — at a rate below 60 bpm."
+          },
+          {
+            "id": "b",
+            "text": "Complete heart block",
+            "feedback": "In complete heart block the P waves and QRS complexes are independent, with no constant PR interval. Here each P wave conducts."
+          },
+          {
+            "id": "c",
+            "text": "Junctional escape rhythm",
+            "feedback": "A junctional escape rhythm has no preceding upright P wave in lead II. These P waves are normal and conducted."
+          },
+          {
+            "id": "d",
+            "text": "Second-degree block, Mobitz II",
+            "feedback": "Mobitz II drops QRS complexes intermittently. No P wave is dropped here."
+          }
+        ],
+        "explanation": "The single most useful discriminator in a bradycardia is whether every P wave conducts. If it does, the sinus node is simply firing slowly.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-rate",
+        "kind": "systematic",
+        "step": "Rate",
+        "prompt": "How is the rate best measured on this tracing?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Count QRS complexes across a 6-second strip and multiply by 10",
+            "correct": true,
+            "feedback": "Correct. At slow rates the six-second method is more reliable than dividing 300 by large squares, and it works whether the rhythm is regular or not."
+          },
+          {
+            "id": "b",
+            "text": "Divide 1500 by the number of large squares between R waves",
+            "feedback": "1500 is divided by the number of *small* squares. Dividing by large squares uses 300."
+          },
+          {
+            "id": "c",
+            "text": "Take the number the monitor displays without checking",
+            "feedback": "Monitors miscount when complexes are small, when T waves are tall, or when there is artefact. Always verify by hand."
+          },
+          {
+            "id": "d",
+            "text": "Measure the P–P interval instead, because the ventricular rate is unreliable",
+            "feedback": "The P–P interval gives the atrial rate. Here every P wave conducts, so atrial and ventricular rates are the same — but the ventricular rate is what determines cardiac output."
+          }
+        ],
+        "explanation": "Two reliable methods: 300 divided by large squares for a regular rhythm, and complexes in six seconds times ten for anything slow or irregular.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-qt",
+        "kind": "systematic",
+        "step": "QT interval",
+        "prompt": "The absolute QT interval measures 0.44 s. What does that tell you at this rate?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It must be corrected for rate before it can be interpreted",
+            "correct": true,
+            "feedback": "Correct. The QT interval lengthens as the heart slows, so at 46 bpm an absolute QT of 0.44 s corrects to a normal QTc."
+          },
+          {
+            "id": "b",
+            "text": "It is definitely prolonged and needs urgent investigation",
+            "feedback": "Not without correcting for rate. Uncorrected QT values are meaningless outside a narrow rate range."
+          },
+          {
+            "id": "c",
+            "text": "It is unmeasurable when the rhythm is slow",
+            "feedback": "A slow rhythm makes the QT interval easier to measure, not harder, because the T wave is not crowded by the next P wave."
+          },
+          {
+            "id": "d",
+            "text": "QT length has no clinical relevance",
+            "feedback": "A genuinely prolonged QTc predisposes to torsades de pointes, so it matters a great deal."
+          }
+        ],
+        "explanation": "Correct the QT for rate — Bazett's formula divides QT by the square root of the R–R interval in seconds — and interpret the corrected value.",
+        "highlight": "qt"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given this presentation and tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Physiological sinus bradycardia related to athletic conditioning",
+            "correct": true,
+            "feedback": "Correct. An asymptomatic trained endurance athlete with high resting vagal tone, a normal rate response to exercise and an otherwise normal ECG."
+          },
+          {
+            "id": "b",
+            "text": "Sick sinus syndrome requiring pacing",
+            "feedback": "Sinus node disease produces symptoms — presyncope, syncope, exertional fatigue — and often pauses or chronotropic incompetence. None is present."
+          },
+          {
+            "id": "c",
+            "text": "Hypothyroidism",
+            "feedback": "Possible in principle, and worth considering in an unexplained bradycardia, but there are no other features and the athletic history is a complete explanation."
+          },
+          {
+            "id": "d",
+            "text": "Beta blocker toxicity",
+            "feedback": "He takes no medication."
+          }
+        ],
+        "explanation": "Bradycardia is only abnormal if it fails to meet the body's demand. Symptoms, the rate response to exercise and the presence or absence of conduction disease are what separate physiology from pathology.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the most appropriate next step in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Reassure, document the finding, and advise review if symptoms develop",
+            "correct": true,
+            "feedback": "Correct. Asymptomatic bradycardia with a normal ECG and a normal exercise response in a trained athlete needs no treatment — only a clear plan if symptoms appear."
+          },
+          {
+            "id": "b",
+            "text": "Give intravenous atropine",
+            "feedback": "Atropine is for symptomatic bradycardia with haemodynamic compromise. He is asymptomatic and well perfused."
+          },
+          {
+            "id": "c",
+            "text": "Refer for urgent permanent pacemaker implantation",
+            "feedback": "Pacing is indicated for symptomatic bradycardia or documented high-grade block, neither of which is present."
+          },
+          {
+            "id": "d",
+            "text": "Advise him to stop all training immediately",
+            "feedback": "There is no evidence of pathology, and stopping training would remove the physiological explanation without benefit."
+          }
+        ],
+        "explanation": "Educational scenario only. Athlete screening pathways vary between institutions and sporting bodies; follow the protocol in use where you work.",
+        "highlight": "rr"
+      }
+    ],
+    "explanation": "Endurance training raises resting vagal tone and produces adaptive remodelling of the sinus node, so resting rates in the forties are common in trained athletes and entirely compatible with health. The tracing shows all the features of ordinary sinus rhythm apart from the rate: an upright P wave before every QRS, a constant PR interval of 0.18 s, a narrow QRS and normal repolarisation. What makes this physiological rather than pathological is the whole picture — no symptoms, a normal rate response to exercise, and no conduction abnormality on the tracing.",
+    "learningObjectives": [
+      "Distinguish slow sinus rhythm from atrioventricular block by checking whether every P wave conducts",
+      "Use the six-second method for rates outside the range where 300/large squares is reliable",
+      "Correct the QT interval for heart rate before calling it prolonged",
+      "Recognise the athletic heart as a physiological explanation for bradycardia"
+    ],
+    "clinicalContext": "The ECG cannot tell you whether a bradycardia is benign. That comes from the symptom history, the rate response to exertion and, where there is doubt, ambulatory monitoring or an exercise test.",
+    "relatedDiseases": ["conduction-disorders"],
+    "relatedKeyPoints": ["ecg-essentials", "arrhythmia-principles"],
+    "references": ["esc-pacing-2021", "aha-ecg-part1"]
+  },
+  {
+    "id": "case-sinus-tachycardia-sepsis",
+    "title": "Fast, regular, narrow — and febrile",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "core",
+    "patient": {
+      "age": 58,
+      "sex": "female",
+      "descriptor": "58-year-old woman",
+      "setting": "Emergency department, majors"
+    },
+    "presentingComplaint": "Two days of fever, rigors and burning on passing urine, now confused and tachycardic.",
+    "history": [
+      "Dysuria and frequency for four days, loin pain since yesterday",
+      "Fever to 39 °C at home with shaking chills",
+      "Type 2 diabetes on metformin; no cardiac history",
+      "Reduced oral intake for 24 hours"
+    ],
+    "symptoms": [
+      "Feels hot and shivery",
+      "Mild breathlessness at rest",
+      "No chest pain, no palpitations that she has noticed"
+    ],
+    "examinationFindings": [
+      "Flushed, warm peripheries, capillary refill 3 seconds",
+      "Regular fast pulse of low volume",
+      "Right renal angle tenderness",
+      "Heart sounds normal; no murmur",
+      "Chest clear; no peripheral oedema"
+    ],
+    "vitals": {
+      "heartRate": 128,
+      "spo2": 95,
+      "respiratoryRate": 26,
+      "bpSystolic": 98,
+      "bpDiastolic": 56,
+      "temperature": 39.1,
+      "alarm": "warning",
+      "alarmText": "TACHYCARDIA · HYPOTENSION",
+      "bedside": "Febrile and peripherally vasodilated, breathing fast. The tachycardia is a response to something, and the task is to find what."
+    },
+    "ecgRhythmId": "sinus-tachycardia",
+    "ecg": {
+      "rate": "128 bpm",
+      "rhythm": "Regular; sinus, with a P wave preceding every QRS",
+      "pWaves": "Present and upright in II, but partly buried in the preceding T wave because diastole is short",
+      "prInterval": "0.14 s, constant",
+      "qrs": "0.085 s, narrow",
+      "axis": "Normal",
+      "stSegment": "Minimal upsloping depression in the inferolateral leads — a rate-related, non-specific finding",
+      "tWaves": "Upright, slightly reduced in amplitude",
+      "keyFindings": [
+        "A fast, regular, narrow-complex rhythm with visible P waves at a rate under 150 bpm",
+        "The gradual onset and the clinical context point to sinus tachycardia rather than a re-entrant tachycardia",
+        "Upsloping ST depression at high rates is non-specific and should not be reported as ischaemia"
+      ],
+      "keyLeads": ["II", "V1"],
+      "highlight": "p",
+      "leadOverrides": {
+        "V1": { "p": 1.4 }
+      }
+    },
+    "interpretation": "Sinus tachycardia at 128 bpm with non-specific rate-related ST changes. The ECG findings are consistent with a physiological response to fever and hypovolaemia rather than a primary arrhythmia.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Fast but normal heart sounds. Diastole is short, so S1 and S2 are close together."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No gallop and no added sound; the tachycardia is not a sign of failure here."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No ejection murmur. A high-output state can produce a soft flow murmur, but none is audible."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus tachycardia",
+            "correct": true,
+            "feedback": "Correct. Upright P waves in lead II precede every QRS with a constant PR interval, at a rate above 100 bpm."
+          },
+          {
+            "id": "b",
+            "text": "Atrioventricular nodal re-entrant tachycardia",
+            "feedback": "AVNRT is typically faster — 150 to 250 bpm — starts and stops abruptly, and has no visible upright P wave before the QRS."
+          },
+          {
+            "id": "c",
+            "text": "Atrial flutter with 2:1 conduction",
+            "feedback": "Worth considering at any regular narrow tachycardia near 150 bpm, but the rate here is 128 and discrete upright P waves with an isoelectric baseline between them are visible."
+          },
+          {
+            "id": "d",
+            "text": "Atrial fibrillation with rapid ventricular response",
+            "feedback": "Atrial fibrillation is irregularly irregular and has no P waves. This rhythm is regular with clear P waves."
+          }
+        ],
+        "explanation": "A regular narrow-complex tachycardia below about 150 bpm with visible upright P waves in lead II is sinus until proved otherwise. Above 150, look hard for flutter waves.",
+        "highlight": "p",
+        "leads": ["II", "V1"]
+      },
+      {
+        "id": "q-pwaves",
+        "kind": "systematic",
+        "step": "P waves",
+        "prompt": "The P waves are hard to see because they sit on the preceding T wave. Which lead usually helps most?",
+        "options": [
+          {
+            "id": "a",
+            "text": "V1, where atrial activity is often clearest",
+            "correct": true,
+            "feedback": "Correct. V1 sits closest to the right atrium and shows atrial activity — P waves, flutter waves, fibrillatory waves — better than any other lead."
+          },
+          {
+            "id": "b",
+            "text": "aVR, because everything is inverted there",
+            "feedback": "Inversion does not make small deflections easier to see; aVR is useful for checking lead placement and for aVR ST elevation, not for atrial activity."
+          },
+          {
+            "id": "c",
+            "text": "V6, the most leftward precordial lead",
+            "feedback": "V6 is furthest from the atria and has the smallest atrial signal."
+          },
+          {
+            "id": "d",
+            "text": "III, because it has the largest QRS",
+            "feedback": "QRS size does not predict P wave visibility, and lead III is the most variable of the limb leads."
+          }
+        ],
+        "explanation": "When atrial activity is uncertain, look at lead II and V1 together, and consider a longer rhythm strip.",
+        "highlight": "p",
+        "leads": ["V1"]
+      },
+      {
+        "id": "q-st",
+        "kind": "systematic",
+        "step": "ST segment",
+        "prompt": "There is 0.5 mm of upsloping ST depression inferolaterally. How should this be reported?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Non-specific, rate-related change",
+            "correct": true,
+            "feedback": "Correct. Upsloping depression at high rates is common and non-specific. Horizontal or downsloping depression is what carries weight."
+          },
+          {
+            "id": "b",
+            "text": "Definite subendocardial ischaemia requiring immediate angiography",
+            "feedback": "The shape matters: upsloping depression alone does not meet criteria for ischaemia, and the clinical picture here is sepsis."
+          },
+          {
+            "id": "c",
+            "text": "Digoxin effect",
+            "feedback": "The digoxin 'reverse tick' is a downsloping, scooped ST segment — and she takes no digoxin."
+          },
+          {
+            "id": "d",
+            "text": "A normal finding that need not be mentioned",
+            "feedback": "It should still be described in the report, but described accurately as non-specific."
+          }
+        ],
+        "explanation": "Describe ST depression by its shape and its magnitude at the J point. Only horizontal or downsloping depression of at least 0.5 mm in two contiguous leads counts as an ischaemic criterion.",
+        "highlight": "st"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given the fever, the hypotension and the tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus tachycardia as a physiological response to sepsis and hypovolaemia",
+            "correct": true,
+            "feedback": "Correct. The tachycardia is a symptom of the underlying illness, not a disease in its own right."
+          },
+          {
+            "id": "b",
+            "text": "A primary supraventricular arrhythmia needing adenosine",
+            "feedback": "Adenosine has no role in sinus tachycardia, and blocking the compensatory response would be harmful here."
+          },
+          {
+            "id": "c",
+            "text": "Acute coronary syndrome",
+            "feedback": "There is no chest pain, and the ST change is upsloping and rate-related. Sepsis can raise troponin, which is why the clinical context has to lead."
+          },
+          {
+            "id": "d",
+            "text": "Thyrotoxicosis",
+            "feedback": "A reasonable cause of sinus tachycardia in general, but the fever, dysuria and loin pain point clearly elsewhere."
+          }
+        ],
+        "explanation": "Sinus tachycardia is almost always secondary. The clinical question is not how to slow the heart but what the heart is compensating for.",
+        "highlight": "rr"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the most appropriate priority in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Treat the underlying sepsis — cultures, antibiotics, fluid resuscitation and reassessment",
+            "correct": true,
+            "feedback": "Correct. Treat the cause; the rate follows. Rate control drugs would remove a compensatory mechanism in a hypotensive patient."
+          },
+          {
+            "id": "b",
+            "text": "Give intravenous adenosine to terminate the tachycardia",
+            "feedback": "Adenosine terminates atrioventricular nodal re-entry. In sinus tachycardia it produces a transient, uncomfortable slowing and no benefit."
+          },
+          {
+            "id": "c",
+            "text": "Give an intravenous beta blocker for rate control",
+            "feedback": "Blunting the compensatory tachycardia in a hypotensive septic patient risks precipitating shock."
+          },
+          {
+            "id": "d",
+            "text": "Perform synchronised cardioversion",
+            "feedback": "Cardioversion is for unstable tachyarrhythmias. Sinus tachycardia cannot be cardioverted — the sinus node would simply resume at the same rate."
+          }
+        ],
+        "explanation": "Educational scenario only. Sepsis management follows your local pathway and current guidelines.",
+        "highlight": "rr"
+      }
+    ],
+    "explanation": "Sinus tachycardia at 128 bpm. Every feature of sinus rhythm is preserved — upright P waves in lead II, a constant PR interval of 0.14 s and a narrow QRS — and only the rate is abnormal. Short diastole pushes the P wave onto the preceding T wave, which is why lead V1 is worth checking. The minor upsloping ST depression is rate-related and non-specific. The important reasoning step is that sinus tachycardia is a response, so the diagnosis lies in the fever, the hypotension and the urinary symptoms rather than in the tracing.",
+    "learningObjectives": [
+      "Separate sinus tachycardia from re-entrant supraventricular tachycardia using rate, P waves and mode of onset",
+      "Use lead V1 to find atrial activity when P waves are buried",
+      "Describe ST depression by shape, and recognise upsloping depression as non-specific",
+      "Treat the cause of a compensatory tachycardia rather than the rate"
+    ],
+    "clinicalContext": "The ECG identifies the rhythm. It cannot identify why the sinus node is firing fast — fever, pain, hypovolaemia, anaemia, hypoxia, thyrotoxicosis, pulmonary embolism and drugs all produce the same tracing.",
+    "relatedDiseases": ["pulmonary-embolism"],
+    "relatedKeyPoints": ["ecg-essentials", "arrhythmia-principles"],
+    "references": ["aha-ecg-part1", "esc-svt-2019"]
+  }
+]

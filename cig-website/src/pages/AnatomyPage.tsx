@@ -20,7 +20,7 @@ import { Sheet } from '../components/ui/Modal';
 import { Icon } from '../components/icons/Icon';
 import { Chip } from '../components/ui/primitives';
 import { ErrorState } from '../components/ui/states';
-import { VIEW_MODES, type ViewModeId } from '../lib/cardio3d';
+import { HEART_ATTRIBUTION, VIEW_MODES, type ViewModeId } from '../lib/cardio3d';
 import { org, structureById, structures } from '../lib/content';
 import { useRouter } from '../lib/router';
 import type { AnatomicalStructure } from '../lib/types';
@@ -159,8 +159,9 @@ export const AnatomyPage = () => {
                 }}
               >
                 {structures.length} named structures across the heart, great vessels and peripheral
-                vasculature. Rotate, zoom, isolate and inspect — every structure carries referenced
-                anatomy, physiology, pathology and clinical detail.
+                vasculature, built on a real anatomical heart model. Rotate, zoom, isolate and inspect
+                — every structure carries referenced anatomy, physiology, pathology and clinical
+                detail.
               </p>
             </div>
 
@@ -206,8 +207,8 @@ export const AnatomyPage = () => {
             }}
           >
             <p style={{ fontSize: 10.5, color: 'var(--ink-4)', lineHeight: 1.5 }}>
-              Diagrammatic model generated in code — anatomically arranged, not photorealistic. A
-              licensed GLB can be dropped in without changing the interface.
+              {HEART_ATTRIBUTION} Peripheral vessels are described in text but not drawn in
+              the model.
             </p>
           </div>
         </div>
@@ -360,7 +361,7 @@ export const AnatomyPage = () => {
         <div className="tag-row">
           <Chip tone="amber" block>
             <Icon name="info" size={11} />
-            Educational visualisation — diagrammatic, not to anatomical scale
+            Educational visualisation — anatomical model from Z-Anatomy (CC BY-SA 4.0)
           </Chip>
         </div>
       </div>

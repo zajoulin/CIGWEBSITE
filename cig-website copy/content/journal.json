@@ -1,0 +1,48 @@
+{
+  "eyebrow": "Publication",
+  "name": "The CIG Journal",
+  "short": "Journal",
+  "title": "The CIG Journal",
+  "lede": "CIG's Journal Club brings students and expert doctors together through interactive webinars to read, analyze, and discuss published cardiovascular research.",
+  "about": "CIG's Journal Club hosts webinars with doctors and expert guest speakers to analyze and discuss already published cardiovascular research papers.",
+  "issues": [
+    {
+      "id": "webinar-1",
+      "title": "Cardiology Webinar 1",
+      "category": "Journal Club",
+      "topic": "Preventive Cardiology",
+      "speakers": "Dr. Author Name, Dr. Guest Speaker",
+      "summary": "Discussion on published research with expert doctors.",
+      "abstract": "Full background and detailed synopsis of the webinar discussion, paper analysis, and clinical implications.",
+      "keyFindings": [
+        "Primary outcomes and key takeaway statistics from the discussed paper.",
+        "Practical clinical application discussed by the panel."
+      ],
+      "tags": ["prevention", "medical education", "risk factors"],
+      "image": "/brand/webinar 1.jpeg",
+      "paperLink": "https://pubmed.ncbi.nlm.nih.gov/"
+    }
+  ],
+  "empty": {
+    "title": "Journal Club webinars are coming soon.",
+    "detail": "Upcoming interactive webinars, guest speaker announcements, and paper discussion links will appear here."
+  },
+  "sections": [
+    {
+      "id": "journal-club",
+      "title": "Journal club",
+      "text": "CIG's journal club meets through the academic year to read one cardiovascular paper properly: the question it asked, the design it chose, what the numbers actually show and what the paper does not establish. It is the training ground for everything the Journal publishes.",
+      "icon": "book",
+      "href": "/activities",
+      "cta": "See the activities programme"
+    },
+    {
+      "id": "research",
+      "title": "From research to publication",
+      "text": "Projects that begin as a CIG research idea are written up by the students who ran them. If you have a question you would like to pursue, the research team is the place to start.",
+      "icon": "microscope",
+      "href": "/research",
+      "cta": "CIG Research"
+    }
+  ]
+}

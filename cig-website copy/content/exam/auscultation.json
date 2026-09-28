@@ -1,0 +1,94 @@
+[
+  {
+    "id": "aortic",
+    "name": "Aortic area",
+    "shortName": "Aortic",
+    "location": "Second intercostal space, right sternal border",
+    "position": [-0.42, 1.15, 1.02],
+    "valve": "Aortic valve",
+    "why": "The aortic valve itself lies behind the left side of the sternum, but blood ejected through it travels up and to the right into the ascending aorta. Sound follows the direction of turbulent flow, so aortic murmurs are loudest where that jet comes closest to the chest wall — the second right intercostal space.",
+    "listenFor": [
+      "Ejection systolic murmur of aortic stenosis, radiating to the carotids",
+      "Loudness and splitting of the second heart sound",
+      "Ejection click of a bicuspid aortic valve",
+      "Early diastolic murmur of aortic regurgitation — though this is usually louder at the left sternal edge"
+    ],
+    "technique": "Use the diaphragm with firm pressure. Sit the patient up and listen again during held expiration; palpate the carotid at the same time to time the murmur and feel for a slow-rising pulse.",
+    "soundIds": ["normal-s1-s2", "aortic-stenosis"],
+    "order": 1
+  },
+  {
+    "id": "pulmonic",
+    "name": "Pulmonary area",
+    "shortName": "Pulmonic",
+    "location": "Second intercostal space, left sternal border",
+    "position": [0.42, 1.15, 1.02],
+    "valve": "Pulmonary valve",
+    "why": "The pulmonary trunk runs superiorly and slightly to the left from the pulmonary valve, passing directly behind the second left intercostal space. This is also where the second component of the second heart sound — pulmonary valve closure — is best appreciated, making it the place to assess splitting.",
+    "listenFor": [
+      "Physiological splitting of S2, widening on inspiration",
+      "Ejection systolic murmur of pulmonary stenosis",
+      "Loud P2 in pulmonary hypertension",
+      "The systolic murmur and fixed split S2 of an atrial septal defect"
+    ],
+    "technique": "Diaphragm first. Ask the patient to breathe normally and listen through several respiratory cycles — splitting of S2 is a respiratory phenomenon and disappears if the patient holds their breath.",
+    "soundIds": ["normal-s1-s2"],
+    "order": 2
+  },
+  {
+    "id": "erb",
+    "name": "Erb's point",
+    "shortName": "Erb's point",
+    "location": "Third intercostal space, left sternal border",
+    "position": [0.42, 0.8, 1.02],
+    "valve": "Aortic and pulmonary — the auscultatory crossroads",
+    "why": "Erb's point sits between the aortic and pulmonary areas and above the tricuspid area, so sound from several sources converges here. It is the classic place to hear the early diastolic murmur of aortic regurgitation, whose jet runs back down the left ventricular outflow tract towards the left sternal edge rather than towards the aortic area.",
+    "listenFor": [
+      "Early diastolic decrescendo murmur of aortic regurgitation",
+      "Both S1 and S2 components clearly",
+      "Pericardial friction rub",
+      "Murmurs radiating from either outflow tract"
+    ],
+    "technique": "Diaphragm, with the patient sitting forward in held expiration — the manoeuvre that brings the aortic root closest to the chest wall and makes a soft aortic regurgitant murmur audible.",
+    "soundIds": ["normal-s1-s2", "aortic-regurgitation", "vsd"],
+    "order": 3
+  },
+  {
+    "id": "tricuspid",
+    "name": "Tricuspid area",
+    "shortName": "Tricuspid",
+    "location": "Fourth to fifth intercostal space, left lower sternal border",
+    "position": [0.4, 0.2, 1.03],
+    "valve": "Tricuspid valve",
+    "why": "The right ventricle sits immediately behind the lower sternum, so right-sided sounds and murmurs are transmitted best at the left lower sternal edge. Because the right heart fills more during inspiration, right-sided murmurs get louder on inspiration — Carvallo's sign, the most useful bedside way of separating a tricuspid from a mitral murmur.",
+    "listenFor": [
+      "Pansystolic murmur of tricuspid regurgitation, louder on inspiration",
+      "Right ventricular S3 and S4",
+      "The harsh pansystolic murmur of a ventricular septal defect",
+      "Tricuspid stenosis — rare, and a low-pitched diastolic rumble"
+    ],
+    "technique": "Diaphragm for high-pitched murmurs, bell for low-pitched sounds. Ask the patient to take a deep breath in and hold it: right-sided murmurs become louder, left-sided ones do not.",
+    "soundIds": ["normal-s1-s2", "vsd", "s4"],
+    "order": 4
+  },
+  {
+    "id": "mitral",
+    "name": "Mitral area (apex)",
+    "shortName": "Mitral / apex",
+    "location": "Fifth intercostal space, left midclavicular line — the cardiac apex",
+    "position": [1.12, 0.05, 0.87],
+    "positionFemale": [1.12, -0.1, 0.87],
+    "valve": "Mitral valve",
+    "why": "The apex beat marks the point where the left ventricle comes closest to the chest wall. Mitral regurgitant flow is directed backwards and laterally into the left atrium, so the murmur is loudest here and radiates towards the axilla. It is also where the low-frequency sounds of ventricular filling — S3, S4 and the mid-diastolic rumble of mitral stenosis — are heard.",
+    "listenFor": [
+      "Pansystolic murmur of mitral regurgitation, radiating to the axilla",
+      "Mid-diastolic rumble and opening snap of mitral stenosis",
+      "S3 gallop of volume overload and heart failure",
+      "S4 of a stiff, hypertrophied ventricle",
+      "The character and displacement of the apex beat itself"
+    ],
+    "technique": "Diaphragm first, then the bell lightly applied — pressing the bell hard stretches the skin into a diaphragm and abolishes the low frequencies you are listening for. Roll the patient into the left lateral position and listen in held expiration; this is essential for mitral stenosis.",
+    "soundIds": ["normal-s1-s2", "mitral-regurgitation", "mitral-stenosis", "s3", "s4"],
+    "order": 5
+  }
+]

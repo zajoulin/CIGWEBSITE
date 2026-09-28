@@ -1,0 +1,511 @@
+[
+  {
+    "id": "case-rbbb-incidental",
+    "title": "An M-shaped complex in V1",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "intermediate",
+    "patient": {
+      "age": 41,
+      "sex": "male",
+      "descriptor": "41-year-old man",
+      "setting": "Pre-operative assessment clinic"
+    },
+    "presentingComplaint": "Asymptomatic. An ECG before elective inguinal hernia repair showed a broad QRS, and the automated report suggested a conduction abnormality.",
+    "history": [
+      "No cardiac symptoms of any kind; plays five-a-side football weekly",
+      "No breathlessness, chest pain, palpitations or syncope",
+      "No medication; non-smoker",
+      "No family history of sudden cardiac death or inherited heart disease"
+    ],
+    "symptoms": ["Asymptomatic", "Full exercise tolerance"],
+    "examinationFindings": [
+      "Well, comfortable, normal body habitus",
+      "Regular pulse of normal volume",
+      "Jugular venous pressure normal",
+      "Wide splitting of the second heart sound that widens further on inspiration",
+      "No murmur; chest clear; no oedema"
+    ],
+    "vitals": {
+      "heartRate": 76,
+      "spo2": 98,
+      "respiratoryRate": 14,
+      "bpSystolic": 126,
+      "bpDiastolic": 78,
+      "temperature": 36.6,
+      "alarm": "advisory",
+      "alarmText": "WIDE QRS — RBBB PATTERN",
+      "bedside": "Completely well. The important question here is not what the pattern is, but whether it is new — and whether it needs anything doing about it."
+    },
+    "ecgRhythmId": "right-bundle-branch-block",
+    "ecg": {
+      "rate": "76 bpm",
+      "rhythm": "Regular sinus rhythm",
+      "pWaves": "Normal, upright in II, one before each QRS",
+      "prInterval": "0.16 s, normal and constant — atrioventricular conduction is intact",
+      "qrs": "0.14 s, broad, with an M-shaped rSR′ complex in V1 and V2 and a wide slurred S wave in I and V6",
+      "axis": "Normal — right bundle branch block on its own does not shift the axis",
+      "stSegment": "Isoelectric in the limb leads",
+      "tWaves": "Inverted in V1 to V3, which is the expected discordant change of abnormal right ventricular repolarisation",
+      "keyFindings": [
+        "QRS duration 0.14 s with a normal PR interval — the block is in one bundle branch, not at the node",
+        "M-shaped rSR′ in V1 and V2 from late, rightward right ventricular activation",
+        "Wide slurred S wave in the leftward leads I, aVL and V6",
+        "T wave inversion in the right precordial leads is part of the pattern, not evidence of ischaemia"
+      ],
+      "keyLeads": ["V1", "V2", "I", "V6"],
+      "highlight": "qrs",
+      "leadOverrides": {
+        "V1": { "r": 0.55, "s": -1.5, "t": 1.1 },
+        "V2": { "r": 0.7, "s": -1.1, "t": 0.9 },
+        "V3": { "r": 0.9, "s": 0.9, "t": -0.6 },
+        "I": { "r": 0.9, "s": 1.9 },
+        "aVL": { "r": 0.9, "s": 1.8 },
+        "V6": { "r": 0.95, "s": 2.2 }
+      }
+    },
+    "interpretation": "Sinus rhythm with complete right bundle branch block. In an asymptomatic patient with a structurally normal heart this is usually a benign finding; the ECG alone cannot establish that, and it should be compared with any previous tracing.",
+    "auscultation": [
+      {
+        "siteId": "pulmonic",
+        "soundId": "normal-s1-s2",
+        "note": "Wide splitting of the second heart sound. Delayed right ventricular activation delays pulmonary valve closure, so the two components of S2 are separated even in expiration, and separate further on inspiration."
+      },
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Normal S1 and S2 at the apex; no murmur and no added sound."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "Nothing added at the lower left sternal edge. Listen here for the pansystolic murmur of tricuspid regurgitation if right heart disease is suspected."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus rhythm with right bundle branch block",
+            "correct": true,
+            "feedback": "Correct. The rhythm is sinus; the abnormality is in intraventricular conduction, not in the rhythm itself."
+          },
+          {
+            "id": "b",
+            "text": "Ventricular tachycardia",
+            "feedback": "The rate is 76 bpm and there are P waves before every QRS. A broad QRS is not the same as a ventricular rhythm."
+          },
+          {
+            "id": "c",
+            "text": "Accelerated idioventricular rhythm",
+            "feedback": "That would have no preceding P waves and typically runs at 60–100 bpm from a ventricular focus."
+          },
+          {
+            "id": "d",
+            "text": "Atrial fibrillation with aberrant conduction",
+            "feedback": "The rhythm is regular with visible P waves and a constant PR interval."
+          }
+        ],
+        "explanation": "Always name the rhythm and the conduction abnormality separately. A broad QRS in sinus rhythm is a conduction problem, not an arrhythmia.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-qrs",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "Which combination of features identifies right rather than left bundle branch block?",
+        "options": [
+          {
+            "id": "a",
+            "text": "rSR′ in V1 with a wide slurred S wave in I and V6",
+            "correct": true,
+            "feedback": "Correct. Late rightward activation produces a terminal positive deflection in the right-sided lead and a terminal negative one in the leftward leads."
+          },
+          {
+            "id": "b",
+            "text": "A broad monophasic R wave in V6 with a deep QS in V1",
+            "feedback": "That is left bundle branch block — the mirror image of this pattern."
+          },
+          {
+            "id": "c",
+            "text": "A short PR interval with a delta wave",
+            "feedback": "That is ventricular pre-excitation, which widens the QRS by a completely different mechanism."
+          },
+          {
+            "id": "d",
+            "text": "Peaked T waves with a broad QRS",
+            "feedback": "That suggests hyperkalaemia, which produces a diffusely widened QRS without a bundle branch pattern."
+          }
+        ],
+        "explanation": "A simple mnemonic: look at V1. 'M' shaped in V1 means right bundle branch block; 'W' shaped means left.",
+        "highlight": "qrs",
+        "leads": ["V1", "V6"]
+      },
+      {
+        "id": "q-twaves",
+        "kind": "systematic",
+        "step": "T waves",
+        "prompt": "T waves are inverted in V1 to V3. How should this be reported?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Appropriate discordance — the expected repolarisation change of right bundle branch block",
+            "correct": true,
+            "feedback": "Correct. When depolarisation is abnormal, repolarisation follows it. Reporting this as ischaemia is a common error."
+          },
+          {
+            "id": "b",
+            "text": "Anterior ischaemia requiring urgent troponin measurement",
+            "feedback": "In the presence of right bundle branch block, T wave inversion in the right precordial leads is expected and is not by itself evidence of ischaemia."
+          },
+          {
+            "id": "c",
+            "text": "Normal in all age groups regardless of the QRS",
+            "feedback": "T inversion in V1 can be normal, but inversion extending to V3 needs an explanation — here the explanation is the bundle branch block."
+          },
+          {
+            "id": "d",
+            "text": "Evidence of right ventricular hypertrophy",
+            "feedback": "Right ventricular hypertrophy gives a dominant R wave in V1 with right axis deviation, not an rSR′ with a broad QRS."
+          }
+        ],
+        "explanation": "Secondary repolarisation change is expected whenever the QRS is abnormally wide. Concordant change — repolarisation pointing the same way as the QRS — is what should raise concern.",
+        "highlight": "t",
+        "leads": ["V1", "V2", "V3"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given that he is asymptomatic with a structurally normal examination, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Isolated right bundle branch block, most likely a benign variant",
+            "correct": true,
+            "feedback": "Correct. Right bundle branch block occurs in up to 3% of the population and is often of no consequence in an asymptomatic person with a normal heart."
+          },
+          {
+            "id": "b",
+            "text": "Acute pulmonary embolism",
+            "feedback": "New right bundle branch block in an acutely breathless patient would raise this — but he is entirely asymptomatic with a normal respiratory rate and saturation."
+          },
+          {
+            "id": "c",
+            "text": "Anterior myocardial infarction",
+            "feedback": "Right bundle branch block preserves the early QRS forces, so infarction is still readable — and there are no Q waves or ST changes."
+          },
+          {
+            "id": "d",
+            "text": "Brugada syndrome",
+            "feedback": "The Brugada pattern is an RBBB-like appearance with coved ST elevation in V1–V2. There is no ST elevation here, and no relevant family history."
+          }
+        ],
+        "explanation": "The interpretation of a bundle branch block depends almost entirely on whether it is new and whether there are symptoms.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the most appropriate next step in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Document the finding as a baseline, confirm there are no symptoms, and proceed with the planned surgery",
+            "correct": true,
+            "feedback": "Correct. Isolated right bundle branch block in an asymptomatic patient with no other conduction disease does not require intervention or postponement."
+          },
+          {
+            "id": "b",
+            "text": "Insert a prophylactic temporary pacing wire before surgery",
+            "feedback": "Prophylactic pacing is not indicated for isolated right bundle branch block."
+          },
+          {
+            "id": "c",
+            "text": "Cancel surgery and admit for urgent electrophysiological study",
+            "feedback": "There is no syncope, no bifascicular block and no symptom to investigate urgently."
+          },
+          {
+            "id": "d",
+            "text": "Start amiodarone",
+            "feedback": "There is no arrhythmia to treat, and antiarrhythmic therapy would be inappropriate."
+          }
+        ],
+        "explanation": "Educational scenario only. Pre-operative decisions follow local anaesthetic assessment protocols and current guidelines.",
+        "highlight": "qrs"
+      }
+    ],
+    "explanation": "With the right bundle blocked, the left ventricle depolarises normally and on time, so the first part of the QRS is unchanged and septal Q waves are preserved. The right ventricle is then reached by slow conduction spreading across the septum — a late vector directed rightward and anteriorly. That late vector inscribes the terminal R′ in V1 and V2 and the reciprocal wide slurred S wave in I, aVL and V6, taking the total QRS beyond 0.12 s. Because right ventricular depolarisation is abnormal, its repolarisation is too, giving the expected T wave inversion in V1 to V3. The physical sign that matches all of this is wide splitting of the second heart sound: delayed right ventricular activation delays pulmonary valve closure.",
+    "learningObjectives": [
+      "Identify right bundle branch block from QRS duration plus the morphology in V1 and V6",
+      "Explain why the initial QRS forces — and therefore infarct diagnosis — are preserved in RBBB",
+      "Recognise discordant T wave inversion as part of the pattern rather than as ischaemia",
+      "Relate the ECG to wide splitting of the second heart sound at the bedside"
+    ],
+    "clinicalContext": "The ECG shows the conduction pattern. Whether it matters depends on whether it is new, whether there are symptoms, and whether there is coexisting fascicular block — none of which the tracing alone can settle.",
+    "relatedDiseases": ["conduction-disorders", "pulmonary-embolism", "atrial-septal-defect"],
+    "relatedKeyPoints": ["ecg-essentials", "heart-sounds"],
+    "references": ["aha-ecg-part4", "esc-pacing-2021"]
+  },
+  {
+    "id": "case-lbbb-heart-failure",
+    "title": "A broad QRS that changes how you read the ECG",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "advanced",
+    "patient": {
+      "age": 74,
+      "sex": "female",
+      "descriptor": "74-year-old woman",
+      "setting": "Heart failure clinic"
+    },
+    "presentingComplaint": "Six months of progressive breathlessness on exertion, now limiting her to walking about fifty metres on the flat.",
+    "history": [
+      "Breathlessness worsening over six months, with orthopnoea and two-pillow sleeping",
+      "Long-standing hypertension; previous anterior myocardial infarction eight years ago",
+      "On ramipril, bisoprolol and furosemide",
+      "No chest pain currently; no syncope"
+    ],
+    "symptoms": [
+      "Exertional breathlessness limiting activity",
+      "Orthopnoea",
+      "Ankle swelling by the evening",
+      "Fatigue"
+    ],
+    "examinationFindings": [
+      "Comfortable at rest; slightly tachypnoeic on undressing",
+      "Regular pulse of normal volume",
+      "Jugular venous pressure raised 4 cm",
+      "Apex beat displaced to the anterior axillary line and diffuse",
+      "Third heart sound at the apex; bibasal crackles; bilateral ankle oedema"
+    ],
+    "vitals": {
+      "heartRate": 74,
+      "spo2": 95,
+      "respiratoryRate": 18,
+      "bpSystolic": 134,
+      "bpDiastolic": 80,
+      "temperature": 36.5,
+      "alarm": "advisory",
+      "alarmText": "WIDE QRS — LBBB PATTERN",
+      "bedside": "Stable but clearly limited. The broad complex here is not an incidental finding — it is part of the reason her ventricle is failing."
+    },
+    "ecgRhythmId": "left-bundle-branch-block",
+    "ecg": {
+      "rate": "74 bpm",
+      "rhythm": "Regular sinus rhythm",
+      "pWaves": "Broad and notched in lead II, indicating left atrial abnormality",
+      "prInterval": "0.17 s, normal and constant",
+      "qrs": "0.16 s, broad, with a monophasic notched R wave in I, aVL, V5 and V6 and deep QS complexes in V1 and V2. Septal Q waves are absent",
+      "axis": "Left axis deviation",
+      "stSegment": "Discordant — depressed in the leads with a dominant R wave and elevated in V1 to V3 where the QRS is dominantly negative",
+      "tWaves": "Discordant inversion laterally, upright in the right precordial leads",
+      "keyFindings": [
+        "QRS duration 0.16 s with a broad notched R wave laterally and absent septal Q waves",
+        "Discordant ST and T changes — the ST segment points away from the main QRS deflection in every lead",
+        "The conventional ECG criteria for infarction cannot be applied to this tracing",
+        "Left atrial abnormality on the P wave, in keeping with a raised filling pressure"
+      ],
+      "keyLeads": ["V1", "V2", "V5", "V6", "I"],
+      "highlight": "st",
+      "leadOverrides": {
+        "V1": { "r": 0.12, "s": 2.3, "q": 0, "st": -1.2, "t": -1.2 },
+        "V2": { "r": 0.15, "s": 2.4, "q": 0, "st": -1.3, "t": -1.3 },
+        "V3": { "r": 0.5, "s": 1.6, "q": 0, "st": -0.7, "t": -0.8 },
+        "V4": { "r": 1.1, "s": 0.6, "q": 0, "st": 0.7, "t": 0.7 },
+        "V5": { "r": 1.15, "s": 0.25, "q": 0, "st": 1.15, "t": 1.15 },
+        "V6": { "r": 1.15, "s": 0.2, "q": 0, "st": 1.15, "t": 1.15 },
+        "I": { "r": 1.1, "s": 0.2, "q": 0, "st": 1.1, "t": 1.1 },
+        "aVL": { "r": 1.2, "s": 0.2, "q": 0, "st": 1.1, "t": 1.1 }
+      }
+    },
+    "interpretation": "Sinus rhythm with complete left bundle branch block and secondary discordant repolarisation change. The tracing is consistent with underlying structural heart disease; conventional ST criteria for myocardial infarction do not apply in the presence of this pattern.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "s3",
+        "note": "A low-pitched third heart sound in early diastole, heard best with the bell at the apex with the patient rolled to the left. It marks rapid early filling into a stiff, dilated ventricle."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No ejection murmur to suggest aortic stenosis as the cause of the conduction disease."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No pansystolic murmur; the raised venous pressure here reflects biventricular failure rather than tricuspid regurgitation."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus rhythm with left bundle branch block",
+            "correct": true,
+            "feedback": "Correct. P waves precede every QRS with a constant PR interval; the QRS is broad because of intraventricular conduction delay."
+          },
+          {
+            "id": "b",
+            "text": "Ventricular paced rhythm",
+            "feedback": "A reasonable thought, because right ventricular pacing produces a similar broad left bundle branch pattern — but there are no pacing spikes and no device history."
+          },
+          {
+            "id": "c",
+            "text": "Ventricular tachycardia",
+            "feedback": "The rate is 74 bpm with visible conducted P waves."
+          },
+          {
+            "id": "d",
+            "text": "Junctional rhythm with aberrancy",
+            "feedback": "P waves are present, upright in lead II and conducted at a fixed interval."
+          }
+        ],
+        "explanation": "Right ventricular pacing mimics left bundle branch block exactly, so always look for pacing spikes and ask about devices.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-qrs",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "Which feature best distinguishes left from right bundle branch block on this tracing?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A broad monophasic R wave in V6 with a deep QS in V1, and absent septal Q waves",
+            "correct": true,
+            "feedback": "Correct. Loss of the normal left-to-right septal vector removes the septal Q wave — a subtle but highly reliable sign."
+          },
+          {
+            "id": "b",
+            "text": "An rSR′ complex in V1",
+            "feedback": "That is right bundle branch block."
+          },
+          {
+            "id": "c",
+            "text": "Right axis deviation",
+            "feedback": "Left bundle branch block is usually associated with a normal or leftward axis."
+          },
+          {
+            "id": "d",
+            "text": "A short PR interval",
+            "feedback": "The PR interval is normal at 0.17 s; the delay is entirely below the atrioventricular node."
+          }
+        ],
+        "explanation": "The septal Q wave in I, aVL, V5 and V6 is generated by left-to-right septal depolarisation. Lose the left bundle and you lose that Q wave.",
+        "highlight": "qrs",
+        "leads": ["V1", "V6"]
+      },
+      {
+        "id": "q-st",
+        "kind": "systematic",
+        "step": "ST segment",
+        "prompt": "There is ST elevation in V1 to V3 and ST depression in V5 and V6. How should this be reported?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Appropriate discordance secondary to left bundle branch block",
+            "correct": true,
+            "feedback": "Correct. The ST segment and T wave point away from the dominant QRS deflection in every lead — expected, not additional pathology."
+          },
+          {
+            "id": "b",
+            "text": "Anteroseptal ST-elevation myocardial infarction",
+            "feedback": "This is the trap. Discordant ST elevation over a deep QS complex is the rule in left bundle branch block; concordant elevation is what suggests infarction."
+          },
+          {
+            "id": "c",
+            "text": "Acute pericarditis",
+            "feedback": "Pericarditis produces widespread concordant concave elevation with PR depression, in a heart with a normal QRS."
+          },
+          {
+            "id": "d",
+            "text": "Left ventricular aneurysm",
+            "feedback": "An aneurysm gives persistent ST elevation with well-formed Q waves and a narrow QRS."
+          }
+        ],
+        "explanation": "The Sgarbossa criteria exist precisely because of this problem: concordant ST elevation of 1 mm or more, concordant depression in V1–V3, or excessively discordant elevation relative to the QRS depth.",
+        "highlight": "st",
+        "leads": ["V2", "V5"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given the breathlessness, the third heart sound and the tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Heart failure with left bundle branch block contributing to ventricular dyssynchrony",
+            "correct": true,
+            "feedback": "Correct. A displaced diffuse apex, a third heart sound, raised venous pressure and a broad left bundle branch block together point to a dilated, dyssynchronous, failing ventricle."
+          },
+          {
+            "id": "b",
+            "text": "Acute anteroseptal infarction requiring immediate reperfusion",
+            "feedback": "The block is long-standing on comparison with previous tracings, and there is no chest pain. The ST changes are discordant and expected."
+          },
+          {
+            "id": "c",
+            "text": "Pulmonary embolism",
+            "feedback": "The six-month history with orthopnoea, a third heart sound and bibasal crackles fits chronic left heart failure, not acute embolism."
+          },
+          {
+            "id": "d",
+            "text": "Normal variant conduction delay in an older patient",
+            "feedback": "Left bundle branch block is rarely innocent; it usually reflects structural disease, as it does here."
+          }
+        ],
+        "explanation": "Left bundle branch block does not just report disease — it contributes to it, by making the left ventricle contract out of step with itself.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "Which investigation is most useful next in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Echocardiography to quantify left ventricular function and dyssynchrony",
+            "correct": true,
+            "feedback": "Correct. Ejection fraction and chamber dimensions determine both prognosis and eligibility for device therapy in a patient with a broad left bundle branch block."
+          },
+          {
+            "id": "b",
+            "text": "Immediate coronary angiography for presumed STEMI",
+            "feedback": "There is no ischaemic chest pain and the ST changes are the expected discordant ones of a long-standing block."
+          },
+          {
+            "id": "c",
+            "text": "No further investigation is required",
+            "feedback": "She has symptomatic heart failure and a broad left bundle branch block — precisely the group in whom imaging changes management."
+          },
+          {
+            "id": "d",
+            "text": "Exercise ECG for ischaemia",
+            "feedback": "An exercise ECG is uninterpretable for ischaemia in the presence of left bundle branch block."
+          }
+        ],
+        "explanation": "Educational scenario only. Device therapy and imaging decisions follow current heart failure guidelines and specialist assessment.",
+        "highlight": "qrs"
+      }
+    ],
+    "explanation": "In left bundle branch block the septum is activated from right to left instead of left to right, so the small septal Q wave in the lateral leads disappears — one of the most reliable signs. The impulse then crosses into the left ventricular free wall and travels slowly, cell to cell, producing a broad notched R wave in I, aVL, V5 and V6 and a deep QS in V1 and V2. Because activation is abnormal, repolarisation follows abnormally: the ST segment and T wave are displaced opposite to the dominant QRS deflection in every lead. Those secondary changes sit exactly where infarction is normally diagnosed, which is why the conventional criteria are abandoned in favour of the Sgarbossa criteria. Clinically, the same delayed activation makes the septum and free wall contract out of step, which is the dyssynchrony that resynchronisation therapy is designed to correct.",
+    "learningObjectives": [
+      "Identify left bundle branch block from QRS width, lateral R wave morphology and absent septal Q waves",
+      "Explain appropriate discordance and why it invalidates the usual infarct criteria",
+      "State the principle behind the Sgarbossa criteria",
+      "Link a broad left bundle branch block to ventricular dyssynchrony and heart failure management"
+    ],
+    "clinicalContext": "The ECG identifies the conduction pattern and warns you what it conceals. Ventricular function, chamber size and the presence of ischaemia all require imaging.",
+    "relatedDiseases": ["conduction-disorders", "heart-failure", "cardiomyopathy", "myocardial-infarction"],
+    "relatedKeyPoints": ["ecg-essentials", "heart-failure-principles", "heart-sounds"],
+    "references": ["aha-ecg-part4", "esc-hf-2021", "esc-pacing-2021"]
+  }
+]

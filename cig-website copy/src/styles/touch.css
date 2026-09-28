@@ -1,0 +1,234 @@
+/* ==========================================================================
+   CIG — Touch and small-screen corrections
+   --------------------------------------------------------------------------
+   Loaded last, after every module stylesheet, so it can correct them without
+   any of them having to know about it.
+
+   Everything here is inside either `@media (pointer: coarse)` — a finger — or
+   a `max-width` query. Nothing in this file can reach a desktop pointer at a
+   desktop width, which is what lets it raise hit areas and re-flow overlays
+   without touching the design the site was built to.
+
+   Sections:
+     1  form controls that make iOS zoom
+     2  hit areas below 44px
+     3  content that only hover can reach
+     4  overlays and text that overflow a phone
+   ========================================================================== */
+
+/* --- 1 · iOS zooms the whole page in when a focused control is under 16px,
+       and then leaves the user pinched in. The design's 14px is kept for the
+       mouse; a finger gets 16px, which iOS accepts silently. ------------- */
+
+@media (pointer: coarse) {
+  .input,
+  textarea.input,
+  select.input,
+  .field input,
+  .field select,
+  input[type='text'],
+  input[type='email'],
+  input[type='search'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='url'],
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* The search bar's own box grows with its text, so it needs the height back
+     rather than the 25px it collapsed to. The input is stretched to fill it,
+     so a tap anywhere in the bar — not only on the 28px of text — focuses it,
+     which is how every search field on the site behaves. */
+  .field {
+    padding: 0 0.9em;
+    min-height: 48px;
+  }
+
+  .field input,
+  .field select {
+    align-self: stretch;
+    min-height: 46px;
+  }
+}
+
+/* --- 2 · Hit areas. The visual size of each control is left alone; the
+       touchable area is grown around it with padding, a pseudo-element or a
+       min-height, so nothing in the layout moves more than a few pixels. -- */
+
+@media (pointer: coarse) {
+  /* The primary way into the site on a phone was a 38px square. */
+  .burger {
+    width: 46px;
+    height: 46px;
+  }
+
+  /* Footer social icons were a 34px circle. */
+  .social-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* The brand lockup in the navigation bar — the way back to the home page
+     from every page — measured 42px tall. */
+  .brand {
+    min-height: 44px;
+  }
+
+  /* Buttons, chips, tabs and rail links. Each of these was between 21 and
+     42px tall — close enough that a min-height alone fixes them without
+     changing padding, type or colour. */
+  .btn,
+  a.btn,
+  .btn-sm,
+  .btn.btn-sm,
+  .filter-chip,
+  .view-mode,
+  .sim-level,
+  .tab,
+  .toc-link,
+  .quiz-option,
+  .mon-btn,
+  .ctrl-btn,
+  .ecg-rail-item,
+  .room-finding,
+  .sim-step button,
+  .crumbs a {
+    min-height: 44px;
+  }
+
+  /* Short labels ("Male", "1×") leave these narrower than they are tall. */
+  .view-mode,
+  .sim-level,
+  .filter-chip {
+    min-width: 44px;
+  }
+
+  /* Inline crumb links need the height expressed as a box to take effect. */
+  .crumbs a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Icon-only transport buttons were 35px wide with no label to widen them. */
+  .ctrl-btn {
+    min-width: 44px;
+  }
+
+  /* The playback-speed selector's children are plain <button>s inside a
+     segmented group, so they are addressed through the group. */
+  .anim-speed button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Range inputs: the track is easy to hit, the thumb is not. */
+  input[type='range'] {
+    height: 44px;
+    background: transparent;
+  }
+  input[type='range']::-webkit-slider-thumb {
+    width: 26px;
+    height: 26px;
+  }
+  input[type='range']::-moz-range-thumb {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Radio and checkbox inputs are 16px, but each sits inside a full-width
+     label row that is already large — the row is the target, so only the
+     bare control needs guarding. */
+  .form-radio,
+  .form-check {
+    min-height: 44px;
+  }
+
+  /* Taps should not be delayed by double-tap-to-zoom detection, and a tap on
+     a control should not select its label text. */
+  button,
+  .btn,
+  a.btn,
+  .filter-chip,
+  .view-mode,
+  .quiz-option,
+  .toc-link,
+  .tab {
+    touch-action: manipulation;
+  }
+}
+
+/* --- 3 · Content a finger cannot reach, because it is revealed on hover. - */
+
+@media (hover: none) {
+  /* "View profile" on a person card, and the bedside monitor's cue. */
+  .person-view,
+  .room-monitor-cue {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Hover styling latches after a tap on touch devices and reads as a
+     selection that is not there. Lift and shadow are reset; the genuine
+     selected/active states are set by their own classes and are untouched. */
+  .card-hover:hover,
+  .stage .card-hover:hover,
+  .person:hover,
+  .btn:hover,
+  .filter-chip:hover,
+  .tab:hover,
+  .room-monitor:hover {
+    transform: none;
+  }
+}
+
+/* Viewer hints. "Scroll to zoom · Shift-drag to pan" describes gestures no
+   touchscreen can make; the touch wording describes the ones it can. */
+.hint-touch {
+  display: none;
+}
+
+@media (pointer: coarse) {
+  .hint-mouse {
+    display: none;
+  }
+  .hint-touch {
+    display: inline;
+  }
+}
+
+/* --- 4 · Overlays and text that a phone cannot hold. -------------------- */
+
+@media (max-width: 560px) {
+  /* Long placeholder metadata ("Placeholder — capacity and year groups") was
+     wider than the card it sits in and was clipped. Chips wrap instead. */
+  .chip {
+    max-width: 100%;
+    white-space: normal;
+    text-align: left;
+  }
+
+  /* The examination monitor is an overlay sitting over the top-right of the
+     thorax. At this width it covered the chest wall it is meant to explain,
+     so it moves to the bottom of the stage where the model is narrower. */
+  .exam-monitor {
+    top: auto;
+    bottom: 8px;
+    right: 8px;
+    width: 54%;
+    max-width: calc(100% - 16px);
+  }
+
+  /* ...which is where the challenge card was, so that moves to the top. */
+  .exam-challenge {
+    top: 8px;
+    bottom: auto;
+  }
+
+  /* The stage controls sit bottom-left, under the monitor; give them their
+     own row above it rather than letting the two overlap. */
+  .exam-stage-controls {
+    bottom: calc(8px + 27%);
+  }
+}

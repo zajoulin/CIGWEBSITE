@@ -1,0 +1,764 @@
+[
+  {
+    "id": "ecg-essentials",
+    "title": "ECG Essentials",
+    "summary": "A systematic approach to the 12-lead ECG, the intervals that matter, and the territories that map to coronary arteries.",
+    "icon": "ecg",
+    "category": "Electrophysiology",
+    "sections": [
+      {
+        "heading": "A systematic approach",
+        "body": "Read every ECG the same way, every time. The order matters less than the consistency — a system is what stops you from spotting the obvious abnormality and missing the important one.",
+        "facts": [
+          "Check patient details, date, calibration (10 mm/mV) and paper speed (25 mm/s)",
+          "Rate: 300 divided by the number of large squares between QRS complexes, or count complexes in 10 seconds and multiply by 6 if irregular",
+          "Rhythm: regular or irregular; is there a P wave before every QRS and a QRS after every P?",
+          "Axis: look at leads I and aVF",
+          "P wave morphology and duration",
+          "Intervals: PR, QRS, QT and corrected QT",
+          "ST segments and T waves in every territory",
+          "Compare with a previous ECG whenever one exists"
+        ]
+      },
+      {
+        "heading": "Normal intervals",
+        "table": {
+          "caption": "Standard adult reference values",
+          "headers": ["Interval", "Normal range", "Represents"],
+          "rows": [
+            ["P wave", "< 120 ms, < 2.5 mm", "Atrial depolarisation"],
+            ["PR interval", "120–200 ms", "Atrial depolarisation plus AV nodal delay"],
+            ["QRS duration", "< 120 ms", "Ventricular depolarisation"],
+            ["QT interval", "Rate-dependent; QTc < 440 ms (men), < 460 ms (women)", "Depolarisation plus repolarisation"],
+            ["ST segment", "Isoelectric", "Plateau phase of the action potential"]
+          ]
+        }
+      },
+      {
+        "heading": "Coronary territories",
+        "body": "Mapping ECG leads to coronary arteries is one of the highest-yield pieces of knowledge in cardiology.",
+        "table": {
+          "headers": ["Territory", "Leads", "Usual artery"],
+          "rows": [
+            ["Anterior / anteroseptal", "V1–V4", "Left anterior descending"],
+            ["Lateral", "I, aVL, V5–V6", "Left circumflex or diagonal"],
+            ["Inferior", "II, III, aVF", "Right coronary (or circumflex if left-dominant)"],
+            ["Posterior", "Tall R and ST depression in V1–V3; confirm with V7–V9", "Circumflex or right coronary"],
+            ["Right ventricle", "V4R", "Proximal right coronary"]
+          ]
+        }
+      },
+      {
+        "heading": "Patterns worth recognising immediately",
+        "facts": [
+          "ST elevation in contiguous leads with reciprocal depression — acute coronary occlusion",
+          "Widespread concave ST elevation with PR depression — acute pericarditis",
+          "Absent P waves with an irregularly irregular rhythm — atrial fibrillation",
+          "Sawtooth flutter waves, classically at an atrial rate near 300 per minute — atrial flutter",
+          "Wide complex tachycardia with AV dissociation, capture or fusion beats — ventricular tachycardia",
+          "Short PR with a delta wave — ventricular pre-excitation",
+          "Tall tented T waves progressing to a sine wave — hyperkalaemia",
+          "Electrical alternans with low voltage — large pericardial effusion"
+        ]
+      }
+    ],
+    "pearls": [
+      "A normal ECG never excludes coronary artery disease.",
+      "Always look for reciprocal change — it substantially increases confidence in ST elevation.",
+      "In inferior infarction, record right-sided leads: right ventricular involvement changes management.",
+      "Compare with an old ECG before calling anything 'new'.",
+      "Interpret the ECG in the context of the patient in front of you, not in isolation."
+    ],
+    "references": ["umdmi-2018", "esc-acs-2023", "braunwald", "guyton"],
+    "related": { "structures": ["sa-node", "av-node", "bundle-of-his", "purkinje-fibers"], "diseases": ["myocardial-infarction", "atrial-fibrillation", "conduction-disorders", "ventricular-arrhythmias"] }
+  },
+  {
+    "id": "cardiac-cycle",
+    "title": "The Cardiac Cycle",
+    "summary": "The sequence of pressure, volume, valve and electrical events that make up a single heartbeat.",
+    "icon": "activity",
+    "category": "Physiology",
+    "sections": [
+      {
+        "heading": "Phases of the cycle",
+        "body": "The cycle is best learnt as a sequence of pressure relationships, because every valve event follows directly from a pressure crossover.",
+        "facts": [
+          "Atrial systole: atrial contraction completes ventricular filling, contributing the final 10–30% (the atrial kick)",
+          "Isovolumetric contraction: ventricular pressure rises with all valves closed; no change in volume",
+          "Rapid ejection: ventricular pressure exceeds arterial pressure, semilunar valves open, most of the stroke volume is ejected",
+          "Reduced ejection: ejection continues more slowly as ventricular pressure begins to fall",
+          "Isovolumetric relaxation: semilunar valves close, all valves closed again, pressure falls steeply",
+          "Rapid filling: AV valves open, the majority of ventricular filling occurs passively",
+          "Diastasis: slow filling as atrial and ventricular pressures approach equilibrium"
+        ]
+      },
+      {
+        "heading": "Key pressure landmarks",
+        "table": {
+          "headers": ["Chamber or vessel", "Typical pressure (mmHg)"],
+          "rows": [
+            ["Right atrium (mean)", "0–8"],
+            ["Right ventricle", "15–30 / 0–8"],
+            ["Pulmonary artery", "15–30 / 8–15"],
+            ["Left atrium (mean)", "4–12"],
+            ["Left ventricle", "100–140 / 4–12"],
+            ["Aorta", "100–140 / 60–90"]
+          ]
+        }
+      },
+      {
+        "heading": "Volumes and derived measures",
+        "facts": [
+          "End-diastolic volume: approximately 120 mL",
+          "End-systolic volume: approximately 50 mL",
+          "Stroke volume = EDV − ESV, approximately 70 mL",
+          "Ejection fraction = SV ÷ EDV, normally about 55–70%",
+          "Cardiac output = stroke volume × heart rate, approximately 5 L/min at rest",
+          "Cardiac index = cardiac output ÷ body surface area, approximately 2.5–4.0 L/min/m²"
+        ]
+      },
+      {
+        "heading": "The jugular venous waveform",
+        "table": {
+          "headers": ["Wave", "Cause", "Abnormality"],
+          "rows": [
+            ["a wave", "Atrial contraction", "Large in tricuspid stenosis and pulmonary hypertension; absent in atrial fibrillation; cannon waves in AV dissociation"],
+            ["x descent", "Atrial relaxation and downward movement of the tricuspid annulus", "Prominent in cardiac tamponade"],
+            ["c wave", "Tricuspid bulging in early ventricular systole", "—"],
+            ["v wave", "Atrial filling against a closed tricuspid valve", "Giant v waves in tricuspid regurgitation"],
+            ["y descent", "Tricuspid opening and rapid ventricular filling", "Prominent in constriction; blunted in tamponade"]
+          ]
+        }
+      }
+    ],
+    "pearls": [
+      "Every valve opens or closes because of a pressure crossover — never memorise valve events separately from pressures.",
+      "Most ventricular filling is passive; the atrial kick matters most when the ventricle is stiff or the rate is fast.",
+      "Coronary perfusion of the left ventricle happens in diastole, so tachycardia reduces supply while increasing demand.",
+      "Systole shortens far less than diastole as heart rate rises — diastole absorbs almost all the reduction.",
+      "The dicrotic notch on the aortic trace marks aortic valve closure."
+    ],
+    "references": ["guyton", "braunwald", "gray"],
+    "related": { "structures": ["left-ventricle", "right-ventricle", "mitral-valve", "aortic-valve", "left-atrium"], "diseases": ["heart-failure", "aortic-stenosis", "mitral-stenosis"] }
+  },
+  {
+    "id": "hemodynamics",
+    "title": "Haemodynamics",
+    "summary": "Preload, afterload, contractility and resistance — the four levers that determine cardiac output and arterial pressure.",
+    "icon": "trending",
+    "category": "Physiology",
+    "sections": [
+      {
+        "heading": "The core equations",
+        "facts": [
+          "Cardiac output = stroke volume × heart rate",
+          "Mean arterial pressure = cardiac output × systemic vascular resistance",
+          "Mean arterial pressure ≈ diastolic pressure + one third of pulse pressure",
+          "Pulse pressure = systolic − diastolic pressure",
+          "Systemic vascular resistance = (MAP − right atrial pressure) ÷ cardiac output",
+          "Stroke volume = end-diastolic volume − end-systolic volume"
+        ]
+      },
+      {
+        "heading": "Determinants of stroke volume",
+        "table": {
+          "headers": ["Determinant", "Definition", "Clinical proxy"],
+          "rows": [
+            ["Preload", "Ventricular wall stretch at end-diastole", "End-diastolic volume; CVP or wedge pressure"],
+            ["Afterload", "The load the ventricle must overcome to eject", "Systemic vascular resistance; aortic pressure; wall stress"],
+            ["Contractility", "Intrinsic force of contraction at a given load", "End-systolic elastance; ejection fraction (load-dependent)"]
+          ]
+        }
+      },
+      {
+        "heading": "Frank–Starling and Laplace",
+        "body": "Two principles explain most of clinical haemodynamics.",
+        "facts": [
+          "Frank–Starling: increasing end-diastolic fibre length increases the force of contraction, up to a point",
+          "In heart failure the Starling curve is depressed and flattened, so extra filling raises pressure rather than output",
+          "Laplace's law: wall tension is proportional to pressure multiplied by radius, divided by twice the wall thickness",
+          "This is why a dilated ventricle works harder for the same pressure, and why hypertrophy normalises wall stress",
+          "It also explains why aneurysms grow progressively faster as they enlarge"
+        ]
+      },
+      {
+        "heading": "Flow and resistance",
+        "facts": [
+          "Poiseuille's law: flow is proportional to the fourth power of radius — halving the radius reduces flow sixteen-fold",
+          "Arterioles are the principal resistance vessels; veins are the capacitance vessels",
+          "The venous system holds roughly 60–70% of total blood volume",
+          "Pulmonary vascular resistance is roughly one tenth of systemic vascular resistance",
+          "Hypoxia constricts pulmonary vessels but dilates systemic ones"
+        ]
+      }
+    ],
+    "pearls": [
+      "When output falls, work out which lever is broken: preload, afterload, contractility or rate.",
+      "Ejection fraction is load-dependent — it is not a pure measure of contractility.",
+      "The right ventricle is afterload-sensitive; the left ventricle tolerates pressure loading far better.",
+      "Venoconstriction increases preload without changing total blood volume.",
+      "In tamponade and right ventricular failure, preload reduction is harmful, not helpful."
+    ],
+    "references": ["guyton", "braunwald", "esc-hf-2021"],
+    "related": { "structures": ["left-ventricle", "right-ventricle", "systemic-arteries", "systemic-veins", "aorta"], "diseases": ["heart-failure", "hypertension", "pulmonary-hypertension", "pulmonary-embolism"] }
+  },
+  {
+    "id": "coronary-circulation",
+    "title": "Coronary Circulation",
+    "summary": "How the heart feeds itself: anatomy, the diastolic nature of coronary flow, and the supply–demand balance that governs ischaemia.",
+    "icon": "vessel",
+    "category": "Physiology & Anatomy",
+    "sections": [
+      {
+        "heading": "Anatomy and dominance",
+        "facts": [
+          "Left main coronary artery divides into the left anterior descending and left circumflex arteries",
+          "LAD supplies the anterior wall, anterior two thirds of the septum and the apex via septal and diagonal branches",
+          "Left circumflex supplies the lateral wall through obtuse marginal branches",
+          "Right coronary artery supplies the right ventricle, the inferior wall, and usually the AV node",
+          "Dominance is defined by the origin of the posterior descending artery: right in roughly 85%, left in about 8%, co-dominant in the remainder",
+          "Sinuatrial nodal artery arises from the RCA in about 60% of hearts and from the circumflex in the rest"
+        ]
+      },
+      {
+        "heading": "Why coronary flow is diastolic",
+        "body": "During systole, contracting myocardium compresses intramural vessels. In the left ventricle this compression exceeds coronary driving pressure, so almost all left coronary flow occurs in diastole. The right ventricle, generating much lower pressure, has more evenly distributed flow.",
+        "facts": [
+          "Coronary perfusion pressure = aortic diastolic pressure − left ventricular end-diastolic pressure",
+          "Tachycardia shortens diastole disproportionately and reduces perfusion time",
+          "The subendocardium is compressed most and perfused last, so it becomes ischaemic first",
+          "Anything that raises LVEDP — heart failure, aortic stenosis, ischaemia itself — reduces perfusion pressure"
+        ]
+      },
+      {
+        "heading": "Supply and demand",
+        "table": {
+          "headers": ["Increases demand", "Reduces supply"],
+          "rows": [
+            ["Tachycardia", "Tachycardia (shortened diastole)"],
+            ["Increased contractility", "Coronary stenosis or thrombus"],
+            ["Increased wall stress (dilatation, hypertension)", "Hypotension (low perfusion pressure)"],
+            ["Left ventricular hypertrophy", "Anaemia and hypoxaemia"],
+            ["Thyrotoxicosis, sepsis, exercise", "Raised LVEDP; coronary spasm"]
+          ]
+        }
+      },
+      {
+        "heading": "Flow regulation",
+        "facts": [
+          "Myocardial oxygen extraction is 70–80% at rest — near maximal, so demand must be met by increased flow",
+          "Coronary flow reserve is the ratio of maximal to resting flow, normally about four- to five-fold",
+          "Local metabolites, especially adenosine and nitric oxide, dominate regulation over autonomic tone",
+          "Autoregulation maintains flow across a wide range of perfusion pressures",
+          "Fractional flow reserve compares distal to aortic pressure during maximal hyperaemia to judge functional significance"
+        ]
+      }
+    ],
+    "pearls": [
+      "Learn one artery, one territory, one set of ECG leads — it pays off constantly.",
+      "Because extraction is already near-maximal, only increased flow can meet increased demand.",
+      "Angina can occur with entirely normal coronary arteries — in aortic stenosis, hypertrophy or microvascular disease.",
+      "Slowing the heart rate helps ischaemia twice over: less demand and more diastolic perfusion time.",
+      "Inferior infarction with bradycardia points to the right coronary artery and the AV node."
+    ],
+    "references": ["guyton", "braunwald", "gray", "esc-acs-2023"],
+    "related": { "structures": ["coronary-arteries", "coronary-veins", "aortic-valve", "left-ventricle"], "diseases": ["atherosclerosis", "stable-angina", "myocardial-infarction", "aortic-stenosis"] }
+  },
+  {
+    "id": "heart-sounds",
+    "title": "Heart Sounds & Murmurs",
+    "summary": "What produces each sound, how to characterise a murmur, and the manoeuvres that tell murmurs apart at the bedside.",
+    "icon": "wave",
+    "category": "Clinical Skills",
+    "sections": [
+      {
+        "heading": "The heart sounds",
+        "table": {
+          "headers": ["Sound", "Cause", "Significance"],
+          "rows": [
+            ["S1", "Mitral then tricuspid closure", "Loud in mitral stenosis; soft in mitral regurgitation and long PR"],
+            ["S2", "Aortic (A2) then pulmonary (P2) closure", "Splits on inspiration normally; soft A2 in severe aortic stenosis; loud P2 in pulmonary hypertension"],
+            ["S3", "Rapid early diastolic filling into a compliant or volume-loaded ventricle", "Normal in the young and in pregnancy; in older adults suggests heart failure"],
+            ["S4", "Atrial contraction into a stiff ventricle", "Always abnormal in adults; suggests hypertrophy, ischaemia or fibrosis"]
+          ]
+        }
+      },
+      {
+        "heading": "Describing a murmur",
+        "facts": [
+          "Timing: systolic, diastolic or continuous — and where within that phase",
+          "Site of maximal intensity and radiation",
+          "Character: harsh, blowing, rumbling, musical",
+          "Intensity: graded 1 to 6 for systolic murmurs, where grade 4 and above has a palpable thrill",
+          "Pitch: high-pitched murmurs are heard best with the diaphragm, low-pitched with the bell",
+          "Effect of respiration and of dynamic manoeuvres"
+        ]
+      },
+      {
+        "heading": "Common murmurs",
+        "table": {
+          "headers": ["Lesion", "Murmur", "Best heard"],
+          "rows": [
+            ["Aortic stenosis", "Ejection systolic, radiating to carotids", "2nd right intercostal space"],
+            ["Mitral regurgitation", "Pansystolic, radiating to axilla", "Apex"],
+            ["Aortic regurgitation", "Early diastolic decrescendo", "Left sternal edge, sitting forward in expiration"],
+            ["Mitral stenosis", "Mid-diastolic rumble with opening snap", "Apex, left lateral position, bell"],
+            ["Tricuspid regurgitation", "Pansystolic, louder on inspiration", "Lower left sternal edge"],
+            ["Ventricular septal defect", "Harsh pansystolic with thrill", "Left sternal edge"],
+            ["Patent ductus arteriosus", "Continuous machinery murmur", "Left infraclavicular area"]
+          ]
+        }
+      },
+      {
+        "heading": "Dynamic manoeuvres",
+        "facts": [
+          "Inspiration increases right-sided murmurs (Carvallo's sign); expiration increases left-sided murmurs",
+          "Valsalva strain reduces preload: most murmurs get quieter, but hypertrophic obstructive cardiomyopathy and mitral valve prolapse get louder",
+          "Squatting increases preload and afterload: HOCM and prolapse murmurs get quieter",
+          "Standing from squatting reduces preload: HOCM and prolapse murmurs get louder",
+          "Handgrip increases afterload: mitral and aortic regurgitation get louder; aortic stenosis gets quieter"
+        ]
+      }
+    ],
+    "pearls": [
+      "Murmur intensity does not reliably indicate severity — a critically stenotic valve can be quiet.",
+      "Two murmurs get louder on Valsalva: hypertrophic obstructive cardiomyopathy and mitral valve prolapse.",
+      "In acute severe regurgitation the murmur may be short or absent — never rely on it to exclude the diagnosis.",
+      "An S3 in an older adult is one of the most useful bedside signs of raised filling pressures.",
+      "Feel the carotid while you listen: it anchors you in the cardiac cycle."
+    ],
+    "references": ["braunwald", "aha-vhd-2020", "moore"],
+    "related": { "structures": ["mitral-valve", "aortic-valve", "tricuspid-valve", "pulmonary-valve"], "diseases": ["aortic-stenosis", "mitral-regurgitation", "mitral-stenosis", "aortic-regurgitation", "heart-failure"] }
+  },
+  {
+    "id": "arrhythmia-principles",
+    "title": "Arrhythmia Principles",
+    "summary": "The three mechanisms behind every arrhythmia, and a framework for classifying rhythms at the bedside.",
+    "icon": "pulse",
+    "category": "Electrophysiology",
+    "sections": [
+      {
+        "heading": "Three mechanisms",
+        "facts": [
+          "Re-entry: a circuit with unidirectional block and slow conduction sustains a self-perpetuating wavefront. Accounts for most clinical tachyarrhythmias — AVNRT, AVRT, atrial flutter, scar-related VT",
+          "Enhanced automaticity: abnormal spontaneous phase 4 depolarisation in tissue that should be quiescent. Seen in ischaemia, catecholamine excess and digoxin toxicity",
+          "Triggered activity: afterdepolarisations dependent on a preceding beat. Early afterdepolarisations cause torsades de pointes; delayed afterdepolarisations arise from calcium overload"
+        ]
+      },
+      {
+        "heading": "Intrinsic pacemaker rates",
+        "table": {
+          "headers": ["Site", "Intrinsic rate (bpm)", "Escape QRS"],
+          "rows": [
+            ["Sinuatrial node", "60–100", "Narrow"],
+            ["Atrial tissue", "60–80", "Narrow"],
+            ["AV junction", "40–60", "Narrow"],
+            ["His–Purkinje / ventricle", "20–40", "Wide"]
+          ]
+        }
+      },
+      {
+        "heading": "A bedside classification",
+        "facts": [
+          "Is it fast or slow? Above 100 or below 60 beats per minute",
+          "Is the QRS narrow or wide? Narrow means supraventricular origin; wide means ventricular origin or aberrant conduction",
+          "Is it regular or irregular?",
+          "Is the patient stable or unstable? Instability — hypotension, ischaemia, heart failure, altered consciousness — mandates immediate electrical treatment",
+          "Irregularly irregular with no P waves is atrial fibrillation until proven otherwise",
+          "A wide-complex tachycardia is ventricular tachycardia until proven otherwise"
+        ]
+      },
+      {
+        "heading": "Conduction velocities",
+        "table": {
+          "headers": ["Tissue", "Velocity (m/s)"],
+          "rows": [
+            ["AV node", "~0.05 (slowest)"],
+            ["Atrial myocardium", "~1.0"],
+            ["Ventricular myocardium", "~0.4"],
+            ["His–Purkinje system", "~2–4 (fastest)"]
+          ]
+        }
+      }
+    ],
+    "pearls": [
+      "The AV node is deliberately slow — that delay is what allows the atria to finish emptying.",
+      "The His–Purkinje system is deliberately fast — that speed is what gives a narrow QRS and efficient contraction.",
+      "Adenosine both terminates node-dependent tachycardias and unmasks atrial arrhythmias — it is diagnostic as well as therapeutic.",
+      "Never give AV nodal blockers in pre-excited atrial fibrillation.",
+      "Always look for reversible triggers: ischaemia, electrolytes, drugs, thyroid disease and hypoxia."
+    ],
+    "references": ["aha-af-2023", "braunwald", "guyton"],
+    "related": { "structures": ["sa-node", "av-node", "bundle-of-his", "purkinje-fibers"], "diseases": ["atrial-fibrillation", "supraventricular-tachycardia", "ventricular-arrhythmias", "conduction-disorders"] }
+  },
+  {
+    "id": "heart-failure-principles",
+    "title": "Heart Failure Principles",
+    "summary": "Classification, the neurohormonal cycle, and why guideline-directed therapy changes outcome rather than just symptoms.",
+    "icon": "heart",
+    "category": "Clinical Cardiology",
+    "sections": [
+      {
+        "heading": "Classification by ejection fraction",
+        "table": {
+          "headers": ["Category", "Ejection fraction", "Note"],
+          "rows": [
+            ["HFrEF — reduced", "≤ 40%", "The strongest evidence base for disease-modifying therapy"],
+            ["HFmrEF — mildly reduced", "41–49%", "Evidence increasingly extrapolated from HFrEF"],
+            ["HFpEF — preserved", "≥ 50%", "Requires objective evidence of raised filling pressures"]
+          ]
+        }
+      },
+      {
+        "heading": "The neurohormonal cycle",
+        "body": "The mechanisms that defend perfusion acutely are the same ones that destroy the heart chronically. Understanding this single idea explains almost all of heart failure pharmacology.",
+        "facts": [
+          "Reduced output unloads the baroreceptors, increasing sympathetic outflow",
+          "Sympathetic activation raises rate, contractility and afterload — and chronic catecholamine exposure is myocyte-toxic",
+          "Reduced renal perfusion activates renin, angiotensin II and aldosterone",
+          "Angiotensin II and aldosterone directly promote hypertrophy and fibrosis",
+          "Salt and water retention raises preload, but the flattened Starling curve converts this into congestion rather than output",
+          "Natriuretic peptides oppose this but are progressively overwhelmed — and are what we measure diagnostically"
+        ]
+      },
+      {
+        "heading": "Staging and functional class",
+        "table": {
+          "headers": ["Stage", "Description", "NYHA class"],
+          "rows": [
+            ["A", "At risk; no structural disease, no symptoms", "—"],
+            ["B", "Structural disease, no symptoms", "I"],
+            ["C", "Structural disease with current or prior symptoms", "II–IV"],
+            ["D", "Advanced, refractory symptoms at rest", "IV"]
+          ]
+        }
+      },
+      {
+        "heading": "Common precipitants of decompensation",
+        "facts": [
+          "Non-adherence to medication or dietary salt and fluid advice",
+          "Arrhythmia, particularly new atrial fibrillation",
+          "Myocardial ischaemia or infarction",
+          "Infection and sepsis",
+          "Uncontrolled hypertension",
+          "Anaemia, thyroid disease and iron deficiency",
+          "NSAIDs, corticosteroids and some calcium channel blockers",
+          "Excess alcohol and worsening renal function"
+        ]
+      }
+    ],
+    "pearls": [
+      "Normal natriuretic peptides in an untreated, symptomatic patient make heart failure very unlikely.",
+      "Diuretics make patients feel better; neurohormonal blockade makes them live longer.",
+      "An S3 and a raised JVP are among the most informative bedside findings.",
+      "Always ask what precipitated this decompensation — there is almost always an answer.",
+      "Heart failure is a syndrome, not a diagnosis: the underlying cause must always be sought."
+    ],
+    "references": ["esc-hf-2021", "esc-hf-2023", "braunwald", "guyton"],
+    "related": { "structures": ["left-ventricle", "right-ventricle", "left-atrium", "mitral-valve"], "diseases": ["heart-failure", "cardiomyopathy", "myocardial-infarction", "hypertension"] }
+  },
+  {
+    "id": "valvular-disease",
+    "title": "Valvular Heart Disease",
+    "summary": "Severity thresholds, the physiology of pressure versus volume loading, and what determines the timing of intervention.",
+    "icon": "valve",
+    "category": "Clinical Cardiology",
+    "sections": [
+      {
+        "heading": "Pressure versus volume loading",
+        "table": {
+          "headers": ["Load type", "Lesions", "Ventricular response"],
+          "rows": [
+            ["Pressure overload", "Aortic stenosis, hypertension, pulmonary stenosis", "Concentric hypertrophy — sarcomeres in parallel, thick wall, small cavity"],
+            ["Volume overload", "Aortic and mitral regurgitation, shunts", "Eccentric hypertrophy — sarcomeres in series, dilated cavity"]
+          ]
+        }
+      },
+      {
+        "heading": "Severity thresholds worth knowing",
+        "table": {
+          "caption": "Commonly cited thresholds for severe disease; always confirm against current guidelines",
+          "headers": ["Lesion", "Severe disease"],
+          "rows": [
+            ["Aortic stenosis", "Area < 1.0 cm²; mean gradient ≥ 40 mmHg; peak velocity ≥ 4 m/s"],
+            ["Mitral stenosis", "Valve area ≤ 1.5 cm²"],
+            ["Aortic regurgitation", "Regurgitant fraction ≥ 50%; vena contracta > 6 mm"],
+            ["Mitral regurgitation", "Effective regurgitant orifice ≥ 0.4 cm²; regurgitant volume ≥ 60 mL"]
+          ]
+        }
+      },
+      {
+        "heading": "Timing intervention",
+        "facts": [
+          "Symptoms are the strongest single trigger in stenotic lesions, particularly aortic stenosis",
+          "In regurgitant lesions, ventricular size and function often deteriorate before symptoms — so surveillance measurements matter",
+          "Exercise testing can unmask symptoms in patients who have unconsciously limited their activity",
+          "Repair is preferred over replacement where a durable repair is achievable, particularly for the mitral valve",
+          "Decisions are made by a multidisciplinary heart team weighing anatomy, risk, life expectancy and patient preference"
+        ]
+      },
+      {
+        "heading": "Acute versus chronic regurgitation",
+        "body": "The same lesion behaves entirely differently depending on how quickly it develops. Chronic regurgitation allows the receiving chamber to dilate and stay compliant, so pressures remain modest and patients stay asymptomatic for years. Acute regurgitation confronts a normal-sized, non-compliant chamber, so pressures rise abruptly, producing pulmonary oedema and shock — often with an unimpressive murmur."
+      }
+    ],
+    "pearls": [
+      "Pressure overload thickens; volume overload dilates.",
+      "Loud murmurs are not necessarily severe, and severe lesions are not necessarily loud.",
+      "In aortic stenosis the ventricle is preload-dependent — beware vasodilators and hypovolaemia.",
+      "Low-flow, low-gradient aortic stenosis can conceal severe disease behind a reassuring gradient.",
+      "Rheumatic mitral stenosis with atrial fibrillation requires warfarin, not a DOAC."
+    ],
+    "references": ["aha-vhd-2020", "esc-vhd-2021", "braunwald"],
+    "related": { "structures": ["aortic-valve", "mitral-valve", "tricuspid-valve", "pulmonary-valve", "left-ventricle"], "diseases": ["aortic-stenosis", "mitral-regurgitation", "mitral-stenosis", "aortic-regurgitation", "tricuspid-regurgitation", "rheumatic-heart-disease"] }
+  },
+  {
+    "id": "cardiovascular-examination",
+    "title": "Cardiovascular Examination",
+    "summary": "A structured bedside examination and the signs that genuinely change your differential.",
+    "icon": "stethoscope",
+    "category": "Clinical Skills",
+    "sections": [
+      {
+        "heading": "Sequence",
+        "facts": [
+          "General inspection: comfort at rest, breathlessness, cachexia, cyanosis, scars, pacemaker box",
+          "Hands: clubbing, splinter haemorrhages, Osler's nodes, Janeway lesions, tar staining, peripheral cyanosis",
+          "Pulse: rate, rhythm, character and volume; radioradial and radiofemoral delay; blood pressure in both arms",
+          "Face and neck: malar flush, xanthelasma, corneal arcus, conjunctival pallor; jugular venous pressure and waveform",
+          "Praecordium: inspect for scars and visible pulsation; palpate the apex beat, heaves and thrills",
+          "Auscultate all four areas with diaphragm and bell, plus axilla and carotids, with positional manoeuvres",
+          "Complete: lung bases, sacral and ankle oedema, liver, peripheral pulses, and a urine dipstick where relevant"
+        ]
+      },
+      {
+        "heading": "Pulse character",
+        "table": {
+          "headers": ["Character", "Description", "Cause"],
+          "rows": [
+            ["Slow-rising (parvus et tardus)", "Delayed, low-amplitude upstroke", "Severe aortic stenosis"],
+            ["Collapsing (water-hammer)", "Rapid rise and fall, wide pulse pressure", "Aortic regurgitation"],
+            ["Bisferiens", "Two systolic peaks", "Mixed aortic valve disease; HOCM"],
+            ["Pulsus alternans", "Alternating strong and weak beats", "Severe left ventricular dysfunction"],
+            ["Pulsus paradoxus", "Inspiratory fall in systolic pressure > 10 mmHg", "Tamponade, severe asthma, constriction"],
+            ["Irregularly irregular", "No pattern", "Atrial fibrillation"]
+          ]
+        }
+      },
+      {
+        "heading": "Jugular venous pressure",
+        "facts": [
+          "Measured as vertical height above the sternal angle with the patient at 45 degrees; normal is 3 cm or less",
+          "Distinguish from the carotid: the JVP has a double waveform, is non-palpable, varies with position and respiration, and is obliterated by light pressure",
+          "Elevated with a normal waveform: right heart failure, fluid overload",
+          "Giant v waves: tricuspid regurgitation",
+          "Cannon a waves: atrioventricular dissociation, as in complete heart block",
+          "Kussmaul's sign — inspiratory rise: constrictive pericarditis, right ventricular infarction, restrictive cardiomyopathy"
+        ]
+      },
+      {
+        "heading": "The apex beat",
+        "facts": [
+          "Normally in the fifth left intercostal space in the midclavicular line",
+          "Displaced and diffuse: ventricular dilatation",
+          "Sustained and heaving but undisplaced: pressure overload with concentric hypertrophy",
+          "Tapping: palpable loud first heart sound in mitral stenosis",
+          "Double impulse: hypertrophic cardiomyopathy",
+          "Impalpable: obesity, emphysema, pericardial effusion or dextrocardia"
+        ]
+      }
+    ],
+    "pearls": [
+      "The JVP is the most information-dense sign in cardiovascular examination — spend time learning it.",
+      "Always feel both radial pulses and both femoral pulses, and check blood pressure in both arms.",
+      "Position matters: left lateral for mitral stenosis, sitting forward in expiration for aortic regurgitation.",
+      "Look at the patient from the end of the bed before you touch them.",
+      "Examination findings guide investigation — they rarely replace it."
+    ],
+    "references": ["moore", "braunwald", "aha-professional"],
+    "related": { "structures": ["right-atrium", "left-ventricle", "aortic-valve", "mitral-valve", "systemic-arteries"], "diseases": ["heart-failure", "aortic-stenosis", "tricuspid-regurgitation", "pericardial-disease", "peripheral-arterial-disease"] }
+  },
+  {
+    "id": "cardiac-imaging",
+    "title": "Cardiovascular Imaging",
+    "summary": "What each modality actually shows, what it does well, and when to choose it.",
+    "icon": "eye",
+    "category": "Investigations",
+    "sections": [
+      {
+        "heading": "Modality comparison",
+        "table": {
+          "headers": ["Modality", "Best for", "Limitations"],
+          "rows": [
+            ["Transthoracic echocardiography", "First-line structure and function, valves, effusion, ventricular size", "Operator- and window-dependent; limited posterior structures"],
+            ["Transoesophageal echocardiography", "Left atrial appendage, prosthetic valves, endocarditis, procedural guidance", "Semi-invasive, requires sedation"],
+            ["Cardiac MRI", "Volumes, mass, tissue characterisation, scar and infiltration", "Availability, cost, time; device compatibility"],
+            ["Cardiac CT", "Coronary anatomy, calcium score, structural planning", "Radiation; contrast; limited by heart rate and calcium"],
+            ["Nuclear perfusion imaging", "Ischaemia and viability", "Radiation; lower spatial resolution"],
+            ["Invasive angiography", "Definitive coronary anatomy with physiology and intervention", "Invasive; procedural risk"]
+          ]
+        }
+      },
+      {
+        "heading": "Echocardiography essentials",
+        "facts": [
+          "Standard views: parasternal long and short axis, apical four-, two- and three-chamber, subcostal, suprasternal",
+          "Ejection fraction is most commonly estimated by the biplane method of discs (modified Simpson's)",
+          "Doppler measures velocity; the simplified Bernoulli equation (pressure gradient ≈ 4v²) converts it to a gradient",
+          "Tricuspid regurgitant velocity plus estimated right atrial pressure gives pulmonary artery systolic pressure",
+          "Diastolic function is assessed from E/A ratio, e′ velocity, E/e′, left atrial volume index and TR velocity",
+          "Strain imaging detects subclinical dysfunction before ejection fraction falls"
+        ]
+      },
+      {
+        "heading": "Cardiac MRI tissue signatures",
+        "table": {
+          "headers": ["Late gadolinium pattern", "Suggests"],
+          "rows": [
+            ["Subendocardial or transmural, in a coronary territory", "Myocardial infarction"],
+            ["Mid-wall, non-coronary distribution", "Dilated cardiomyopathy, myocarditis"],
+            ["Subepicardial", "Myocarditis, sarcoidosis"],
+            ["Patchy, at right ventricular insertion points", "Hypertrophic cardiomyopathy, pulmonary hypertension"],
+            ["Diffuse subendocardial with abnormal nulling", "Cardiac amyloidosis"]
+          ]
+        }
+      }
+    ],
+    "pearls": [
+      "Ask what question you want answered before choosing the test.",
+      "Echocardiography answers most cardiology questions and should usually come first.",
+      "Cardiac MRI is the reference standard for volumes and the only routine way to characterise myocardial tissue.",
+      "A calcium score of zero is a powerful negative predictor in stable chest pain.",
+      "Imaging findings must always be interpreted alongside the clinical picture."
+    ],
+    "references": ["braunwald", "esc-guidelines-hub", "acc-guidelines-hub"],
+    "related": { "structures": ["left-ventricle", "left-atrium", "aortic-valve", "coronary-arteries"], "diseases": ["heart-failure", "myocardial-infarction", "cardiomyopathy", "aortic-stenosis", "infective-endocarditis"] }
+  },
+  {
+    "id": "cardiovascular-pharmacology",
+    "title": "Cardiovascular Pharmacology",
+    "summary": "Drug classes by mechanism, the haemodynamic lever each one pulls, and the effects that show up in exams and on the ward.",
+    "icon": "flask",
+    "category": "Therapeutics",
+    "sections": [
+      {
+        "heading": "Major classes by mechanism",
+        "table": {
+          "headers": ["Class", "Mechanism", "Principal use"],
+          "rows": [
+            ["ACE inhibitors / ARBs", "Block angiotensin II formation or action", "Heart failure, hypertension, post-infarction, proteinuric kidney disease"],
+            ["ARNI", "Neprilysin inhibition plus ARB", "Heart failure with reduced ejection fraction"],
+            ["Beta-blockers", "Reduce rate, contractility and renin release", "Heart failure, angina, arrhythmia, post-infarction"],
+            ["MRAs", "Aldosterone receptor blockade", "Heart failure, resistant hypertension"],
+            ["SGLT2 inhibitors", "Renal glucose and sodium excretion; pleiotropic cardiorenal effects", "Heart failure across the EF spectrum, diabetes, CKD"],
+            ["Calcium channel blockers", "Dihydropyridines dilate vessels; non-dihydropyridines slow the AV node", "Hypertension, angina, rate control"],
+            ["Nitrates", "Nitric oxide donation, predominantly venodilatation", "Angina, acute heart failure"],
+            ["Loop diuretics", "Inhibit the Na-K-2Cl cotransporter", "Congestion in heart failure"],
+            ["Statins", "HMG-CoA reductase inhibition", "Lipid lowering and secondary prevention"],
+            ["Antiplatelets", "Inhibit platelet activation and aggregation", "Atherothrombosis"],
+            ["Anticoagulants", "Inhibit coagulation factors", "AF stroke prevention, venous thromboembolism"]
+          ]
+        }
+      },
+      {
+        "heading": "Antiarrhythmic drugs (Vaughan Williams)",
+        "table": {
+          "headers": ["Class", "Target", "Examples"],
+          "rows": [
+            ["Ia", "Sodium channel, moderate block; prolongs repolarisation", "Quinidine, procainamide, disopyramide"],
+            ["Ib", "Sodium channel, weak block; shortens repolarisation", "Lidocaine, mexiletine"],
+            ["Ic", "Sodium channel, strong block", "Flecainide, propafenone"],
+            ["II", "Beta-adrenergic receptors", "Metoprolol, bisoprolol"],
+            ["III", "Potassium channels; prolongs repolarisation", "Amiodarone, sotalol"],
+            ["IV", "L-type calcium channels", "Verapamil, diltiazem"],
+            ["Other", "Various", "Adenosine, digoxin, ivabradine"]
+          ]
+        }
+      },
+      {
+        "heading": "Effects worth remembering",
+        "facts": [
+          "ACE inhibitors: dry cough from bradykinin, hyperkalaemia, angioedema; avoid in pregnancy and bilateral renal artery stenosis",
+          "Beta-blockers: fatigue, bradycardia; introduce in stable heart failure and uptitrate slowly",
+          "Amiodarone: thyroid, pulmonary, hepatic, corneal and skin effects; requires structured monitoring",
+          "Digoxin: narrow therapeutic index; toxicity worsened by hypokalaemia; causes visual disturbance and arrhythmia",
+          "Statins: myalgia and, rarely, myopathy; check for interactions",
+          "Verapamil and diltiazem: negatively inotropic — avoid in significant systolic dysfunction, and never combine intravenously with a beta-blocker",
+          "Flecainide: avoid in structural heart disease and ischaemia"
+        ]
+      }
+    ],
+    "pearls": [
+      "For every drug, ask which haemodynamic lever it pulls: preload, afterload, rate or contractility.",
+      "Diuretics relieve congestion; neurohormonal blockade modifies the disease.",
+      "Nitrates act mainly on veins — they reduce preload, which is how they relieve congestion and angina.",
+      "Aspirin is not adequate for stroke prevention in atrial fibrillation.",
+      "Always check renal function and potassium when starting or uptitrating RAAS-acting drugs."
+    ],
+    "references": ["esc-hf-2021", "aha-af-2023", "esc-prevention-2021", "braunwald"],
+    "related": { "structures": ["systemic-arteries", "left-ventricle", "av-node", "sa-node"], "diseases": ["heart-failure", "hypertension", "atrial-fibrillation", "atherosclerosis", "stable-angina"] }
+  },
+  {
+    "id": "interventional-cardiology",
+    "title": "Interventional Cardiology",
+    "summary": "What happens in the catheterisation laboratory: access, coronary intervention, structural procedures and their complications.",
+    "icon": "syringe",
+    "category": "Procedures",
+    "sections": [
+      {
+        "heading": "Vascular access",
+        "facts": [
+          "Radial access is now the default for coronary procedures — lower bleeding and vascular complications, and earlier mobilisation",
+          "Femoral access is used for large-bore procedures such as transcatheter valve implantation and mechanical support",
+          "Allen's or Barbeau testing has historically been used to assess dual palmar supply before radial access",
+          "Ultrasound guidance reduces complications for femoral and venous access",
+          "Venous access via the femoral or jugular vein is used for right heart catheterisation and electrophysiology"
+        ]
+      },
+      {
+        "heading": "Coronary intervention",
+        "facts": [
+          "Diagnostic angiography defines anatomy; physiology (FFR or iFR) determines functional significance of intermediate lesions",
+          "Intravascular imaging — IVUS and OCT — assesses plaque, vessel sizing and stent optimisation",
+          "Balloon angioplasty followed by drug-eluting stent implantation is standard for most lesions",
+          "Calcified lesions may require rotational or orbital atherectomy, or intravascular lithotripsy",
+          "Primary PCI is the preferred reperfusion strategy in STEMI when it can be delivered within recommended times",
+          "Dual antiplatelet therapy after stenting, with duration individualised by ischaemic and bleeding risk"
+        ]
+      },
+      {
+        "heading": "Structural interventions",
+        "table": {
+          "headers": ["Procedure", "Indication"],
+          "rows": [
+            ["TAVI", "Severe symptomatic aortic stenosis"],
+            ["Transcatheter edge-to-edge mitral repair", "Selected severe mitral regurgitation at high surgical risk"],
+            ["Percutaneous mitral balloon commissurotomy", "Suitable rheumatic mitral stenosis"],
+            ["Left atrial appendage occlusion", "AF with a long-term contraindication to anticoagulation"],
+            ["ASD / PFO device closure", "Significant shunt, or selected cryptogenic stroke"],
+            ["Transcatheter pulmonary valve implantation", "Right ventricular outflow tract dysfunction after repair"]
+          ]
+        }
+      },
+      {
+        "heading": "Complications to know",
+        "facts": [
+          "Access site: haematoma, pseudoaneurysm, arteriovenous fistula, retroperitoneal haemorrhage, radial artery occlusion",
+          "Coronary: dissection, perforation, no-reflow, side-branch occlusion, stent thrombosis and restenosis",
+          "Systemic: contrast-associated acute kidney injury, contrast allergy, atheroembolism, stroke",
+          "Structural procedures: conduction block requiring pacing (particularly after TAVI), paravalvular leak, device embolisation, tamponade",
+          "Radiation exposure to both patient and operator"
+        ]
+      }
+    ],
+    "pearls": [
+      "An angiogram shows the lumen, not the plaque — this is why intravascular imaging and physiology matter.",
+      "Not every stenosis needs a stent; functional significance should guide intervention in stable disease.",
+      "In STEMI, door-to-balloon time is the number that matters most.",
+      "Conduction block after TAVI reflects the bundle of His lying just beneath the aortic valve.",
+      "Radial access has substantially reduced bleeding complications and is the default for coronary work."
+    ],
+    "references": ["esc-acs-2023", "aha-vhd-2020", "acc-guidelines-hub", "braunwald"],
+    "related": { "structures": ["coronary-arteries", "aortic-valve", "mitral-valve", "left-atrium", "systemic-arteries"], "diseases": ["myocardial-infarction", "stable-angina", "aortic-stenosis", "mitral-regurgitation", "atrial-fibrillation"] }
+  }
+]

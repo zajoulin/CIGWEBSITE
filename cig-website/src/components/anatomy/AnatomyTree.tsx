@@ -11,6 +11,7 @@ import {
   structuresByCategory,
 } from '../../lib/content';
 import type { AnatomicalStructure, AnatomyCategory } from '../../lib/types';
+import { HEART_MESH_NAMES } from '../../lib/cardio3d/heart-meta';
 
 export const AnatomyTree = ({
   selectedId,
@@ -100,7 +101,7 @@ export const AnatomyTree = ({
                               </span>
                             ) : null}
                           </button>
-                          {onToggleHidden ? (
+                          {onToggleHidden && HEART_MESH_NAMES.has(s.meshName) ? (
                             <button
                               type="button"
                               onClick={() => onToggleHidden(s.meshName)}

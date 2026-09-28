@@ -35,20 +35,31 @@ written claim of affiliation on the site.
 
 ## The 3D models
 
-The cardiovascular model and the thoracic model currently shipped are both
-**generated procedurally in code** (`src/lib/cardio3d/model.ts` and
-`src/lib/cardio3d/thorax.ts`). They are original to this project and carry no
-third-party licence obligations.
+### The anatomical heart (Anatomy viewer and homepage previews)
 
-**If you replace it with an external model, record it here.** Several openly
-licensed sources carry mandatory attribution — CC BY-SA in particular is
-share-alike, meaning derivatives must be released under the same terms. See
-`docs/3d-model-sourcing.md` for the researched options and their exact
-requirements, then fill in:
+The heart and great vessels are from **Z-Anatomy**, simplified for the web.
 
 | Model | Source | Licence | Required attribution | Where displayed |
 | --- | --- | --- | --- | --- |
-| — | — | — | — | — |
+| Z-Anatomy heart and great vessels | [Z-Anatomy/Models-of-human-anatomy](https://github.com/Z-Anatomy/Models-of-human-anatomy) | CC BY-SA 4.0 | "Z-Anatomy — The libre 3D atlas of anatomy (CC BY-SA 4.0)"; "BodyParts3D, The Database Center for Life Science (CC BY-SA 2.1 Japan)" | Anatomy page, beneath the structure list and in the footer chip |
+
+- Source file: `assets/models/heart-zanatomy.glb`, the cardiac structures
+  exported from the Z-Anatomy Blender template.
+- `scripts/bake-heart-model.mjs` converts it into
+  `src/lib/cardio3d/heart.generated.ts`. It simplifies the meshes, derives the
+  septa, and derives the conduction-system pathways from the anatomy.
+- **Share-alike:** the adapted model (the GLB, the generated file and anything
+  else derived from it) must stay under **CC BY-SA 4.0** with the attribution
+  above. This applies to the model only, not to the rest of the site's code.
+- The conduction system (SA node, AV node, bundle of His and branches, Purkinje
+  fibres) is schematic. Z-Anatomy has no separate meshes for it.
+
+### The diagrammatic models
+
+The thoracic model (`src/lib/cardio3d/thorax.ts`) and the earlier diagrammatic
+heart (`src/lib/cardio3d/model.ts`, still available as a fallback) are
+**generated procedurally in code**. They are original to this project and carry
+no third-party licence obligations.
 
 Do not use a commercial or unlicensed medical model.
 

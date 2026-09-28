@@ -1,0 +1,32 @@
+{
+  "name": "cig-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cardiology Interest Group (CIG) \u2014 an interactive cardiovascular education platform",
+  "scripts": {
+    "dev": "npm run gen:content && next dev",
+    "build": "npm run gen:content && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "gen:content": "node scripts/gen-content.mjs",
+    "build:static": "node scripts/build-static.mjs",
+    "verify": "node scripts/verify.mjs",
+    "audit:mobile": "node tools/mobile-audit.mjs",
+    "audit:touch": "node tools/touch-walk.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}

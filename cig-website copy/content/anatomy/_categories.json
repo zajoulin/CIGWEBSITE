@@ -1,0 +1,69 @@
+{
+  "groups": [
+    {
+      "id": "heart",
+      "label": "Heart",
+      "categories": ["chambers", "valves", "septa", "coronary", "conduction"]
+    },
+    {
+      "id": "great-vessels",
+      "label": "Great Vessels",
+      "categories": ["great-vessels"]
+    },
+    {
+      "id": "peripheral",
+      "label": "Peripheral Vasculature",
+      "categories": ["peripheral-arteries", "peripheral-veins"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "chambers",
+      "group": "heart",
+      "label": "Chambers",
+      "blurb": "Two atria receive blood; two ventricles eject it. Wall thickness follows the pressure each chamber must generate."
+    },
+    {
+      "id": "valves",
+      "group": "heart",
+      "label": "Valves",
+      "blurb": "Four valves enforce one-way flow. They open and close passively, driven entirely by pressure differences across them."
+    },
+    {
+      "id": "septa",
+      "group": "heart",
+      "label": "Septa",
+      "blurb": "The interatrial and interventricular septa separate the right and left circulations."
+    },
+    {
+      "id": "coronary",
+      "group": "heart",
+      "label": "Coronary Circulation",
+      "blurb": "The heart's own blood supply — arteries that fill mainly in diastole, and veins that return to the right atrium."
+    },
+    {
+      "id": "conduction",
+      "group": "heart",
+      "label": "Conduction System",
+      "blurb": "Specialised myocardium that generates and distributes the electrical impulse, setting rate and coordinating contraction."
+    },
+    {
+      "id": "great-vessels",
+      "group": "great-vessels",
+      "label": "Great Vessels",
+      "blurb": "The large arteries and veins entering and leaving the heart, linking the pulmonary and systemic circuits."
+    },
+    {
+      "id": "peripheral-arteries",
+      "group": "peripheral",
+      "label": "Major Arteries",
+      "blurb": "The systemic arterial tree: distribution, resistance and the cushioning of pulsatile flow."
+    },
+    {
+      "id": "peripheral-veins",
+      "group": "peripheral",
+      "label": "Major Veins",
+      "blurb": "The systemic venous system: the body's capacitance reservoir and the route back to the right heart."
+    }
+  ]
+}

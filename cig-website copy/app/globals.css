@@ -1,0 +1,8 @@
+/* The design system, imported once for the whole application. */
+@import '../src/styles/tokens.css';
+@import '../src/styles/base.css';
+@import '../src/styles/components.css';
+@import '../src/styles/modules.css';
+@import '../src/styles/clinical.css';
+@import '../src/styles/simulation.css';
+@import '../src/styles/touch.css';

@@ -1,0 +1,963 @@
+[
+  {
+    "id": "aortic-stenosis",
+    "name": "Aortic Stenosis",
+    "abbr": "AS",
+    "categoryId": "valvular",
+    "featured": true,
+    "animationId": "aortic-stenosis",
+    "tagline": "Progressive narrowing of the aortic valve orifice, imposing a chronic pressure load on the left ventricle and, once symptomatic, carrying a poor prognosis without intervention.",
+    "overview": "Aortic stenosis is the commonest valve lesion requiring intervention in high-income countries. In older adults it is usually caused by calcific degenerative disease, an active process resembling atherosclerosis rather than passive wear. A congenitally bicuspid valve — present in roughly 1–2% of people — undergoes the same process earlier, typically presenting one to two decades sooner. Rheumatic disease remains a major cause worldwide. The obstruction develops over years, and the left ventricle compensates by concentric hypertrophy. Patients remain asymptomatic for a long time, but the onset of angina, syncope or heart failure marks a sharp change in prognosis and is the trigger for intervention.",
+    "riskFactors": {
+      "modifiable": [
+        "Hypertension",
+        "Dyslipidaemia, particularly elevated lipoprotein(a)",
+        "Smoking",
+        "Diabetes mellitus",
+        "Chronic kidney disease and disordered calcium–phosphate metabolism"
+      ],
+      "nonModifiable": [
+        "Increasing age",
+        "Congenitally bicuspid aortic valve",
+        "Male sex",
+        "Prior rheumatic fever",
+        "Prior chest radiotherapy",
+        "Genetic factors including lipoprotein(a) locus variants"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Endothelial injury and lipid entry",
+        "text": "Mechanical stress, greatest on the aortic side of the cusps, damages the valvular endothelium. Lipoproteins enter the leaflet and are oxidatively modified."
+      },
+      {
+        "title": "Inflammation",
+        "text": "Macrophages and T lymphocytes infiltrate the leaflet, releasing cytokines that sustain a chronic inflammatory process — this is an active biology, not simple wear and tear."
+      },
+      {
+        "title": "Osteogenic transformation",
+        "text": "Valvular interstitial cells differentiate into an osteoblast-like phenotype, laying down calcium hydroxyapatite within the leaflet. Fibrosis and neovascularisation accompany this."
+      },
+      {
+        "title": "Leaflet thickening and reduced excursion",
+        "text": "Progressive calcification stiffens the cusps and restricts their opening. Unlike rheumatic disease, degenerative calcific stenosis characteristically spares the commissures."
+      },
+      {
+        "title": "Rising pressure gradient",
+        "text": "As the effective orifice area falls, a systolic pressure gradient develops between ventricle and aorta. Velocity across the valve rises, and the ventricle must generate progressively higher pressures."
+      },
+      {
+        "title": "Concentric hypertrophy",
+        "text": "By Laplace's law, the ventricle adds sarcomeres in parallel to normalise wall stress. This preserves ejection fraction and stroke volume for years — the compensated phase."
+      },
+      {
+        "title": "Diastolic dysfunction",
+        "text": "The hypertrophied, fibrotic ventricle relaxes poorly. Filling pressures rise, and the atrial contribution to filling becomes critical — which is why atrial fibrillation is poorly tolerated."
+      },
+      {
+        "title": "Supply–demand mismatch",
+        "text": "Hypertrophied muscle has increased oxygen demand, while raised end-diastolic pressure and shortened diastole reduce coronary perfusion pressure. Subendocardial ischaemia causes angina even with normal coronary arteries."
+      },
+      {
+        "title": "Decompensation",
+        "text": "Eventually the ventricle can no longer sustain the load. Afterload mismatch and fibrosis reduce ejection fraction, cardiac output falls, and symptoms of heart failure appear. Once symptomatic, survival without intervention is markedly reduced."
+      }
+    ],
+    "anatomyInvolved": [
+      "Aortic valve cusps and annulus",
+      "Left ventricular outflow tract",
+      "Left ventricular myocardium, which hypertrophies concentrically",
+      "Coronary circulation, compromised by raised filling pressure and hypertrophy",
+      "Ascending aorta, which may show post-stenotic dilatation or bicuspid aortopathy",
+      "Conduction system, lying immediately beneath the valve"
+    ],
+    "relatedStructures": [
+      "aortic-valve",
+      "left-ventricle",
+      "aorta",
+      "coronary-arteries",
+      "bundle-of-his"
+    ],
+    "physiologyChanges": [
+      "Increased left ventricular systolic pressure with a transvalvular gradient",
+      "Concentric hypertrophy with increased wall thickness and reduced compliance",
+      "Elevated left ventricular end-diastolic pressure and impaired relaxation",
+      "Reduced coronary perfusion pressure with subendocardial ischaemia",
+      "Fixed stroke volume that cannot increase appropriately with exertion",
+      "Delayed and diminished carotid upstroke (pulsus parvus et tardus) and a narrow pulse pressure",
+      "In low-flow states, a low gradient despite severe stenosis — the pitfall of low-flow, low-gradient aortic stenosis"
+    ],
+    "progression": [
+      {
+        "stage": "Aortic sclerosis",
+        "text": "Leaflet thickening without significant obstruction. A marker of cardiovascular risk; a minority progress to stenosis."
+      },
+      {
+        "stage": "Mild to moderate stenosis",
+        "text": "Measurable gradient with preserved valve area. Usually asymptomatic; requires surveillance."
+      },
+      {
+        "stage": "Severe asymptomatic stenosis",
+        "text": "Valve area under 1.0 cm², mean gradient 40 mmHg or more, peak velocity 4 m/s or more, with no symptoms. Careful follow-up and exercise testing to unmask symptoms."
+      },
+      {
+        "stage": "Symptomatic severe stenosis",
+        "text": "Angina, syncope or heart failure appear. Prognosis deteriorates sharply and intervention is indicated."
+      },
+      {
+        "stage": "Decompensated stenosis",
+        "text": "Reduced ejection fraction, pulmonary hypertension and low cardiac output; higher procedural risk and worse outcomes."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Exertional breathlessness — usually the earliest symptom",
+        "Exertional angina, often with unobstructed coronary arteries",
+        "Exertional syncope or presyncope, from a fixed stroke volume with exercise-induced vasodilatation",
+        "Reduced exercise tolerance and fatigue",
+        "Symptoms of heart failure in advanced disease",
+        "Patients frequently under-report, having gradually reduced their activity"
+      ],
+      "signs": [
+        "Ejection systolic murmur, loudest in the second right intercostal space, radiating to the carotids",
+        "Slow-rising, low-volume carotid pulse (pulsus parvus et tardus) and a narrow pulse pressure",
+        "Soft or absent aortic component of the second heart sound in severe disease",
+        "Sustained, non-displaced apex beat from concentric hypertrophy",
+        "Fourth heart sound reflecting a stiff ventricle",
+        "Reversed splitting of the second heart sound in severe disease",
+        "The murmur may become quieter as stenosis becomes critical and stroke volume falls"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "The key test — peak velocity, mean gradient, valve area by continuity equation, leaflet morphology, ventricular hypertrophy and function."
+      },
+      {
+        "modality": "Dobutamine stress echocardiography",
+        "findings": "Distinguishes true severe stenosis from pseudo-severe stenosis in low-flow, low-gradient disease with reduced ejection fraction."
+      },
+      {
+        "modality": "Cardiac CT",
+        "findings": "Aortic valve calcium scoring supports severity assessment in equivocal cases, and provides annular sizing and vascular access assessment before intervention."
+      },
+      {
+        "modality": "ECG",
+        "findings": "Left ventricular hypertrophy with strain pattern; conduction abnormalities are common."
+      },
+      {
+        "modality": "Exercise testing",
+        "findings": "In asymptomatic severe stenosis, performed under supervision to unmask symptoms or an abnormal blood pressure response. Contraindicated in symptomatic patients."
+      },
+      {
+        "modality": "Natriuretic peptides",
+        "findings": "Rising levels may indicate ventricular decompensation and help in the timing of intervention."
+      },
+      {
+        "modality": "Coronary assessment",
+        "findings": "Angiography or CT before intervention, since concomitant coronary disease is common."
+      }
+    ],
+    "complications": [
+      "Heart failure and pulmonary hypertension",
+      "Sudden cardiac death, particularly once symptoms have developed",
+      "Atrial fibrillation, poorly tolerated because of dependence on the atrial kick",
+      "Conduction disease and heart block, especially after intervention",
+      "Infective endocarditis",
+      "Acquired von Willebrand syndrome with angiodysplastic gastrointestinal bleeding (Heyde's syndrome)",
+      "Prosthetic complications after valve replacement"
+    ],
+    "treatment": {
+      "principles": "There is no medical therapy that halts progression; the definitive treatment is valve replacement. Timing rests principally on the development of symptoms and on evidence of ventricular decompensation. The choice between surgical and transcatheter replacement is made by a multidisciplinary heart team considering age, anatomy, comorbidity and patient preference. Educational summary only — decisions must follow current guidelines and individual assessment.",
+      "groups": [
+        {
+          "name": "Surveillance",
+          "detail": "Serial echocardiography at intervals determined by severity, with patient education on the symptoms that should prompt urgent review."
+        },
+        {
+          "name": "Risk factor management",
+          "detail": "Treatment of hypertension and cardiovascular risk factors; statins have not been shown to slow stenosis progression."
+        },
+        {
+          "name": "Surgical aortic valve replacement",
+          "detail": "Mechanical or bioprosthetic valves; the established option, particularly in younger patients and where concomitant surgery is needed."
+        },
+        {
+          "name": "Transcatheter aortic valve implantation",
+          "detail": "Now used across a broad risk spectrum, with the decision informed by age, anatomy and life expectancy."
+        },
+        {
+          "name": "Balloon valvuloplasty",
+          "detail": "A bridging or palliative measure in selected patients; restenosis is rapid."
+        },
+        {
+          "name": "Careful haemodynamic management",
+          "detail": "Caution with vasodilators and any cause of hypotension in severe stenosis, since stroke volume cannot increase to compensate."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Calcific degenerative disease is an active, inflammatory, osteogenic process — not simple wear and tear.",
+      "A bicuspid valve presents one to two decades earlier than a tricuspid valve.",
+      "Severe stenosis: valve area under 1.0 cm², mean gradient 40 mmHg or more, peak velocity 4 m/s or more.",
+      "The onset of angina, syncope or heart failure marks a sharp fall in survival without intervention.",
+      "Angina occurs with normal coronary arteries because hypertrophy raises demand while perfusion pressure falls.",
+      "Low-flow, low-gradient stenosis can hide severe disease behind a deceptively low gradient.",
+      "There is no drug that stops progression — valve replacement is the treatment."
+    ],
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "valvular-disease",
+      "heart-sounds",
+      "cardiac-imaging",
+      "hemodynamics"
+    ]
+  },
+  {
+    "id": "aortic-regurgitation",
+    "name": "Aortic Regurgitation",
+    "abbr": "AR",
+    "categoryId": "valvular",
+    "featured": false,
+    "animationId": "aortic-regurgitation",
+    "tagline": "Diastolic backflow from aorta to left ventricle, producing combined volume and pressure loading and a characteristically wide pulse pressure.",
+    "overview": "Aortic regurgitation results either from disease of the cusps — bicuspid valve, rheumatic disease, endocarditis — or from dilatation of the aortic root that prevents the cusps meeting. Chronic regurgitation allows the ventricle to dilate and hypertrophy eccentrically over years, so patients remain asymptomatic for a long time and total stroke volume can be very large. Acute severe regurgitation, as in dissection or endocarditis, is entirely different: the non-dilated ventricle cannot accommodate the volume, filling pressures rise abruptly, and pulmonary oedema and cardiogenic shock develop rapidly.",
+    "riskFactors": {
+      "modifiable": [
+        "Hypertension, which accelerates root dilatation",
+        "Infective endocarditis risk factors",
+        "Untreated syphilis (historically important)"
+      ],
+      "nonModifiable": [
+        "Bicuspid aortic valve",
+        "Connective tissue disorders such as Marfan and Loeys–Dietz syndromes",
+        "Prior rheumatic fever",
+        "Ankylosing spondylitis and other inflammatory aortitis",
+        "Aortic dissection"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Loss of cusp coaptation",
+        "text": "Cusp disease or annular and root dilatation prevents the cusps sealing in diastole, allowing blood to flow back into the ventricle."
+      },
+      {
+        "title": "Volume overload",
+        "text": "The ventricle receives its normal transmitral filling plus the regurgitant volume, so end-diastolic volume rises substantially."
+      },
+      {
+        "title": "Eccentric hypertrophy",
+        "text": "In chronic disease the ventricle adds sarcomeres in series, dilating while remaining relatively compliant. This accommodates the volume at acceptable filling pressures."
+      },
+      {
+        "title": "Combined pressure load",
+        "text": "The large total stroke volume raises systolic pressure, so the ventricle faces both volume and pressure loading — a demanding combination."
+      },
+      {
+        "title": "Wide pulse pressure",
+        "text": "High systolic pressure with a low diastolic pressure produces the wide pulse pressure and the many named peripheral signs of chronic aortic regurgitation."
+      },
+      {
+        "title": "Coronary compromise",
+        "text": "Low aortic diastolic pressure reduces coronary perfusion pressure while hypertrophy raises demand, so angina can occur without coronary disease."
+      },
+      {
+        "title": "Decompensation",
+        "text": "Progressive dilatation eventually exceeds compensatory capacity; contractility falls, ejection fraction declines and symptoms appear — often after irreversible myocardial change has begun."
+      }
+    ],
+    "anatomyInvolved": [
+      "Aortic valve cusps and annulus",
+      "Aortic root and ascending aorta",
+      "Left ventricle, which dilates eccentrically",
+      "Coronary circulation, perfused at reduced diastolic pressure"
+    ],
+    "relatedStructures": [
+      "aortic-valve",
+      "aorta",
+      "left-ventricle",
+      "coronary-arteries"
+    ],
+    "physiologyChanges": [
+      "Increased left ventricular end-diastolic volume and total stroke volume",
+      "Reduced effective forward stroke volume despite a large total output",
+      "Wide pulse pressure with low aortic diastolic pressure",
+      "Reduced coronary perfusion pressure",
+      "In acute regurgitation, an abrupt rise in left ventricular end-diastolic pressure with premature mitral valve closure"
+    ],
+    "progression": [
+      {
+        "stage": "Mild chronic regurgitation",
+        "text": "Small regurgitant volume, normal ventricular dimensions, asymptomatic."
+      },
+      {
+        "stage": "Compensated severe regurgitation",
+        "text": "Marked ventricular dilatation with preserved ejection fraction; patients often remain asymptomatic for years."
+      },
+      {
+        "stage": "Decompensation",
+        "text": "Falling ejection fraction and rising end-systolic dimension, frequently preceding symptoms — which is why surveillance measurements matter."
+      },
+      {
+        "stage": "Acute severe regurgitation",
+        "text": "A separate emergency: normal-sized ventricle, very high filling pressures, pulmonary oedema and shock."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Long asymptomatic period in chronic disease",
+        "Exertional breathlessness and reduced exercise tolerance",
+        "Palpitations and an uncomfortable awareness of the heartbeat",
+        "Angina, sometimes nocturnal",
+        "Rapid onset of severe breathlessness and collapse in acute regurgitation"
+      ],
+      "signs": [
+        "Early diastolic decrescendo murmur at the left sternal edge, best heard sitting forward in expiration",
+        "Collapsing (water-hammer) pulse and a wide pulse pressure",
+        "Displaced, hyperdynamic apex beat",
+        "Austin Flint murmur — a mid-diastolic rumble at the apex",
+        "Peripheral eponymous signs: Corrigan's, de Musset's, Quincke's, Traube's, Duroziez's and Müller's",
+        "In acute regurgitation: tachycardia, hypotension, a soft short murmur and pulmonary oedema — signs may be deceptively subtle"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "Mechanism, regurgitant severity by multiple parameters, ventricular dimensions and function, and aortic root measurements."
+      },
+      {
+        "modality": "Cardiac MRI",
+        "findings": "Accurate regurgitant fraction and ventricular volumes; valuable when echocardiographic assessment is equivocal."
+      },
+      {
+        "modality": "CT or MR angiography",
+        "findings": "Aortic root and ascending aortic dimensions, essential where aortopathy is suspected."
+      },
+      {
+        "modality": "ECG",
+        "findings": "Left ventricular hypertrophy with volume overload pattern in chronic disease."
+      },
+      {
+        "modality": "Exercise testing",
+        "findings": "Objective assessment of functional capacity in apparently asymptomatic patients."
+      }
+    ],
+    "complications": [
+      "Progressive left ventricular dysfunction and heart failure",
+      "Aortic dissection where aortopathy is present",
+      "Infective endocarditis",
+      "Ventricular arrhythmia",
+      "Sudden cardiac death, uncommon but recognised in severe disease"
+    ],
+    "treatment": {
+      "principles": "Chronic severe regurgitation requires surveillance and timely surgery before irreversible ventricular damage occurs; the ventricular dimensions and ejection fraction are as important as symptoms. Acute severe regurgitation is a surgical emergency. Educational summary only.",
+      "groups": [
+        {
+          "name": "Surveillance",
+          "detail": "Serial echocardiography tracking ejection fraction and end-systolic dimension, with intervals set by severity."
+        },
+        {
+          "name": "Medical therapy",
+          "detail": "Blood pressure control, particularly with vasodilating agents; beta-blockers and ARBs in aortopathy syndromes."
+        },
+        {
+          "name": "Valve surgery",
+          "detail": "Aortic valve replacement, or repair and valve-sparing root replacement in selected anatomy and experienced centres."
+        },
+        {
+          "name": "Root and ascending aortic surgery",
+          "detail": "Composite or valve-sparing root replacement when the aorta is dilated beyond threshold diameters."
+        },
+        {
+          "name": "Acute management",
+          "detail": "Urgent surgery, with afterload reduction and inotropic support as a bridge. Intra-aortic balloon counterpulsation is contraindicated."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Caused either by cusp disease or by aortic root dilatation — always image the aorta.",
+      "Chronic disease is remarkably well tolerated because the ventricle dilates and stays compliant.",
+      "The wide pulse pressure explains the long list of peripheral eponymous signs.",
+      "Acute severe regurgitation is a different disease: a small stiff ventricle, pulmonary oedema and shock.",
+      "Ventricular dimensions and ejection fraction, not symptoms alone, drive the timing of surgery."
+    ],
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald"
+    ],
+    "relatedKeyPoints": [
+      "valvular-disease",
+      "heart-sounds",
+      "cardiovascular-examination"
+    ]
+  },
+  {
+    "id": "mitral-stenosis",
+    "name": "Mitral Stenosis",
+    "abbr": "MS",
+    "categoryId": "valvular",
+    "featured": false,
+    "animationId": "mitral-stenosis",
+    "tagline": "Obstruction to left ventricular filling at the mitral valve, overwhelmingly rheumatic in origin, raising left atrial pressure and causing pulmonary congestion.",
+    "overview": "Mitral stenosis is almost always a late consequence of rheumatic fever, in which immune-mediated valvulitis causes commissural fusion, leaflet thickening and chordal shortening, producing the characteristic fish-mouth orifice. It remains a major cause of cardiovascular morbidity in many parts of the world. Because obstruction is upstream of the left ventricle, the ventricle itself is usually normal; the burden falls on the left atrium and, in time, the pulmonary vasculature and right heart. The diastolic gradient is exquisitely sensitive to heart rate, which is why patients often first decompensate with tachycardia — in exercise, pregnancy, fever or the onset of atrial fibrillation.",
+    "riskFactors": {
+      "modifiable": [
+        "Untreated group A streptococcal pharyngitis",
+        "Crowded living conditions and limited access to healthcare",
+        "Non-adherence to secondary rheumatic fever prophylaxis"
+      ],
+      "nonModifiable": [
+        "Prior rheumatic fever",
+        "Female sex",
+        "Genetic susceptibility to rheumatic carditis",
+        "Rarely: congenital mitral stenosis, severe annular calcification, radiation"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Rheumatic valvulitis",
+        "text": "Molecular mimicry between streptococcal M protein and cardiac tissue provokes an immune response that damages the valve, often decades before symptoms appear."
+      },
+      {
+        "title": "Commissural fusion and leaflet change",
+        "text": "Chronic inflammation fuses the commissures, thickens and calcifies leaflets and shortens chordae, progressively reducing the effective orifice."
+      },
+      {
+        "title": "Transmitral gradient",
+        "text": "A diastolic pressure gradient develops between the left atrium and ventricle. Because the gradient depends on flow and on diastolic filling time, tachycardia sharply worsens it."
+      },
+      {
+        "title": "Left atrial hypertension and dilatation",
+        "text": "Raised atrial pressure dilates the chamber and, transmitted backwards through valveless pulmonary veins, raises pulmonary capillary pressure and causes congestion."
+      },
+      {
+        "title": "Pulmonary vascular change",
+        "text": "Sustained pulmonary venous hypertension causes reactive pulmonary arteriolar vasoconstriction and eventually fixed remodelling, producing pulmonary hypertension."
+      },
+      {
+        "title": "Right heart consequences",
+        "text": "Right ventricular pressure overload leads to hypertrophy, dilatation, functional tricuspid regurgitation and right heart failure."
+      },
+      {
+        "title": "Atrial fibrillation and thromboembolism",
+        "text": "Atrial dilatation and fibrosis promote atrial fibrillation, which both removes the atrial kick and greatly increases the risk of left atrial thrombus and systemic embolism."
+      }
+    ],
+    "anatomyInvolved": [
+      "Mitral valve leaflets, commissures and subvalvular apparatus",
+      "Left atrium and its appendage",
+      "Pulmonary veins and pulmonary vasculature",
+      "Right ventricle and tricuspid valve",
+      "Left ventricle, typically normal or underfilled"
+    ],
+    "relatedStructures": [
+      "mitral-valve",
+      "left-atrium",
+      "pulmonary-veins",
+      "right-ventricle",
+      "tricuspid-valve"
+    ],
+    "physiologyChanges": [
+      "Diastolic transmitral pressure gradient that rises steeply with heart rate",
+      "Elevated left atrial and pulmonary capillary pressures",
+      "Reduced left ventricular filling and fixed low cardiac output",
+      "Pulmonary hypertension, initially reactive and later fixed",
+      "Right ventricular pressure overload with secondary tricuspid regurgitation"
+    ],
+    "progression": [
+      {
+        "stage": "Latent period",
+        "text": "Years to decades between rheumatic fever and the appearance of symptoms."
+      },
+      {
+        "stage": "Mild to moderate stenosis",
+        "text": "Gradient appears with exertion; symptoms limited to exercise, pregnancy or febrile illness."
+      },
+      {
+        "stage": "Severe stenosis",
+        "text": "Valve area of about 1.5 cm² or less, with symptoms at rest or minimal exertion and pulmonary congestion."
+      },
+      {
+        "stage": "Pulmonary hypertension and right heart failure",
+        "text": "Fixed pulmonary vascular disease, tricuspid regurgitation, hepatic congestion, oedema and ascites."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Exertional breathlessness, often first noticed during pregnancy or intercurrent illness",
+        "Orthopnoea and paroxysmal nocturnal dyspnoea",
+        "Fatigue from a fixed low cardiac output",
+        "Palpitations with atrial fibrillation",
+        "Haemoptysis from ruptured bronchial veins",
+        "Hoarseness from left recurrent laryngeal nerve compression (Ortner's syndrome)",
+        "Embolic stroke as a presenting event"
+      ],
+      "signs": [
+        "Loud first heart sound with an opening snap after S2 — the shorter the S2–opening snap interval, the more severe the stenosis",
+        "Low-pitched mid-diastolic rumble at the apex with presystolic accentuation in sinus rhythm, best heard in the left lateral position with the bell",
+        "Malar flush (mitral facies)",
+        "Tapping, non-displaced apex beat",
+        "Irregularly irregular pulse if in atrial fibrillation",
+        "Loud P2, right ventricular heave and raised JVP with pulmonary hypertension"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "Valve area by planimetry and pressure half-time, mean gradient, leaflet morphology and mobility, left atrial size and pulmonary artery pressure."
+      },
+      {
+        "modality": "Transoesophageal echocardiography",
+        "findings": "Excludes left atrial appendage thrombus and assesses suitability for balloon valvuloplasty."
+      },
+      {
+        "modality": "ECG",
+        "findings": "P mitrale — broad, notched P waves — in sinus rhythm; frequently atrial fibrillation; right ventricular hypertrophy with pulmonary hypertension."
+      },
+      {
+        "modality": "Chest radiograph",
+        "findings": "Left atrial enlargement with a double right heart border and splayed carina, upper lobe venous diversion and Kerley B lines."
+      },
+      {
+        "modality": "Exercise echocardiography",
+        "findings": "Assesses gradient and pulmonary pressure response when symptoms and resting findings disagree."
+      }
+    ],
+    "complications": [
+      "Atrial fibrillation",
+      "Left atrial thrombus with systemic embolism and stroke",
+      "Pulmonary hypertension and right heart failure",
+      "Pulmonary oedema, particularly with tachycardia",
+      "Infective endocarditis",
+      "Haemoptysis",
+      "Decompensation in pregnancy"
+    ],
+    "treatment": {
+      "principles": "Rate control protects diastolic filling time; anticoagulation is essential in atrial fibrillation, where vitamin K antagonists rather than direct oral anticoagulants are indicated in rheumatic mitral stenosis. Mechanical relief of obstruction is the definitive treatment, and percutaneous balloon commissurotomy is highly effective in suitable anatomy. Educational summary only.",
+      "groups": [
+        {
+          "name": "Rate control",
+          "detail": "Beta-blockers or non-dihydropyridine calcium channel blockers to lengthen diastole and lower the gradient."
+        },
+        {
+          "name": "Diuretics",
+          "detail": "For pulmonary congestion, used cautiously to avoid reducing an already limited preload."
+        },
+        {
+          "name": "Anticoagulation",
+          "detail": "Warfarin for atrial fibrillation, prior embolism or left atrial thrombus in rheumatic mitral stenosis."
+        },
+        {
+          "name": "Percutaneous mitral balloon commissurotomy",
+          "detail": "First-line in suitable pliable valves without significant regurgitation or thrombus."
+        },
+        {
+          "name": "Surgery",
+          "detail": "Open commissurotomy or mitral valve replacement when the anatomy is unsuitable for balloon therapy."
+        },
+        {
+          "name": "Secondary prophylaxis",
+          "detail": "Long-term antibiotic prophylaxis to prevent recurrent rheumatic fever in those with rheumatic heart disease."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Almost always rheumatic; commissural fusion produces the fish-mouth orifice.",
+      "The transmitral gradient depends on flow and diastolic time — tachycardia is what decompensates patients.",
+      "The left ventricle is usually normal; the burden falls on the left atrium and right heart.",
+      "Severe stenosis is defined by a valve area of about 1.5 cm² or less.",
+      "A shorter interval between S2 and the opening snap indicates more severe stenosis.",
+      "Rheumatic mitral stenosis with atrial fibrillation requires warfarin rather than a DOAC."
+    ],
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald",
+      "who-cvd"
+    ],
+    "relatedKeyPoints": [
+      "valvular-disease",
+      "heart-sounds",
+      "cardiac-cycle",
+      "arrhythmia-principles"
+    ]
+  },
+  {
+    "id": "mitral-regurgitation",
+    "name": "Mitral Regurgitation",
+    "abbr": "MR",
+    "categoryId": "valvular",
+    "featured": false,
+    "animationId": "mitral-regurgitation",
+    "tagline": "Systolic backflow into the left atrium, from primary leaflet disease or secondary to ventricular remodelling — the commonest valve lesion overall.",
+    "overview": "Mitral regurgitation is divided into primary disease, in which the valve apparatus itself is abnormal (most commonly myxomatous degeneration with prolapse, or chordal rupture, rheumatic disease or endocarditis), and secondary or functional disease, in which the leaflets are structurally normal but annular dilatation and papillary muscle displacement from ventricular remodelling prevent coaptation. The distinction is fundamental: primary disease is a valve problem treated by fixing the valve, whereas secondary disease is a ventricular problem in which treating the ventricle comes first. Chronic regurgitation is well tolerated for years; acute regurgitation, as from papillary muscle rupture, is a haemodynamic emergency.",
+    "riskFactors": {
+      "modifiable": [
+        "Ischaemic heart disease causing papillary muscle dysfunction",
+        "Hypertension and heart failure driving annular dilatation",
+        "Infective endocarditis risk factors",
+        "Untreated streptococcal infection in rheumatic disease"
+      ],
+      "nonModifiable": [
+        "Age-related myxomatous degeneration",
+        "Connective tissue disorders such as Marfan syndrome",
+        "Prior rheumatic fever",
+        "Genetic predisposition to mitral valve prolapse",
+        "Hypertrophic cardiomyopathy with systolic anterior motion"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Loss of coaptation",
+        "text": "Either the leaflets are abnormal (primary) or the apparatus is geometrically distorted by ventricular dilatation (secondary), so the valve fails to seal in systole."
+      },
+      {
+        "title": "Regurgitant volume",
+        "text": "Part of the stroke volume is ejected backwards into the low-pressure left atrium. Because it ejects partly into a low-impedance chamber, the ventricle is initially unloaded and ejection fraction appears deceptively high."
+      },
+      {
+        "title": "Left atrial volume overload",
+        "text": "The atrium receives both pulmonary venous return and the regurgitant volume. In chronic disease it dilates and remains compliant, so pressure rises only modestly."
+      },
+      {
+        "title": "Left ventricular volume overload",
+        "text": "The whole regurgitant volume returns to the ventricle in diastole, causing eccentric hypertrophy and progressive dilatation."
+      },
+      {
+        "title": "Vicious cycle in secondary disease",
+        "text": "Ventricular dilatation worsens regurgitation, which further volume-loads and dilates the ventricle — regurgitation begetting regurgitation."
+      },
+      {
+        "title": "Progressive myocardial dysfunction",
+        "text": "Chronic volume overload eventually impairs contractility. Because the ventricle has been chronically unloaded, a 'normal' ejection fraction may already represent significant dysfunction."
+      },
+      {
+        "title": "Acute regurgitation",
+        "text": "With sudden severe regurgitation, the small non-compliant atrium cannot accommodate the volume; atrial and pulmonary venous pressures rise abruptly, causing flash pulmonary oedema and shock."
+      }
+    ],
+    "anatomyInvolved": [
+      "Mitral leaflets, annulus, chordae tendineae and papillary muscles",
+      "Left atrium, which dilates in chronic disease",
+      "Left ventricle, volume-loaded and eccentrically hypertrophied",
+      "Pulmonary vasculature",
+      "Coronary supply to the posteromedial papillary muscle"
+    ],
+    "relatedStructures": [
+      "mitral-valve",
+      "left-atrium",
+      "left-ventricle",
+      "coronary-arteries",
+      "pulmonary-veins"
+    ],
+    "physiologyChanges": [
+      "Increased total stroke volume with reduced effective forward output",
+      "Left atrial volume overload with a prominent v wave",
+      "Left ventricular eccentric hypertrophy and dilatation",
+      "Deceptively preserved ejection fraction from chronic unloading",
+      "Elevated pulmonary venous pressures, abruptly so in acute disease"
+    ],
+    "progression": [
+      {
+        "stage": "Mild regurgitation",
+        "text": "Small regurgitant volume with normal chamber sizes and no symptoms."
+      },
+      {
+        "stage": "Compensated severe regurgitation",
+        "text": "Progressive left atrial and ventricular dilatation with preserved ejection fraction; often asymptomatic."
+      },
+      {
+        "stage": "Decompensation",
+        "text": "Rising end-systolic dimension and falling ejection fraction, frequently before symptoms — the reason for regular surveillance."
+      },
+      {
+        "stage": "Acute severe regurgitation",
+        "text": "Sudden chordal or papillary muscle rupture with flash pulmonary oedema and cardiogenic shock."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Long asymptomatic period in chronic disease",
+        "Exertional breathlessness and fatigue",
+        "Palpitations, often with atrial fibrillation",
+        "Orthopnoea and symptoms of heart failure as disease advances",
+        "Sudden severe breathlessness and collapse in acute regurgitation"
+      ],
+      "signs": [
+        "Pansystolic murmur at the apex radiating to the axilla",
+        "Soft first heart sound; a third heart sound with significant volume overload",
+        "Displaced, hyperdynamic apex beat",
+        "Mid-systolic click with a late systolic murmur in mitral valve prolapse",
+        "Signs of pulmonary hypertension and right heart failure in advanced disease",
+        "In acute regurgitation the murmur may be short or even absent — a dangerous pitfall"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "Mechanism and severity by an integrated approach — effective regurgitant orifice area, regurgitant volume, vena contracta — plus chamber dimensions and function."
+      },
+      {
+        "modality": "Transoesophageal and 3D echocardiography",
+        "findings": "Segmental leaflet analysis (A1–A3, P1–P3) essential for surgical planning and procedural guidance."
+      },
+      {
+        "modality": "Cardiac MRI",
+        "findings": "Regurgitant volume and fraction, and accurate ventricular volumes; useful when echocardiography is discordant."
+      },
+      {
+        "modality": "ECG",
+        "findings": "Left atrial enlargement, left ventricular hypertrophy, frequently atrial fibrillation."
+      },
+      {
+        "modality": "Exercise echocardiography",
+        "findings": "Assesses dynamic severity and pulmonary pressures, particularly in secondary regurgitation."
+      }
+    ],
+    "complications": [
+      "Progressive left ventricular dysfunction and heart failure",
+      "Atrial fibrillation",
+      "Pulmonary hypertension and right heart failure",
+      "Infective endocarditis",
+      "Systemic embolism",
+      "Sudden cardiac death in a small subset with prolapse and mitral annular disjunction"
+    ],
+    "treatment": {
+      "principles": "In primary regurgitation, valve repair is preferred and is best performed before ventricular dysfunction develops. In secondary regurgitation, optimal guideline-directed heart failure therapy comes first, with transcatheter or surgical intervention considered when regurgitation remains severe and symptomatic. Educational summary only.",
+      "groups": [
+        {
+          "name": "Surveillance",
+          "detail": "Serial echocardiography tracking ejection fraction, end-systolic dimension and pulmonary pressures."
+        },
+        {
+          "name": "Heart failure therapy",
+          "detail": "Foundational for secondary regurgitation — RAS inhibition, beta-blockade, MRA, SGLT2 inhibition and resynchronisation where indicated."
+        },
+        {
+          "name": "Surgical repair",
+          "detail": "The preferred option in suitable degenerative disease, with better outcomes than replacement when durable repair is achievable."
+        },
+        {
+          "name": "Valve replacement",
+          "detail": "When repair is not feasible, with preservation of the subvalvular apparatus where possible."
+        },
+        {
+          "name": "Transcatheter edge-to-edge repair",
+          "detail": "For selected patients at high surgical risk and for appropriately chosen secondary regurgitation."
+        },
+        {
+          "name": "Acute management",
+          "detail": "Afterload reduction, mechanical support and urgent surgery for acute severe regurgitation."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Distinguish primary (valve) from secondary (ventricular) regurgitation — the treatment logic differs entirely.",
+      "A 'normal' ejection fraction may already indicate dysfunction, because the ventricle is chronically unloaded.",
+      "The posteromedial papillary muscle has a single blood supply and is the one that ruptures after infarction.",
+      "Chronic disease is well tolerated for years; acute disease causes flash pulmonary oedema and shock.",
+      "In acute severe regurgitation the murmur may be quiet or absent — never rely on murmur intensity.",
+      "Repair is preferred over replacement in suitable degenerative disease."
+    ],
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald"
+    ],
+    "relatedKeyPoints": [
+      "valvular-disease",
+      "heart-sounds",
+      "heart-failure-principles",
+      "cardiac-imaging"
+    ]
+  },
+  {
+    "id": "tricuspid-regurgitation",
+    "name": "Tricuspid Regurgitation",
+    "abbr": "TR",
+    "categoryId": "valvular",
+    "featured": false,
+    "animationId": "tricuspid-regurgitation",
+    "tagline": "Systolic backflow into the right atrium — usually secondary to right ventricular and annular dilatation, and increasingly recognised as prognostically important.",
+    "overview": "Tricuspid regurgitation is common and, in trivial degrees, entirely normal. Clinically significant regurgitation is most often secondary or functional: the leaflets are structurally normal but the annulus has dilated and the papillary muscles have been displaced by right ventricular remodelling, usually driven by left heart disease or pulmonary hypertension. Primary disease — endocarditis, Ebstein's anomaly, carcinoid, trauma, or lead-related injury — accounts for a minority. Long dismissed as the 'forgotten valve', severe tricuspid regurgitation is now known to be independently associated with worse outcomes, and transcatheter therapies are developing rapidly.",
+    "riskFactors": {
+      "modifiable": [
+        "Left heart disease raising pulmonary pressures",
+        "Pulmonary hypertension of any cause",
+        "Atrial fibrillation with atrial and annular dilatation",
+        "Intracardiac device leads crossing the valve",
+        "Injection drug use predisposing to endocarditis"
+      ],
+      "nonModifiable": [
+        "Ebstein's anomaly and other congenital lesions",
+        "Carcinoid syndrome",
+        "Prior rheumatic fever",
+        "Prior chest radiotherapy",
+        "Right ventricular cardiomyopathy"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Right ventricular pressure or volume overload",
+        "text": "Left heart disease, pulmonary hypertension or intrinsic right ventricular disease causes the ventricle to dilate."
+      },
+      {
+        "title": "Annular dilatation",
+        "text": "The non-planar tricuspid annulus dilates, predominantly along its free wall, increasing the distance the leaflets must cover to coapt."
+      },
+      {
+        "title": "Leaflet tethering",
+        "text": "Papillary muscle displacement from ventricular remodelling tethers the leaflets apically, further reducing coaptation."
+      },
+      {
+        "title": "Regurgitant volume and atrial overload",
+        "text": "Systolic backflow raises right atrial pressure, producing a giant v wave and transmitting pressure into the systemic veins."
+      },
+      {
+        "title": "Self-perpetuating cycle",
+        "text": "Volume overload dilates the right ventricle further, worsening annular dilatation and tethering — regurgitation begetting regurgitation."
+      },
+      {
+        "title": "Systemic venous congestion",
+        "text": "Sustained venous hypertension produces hepatic congestion, ascites, oedema and, eventually, cardiac cirrhosis and renal dysfunction."
+      }
+    ],
+    "anatomyInvolved": [
+      "Tricuspid annulus, leaflets and subvalvular apparatus",
+      "Right ventricle and its papillary muscles",
+      "Right atrium, which dilates markedly",
+      "Systemic veins, liver and kidneys"
+    ],
+    "relatedStructures": [
+      "tricuspid-valve",
+      "right-ventricle",
+      "right-atrium",
+      "inferior-vena-cava"
+    ],
+    "physiologyChanges": [
+      "Reduced effective forward flow into the pulmonary circulation",
+      "Elevated right atrial pressure with a giant v wave in the jugular venous pulse",
+      "Progressive right ventricular volume overload and dilatation",
+      "Systemic venous congestion with hepatic and renal consequences",
+      "Reduced left ventricular preload and therefore reduced cardiac output"
+    ],
+    "progression": [
+      {
+        "stage": "Trivial or mild",
+        "text": "Detected in most normal hearts on echocardiography; of no clinical significance."
+      },
+      {
+        "stage": "Moderate secondary regurgitation",
+        "text": "Annular dilatation from right ventricular remodelling; usually asymptomatic."
+      },
+      {
+        "stage": "Severe regurgitation",
+        "text": "Marked annular dilatation with leaflet tethering, giant v waves and systemic congestion."
+      },
+      {
+        "stage": "End-stage",
+        "text": "Right ventricular failure, cardiac cirrhosis, refractory ascites and renal dysfunction; intervention carries high risk at this point."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Fatigue and reduced exercise tolerance from low forward output",
+        "Abdominal swelling and discomfort from ascites and hepatic congestion",
+        "Peripheral oedema",
+        "Early satiety and anorexia",
+        "Pulsation in the neck and, sometimes, the liver"
+      ],
+      "signs": [
+        "Pansystolic murmur at the lower left sternal edge increasing on inspiration (Carvallo's sign)",
+        "Giant v waves in the jugular venous pulse",
+        "Pulsatile, tender hepatomegaly",
+        "Ascites and dependent pitting oedema",
+        "Left parasternal heave from right ventricular dilatation",
+        "Jaundice and signs of chronic hepatic congestion in advanced disease"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "Severity grading, annular diameter, leaflet tethering, right ventricular size and function, and estimated pulmonary artery systolic pressure."
+      },
+      {
+        "modality": "3D echocardiography",
+        "findings": "Accurate assessment of the non-planar annulus and coaptation gap, essential for transcatheter planning."
+      },
+      {
+        "modality": "Cardiac MRI",
+        "findings": "Reference standard for right ventricular volumes, function and regurgitant fraction."
+      },
+      {
+        "modality": "Right heart catheterisation",
+        "findings": "Pulmonary pressures and resistance, distinguishing regurgitation driven by pulmonary hypertension from isolated disease."
+      },
+      {
+        "modality": "Liver and renal assessment",
+        "findings": "Liver function, hepatic elastography and renal function to quantify end-organ consequences."
+      }
+    ],
+    "complications": [
+      "Right heart failure",
+      "Cardiac cirrhosis and hepatic dysfunction",
+      "Cardiorenal syndrome",
+      "Atrial fibrillation",
+      "Refractory ascites and oedema",
+      "Reduced survival independent of other cardiac disease"
+    ],
+    "treatment": {
+      "principles": "Treat the underlying driver — left heart disease, pulmonary hypertension or arrhythmia — before considering the valve. Diuretics relieve congestion. Concomitant tricuspid annuloplasty at the time of left-sided surgery prevents late deterioration, and transcatheter options are expanding for patients unsuitable for surgery. Educational summary only.",
+      "groups": [
+        {
+          "name": "Treat the underlying cause",
+          "detail": "Optimising left heart failure therapy, treating pulmonary hypertension and restoring sinus rhythm where feasible."
+        },
+        {
+          "name": "Diuretics",
+          "detail": "Loop diuretics with aldosterone antagonists for systemic congestion and ascites."
+        },
+        {
+          "name": "Surgical annuloplasty",
+          "detail": "Performed at the time of left-sided valve surgery when the annulus is dilated, even if regurgitation is only moderate."
+        },
+        {
+          "name": "Tricuspid valve replacement",
+          "detail": "For primary disease not amenable to repair; carries higher operative risk."
+        },
+        {
+          "name": "Transcatheter therapy",
+          "detail": "Edge-to-edge repair, annuloplasty devices and transcatheter replacement in selected high-risk patients."
+        },
+        {
+          "name": "Lead management",
+          "detail": "Careful consideration of lead position, extraction or leadless alternatives in lead-induced regurgitation."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Most clinically significant tricuspid regurgitation is secondary to right ventricular and annular dilatation.",
+      "Giant v waves and pulsatile hepatomegaly are the classic bedside findings.",
+      "Right-sided murmurs increase on inspiration — Carvallo's sign.",
+      "It is not benign: severe regurgitation independently predicts worse outcomes.",
+      "Always look for and treat the underlying left heart or pulmonary cause first.",
+      "Intervening before right ventricular and hepatic decompensation gives far better results."
+    ],
+    "references": [
+      "aha-vhd-2020",
+      "esc-vhd-2021",
+      "braunwald"
+    ],
+    "relatedKeyPoints": [
+      "valvular-disease",
+      "cardiovascular-examination",
+      "heart-failure-principles"
+    ]
+  }
+]

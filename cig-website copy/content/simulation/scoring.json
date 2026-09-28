@@ -1,0 +1,46 @@
+{
+  "sections": [
+    {
+      "id": "placement",
+      "label": "Electrode placement",
+      "max": 10,
+      "description": "One mark for each of the ten electrodes placed at its correct anatomical landmark first time, less any landmark hints you asked for."
+    },
+    {
+      "id": "analysis",
+      "label": "ECG analysis",
+      "max": 10,
+      "description": "The rhythm and the systematic read of the tracing — rate, rhythm, P waves, PR interval, QRS, axis, ST segment and T waves."
+    },
+    {
+      "id": "reasoning",
+      "label": "Clinical reasoning",
+      "max": 10,
+      "description": "Putting the presentation, the observations and the ECG together, and choosing the appropriate next step."
+    }
+  ],
+  "placementPenalty": 1,
+  "hintPenalty": 0.5,
+  "bands": [
+    {
+      "min": 0.9,
+      "label": "Excellent",
+      "note": "A clean, systematic run. Keep the same order of operations under pressure and it will hold."
+    },
+    {
+      "min": 0.75,
+      "label": "Strong",
+      "note": "Solid work. Read the debrief below for the points that cost you marks and try a new case."
+    },
+    {
+      "min": 0.55,
+      "label": "Developing",
+      "note": "The approach is there but the detail is not yet reliable. Work through the explanation, then repeat this difficulty until it is."
+    },
+    {
+      "min": 0,
+      "label": "Needs review",
+      "note": "Go back to the ECG module and the examination module for this material, then return to the simulation at Beginner level."
+    }
+  ]
+}

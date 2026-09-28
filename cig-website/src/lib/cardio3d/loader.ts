@@ -30,13 +30,19 @@
    ========================================================================== */
 
 import { buildCardiovascularModel, type ModelPart } from './model';
+import { HEART_ATTRIBUTION } from './heart-meta';
 
 export type ModelSource =
   | { kind: 'procedural' }
+  | { kind: 'anatomical' }
   | { kind: 'gltf'; url: string; attribution?: string };
 
-/** The source currently in use. Change this to swap in a licensed model. */
-export const MODEL_SOURCE: ModelSource = { kind: 'procedural' };
+/**
+ * The source currently in use: the Z-Anatomy heart, baked by
+ * scripts/bake-heart-model.mjs. Set to `{ kind: 'procedural' }` to go back to
+ * the diagrammatic model.
+ */
+export const MODEL_SOURCE: ModelSource = { kind: 'anatomical' };
 
 export interface LoadedModel {
   parts: ModelPart[];
@@ -51,6 +57,16 @@ export interface LoadedModel {
  * can stream the file in without any caller changing.
  */
 export const loadModel = async (source: ModelSource = MODEL_SOURCE): Promise<LoadedModel> => {
+  if (source.kind === 'anatomical') {
+    // Loaded on demand so the geometry stays out of the page's main bundle.
+    const { buildAnatomicalHeart } = await import('./heart');
+    return {
+      parts: buildAnatomicalHeart(),
+      attribution: HEART_ATTRIBUTION,
+      procedural: false,
+    };
+  }
+
   if (source.kind === 'procedural') {
     // Yield once so the loading state can paint before geometry generation.
     await new Promise((r) => setTimeout(r, 0));

@@ -1,0 +1,503 @@
+[
+  {
+    "id": "stemi",
+    "name": "ST-Elevation Myocardial Infarction",
+    "abbr": "STEMI",
+    "categoryId": "ischaemia",
+    "featured": true,
+    "tagline": "Convex ST elevation in contiguous leads — the ECG that starts the clock.",
+    "rateRange": "Variable; often sinus tachycardia",
+    "regularity": "Usually regular sinus rhythm",
+    "summary": "Complete occlusion of an epicardial coronary artery causes transmural ischaemia. The ST segment lifts off the baseline in the leads facing the infarcting wall, classically with a convex 'tombstone' shape merging into the T wave, and reciprocal depression appears in the opposing leads. Over hours to days the ST segment settles, T waves invert and pathological Q waves develop.",
+    "mechanism": "Plaque rupture and thrombosis abruptly stop flow in a coronary artery. Ischaemic myocytes cannot maintain their resting membrane potential or complete repolarisation normally, so a current of injury flows between ischaemic and healthy tissue during both the resting and plateau phases. Recorded from the body surface, that current shifts the ST segment upward in the leads overlying the injured wall and downward in leads facing it from the opposite side — the reciprocal change. The distribution of ST elevation localises the occlusion: V1–V4 anteroseptal (left anterior descending), II, III and aVF inferior (usually right coronary), I, aVL, V5–V6 lateral (circumflex). Ischaemic myocardium is also electrically unstable, which is why ventricular arrhythmia is the main early cause of death.",
+    "recognition": [
+      "ST elevation in two or more anatomically contiguous leads",
+      "Convex upward or straightened ST segment merging into the T wave",
+      "Reciprocal ST depression in the opposing leads — strong evidence of true infarction",
+      "Hyperacute, broad, tall T waves in the first minutes, before ST elevation develops",
+      "Pathological Q waves and T wave inversion as the infarct evolves",
+      "New left bundle branch block with ischaemic symptoms is managed with the same urgency"
+    ],
+    "causes": [
+      "Atherosclerotic plaque rupture with occlusive thrombus — the overwhelming majority",
+      "Coronary spasm, spontaneous coronary artery dissection, embolism",
+      "Severe supply–demand mismatch in the presence of fixed disease",
+      "Cocaine and other sympathomimetic drugs"
+    ],
+    "significance": "A time-critical emergency. Myocardium infarcts progressively from the subendocardium outwards over a few hours, so every minute of delay costs muscle. The ECG is the single test that triggers reperfusion, and it must be obtained and interpreted within ten minutes of first medical contact.",
+    "management": "Activate the primary percutaneous coronary intervention pathway immediately; fibrinolysis if timely PCI is unavailable. Give aspirin and a second antiplatelet agent, anticoagulation, analgesia and oxygen only if hypoxaemic. Monitor continuously with a defibrillator to hand — ventricular fibrillation is commonest in the first hour. Secondary prevention with dual antiplatelet therapy, a high-intensity statin, a beta blocker, an ACE inhibitor and cardiac rehabilitation.",
+    "waveform": {
+      "rate": 96,
+      "irregularity": 0.03,
+      "atrial": "sinus",
+      "pAmplitude": 0.14,
+      "pDuration": 0.1,
+      "prInterval": 0.16,
+      "qrsDuration": 0.1,
+      "qrsAmplitude": 1.05,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.22,
+      "sAmplitude": 0.12,
+      "stShift": 0.32,
+      "stShape": "convex",
+      "tAmplitude": 0.44,
+      "tShape": "broad",
+      "qtInterval": 0.4,
+      "wander": 0.1,
+      "noise": 0.06
+    },
+    "vitals": {
+      "heartRate": 96,
+      "spo2": 95,
+      "respiratoryRate": 22,
+      "bpSystolic": 138,
+      "bpDiastolic": 84,
+      "temperature": 36.8,
+      "alarm": "critical",
+      "alarmText": "ST ELEVATION — ACTIVATE PPCI",
+      "bedside": "Crushing central chest pain radiating to the jaw, sweating and nauseated. Cath lab activated; door-to-balloon clock running."
+    },
+    "highlights": [
+      {
+        "feature": "st",
+        "label": "ST elevation",
+        "note": "The J point lifts off the baseline and the segment arches upward — convex, or 'tombstone' — before merging into the T wave. Measured at the J point relative to the T–P baseline in two contiguous leads.",
+        "abnormal": true
+      },
+      {
+        "feature": "j",
+        "label": "J point",
+        "note": "The junction between the end of the QRS and the start of the ST segment. This is where ST deviation is measured, and it is the first part of the complex to lift in acute injury.",
+        "abnormal": true
+      },
+      {
+        "feature": "t",
+        "label": "Hyperacute T wave",
+        "note": "In the earliest minutes the T wave becomes tall, broad and symmetrical before any ST elevation appears — easily missed, and the earliest sign of occlusion.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "Pathological Q wave",
+        "note": "A Q wave deeper than a quarter of the R wave, or wider than 0.04 s, marks myocardium that is no longer electrically active — established, full-thickness necrosis.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "The artery occludes",
+        "text": "A ruptured atherosclerotic plaque triggers thrombosis that abruptly stops flow. The myocardium supplied by that vessel is instantly ischaemic.",
+        "duration": 1.2,
+        "highlight": "baseline"
+      },
+      {
+        "title": "Hyperacute T waves",
+        "text": "The first electrical change is a tall, broad, symmetrical T wave. If a trace is taken in these first minutes, this may be all there is to see.",
+        "duration": 1.3,
+        "highlight": "t"
+      },
+      {
+        "title": "A current of injury",
+        "text": "Ischaemic cells cannot hold their membrane potential. Current flows between injured and healthy myocardium and displaces the ST segment upward in the leads facing the infarct.",
+        "duration": 1.4,
+        "highlight": "st"
+      },
+      {
+        "title": "Convex elevation",
+        "text": "The ST segment arches upward from the J point and merges into the T wave. Two contiguous leads with this appearance, plus reciprocal depression elsewhere, make the diagnosis.",
+        "duration": 1.4,
+        "highlight": "j"
+      },
+      {
+        "title": "Necrosis and Q waves",
+        "text": "Over hours, dead myocardium stops contributing any electrical signal. A pathological Q wave appears, ST elevation resolves and the T wave inverts — the evolved infarct pattern.",
+        "duration": 1.5,
+        "highlight": "qrs"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Rate",
+        "value": "96 bpm",
+        "normal": "60–100 bpm"
+      },
+      {
+        "label": "ST elevation",
+        "value": "≈3.8 mm at the J point",
+        "normal": "< 1 mm",
+        "abnormal": true
+      },
+      {
+        "label": "ST morphology",
+        "value": "Convex upward",
+        "normal": "Isoelectric, flat",
+        "abnormal": true
+      },
+      {
+        "label": "Q wave",
+        "value": "Pathological, > 0.04 s",
+        "normal": "Small or absent",
+        "abnormal": true
+      },
+      {
+        "label": "T wave",
+        "value": "Broad and tall",
+        "normal": "Upright, asymmetrical",
+        "abnormal": true
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.10 s",
+        "normal": "< 0.12 s"
+      }
+    ],
+    "relatedDiseases": [
+      "myocardial-infarction",
+      "atherosclerosis",
+      "stable-angina"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials",
+      "coronary-circulation"
+    ],
+    "relatedStructures": [
+      "coronary-arteries",
+      "left-ventricle",
+      "interventricular-septum"
+    ],
+    "references": [
+      "esc-acs-2023",
+      "umdmi-2018",
+      "aha-ecg-part6"
+    ]
+  },
+  {
+    "id": "nstemi-ischaemia",
+    "name": "Ischaemic ST Depression & T Wave Inversion",
+    "abbr": "NSTE-ACS pattern",
+    "categoryId": "ischaemia",
+    "tagline": "Horizontal or downsloping ST depression with T wave inversion — ischaemia without ST elevation.",
+    "rateRange": "Often mildly elevated, 80–110 bpm",
+    "regularity": "Regular sinus rhythm in most cases",
+    "summary": "Subendocardial ischaemia — from a severely narrowed but not completely occluded coronary artery, or from demand outstripping a fixed supply — shifts the ST segment downward in the leads facing the ischaemic territory, and inverts the T wave symmetrically. This is the ECG of non-ST-elevation acute coronary syndrome. The tracing cannot distinguish unstable angina from non-ST-elevation myocardial infarction: that distinction is made by serial high-sensitivity troponin, not by the ECG. A completely normal ECG never excludes acute coronary syndrome.",
+    "mechanism": "The subendocardium is the least well perfused layer of the ventricular wall: it is furthest from the epicardial vessels, it is compressed during systole, and it has the highest wall stress. When coronary supply is reduced but not abolished, this layer becomes ischaemic first. Ischaemic subendocardial cells repolarise abnormally and generate a current of injury directed away from the recording electrode, so the ST segment is depressed rather than elevated — the mirror of the transmural injury current in STEMI. Because ischaemia is regional, the depression appears in the leads facing that territory, and it is horizontal or downsloping rather than the upsloping depression of tachycardia. Delayed and reversed repolarisation of the ischaemic layer also produces symmetrical, often deep, T wave inversion. Deep, symmetrical T wave inversion in V2–V4 with preserved R waves in a patient with resolved chest pain is Wellens' syndrome, which indicates critical proximal left anterior descending stenosis.",
+    "recognition": [
+      "Horizontal or downsloping ST depression ≥ 0.5 mm in two contiguous leads",
+      "Symmetrical T wave inversion, often deep, in the same territory",
+      "No ST elevation meeting STEMI criteria — check every lead before concluding this",
+      "Changes are often dynamic: compare with a previous tracing and repeat during pain",
+      "Upsloping depression alone is non-specific and common with tachycardia",
+      "ST depression maximal in V1–V3 may be the reciprocal image of a posterior infarction — record posterior leads"
+    ],
+    "causes": [
+      "Non-occlusive coronary thrombus on a ruptured or eroded plaque",
+      "Severe fixed stenosis with increased demand — tachycardia, anaemia, sepsis, hypertension",
+      "Coronary spasm and microvascular disease",
+      "Non-coronary causes of the same appearance: left ventricular hypertrophy, digoxin effect, hypokalaemia, bundle branch block"
+    ],
+    "significance": "Non-ST-elevation acute coronary syndrome carries a mortality at six months comparable to STEMI, and the ECG changes identify the higher-risk patients: the more leads involved and the deeper the depression, the worse the prognosis. The management question is not whether to reperfuse immediately but how quickly to take the patient to angiography, which is decided by risk score, dynamic changes, troponin trajectory and haemodynamic stability.",
+    "management": "Continuous monitoring, serial ECGs and serial high-sensitivity troponin. Antiplatelet therapy and anticoagulation, anti-anginal treatment, and risk stratification with a validated score. An invasive strategy within 24 hours is recommended for high-risk patients, and immediately for ongoing pain, haemodynamic instability, life-threatening arrhythmia or dynamic ST changes. Treat precipitating causes such as anaemia or arrhythmia, and start secondary prevention early.",
+    "waveform": {
+      "rate": 94,
+      "irregularity": 0.02,
+      "atrial": "sinus",
+      "pAmplitude": 0.14,
+      "pDuration": 0.1,
+      "prInterval": 0.16,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.1,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.06,
+      "sAmplitude": 0.2,
+      "stShift": -0.18,
+      "stShape": "downsloping",
+      "tAmplitude": -0.36,
+      "tShape": "inverted",
+      "qtInterval": 0.38,
+      "wander": 0.08,
+      "noise": 0.06
+    },
+    "vitals": {
+      "heartRate": 94,
+      "spo2": 96,
+      "respiratoryRate": 20,
+      "bpSystolic": 148,
+      "bpDiastolic": 88,
+      "temperature": 36.7,
+      "alarm": "warning",
+      "alarmText": "ST DEPRESSION — ISCHAEMIA",
+      "bedside": "Central chest tightness at rest for forty minutes, settling slowly. Anxious and clammy; the pain is the same character as her exertional angina but longer."
+    },
+    "highlights": [
+      {
+        "feature": "st",
+        "label": "ST depression",
+        "note": "Horizontal or downsloping displacement below the baseline, measured at the J point against the T–P segment. Shape matters: upsloping depression is far less specific.",
+        "abnormal": true
+      },
+      {
+        "feature": "j",
+        "label": "J point",
+        "note": "Depression is measured here, 60–80 ms after the J point in most criteria. Getting the baseline right — the T–P segment, not the PR segment — is what makes the measurement reliable.",
+        "abnormal": true
+      },
+      {
+        "feature": "t",
+        "label": "Symmetrical T inversion",
+        "note": "Ischaemic T wave inversion is symmetrical, with matching down and up strokes, unlike the asymmetrical inversion of ventricular strain.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "Preserved QRS",
+        "note": "The QRS is normal in width and there are no pathological Q waves: this is ischaemia of the subendocardium, not established transmural necrosis.",
+        "abnormal": false
+      }
+    ],
+    "narration": [
+      {
+        "title": "Supply falls short of demand",
+        "text": "A non-occlusive thrombus, or a fixed stenosis meeting a rise in demand, reduces flow without stopping it. Some myocardium is now ischaemic.",
+        "duration": 1.3,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The subendocardium suffers first",
+        "text": "It is furthest from the epicardial vessels and squeezed hardest in systole, so it is the first layer to become ischaemic.",
+        "duration": 1.3,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The injury current points away",
+        "text": "Current flows away from the recording electrode rather than towards it, so the ST segment is displaced downward — the mirror image of transmural injury.",
+        "duration": 1.4,
+        "highlight": "st"
+      },
+      {
+        "title": "Measure at the J point",
+        "text": "Depression is measured just after the J point against the T–P baseline, and it must be horizontal or downsloping in two contiguous leads to count.",
+        "duration": 1.3,
+        "highlight": "j"
+      },
+      {
+        "title": "The T wave inverts",
+        "text": "Reversed repolarisation of the ischaemic layer inverts the T wave symmetrically. The ECG says ischaemia; only serial troponin says whether myocardium has infarcted.",
+        "duration": 1.4,
+        "highlight": "t"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Rate",
+        "value": "94 bpm",
+        "normal": "60–100 bpm"
+      },
+      {
+        "label": "ST depression",
+        "value": "≈2.0 mm at the J point",
+        "normal": "< 0.5 mm",
+        "abnormal": true
+      },
+      {
+        "label": "ST morphology",
+        "value": "Downsloping",
+        "normal": "Isoelectric, flat",
+        "abnormal": true
+      },
+      {
+        "label": "T wave",
+        "value": "Symmetrically inverted",
+        "normal": "Upright, asymmetrical",
+        "abnormal": true
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.09 s",
+        "normal": "< 0.12 s"
+      },
+      {
+        "label": "Q waves",
+        "value": "None pathological",
+        "normal": "Small or absent"
+      }
+    ],
+    "relatedDiseases": [
+      "myocardial-infarction",
+      "stable-angina",
+      "atherosclerosis"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials",
+      "coronary-circulation",
+      "interventional-cardiology"
+    ],
+    "relatedStructures": [
+      "coronary-arteries",
+      "left-ventricle"
+    ],
+    "references": [
+      "esc-acs-2023",
+      "aha-ecg-part4",
+      "umdmi-2018"
+    ]
+  },
+  {
+    "id": "pericarditis",
+    "name": "Acute Pericarditis",
+    "categoryId": "ischaemia",
+    "tagline": "Widespread concave ST elevation with PR depression — and no reciprocal change.",
+    "rateRange": "Often mild sinus tachycardia",
+    "regularity": "Regular",
+    "summary": "Inflammation of the pericardium and the thin layer of subepicardial myocardium beneath it produces ST elevation across almost all leads, concave upward in shape, together with PR segment depression. Because the inflammation is diffuse rather than confined to one arterial territory, there is no reciprocal depression except in aVR and V1.",
+    "mechanism": "The pericardium itself is electrically silent; the changes come from inflammation of the underlying superficial myocardium. That widespread subepicardial injury creates a current of injury directed towards the whole ventricular surface, so the ST segment is elevated in nearly every lead. Atrial subepicardial injury does the same to atrial repolarisation, depressing the PR segment — with the mirror image, PR elevation and ST depression, in aVR. The classic evolution runs in four stages: diffuse ST elevation with PR depression, then normalisation, then widespread T wave inversion, and finally resolution.",
+    "recognition": [
+      "Concave ('saddle-shaped') ST elevation in most leads",
+      "PR segment depression — the most specific sign",
+      "Reciprocal ST depression and PR elevation in aVR, and often V1",
+      "No lead territory pattern — the changes cross arterial territories",
+      "Spodick's sign: a downsloping T–P segment",
+      "Pleuritic chest pain relieved by sitting forward, and a pericardial friction rub"
+    ],
+    "causes": [
+      "Viral and idiopathic — the majority of cases in developed countries",
+      "Post-myocardial infarction, both early and as Dressler syndrome",
+      "Uraemia, autoimmune disease such as lupus and rheumatoid arthritis",
+      "Tuberculosis, bacterial infection and malignancy",
+      "Post cardiac surgery, radiotherapy and drug reactions"
+    ],
+    "significance": "The essential task is to distinguish it from STEMI, because the treatments are opposite in direction and the consequences of getting it wrong are serious. Pericarditis is usually self-limiting, but watch for pericardial effusion and tamponade, for myopericarditis with troponin release and ventricular dysfunction, and for recurrence.",
+    "management": "High-dose non-steroidal anti-inflammatory drugs or aspirin with gastric protection, tapered over weeks, plus colchicine — which substantially reduces recurrence. Restrict strenuous exercise until symptoms and inflammatory markers settle. Echocardiography to look for effusion. Investigate and treat any specific cause; corticosteroids are reserved for defined indications because they increase recurrence.",
+    "waveform": {
+      "rate": 92,
+      "irregularity": 0.03,
+      "atrial": "sinus",
+      "pAmplitude": 0.14,
+      "pDuration": 0.1,
+      "prInterval": 0.15,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.0,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.04,
+      "sAmplitude": 0.22,
+      "stShift": 0.16,
+      "stShape": "concave",
+      "tAmplitude": 0.34,
+      "tShape": "normal",
+      "qtInterval": 0.37,
+      "wander": 0.1,
+      "noise": 0.06
+    },
+    "vitals": {
+      "heartRate": 92,
+      "spo2": 97,
+      "respiratoryRate": 18,
+      "bpSystolic": 118,
+      "bpDiastolic": 74,
+      "temperature": 37.8,
+      "alarm": "advisory",
+      "alarmText": "ST CHANGE — REVIEW",
+      "bedside": "Sharp chest pain, worse lying flat and on inspiration, easier sitting forward. Scratchy rub audible at the left sternal edge."
+    },
+    "highlights": [
+      {
+        "feature": "st",
+        "label": "Concave ST elevation",
+        "note": "The segment dips before rising into the T wave — a saddle shape, quite unlike the convex arch of infarction, and present across leads that belong to different coronary territories.",
+        "abnormal": true
+      },
+      {
+        "feature": "pr",
+        "label": "PR segment depression",
+        "note": "Atrial subepicardial inflammation depresses the PR segment below the baseline. It is the most specific ECG sign of acute pericarditis and is easily overlooked.",
+        "abnormal": true
+      },
+      {
+        "feature": "t",
+        "label": "T wave",
+        "note": "Upright in the first stage. Widespread T wave inversion appears later, after the ST segments have returned to baseline — inversion and elevation together should make you doubt the diagnosis."
+      },
+      {
+        "feature": "baseline",
+        "label": "No reciprocal change",
+        "note": "Because the inflammation is diffuse rather than territorial, there is no mirror-image depression except in aVR and sometimes V1. That absence is a key discriminator from STEMI."
+      }
+    ],
+    "narration": [
+      {
+        "title": "Diffuse superficial inflammation",
+        "text": "The pericardium and the thin layer of myocardium immediately beneath it become inflamed — everywhere at once, not in one arterial territory.",
+        "duration": 1.3,
+        "highlight": "baseline"
+      },
+      {
+        "title": "Widespread ST elevation",
+        "text": "Subepicardial injury current lifts the ST segment in almost every lead. The shape is concave upward, as though a saddle sits between the J point and the T wave.",
+        "duration": 1.4,
+        "highlight": "st"
+      },
+      {
+        "title": "The atria are inflamed too",
+        "text": "Atrial subepicardial injury depresses the PR segment — the single most specific sign — with the mirror image of PR elevation in aVR.",
+        "duration": 1.4,
+        "highlight": "pr"
+      },
+      {
+        "title": "Telling it from a STEMI",
+        "text": "Concave rather than convex, diffuse rather than territorial, PR depression present, reciprocal change absent, and no evolving Q waves.",
+        "duration": 1.4,
+        "highlight": "baseline"
+      },
+      {
+        "title": "Four stages",
+        "text": "ST elevation with PR depression, then normalisation, then widespread T wave inversion, then resolution — often over several weeks.",
+        "duration": 1.3,
+        "highlight": "t"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Rate",
+        "value": "92 bpm",
+        "normal": "60–100 bpm"
+      },
+      {
+        "label": "ST elevation",
+        "value": "≈1.6 mm, concave, diffuse",
+        "normal": "< 1 mm",
+        "abnormal": true
+      },
+      {
+        "label": "PR segment",
+        "value": "Depressed ≈0.8 mm",
+        "normal": "Isoelectric",
+        "abnormal": true
+      },
+      {
+        "label": "Reciprocal change",
+        "value": "Absent (except aVR)",
+        "normal": "—"
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.09 s",
+        "normal": "< 0.12 s"
+      }
+    ],
+    "relatedDiseases": [
+      "pericardial-disease",
+      "myocardial-infarction"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials"
+    ],
+    "relatedStructures": [
+      "left-ventricle",
+      "right-ventricle"
+    ],
+    "references": [
+      "esc-pericardial-2015",
+      "aha-ecg-part6",
+      "braunwald"
+    ]
+  }
+]

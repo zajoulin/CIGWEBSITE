@@ -835,10 +835,10 @@ export const VIEW_MODES: ViewMode[] = [
   {
     id: 'full',
     label: 'Full System',
-    description: 'Heart, great vessels and the major systemic arteries and veins.',
+    description: 'The heart with its great vessels.',
     emphasise: 'all',
     context: [],
-      camera: { radius: 9.6, target: [0, 0.12, 0] } as ViewMode['camera'],
+      camera: { radius: 7.8, target: [0, -0.2, 0] } as ViewMode['camera'],
   },
   {
     id: 'heart',
@@ -846,7 +846,7 @@ export const VIEW_MODES: ViewMode[] = [
     description: 'The four chambers, valves, septa, coronary circulation and conduction system.',
     emphasise: ['chambers', 'valves', 'septa', 'coronary', 'conduction'],
     context: [],
-      camera: { radius: 4.5, target: [0.02, 0.0, 0] } as ViewMode['camera'],
+      camera: { radius: 6.2, target: [0.02, 0.05, 0] } as ViewMode['camera'],
   },
   {
     id: 'arteries',
@@ -854,7 +854,7 @@ export const VIEW_MODES: ViewMode[] = [
     description: 'The arterial tree, with the heart shown faintly for orientation.',
     emphasise: ['arteries'],
     context: ['chambers'],
-      camera: { radius: 9.2, target: [0.05, 0.3, -0.1] } as ViewMode['camera'],
+      camera: { radius: 7.6, target: [0.05, -0.2, -0.1] } as ViewMode['camera'],
   },
   {
     id: 'veins',
@@ -862,7 +862,7 @@ export const VIEW_MODES: ViewMode[] = [
     description: 'The venous return, with the heart shown faintly for orientation.',
     emphasise: ['veins'],
     context: ['chambers'],
-      camera: { radius: 9.2, target: [-0.2, 0.18, -0.1] } as ViewMode['camera'],
+      camera: { radius: 7.6, target: [-0.15, -0.2, -0.1] } as ViewMode['camera'],
   },
   {
     id: 'coronary',
@@ -870,7 +870,7 @@ export const VIEW_MODES: ViewMode[] = [
     description: 'Coronary arteries and veins over a translucent heart.',
     emphasise: ['coronary'],
     context: ['chambers', 'septa'],
-      camera: { radius: 4.3, target: [0.08, -0.1, 0] } as ViewMode['camera'],
+      camera: { radius: 6.0, target: [0.05, 0.0, 0] } as ViewMode['camera'],
   },
   {
     id: 'conduction',
@@ -878,6 +878,6 @@ export const VIEW_MODES: ViewMode[] = [
     description: 'Sinuatrial and atrioventricular nodes, bundle branches and Purkinje network.',
     emphasise: ['conduction'],
     context: ['chambers', 'septa'],
-      camera: { radius: 4.2, target: [0.0, 0.05, 0] } as ViewMode['camera'],
+      camera: { radius: 6.0, target: [0.0, -0.05, 0] } as ViewMode['camera'],
   },
 ];

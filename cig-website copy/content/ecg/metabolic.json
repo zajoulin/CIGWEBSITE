@@ -1,0 +1,256 @@
+[
+  {
+    "id": "hyperkalaemia",
+    "name": "Hyperkalaemia",
+    "categoryId": "metabolic",
+    "tagline": "Tall tented T waves, then flattening P waves and a widening QRS — a chemical emergency written on the ECG.",
+    "rateRange": "Variable; bradycardia as it worsens",
+    "regularity": "Regular early, unpredictable late",
+    "summary": "A rising extracellular potassium concentration progressively depolarises the resting membrane. The earliest change is a tall, narrow, symmetrically peaked T wave. As potassium climbs further the P wave flattens and disappears, the PR interval lengthens, the QRS widens, and eventually QRS and T merge into a sine wave immediately preceding cardiac arrest.",
+    "mechanism": "The resting membrane potential is set largely by the potassium gradient across the cell membrane. Raising extracellular potassium makes the resting potential less negative. Repolarising potassium conductance increases, so phase 3 is accelerated and the T wave becomes tall, narrow and peaked. The partially depolarised membrane also inactivates sodium channels, so the upstroke of the action potential is slower and weaker: conduction slows everywhere. Atrial muscle is most sensitive, so P waves flatten and vanish first; then the PR interval lengthens and the QRS broadens until depolarisation and repolarisation blur into a sine wave.",
+    "recognition": [
+      "Tall, narrow, symmetrically peaked T waves with a narrow base — 'tented'",
+      "Flattened, then absent P waves",
+      "PR interval prolongation",
+      "Progressive QRS widening, eventually beyond any recognisable morphology",
+      "Sine wave appearance immediately before ventricular fibrillation or asystole",
+      "Bradycardia and blocks at any stage"
+    ],
+    "causes": [
+      "Acute kidney injury and chronic kidney disease",
+      "Drugs: ACE inhibitors, angiotensin receptor blockers, spironolactone, potassium supplements, trimethoprim, NSAIDs",
+      "Tissue breakdown: rhabdomyolysis, tumour lysis, burns, haemolysis",
+      "Adrenal insufficiency and metabolic acidosis",
+      "Pseudohyperkalaemia from a haemolysed sample — always repeat before acting on an unexpected result"
+    ],
+    "significance": "A true medical emergency. ECG changes do not track the serum concentration reliably — some patients arrest with an almost normal-looking trace — but any ECG change in the presence of hyperkalaemia mandates immediate treatment rather than waiting for a repeat sample.",
+    "management": "Intravenous calcium gluconate or chloride first, to stabilise the myocardium — it does not lower potassium but buys time. Then shift potassium into cells with insulin and glucose, and salbutamol nebulisers. Then remove it from the body with potassium binders or dialysis. Stop all contributing drugs, treat the cause, and monitor the ECG continuously throughout.",
+    "waveform": {
+      "rate": 58,
+      "irregularity": 0.03,
+      "atrial": "sinus",
+      "pAmplitude": 0.03,
+      "pDuration": 0.13,
+      "prInterval": 0.24,
+      "qrsDuration": 0.15,
+      "qrsAmplitude": 1.05,
+      "qrsShape": "wide",
+      "qAmplitude": 0.04,
+      "sAmplitude": 0.3,
+      "stShift": 0.02,
+      "stShape": "upsloping",
+      "tAmplitude": 0.85,
+      "tShape": "peaked",
+      "qtInterval": 0.36,
+      "wander": 0.1,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 58,
+      "spo2": 96,
+      "respiratoryRate": 18,
+      "bpSystolic": 126,
+      "bpDiastolic": 74,
+      "temperature": 36.5,
+      "alarm": "critical",
+      "alarmText": "K+ 7.1 — TREAT NOW",
+      "bedside": "Dialysis patient who missed a session; weak, nauseated, potassium 7.1 mmol/L. Calcium gluconate drawn up."
+    },
+    "highlights": [
+      {
+        "feature": "t",
+        "label": "Tented T wave",
+        "note": "Tall, narrow-based and symmetrically peaked — pointed enough to prick a finger on. Accelerated phase 3 repolarisation makes the T wave both taller and narrower, which is what distinguishes it from the broad hyperacute T of infarction.",
+        "abnormal": true
+      },
+      {
+        "feature": "p",
+        "label": "Flattened P wave",
+        "note": "Atrial myocardium is the most sensitive to a depolarised resting potential, so P waves flatten and then disappear entirely well before the ventricles fail.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "Widening QRS",
+        "note": "Sodium channel inactivation slows the upstroke of the action potential, so conduction through ventricular muscle is delayed. The QRS broadens progressively — the change that immediately precedes arrest.",
+        "abnormal": true
+      },
+      {
+        "feature": "pr",
+        "label": "PR interval",
+        "note": "Prolonged as atrioventricular conduction slows. Combined with a flat P wave and a broad QRS, this is severe hyperkalaemia until proven otherwise.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "The resting potential rises",
+        "text": "Extracellular potassium accumulates, making the resting membrane potential less negative in every cardiac cell.",
+        "duration": 1.2,
+        "highlight": "baseline"
+      },
+      {
+        "title": "T waves tent",
+        "text": "Increased potassium conductance accelerates phase 3, so repolarisation completes rapidly. The T wave becomes tall, narrow and sharply peaked — the earliest sign.",
+        "duration": 1.4,
+        "highlight": "t"
+      },
+      {
+        "title": "The atria fall silent",
+        "text": "Partial depolarisation inactivates sodium channels. Atrial muscle is affected first: the P wave flattens, then disappears altogether.",
+        "duration": 1.3,
+        "highlight": "p"
+      },
+      {
+        "title": "Conduction slows everywhere",
+        "text": "The PR interval lengthens and the QRS widens as the impulse struggles through partially inactivated tissue.",
+        "duration": 1.4,
+        "highlight": "qrs"
+      },
+      {
+        "title": "The sine wave",
+        "text": "Eventually the broad QRS merges with the T wave into a smooth sine wave — the last pattern before ventricular fibrillation or asystole. Give calcium immediately.",
+        "duration": 1.5,
+        "highlight": "qrs"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "58 bpm", "normal": "60–100 bpm", "abnormal": true },
+      { "label": "P wave", "value": "0.03 mV, barely visible", "normal": "≈0.15 mV, upright", "abnormal": true },
+      { "label": "PR interval", "value": "0.24 s", "normal": "0.12–0.20 s", "abnormal": true },
+      { "label": "QRS duration", "value": "0.15 s", "normal": "< 0.12 s", "abnormal": true },
+      { "label": "T wave", "value": "0.85 mV, tented", "normal": "< 0.5 mV, asymmetrical", "abnormal": true }
+    ],
+    "relatedDiseases": ["conduction-disorders", "ventricular-arrhythmias"],
+    "relatedKeyPoints": ["ecg-essentials", "cardiovascular-pharmacology"],
+    "relatedStructures": ["purkinje-fibers", "av-node", "right-atrium"],
+    "references": ["aha-ecg-part4", "ncbi-bookshelf", "guyton"]
+  },
+  {
+    "id": "hypokalaemia",
+    "name": "Hypokalaemia",
+    "categoryId": "metabolic",
+    "tagline": "Flat T waves, prominent U waves, and a repolarisation phase that will not finish.",
+    "rateRange": "Usually normal; ectopy common",
+    "regularity": "Regular, punctuated by ectopic beats",
+    "summary": "A low extracellular potassium concentration prolongs repolarisation. The T wave flattens and may invert, the ST segment depresses, and a U wave appears after the T wave and grows until the two fuse into a single broad hump — which is why the QT interval appears long and is easy to mismeasure.",
+    "mechanism": "Lowering extracellular potassium reduces potassium conductance during phase 3, so repolarisation is slowed and incomplete. The T wave loses amplitude and the terminal portion of repolarisation is inscribed separately as a U wave, thought to reflect late repolarisation of the mid-myocardial and Purkinje tissue. The resting membrane potential becomes more negative and the cells more excitable, which is why hypokalaemia provokes atrial and ventricular ectopy. Prolonged, heterogeneous repolarisation is the substrate for torsades de pointes, especially alongside hypomagnesaemia or QT-prolonging drugs.",
+    "recognition": [
+      "Flattened or inverted T waves",
+      "Prominent U waves, best seen in V2 and V3",
+      "T–U fusion, giving an apparently very long QT",
+      "ST segment depression",
+      "Frequent atrial and ventricular ectopic beats",
+      "Progression to torsades de pointes in severe cases"
+    ],
+    "causes": [
+      "Gastrointestinal loss: vomiting, diarrhoea, laxative misuse, fistulae",
+      "Renal loss: loop and thiazide diuretics, hyperaldosteronism, Cushing syndrome, renal tubular acidosis",
+      "Shift into cells: insulin, beta agonists such as salbutamol, alkalosis, refeeding",
+      "Magnesium depletion, which makes potassium impossible to replace until corrected",
+      "Poor intake in the malnourished or alcohol-dependent patient"
+    ],
+    "significance": "The arrhythmic risk is what matters, particularly in patients on digoxin — hypokalaemia potentiates digoxin toxicity — and in those already taking QT-prolonging drugs or recovering from myocardial infarction. Muscle weakness, ileus and, at severe levels, respiratory muscle failure accompany the cardiac effects.",
+    "management": "Replace potassium, orally when mild and intravenously with cardiac monitoring when severe or symptomatic, respecting infusion rate limits and using a large vein or central access. Check and replace magnesium at the same time — potassium will not correct while magnesium is low. Identify and treat the cause and review contributing drugs.",
+    "waveform": {
+      "rate": 82,
+      "irregularity": 0.05,
+      "atrial": "sinus",
+      "pAmplitude": 0.18,
+      "pDuration": 0.11,
+      "prInterval": 0.18,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.1,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.05,
+      "sAmplitude": 0.24,
+      "stShift": -0.08,
+      "stShape": "downsloping",
+      "tAmplitude": 0.07,
+      "tShape": "flattened",
+      "uAmplitude": 0.22,
+      "qtInterval": 0.46,
+      "wander": 0.1,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 82,
+      "spo2": 97,
+      "respiratoryRate": 16,
+      "bpSystolic": 114,
+      "bpDiastolic": 70,
+      "temperature": 36.6,
+      "alarm": "warning",
+      "alarmText": "K+ 2.4 — REPLACE",
+      "bedside": "Four days of vomiting; weak and cramping. Potassium 2.4 mmol/L, magnesium also low — both being replaced."
+    },
+    "highlights": [
+      {
+        "feature": "t",
+        "label": "Flattened T wave",
+        "note": "Reduced potassium conductance slows phase 3, so the T wave loses amplitude and may invert. It becomes hard to say where the T ends and the U begins.",
+        "abnormal": true
+      },
+      {
+        "feature": "u",
+        "label": "Prominent U wave",
+        "note": "A rounded deflection after the T wave, best seen in V2–V3. It represents late repolarisation and grows as potassium falls, eventually fusing with the T wave.",
+        "abnormal": true
+      },
+      {
+        "feature": "st",
+        "label": "ST depression",
+        "note": "Downsloping depression accompanies the repolarisation abnormality. In a patient on digoxin this can be difficult to separate from the digoxin effect."
+      },
+      {
+        "feature": "qt",
+        "label": "Apparent QT prolongation",
+        "note": "T–U fusion makes the interval look very long and is a classic source of mismeasurement. What matters clinically is that repolarisation is prolonged and heterogeneous — the substrate for torsades de pointes.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "Potassium conductance falls",
+        "text": "With less extracellular potassium, the currents that repolarise the cell in phase 3 are reduced, so repolarisation slows and remains incomplete.",
+        "duration": 1.3,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The T wave flattens",
+        "text": "Less current, smaller deflection. The T wave loses height and may invert, while the ST segment sags below the baseline.",
+        "duration": 1.3,
+        "highlight": "t"
+      },
+      {
+        "title": "A U wave appears",
+        "text": "The delayed terminal component of repolarisation is inscribed separately as a rounded U wave, which grows as the potassium falls further.",
+        "duration": 1.4,
+        "highlight": "u"
+      },
+      {
+        "title": "T and U fuse",
+        "text": "Eventually the two merge into one broad hump, and the interval looks alarmingly long. Measuring the true QT becomes genuinely difficult.",
+        "duration": 1.3,
+        "highlight": "qt"
+      },
+      {
+        "title": "Ectopy and torsades",
+        "text": "A more negative resting potential with prolonged, non-uniform repolarisation invites ectopy and, at its extreme, torsades de pointes. Replace magnesium alongside potassium.",
+        "duration": 1.5,
+        "highlight": "qt"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "82 bpm", "normal": "60–100 bpm" },
+      { "label": "T wave", "value": "0.07 mV, flattened", "normal": "≈0.30 mV, upright", "abnormal": true },
+      { "label": "U wave", "value": "0.22 mV, prominent", "normal": "Absent or < 0.1 mV", "abnormal": true },
+      { "label": "ST segment", "value": "0.8 mm depression", "normal": "Isoelectric", "abnormal": true },
+      { "label": "QT (with U)", "value": "Apparently 0.46 s", "normal": "QTc < 0.44 s", "abnormal": true }
+    ],
+    "relatedDiseases": ["ventricular-arrhythmias", "heart-failure"],
+    "relatedKeyPoints": ["ecg-essentials", "cardiovascular-pharmacology"],
+    "relatedStructures": ["purkinje-fibers", "left-ventricle"],
+    "references": ["aha-ecg-part4", "ncbi-bookshelf", "guyton"]
+  }
+]

@@ -1,0 +1,381 @@
+[
+  {
+    "id": "normal-sinus-rhythm",
+    "name": "Normal Sinus Rhythm",
+    "abbr": "NSR",
+    "categoryId": "sinus",
+    "featured": true,
+    "tagline": "The reference trace — every other rhythm is read against this one.",
+    "rateRange": "60–100 bpm",
+    "regularity": "Regular",
+    "summary": "Each beat begins in the sinoatrial node, spreads through both atria, is briefly held at the atrioventricular node, then reaches the ventricles through the His–Purkinje system. The result is an upright P wave before every QRS, a constant PR interval, and a narrow QRS.",
+    "mechanism": "Sinoatrial pacemaker cells depolarise spontaneously during phase 4 until they reach threshold. Atrial depolarisation inscribes the P wave. Conduction then slows through the atrioventricular node — the flat PR segment — which gives the atria time to complete ventricular filling. Rapid His–Purkinje conduction depolarises both ventricles almost simultaneously, so the QRS is narrow. The ST segment is the plateau of the ventricular action potential, when the whole ventricle is depolarised and no voltage difference exists across it, and the T wave is repolarisation, spreading epicardium to endocardium so it stays upright.",
+    "recognition": [
+      "Rate 60–100 bpm, measured over a full 6-second strip",
+      "Regular R–R intervals, varying by less than about 10%",
+      "One upright P wave before every QRS in lead II",
+      "PR interval constant at 0.12–0.20 s (3–5 small squares)",
+      "QRS duration under 0.12 s (3 small squares)"
+    ],
+    "causes": [
+      "The normal state of the healthy conduction system",
+      "Rate varies physiologically with respiration, posture, autonomic tone and fitness"
+    ],
+    "significance": "Normal sinus rhythm confirms that impulse formation and conduction are intact from the sinus node to the Purkinje network. It does not exclude structural heart disease — a large infarct or severe valve lesion can sit behind a perfectly normal-looking rhythm strip.",
+    "management": "None. Recognising normal is the skill that makes every abnormal trace obvious; measure the rate, rhythm, axis, intervals and morphology in the same order every time.",
+    "waveform": {
+      "rate": 72,
+      "irregularity": 0.02,
+      "sinusArrhythmia": 0.12,
+      "atrial": "sinus",
+      "pAmplitude": 0.15,
+      "pDuration": 0.1,
+      "prInterval": 0.16,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.15,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.05,
+      "sAmplitude": 0.24,
+      "stShift": 0,
+      "stShape": "flat",
+      "tAmplitude": 0.3,
+      "tShape": "normal",
+      "qtInterval": 0.38,
+      "wander": 0.12,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 72,
+      "spo2": 98,
+      "respiratoryRate": 14,
+      "bpSystolic": 122,
+      "bpDiastolic": 76,
+      "temperature": 36.8,
+      "alarm": "normal",
+      "bedside": "Comfortable at rest, talking in full sentences, warm and well perfused."
+    },
+    "highlights": [
+      {
+        "feature": "p",
+        "label": "P wave",
+        "note": "Atrial depolarisation. Smooth, rounded and upright in lead II because the wave of depolarisation travels from the sinus node towards the left and inferiorly — along the axis of that lead. Under 0.12 s wide and 0.25 mV tall."
+      },
+      {
+        "feature": "pr",
+        "label": "PR interval",
+        "note": "From the start of the P wave to the start of the QRS: 0.12–0.20 s. Almost all of it is atrioventricular nodal delay, the pause that lets atrial systole top up the ventricles before they contract."
+      },
+      {
+        "feature": "qrs",
+        "label": "QRS complex",
+        "note": "Ventricular depolarisation through the His–Purkinje system. Narrow — under 0.12 s — because both ventricles are activated almost at once. Width, not height, is what tells you where a beat came from."
+      },
+      {
+        "feature": "st",
+        "label": "ST segment",
+        "note": "The plateau phase of the ventricular action potential. The whole ventricle is depolarised, so there is no potential difference to record and the segment sits on the baseline."
+      },
+      {
+        "feature": "t",
+        "label": "T wave",
+        "note": "Ventricular repolarisation. Upright and asymmetrical, with a slow upstroke and a faster return, because repolarisation runs epicardium to endocardium — the opposite direction to depolarisation."
+      },
+      {
+        "feature": "qt",
+        "label": "QT interval",
+        "note": "Total ventricular depolarisation and repolarisation. It shortens as heart rate rises, which is why it is corrected for rate (QTc) before being called normal or long."
+      }
+    ],
+    "narration": [
+      {
+        "title": "The sinus node fires",
+        "text": "Pacemaker cells in the sinoatrial node reach threshold and depolarise. Nothing is visible on the surface ECG yet — the node itself is far too small to register.",
+        "duration": 1,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The atria depolarise",
+        "text": "The impulse spreads across both atria, inscribing the P wave. Atrial contraction follows, delivering the final 20–30% of ventricular filling.",
+        "duration": 1.2,
+        "highlight": "p"
+      },
+      {
+        "title": "The atrioventricular node holds the impulse",
+        "text": "Conduction slows to about 0.05 m/s through the AV node. This deliberate delay — the flat PR segment — separates atrial from ventricular systole.",
+        "duration": 1.2,
+        "highlight": "pr"
+      },
+      {
+        "title": "The ventricles depolarise",
+        "text": "The His bundle, bundle branches and Purkinje fibres deliver the impulse to the whole ventricular myocardium within about 90 ms, producing a single narrow QRS complex.",
+        "duration": 1.2,
+        "highlight": "qrs"
+      },
+      {
+        "title": "The plateau",
+        "text": "Calcium entry holds the myocardium depolarised while it contracts. With no voltage gradient across the ventricle, the ST segment returns to the baseline.",
+        "duration": 1,
+        "highlight": "st"
+      },
+      {
+        "title": "The ventricles repolarise",
+        "text": "Potassium efflux repolarises the ventricle from epicardium inwards, inscribing an upright T wave, and the cycle repeats about once a second.",
+        "duration": 1.4,
+        "highlight": "t"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "72 bpm", "normal": "60–100 bpm" },
+      { "label": "P wave", "value": "0.10 s, upright", "normal": "< 0.12 s, upright in II" },
+      { "label": "PR interval", "value": "0.16 s", "normal": "0.12–0.20 s" },
+      { "label": "QRS duration", "value": "0.09 s", "normal": "< 0.12 s" },
+      { "label": "QT / QTc", "value": "0.38 s / 0.41 s", "normal": "QTc < 0.44 s (men), < 0.46 s (women)" },
+      { "label": "ST segment", "value": "Isoelectric", "normal": "No deviation" }
+    ],
+    "relatedDiseases": [],
+    "relatedKeyPoints": ["ecg-essentials", "cardiac-cycle"],
+    "relatedStructures": ["sa-node", "av-node", "bundle-of-his", "purkinje-fibers"],
+    "references": ["aha-ecg-part1", "aha-ecg-part4", "guyton", "braunwald"]
+  },
+  {
+    "id": "sinus-bradycardia",
+    "name": "Sinus Bradycardia",
+    "abbr": "SB",
+    "categoryId": "sinus",
+    "tagline": "Normal conduction, slow pacemaker.",
+    "rateRange": "< 60 bpm",
+    "regularity": "Regular",
+    "summary": "Sinus rhythm at a rate below 60 beats per minute. Every element of the complex is normal — there is simply more time between beats, so the diastolic interval lengthens and the T–P segment becomes long and flat.",
+    "mechanism": "Phase 4 depolarisation of sinoatrial pacemaker cells is slowed, most often by vagal (parasympathetic) tone acting through muscarinic receptors, which increases potassium conductance and reduces the funny current. Athletic training, sleep, drugs that block sympathetic drive, hypothyroidism and raised intracranial pressure all act on the same final step. Because conduction below the node is untouched, the P wave, PR interval and QRS are unchanged.",
+    "recognition": [
+      "Rate below 60 bpm",
+      "Regular rhythm with an upright P wave before every QRS",
+      "PR interval normal and constant — this is what separates it from AV block",
+      "Narrow QRS",
+      "Long, flat T–P segment between beats"
+    ],
+    "causes": [
+      "High vagal tone: athletic conditioning, sleep, vasovagal episodes",
+      "Drugs: beta blockers, non-dihydropyridine calcium channel blockers, digoxin, amiodarone, ivabradine",
+      "Inferior myocardial infarction affecting the sinus node artery",
+      "Hypothyroidism, hypothermia, hypoxia, raised intracranial pressure",
+      "Sinus node disease in older patients"
+    ],
+    "significance": "Usually benign and often physiological — rates in the 40s are common in trained athletes and during sleep. It matters when the patient is symptomatic: syncope, presyncope, fatigue, breathlessness, confusion or hypotension mean the slow rate is no longer producing an adequate cardiac output.",
+    "management": "Treat the patient, not the number. Look for and reverse the cause — particularly drugs. If there is haemodynamic compromise, atropine is first line, with transcutaneous pacing, or an isoprenaline or adrenaline infusion, if it fails. Persistent symptomatic sinus node disease with no reversible cause is a pacemaker indication.",
+    "waveform": {
+      "rate": 46,
+      "irregularity": 0.03,
+      "sinusArrhythmia": 0.16,
+      "atrial": "sinus",
+      "pAmplitude": 0.15,
+      "pDuration": 0.1,
+      "prInterval": 0.17,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.15,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.05,
+      "sAmplitude": 0.24,
+      "stShift": 0,
+      "stShape": "flat",
+      "tAmplitude": 0.3,
+      "tShape": "normal",
+      "qtInterval": 0.44,
+      "wander": 0.14,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 46,
+      "spo2": 97,
+      "respiratoryRate": 12,
+      "bpSystolic": 108,
+      "bpDiastolic": 64,
+      "temperature": 36.4,
+      "alarm": "advisory",
+      "alarmText": "LOW HEART RATE",
+      "bedside": "Alert and comfortable; asks why the machine keeps beeping at him."
+    },
+    "highlights": [
+      {
+        "feature": "rr",
+        "label": "R–R interval",
+        "note": "Long but constant. At 46 bpm each cycle lasts about 1.3 s — over six large squares between R waves at standard paper speed.",
+        "abnormal": true
+      },
+      {
+        "feature": "pr",
+        "label": "PR interval",
+        "note": "Normal and unchanging. A slow rate with a normal, fixed PR interval is sinus bradycardia; a slow rate with a long or varying PR interval is atrioventricular block."
+      },
+      {
+        "feature": "p",
+        "label": "P wave",
+        "note": "Present, upright and one per QRS — the impulse is still coming from the sinus node."
+      },
+      {
+        "feature": "qt",
+        "label": "QT interval",
+        "note": "Absolute QT lengthens as the rate falls; that is expected. Correcting for rate is what tells you whether repolarisation is genuinely prolonged."
+      }
+    ],
+    "narration": [
+      {
+        "title": "A slower pacemaker",
+        "text": "Sinoatrial pacemaker cells still set the rhythm, but they take longer to drift up to threshold, so beats arrive under 60 times a minute.",
+        "duration": 1.2,
+        "highlight": "rr"
+      },
+      {
+        "title": "Conduction is untouched",
+        "text": "The P wave, PR interval and QRS are all normal. Everything below the sinus node is working perfectly — only the rate of impulse formation has changed.",
+        "duration": 1.2,
+        "highlight": "pr"
+      },
+      {
+        "title": "Diastole lengthens",
+        "text": "The extra time is spent in diastole. Coronary perfusion, which happens mostly in diastole, actually improves; ventricular filling has longer to complete.",
+        "duration": 1.2,
+        "highlight": "t"
+      },
+      {
+        "title": "When it matters",
+        "text": "Cardiac output is stroke volume times rate. A healthy heart compensates by filling more and ejecting more; a stiff or failing ventricle cannot, and the patient becomes tired, dizzy or syncopal.",
+        "duration": 1.4,
+        "highlight": "baseline"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "46 bpm", "normal": "60–100 bpm", "abnormal": true },
+      { "label": "PR interval", "value": "0.17 s", "normal": "0.12–0.20 s" },
+      { "label": "QRS duration", "value": "0.09 s", "normal": "< 0.12 s" },
+      { "label": "R–R interval", "value": "1.30 s", "normal": "0.60–1.00 s", "abnormal": true },
+      { "label": "QT / QTc", "value": "0.44 s / 0.38 s", "normal": "QTc < 0.44 s" }
+    ],
+    "relatedDiseases": ["conduction-disorders"],
+    "relatedKeyPoints": ["ecg-essentials", "arrhythmia-principles"],
+    "relatedStructures": ["sa-node", "av-node"],
+    "references": ["aha-ecg-part1", "esc-pacing-2021", "braunwald"]
+  },
+  {
+    "id": "sinus-tachycardia",
+    "name": "Sinus Tachycardia",
+    "abbr": "ST",
+    "categoryId": "sinus",
+    "tagline": "A symptom, not a diagnosis — always ask what the heart is responding to.",
+    "rateRange": "> 100 bpm",
+    "regularity": "Regular",
+    "summary": "Sinus rhythm above 100 beats per minute. P waves remain upright and precede every QRS, but as the rate climbs the T–P segment shortens and the P wave can start to merge into the preceding T wave.",
+    "mechanism": "Sympathetic activation and vagal withdrawal accelerate phase 4 depolarisation in the sinoatrial node. It is almost always an appropriate physiological response to a demand elsewhere: hypovolaemia, hypoxia, fever, pain, anxiety, anaemia, sepsis, thyrotoxicosis, pulmonary embolism or a drug. Unlike re-entrant tachycardias it starts and stops gradually, and the rate wanders with the stimulus rather than sitting on a fixed number.",
+    "recognition": [
+      "Rate above 100 bpm, usually below about 150 in adults at rest",
+      "Upright P wave before every QRS — look in the T wave for it at fast rates",
+      "PR interval normal, though it shortens slightly as rate rises",
+      "Narrow QRS",
+      "Gradual onset and offset, with beat-to-beat variation in rate"
+    ],
+    "causes": [
+      "Hypovolaemia, haemorrhage and dehydration",
+      "Fever, sepsis and systemic inflammation",
+      "Hypoxia, pulmonary embolism and respiratory distress",
+      "Pain, anxiety, exercise and emotional stress",
+      "Anaemia, thyrotoxicosis, pregnancy",
+      "Drugs: salbutamol, caffeine, sympathomimetics, anticholinergics; alcohol or drug withdrawal"
+    ],
+    "significance": "The rhythm itself is rarely the problem — the cause is. A persistent, unexplained sinus tachycardia in an unwell patient is one of the most reliable early warnings of deterioration, and it is often the last compensatory mechanism keeping cardiac output adequate before the blood pressure falls.",
+    "management": "Find and treat the underlying cause: fluids, oxygen, analgesia, antipyretics, antibiotics as appropriate. Slowing the heart with rate-limiting drugs before you know why it is fast can remove essential compensation and precipitate collapse.",
+    "waveform": {
+      "rate": 128,
+      "irregularity": 0.04,
+      "sinusArrhythmia": 0.05,
+      "atrial": "sinus",
+      "pAmplitude": 0.17,
+      "pDuration": 0.09,
+      "prInterval": 0.13,
+      "qrsDuration": 0.085,
+      "qrsAmplitude": 1.1,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.05,
+      "sAmplitude": 0.22,
+      "stShift": 0,
+      "stShape": "upsloping",
+      "tAmplitude": 0.27,
+      "tShape": "normal",
+      "qtInterval": 0.31,
+      "wander": 0.1,
+      "noise": 0.07
+    },
+    "vitals": {
+      "heartRate": 128,
+      "spo2": 95,
+      "respiratoryRate": 24,
+      "bpSystolic": 104,
+      "bpDiastolic": 62,
+      "temperature": 38.6,
+      "alarm": "advisory",
+      "alarmText": "HIGH HEART RATE",
+      "bedside": "Flushed and febrile, breathing quickly, peripherally warm — septic screen under way."
+    },
+    "highlights": [
+      {
+        "feature": "rr",
+        "label": "R–R interval",
+        "note": "Short — about 0.47 s at 128 bpm — but not fixed. Small beat-to-beat variation is a useful clue that this is sinus tachycardia rather than a re-entrant circuit.",
+        "abnormal": true
+      },
+      {
+        "feature": "p",
+        "label": "P wave",
+        "note": "Still present and upright, but pushed towards the preceding T wave as diastole shortens. At very fast rates, compare the T wave shape with a slower strip to find the buried P.",
+        "abnormal": true
+      },
+      {
+        "feature": "t",
+        "label": "T–P fusion",
+        "note": "Diastole is sacrificed before systole. As the T–P segment disappears, both ventricular filling time and coronary perfusion time fall.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "QRS complex",
+        "note": "Narrow, confirming the impulse still reaches the ventricles through the normal conduction system."
+      }
+    ],
+    "narration": [
+      {
+        "title": "Sympathetic drive rises",
+        "text": "Catecholamines steepen phase 4 depolarisation in the sinus node, so threshold is reached sooner and the rate climbs above 100.",
+        "duration": 1.1,
+        "highlight": "rr"
+      },
+      {
+        "title": "P waves are still there",
+        "text": "One upright P wave still precedes every QRS. Finding it is what distinguishes sinus tachycardia from the supraventricular tachycardias it is often mistaken for.",
+        "duration": 1.3,
+        "highlight": "p"
+      },
+      {
+        "title": "Diastole shortens",
+        "text": "As rate rises, the T–P segment shrinks first. Filling time falls, and so does coronary flow — which is why tachycardia provokes angina in a patient with coronary disease.",
+        "duration": 1.3,
+        "highlight": "t"
+      },
+      {
+        "title": "Ask why",
+        "text": "Sinus tachycardia is the cardiovascular system reporting a problem: volume, oxygen, infection, pain or drugs. The trace tells you the heart is compensating; the patient tells you for what.",
+        "duration": 1.4,
+        "highlight": "baseline"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "128 bpm", "normal": "60–100 bpm", "abnormal": true },
+      { "label": "P wave", "value": "Upright, 1 per QRS", "normal": "Upright in II" },
+      { "label": "PR interval", "value": "0.13 s", "normal": "0.12–0.20 s" },
+      { "label": "QRS duration", "value": "0.09 s", "normal": "< 0.12 s" },
+      { "label": "QT / QTc", "value": "0.31 s / 0.45 s", "normal": "QTc < 0.44 s" }
+    ],
+    "relatedDiseases": ["pulmonary-embolism", "heart-failure"],
+    "relatedKeyPoints": ["ecg-essentials", "arrhythmia-principles"],
+    "relatedStructures": ["sa-node"],
+    "references": ["aha-ecg-part1", "esc-svt-2019", "guyton"]
+  }
+]

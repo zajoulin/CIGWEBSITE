@@ -157,8 +157,8 @@ export interface ViewerOptions {
 const DEFAULT_CAMERA: CameraState = {
   azimuth: 0.06,
   elevation: 0.08,
-  radius: 9.6,
-  target: [0, 0.12, 0],
+  radius: 7.8,
+  target: [0, -0.2, 0],
 };
 
 const MIN_RADIUS = 1.1;

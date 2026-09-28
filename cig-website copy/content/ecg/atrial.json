@@ -1,0 +1,326 @@
+[
+  {
+    "id": "atrial-fibrillation",
+    "name": "Atrial Fibrillation",
+    "abbr": "AF",
+    "categoryId": "atrial",
+    "featured": true,
+    "tagline": "Irregularly irregular, with no P waves anywhere.",
+    "rateRange": "Ventricular rate variable, often 100–160 bpm untreated",
+    "regularity": "Irregularly irregular",
+    "summary": "Organised atrial activity is lost. Multiple wavelets circulate continuously through the atria, so instead of P waves the baseline carries fine, chaotic fibrillatory waves, and the atrioventricular node passes impulses through at unpredictable intervals — producing the irregularly irregular ventricular response that defines the rhythm.",
+    "mechanism": "Atrial myocardium that is stretched, fibrosed or inflamed conducts unevenly, allowing multiple simultaneous re-entrant circuits. Triggers most often arise from muscular sleeves around the pulmonary veins, which is why those veins are the target of ablation. The atria depolarise 350–600 times a minute but never contract as a unit, so atrial systole — and the 20–30% of ventricular filling it contributes — is lost. The atrioventricular node is bombarded and blocks most impulses; which ones get through depends on where each wavefront finds the node in its refractory cycle, and that is what makes the ventricular response irregular. Stasis in the fibrillating left atrial appendage is the source of thromboembolic stroke.",
+    "recognition": [
+      "No P waves — a fibrillatory or flat baseline instead",
+      "Irregularly irregular R–R intervals with no repeating pattern",
+      "Narrow QRS unless there is pre-existing bundle branch block or aberrant conduction",
+      "Ventricular rate typically 100–160 bpm when untreated",
+      "Absent a wave in the jugular venous pulse and a pulse deficit on examination"
+    ],
+    "causes": [
+      "Hypertension and increasing age — the commonest substrate",
+      "Heart failure and any cause of left atrial dilatation",
+      "Mitral valve disease, particularly mitral stenosis",
+      "Thyrotoxicosis, alcohol, sepsis, pneumonia, pulmonary embolism",
+      "Post-operative states, especially after cardiac surgery"
+    ],
+    "significance": "The two problems are stroke and rate. Loss of atrial systole reduces cardiac output — badly so in a stiff ventricle — and a persistently fast, irregular rate can itself cause a tachycardia-induced cardiomyopathy. Independent of symptoms, atrial fibrillation carries a substantial thromboembolic risk that is assessed formally with a validated risk score rather than by how the patient feels.",
+    "management": "Anticoagulation decided by validated stroke-risk assessment, then a rate- or rhythm-control strategy. Rate control uses beta blockers or non-dihydropyridine calcium channel blockers; rhythm control uses antiarrhythmic drugs, cardioversion or catheter ablation. Haemodynamic instability calls for immediate synchronised cardioversion. Always treat the precipitant — sepsis, thyroid disease, alcohol.",
+    "waveform": {
+      "rate": 118,
+      "irregularity": 0.72,
+      "atrial": "fibrillatory",
+      "pAmplitude": 0,
+      "prInterval": 0,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.1,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.04,
+      "sAmplitude": 0.24,
+      "stShift": 0,
+      "stShape": "flat",
+      "tAmplitude": 0.26,
+      "tShape": "normal",
+      "qtInterval": 0.33,
+      "fibrillatory": 0.07,
+      "wander": 0.12,
+      "noise": 0.07
+    },
+    "vitals": {
+      "heartRate": 118,
+      "heartRateLabel": "118*",
+      "spo2": 96,
+      "respiratoryRate": 18,
+      "bpSystolic": 112,
+      "bpDiastolic": 70,
+      "temperature": 36.9,
+      "alarm": "advisory",
+      "alarmText": "IRREGULAR RHYTHM",
+      "bedside": "Aware of a fluttering in the chest; radial pulse irregular with a pulse deficit against the monitor rate."
+    },
+    "highlights": [
+      {
+        "feature": "baseline",
+        "label": "Fibrillatory baseline",
+        "note": "Where P waves should be there is a restless, low-amplitude baseline — the summed voltage of hundreds of disorganised atrial wavelets per minute. In fine AF it can look almost flat.",
+        "abnormal": true
+      },
+      {
+        "feature": "rr",
+        "label": "Irregularly irregular R–R",
+        "note": "Every interval differs from the last with no repeating pattern. Mark three consecutive R waves on paper and slide it along the strip — nothing lines up. This is the single most reliable sign.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "QRS complex",
+        "note": "Narrow and normal in shape. The problem is entirely above the atrioventricular node; once an impulse gets through, ventricular activation is normal."
+      },
+      {
+        "feature": "t",
+        "label": "T wave",
+        "note": "Normal in morphology, though it varies in amplitude from beat to beat because filling — and therefore the preceding cycle length — is constantly changing."
+      }
+    ],
+    "narration": [
+      {
+        "title": "Organised atrial activity is lost",
+        "text": "Multiple re-entrant wavelets circulate through diseased atrial myocardium. No single wavefront depolarises the atria as a unit, so no P wave is ever inscribed.",
+        "duration": 1.3,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The baseline fibrillates",
+        "text": "What remains is a fine, continuously changing undulation between QRS complexes — fibrillatory waves at 350–600 per minute.",
+        "duration": 1.2,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The AV node filters chaotically",
+        "text": "The node is bombarded and blocks most impulses. Which ones conduct depends on its refractory state at that instant, so the ventricular response is irregularly irregular.",
+        "duration": 1.4,
+        "highlight": "rr"
+      },
+      {
+        "title": "Atrial systole is lost",
+        "text": "The atrial kick that normally provides the last 20–30% of ventricular filling disappears. In a stiff, hypertrophied or stenotic ventricle this alone can precipitate decompensation.",
+        "duration": 1.3,
+        "highlight": "qrs"
+      },
+      {
+        "title": "Stasis and stroke",
+        "text": "Blood stagnates in the fibrillating left atrial appendage and thrombus forms. Anticoagulation decisions rest on formal risk assessment, not on how fast or symptomatic the rhythm is.",
+        "duration": 1.5,
+        "highlight": "baseline"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Ventricular rate",
+        "value": "≈118 bpm (variable)",
+        "normal": "60–100 bpm",
+        "abnormal": true
+      },
+      {
+        "label": "P waves",
+        "value": "Absent",
+        "normal": "One before each QRS",
+        "abnormal": true
+      },
+      {
+        "label": "R–R intervals",
+        "value": "Irregularly irregular",
+        "normal": "Regular",
+        "abnormal": true
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.09 s",
+        "normal": "< 0.12 s"
+      },
+      {
+        "label": "Atrial rate",
+        "value": "350–600 per minute",
+        "normal": "60–100 per minute",
+        "abnormal": true
+      }
+    ],
+    "relatedDiseases": [
+      "atrial-fibrillation",
+      "mitral-stenosis",
+      "heart-failure"
+    ],
+    "relatedKeyPoints": [
+      "arrhythmia-principles",
+      "ecg-essentials"
+    ],
+    "relatedStructures": [
+      "left-atrium",
+      "right-atrium",
+      "av-node",
+      "pulmonary-veins"
+    ],
+    "references": [
+      "aha-af-2023",
+      "aha-ecg-part1",
+      "braunwald"
+    ]
+  },
+  {
+    "id": "atrial-flutter",
+    "name": "Atrial Flutter",
+    "abbr": "AFl",
+    "categoryId": "atrial",
+    "tagline": "One organised circuit, sawtooth waves, and a rate that is usually a neat fraction of 300.",
+    "rateRange": "Atrial 250–350 bpm; ventricular commonly 150 bpm at 2:1 conduction",
+    "regularity": "Regular when the conduction ratio is fixed",
+    "summary": "A single large re-entrant circuit, typically running counter-clockwise around the tricuspid annulus in the right atrium, depolarises the atria about 300 times a minute. This produces the continuous sawtooth flutter waves seen best in the inferior leads. The atrioventricular node cannot conduct every beat, so it blocks in a ratio — most often 2:1, giving a ventricular rate close to 150.",
+    "mechanism": "Unlike fibrillation, flutter is organised: one macro-re-entrant wavefront circulates around an anatomical obstacle, passing through the cavotricuspid isthmus in typical flutter. Because the circuit is fixed, the atrial rate is remarkably constant near 300 per minute and the flutter waves have an identical shape each time — a continuous sawtooth with no isoelectric baseline between them. The atrioventricular node's refractory period determines how many get through, giving 2:1, 3:1 or 4:1 conduction; a regular narrow-complex tachycardia at almost exactly 150 bpm should always raise the suspicion of 2:1 flutter with the alternate flutter wave hidden inside the QRS or T wave.",
+    "recognition": [
+      "Sawtooth flutter waves at about 300 per minute, best seen in leads II, III and aVF",
+      "No isoelectric baseline between flutter waves",
+      "Regular ventricular rate that is a whole-number fraction of the atrial rate — commonly 150 bpm",
+      "Narrow QRS",
+      "Vagal manoeuvres or adenosine slow AV conduction and unmask the flutter waves without terminating the circuit"
+    ],
+    "causes": [
+      "The same substrate as atrial fibrillation, and the two often coexist",
+      "Right atrial dilatation from chronic lung disease or pulmonary hypertension",
+      "Post cardiac surgery and post ablation",
+      "Thyrotoxicosis, alcohol, hypertension, valvular disease"
+    ],
+    "significance": "Thromboembolic risk is comparable to atrial fibrillation and is managed the same way. Flutter is often harder to rate-control with drugs, and the fixed 2:1 rate of 150 bpm is poorly tolerated over time. Isthmus-dependent typical flutter is highly amenable to catheter ablation, with high long-term success rates.",
+    "management": "Anticoagulate on the same risk-based principles as atrial fibrillation. Restore sinus rhythm by synchronised cardioversion — flutter converts at low energies — or refer for cavotricuspid isthmus ablation, which is the definitive treatment for the typical form. Rate control alone is often unsatisfactory.",
+    "waveform": {
+      "rate": 150,
+      "irregularity": 0.02,
+      "atrial": "flutter",
+      "atrialRate": 300,
+      "conductionRatio": 2,
+      "pAmplitude": 0.16,
+      "prInterval": 0,
+      "qrsDuration": 0.09,
+      "qrsAmplitude": 1.3,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.03,
+      "sAmplitude": 0.26,
+      "stShift": 0,
+      "stShape": "flat",
+      "tAmplitude": 0.14,
+      "tShape": "normal",
+      "qtInterval": 0.3,
+      "wander": 0.08,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 150,
+      "spo2": 95,
+      "respiratoryRate": 20,
+      "bpSystolic": 106,
+      "bpDiastolic": 68,
+      "temperature": 36.7,
+      "alarm": "warning",
+      "alarmText": "TACHYCARDIA",
+      "bedside": "Palpitations and breathlessness on minimal exertion; rate stubbornly fixed at 150."
+    },
+    "highlights": [
+      {
+        "feature": "p",
+        "label": "Flutter waves",
+        "note": "Continuous, identical sawtooth deflections at about 300 per minute, with no flat baseline between them. They are inscribed by one organised circuit passing the same tissue over and over.",
+        "abnormal": true
+      },
+      {
+        "feature": "rr",
+        "label": "Ventricular response",
+        "note": "Regular, at a whole-number fraction of 300. A regular narrow-complex tachycardia sitting at 150 bpm is 2:1 flutter until proven otherwise.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "QRS complex",
+        "note": "Narrow — the circuit is confined to the atria and conduction to the ventricles is normal once an impulse passes the node."
+      },
+      {
+        "feature": "baseline",
+        "label": "Hidden waves",
+        "note": "At 2:1 conduction every second flutter wave is buried inside the QRS or T wave. Slowing AV conduction with a vagal manoeuvre or adenosine reveals the sawtooth.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "One circuit, not many",
+        "text": "A single macro-re-entrant wavefront circles the tricuspid annulus, usually passing through the cavotricuspid isthmus. Unlike fibrillation, the activation sequence is identical every time.",
+        "duration": 1.3,
+        "highlight": "p"
+      },
+      {
+        "title": "The sawtooth appears",
+        "text": "Because the circuit never stops, atrial depolarisation is continuous — producing regular sawtooth waves at about 300 per minute with no isoelectric interval between them.",
+        "duration": 1.3,
+        "highlight": "p"
+      },
+      {
+        "title": "The AV node divides the rate",
+        "text": "The node cannot conduct 300 impulses a minute, so it blocks in a fixed ratio. At 2:1 the ventricles run at 150; at 4:1, 75.",
+        "duration": 1.4,
+        "highlight": "rr"
+      },
+      {
+        "title": "Unmasking the circuit",
+        "text": "Adenosine or carotid sinus massage transiently increases AV block. The ventricular rate falls, the buried flutter waves emerge, and the diagnosis becomes obvious — but the atrial circuit continues.",
+        "duration": 1.4,
+        "highlight": "baseline"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Atrial rate",
+        "value": "≈300 per minute",
+        "normal": "60–100 per minute",
+        "abnormal": true
+      },
+      {
+        "label": "Ventricular rate",
+        "value": "150 bpm (2:1)",
+        "normal": "60–100 bpm",
+        "abnormal": true
+      },
+      {
+        "label": "Flutter waves",
+        "value": "Sawtooth, no isoelectric baseline",
+        "normal": "Discrete P waves",
+        "abnormal": true
+      },
+      {
+        "label": "QRS duration",
+        "value": "0.09 s",
+        "normal": "< 0.12 s"
+      },
+      {
+        "label": "Rhythm",
+        "value": "Regular",
+        "normal": "Regular"
+      }
+    ],
+    "relatedDiseases": [
+      "atrial-fibrillation",
+      "pulmonary-hypertension"
+    ],
+    "relatedKeyPoints": [
+      "arrhythmia-principles",
+      "ecg-essentials"
+    ],
+    "relatedStructures": [
+      "right-atrium",
+      "tricuspid-valve",
+      "av-node"
+    ],
+    "references": [
+      "aha-af-2023",
+      "esc-svt-2019",
+      "aha-ecg-part1"
+    ]
+  }
+]

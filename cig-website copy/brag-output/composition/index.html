@@ -1,0 +1,1884 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>CIG — Cardiovascular Learning Hub</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* =======================================================================
+         CIG brand tokens (extracted from src/styles/tokens.css)
+         ======================================================================= */
+      :root {
+        --navy-950: #03172c;
+        --navy-900: #05223f;
+        --navy-800: #043464;
+        --navy-700: #084079;
+        --navy-500: #1063ad;
+        --sky: #4d94dd;
+        --sky-soft: #d9e7f7;
+        --sky-line: rgba(140, 180, 230, 0.35);
+        --crimson: #c02a49;
+        --crimson-bright: #d93b5d;
+        --label: rgba(140, 180, 230, 0.9);
+        --label-dim: rgba(140, 180, 230, 0.5);
+        --ink: #0a2440;
+        --lumen: #7da8d8;
+        --wall: rgba(60, 100, 170, 0.55);
+        --wallDeep: rgba(20, 50, 110, 0.82);
+        --cap: #8cb8e8;
+        --necrotic: #7a3c50;
+        --thrombus: #b03055;
+        --blood: #c87090;
+      }
+
+      body {
+        margin: 0;
+        background: var(--navy-950);
+        color: #fff;
+        overflow: hidden;
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        src: local('Inter'), local('Inter Regular'), local('Inter-Regular');
+        font-weight: 100 900;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter var';
+        src: local('Inter'), local('Inter Variable'), local('InterVariable');
+        font-weight: 100 900;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'IBM Plex Mono';
+        src: local('IBM Plex Mono'), local('IBMPlexMono'), local('IBM Plex Mono Regular');
+        font-weight: 100 700;
+        font-style: normal;
+      }
+
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--navy-950);
+        font-family: 'Inter', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      /* Clip layout */
+      .clip {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        will-change: transform, opacity;
+      }
+
+      /* Persistent background layer: grid + ambient glows */
+      #bg-layer {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .bg-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(77, 148, 221, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(77, 148, 221, 0.06) 1px, transparent 1px);
+        background-size: 80px 80px;
+      }
+
+      .bg-glow-1 {
+        position: absolute;
+        width: 900px;
+        height: 700px;
+        top: -200px;
+        right: -150px;
+        background: radial-gradient(ellipse, rgba(16, 99, 173, 0.38) 0%, transparent 72%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .bg-glow-2 {
+        position: absolute;
+        width: 700px;
+        height: 600px;
+        bottom: -180px;
+        left: -100px;
+        background: radial-gradient(ellipse, rgba(77, 148, 221, 0.22) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .bg-glow-center {
+        position: absolute;
+        width: 1200px;
+        height: 800px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(ellipse, rgba(4, 52, 100, 0.5) 0%, transparent 65%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      /* ======================================================================
+         Scene 1 — Hook: "The heart is not a diagram."
+         ====================================================================== */
+      #scene-hook {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #hook-anim-container {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        will-change: opacity;
+      }
+
+      #hook-anim-svg {
+        width: 100%;
+        height: 100%;
+        opacity: 0.75;
+      }
+
+      #hook-text-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        will-change: transform, opacity;
+      }
+
+      #hook-eyebrow {
+        font-family: 'IBM Plex Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+        font-size: 20px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--label);
+        margin-bottom: 24px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      #hook-headline {
+        font-family: 'IBM Plex Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+        font-size: 92px;
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+        color: #ffffff;
+        margin: 0;
+        text-align: center;
+        opacity: 0;
+        will-change: opacity, transform;
+        text-shadow: 0 0 80px rgba(77, 148, 221, 0.35);
+      }
+
+      #hook-rule {
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--sky), transparent);
+        margin: 32px auto 0;
+        opacity: 0;
+        will-change: width, opacity;
+      }
+
+      /* ======================================================================
+         Scene 2 — Disease Animation Live
+         ====================================================================== */
+      #scene-disease {
+        z-index: 3;
+        opacity: 0;
+        display: flex;
+        align-items: stretch;
+      }
+
+      /* Left side: animation canvas */
+      #disease-anim-panel {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1080px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      #disease-svg-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 900px;
+        height: 506px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      /* Right side: text panel */
+      #disease-text-panel {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 840px;
+        height: 1080px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 100px 0 60px;
+        box-sizing: border-box;
+      }
+
+      #disease-badge {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 18px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--crimson-bright);
+        opacity: 0;
+        will-change: opacity, transform;
+        margin-bottom: 24px;
+      }
+
+      #disease-badge::before {
+        content: '● ';
+        font-size: 12px;
+      }
+
+      #disease-headline {
+        font-size: 72px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        line-height: 1.08;
+        color: #ffffff;
+        margin: 0 0 40px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      #disease-headline em {
+        font-style: normal;
+        color: var(--sky);
+      }
+
+      .disease-callout {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 28px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      .callout-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--sky);
+        flex-shrink: 0;
+        margin-top: 10px;
+      }
+
+      .callout-dot.crimson {
+        background: var(--crimson);
+      }
+
+      .callout-text {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 24px;
+        letter-spacing: 0.04em;
+        color: var(--label);
+        line-height: 1.4;
+      }
+
+      .callout-text strong {
+        color: #fff;
+        font-weight: 600;
+        display: block;
+        font-size: 26px;
+        margin-bottom: 4px;
+      }
+
+      /* ECG inset panel in disease scene */
+      #ecg-inset {
+        position: absolute;
+        right: 100px;
+        bottom: 120px;
+        width: 360px;
+        height: 120px;
+        background: rgba(11, 17, 32, 0.72);
+        border: 1px solid rgba(140, 180, 230, 0.22);
+        border-radius: 14px;
+        overflow: hidden;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      #ecg-inset-label {
+        position: absolute;
+        top: 14px;
+        left: 20px;
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        color: var(--label-dim);
+      }
+
+      #ecg-inset-status {
+        position: absolute;
+        bottom: 14px;
+        right: 20px;
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 15px;
+        letter-spacing: 0.06em;
+        color: #ff9bab;
+        opacity: 0;
+        will-change: opacity;
+      }
+
+      /* ======================================================================
+         Scene 3 — 3D Anatomy Viewer
+         ====================================================================== */
+      #scene-anatomy {
+        z-index: 4;
+        opacity: 0;
+        display: flex;
+        align-items: stretch;
+      }
+
+      /* Left: 3D heart visualization */
+      #anatomy-viewer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1040px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      #heart-3d-svg-wrap {
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      /* Right: info panel */
+      #anatomy-info {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 880px;
+        height: 1080px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 100px 0 40px;
+        box-sizing: border-box;
+      }
+
+      #anatomy-badge {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 18px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--sky);
+        opacity: 0;
+        will-change: opacity, transform;
+        margin-bottom: 28px;
+      }
+
+      #anatomy-badge::before {
+        content: '● ';
+        font-size: 12px;
+      }
+
+      #anatomy-headline {
+        font-size: 76px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.0;
+        color: #ffffff;
+        margin: 0 0 48px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      #anatomy-panel {
+        background: rgba(8, 23, 51, 0.85);
+        border: 1px solid rgba(140, 180, 230, 0.28);
+        border-radius: 16px;
+        padding: 36px 44px;
+        opacity: 0;
+        transform: translateX(60px);
+        will-change: opacity, transform;
+        margin-bottom: 36px;
+      }
+
+      #anatomy-structure-name {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 24px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #4dc4f0;
+        margin: 0 0 14px;
+      }
+
+      #anatomy-structure-desc {
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--label);
+        line-height: 1.45;
+        margin: 0;
+      }
+
+      #anatomy-stat-row {
+        display: flex;
+        gap: 40px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      .anatomy-stat {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .anatomy-stat-value {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 56px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+
+      .anatomy-stat-label {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 18px;
+        letter-spacing: 0.08em;
+        color: var(--label-dim);
+        text-transform: uppercase;
+      }
+
+      /* ======================================================================
+         Scene 4 — ECG Bedside Monitor
+         ====================================================================== */
+      #scene-ecg {
+        z-index: 5;
+        opacity: 0;
+        display: flex;
+        align-items: stretch;
+      }
+
+      /* Left: ECG monitor */
+      #ecg-monitor {
+        position: absolute;
+        left: 80px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 940px;
+        will-change: opacity, transform;
+        opacity: 0;
+      }
+
+      #ecg-monitor-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+      }
+
+      #ecg-monitor-title {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 20px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--label);
+      }
+
+      #ecg-rate {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 52px;
+        font-weight: 700;
+        color: #ff9bab;
+        letter-spacing: -0.01em;
+        line-height: 1;
+        margin-bottom: 6px;
+        opacity: 0;
+        will-change: opacity;
+      }
+
+      #ecg-rate-label {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--label-dim);
+      }
+
+      #ecg-strip-box {
+        background: rgba(11, 17, 32, 0.85);
+        border: 1px solid rgba(140, 180, 230, 0.22);
+        border-radius: 16px;
+        padding: 24px 32px;
+        margin-bottom: 28px;
+        overflow: hidden;
+      }
+
+      #ecg-strip-label {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        color: var(--label-dim);
+        margin-bottom: 12px;
+      }
+
+      #ecg-af-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(192, 42, 73, 0.18);
+        border: 1px solid rgba(192, 42, 73, 0.45);
+        border-radius: 8px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        opacity: 0;
+        will-change: opacity;
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 18px;
+        letter-spacing: 0.08em;
+        color: #ff9bab;
+      }
+
+      /* Right: rhythm library */
+      #rhythm-library {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 700px;
+        will-change: opacity, transform;
+        opacity: 0;
+      }
+
+      #rhythm-library-title {
+        font-size: 62px;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.1;
+        color: #fff;
+        margin-bottom: 44px;
+      }
+
+      #rhythm-library-title em {
+        font-style: normal;
+        color: var(--sky);
+      }
+
+      #rhythm-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .rhythm-badge {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 17px;
+        letter-spacing: 0.06em;
+        color: var(--label);
+        background: rgba(8, 23, 51, 0.72);
+        border: 1px solid rgba(140, 180, 230, 0.22);
+        border-radius: 8px;
+        padding: 10px 18px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      .rhythm-badge.highlight {
+        background: rgba(16, 99, 173, 0.22);
+        border-color: rgba(77, 148, 221, 0.45);
+        color: #7fd4ff;
+      }
+
+      .rhythm-badge.danger {
+        background: rgba(192, 42, 73, 0.14);
+        border-color: rgba(192, 42, 73, 0.38);
+        color: #ff9bab;
+      }
+
+      /* ======================================================================
+         Scene 5 — Outro: CIG Crest & Stats
+         ====================================================================== */
+      #scene-outro {
+        z-index: 6;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #outro-crest-wrap {
+        opacity: 0;
+        will-change: opacity, transform;
+        margin-bottom: 48px;
+      }
+
+      #outro-org-name {
+        font-size: 72px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        text-align: center;
+        margin: 0 0 16px;
+        opacity: 0;
+        will-change: opacity, transform;
+        text-shadow: 0 0 60px rgba(77, 148, 221, 0.4);
+      }
+
+      #outro-faculty {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--label);
+        text-align: center;
+        margin: 0 0 72px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      #outro-stats {
+        display: flex;
+        gap: 80px;
+        align-items: flex-start;
+        margin-bottom: 64px;
+        justify-content: center;
+      }
+
+      .outro-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      .outro-stat-value {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 100px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        text-shadow: 0 0 40px rgba(77, 148, 221, 0.5);
+      }
+
+      .outro-stat-label {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 18px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--label);
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      .outro-divider {
+        width: 2px;
+        height: 120px;
+        background: linear-gradient(180deg, transparent, rgba(140, 180, 230, 0.3), transparent);
+        align-self: center;
+        opacity: 0;
+        will-change: opacity;
+      }
+
+      #outro-tagline {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 22px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--label-dim);
+        text-align: center;
+        opacity: 0;
+        will-change: opacity;
+      }
+
+      /* ======================================================================
+         Scene dividers / rule decorations
+         ====================================================================== */
+      .scene-rule {
+        position: absolute;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(140, 180, 230, 0.25), transparent);
+        pointer-events: none;
+      }
+
+      /* ======================================================================
+         Shared: persistent countdown/info corner
+         ====================================================================== */
+      #corner-badge {
+        position: absolute;
+        top: 52px;
+        left: 72px;
+        z-index: 100;
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 18px;
+        letter-spacing: 0.12em;
+        color: rgba(140, 180, 230, 0.45);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* Audio-reactive glow overlay */
+      #ar-glow {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: radial-gradient(ellipse 60% 60% at 50% 45%, rgba(16, 99, 173, 0) 0%, transparent 100%);
+        pointer-events: none;
+        opacity: 0;
+        will-change: opacity;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ======================================================== ROOT -->
+    <div
+      id="root"
+      data-composition-id="cig-brag"
+      data-width="1920"
+      data-height="1080"
+      data-start="0"
+      data-duration="22"
+    >
+      <!-- ======================================================== AUDIO -->
+      <!-- Music bed: vol-12 — steady & cinematic, 110 BPM -->
+      <audio
+        id="bg-music"
+        src="assets/music/happy-beats-business-moves-vol-12-by-ende-dot-app.mp3"
+        data-start="0"
+        data-duration="22"
+        data-track-index="10"
+        data-volume="0"
+      ></audio>
+
+      <!-- SFX: anatomy reveal bell at ~8.74s -->
+      <audio
+        id="sfx-bell-anatomy"
+        src="assets/sfx/impact/impactBell_heavy_000.ogg"
+        data-start="8.64"
+        data-duration="1.5"
+        data-track-index="11"
+        data-volume="0.72"
+      ></audio>
+
+      <!-- SFX: outro crest bell at ~17.47s -->
+      <audio
+        id="sfx-bell-crest"
+        src="assets/sfx/impact/impactBell_heavy_004.ogg"
+        data-start="17.37"
+        data-duration="2"
+        data-track-index="12"
+        data-volume="0.68"
+      ></audio>
+
+      <!-- SFX: disease label drop 1 at ~4.5s -->
+      <audio
+        id="sfx-drop-1"
+        src="assets/sfx/interface/drop_001.ogg"
+        data-start="4.40"
+        data-duration="0.5"
+        data-track-index="13"
+        data-volume="0.30"
+      ></audio>
+
+      <!-- SFX: disease label drop 2 at ~5.5s -->
+      <audio
+        id="sfx-drop-2"
+        src="assets/sfx/interface/drop_001.ogg"
+        data-start="5.49"
+        data-duration="0.5"
+        data-track-index="14"
+        data-volume="0.28"
+      ></audio>
+
+      <!-- SFX: disease label drop 3 at ~6.5s -->
+      <audio
+        id="sfx-drop-3"
+        src="assets/sfx/interface/drop_001.ogg"
+        data-start="6.46"
+        data-duration="0.5"
+        data-track-index="15"
+        data-volume="0.26"
+      ></audio>
+
+      <!-- SFX: rhythm badge drops (scene 4) -->
+      <audio
+        id="sfx-drop-r1"
+        src="assets/sfx/interface/drop_001.ogg"
+        data-start="13.01"
+        data-duration="0.4"
+        data-track-index="16"
+        data-volume="0.28"
+      ></audio>
+      <audio
+        id="sfx-drop-r2"
+        src="assets/sfx/interface/drop_001.ogg"
+        data-start="13.54"
+        data-duration="0.4"
+        data-track-index="17"
+        data-volume="0.26"
+      ></audio>
+      <audio
+        id="sfx-drop-r3"
+        src="assets/sfx/interface/drop_001.ogg"
+        data-start="14.10"
+        data-duration="0.4"
+        data-track-index="18"
+        data-volume="0.24"
+      ></audio>
+      <audio
+        id="sfx-drop-r4"
+        src="assets/sfx/interface/drop_001.ogg"
+        data-start="14.63"
+        data-duration="0.4"
+        data-track-index="19"
+        data-volume="0.22"
+      ></audio>
+
+      <!-- Persistent background -->
+      <div id="bg-layer" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="bg-glow-1"></div>
+        <div class="bg-glow-2"></div>
+        <div class="bg-glow-center"></div>
+      </div>
+
+      <!-- Audio-reactive glow overlay -->
+      <div id="ar-glow" aria-hidden="true" data-layout-ignore></div>
+
+      <!-- ============================================================
+           SCENE 1 — Hook: "The heart is not a diagram."
+           0s → 3s
+           ============================================================ -->
+      <section
+        id="scene-hook"
+        class="clip"
+        data-start="0"
+        data-duration="3.5"
+        data-track-index="1"
+        data-layout-allow-overflow
+      >
+        <!-- Atherosclerosis SVG animation — static "mid-state" representation -->
+        <div id="hook-anim-container">
+          <svg
+            id="hook-anim-svg"
+            viewBox="0 0 800 450"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <defs>
+              <pattern id="sceneGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M40 0H0V40" fill="none" stroke="rgba(77,148,221,0.08)" stroke-width="1" />
+              </pattern>
+              <radialGradient id="sceneGlow" cx="50%" cy="45%" r="60%">
+                <stop offset="0%" stop-color="rgba(60,120,200,0.18)" />
+                <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+              </radialGradient>
+              <!-- Glow filter for selected structures -->
+              <filter id="glow-blue">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur" />
+                <feFlood flood-color="#4d94dd" flood-opacity="0.6" result="color" />
+                <feComposite in="color" in2="blur" operator="in" result="shadow" />
+                <feMerge><feMergeNode in="shadow" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+              <filter id="glow-crimson">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur" />
+                <feFlood flood-color="#c02a49" flood-opacity="0.5" result="color" />
+                <feComposite in="color" in2="blur" operator="in" result="shadow" />
+                <feMerge><feMergeNode in="shadow" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+            <rect width="800" height="450" fill="url(#sceneGrid)" />
+            <rect width="800" height="450" fill="url(#sceneGlow)" />
+
+            <!-- Vessel wall — outer -->
+            <rect x="60" y="112" width="680" height="228" rx="26" fill="rgba(20,50,110,0.82)" />
+            <rect x="60" y="112" width="680" height="228" rx="26" fill="none" stroke="rgba(140,180,230,0.18)" stroke-width="1" />
+            <rect x="68" y="128" width="664" height="196" rx="20" fill="rgba(60,100,170,0.55)" opacity="0.72" />
+
+            <!-- Lumen -->
+            <!-- Mid-state: plaque growing at center (x=430) -->
+            <path d="M60 168 C200 168 320 168 380 180 C410 188 430 202 450 204 C470 202 500 185 560 170 L740 168 L740 288 L60 288 Z" fill="#7da8d8" opacity="0.85" />
+
+            <!-- Foam cells / fatty streak -->
+            <ellipse cx="430" cy="188" rx="52" ry="24" fill="#7a3c50" opacity="0.78" />
+
+            <!-- Fibrous cap -->
+            <path d="M378 180 C390 175 410 172 430 171 C450 172 470 175 482 180" fill="none" stroke="#8cb8e8" stroke-width="3.8" stroke-linecap="round" opacity="0.9" />
+
+            <!-- Necrotic core -->
+            <ellipse cx="430" cy="192" rx="36" ry="14" fill="#7a3c50" opacity="0.65" />
+
+            <!-- Early thrombus at rupture site -->
+            <path d="M394 181 Q430 220 466 181 Z" fill="#b03055" opacity="0.88" />
+            <!-- Platelets -->
+            <circle cx="415" cy="196" r="3.2" fill="#c87090" opacity="0.6" />
+            <circle cx="430" cy="200" r="2.8" fill="#c87090" opacity="0.55" />
+            <circle cx="446" cy="196" r="3" fill="#c87090" opacity="0.6" />
+            <circle cx="422" cy="205" r="2.4" fill="#c87090" opacity="0.48" />
+            <circle cx="438" cy="206" r="2.6" fill="#c87090" opacity="0.5" />
+
+            <!-- Flow particles (left side — still flowing) -->
+            <circle cx="130" cy="230" r="3.2" fill="#c87090" opacity="0.8" />
+            <circle cx="185" cy="242" r="2.8" fill="#c87090" opacity="0.72" />
+            <circle cx="240" cy="238" r="3.0" fill="#c87090" opacity="0.75" />
+            <circle cx="290" cy="245" r="2.6" fill="#c87090" opacity="0.68" />
+            <circle cx="340" cy="240" r="2.8" fill="#c87090" opacity="0.7" />
+            <!-- Flow particles (right side — reduced, ischaemia) -->
+            <circle cx="530" cy="232" r="2.2" fill="#c87090" opacity="0.28" />
+            <circle cx="600" cy="238" r="1.8" fill="#c87090" opacity="0.22" />
+            <circle cx="665" cy="234" r="2.0" fill="#c87090" opacity="0.2" />
+
+            <!-- Cap fissure -->
+            <path d="M422 175 l5 -10 l-6 -5 l8 -8" fill="none" stroke="#ffd9df" stroke-width="2.4" stroke-linecap="round" opacity="0.9" />
+
+            <!-- Flow down indicator -->
+            <rect x="628" y="356" width="112" height="30" rx="8" fill="rgba(90,40,55,0.5)" stroke="rgba(224,58,92,0.4)" />
+            <text x="684" y="376" fill="#ff9bab" opacity="0.9" text-anchor="middle" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">FLOW ↓</text>
+
+            <!-- Labels -->
+            <text x="430" y="122" fill="rgba(140,180,230,0.9)" text-anchor="middle" opacity="0.85" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">ATHEROSCLEROTIC PLAQUE</text>
+            <line x1="430" y1="126" x2="430" y2="148" stroke="rgba(140,180,230,0.3)" stroke-width="1" stroke-dasharray="3 3" />
+            <text x="76" y="160" fill="rgba(140,180,230,0.9)" opacity="0.72" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">ENDOTHELIAL DYSFUNCTION</text>
+            <text x="74" y="368" fill="rgba(140,180,230,0.5)" opacity="1" style="font: 500 10px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.05em; text-transform: uppercase;">ARTERIAL WALL · INTIMA · MEDIA · ADVENTITIA</text>
+            <text x="430" y="296" fill="#ff9bab" text-anchor="middle" opacity="0.9" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">THROMBUS FORMING</text>
+          </svg>
+        </div>
+
+        <!-- Hook text overlay -->
+        <div id="hook-text-wrap" data-layout-allow-overflow>
+          <p id="hook-eyebrow">Cardiovascular Learning Hub</p>
+          <h1 id="hook-headline">"The heart is<br>not a diagram."</h1>
+          <div id="hook-rule"></div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SCENE 2 — Disease Animation Live
+           3s → 8s  (total 5s)
+           ============================================================ -->
+      <section
+        id="scene-disease"
+        class="clip"
+        data-start="3"
+        data-duration="5.5"
+        data-track-index="2"
+      >
+        <!-- Left: SVG animation panel -->
+        <div id="disease-anim-panel">
+          <!-- Background glow -->
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%, rgba(16,99,173,0.14) 0%, transparent 70%);pointer-events:none;"></div>
+          <div id="disease-svg-wrap">
+            <svg
+              viewBox="0 0 800 450"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              width="900"
+              height="506"
+              style="display:block;"
+            >
+              <!-- Shared defs with hook scene (duplicate IDs prefixed) -->
+              <defs>
+                <pattern id="sceneGrid2" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M40 0H0V40" fill="none" stroke="rgba(77,148,221,0.08)" stroke-width="1" />
+                </pattern>
+                <radialGradient id="sceneGlow2" cx="50%" cy="45%" r="60%">
+                  <stop offset="0%" stop-color="rgba(60,120,200,0.18)" />
+                  <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+                </radialGradient>
+              </defs>
+              <rect width="800" height="450" fill="url(#sceneGrid2)" />
+              <rect width="800" height="450" fill="url(#sceneGlow2)" />
+
+              <!-- Vessel wall -->
+              <rect x="60" y="112" width="680" height="228" rx="26" fill="rgba(20,50,110,0.82)" />
+              <rect x="60" y="112" width="680" height="228" rx="26" fill="none" stroke="rgba(140,180,230,0.18)" stroke-width="1" />
+              <rect x="68" y="128" width="664" height="196" rx="20" fill="rgba(60,100,170,0.55)" opacity="0.72" />
+
+              <!-- Lumen — nearly occluded -->
+              <path d="M60 168 C200 168 320 168 375 185 C400 196 430 210 455 190 C480 178 530 168 740 168 L740 288 L60 288 Z" fill="#7da8d8" opacity="0.85" />
+
+              <!-- Large plaque -->
+              <ellipse cx="430" cy="190" rx="72" ry="34" fill="#7a3c50" opacity="0.82" />
+              <ellipse cx="430" cy="196" rx="50" ry="20" fill="#7a3c50" opacity="0.7" />
+
+              <!-- Fibrous cap — thin (vulnerable) -->
+              <path d="M360 181 C385 174 410 170 430 169 C450 170 475 175 500 183" fill="none" stroke="#8cb8e8" stroke-width="2.5" stroke-linecap="round" opacity="0.85" />
+
+              <!-- Cap fissure -->
+              <path d="M424 172 l6 -12 l-7 -6 l10 -10" fill="none" stroke="#ffd9df" stroke-width="2.8" stroke-linecap="round" opacity="0.95" />
+
+              <!-- Thrombus — near-occlusion -->
+              <path d="M376 186 Q430 240 484 188 Z" fill="#b03055" opacity="0.92" />
+              <!-- Platelets -->
+              <circle cx="404" cy="200" r="3.5" fill="#c87090" opacity="0.65" />
+              <circle cx="419" cy="208" r="3.0" fill="#c87090" opacity="0.6" />
+              <circle cx="430" cy="212" r="3.2" fill="#c87090" opacity="0.62" />
+              <circle cx="442" cy="208" r="2.8" fill="#c87090" opacity="0.58" />
+              <circle cx="456" cy="200" r="3.0" fill="#c87090" opacity="0.62" />
+              <circle cx="415" cy="218" r="2.4" fill="#c87090" opacity="0.5" />
+              <circle cx="444" cy="217" r="2.6" fill="#c87090" opacity="0.52" />
+
+              <!-- Very slow flow on left -->
+              <circle cx="120" cy="230" r="2.8" fill="#c87090" opacity="0.55" />
+              <circle cx="180" cy="244" r="2.4" fill="#c87090" opacity="0.48" />
+              <circle cx="240" cy="240" r="2.6" fill="#c87090" opacity="0.52" />
+              <circle cx="290" cy="246" r="2.2" fill="#c87090" opacity="0.45" />
+              <!-- Stasis right of occlusion -->
+              <circle cx="550" cy="236" r="1.8" fill="#c87090" opacity="0.15" />
+              <circle cx="610" cy="230" r="1.6" fill="#c87090" opacity="0.12" />
+
+              <!-- Flow ↓ indicator -->
+              <rect x="628" y="356" width="112" height="30" rx="8" fill="rgba(90,40,55,0.5)" stroke="rgba(224,58,92,0.4)" />
+              <text x="684" y="376" fill="#ff9bab" text-anchor="middle" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">FLOW ↓</text>
+
+              <!-- Labels -->
+              <text x="430" y="122" fill="rgba(140,180,230,0.9)" text-anchor="middle" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">ATHEROSCLEROTIC PLAQUE</text>
+              <line x1="430" y1="126" x2="430" y2="148" stroke="rgba(140,180,230,0.3)" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="430" y="304" fill="#ff9bab" text-anchor="middle" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">THROMBUS · NEAR OCCLUSION</text>
+              <line x1="430" y1="295" x2="430" y2="283" stroke="rgba(255,155,171,0.4)" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="74" y="368" fill="rgba(140,180,230,0.45)" style="font: 500 10px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.05em; text-transform: uppercase;">ARTERIAL WALL · INTIMA · MEDIA · ADVENTITIA</text>
+
+              <!-- ECG inset panel — shows ST elevation -->
+              <rect x="470" y="250" width="300" height="150" rx="14" fill="rgba(11,17,32,0.72)" stroke="rgba(140,180,230,0.22)" />
+              <text x="486" y="272" fill="rgba(140,180,230,0.7)" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">LEAD V3</text>
+              <!-- ECG path with ST elevation: a stylized waveform -->
+              <path d="M486 340 L512 340 L520 300 L528 340 L534 355 L542 310 L548 345 L560 340 L580 340 L588 300 L596 340 L602 355 L610 310 L616 345 L630 340 L650 340 L658 300 L666 340 L672 355 L680 310 L686 345 L700 340 L720 340 L728 300 L736 340 L742 355 L750 310 L754 345 L762 340"
+                fill="none" stroke="#ff6b83" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+              <text x="754" y="392" fill="#ff9bab" text-anchor="end" style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">ST ELEVATION</text>
+
+              <!-- Consequences banner -->
+              <rect x="470" y="214" width="300" height="26" rx="8" fill="rgba(122,27,44,0.35)" stroke="rgba(224,58,92,0.4)" />
+              <text x="620" y="231" fill="#ff9bab" text-anchor="middle" style="font: 500 10px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">TROPONIN RELEASE · ARRHYTHMIA RISK</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right: text panel -->
+        <div id="disease-text-panel">
+          <p id="disease-badge">Disease Modules</p>
+
+          <h2 id="disease-headline"><em>27</em> animated<br>pathophysiology<br>modules</h2>
+
+          <div class="disease-callout" id="callout-1">
+            <span class="callout-dot crimson"></span>
+            <p class="callout-text"><strong>Atherosclerosis → ACS</strong>Normal artery to plaque rupture<br>and thrombus in 9 steps</p>
+          </div>
+
+          <div class="disease-callout" id="callout-2">
+            <span class="callout-dot"></span>
+            <p class="callout-text"><strong>SVG pathophysiology</strong>Medically-sequenced,<br>animated in real time</p>
+          </div>
+
+          <div class="disease-callout" id="callout-3">
+            <span class="callout-dot"></span>
+            <p class="callout-text"><strong>ECG integration</strong>Live rhythm strip synced<br>to disease progression</p>
+          </div>
+        </div>
+
+        <!-- ECG inset callout -->
+        <div id="ecg-inset">
+          <span id="ecg-inset-label">Lead V3</span>
+          <span id="ecg-inset-status">ST Elevation</span>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SCENE 3 — 3D Anatomy Viewer (beat-locked at 8.74s)
+           8.5s → 12.5s  (total 4s)
+           ============================================================ -->
+      <section
+        id="scene-anatomy"
+        class="clip"
+        data-start="8.5"
+        data-duration="4.5"
+        data-track-index="3"
+      >
+        <!-- Left: 3D heart representation -->
+        <div id="anatomy-viewer">
+          <!-- Background glow -->
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 45% 52%, rgba(16,99,173,0.18) 0%, transparent 68%);pointer-events:none;"></div>
+
+          <div id="heart-3d-svg-wrap">
+            <svg
+              viewBox="0 0 640 640"
+              xmlns="http://www.w3.org/2000/svg"
+              width="640"
+              height="640"
+              aria-hidden="true"
+            >
+              <defs>
+                <radialGradient id="lvGrad" cx="50%" cy="42%" r="58%">
+                  <stop offset="0%" stop-color="#5c2334" />
+                  <stop offset="100%" stop-color="#3d1222" />
+                </radialGradient>
+                <radialGradient id="rvGrad" cx="50%" cy="45%" r="55%">
+                  <stop offset="0%" stop-color="#3d3580" />
+                  <stop offset="100%" stop-color="#251f55" />
+                </radialGradient>
+                <radialGradient id="laGrad" cx="50%" cy="48%" r="52%">
+                  <stop offset="0%" stop-color="#6e2848" />
+                  <stop offset="100%" stop-color="#4a1a30" />
+                </radialGradient>
+                <filter id="heartGlow">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+                  <feFlood flood-color="rgba(16,99,173,0.5)" result="color" />
+                  <feComposite in="color" in2="blur" operator="in" result="shadow" />
+                  <feMerge><feMergeNode in="shadow" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+                <filter id="lvHighlight">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="14" result="blur" />
+                  <feFlood flood-color="#4dc4f0" flood-opacity="0.7" result="color" />
+                  <feComposite in="color" in2="blur" operator="in" result="shadow" />
+                  <feMerge><feMergeNode in="shadow" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+              </defs>
+
+              <!-- Subtle anatomy grid in background -->
+              <rect width="640" height="640" fill="none" />
+              <!-- Pericardial outline -->
+              <path d="M320 76 C420 76 490 148 490 236 C490 360 400 468 320 498 C240 468 150 360 150 236 C150 148 220 76 320 76 Z"
+                fill="none" stroke="rgba(140,180,230,0.12)" stroke-width="2" />
+
+              <!-- Right ventricle (background) -->
+              <path d="M260 190 C240 210 232 260 236 310 C240 350 258 388 280 408 C302 424 280 390 272 360 C264 330 268 290 272 260 C276 230 280 210 272 195 Z"
+                fill="url(#rvGrad)"
+                stroke="rgba(140,180,230,0.2)" stroke-width="1.5"
+                opacity="0.88" />
+
+              <!-- Left atrium (top) -->
+              <path d="M308 128 C340 118 378 126 394 148 C404 162 400 182 388 190 C370 200 348 194 332 184 C318 176 306 158 308 128 Z"
+                fill="url(#laGrad)"
+                stroke="rgba(255,160,180,0.25)" stroke-width="1.5"
+                opacity="0.86" />
+
+              <!-- Left ventricle (primary — highlighted) -->
+              <path d="M316 188 C350 188 380 210 385 255 C388 295 375 355 355 395 C340 425 320 442 320 442 C320 442 300 425 285 395 C265 355 252 295 255 255 C260 210 290 188 316 188 Z"
+                fill="url(#lvGrad)"
+                stroke="rgba(77,196,240,0.5)" stroke-width="2.5"
+                filter="url(#lvHighlight)"
+                opacity="0.95" />
+
+              <!-- Aorta -->
+              <path d="M340 150 C358 132 375 120 385 104 C390 98 382 90 370 92 C356 94 342 106 332 124"
+                fill="none" stroke="#c87090" stroke-width="9" stroke-linecap="round"
+                opacity="0.82" />
+              <path d="M385 104 C398 86 420 76 448 76 C468 76 480 82 480 82"
+                fill="none" stroke="#c87090" stroke-width="8" stroke-linecap="round"
+                opacity="0.75" />
+
+              <!-- Pulmonary trunk -->
+              <path d="M282 168 C264 148 250 130 246 110 C243 94 258 84 272 86 C284 88 294 102 298 120"
+                fill="none" stroke="#6688c8" stroke-width="8" stroke-linecap="round"
+                opacity="0.78" />
+
+              <!-- SVC/IVC -->
+              <path d="M362 140 C375 120 385 98 390 78"
+                fill="none" stroke="#6688c8" stroke-width="7" stroke-linecap="round"
+                opacity="0.7" />
+              <path d="M355 440 L355 490"
+                fill="none" stroke="#6688c8" stroke-width="8" stroke-linecap="round"
+                opacity="0.65" />
+
+              <!-- Coronary arteries on LV -->
+              <path d="M326 198 C314 235 318 310 320 438"
+                fill="none" stroke="#c05060" stroke-width="5" stroke-linecap="round"
+                opacity="0.7" />
+              <path d="M326 206 C354 220 374 240 384 270"
+                fill="none" stroke="#c05060" stroke-width="4.5" stroke-linecap="round"
+                opacity="0.65" />
+
+              <!-- Conduction system sparkle (SA/AV node) -->
+              <circle cx="358" cy="165" r="5" fill="#d4a820" opacity="0.85" />
+              <circle cx="358" cy="165" r="9" fill="none" stroke="#d4a820" stroke-width="2" opacity="0.45" />
+              <circle cx="318" cy="226" r="4" fill="#d4a820" opacity="0.75" />
+
+              <!-- Selection highlight ring on LV -->
+              <path d="M316 188 C350 188 380 210 385 255 C388 295 375 355 355 395 C340 425 320 442 320 442 C320 442 300 425 285 395 C265 355 252 295 255 255 C260 210 290 188 316 188 Z"
+                fill="none"
+                stroke="#4dc4f0" stroke-width="3.5" stroke-dasharray="12 6"
+                opacity="0.75" />
+
+              <!-- Labels -->
+              <text x="320" y="68" text-anchor="middle" fill="rgba(140,180,230,0.7)"
+                style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">
+                AORTIC ARCH
+              </text>
+              <line x1="320" y1="72" x2="362" y2="100" stroke="rgba(140,180,230,0.3)" stroke-width="1" stroke-dasharray="3 3" />
+
+              <text x="110" y="330" text-anchor="start" fill="rgba(140,180,230,0.65)"
+                style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">
+                R VENTRICLE
+              </text>
+              <line x1="190" y1="325" x2="255" y2="305" stroke="rgba(140,180,230,0.25)" stroke-width="1" stroke-dasharray="3 3" />
+
+              <!-- LV label with glow -->
+              <text x="430" y="320" text-anchor="start" fill="#4dc4f0"
+                style="font: 600 12px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">
+                L VENTRICLE
+              </text>
+              <line x1="388" y1="315" x2="426" y2="316" stroke="#4dc4f0" stroke-width="1.5" opacity="0.6" />
+
+              <text x="388" y="166" text-anchor="start" fill="rgba(212,168,32,0.85)"
+                style="font: 500 11px ui-monospace, 'IBM Plex Mono', monospace; letter-spacing: 0.06em; text-transform: uppercase;">
+                SA NODE
+              </text>
+              <line x1="388" y1="169" x2="370" y2="168" stroke="rgba(212,168,32,0.4)" stroke-width="1" stroke-dasharray="3 3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right: info panel -->
+        <div id="anatomy-info">
+          <p id="anatomy-badge">Interactive Anatomy</p>
+
+          <h2 id="anatomy-headline">A heart<br>you can<br>explore.</h2>
+
+          <div id="anatomy-panel">
+            <p id="anatomy-structure-name">Left Ventricle</p>
+            <p id="anatomy-structure-desc">Pumps oxygenated blood into the aorta and systemic circulation. The primary pump of the left heart.</p>
+          </div>
+
+          <div id="anatomy-stat-row">
+            <div class="anatomy-stat">
+              <span class="anatomy-stat-value">24</span>
+              <span class="anatomy-stat-label">Selectable<br>Structures</span>
+            </div>
+            <div class="anatomy-stat" style="border-left: 1px solid rgba(140,180,230,0.2); padding-left: 44px;">
+              <span class="anatomy-stat-value">7</span>
+              <span class="anatomy-stat-label">Anatomy<br>Groups</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SCENE 4 — ECG Bedside Monitor (beat-grid at 13.11s)
+           13s → 17s  (total 4s)
+           ============================================================ -->
+      <section
+        id="scene-ecg"
+        class="clip"
+        data-start="13"
+        data-duration="4.5"
+        data-track-index="4"
+      >
+        <!-- Left: ECG monitor panel -->
+        <div id="ecg-monitor">
+          <div id="ecg-monitor-header">
+            <span id="ecg-monitor-title">ECG Simulator</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:18px;color:rgba(140,180,230,0.5);letter-spacing:0.08em;">20 LIVE RHYTHMS</span>
+          </div>
+
+          <div style="margin-bottom:24px;">
+            <div id="ecg-rate">ATRIAL RATE ≈ 450/min</div>
+            <div id="ecg-rate-label">Atrial Fibrillation</div>
+          </div>
+
+          <!-- Monitor strip box -->
+          <div id="ecg-strip-box">
+            <div id="ecg-strip-label">Lead II — Irregularly irregular</div>
+            <!-- AF waveform: no P waves, irregular RR, fibrillatory baseline -->
+            <svg viewBox="0 0 860 120" xmlns="http://www.w3.org/2000/svg" width="860" height="120" aria-hidden="true">
+              <defs>
+                <pattern id="ecgGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M20 0H0V20" fill="none" stroke="rgba(192,42,73,0.1)" stroke-width="0.5" />
+                </pattern>
+              </defs>
+              <rect width="860" height="120" fill="url(#ecgGrid)" rx="4" />
+              <!-- Fibrillatory baseline with irregular QRS complexes -->
+              <!-- Fibrillatory baseline -->
+              <path d="M0 60 C8 58 12 62 20 60 C28 58 32 61 40 59 C48 57 52 62 60 60 C68 58 72 61 80 60"
+                fill="none" stroke="rgba(255,155,171,0.35)" stroke-width="1.2" />
+              <!-- QRS 1 -->
+              <path d="M80 60 L88 60 L96 30 L104 90 L112 55 L120 60"
+                fill="none" stroke="#ff9bab" stroke-width="2.2" stroke-linejoin="round" />
+              <!-- Irregular baseline -->
+              <path d="M120 60 C130 58 136 62 148 60 C158 58 162 62 170 60 C178 58 184 61 192 60 C200 59 205 61 210 60"
+                fill="none" stroke="rgba(255,155,171,0.35)" stroke-width="1.2" />
+              <!-- QRS 2 — shorter RR -->
+              <path d="M210 60 L218 60 L225 32 L233 92 L240 57 L248 60"
+                fill="none" stroke="#ff9bab" stroke-width="2.2" stroke-linejoin="round" />
+              <!-- Baseline -->
+              <path d="M248 60 C258 59 264 62 272 60 C282 58 286 62 295 60 C305 58 310 62 320 60 C328 59 332 61 340 60 C346 58 350 62 358 60"
+                fill="none" stroke="rgba(255,155,171,0.35)" stroke-width="1.2" />
+              <!-- QRS 3 — longer RR, taller -->
+              <path d="M358 60 L366 60 L374 25 L382 95 L390 54 L400 60"
+                fill="none" stroke="#ff9bab" stroke-width="2.2" stroke-linejoin="round" />
+              <!-- Baseline -->
+              <path d="M400 60 C410 58 416 62 424 60 C434 59 440 61 448 60 C456 58 462 62 472 60"
+                fill="none" stroke="rgba(255,155,171,0.35)" stroke-width="1.2" />
+              <!-- QRS 4 — very short RR -->
+              <path d="M472 60 L480 60 L487 34 L495 88 L502 58 L510 60"
+                fill="none" stroke="#ff9bab" stroke-width="2.2" stroke-linejoin="round" />
+              <!-- Baseline -->
+              <path d="M510 60 C520 58 528 61 540 60 C550 59 556 62 565 60 C574 58 578 62 586 60 C594 59 600 61 608 60"
+                fill="none" stroke="rgba(255,155,171,0.35)" stroke-width="1.2" />
+              <!-- QRS 5 -->
+              <path d="M608 60 L616 60 L624 29 L632 91 L640 56 L648 60"
+                fill="none" stroke="#ff9bab" stroke-width="2.2" stroke-linejoin="round" />
+              <!-- Final baseline -->
+              <path d="M648 60 C660 58 666 62 678 60 C690 59 696 62 708 60 C718 58 724 61 734 60 C742 59 748 62 758 60 C766 59 770 62 778 60 C786 58 792 61 800 60 C808 59 814 62 820 60 C828 59 834 61 840 60 L860 60"
+                fill="none" stroke="rgba(255,155,171,0.35)" stroke-width="1.2" />
+            </svg>
+
+            <!-- AF annotation badge -->
+            <div id="ecg-af-badge">
+              <span style="font-size:9px;">●</span>
+              Absent P waves · Irregularly irregular
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: rhythm library panel -->
+        <div id="rhythm-library">
+          <h2 id="rhythm-library-title">Sinus<br>to <em>VF</em>.</h2>
+
+          <div id="rhythm-badges">
+            <!-- Beat grid: 13.11, 13.64, 14.10, 14.63 + the rest -->
+            <span class="rhythm-badge highlight" id="rb-1">Sinus Rhythm</span>
+            <span class="rhythm-badge" id="rb-2">Sinus Brady</span>
+            <span class="rhythm-badge danger" id="rb-3">Atrial Flutter</span>
+            <span class="rhythm-badge danger" id="rb-4">Atrial Fibrillation</span>
+            <span class="rhythm-badge" id="rb-5">SVT</span>
+            <span class="rhythm-badge" id="rb-6">AVNRT</span>
+            <span class="rhythm-badge" id="rb-7">WPW</span>
+            <span class="rhythm-badge danger" id="rb-8">VT</span>
+            <span class="rhythm-badge danger" id="rb-9">VF</span>
+            <span class="rhythm-badge" id="rb-10">1° AVB</span>
+            <span class="rhythm-badge" id="rb-11">2° AVB I</span>
+            <span class="rhythm-badge" id="rb-12">2° AVB II</span>
+            <span class="rhythm-badge" id="rb-13">3° AVB</span>
+            <span class="rhythm-badge" id="rb-14">LBBB</span>
+            <span class="rhythm-badge" id="rb-15">RBBB</span>
+            <span class="rhythm-badge" id="rb-16">LVH</span>
+            <span class="rhythm-badge" id="rb-17">STEMI</span>
+            <span class="rhythm-badge danger" id="rb-18">Hyperkalaemia</span>
+            <span class="rhythm-badge" id="rb-19">Paced</span>
+            <span class="rhythm-badge" id="rb-20">Normal Axis</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SCENE 5 — Outro: CIG Crest & Stats (beat-locked 17.47s)
+           17s → 22s  (total 5s)
+           ============================================================ -->
+      <section
+        id="scene-outro"
+        class="clip"
+        data-start="17"
+        data-duration="5"
+        data-track-index="5"
+      >
+        <!-- CIG Crest SVG -->
+        <div id="outro-crest-wrap">
+          <svg
+            viewBox="0 0 160 160"
+            xmlns="http://www.w3.org/2000/svg"
+            width="160"
+            height="160"
+            aria-label="CIG — Cardiology Interest Group crest"
+          >
+            <defs>
+              <radialGradient id="crestGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(77,148,221,0.25)" />
+                <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+              </radialGradient>
+              <filter id="crestFilter">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur" />
+                <feFlood flood-color="#4d94dd" flood-opacity="0.5" result="color" />
+                <feComposite in="color" in2="blur" operator="in" result="shadow" />
+                <feMerge><feMergeNode in="shadow" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+            <!-- Shield shape -->
+            <path d="M80 8 L148 34 L148 86 C148 120 112 148 80 156 C48 148 12 120 12 86 L12 34 Z"
+              fill="#043464" stroke="#4d94dd" stroke-width="2.5"
+              filter="url(#crestFilter)" />
+            <!-- Shield inner border -->
+            <path d="M80 18 L138 40 L138 85 C138 113 106 138 80 146 C54 138 22 113 22 85 L22 40 Z"
+              fill="none" stroke="rgba(140,180,230,0.35)" stroke-width="1" />
+            <!-- Heart symbol in center -->
+            <path d="M80 116 C60 100 44 82 44 66 C44 54 53 46 64 46 C71 46 77 50 80 55 C83 50 89 46 96 46 C107 46 116 54 116 66 C116 82 100 100 80 116 Z"
+              fill="#c02a49" opacity="0.9" />
+            <!-- ECG line across heart -->
+            <path d="M56 72 L64 72 L68 58 L72 86 L76 68 L80 74 L84 74 L88 58 L92 88 L96 68 L100 74 L106 74"
+              fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+            <!-- CIG text at bottom of shield -->
+            <text x="80" y="132" text-anchor="middle" fill="#fff"
+              style="font: 700 18px 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: 0.12em;">
+              CIG
+            </text>
+          </svg>
+        </div>
+
+        <h1 id="outro-org-name">Cardiology Interest Group</h1>
+        <p id="outro-faculty">Faculty of Medicine · Al-Balqa' Applied University</p>
+
+        <!-- Stats row -->
+        <div id="outro-stats">
+          <div class="outro-stat" id="stat-1">
+            <span class="outro-stat-value">27</span>
+            <span class="outro-stat-label">Disease<br>Modules</span>
+          </div>
+
+          <div class="outro-divider" id="stat-div-1"></div>
+
+          <div class="outro-stat" id="stat-2">
+            <span class="outro-stat-value">27</span>
+            <span class="outro-stat-label">Pathophysiology<br>Animations</span>
+          </div>
+
+          <div class="outro-divider" id="stat-div-2"></div>
+
+          <div class="outro-stat" id="stat-3">
+            <span class="outro-stat-value">24</span>
+            <span class="outro-stat-label">Anatomical<br>Structures</span>
+          </div>
+        </div>
+
+        <p id="outro-tagline">Built by students. For students.</p>
+      </section>
+
+      <!-- Corner badge (persistent) -->
+      <p id="corner-badge" data-layout-ignore>CIG · LEARNING HUB</p>
+    </div>
+
+    <!-- ======================================================== GSAP TIMELINE -->
+    <script>
+      // =====================================================================
+      // CIG Brag — Main GSAP Timeline
+      // All times are absolute (global composition time)
+      // =====================================================================
+
+      // Compose the full timeline
+      const tl = gsap.timeline({ paused: true });
+
+      // -----------------------------------------------------------------------
+      // MUSIC: fade in over 1.5s, hold, fade out last 1.5s
+      // Using data-volume = 0, automation via timeline tweens on the element
+      // -----------------------------------------------------------------------
+      // (Music volume driven by data-automation would be ideal but we
+      //  animate it directly via GSAP on the audio element volume property)
+      const bgMusic = document.getElementById('bg-music');
+      tl.to(bgMusic, { volume: 0.35, duration: 1.5, ease: 'power1.out' }, 0);
+      tl.to(bgMusic, { volume: 0, duration: 2.0, ease: 'power2.inOut' }, 19.5);
+
+      // -----------------------------------------------------------------------
+      // Background ambient: breathing glows
+      // -----------------------------------------------------------------------
+      tl.to('.bg-glow-1', {
+        scale: 1.08,
+        opacity: 0.9,
+        duration: 6,
+        ease: 'sine.inOut',
+        repeat: 2,
+        yoyo: true,
+        transformOrigin: '50% 50%',
+        immediateRender: false,
+      }, 0);
+
+      tl.to('.bg-glow-2', {
+        scale: 1.12,
+        opacity: 0.8,
+        duration: 7,
+        ease: 'sine.inOut',
+        repeat: 1,
+        yoyo: true,
+        transformOrigin: '50% 50%',
+        immediateRender: false,
+      }, 1.5);
+
+      // -----------------------------------------------------------------------
+      // CORNER BADGE: fades in at 0.4s, holds
+      // -----------------------------------------------------------------------
+      tl.fromTo('#corner-badge',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.8, ease: 'power2.out' },
+        0.4
+      );
+
+      // -----------------------------------------------------------------------
+      // SCENE 1 — HOOK (0 → 3.5s)
+      // -----------------------------------------------------------------------
+      // Animation SVG fades in immediately
+      tl.fromTo('#hook-anim-container',
+        { opacity: 0 },
+        { opacity: 1, duration: 1.2, ease: 'power2.out' },
+        0.1
+      );
+
+      // Eyebrow text slides up
+      tl.fromTo('#hook-eyebrow',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' },
+        0.5
+      );
+
+      // Hook headline: SLAM in
+      tl.fromTo('#hook-headline',
+        { opacity: 0, y: 44, scale: 0.96 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'power4.out' },
+        0.9
+      );
+
+      // Rule line expands
+      tl.fromTo('#hook-rule',
+        { width: 0, opacity: 0 },
+        { width: 320, opacity: 1, duration: 0.8, ease: 'power3.out' },
+        1.2
+      );
+
+      // -----------------------------------------------------------------------
+      // TRANSITION 1 → 2: outgoing slides up + blur, incoming slides up
+      // T_transition = 3.0s
+      // -----------------------------------------------------------------------
+      const T1 = 3.0;
+      tl.to('#scene-hook .clip, #hook-text-wrap, #hook-anim-container', {
+        y: -60,
+        opacity: 0,
+        filter: 'blur(8px)',
+        duration: 0.45,
+        ease: 'power3.in',
+        stagger: 0.04,
+        immediateRender: false,
+      }, T1);
+
+      // Scene 2 comes in
+      tl.fromTo('#scene-disease',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' },
+        T1
+      );
+
+      // -----------------------------------------------------------------------
+      // SCENE 2 — DISEASE ANIMATION (3s → 8.5s)
+      // -----------------------------------------------------------------------
+      const S2 = T1; // scene 2 start at global T1
+
+      // SVG animation slides in from left
+      tl.fromTo('#disease-svg-wrap',
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' },
+        S2 + 0.15
+      );
+
+      // Badge pops in
+      tl.fromTo('#disease-badge',
+        { opacity: 0, y: -16 },
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
+        S2 + 0.3
+      );
+
+      // Headline slides up
+      tl.fromTo('#disease-headline',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.65, ease: 'power3.out' },
+        S2 + 0.5
+      );
+
+      // Callouts one by one — synced to beats ~4.5, 5.5, 6.5s
+      // beat at 5.34s → ~4.4s (S2 + 1.4 = 4.4)
+      tl.fromTo('#callout-1',
+        { opacity: 0, x: 30 },
+        { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out' },
+        S2 + 1.45  // ~4.45s global — beat at 4.91s
+      );
+      tl.fromTo('#callout-2',
+        { opacity: 0, x: 30 },
+        { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out', immediateRender: false },
+        S2 + 2.52  // ~5.52s global — beat at 5.34, 6.0s range
+      );
+      tl.fromTo('#callout-3',
+        { opacity: 0, x: 30 },
+        { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out', immediateRender: false },
+        S2 + 3.52  // ~6.52s global
+      );
+
+      // ECG inset slides up
+      tl.fromTo('#ecg-inset',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', immediateRender: false },
+        S2 + 1.8
+      );
+      tl.fromTo('#ecg-inset-status',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, ease: 'power2.out', immediateRender: false },
+        S2 + 2.8
+      );
+
+      // -----------------------------------------------------------------------
+      // TRANSITION 2 → 3: scene 2 fades out, scene 3 fades in
+      // beat-locked to 8.74s → T2 = 8.50
+      // -----------------------------------------------------------------------
+      const T2 = 8.50;
+      tl.to('#scene-disease',
+        { opacity: 0, y: -40, filter: 'blur(6px)', duration: 0.4, ease: 'power2.in', immediateRender: false },
+        T2
+      );
+
+      tl.fromTo('#scene-anatomy',
+        { opacity: 0, scale: 0.98 },
+        { opacity: 1, scale: 1, duration: 0.55, ease: 'power3.out' },
+        T2
+      );
+
+      // -----------------------------------------------------------------------
+      // SCENE 3 — 3D ANATOMY (8.5s → 13s)
+      // beat-locked reveal at 8.74s
+      // -----------------------------------------------------------------------
+      const S3 = T2;
+
+      // Heart 3D SVG slides in, slight scale from 0.93
+      tl.fromTo('#heart-3d-svg-wrap',
+        { opacity: 0, scale: 0.92, rotation: -4, transformOrigin: '50% 50%' },
+        { opacity: 1, scale: 1, rotation: 0, duration: 0.85, ease: 'power3.out' },
+        S3 + 0.24  // 8.74 = S3 + 0.24 → beat-locked
+      );
+
+      // Heart ambient rotation (continuous)
+      tl.to('#heart-3d-svg-wrap',
+        { rotation: 5, transformOrigin: '50% 50%', duration: 4, ease: 'sine.inOut', yoyo: true, repeat: 1, immediateRender: false, overwrite: 'auto' },
+        S3 + 0.9
+      );
+
+      // Badge
+      tl.fromTo('#anatomy-badge',
+        { opacity: 0, y: -18 },
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', immediateRender: false },
+        S3 + 0.35
+      );
+
+      // Headline slides up
+      tl.fromTo('#anatomy-headline',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.65, ease: 'power3.out', immediateRender: false },
+        S3 + 0.55
+      );
+
+      // Info panel slides in from right — beat at 8.74 + 0.8 = 9.54 ≈ 9.29s beat
+      tl.fromTo('#anatomy-panel',
+        { opacity: 0, x: 60 },
+        { opacity: 1, x: 0, duration: 0.6, ease: 'power3.out', immediateRender: false },
+        S3 + 0.8
+      );
+
+      // Stat row
+      tl.fromTo('#anatomy-stat-row',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out', immediateRender: false },
+        S3 + 1.4
+      );
+
+      // -----------------------------------------------------------------------
+      // TRANSITION 3 → 4: fade + slight zoom
+      // T3 = 13.0s
+      // -----------------------------------------------------------------------
+      const T3 = 13.0;
+      tl.to('#scene-anatomy',
+        { opacity: 0, scale: 0.97, filter: 'blur(5px)', duration: 0.42, ease: 'power2.in', immediateRender: false },
+        T3
+      );
+
+      tl.fromTo('#scene-ecg',
+        { opacity: 0, x: 40 },
+        { opacity: 1, x: 0, duration: 0.5, ease: 'power3.out' },
+        T3
+      );
+
+      // -----------------------------------------------------------------------
+      // SCENE 4 — ECG BEDSIDE MONITOR (13s → 17.5s)
+      // beat grid: 13.11, 13.64, 14.20, 14.73 for rhythm badges
+      // -----------------------------------------------------------------------
+      const S4 = T3;
+
+      // ECG monitor panel slides up
+      tl.fromTo('#ecg-monitor',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out', immediateRender: false },
+        S4 + 0.15
+      );
+
+      // Rate counter
+      tl.fromTo('#ecg-rate',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, ease: 'power2.out', immediateRender: false },
+        S4 + 0.5
+      );
+
+      // AF badge
+      tl.fromTo('#ecg-af-badge',
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', immediateRender: false },
+        S4 + 0.9
+      );
+
+      // Rhythm library panel
+      tl.fromTo('#rhythm-library',
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 0.55, ease: 'power3.out', immediateRender: false },
+        S4 + 0.2
+      );
+
+      // Rhythm badges — 4 on beat grid (13.11, 13.64, 14.20, 14.73)
+      // then remaining 16 staggered
+      const beatGridTimes = [13.11, 13.64, 14.20, 14.73];
+      const beatBadgeIds = ['rb-1', 'rb-2', 'rb-3', 'rb-4'];
+      beatBadgeIds.forEach((id, i) => {
+        tl.fromTo('#' + id,
+          { opacity: 0, y: 18, scale: 0.9, transformOrigin: '50% 50%' },
+          { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: 'back.out(1.4)' },
+          beatGridTimes[i]  // beat-grid // beat-grid: badge i at beat i
+        );
+      });
+
+      // Remaining 16 badges — quick stagger
+      const remainingIds = [];
+      for (let i = 5; i <= 20; i++) remainingIds.push('#rb-' + i);
+      tl.fromTo(remainingIds,
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.28, ease: 'power2.out', stagger: 0.07, immediateRender: false },
+        14.85
+      );
+
+      // -----------------------------------------------------------------------
+      // TRANSITION 4 → 5: crossfade + dramatic scale
+      // T4 = 17.0s → beat-locked to 17.47s crest reveal
+      // -----------------------------------------------------------------------
+      const T4 = 17.0;
+      tl.to('#scene-ecg',
+        { opacity: 0, y: -30, filter: 'blur(5px)', duration: 0.45, ease: 'power2.in', immediateRender: false },
+        T4
+      );
+
+      tl.fromTo('#scene-outro',
+        { opacity: 0, scale: 0.97 },
+        { opacity: 1, scale: 1, duration: 0.5, ease: 'power3.out' },
+        T4
+      );
+
+      // -----------------------------------------------------------------------
+      // SCENE 5 — OUTRO (17s → 22s)
+      // beat-locked: crest at 17.47s
+      // -----------------------------------------------------------------------
+      const S5 = T4;
+
+      // CIG crest fades in + slight scale — beat-locked to 17.47s
+      tl.fromTo('#outro-crest-wrap',
+        { opacity: 0, scale: 0.85, y: 10, transformOrigin: '50% 50%' },
+        { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'power3.out' },
+        S5 + 0.47  // 17.47s → beat-locked
+      );
+
+      // Org name
+      tl.fromTo('#outro-org-name',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', immediateRender: false },
+        S5 + 0.7
+      );
+
+      // Faculty
+      tl.fromTo('#outro-faculty',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', immediateRender: false },
+        S5 + 1.0
+      );
+
+      // Stat blocks — beat grid: 18.56, 19.66, 20.75
+      // S5 + 1.56 = 18.56; S5 + 2.66 = 19.66; S5 + 3.75 = 20.75
+      tl.fromTo('#stat-1',
+        { opacity: 0, y: 40, scale: 0.9, transformOrigin: '50% 0%' },
+        { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: 'power3.out' },
+        S5 + 1.56  // beat-grid: 18.56s
+      );
+
+      tl.fromTo('#stat-div-1',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.35, ease: 'power2.out', immediateRender: false },
+        S5 + 1.7
+      );
+
+      tl.fromTo('#stat-2',
+        { opacity: 0, y: 40, scale: 0.9, transformOrigin: '50% 0%' },
+        { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: 'power3.out', immediateRender: false },
+        S5 + 2.66  // beat-grid: 19.66s
+      );
+
+      tl.fromTo('#stat-div-2',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.35, ease: 'power2.out', immediateRender: false },
+        S5 + 2.8
+      );
+
+      tl.fromTo('#stat-3',
+        { opacity: 0, y: 40, scale: 0.9, transformOrigin: '50% 0%' },
+        { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: 'power3.out', immediateRender: false },
+        S5 + 3.75  // beat-grid: 20.75s
+      );
+
+      // "Built by students." tagline — near beat at 22.37s → S5 + 5.37 > duration
+      // Use 22.37 - 17 = 5.37 but we end at 22s so use 4.8
+      tl.fromTo('#outro-tagline',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.6, ease: 'power2.out', immediateRender: false },
+        S5 + 4.8  // clamped before 22s end
+      );
+
+      // Final fade out of corner badge at end
+      tl.to('#corner-badge',
+        { opacity: 0, duration: 0.8, ease: 'power2.inOut', immediateRender: false },
+        20.5
+      );
+
+      // -----------------------------------------------------------------------
+      // Audio-reactive glow: subtle background pulse
+      // Simulate RMS-driven glow with a finite repeating tween
+      // -----------------------------------------------------------------------
+      tl.fromTo('#ar-glow',
+        { opacity: 0 },
+        {
+          opacity: 0.18,
+          duration: 0.5,
+          ease: 'sine.inOut',
+          repeat: 21,
+          yoyo: true,
+          immediateRender: false,
+        },
+        2.0
+      );
+
+      // -----------------------------------------------------------------------
+      // Register timeline
+      // -----------------------------------------------------------------------
+      window.__timelines['cig-brag'] = tl;
+    </script>
+  </body>
+</html>

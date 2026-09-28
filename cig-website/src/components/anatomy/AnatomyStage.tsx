@@ -195,7 +195,7 @@ export const AnatomyStage = ({
       {status === 'loading' ? (
         <LoadingState
           title="Loading cardiovascular anatomy…"
-          detail="Generating the cardiac chambers, valves, vessels and conduction system."
+          detail="Preparing the cardiac chambers, valves, vessels and conduction system."
         />
       ) : null}
 

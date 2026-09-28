@@ -1,0 +1,496 @@
+[
+  {
+    "id": "case-hyperkalaemia-dialysis",
+    "title": "Tall tented T waves in a missed dialysis session",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "intermediate",
+    "patient": {
+      "age": 59,
+      "sex": "male",
+      "descriptor": "59-year-old man",
+      "setting": "Emergency department, resuscitation area"
+    },
+    "presentingComplaint": "Generalised weakness and nausea after missing two haemodialysis sessions.",
+    "history": [
+      "End-stage kidney disease on haemodialysis three times a week for four years",
+      "Missed the last two sessions because of transport problems",
+      "Progressive weakness and muscle heaviness over 48 hours",
+      "On an ACE inhibitor and spironolactone, both of which raise potassium"
+    ],
+    "symptoms": [
+      "Generalised muscle weakness, worst in the legs",
+      "Nausea",
+      "Palpitations",
+      "No chest pain"
+    ],
+    "examinationFindings": [
+      "Unwell, lethargic but orientated",
+      "Regular slow pulse of normal volume",
+      "Reduced power in the proximal muscles with depressed reflexes",
+      "Heart sounds normal; no murmur",
+      "Arteriovenous fistula in the left forearm with a good thrill"
+    ],
+    "vitals": {
+      "heartRate": 58,
+      "spo2": 96,
+      "respiratoryRate": 18,
+      "bpSystolic": 154,
+      "bpDiastolic": 88,
+      "temperature": 36.4,
+      "alarm": "critical",
+      "alarmText": "WIDE QRS · PEAKED T WAVES",
+      "bedside": "Weak and lethargic with a slow pulse. The tracing here is not a diagnosis of a rhythm — it is a warning about a serum potassium."
+    },
+    "ecgRhythmId": "hyperkalaemia",
+    "ecg": {
+      "rate": "58 bpm",
+      "rhythm": "Regular, with atrial activity that is present but of very low amplitude",
+      "pWaves": "Small and flattened, becoming hard to identify — an early sign of atrial paralysis",
+      "prInterval": "0.22 s, prolonged",
+      "qrs": "0.15 s, broad, with slurring that does not fit any classic bundle branch pattern",
+      "axis": "Normal",
+      "stSegment": "Slightly upsloping, merging into the T wave",
+      "tWaves": "Tall, narrow-based and symmetrically peaked — 'tented' — most obvious in the precordial leads",
+      "keyFindings": [
+        "Tall, narrow-based, peaked T waves — the earliest and most characteristic change",
+        "Flattening of the P waves with PR prolongation as conduction is impaired",
+        "Progressive broadening of the QRS without a recognisable bundle branch morphology",
+        "The sequence matters: peaked T waves, then P wave loss, then QRS widening, then a sine wave pattern and arrest"
+      ],
+      "keyLeads": ["V2", "V3", "V4", "II"],
+      "highlight": "t",
+      "leadOverrides": {
+        "V2": { "t": 1.25 },
+        "V3": { "t": 1.3 },
+        "V4": { "t": 1.2 },
+        "II": { "t": 1.1 }
+      }
+    },
+    "interpretation": "ECG changes consistent with significant hyperkalaemia: tall peaked T waves, reduced P wave amplitude, PR prolongation and QRS widening. The ECG cannot give a potassium value, and normal-looking tracings occur at dangerous concentrations — treatment decisions rest on the serum result and the clinical picture together.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Normal heart sounds at a slow rate. Auscultation is unremarkable here — the danger in this case is electrical, not valvular."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "No added sounds. Fluid overload from missed dialysis would be sought at the lung bases and in the jugular venous pressure rather than here."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "How would you describe the rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A regular bradycardia with low-amplitude atrial activity",
+            "correct": true,
+            "feedback": "Correct. As potassium rises, atrial myocardium becomes inexcitable and P waves flatten before disappearing entirely."
+          },
+          {
+            "id": "b",
+            "text": "Atrial fibrillation",
+            "feedback": "The rhythm is regular. Small P waves are still identifiable rather than absent with a chaotic baseline."
+          },
+          {
+            "id": "c",
+            "text": "Complete heart block",
+            "feedback": "The P waves that are visible bear a constant relationship to the QRS complexes."
+          },
+          {
+            "id": "d",
+            "text": "Ventricular tachycardia",
+            "feedback": "The rate is 58 bpm. The QRS is broad, but this is a bradycardia."
+          }
+        ],
+        "explanation": "Hyperkalaemia does not produce one rhythm — it produces a progression of changes. Recognise the pattern, not a single appearance.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-t",
+        "kind": "systematic",
+        "step": "T waves",
+        "prompt": "What distinguishes a hyperkalaemic T wave from a normal tall T wave?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It is narrow-based, symmetrical and sharply pointed",
+            "correct": true,
+            "feedback": "Correct. The shape matters more than the height: a hyperacute ischaemic T wave is broad-based, whereas a hyperkalaemic one is narrow and tented."
+          },
+          {
+            "id": "b",
+            "text": "It is simply taller than usual",
+            "feedback": "Height alone is unreliable — tall T waves occur in early repolarisation and in normal young people."
+          },
+          {
+            "id": "c",
+            "text": "It is inverted",
+            "feedback": "T wave inversion is not a feature of hyperkalaemia."
+          },
+          {
+            "id": "d",
+            "text": "It is always confined to the limb leads",
+            "feedback": "Peaked T waves are usually most obvious in the precordial leads."
+          }
+        ],
+        "explanation": "Describe the base as well as the height. Narrow-based and symmetrical suggests potassium; broad-based and asymmetrical suggests ischaemia.",
+        "highlight": "t",
+        "leads": ["V2", "V3", "V4"]
+      },
+      {
+        "id": "q-qrs",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "The QRS is 0.15 s but does not look like either bundle branch pattern. Why?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Because conduction is slowed diffusely throughout the myocardium, not blocked in one branch",
+            "correct": true,
+            "feedback": "Correct. A raised extracellular potassium concentration depolarises the resting membrane and inactivates sodium channels everywhere, slowing conduction globally."
+          },
+          {
+            "id": "b",
+            "text": "Because there is a left bundle branch block",
+            "feedback": "Left bundle branch block gives a broad monophasic R wave laterally with a deep QS in V1 — a recognisable, specific pattern."
+          },
+          {
+            "id": "c",
+            "text": "Because the paper speed is wrong",
+            "feedback": "The grid and calibration mark confirm a standard 25 mm/s, 10 mm/mV recording."
+          },
+          {
+            "id": "d",
+            "text": "Because of an accessory pathway",
+            "feedback": "Pre-excitation shortens the PR interval and produces a delta wave. The PR interval here is prolonged."
+          }
+        ],
+        "explanation": "A broad QRS that fits no bundle branch pattern, especially with peaked T waves, should prompt an urgent potassium measurement.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given the missed dialysis, the weakness and this tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Severe hyperkalaemia with cardiac conduction effects",
+            "correct": true,
+            "feedback": "Correct. Missed dialysis, potassium-retaining medication, muscle weakness and this ECG sequence together make hyperkalaemia overwhelmingly likely."
+          },
+          {
+            "id": "b",
+            "text": "Acute myocardial infarction",
+            "feedback": "The T waves are narrow-based and tented rather than broad and hyperacute, there is no ST elevation and no chest pain."
+          },
+          {
+            "id": "c",
+            "text": "Hypokalaemia",
+            "feedback": "Hypokalaemia flattens the T wave and produces a prominent U wave — essentially the opposite appearance."
+          },
+          {
+            "id": "d",
+            "text": "Hypothermia",
+            "feedback": "Hypothermia produces J (Osborn) waves at the end of the QRS with a prolonged QT interval, at a normal or low temperature."
+          }
+        ],
+        "explanation": "Electrolyte disturbance is one of the few situations where the ECG changes management before any blood result returns.",
+        "highlight": "t"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "Which principle applies most directly in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "ECG changes of hyperkalaemia are an indication for immediate myocardial stabilisation while potassium is lowered",
+            "correct": true,
+            "feedback": "Correct. Calcium stabilises the myocardium within minutes without changing the potassium; insulin with glucose shifts potassium into cells; dialysis removes it."
+          },
+          {
+            "id": "b",
+            "text": "Wait for the laboratory potassium before doing anything",
+            "feedback": "With these ECG changes, treatment starts on clinical grounds. A point-of-care sample can run in parallel."
+          },
+          {
+            "id": "c",
+            "text": "Give intravenous potassium replacement",
+            "feedback": "That would be catastrophic — the problem is too much potassium, not too little."
+          },
+          {
+            "id": "d",
+            "text": "A normal ECG excludes dangerous hyperkalaemia",
+            "feedback": "It does not. Severe hyperkalaemia with a normal or near-normal ECG is well described, which is why the two are always interpreted together."
+          }
+        ],
+        "explanation": "Educational scenario only. Hyperkalaemia is treated according to local emergency protocols and current guidance.",
+        "highlight": "t"
+      }
+    ],
+    "explanation": "Potassium sets the resting membrane potential, so a rise in extracellular potassium depolarises cardiac cells and changes the surface ECG in a recognisable sequence. Repolarisation is the first thing affected: the T wave becomes tall, narrow-based and symmetrically peaked. As the concentration rises further, sodium channels are progressively inactivated — atrial myocardium fails first, so P waves flatten and disappear, then conduction slows everywhere, prolonging the PR interval and widening the QRS diffusely rather than in a bundle branch pattern. Eventually the widened QRS merges with the T wave into a sine wave, which precedes asystole or ventricular fibrillation. Importantly, the correlation between the tracing and the serum value is poor in both directions, so a reassuring ECG never excludes dangerous hyperkalaemia.",
+    "learningObjectives": [
+      "Recognise the ordered sequence of ECG changes in hyperkalaemia",
+      "Distinguish a tented hyperkalaemic T wave from a hyperacute ischaemic one by its base",
+      "Explain why the QRS widens diffusely rather than in a bundle branch pattern",
+      "State the limits of the ECG as a measure of serum potassium"
+    ],
+    "clinicalContext": "The ECG indicates cardiac risk; it does not measure potassium. Both the serum concentration and the tracing inform treatment, and the underlying cause must be addressed as well.",
+    "relatedDiseases": ["conduction-disorders", "ventricular-arrhythmias"],
+    "relatedKeyPoints": ["ecg-essentials", "cardiovascular-pharmacology"],
+    "references": ["aha-ecg-part4", "ncbi-bookshelf"]
+  },
+  {
+    "id": "case-hypokalaemia-vomiting",
+    "title": "Flat T waves and a wave that should not be there",
+    "levels": ["intermediate", "advanced", "simulation"],
+    "difficulty": "intermediate",
+    "patient": {
+      "age": 46,
+      "sex": "female",
+      "descriptor": "46-year-old woman",
+      "setting": "Acute medical unit"
+    },
+    "presentingComplaint": "Five days of vomiting from gastroenteritis, now with cramps, weakness and palpitations.",
+    "history": [
+      "Persistent vomiting for five days with minimal oral intake",
+      "Takes bendroflumethiazide for hypertension, which she has continued throughout",
+      "Muscle cramps and generalised weakness for two days",
+      "No chest pain; occasional skipped-beat sensations"
+    ],
+    "symptoms": [
+      "Muscle cramps and weakness",
+      "Palpitations described as missed beats",
+      "Fatigue",
+      "Constipation over the past two days"
+    ],
+    "examinationFindings": [
+      "Dry mucous membranes; reduced skin turgor",
+      "Regular pulse with occasional ectopic beats",
+      "Generalised muscle weakness with sluggish reflexes",
+      "Heart sounds normal; no murmur",
+      "Abdomen soft with sluggish bowel sounds"
+    ],
+    "vitals": {
+      "heartRate": 82,
+      "spo2": 98,
+      "respiratoryRate": 16,
+      "bpSystolic": 106,
+      "bpDiastolic": 64,
+      "temperature": 36.5,
+      "alarm": "advisory",
+      "alarmText": "PROLONGED QT · U WAVES",
+      "bedside": "Dehydrated and weak. The importance of this tracing is the risk it predicts rather than the symptoms it explains."
+    },
+    "ecgRhythmId": "hypokalaemia",
+    "ecg": {
+      "rate": "82 bpm",
+      "rhythm": "Regular sinus rhythm with occasional ventricular ectopic beats",
+      "pWaves": "Normal, or slightly increased in amplitude",
+      "prInterval": "0.18 s",
+      "qrs": "0.09 s, narrow",
+      "axis": "Normal",
+      "stSegment": "Slight downsloping depression in the precordial leads",
+      "tWaves": "Flattened, followed by a prominent U wave that can be mistaken for a T wave and makes the QT appear longer than it is",
+      "keyFindings": [
+        "Flattened T waves with a prominent U wave, best seen in V2 and V3",
+        "Mild ST depression, which is non-specific in isolation",
+        "An apparently long QT interval, because the U wave is being included in the measurement",
+        "Ventricular ectopy, reflecting an unstable repolarisation substrate"
+      ],
+      "keyLeads": ["V2", "V3", "II"],
+      "highlight": "u",
+      "leadOverrides": {
+        "V2": { "t": 1.3 },
+        "V3": { "t": 1.3 }
+      }
+    },
+    "interpretation": "ECG changes consistent with hypokalaemia: flattened T waves with prominent U waves and mild ST depression, and ventricular ectopy. These findings indicate a risk of ventricular arrhythmia; the serum potassium and magnesium are needed to guide treatment.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "Normal heart sounds with occasional early beats followed by a compensatory pause — the ectopics visible on the monitor."
+      },
+      {
+        "siteId": "aortic",
+        "soundId": "normal-s1-s2",
+        "note": "No murmur. The beat following a pause is louder because ventricular filling has been greater."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sinus rhythm with ventricular ectopic beats",
+            "correct": true,
+            "feedback": "Correct — and the ectopy matters, because it is the substrate on which torsades de pointes can develop."
+          },
+          {
+            "id": "b",
+            "text": "Atrial fibrillation",
+            "feedback": "The rhythm is regular apart from the ectopics, and P waves are present."
+          },
+          {
+            "id": "c",
+            "text": "Second-degree atrioventricular block",
+            "feedback": "No P wave fails to conduct; the pauses follow ectopic beats."
+          },
+          {
+            "id": "d",
+            "text": "Ventricular bigeminy",
+            "feedback": "Bigeminy alternates every sinus beat with an ectopic. The ectopics here are occasional rather than alternating."
+          }
+        ],
+        "explanation": "Note the ectopy as part of the rhythm description — it is clinically important in a patient with abnormal repolarisation.",
+        "highlight": "rr",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-u",
+        "kind": "systematic",
+        "step": "U waves",
+        "prompt": "How do you tell a U wave from a T wave?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The U wave follows the T wave, is smaller and rounder, and is best seen in V2 and V3",
+            "correct": true,
+            "feedback": "Correct. In hypokalaemia the T wave flattens as the U wave grows, so the two can appear to merge — which is exactly how the QT interval is over-measured."
+          },
+          {
+            "id": "b",
+            "text": "The U wave precedes the QRS",
+            "feedback": "That is the P wave. The U wave follows the T wave."
+          },
+          {
+            "id": "c",
+            "text": "The U wave is always larger than the T wave",
+            "feedback": "It can approach or exceed the flattened T wave in hypokalaemia, but that is a consequence rather than a defining feature."
+          },
+          {
+            "id": "d",
+            "text": "U waves are always pathological",
+            "feedback": "Small U waves are normal, particularly at slow heart rates and in the mid-precordial leads."
+          }
+        ],
+        "explanation": "Measure the QT interval to the end of the T wave, not the end of the U wave. Getting this wrong turns a normal QT into an apparently dangerous one.",
+        "highlight": "u",
+        "leads": ["V2", "V3"]
+      },
+      {
+        "id": "q-qt",
+        "kind": "systematic",
+        "step": "QT interval",
+        "prompt": "Why does the QT interval appear prolonged on this tracing?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The prominent U wave is being included in the measurement, and repolarisation genuinely is prolonged",
+            "correct": true,
+            "feedback": "Correct — both are true. Careful measurement to the end of the T wave is essential, and the underlying repolarisation abnormality is real."
+          },
+          {
+            "id": "b",
+            "text": "The heart rate is too fast to measure the QT interval",
+            "feedback": "At 82 bpm the QT interval is entirely measurable."
+          },
+          {
+            "id": "c",
+            "text": "Bundle branch block always prolongs the QT interval",
+            "feedback": "The QRS is narrow at 0.09 s."
+          },
+          {
+            "id": "d",
+            "text": "It is an artefact of the filter setting",
+            "feedback": "Filtering affects noise and baseline, not the timing of repolarisation."
+          }
+        ],
+        "explanation": "Prolonged repolarisation plus ventricular ectopy is the combination that precedes torsades de pointes, which is why this tracing matters.",
+        "highlight": "qt"
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given five days of vomiting on a thiazide diuretic, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Hypokalaemia, probably with coexisting hypomagnesaemia",
+            "correct": true,
+            "feedback": "Correct. Vomiting and thiazide use together deplete both potassium and magnesium, and low magnesium makes potassium very difficult to correct."
+          },
+          {
+            "id": "b",
+            "text": "Hyperkalaemia",
+            "feedback": "Hyperkalaemia produces tall, tented T waves — the opposite of this appearance."
+          },
+          {
+            "id": "c",
+            "text": "Acute myocardial infarction",
+            "feedback": "The mild ST depression is non-specific, there is no chest pain, and flattened T waves with U waves point to an electrolyte cause."
+          },
+          {
+            "id": "d",
+            "text": "Digoxin effect",
+            "feedback": "Digoxin causes a scooped 'reverse tick' ST segment. She does not take digoxin — although hypokalaemia would greatly increase the risk of digoxin toxicity if she did."
+          }
+        ],
+        "explanation": "Always check magnesium alongside potassium. Potassium replacement frequently fails until magnesium is corrected.",
+        "highlight": "u"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "What is the most appropriate management principle in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Replace potassium with cardiac monitoring, check and replace magnesium, and review the diuretic",
+            "correct": true,
+            "feedback": "Correct. Correct both electrolytes, monitor during replacement, and remove the ongoing cause."
+          },
+          {
+            "id": "b",
+            "text": "Give a rapid undiluted intravenous potassium bolus",
+            "feedback": "Rapid concentrated potassium can cause fatal arrhythmia. Replacement is given at controlled rates through an appropriate route."
+          },
+          {
+            "id": "c",
+            "text": "Ignore the U waves as a normal finding",
+            "feedback": "Prominent U waves with flattened T waves in this context signal a real arrhythmic risk."
+          },
+          {
+            "id": "d",
+            "text": "Continue the thiazide unchanged",
+            "feedback": "The thiazide is contributing to the ongoing potassium loss and should be reviewed."
+          }
+        ],
+        "explanation": "Educational scenario only. Electrolyte replacement follows local protocols with appropriate monitoring.",
+        "highlight": "u"
+      }
+    ],
+    "explanation": "Potassium determines the rate of phase 3 repolarisation. When extracellular potassium falls, repolarisation slows and becomes non-uniform, which flattens the T wave, brings out the U wave and lengthens the vulnerable period during which an ectopic beat can trigger re-entry — the mechanism of torsades de pointes. Mild ST depression accompanies these changes but is non-specific in isolation. The practical pitfall is measurement: as the T wave flattens and the U wave grows, the two run together and the QT interval is easily over-measured. Hypokalaemia rarely occurs alone, and magnesium should always be checked, because low magnesium both promotes renal potassium loss and independently prolongs repolarisation.",
+    "learningObjectives": [
+      "Recognise flattened T waves with prominent U waves as the signature of hypokalaemia",
+      "Measure the QT interval to the end of the T wave and not the U wave",
+      "Explain why abnormal repolarisation plus ectopy predicts torsades de pointes",
+      "Remember to check magnesium whenever potassium is low"
+    ],
+    "clinicalContext": "The ECG signals risk; it does not measure the potassium concentration. Serum potassium and magnesium, and the cause of the loss, are all required before management is complete.",
+    "relatedDiseases": ["ventricular-arrhythmias", "hypertension"],
+    "relatedKeyPoints": ["ecg-essentials", "cardiovascular-pharmacology"],
+    "references": ["aha-ecg-part4", "ncbi-bookshelf"]
+  }
+]

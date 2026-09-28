@@ -1,0 +1,296 @@
+[
+  {
+    "id": "right-bundle-branch-block",
+    "name": "Right Bundle Branch Block",
+    "abbr": "RBBB",
+    "categoryId": "bundle-branch",
+    "tagline": "Broad QRS with an rSR′ in V1 and a slurred S wave in I and V6.",
+    "rateRange": "Any rate; the underlying rhythm is usually sinus",
+    "regularity": "Regular, following the underlying rhythm",
+    "summary": "Conduction down the right bundle branch is blocked, so the right ventricle is not activated through the His–Purkinje system. The left ventricle depolarises normally and on time, then the impulse crosses the septum cell to cell to reach the right ventricle late. That delayed, slow right ventricular activation adds a second, terminal deflection to the QRS: the classic rSR′ in V1 and V2, with a wide slurred S wave in the leftward leads I, aVL and V6. Repolarisation of the right ventricle is correspondingly abnormal, so T waves are inverted in V1 to V3 — a discordant change that is expected, not additional pathology.",
+    "mechanism": "The right bundle is a long, thin, single fascicle with a solitary blood supply, which is why it is the branch that most often fails. When it is blocked, septal depolarisation still begins from the left side, so the initial part of the QRS is normal and the first 0.06 s of the complex is unchanged. The right ventricle then has to be activated by slow, cell-to-cell conduction spreading rightward across the septum and free wall. Because that late activation is directed anteriorly and to the right, it produces a terminal R′ in the right-sided lead V1 and a reciprocal terminal S wave in the left-sided leads I and V6, and it takes long enough to push total QRS duration to 0.12 s or more. Repolarisation follows activation, so the right ventricular T wave is inverted in the same right precordial leads.",
+    "recognition": [
+      "QRS duration ≥ 0.12 s for complete block; 0.11–0.12 s is incomplete RBBB",
+      "rSR′ ('M-shaped' or 'rabbit ear') complex in V1 and V2",
+      "Wide, slurred S wave in leads I, aVL and V6",
+      "T wave inversion in V1 to V3 — appropriate discordance, not ischaemia",
+      "The initial part of the QRS is normal, so septal Q waves are preserved",
+      "Right axis deviation is not part of RBBB alone; if present, look for another cause"
+    ],
+    "causes": [
+      "A normal variant in up to 3% of people, particularly younger adults with otherwise normal hearts",
+      "Age-related fibrosis of the conduction system",
+      "Right heart strain — pulmonary embolism, chronic lung disease, pulmonary hypertension",
+      "Ischaemic heart disease and cardiomyopathy",
+      "Atrial septal defect and other causes of right ventricular volume loading",
+      "Brugada syndrome, which produces an RBBB-like pattern with coved ST elevation in V1–V2"
+    ],
+    "significance": "In isolation, and in an asymptomatic person with a structurally normal heart, right bundle branch block is usually benign and needs no treatment. Its importance is as a clue: new RBBB in someone acutely breathless raises pulmonary embolism, and RBBB with left anterior or posterior fascicular block is bifascicular block, which is one fascicle away from complete heart block. Unlike left bundle branch block, RBBB does not obscure the ECG diagnosis of infarction, because the initial QRS forces are preserved.",
+    "management": "No treatment for the conduction abnormality itself. Look for and manage the underlying cause. Bifascicular block with syncope, or documented intermittent high-grade atrioventricular block, is an indication for pacing assessment. Record the pattern so that future ECGs can be compared — new block matters far more than long-standing block.",
+    "waveform": {
+      "rate": 76,
+      "irregularity": 0.02,
+      "atrial": "sinus",
+      "pAmplitude": 0.15,
+      "pDuration": 0.1,
+      "prInterval": 0.16,
+      "qrsDuration": 0.14,
+      "qrsAmplitude": 0.95,
+      "qrsShape": "wide",
+      "qAmplitude": 0.1,
+      "sAmplitude": 0.5,
+      "stShift": -0.01,
+      "stShape": "flat",
+      "tAmplitude": 0.24,
+      "tShape": "normal",
+      "qtInterval": 0.42,
+      "wander": 0.07,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 76,
+      "spo2": 97,
+      "respiratoryRate": 15,
+      "bpSystolic": 128,
+      "bpDiastolic": 78,
+      "temperature": 36.6,
+      "alarm": "advisory",
+      "alarmText": "WIDE QRS — RBBB PATTERN",
+      "bedside": "Comfortable and asymptomatic. The wide complex was noticed on a routine pre-operative ECG, and the rhythm is otherwise unremarkable."
+    },
+    "highlights": [
+      {
+        "feature": "qrs",
+        "label": "Broad QRS",
+        "note": "Total duration reaches 0.14 s because the right ventricle is activated late by slow muscle-to-muscle conduction rather than through the Purkinje system. The first half of the complex is normal — only the terminal portion is delayed.",
+        "abnormal": true
+      },
+      {
+        "feature": "j",
+        "label": "Terminal R′",
+        "note": "The late, rightward and anterior right ventricular vector produces a second upward deflection in V1 — the R′ of the rSR′ — and a matching slurred S wave in the leftward leads.",
+        "abnormal": true
+      },
+      {
+        "feature": "pr",
+        "label": "Normal PR interval",
+        "note": "Atrioventricular conduction is intact: the block is below the His bundle, in one branch only, so the PR interval is unchanged.",
+        "abnormal": false
+      },
+      {
+        "feature": "t",
+        "label": "Discordant T waves",
+        "note": "T wave inversion in V1 to V3 is the expected repolarisation change of the abnormally activated right ventricle. It is not evidence of ischaemia in this context.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "The impulse reaches the branch point",
+        "text": "The sinus node fires, the atria depolarise and the impulse passes normally through the atrioventricular node and the His bundle. The PR interval is normal.",
+        "duration": 1.2,
+        "highlight": "pr"
+      },
+      {
+        "title": "The left ventricle goes first",
+        "text": "The left bundle conducts normally, so septal and left ventricular depolarisation happen on time. The first 0.06 s of the QRS looks exactly as it should.",
+        "duration": 1.3,
+        "highlight": "qrs"
+      },
+      {
+        "title": "The right ventricle is stranded",
+        "text": "With the right bundle blocked, the right ventricle can only be reached by slow conduction spreading cell to cell across the septum.",
+        "duration": 1.4,
+        "highlight": "qrs"
+      },
+      {
+        "title": "A late, rightward vector",
+        "text": "That delayed activation is directed to the right and anteriorly, adding a terminal R′ in V1 and a slurred S wave in I and V6, and widening the QRS past 0.12 s.",
+        "duration": 1.4,
+        "highlight": "j"
+      },
+      {
+        "title": "Repolarisation follows",
+        "text": "Because the right ventricle depolarised abnormally, it repolarises abnormally too. T waves invert in the right precordial leads — discordance that is part of the pattern.",
+        "duration": 1.3,
+        "highlight": "t"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "76 bpm", "normal": "60–100 bpm" },
+      { "label": "PR interval", "value": "0.16 s", "normal": "0.12–0.20 s" },
+      {
+        "label": "QRS duration",
+        "value": "0.14 s",
+        "normal": "< 0.12 s",
+        "abnormal": true
+      },
+      {
+        "label": "V1 morphology",
+        "value": "rSR′",
+        "normal": "rS",
+        "abnormal": true
+      },
+      {
+        "label": "Terminal S wave (I, V6)",
+        "value": "Wide and slurred",
+        "normal": "Narrow or absent",
+        "abnormal": true
+      },
+      { "label": "QT interval", "value": "0.42 s", "normal": "< 0.44 s" }
+    ],
+    "relatedDiseases": ["conduction-disorders", "pulmonary-embolism", "atrial-septal-defect"],
+    "relatedKeyPoints": ["ecg-essentials", "arrhythmia-principles"],
+    "relatedStructures": ["bundle-of-his", "purkinje-fibers", "right-ventricle"],
+    "references": ["aha-ecg-part4", "esc-pacing-2021", "braunwald"]
+  },
+  {
+    "id": "left-bundle-branch-block",
+    "name": "Left Bundle Branch Block",
+    "abbr": "LBBB",
+    "categoryId": "bundle-branch",
+    "tagline": "Broad, notched QRS with discordant ST and T changes — and an ECG you can no longer read for infarction in the usual way.",
+    "rateRange": "Any rate; the underlying rhythm is usually sinus",
+    "regularity": "Regular, following the underlying rhythm",
+    "summary": "The left bundle branch fails, so the left ventricle is no longer activated through the Purkinje system. Depolarisation begins in the right ventricle and spreads leftward across the septum and through left ventricular muscle, which is slow. The QRS is broad and, in the lateral leads, a single wide, notched R wave with no septal Q. Because activation is abnormal, repolarisation is abnormal too: the ST segment and T wave point away from the main QRS deflection. Left bundle branch block is almost always a marker of underlying heart disease, and it makes the conventional ECG criteria for myocardial infarction unreliable.",
+    "mechanism": "Normally the left bundle activates the left side of the septum first, from left to right, producing the small septal Q wave seen in I, aVL, V5 and V6. When the left bundle is blocked, that first vector is lost and reversed: the septum is depolarised from the right, so the septal Q disappears. The impulse then has to cross into the left ventricular free wall by slow myocyte-to-myocyte conduction, taking 0.12 s or more and producing a broad, often notched, monophasic R wave in the leftward leads and a deep QS or rS complex in V1. Repolarisation cannot follow its normal sequence when depolarisation did not, so the ST segment and T wave are displaced opposite to the terminal QRS — appropriate discordance. Because these secondary changes are large and involve the same leads used to diagnose infarction, the usual ST elevation criteria do not apply, and the Sgarbossa criteria are used instead.",
+    "recognition": [
+      "QRS duration ≥ 0.12 s",
+      "Broad, monophasic and often notched R wave in I, aVL, V5 and V6",
+      "Deep QS or rS complex in V1 and V2",
+      "Absent septal Q waves in the lateral leads — one of the most useful clues",
+      "ST depression and T wave inversion in the leads with a dominant R wave (appropriate discordance)",
+      "ST elevation in the leads with a dominant S wave, also discordant"
+    ],
+    "causes": [
+      "Ischaemic heart disease, including acute coronary occlusion when the block is new",
+      "Hypertensive heart disease and aortic stenosis",
+      "Dilated cardiomyopathy",
+      "Primary degenerative disease of the conduction system (Lenègre and Lev disease)",
+      "Rarely a normal variant — far less often than right bundle branch block"
+    ],
+    "significance": "Left bundle branch block is rarely innocent: it usually indicates structural heart disease and it independently predicts worse outcomes in heart failure. New left bundle branch block in a patient with ischaemic symptoms is treated with the same urgency as ST elevation. The block also delays left ventricular contraction relative to the right, which is the dyssynchrony that cardiac resynchronisation therapy exists to correct — the wider the QRS, the greater the benefit.",
+    "management": "There is no treatment for the block itself; the priorities are to find the underlying disease and to recognise what the pattern conceals. Echocardiography is warranted in essentially every case. In heart failure with reduced ejection fraction and a broad left bundle branch block despite optimal medical therapy, cardiac resynchronisation therapy improves symptoms and survival. In the acute setting, apply the Sgarbossa criteria rather than the usual ST elevation thresholds, and treat new block with ischaemic symptoms as an emergency.",
+    "waveform": {
+      "rate": 74,
+      "irregularity": 0.02,
+      "atrial": "sinus",
+      "pAmplitude": 0.14,
+      "pDuration": 0.11,
+      "prInterval": 0.17,
+      "qrsDuration": 0.16,
+      "qrsAmplitude": 1.45,
+      "qrsShape": "wide",
+      "qAmplitude": 0,
+      "sAmplitude": 0.22,
+      "stShift": -0.14,
+      "stShape": "downsloping",
+      "tAmplitude": -0.34,
+      "tShape": "inverted",
+      "qtInterval": 0.44,
+      "wander": 0.07,
+      "noise": 0.05
+    },
+    "vitals": {
+      "heartRate": 74,
+      "spo2": 96,
+      "respiratoryRate": 17,
+      "bpSystolic": 136,
+      "bpDiastolic": 82,
+      "temperature": 36.7,
+      "alarm": "advisory",
+      "alarmText": "WIDE QRS — LBBB PATTERN",
+      "bedside": "Breathless on climbing stairs for several months. The broad complex is present on every previous tracing available, so the block is long-standing rather than new."
+    },
+    "highlights": [
+      {
+        "feature": "qrs",
+        "label": "Broad notched QRS",
+        "note": "0.16 s of slow, muscle-to-muscle activation of the left ventricle, producing a single wide R wave in the lateral leads with a notch where the two limbs of activation meet.",
+        "abnormal": true
+      },
+      {
+        "feature": "st",
+        "label": "Discordant ST depression",
+        "note": "The ST segment is displaced opposite to the dominant QRS deflection. In a lead with a tall R wave the ST segment is depressed — expected in left bundle branch block, and the reason the usual infarct criteria fail here.",
+        "abnormal": true
+      },
+      {
+        "feature": "t",
+        "label": "Discordant T wave",
+        "note": "The T wave is inverted in the leads with a dominant R wave. Concordant changes — ST elevation where the QRS is positive — are the abnormal finding, and form the first Sgarbossa criterion.",
+        "abnormal": true
+      },
+      {
+        "feature": "pr",
+        "label": "Normal PR interval",
+        "note": "Conduction from atria to ventricles is intact. The delay is below the His bundle, in the left branch alone.",
+        "abnormal": false
+      }
+    ],
+    "narration": [
+      {
+        "title": "Normal atrioventricular conduction",
+        "text": "The sinus impulse reaches the His bundle on time. The PR interval is normal, so the problem is distal to the atrioventricular node.",
+        "duration": 1.2,
+        "highlight": "pr"
+      },
+      {
+        "title": "The septum depolarises backwards",
+        "text": "Without the left bundle, the septum is activated from right to left instead of left to right. The small septal Q wave of the lateral leads disappears — an easily missed clue.",
+        "duration": 1.3,
+        "highlight": "qrs"
+      },
+      {
+        "title": "Slow spread through the left ventricle",
+        "text": "The impulse crosses into left ventricular muscle and travels cell to cell. This takes 0.12 s or more and inscribes a broad, notched R wave in I, aVL, V5 and V6.",
+        "duration": 1.5,
+        "highlight": "qrs"
+      },
+      {
+        "title": "Repolarisation cannot be normal",
+        "text": "Because depolarisation took an abnormal path, repolarisation does too. The ST segment and T wave swing opposite to the QRS — appropriate discordance.",
+        "duration": 1.4,
+        "highlight": "st"
+      },
+      {
+        "title": "What the pattern hides",
+        "text": "Those large secondary changes sit in exactly the leads used to diagnose infarction. Use the Sgarbossa criteria, and treat new block with ischaemic symptoms as an emergency.",
+        "duration": 1.5,
+        "highlight": "t"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "74 bpm", "normal": "60–100 bpm" },
+      { "label": "PR interval", "value": "0.17 s", "normal": "0.12–0.20 s" },
+      {
+        "label": "QRS duration",
+        "value": "0.16 s",
+        "normal": "< 0.12 s",
+        "abnormal": true
+      },
+      {
+        "label": "Septal Q wave (I, V6)",
+        "value": "Absent",
+        "normal": "Small and narrow",
+        "abnormal": true
+      },
+      {
+        "label": "ST segment",
+        "value": "Discordant, ≈1.4 mm depression",
+        "normal": "Isoelectric",
+        "abnormal": true
+      },
+      {
+        "label": "T wave",
+        "value": "Inverted, discordant",
+        "normal": "Upright in the lateral leads",
+        "abnormal": true
+      }
+    ],
+    "relatedDiseases": ["conduction-disorders", "heart-failure", "cardiomyopathy", "aortic-stenosis"],
+    "relatedKeyPoints": ["ecg-essentials", "heart-failure-principles"],
+    "relatedStructures": ["bundle-of-his", "purkinje-fibers", "left-ventricle", "interventricular-septum"],
+    "references": ["aha-ecg-part4", "esc-pacing-2021", "esc-hf-2021"]
+  }
+]

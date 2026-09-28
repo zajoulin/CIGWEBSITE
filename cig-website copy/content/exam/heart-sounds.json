@@ -1,0 +1,538 @@
+[
+  {
+    "id": "normal-s1-s2",
+    "name": "Normal S1 and S2",
+    "kind": "normal",
+    "timing": "none",
+    "pitch": "low",
+    "quality": "Two short, crisp sounds — 'lub-dup'",
+    "description": "The two normal heart sounds. S1 marks the start of systole and S2 its end, so the interval between them is systole and the longer interval from S2 back to the next S1 is diastole. At normal rates diastole is clearly the longer of the two, which is how you time everything else you hear.",
+    "mechanism": "S1 is produced by closure of the mitral and tricuspid valves as ventricular pressure rises above atrial pressure, together with the sudden deceleration of blood and tensing of the chordae. S2 is produced by closure of the aortic and pulmonary valves as ventricular pressure falls below arterial pressure. S2 normally splits on inspiration: increased venous return delays pulmonary valve closure while reduced pulmonary venous return brings aortic closure slightly earlier.",
+    "bestHeardAt": "mitral",
+    "associated": [
+      "S1 is loudest at the apex; S2 is loudest at the base",
+      "Physiological splitting of S2 widens on inspiration and narrows on expiration",
+      "A loud S1 occurs in mitral stenosis and short PR intervals; a soft S1 in mitral regurgitation and long PR intervals"
+    ],
+    "events": [
+      {
+        "id": "s1",
+        "label": "S1",
+        "kind": "sound",
+        "start": 0,
+        "end": 0.055,
+        "intensity": 0.85,
+        "frequency": 42,
+        "bandwidth": 70,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Mitral and tricuspid closure — the start of systole and of ventricular contraction."
+      },
+      {
+        "id": "s2",
+        "label": "S2",
+        "kind": "sound",
+        "start": 0.38,
+        "end": 0.42,
+        "intensity": 0.68,
+        "frequency": 62,
+        "bandwidth": 95,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Aortic and pulmonary closure — the end of systole and the start of diastole. Higher pitched and shorter than S1."
+      }
+    ],
+    "rate": 72,
+    "relatedDiseases": [],
+    "references": ["bates", "guyton", "braunwald"]
+  },
+  {
+    "id": "s3",
+    "name": "Third heart sound (S3)",
+    "kind": "extra-sound",
+    "timing": "diastolic",
+    "pitch": "low",
+    "quality": "Low-pitched early diastolic thud — 'Ken-tuc-ky'",
+    "description": "A low-frequency sound occurring in early diastole, shortly after S2, during the rapid passive filling phase. It creates a triple cadence often described as a gallop rhythm.",
+    "mechanism": "As the atrioventricular valves open, blood rushes into the ventricle and abruptly decelerates when the ventricle reaches the limit of its compliance. In a dilated, volume-loaded ventricle that deceleration happens suddenly enough to set the ventricular wall and the blood within it vibrating at low frequency. It is normal in children, young adults and pregnancy, where a compliant ventricle handles a high flow volume; after about 40 it usually signifies volume overload or heart failure.",
+    "bestHeardAt": "mitral",
+    "associated": [
+      "Heart failure with a dilated left ventricle",
+      "Severe mitral or aortic regurgitation, and other high-output states",
+      "Physiological in children, athletes and pregnancy",
+      "A right-sided S3 is louder on inspiration at the left sternal edge"
+    ],
+    "events": [
+      {
+        "id": "s1",
+        "label": "S1",
+        "kind": "sound",
+        "start": 0,
+        "end": 0.055,
+        "intensity": 0.8,
+        "frequency": 42,
+        "bandwidth": 70,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Mitral and tricuspid closure."
+      },
+      {
+        "id": "s2",
+        "label": "S2",
+        "kind": "sound",
+        "start": 0.38,
+        "end": 0.42,
+        "intensity": 0.65,
+        "frequency": 62,
+        "bandwidth": 95,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Aortic and pulmonary closure."
+      },
+      {
+        "id": "s3",
+        "label": "S3",
+        "kind": "sound",
+        "start": 0.53,
+        "end": 0.585,
+        "intensity": 0.42,
+        "frequency": 32,
+        "bandwidth": 45,
+        "noise": 0.3,
+        "shape": "thump",
+        "note": "Rapid passive filling meeting the limit of ventricular compliance — early diastole, after S2."
+      }
+    ],
+    "rate": 72,
+    "relatedDiseases": ["heart-failure", "mitral-regurgitation", "cardiomyopathy"],
+    "references": ["bates", "esc-hf-2021", "braunwald"]
+  },
+  {
+    "id": "s4",
+    "name": "Fourth heart sound (S4)",
+    "kind": "extra-sound",
+    "timing": "diastolic",
+    "pitch": "low",
+    "quality": "Low-pitched presystolic sound just before S1 — 'Ten-nes-see'",
+    "description": "A low-frequency sound in late diastole, immediately before S1. It is always pathological in adults and requires organised atrial contraction — so it can never occur in atrial fibrillation.",
+    "mechanism": "Atrial systole forces blood into a ventricle that is already stiff and non-compliant. The sudden tensing of the resistant ventricular wall generates a low-frequency vibration just before the atrioventricular valves close. Anything that stiffens the ventricle produces it: hypertension, aortic stenosis, hypertrophic cardiomyopathy and acute ischaemia.",
+    "bestHeardAt": "mitral",
+    "associated": [
+      "Left ventricular hypertrophy from hypertension or aortic stenosis",
+      "Acute myocardial ischaemia and infarction",
+      "Hypertrophic cardiomyopathy and restrictive physiology",
+      "Cannot occur in atrial fibrillation — it depends on atrial contraction"
+    ],
+    "events": [
+      {
+        "id": "s4",
+        "label": "S4",
+        "kind": "sound",
+        "start": 0.9,
+        "end": 0.955,
+        "intensity": 0.4,
+        "frequency": 30,
+        "bandwidth": 42,
+        "noise": 0.3,
+        "shape": "thump",
+        "note": "Atrial systole against a stiff ventricle — late diastole, immediately before S1."
+      },
+      {
+        "id": "s1",
+        "label": "S1",
+        "kind": "sound",
+        "start": 0,
+        "end": 0.055,
+        "intensity": 0.82,
+        "frequency": 42,
+        "bandwidth": 70,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Mitral and tricuspid closure."
+      },
+      {
+        "id": "s2",
+        "label": "S2",
+        "kind": "sound",
+        "start": 0.38,
+        "end": 0.42,
+        "intensity": 0.66,
+        "frequency": 62,
+        "bandwidth": 95,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Aortic and pulmonary closure."
+      }
+    ],
+    "rate": 72,
+    "relatedDiseases": ["hypertension", "aortic-stenosis", "cardiomyopathy", "myocardial-infarction"],
+    "references": ["bates", "braunwald", "guyton"]
+  },
+  {
+    "id": "aortic-stenosis",
+    "name": "Aortic stenosis",
+    "kind": "murmur",
+    "timing": "systolic",
+    "grade": "Ejection systolic, crescendo–decrescendo",
+    "pitch": "medium",
+    "quality": "Harsh, rasping, rising then falling through systole",
+    "description": "A crescendo–decrescendo systolic murmur beginning shortly after S1, peaking in mid-systole and finishing before S2. The later the peak and the softer the S2, the more severe the stenosis.",
+    "mechanism": "Blood is forced through a narrowed aortic valve at high velocity, generating turbulence in the ascending aorta. Flow — and therefore turbulence — rises to a peak in mid-systole and falls away again, which is what gives the murmur its diamond shape. Because ejection cannot begin until the ventricle exceeds aortic pressure, the murmur starts after S1; because it ends when the valve closes, it stops before S2.",
+    "bestHeardAt": "aortic",
+    "radiation": "To both carotid arteries",
+    "manoeuvres": [
+      "Louder on expiration with the patient sitting forward",
+      "Quieter with Valsalva — reduced venous return means less flow across the valve",
+      "Softer and later-peaking as severity increases, with a soft or absent A2"
+    ],
+    "associated": [
+      "Slow-rising, low-volume carotid pulse (pulsus parvus et tardus)",
+      "Heaving, non-displaced apex beat",
+      "Narrow pulse pressure and a soft second heart sound",
+      "The triad of exertional angina, syncope and breathlessness"
+    ],
+    "events": [
+      {
+        "id": "s1",
+        "label": "S1",
+        "kind": "sound",
+        "start": 0,
+        "end": 0.055,
+        "intensity": 0.75,
+        "frequency": 42,
+        "bandwidth": 70,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Mitral and tricuspid closure."
+      },
+      {
+        "id": "murmur",
+        "label": "Ejection systolic murmur",
+        "kind": "murmur",
+        "start": 0.07,
+        "end": 0.36,
+        "intensity": 0.8,
+        "frequency": 240,
+        "bandwidth": 420,
+        "noise": 0.96,
+        "shape": "diamond",
+        "note": "Turbulent flow across the stenosed valve, peaking in mid-systole — the crescendo–decrescendo shape."
+      },
+      {
+        "id": "s2",
+        "label": "S2 (soft)",
+        "kind": "sound",
+        "start": 0.38,
+        "end": 0.42,
+        "intensity": 0.4,
+        "frequency": 60,
+        "bandwidth": 95,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "A2 is soft because the calcified valve leaflets close poorly — a sign of severity."
+      }
+    ],
+    "rate": 72,
+    "relatedDiseases": ["aortic-stenosis", "rheumatic-heart-disease"],
+    "references": ["aha-vhd-2020", "esc-vhd-2021", "bates"]
+  },
+  {
+    "id": "mitral-regurgitation",
+    "name": "Mitral regurgitation",
+    "kind": "murmur",
+    "timing": "systolic",
+    "grade": "Pansystolic (holosystolic), plateau",
+    "pitch": "high",
+    "quality": "Blowing, uniform in intensity throughout systole",
+    "description": "A high-pitched blowing murmur that begins with S1, continues at constant intensity through the whole of systole and merges into S2 — obliterating the normal silence between them.",
+    "mechanism": "The mitral valve leaks throughout systole. Because left ventricular pressure exceeds left atrial pressure from the moment the valve should have closed until it reopens, the pressure gradient — and therefore the regurgitant flow — is present across all of systole and is roughly constant. That is why the murmur is pansystolic and plateau-shaped rather than diamond-shaped.",
+    "bestHeardAt": "mitral",
+    "radiation": "To the left axilla",
+    "manoeuvres": [
+      "Louder in the left lateral position and on expiration",
+      "Increased by handgrip, which raises afterload and so increases the regurgitant fraction",
+      "Unchanged or softer with Valsalva"
+    ],
+    "associated": [
+      "Displaced, volume-loaded apex beat",
+      "Soft S1 and a widely split S2",
+      "S3 from the large volume returning in early diastole",
+      "Atrial fibrillation as the left atrium dilates"
+    ],
+    "events": [
+      {
+        "id": "s1",
+        "label": "S1 (soft)",
+        "kind": "sound",
+        "start": 0,
+        "end": 0.05,
+        "intensity": 0.5,
+        "frequency": 42,
+        "bandwidth": 70,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Soft, because the mitral valve does not close competently."
+      },
+      {
+        "id": "murmur",
+        "label": "Pansystolic murmur",
+        "kind": "murmur",
+        "start": 0.01,
+        "end": 0.4,
+        "intensity": 0.62,
+        "frequency": 320,
+        "bandwidth": 360,
+        "noise": 0.97,
+        "shape": "plateau",
+        "note": "Constant regurgitant flow from the moment of S1 through to S2 — uniform intensity across the whole of systole."
+      },
+      {
+        "id": "s2",
+        "label": "S2",
+        "kind": "sound",
+        "start": 0.39,
+        "end": 0.43,
+        "intensity": 0.55,
+        "frequency": 62,
+        "bandwidth": 95,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Aortic and pulmonary closure; the murmur runs right up to it."
+      }
+    ],
+    "rate": 72,
+    "relatedDiseases": ["mitral-regurgitation", "heart-failure", "infective-endocarditis"],
+    "references": ["aha-vhd-2020", "esc-vhd-2021", "bates"]
+  },
+  {
+    "id": "mitral-stenosis",
+    "name": "Mitral stenosis",
+    "kind": "murmur",
+    "timing": "diastolic",
+    "grade": "Mid-diastolic rumble with presystolic accentuation",
+    "pitch": "low",
+    "quality": "Low-pitched rumbling, preceded by an opening snap",
+    "description": "A loud S1, an opening snap shortly after S2, and then a low-pitched mid-diastolic rumble. In sinus rhythm the murmur becomes louder again just before S1 as atrial contraction increases flow — presystolic accentuation, which disappears once the patient develops atrial fibrillation.",
+    "mechanism": "A thickened, fused mitral valve obstructs flow from the left atrium to the left ventricle throughout diastole. The pressure gradient is greatest early in diastole and again during atrial systole, which shapes the murmur. The opening snap is the sudden tensing of the still-pliable fused leaflets as they are forced open; the shorter the S2–opening snap interval, the higher the left atrial pressure and the more severe the stenosis.",
+    "bestHeardAt": "mitral",
+    "radiation": "Localised to the apex — it characteristically does not radiate",
+    "manoeuvres": [
+      "Roll the patient into the left lateral position and listen with the bell in held expiration — often the only way to hear it",
+      "Light exercise increases flow and makes the murmur louder",
+      "Pressing the bell firmly abolishes the low frequencies you are trying to hear"
+    ],
+    "associated": [
+      "Loud S1 and an opening snap",
+      "Malar flush and a tapping, non-displaced apex beat",
+      "Atrial fibrillation and systemic embolism",
+      "Signs of pulmonary hypertension and right heart failure",
+      "Almost always rheumatic in origin"
+    ],
+    "events": [
+      {
+        "id": "s1",
+        "label": "S1 (loud)",
+        "kind": "sound",
+        "start": 0,
+        "end": 0.055,
+        "intensity": 0.95,
+        "frequency": 46,
+        "bandwidth": 80,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Loud, because the stenotic leaflets are still wide open when ventricular systole slams them shut."
+      },
+      {
+        "id": "s2",
+        "label": "S2",
+        "kind": "sound",
+        "start": 0.38,
+        "end": 0.42,
+        "intensity": 0.66,
+        "frequency": 62,
+        "bandwidth": 95,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Aortic and pulmonary closure."
+      },
+      {
+        "id": "os",
+        "label": "Opening snap",
+        "kind": "click",
+        "start": 0.47,
+        "end": 0.5,
+        "intensity": 0.5,
+        "frequency": 130,
+        "bandwidth": 110,
+        "noise": 0.3,
+        "shape": "thump",
+        "note": "The fused but pliable leaflets snapping open. A short S2–OS interval means high left atrial pressure and severe stenosis."
+      },
+      {
+        "id": "rumble",
+        "label": "Mid-diastolic rumble",
+        "kind": "murmur",
+        "start": 0.52,
+        "end": 0.86,
+        "intensity": 0.4,
+        "frequency": 75,
+        "bandwidth": 60,
+        "noise": 0.9,
+        "shape": "decrescendo",
+        "note": "Turbulent flow across the narrowed valve through diastole — low-pitched, and only audible with the bell."
+      },
+      {
+        "id": "presystolic",
+        "label": "Presystolic accentuation",
+        "kind": "murmur",
+        "start": 0.86,
+        "end": 0.99,
+        "intensity": 0.46,
+        "frequency": 80,
+        "bandwidth": 60,
+        "noise": 0.9,
+        "shape": "crescendo",
+        "note": "Atrial systole drives a final surge of flow across the valve. It disappears when the patient goes into atrial fibrillation."
+      }
+    ],
+    "rate": 72,
+    "relatedDiseases": ["mitral-stenosis", "rheumatic-heart-disease", "atrial-fibrillation"],
+    "references": ["aha-vhd-2020", "esc-vhd-2021", "bates"]
+  },
+  {
+    "id": "aortic-regurgitation",
+    "name": "Aortic regurgitation",
+    "kind": "murmur",
+    "timing": "diastolic",
+    "grade": "Early diastolic, decrescendo",
+    "pitch": "high",
+    "quality": "Soft, high-pitched, blowing — fading away through diastole",
+    "description": "A high-pitched decrescendo murmur beginning immediately with S2 and fading through diastole. It is one of the most commonly missed murmurs because it is soft, high-frequency and easy to mistake for breath sounds.",
+    "mechanism": "The aortic valve leaks as soon as it should have closed. The regurgitant gradient between aorta and left ventricle is highest immediately after S2 and falls progressively as aortic pressure drops and ventricular pressure rises, so the murmur is loudest at its start and decrescendos. The longer the murmur lasts into diastole, the more severe the leak.",
+    "bestHeardAt": "erb",
+    "radiation": "Down the left sternal border towards the apex",
+    "manoeuvres": [
+      "Sit the patient forward, ask them to breathe out fully and hold — then listen with the diaphragm at the left sternal edge",
+      "Handgrip increases afterload and makes it louder",
+      "An Austin Flint murmur — a mid-diastolic rumble at the apex — may accompany severe regurgitation"
+    ],
+    "associated": [
+      "Collapsing (water-hammer) pulse and a wide pulse pressure",
+      "Displaced, hyperdynamic apex beat",
+      "Corrigan's sign, de Musset's sign and other eponymous peripheral signs",
+      "Causes include bicuspid valve, aortic root dilatation, endocarditis and rheumatic disease"
+    ],
+    "events": [
+      {
+        "id": "s1",
+        "label": "S1",
+        "kind": "sound",
+        "start": 0,
+        "end": 0.055,
+        "intensity": 0.78,
+        "frequency": 42,
+        "bandwidth": 70,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Mitral and tricuspid closure."
+      },
+      {
+        "id": "s2",
+        "label": "S2",
+        "kind": "sound",
+        "start": 0.38,
+        "end": 0.42,
+        "intensity": 0.6,
+        "frequency": 62,
+        "bandwidth": 95,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Aortic and pulmonary closure — the murmur starts here."
+      },
+      {
+        "id": "murmur",
+        "label": "Early diastolic murmur",
+        "kind": "murmur",
+        "start": 0.4,
+        "end": 0.74,
+        "intensity": 0.4,
+        "frequency": 380,
+        "bandwidth": 520,
+        "noise": 0.97,
+        "shape": "decrescendo",
+        "note": "Regurgitant flow back into the ventricle, loudest immediately after S2 and fading as the gradient falls."
+      }
+    ],
+    "rate": 72,
+    "relatedDiseases": ["aortic-regurgitation", "aortic-aneurysm", "infective-endocarditis"],
+    "references": ["aha-vhd-2020", "esc-vhd-2021", "bates"]
+  },
+  {
+    "id": "vsd",
+    "name": "Ventricular septal defect",
+    "kind": "murmur",
+    "timing": "systolic",
+    "grade": "Harsh pansystolic, often with a thrill",
+    "pitch": "high",
+    "quality": "Loud, harsh and rough throughout systole",
+    "description": "A loud, harsh pansystolic murmur at the left sternal edge, frequently accompanied by a palpable thrill. Counterintuitively, a small defect makes a louder murmur than a large one.",
+    "mechanism": "Systolic pressure in the left ventricle greatly exceeds that in the right, so blood is driven through the septal defect throughout systole, generating intense turbulence. A small, restrictive defect maintains a large pressure gradient across a tiny orifice and produces a very loud murmur; a large defect equalises the pressures, reduces the gradient and can be surprisingly quiet — which is why murmur intensity is a poor guide to severity here.",
+    "bestHeardAt": "tricuspid",
+    "radiation": "Across the praecordium in a wide area around the left sternal border",
+    "manoeuvres": [
+      "Louder with handgrip, which raises systemic vascular resistance and increases left-to-right shunting",
+      "Quieter with amyl nitrite or anything that lowers afterload",
+      "Does not radiate to the axilla, which helps separate it from mitral regurgitation"
+    ],
+    "associated": [
+      "Palpable thrill at the left lower sternal edge",
+      "Signs of pulmonary over-circulation with a large shunt",
+      "Eisenmenger physiology if a large shunt is left untreated",
+      "May be congenital, or acquired after septal infarction"
+    ],
+    "events": [
+      {
+        "id": "s1",
+        "label": "S1",
+        "kind": "sound",
+        "start": 0,
+        "end": 0.05,
+        "intensity": 0.7,
+        "frequency": 42,
+        "bandwidth": 70,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Mitral and tricuspid closure, often buried in the murmur."
+      },
+      {
+        "id": "murmur",
+        "label": "Harsh pansystolic murmur",
+        "kind": "murmur",
+        "start": 0.01,
+        "end": 0.4,
+        "intensity": 0.85,
+        "frequency": 210,
+        "bandwidth": 640,
+        "noise": 1,
+        "shape": "plateau",
+        "note": "High-velocity flow through the septal defect for the whole of systole — loud, harsh and often palpable as a thrill."
+      },
+      {
+        "id": "s2",
+        "label": "S2",
+        "kind": "sound",
+        "start": 0.39,
+        "end": 0.43,
+        "intensity": 0.55,
+        "frequency": 62,
+        "bandwidth": 95,
+        "noise": 0.35,
+        "shape": "thump",
+        "note": "Aortic and pulmonary closure."
+      }
+    ],
+    "rate": 76,
+    "relatedDiseases": ["congenital-heart-disease", "myocardial-infarction"],
+    "references": ["bates", "braunwald", "ncbi-bookshelf"]
+  }
+]

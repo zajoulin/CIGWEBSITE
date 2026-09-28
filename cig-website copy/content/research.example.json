@@ -1,0 +1,242 @@
+[
+  {
+    "id": "Abstract-001",
+    "title": "Hemodynamic Effects of Caffeine in Preterm Infants: A Systematic Review of Early Cardiovacular Outcomes",
+    "authors": [
+      "Author Name",
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2026,
+    "type": "original-research",
+    "category": "Preventive Cardiology",
+    "abstract": "DEMO ENTRY — no data have been collected and no results are reported here. This placeholder illustrates how a CIG cross-sectional survey would be presented: background and rationale, a described sampling frame and questionnaire, ethical approval details, planned analysis, and findings once the study is complete. Replace this record with the group's own work.",
+    "keyFindings": [
+      "Findings to be added by the research team once data collection and analysis are complete",
+      "No results are claimed in this placeholder record"
+    ],
+    "tags": [
+      "prevention",
+      "medical education",
+      "survey",
+      "risk factors"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  },
+  {
+    "id": "demo-002",
+    "title": "Placeholder — Interpretation of the 12-lead ECG by medical students before and after a structured teaching intervention",
+    "authors": [
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2026,
+    "type": "original-research",
+    "category": "Medical Education",
+    "abstract": "DEMO ENTRY — illustrative only, with no data or outcomes. A pre- and post-intervention educational study would describe the teaching format, the assessment instrument used, how confounding was addressed, and the change in performance observed. Replace with the group's actual protocol and results.",
+    "keyFindings": [
+      "To be completed by the research team",
+      "This record exists to demonstrate the layout of a research entry"
+    ],
+    "tags": [
+      "ECG",
+      "medical education",
+      "teaching",
+      "assessment"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  },
+  {
+    "id": "demo-003",
+    "title": "Placeholder — Door-to-balloon times in ST-elevation myocardial infarction: a single-centre retrospective audit",
+    "authors": [
+      "Author Name",
+      "Author Name",
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2025,
+    "type": "audit",
+    "category": "Interventional Cardiology",
+    "abstract": "DEMO ENTRY — no audit has been performed and no times are reported. A clinical audit record would state the standard being audited and its source guideline, the sample and time period, the measured performance against that standard, and the changes implemented before re-audit. Replace with the group's own audit.",
+    "keyFindings": [
+      "Audit standard, sample and results to be entered by the team",
+      "No performance data are claimed here"
+    ],
+    "tags": [
+      "STEMI",
+      "quality improvement",
+      "audit",
+      "reperfusion"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  },
+  {
+    "id": "demo-004",
+    "title": "Placeholder — Atrial fibrillation screening in community pharmacy settings: a narrative review",
+    "authors": [
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2025,
+    "type": "review",
+    "category": "Arrhythmias",
+    "abstract": "DEMO ENTRY — illustrative structure only. A narrative review record would summarise the question addressed, the literature search strategy, the themes identified across the included studies, and the limitations of the evidence base. Replace with the group's own review, citing the primary literature directly.",
+    "keyFindings": [
+      "Review scope and conclusions to be added by the authors",
+      "No claims about screening effectiveness are made in this placeholder"
+    ],
+    "tags": [
+      "atrial fibrillation",
+      "screening",
+      "public health",
+      "review"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  },
+  {
+    "id": "demo-005",
+    "title": "Placeholder — Late presentation of rheumatic mitral stenosis in a young adult: a case report",
+    "authors": [
+      "Author Name",
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2025,
+    "type": "case-report",
+    "category": "Valvular Heart Disease",
+    "abstract": "DEMO ENTRY — no patient is described and no clinical details are reported. A case report record would present the anonymised presentation, investigations, management and outcome, with explicit consent documented, followed by a discussion of what the case teaches. Replace with the group's own case, with appropriate consent and institutional approval.",
+    "keyFindings": [
+      "Case details and learning points to be added by the authors",
+      "No patient information is contained in this placeholder"
+    ],
+    "tags": [
+      "rheumatic heart disease",
+      "mitral stenosis",
+      "case report",
+      "echocardiography"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  },
+  {
+    "id": "demo-006",
+    "title": "Placeholder — Blood pressure control in a student-led community screening programme",
+    "authors": [
+      "Author Name",
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2025,
+    "type": "original-research",
+    "category": "Hypertension",
+    "abstract": "DEMO ENTRY — illustrative only, with no participants, measurements or outcomes. A community screening study record would describe the setting and recruitment, the measurement protocol including cuff size and repeat readings, the referral pathway for those found to have raised readings, and the outcomes achieved. Replace with the group's own programme data.",
+    "keyFindings": [
+      "Screening yield and referral outcomes to be entered by the team",
+      "No prevalence figures are claimed here"
+    ],
+    "tags": [
+      "hypertension",
+      "screening",
+      "community",
+      "outreach"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  },
+  {
+    "id": "demo-007",
+    "title": "Placeholder — Interactive 3D anatomy versus static diagrams for learning cardiac anatomy: a randomised educational trial protocol",
+    "authors": [
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2026,
+    "type": "abstract",
+    "category": "Medical Education",
+    "abstract": "DEMO ENTRY — a protocol placeholder with no results. A protocol record would state the research question, the randomisation and allocation method, the primary and secondary outcome measures, the sample size calculation, and the analysis plan. Replace with the group's registered protocol.",
+    "keyFindings": [
+      "Protocol details to be added by the investigators",
+      "No efficacy claims are made in this placeholder"
+    ],
+    "tags": [
+      "anatomy",
+      "3D visualisation",
+      "medical education",
+      "randomised trial"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  },
+  {
+    "id": "demo-008",
+    "title": "Placeholder — Basic life support skill retention among first-year students at six months",
+    "authors": [
+      "Author Name",
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2024,
+    "type": "original-research",
+    "category": "Resuscitation",
+    "abstract": "DEMO ENTRY — no participants were assessed and no retention data are reported. A skill-retention study record would describe the initial training, the assessment tool and assessors, the follow-up interval, and the change in objectively measured performance. Replace with the group's own study.",
+    "keyFindings": [
+      "Retention outcomes to be entered by the research team",
+      "No skill decay estimates are claimed in this placeholder"
+    ],
+    "tags": [
+      "resuscitation",
+      "BLS",
+      "skill retention",
+      "medical education"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  },
+  {
+    "id": "demo-009",
+    "title": "Placeholder — Poster: Anatomical variation in coronary dominance on CT coronary angiography",
+    "authors": [
+      "Author Name",
+      "Author Name"
+    ],
+    "year": 2024,
+    "type": "poster",
+    "category": "Cardiac Imaging",
+    "abstract": "DEMO ENTRY — illustrative record only, containing no imaging data or measured frequencies. A poster record would summarise the sample of scans reviewed, the classification criteria applied, the observed distribution of coronary dominance, and how it compares with published series. Replace with the group's own poster and its data.",
+    "keyFindings": [
+      "Observed distribution to be entered once the review is complete",
+      "No prevalence figures are asserted in this placeholder"
+    ],
+    "tags": [
+      "coronary anatomy",
+      "CT angiography",
+      "anatomical variation",
+      "imaging"
+    ],
+    "doi": null,
+    "link": null,
+    "pdf": null,
+    "placeholder": true
+  }
+]

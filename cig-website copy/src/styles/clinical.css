@@ -1,0 +1,2379 @@
+/* ==========================================================================
+   CIG — Clinical simulation modules
+   --------------------------------------------------------------------------
+   The bedside monitor, the patient-room scene, the ECG workspace and the 3D
+   examination module. Everything here builds on the tokens in tokens.css —
+   no new colours are invented, except the specific phosphor greens and
+   amber alarm hues that belong to a monitor rather than to the CIG identity.
+   ========================================================================== */
+
+:root {
+  /* ECG paper, used by the printed teaching strip on light backgrounds */
+  --ecg-paper: #fff7f4;
+  --ecg-grid-fine: rgba(214, 118, 106, 0.28);
+  --ecg-grid-bold: rgba(206, 92, 78, 0.45);
+  --ecg-trace: #1b2430;
+  --ecg-ink-soft: rgba(27, 36, 48, 0.42);
+  --ecg-mark: #0f5fa8;
+  --ecg-mark-wash: rgba(15, 95, 168, 0.12);
+
+
+  /* Monitor phosphor */
+  --mon-bg: #04121e;
+  --mon-ecg: #3ff09a;
+  --mon-spo2: #41cdf0;
+  --mon-resp: #f3d565;
+  --mon-nibp: #e7eefb;
+  --mon-temp: #c8a2f5;
+  --mon-bezel: #101c28;
+  --mon-bezel-2: #0a141d;
+  --mon-line: rgba(150, 200, 235, 0.16);
+  --mon-text: rgba(224, 242, 255, 0.72);
+  --alarm-advisory: #ffd166;
+  --alarm-warning: #ffa53d;
+  --alarm-critical: #ff5f6d;
+}
+
+.stage {
+  --ecg-paper: #0b1a26;
+  --ecg-grid-fine: rgba(126, 196, 168, 0.14);
+  --ecg-grid-bold: rgba(126, 208, 172, 0.26);
+  --ecg-trace: #7fe9b4;
+  --ecg-ink-soft: rgba(190, 226, 255, 0.4);
+  --ecg-mark: #ffd166;
+  --ecg-mark-wash: rgba(255, 209, 102, 0.14);
+}
+
+/* ==========================================================================
+   BEDSIDE MONITOR
+   ========================================================================== */
+
+.mon {
+  --mon-accent: var(--mon-ecg);
+  width: 100%;
+}
+
+.mon-bezel {
+  background: linear-gradient(180deg, var(--mon-bezel), var(--mon-bezel-2));
+  border: 1px solid rgba(150, 200, 235, 0.22);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow:
+    inset 0 1px 0 rgba(190, 225, 255, 0.14),
+    inset 0 -14px 26px -18px rgba(0, 0, 0, 0.9),
+    0 24px 60px -28px rgba(2, 12, 24, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mon-bezel::before {
+  /* A soft sheen across the top of the physical case. */
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 46%;
+  background: linear-gradient(180deg, rgba(190, 225, 255, 0.05), transparent);
+  pointer-events: none;
+}
+
+.mon-topbar,
+.mon-botbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mon-text);
+  min-height: 22px;
+  flex-wrap: wrap;
+}
+
+.mon-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #cfe6ff;
+}
+
+.mon-bed {
+  color: rgba(200, 226, 250, 0.55);
+}
+
+.mon-clock {
+  margin-left: auto;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(214, 240, 255, 0.8);
+}
+
+.mon-status-ok,
+.mon-alarm-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  border: 1px solid transparent;
+}
+
+.mon-status-ok {
+  color: var(--mon-ecg);
+  border-color: rgba(63, 240, 154, 0.35);
+  background: rgba(63, 240, 154, 0.08);
+}
+
+.mon-alarm-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.mon-alarm-banner {
+  color: var(--mon-accent);
+  border-color: color-mix(in srgb, var(--mon-accent) 45%, transparent);
+  background: color-mix(in srgb, var(--mon-accent) 12%, transparent);
+  animation: mon-alarm-pulse 1.4s var(--ease-in-out) infinite;
+}
+
+.mon-alarm-banner.silenced {
+  animation: none;
+  opacity: 0.62;
+}
+
+@keyframes mon-alarm-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.mon-alarm-advisory {
+  --mon-accent: var(--alarm-advisory);
+}
+.mon-alarm-warning {
+  --mon-accent: var(--alarm-warning);
+}
+.mon-alarm-critical {
+  --mon-accent: var(--alarm-critical);
+}
+
+.mon-alarm-warning .mon-bezel,
+.mon-alarm-critical .mon-bezel {
+  border-color: color-mix(in srgb, var(--mon-accent) 55%, transparent);
+  box-shadow:
+    inset 0 1px 0 rgba(190, 225, 255, 0.14),
+    0 0 0 1px color-mix(in srgb, var(--mon-accent) 30%, transparent),
+    0 24px 60px -28px rgba(2, 12, 24, 0.85);
+}
+
+.mon-alarm-critical .mon-bezel {
+  animation: mon-frame-pulse 1.5s var(--ease-in-out) infinite;
+}
+
+@keyframes mon-frame-pulse {
+  0%,
+  100% {
+    box-shadow:
+      inset 0 1px 0 rgba(190, 225, 255, 0.14),
+      0 0 0 1px rgba(255, 95, 109, 0.3),
+      0 24px 60px -28px rgba(2, 12, 24, 0.85);
+  }
+  50% {
+    box-shadow:
+      inset 0 1px 0 rgba(190, 225, 255, 0.14),
+      0 0 0 3px rgba(255, 95, 109, 0.42),
+      0 24px 60px -28px rgba(2, 12, 24, 0.85);
+  }
+}
+
+.mon-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 172px;
+  gap: 8px;
+}
+
+.mon-compact .mon-body {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.mon-screen {
+  position: relative;
+  background: var(--mon-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(120, 190, 160, 0.14);
+  aspect-ratio: 16 / 9;
+  min-height: 240px;
+  /* A definite width is what keeps `min-height` from being resolved through
+     the aspect ratio back into a *wider* box: without it, a 326px column on a
+     375px phone produced a 427px screen and the trace was clipped. */
+  width: 100%;
+  min-width: 0;
+}
+
+/* Below the width at which 16/9 would be shorter than the 240px floor, drop
+   the floor rather than the ratio — the trace stays inside the phone. */
+@media (max-width: 560px) {
+  .mon-screen {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+}
+
+.mon-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mon-scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.022) 0 1px,
+      transparent 1px 3px
+    ),
+    radial-gradient(ellipse 90% 70% at 50% 45%, transparent 55%, rgba(0, 0, 0, 0.4));
+}
+
+.mon-numerics {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+  gap: 6px;
+  min-width: 0;
+}
+
+.mon-num {
+  --num: var(--mon-ecg);
+  background: rgba(6, 20, 32, 0.85);
+  border: 1px solid var(--mon-line);
+  border-radius: 8px;
+  padding: 6px 10px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.mon-num-ecg {
+  --num: var(--mon-ecg);
+}
+.mon-num-spo2 {
+  --num: var(--mon-spo2);
+}
+.mon-num-resp {
+  --num: var(--mon-resp);
+}
+.mon-num-nibp {
+  --num: var(--mon-nibp);
+}
+.mon-num-temp {
+  --num: var(--mon-temp);
+}
+
+.mon-num-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.mon-num-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--num);
+}
+
+.mon-num-unit,
+.mon-num-sub {
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  color: rgba(200, 226, 250, 0.45);
+  text-transform: uppercase;
+}
+
+.mon-num-value {
+  font-family: var(--font-mono);
+  font-size: clamp(1.6rem, 2.6vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--num);
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 18px color-mix(in srgb, var(--num) 34%, transparent);
+  overflow-wrap: anywhere;
+}
+
+.mon-num-sm .mon-num-value {
+  font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+}
+
+.mon-num-sub {
+  margin-top: 1px;
+}
+
+.mon-botbar {
+  color: rgba(200, 226, 250, 0.42);
+  font-size: 10px;
+}
+
+.mon-botbar-spacer {
+  flex: 1;
+}
+
+.mon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--mon-line);
+  background: rgba(10, 26, 40, 0.9);
+  color: rgba(214, 240, 255, 0.78);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--dur-2) var(--ease);
+}
+
+.mon-btn:hover {
+  border-color: rgba(150, 200, 235, 0.4);
+  color: #fff;
+}
+
+.mon-btn[aria-pressed='true'] {
+  border-color: color-mix(in srgb, var(--mon-ecg) 50%, transparent);
+  color: var(--mon-ecg);
+}
+
+@media (max-width: 720px) {
+  .mon-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .mon-numerics {
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+    grid-auto-rows: auto;
+  }
+  .mon-screen {
+    min-height: 200px;
+  }
+  .mon-topbar,
+  .mon-botbar {
+    font-size: 9.5px;
+  }
+}
+
+/* ==========================================================================
+   ECG WORKSPACE
+   ========================================================================== */
+
+.ecg-head .page-head-row {
+  align-items: flex-start;
+}
+
+.ecg-head-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  margin-top: var(--s-6);
+  flex-wrap: wrap;
+}
+
+.ecg-view-switch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--r-pill);
+  background: var(--glass);
+  border: 1px solid var(--line);
+}
+
+.ecg-head-search {
+  flex: 1 1 280px;
+  max-width: 420px;
+  min-width: 0;
+}
+
+.ecg-shell {
+  display: grid;
+  grid-template-columns: 268px minmax(0, 1fr) 376px;
+  gap: var(--s-5);
+  align-items: start;
+  width: 100%;
+  max-width: var(--wrap-wide);
+  margin: 0 auto;
+  padding: var(--s-6) var(--s-6) var(--s-10);
+}
+
+.ecg-rail,
+.ecg-analysis {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+  overflow: hidden;
+  position: sticky;
+  top: calc(var(--nav-h) + var(--s-4));
+  max-height: calc(100dvh - var(--nav-h) - var(--s-8));
+  display: flex;
+  flex-direction: column;
+}
+
+.ecg-rail-head {
+  padding: var(--s-4) var(--s-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.ecg-rail-head h2 {
+  font-size: var(--t-base);
+  letter-spacing: -0.01em;
+}
+
+.ecg-rail-head p {
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+  margin-top: 2px;
+}
+
+.ecg-rail-scroll,
+.ecg-analysis-scroll {
+  overflow-y: auto;
+  padding: var(--s-3);
+  flex: 1;
+  min-height: 0;
+}
+
+.ecg-analysis-scroll {
+  padding: var(--s-5);
+  display: grid;
+  gap: var(--s-6);
+}
+
+.ecg-rail-group + .ecg-rail-group {
+  margin-top: var(--s-4);
+}
+
+.ecg-rail-cat {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 0 var(--s-2) var(--s-2);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ecg-rail-cat::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--accent, var(--blue));
+}
+
+.ecg-accent-green {
+  --accent: #12764c;
+}
+.ecg-accent-amber {
+  --accent: #a76a04;
+}
+.ecg-accent-red {
+  --accent: var(--crimson);
+}
+.ecg-accent-cyan {
+  --accent: #0f7f9e;
+}
+
+.stage .ecg-accent-green {
+  --accent: #45c48a;
+}
+.stage .ecg-accent-cyan {
+  --accent: #4fc6e0;
+}
+
+.ecg-rail-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  text-align: left;
+  padding: 7px var(--s-3);
+  border-radius: var(--r-sm);
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  color: var(--ink);
+  transition: all var(--dur-2) var(--ease);
+}
+
+.ecg-rail-item:hover {
+  background: var(--blue-wash);
+}
+
+.ecg-rail-item.active {
+  background: var(--blue-wash);
+  border-color: color-mix(in srgb, var(--blue) 40%, transparent);
+}
+
+.ecg-rail-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent, var(--blue));
+  flex: none;
+}
+
+.ecg-rail-body {
+  display: grid;
+  min-width: 0;
+}
+
+.ecg-rail-name {
+  font-size: var(--t-xs);
+  font-weight: 560;
+  line-height: 1.3;
+}
+
+.ecg-rail-meta {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ecg-rail-item.active .ecg-rail-name {
+  color: var(--blue);
+  font-weight: 640;
+}
+
+.ecg-stage-col {
+  display: grid;
+  gap: var(--s-4);
+  min-width: 0;
+}
+
+/* --- transport ----------------------------------------------------------- */
+
+.ecg-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+  padding: var(--s-3) var(--s-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+}
+
+.ctrl-btn-primary {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+
+.ctrl-btn-primary:hover {
+  background: var(--blue-bright);
+  border-color: var(--blue-bright);
+  color: #fff;
+}
+
+.ctrl-btn-frame {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  min-width: 44px;
+  justify-content: center;
+}
+
+.ecg-scrub {
+  flex: 1 1 180px;
+  min-width: 120px;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 22px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ecg-scrub::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--blue) 0%, var(--sky) 100%);
+  opacity: 0.35;
+}
+
+.ecg-scrub::-moz-range-track {
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: var(--surface-4);
+}
+
+.ecg-scrub::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid var(--surface);
+  box-shadow: var(--sh-2);
+}
+
+.ecg-scrub::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid var(--surface);
+}
+
+.ecg-scrub:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: var(--r-pill);
+}
+
+.ecg-time {
+  font-size: 11px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+/* --- narration ----------------------------------------------------------- */
+
+.ecg-caption {
+  padding: var(--s-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+  display: grid;
+  gap: var(--s-3);
+}
+
+.ecg-caption-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+}
+
+.ecg-step-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.ecg-rhythm-name {
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.ecg-caption > p {
+  font-size: var(--t-sm);
+  line-height: 1.66;
+  color: var(--ink-2);
+  max-width: 82ch;
+}
+
+.ecg-feature-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-chip.is-abnormal::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--crimson);
+  margin-left: 5px;
+}
+
+.ecg-note {
+  border-left: 3px solid var(--blue);
+  background: var(--blue-wash);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: var(--s-3) var(--s-4);
+}
+
+.ecg-note.is-abnormal {
+  border-left-color: var(--crimson);
+  background: var(--crimson-wash);
+}
+
+.ecg-note-quiet {
+  border-left-color: var(--line-strong);
+  background: var(--surface-2);
+}
+
+.ecg-note-title {
+  display: block;
+  font-size: var(--t-2xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.ecg-note-title em {
+  font-style: normal;
+  color: var(--crimson-ink);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.ecg-note p {
+  font-size: var(--t-xs);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+/* --- analysis panel ------------------------------------------------------ */
+
+.ecg-analysis-head .tag-row .chip {
+  max-width: 100%;
+}
+
+.ecg-analysis-head h2 {
+  font-size: var(--t-xl);
+  letter-spacing: -0.02em;
+  margin-top: var(--s-2);
+}
+
+.ecg-tagline {
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin: var(--s-2) 0 var(--s-3);
+}
+
+.ecg-h {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: var(--s-3);
+}
+
+.ecg-prose {
+  font-size: var(--t-xs);
+  line-height: 1.68;
+  color: var(--ink-2);
+}
+
+.ecg-measures {
+  display: grid;
+  gap: 4px;
+}
+
+.ecg-measure {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto);
+  gap: 2px var(--s-3);
+  padding: 7px var(--s-3);
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line-soft);
+}
+
+.ecg-measure.is-abnormal {
+  background: var(--crimson-wash);
+  border-color: color-mix(in srgb, var(--crimson) 26%, transparent);
+}
+
+.ecg-measure-label {
+  font-size: var(--t-2xs);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ecg-measure-value {
+  font-family: var(--font-mono);
+  font-size: var(--t-2xs);
+  font-weight: 600;
+  color: var(--blue);
+  text-align: right;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.ecg-measure.is-abnormal .ecg-measure-value {
+  color: var(--crimson-ink);
+}
+
+.ecg-measure-normal {
+  grid-column: 1 / -1;
+  font-size: 10px;
+  color: var(--ink-4);
+}
+
+/* --- lower deck ---------------------------------------------------------- */
+
+.ecg-lower {
+  width: 100%;
+  max-width: var(--wrap-wide);
+  margin: 0 auto;
+  padding: 0 var(--s-6) var(--s-12);
+  min-width: 0;
+}
+
+.ecg-lower-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: var(--s-5);
+  align-items: start;
+}
+
+.ecg-strip-card,
+.ecg-bedside-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  box-shadow: var(--sh-1);
+  min-width: 0;
+}
+
+.ecg-lower-head {
+  margin-bottom: var(--s-4);
+}
+
+.ecg-lower-head p {
+  font-size: var(--t-xs);
+  color: var(--ink-3);
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+.ecg-strip svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+}
+
+.ecg-strip-text {
+  /* Sized in SVG user units: 1 mm of ECG paper is 8 units, so this is a
+     label about 0.8 mm tall on the printed strip. */
+  font-family: var(--font-mono);
+  font-size: 6.4px;
+  font-weight: 600;
+  fill: var(--ecg-trace);
+}
+
+.ecg-strip-label,
+.ecg-caliper {
+  cursor: pointer;
+}
+
+.ecg-caliper line {
+  stroke: var(--ecg-ink-soft);
+}
+
+.ecg-strip-label:hover .ecg-strip-text,
+.ecg-caliper:hover .ecg-strip-text,
+.ecg-strip-label.is-active .ecg-strip-text,
+.ecg-caliper.is-active .ecg-strip-text {
+  fill: var(--ecg-mark);
+}
+
+.ecg-caliper:hover line,
+.ecg-caliper.is-active line {
+  stroke: var(--ecg-mark);
+}
+
+.ecg-strip-label:focus-visible,
+.ecg-caliper:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.ecg-strip-caption {
+  display: flex;
+  gap: var(--s-3);
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-top: var(--s-3);
+  font-size: 10.5px;
+  color: var(--ink-4);
+  line-height: 1.5;
+}
+
+.ecg-strip-caption .mono {
+  color: var(--ink-3);
+  font-weight: 600;
+}
+
+.ecg-vitals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--s-3);
+  margin: var(--s-4) 0;
+}
+
+.ecg-vitals dt {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.ecg-vitals dd {
+  font-family: var(--font-mono);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 2px;
+}
+
+.ecg-crosslinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--s-5);
+}
+
+.ecg-crosslink-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--s-3);
+  font-size: var(--t-2xs);
+  font-weight: 640;
+  color: var(--blue);
+}
+
+.ecg-sim-note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: var(--s-5);
+  font-size: var(--t-2xs);
+  color: var(--ink-4);
+  line-height: 1.6;
+  max-width: 92ch;
+}
+
+.ecg-sim-note svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+@media (max-width: 1280px) {
+  .ecg-shell {
+    grid-template-columns: 232px minmax(0, 1fr) 320px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .ecg-shell {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--s-5) var(--s-4) var(--s-6);
+  }
+  .ecg-lower {
+    padding: 0 var(--s-4) var(--s-10);
+  }
+  .ecg-rail,
+  .ecg-analysis {
+    position: static;
+    max-height: none;
+  }
+  .ecg-rail {
+    order: -1;
+  }
+  .ecg-rail-scroll {
+    display: flex;
+    gap: var(--s-4);
+    overflow-x: auto;
+    padding: var(--s-3) var(--s-4);
+    scrollbar-width: thin;
+  }
+  .ecg-rail-group + .ecg-rail-group {
+    margin-top: 0;
+  }
+  .ecg-rail-group {
+    min-width: 210px;
+  }
+  .ecg-lower-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ecg-controls {
+    gap: 6px;
+    padding: var(--s-3);
+  }
+  .ecg-scrub {
+    order: 9;
+    flex-basis: 100%;
+  }
+  .ecg-time {
+    order: 10;
+  }
+  .anim-speed {
+    order: 11;
+  }
+}
+
+/* ==========================================================================
+   PATIENT ROOM — the scene the Clinical Simulation happens in
+   ========================================================================== */
+
+.room {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--sh-3);
+  background: #071523;
+}
+
+.room-scene {
+  position: relative;
+  aspect-ratio: 12 / 7;
+  min-height: 300px;
+  overflow: hidden;
+  /* See .mon-screen: a definite width stops the min-height being resolved
+     back through the aspect ratio into a box wider than the card, which was
+     pushing the bedside monitor's readouts off the right edge on a phone. */
+  width: 100%;
+  min-width: 0;
+}
+
+.room-scene > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* the live monitor, composited into the scene */
+/* Sits inside the bezel drawn on the monitor stand. No perspective tilt:
+   the learner is standing at the foot of the bed, which is exactly where a
+   bedside monitor is angled to be read from, so the screen faces them
+   square-on. */
+.room-monitor {
+  position: absolute;
+  left: 67.9%;
+  top: 18.4%;
+  width: 22.2%;
+  min-width: 150px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: transform var(--dur-3) var(--ease-out), filter var(--dur-3) var(--ease);
+}
+
+.room-monitor:hover,
+.room-monitor:focus-visible {
+  transform: scale(1.04);
+  filter: brightness(1.08);
+}
+
+.room-monitor-shell {
+  display: block;
+  background: linear-gradient(180deg, #16232f, #0a131b);
+  border: 1px solid rgba(150, 200, 235, 0.28);
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow:
+    0 0 44px -6px rgba(63, 240, 154, 0.28),
+    0 24px 44px -18px rgba(0, 0, 0, 0.9);
+}
+
+.room-monitor-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(200, 230, 255, 0.5);
+  padding: 0 2px 4px;
+}
+
+.room-monitor-brand {
+  font-weight: 700;
+  color: rgba(214, 240, 255, 0.7);
+}
+
+.room-monitor-screen {
+  display: block;
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--mon-bg);
+}
+
+.room-monitor-numbers {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 5px 3px 1px;
+}
+
+.room-num {
+  font-family: var(--font-mono);
+  font-size: clamp(0.62rem, 1.35vw, 1.05rem);
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.room-num em {
+  font-style: normal;
+  font-size: 6.5px;
+  letter-spacing: 0.1em;
+  color: rgba(200, 226, 250, 0.42);
+}
+
+.room-num-hr {
+  color: var(--mon-ecg);
+}
+.room-num-spo2 {
+  color: var(--mon-spo2);
+}
+.room-num-bp {
+  color: var(--mon-nibp);
+}
+
+.room-monitor-alarm {
+  display: block;
+  text-align: center;
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-top: 3px;
+  animation: mon-alarm-pulse 1.4s var(--ease-in-out) infinite;
+}
+
+.room-monitor-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  background: rgba(8, 24, 38, 0.85);
+  border: 1px solid rgba(150, 200, 235, 0.3);
+  color: rgba(220, 240, 255, 0.85);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transition: opacity var(--dur-2) var(--ease);
+}
+
+.room-monitor:hover .room-monitor-cue,
+.room-monitor:focus-visible .room-monitor-cue {
+  opacity: 1;
+}
+
+/* hotspots */
+.room-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.room-hotspot-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(8, 26, 42, 0.7);
+  border: 1px solid rgba(150, 200, 235, 0.5);
+  cursor: pointer;
+  padding: 0;
+}
+
+.room-hotspot-dot span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sky);
+  box-shadow: 0 0 0 0 rgba(109, 178, 238, 0.6);
+  animation: room-ping 2.4s var(--ease-out) infinite;
+}
+
+@keyframes room-ping {
+  0% {
+    box-shadow: 0 0 0 0 rgba(109, 178, 238, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(109, 178, 238, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(109, 178, 238, 0);
+  }
+}
+
+.room-hotspot.is-open .room-hotspot-dot {
+  background: var(--blue);
+  border-color: var(--blue-bright);
+}
+
+.room-tip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  transform: translateX(-50%);
+  width: min(300px, 62vw);
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--r-md);
+  background: rgba(8, 26, 42, 0.96);
+  border: 1px solid rgba(150, 200, 235, 0.28);
+  box-shadow: var(--sh-3);
+  z-index: 5;
+}
+
+.room-tip h6 {
+  font-size: var(--t-2xs);
+  font-weight: 700;
+  color: #eaf4ff;
+  margin-bottom: 4px;
+}
+
+.room-tip p {
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: rgba(200, 226, 250, 0.78);
+}
+
+/* The touch stand-in for the scene's hotspots. Hidden wherever the dots on
+   the scene are shown, which is every width above 780px. */
+.room-findings {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #0a1826;
+  border-top: 1px solid rgba(150, 200, 235, 0.16);
+}
+
+@media (max-width: 780px) {
+  .room-findings {
+    display: block;
+  }
+}
+
+.room-findings li + li {
+  border-top: 1px solid rgba(150, 200, 235, 0.1);
+}
+
+.room-finding {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  width: 100%;
+  padding: var(--s-3) var(--s-5);
+  background: none;
+  border: 0;
+  color: #cfe3f7;
+  font: inherit;
+  font-size: var(--t-xs);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.room-finding-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sky);
+}
+
+.room-finding-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.room-finding-detail {
+  margin: 0;
+  padding: 0 var(--s-5) var(--s-4) calc(var(--s-5) + 8px + var(--s-3));
+  font-size: var(--t-xs);
+  line-height: 1.6;
+  color: rgba(200, 230, 255, 0.72);
+}
+
+.room-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-5);
+  flex-wrap: wrap;
+  padding: var(--s-5);
+  background: #0a1826;
+  border-top: 1px solid rgba(150, 200, 235, 0.16);
+}
+
+.room-caption h3 {
+  font-size: var(--t-lg);
+  color: #eaf4ff;
+  margin-top: 4px;
+}
+
+.room-caption p {
+  font-size: var(--t-xs);
+  color: rgba(200, 226, 250, 0.72);
+  line-height: 1.6;
+  max-width: 72ch;
+  margin-top: 4px;
+}
+
+.room-rail {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  margin-top: var(--s-5);
+}
+
+.room-rail-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+@media (max-width: 780px) {
+  .room-scene {
+    aspect-ratio: 4 / 3;
+    /* The 300px floor is what forced the scene wider than the card here. */
+    min-height: 0;
+  }
+  /* The scene is cropped to the sides at this aspect ratio, so the monitor
+     comes in off the stand and sits over the room instead. */
+  .room-monitor {
+    left: 55%;
+    top: 8%;
+    width: 36%;
+    /* 150px would exceed the remaining 45% on a phone and push the readouts
+       past the right edge; the numerals shrink with the box instead. */
+    min-width: 0;
+    max-width: calc(100% - 55% - 8px);
+  }
+  .room-monitor:hover,
+  .room-monitor:focus-visible {
+    transform: scale(1.02);
+  }
+  /* The four dots sit too close together to tap reliably over a scene this
+     small, so they are replaced below the scene by .room-findings — the same
+     four items as a tappable list. Nothing is lost, only relocated. */
+  .room-hotspot {
+    display: none;
+  }
+}
+
+/* On a phone the monitor gets the right-hand half of the scene outright: at
+   36% its numerals were legible only to someone who already knew them. */
+@media (max-width: 560px) {
+  .room-monitor {
+    left: 47%;
+    top: 6%;
+    width: 48%;
+    max-width: calc(100% - 47% - 6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .room-hotspot-dot span,
+  .mon-alarm-banner,
+  .room-monitor-alarm,
+  .mon-alarm-critical .mon-bezel {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   3D CLINICAL EXAMINATION
+   ========================================================================== */
+
+.exam-shell {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr) 372px;
+  grid-template-areas:
+    'toolbar toolbar toolbar'
+    'list stage detail';
+  gap: var(--s-5);
+  align-items: start;
+  width: 100%;
+  max-width: var(--wrap-wide);
+  margin: 0 auto;
+  padding: var(--s-6) var(--s-6) var(--s-10);
+}
+
+.exam-toolbar {
+  grid-area: toolbar;
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  padding: var(--s-3) var(--s-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+}
+
+.exam-modes,
+.exam-sex {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--r-pill);
+  background: var(--surface-3);
+  border: 1px solid var(--line-soft);
+}
+
+.exam-sex {
+  margin-left: auto;
+}
+
+.exam-score {
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--blue);
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  background: var(--blue-wash);
+}
+
+.exam-list,
+.exam-detail {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: calc(var(--nav-h) + var(--s-4));
+  max-height: calc(100dvh - var(--nav-h) - var(--s-8));
+}
+
+.exam-list {
+  grid-area: list;
+}
+
+.exam-detail {
+  grid-area: detail;
+}
+
+.exam-stage-col {
+  grid-area: stage;
+  display: grid;
+  gap: var(--s-4);
+  min-width: 0;
+}
+
+.exam-list-head {
+  padding: var(--s-4) var(--s-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.exam-list-head h2 {
+  font-size: var(--t-base);
+  letter-spacing: -0.01em;
+}
+
+.exam-list-head p {
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+  margin-top: 2px;
+}
+
+.exam-list-scroll,
+.exam-detail-scroll {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  padding: var(--s-3);
+}
+
+.exam-detail-scroll {
+  padding: var(--s-5);
+  display: grid;
+  gap: var(--s-5);
+  align-content: start;
+}
+
+.exam-group + .exam-group {
+  margin-top: var(--s-4);
+}
+
+.exam-group-h {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 0 var(--s-2) var(--s-2);
+}
+
+.exam-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 8px var(--s-3);
+  border-radius: var(--r-sm);
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  color: var(--ink);
+  transition: all var(--dur-2) var(--ease);
+}
+
+.exam-item:hover {
+  background: var(--blue-wash);
+}
+
+.exam-item.active {
+  background: var(--blue-wash);
+  border-color: color-mix(in srgb, var(--blue) 40%, transparent);
+}
+
+.exam-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--line-strong);
+  flex: none;
+}
+
+.exam-swatch-site {
+  background: #e0a91e;
+}
+
+.exam-swatch-landmark {
+  background: #35a8cf;
+}
+
+.exam-item-body {
+  display: grid;
+  min-width: 0;
+}
+
+.exam-item-name {
+  font-size: var(--t-xs);
+  font-weight: 620;
+  line-height: 1.3;
+}
+
+.exam-item-meta {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  line-height: 1.35;
+}
+
+.exam-item.active .exam-item-name {
+  color: var(--blue);
+}
+
+/* --- the stage ----------------------------------------------------------- */
+
+.exam-stage {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--sh-2);
+  height: min(66dvh, 620px);
+  min-height: 420px;
+  background: radial-gradient(ellipse 62% 58% at 46% 44%, rgba(20, 66, 118, 0.72), var(--void) 76%);
+}
+
+.chest-viewer {
+  background: transparent;
+  border-radius: 0;
+}
+
+.chest-error {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--s-6);
+  text-align: center;
+}
+
+.exam-cables {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.exam-cable {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.55;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.chest-tag {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 16px));
+  padding: 5px 9px;
+  border-radius: var(--r-sm);
+  background: var(--glass-strong);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--sh-2);
+  pointer-events: none;
+  max-width: 240px;
+  z-index: 3;
+}
+
+.chest-tag.is-selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue-glow), var(--sh-3);
+}
+
+.chest-tag-name {
+  display: block;
+  font-size: var(--t-2xs);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.chest-tag-detail {
+  display: block;
+  font-size: 10px;
+  color: var(--ink-2);
+  line-height: 1.35;
+  margin-top: 1px;
+}
+
+/* stethoscope */
+.steth {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.steth-bell {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #dfe8f2, #8d9cae 62%, #4d5a6a);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 6px 14px -4px rgba(0, 0, 0, 0.7);
+}
+
+.steth-tube {
+  position: absolute;
+  left: 50%;
+  bottom: 60%;
+  width: 4px;
+  height: 66px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(210, 224, 238, 0.9), rgba(120, 140, 165, 0.5));
+  transform: translateX(-50%) rotate(18deg);
+  transform-origin: bottom center;
+}
+
+.steth.is-live .steth-bell {
+  animation: steth-pulse 0.86s var(--ease-in-out) infinite;
+}
+
+@keyframes steth-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(240, 198, 90, 0.55), 0 6px 14px -4px rgba(0, 0, 0, 0.7);
+  }
+  55% {
+    box-shadow: 0 0 0 12px rgba(240, 198, 90, 0), 0 6px 14px -4px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.exam-stage-controls {
+  position: absolute;
+  left: var(--s-4);
+  bottom: var(--s-4);
+  display: grid;
+  gap: var(--s-2);
+  justify-items: start;
+  max-width: calc(100% - var(--s-8));
+}
+
+.exam-challenge {
+  position: absolute;
+  top: var(--s-4);
+  left: var(--s-4);
+  width: min(360px, calc(100% - var(--s-8)));
+  padding: var(--s-4);
+  border-radius: var(--r-md);
+  background: var(--glass-strong);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--sh-3);
+  display: grid;
+  gap: var(--s-2);
+}
+
+.exam-challenge.is-ok {
+  border-color: color-mix(in srgb, var(--ok) 55%, transparent);
+}
+
+.exam-challenge.is-bad {
+  border-color: color-mix(in srgb, var(--crimson) 55%, transparent);
+}
+
+.exam-challenge-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--t-sm);
+  font-weight: 640;
+  color: var(--ink);
+}
+
+.exam-challenge-hint,
+.exam-challenge-feedback {
+  font-size: var(--t-2xs);
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.exam-challenge.is-ok .exam-challenge-feedback strong {
+  color: var(--ok);
+}
+
+.exam-challenge.is-bad .exam-challenge-feedback strong {
+  color: var(--crimson);
+}
+
+/* the small monitor beside the chest */
+.exam-monitor {
+  position: absolute;
+  right: var(--s-4);
+  top: var(--s-4);
+  width: min(280px, 42%);
+  padding: 8px;
+  border-radius: var(--r-md);
+  background: linear-gradient(180deg, #16232f, #0a131b);
+  border: 1px solid rgba(150, 200, 235, 0.28);
+  box-shadow: var(--sh-3);
+  z-index: 2;
+}
+
+.exam-monitor.is-live {
+  box-shadow: 0 0 30px -6px rgba(63, 240, 154, 0.35), var(--sh-3);
+}
+
+.exam-monitor-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(200, 230, 255, 0.55);
+  padding-bottom: 5px;
+}
+
+.exam-monitor-screen {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--mon-bg);
+}
+
+.exam-monitor-off {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.45;
+  color: rgba(255, 165, 61, 0.9);
+  grid-auto-flow: row;
+}
+
+.exam-monitor-foot {
+  font-size: 9.5px;
+  line-height: 1.45;
+  color: rgba(200, 226, 250, 0.5);
+  margin-top: 6px;
+}
+
+.exam-error-note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+
+/* --- auscultation panel -------------------------------------------------- */
+
+.exam-audio {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+  padding: var(--s-5);
+  display: grid;
+  gap: var(--s-4);
+}
+
+.exam-audio-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+}
+
+.exam-audio-head h3 {
+  font-size: var(--t-lg);
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+
+.exam-audio-note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 10.5px;
+  color: var(--ink-4);
+  line-height: 1.55;
+}
+
+.exam-audio-note svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.cycle svg {
+  width: 100%;
+  height: 104px;
+  display: block;
+  background: var(--surface-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+}
+
+.cycle-systole {
+  fill: var(--crimson-wash);
+}
+
+.cycle-diastole {
+  fill: var(--blue-wash);
+}
+
+.cycle-phase {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  fill: var(--ink-4);
+  text-anchor: middle;
+}
+
+.cycle-murmur {
+  fill: color-mix(in srgb, var(--crimson) 32%, transparent);
+  stroke: var(--crimson);
+  stroke-width: 1;
+}
+
+.cycle-sound rect {
+  fill: var(--ink);
+}
+
+.cycle-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  fill: var(--ink-2);
+}
+
+.cycle-playhead {
+  stroke: var(--blue);
+  stroke-width: 2;
+}
+
+/* --- detail panel -------------------------------------------------------- */
+
+.exam-detail-head h2 {
+  font-size: var(--t-xl);
+  letter-spacing: -0.02em;
+  margin-top: var(--s-2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exam-detail-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--line-strong);
+  flex: none;
+}
+
+.exam-detail-sub {
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin: var(--s-2) 0 var(--s-3);
+}
+
+.exam-landmark {
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--blue);
+  line-height: 1.5;
+  margin-bottom: var(--s-2);
+}
+
+.exam-sub-h {
+  font-size: var(--t-2xs);
+  font-weight: 700;
+  color: var(--ink);
+  margin: var(--s-3) 0 var(--s-2);
+}
+
+@media (max-width: 1280px) {
+  .exam-shell {
+    grid-template-columns: 226px minmax(0, 1fr) 316px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .exam-shell {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'toolbar'
+      'list'
+      'stage'
+      'detail';
+    padding: var(--s-5) var(--s-4) var(--s-8);
+  }
+  .exam-list,
+  .exam-detail {
+    position: static;
+    max-height: none;
+  }
+  .exam-list-scroll {
+    display: flex;
+    gap: var(--s-4);
+    overflow-x: auto;
+    padding: var(--s-3) var(--s-4);
+  }
+  .exam-group {
+    min-width: 200px;
+  }
+  .exam-group + .exam-group {
+    margin-top: 0;
+  }
+  .exam-sex {
+    margin-left: 0;
+  }
+  .exam-monitor {
+    width: 46%;
+    right: var(--s-3);
+    top: var(--s-3);
+  }
+}
+
+@media (max-width: 720px) {
+  .exam-stage {
+    height: min(58dvh, 460px);
+    min-height: 330px;
+  }
+  /* The monitor and the challenge card stay inside the stage on small
+     screens — it is clipped — so they shrink rather than reflow out of it. */
+  .exam-monitor {
+    width: 50%;
+    right: 8px;
+    top: 8px;
+    padding: 5px;
+  }
+  .exam-monitor-foot,
+  .exam-monitor-head {
+    display: none;
+  }
+  .exam-challenge {
+    top: auto;
+    bottom: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    padding: var(--s-3);
+  }
+  .exam-stage-controls {
+    left: 8px;
+    bottom: 8px;
+  }
+  .exam-stage-controls .viewer-hint {
+    display: none;
+  }
+  .chest-tag {
+    max-width: 180px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steth.is-live .steth-bell {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   LEARNING HUB — clinical simulation cards
+   ========================================================================== */
+
+.clinical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--s-6);
+}
+
+.clinical-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.clinical-card-art {
+  height: 132px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.clinical-card-art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.clinical-card-art-ecg {
+  background:
+    radial-gradient(ellipse 80% 90% at 30% 40%, rgba(20, 66, 118, 0.9), transparent 70%),
+    linear-gradient(180deg, #06182a, #04121e);
+}
+
+.clinical-card-art-ecg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(120, 200, 165, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120, 200, 165, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.clinical-trace {
+  fill: none;
+  stroke: var(--mon-ecg);
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px rgba(63, 240, 154, 0.5));
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: clinical-sweep 4.2s linear infinite;
+}
+
+@keyframes clinical-sweep {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.clinical-card-art-exam {
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 45%, rgba(24, 74, 128, 0.85), transparent 72%),
+    linear-gradient(180deg, #071c30, #061523);
+}
+
+.clinical-torso {
+  fill: rgba(234, 182, 148, 0.3);
+  stroke: rgba(244, 206, 178, 0.7);
+  stroke-width: 1.6;
+}
+
+.clinical-ribs {
+  fill: none;
+  stroke: rgba(243, 236, 220, 0.55);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.clinical-dot {
+  fill: var(--sky);
+  opacity: 0.9;
+}
+
+.clinical-dot:nth-of-type(odd) {
+  fill: #f0c65a;
+}
+
+.clinical-card-body {
+  padding: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  flex: 1;
+}
+
+.clinical-card-body h3 {
+  font-size: var(--t-lg);
+  letter-spacing: -0.015em;
+}
+
+.clinical-card-body p {
+  font-size: var(--t-xs);
+  line-height: 1.68;
+  color: var(--ink-2);
+  flex: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clinical-trace {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+.clinical-card .hub-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line-soft);
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+  font-weight: 560;
+}
+
+.clinical-card .hub-foot > span:last-child {
+  color: var(--blue);
+  font-weight: 640;
+}
+
+/* where the learner pointed in challenge mode */
+.exam-pin {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  border: 2px solid var(--surface);
+  box-shadow: var(--sh-2);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.exam-pin.is-ok {
+  background: var(--ok);
+}
+
+.exam-pin.is-bad {
+  background: var(--crimson);
+}
+
+.exam-pin::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0.35;
+}
+
+/* ==========================================================================
+   RHYTHM QUIZ
+   ========================================================================== */
+
+.quiz {
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: var(--s-3);
+}
+
+.quiz-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+
+.quiz-head h3 {
+  font-size: var(--t-base);
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+
+.quiz-score {
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--blue);
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  background: var(--blue-wash);
+}
+
+.quiz-prompt {
+  font-size: var(--t-sm);
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 560;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 6px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  padding: 9px var(--s-4);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--ink);
+  font-size: var(--t-xs);
+  font-weight: 560;
+  cursor: pointer;
+  transition: all var(--dur-2) var(--ease);
+}
+
+.quiz-option:hover:not(:disabled) {
+  border-color: var(--blue);
+  background: var(--blue-wash);
+}
+
+.quiz-option:disabled {
+  cursor: default;
+}
+
+.quiz-option.is-right {
+  border-color: color-mix(in srgb, var(--ok) 60%, transparent);
+  background: color-mix(in srgb, var(--ok) 12%, transparent);
+  color: var(--ok);
+  font-weight: 650;
+}
+
+.quiz-option.is-wrong {
+  border-color: color-mix(in srgb, var(--crimson) 55%, transparent);
+  background: var(--crimson-wash);
+  color: var(--crimson-ink);
+}
+
+.quiz-option.is-dim {
+  opacity: 0.5;
+}
+
+.quiz-feedback {
+  border-left: 3px solid var(--ok);
+  background: color-mix(in srgb, var(--ok) 8%, transparent);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: var(--s-3) var(--s-4);
+  display: grid;
+  gap: var(--s-2);
+  justify-items: start;
+}
+
+.quiz-feedback.is-bad {
+  border-left-color: var(--crimson);
+  background: var(--crimson-wash);
+}
+
+.quiz-feedback p {
+  font-size: var(--t-xs);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.quiz-shown {
+  color: var(--ink-4);
+  font-size: var(--t-2xs);
+}
+
+.quiz-hint {
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+  font-size: var(--t-2xs);
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+
+.quiz-hint svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+/* See the note in modules.css: the monitor's own controls get the same
+   minimum tap target on small screens. */
+@media (max-width: 900px), (pointer: coarse) {
+  .mon-btn {
+    min-height: 40px;
+  }
+}

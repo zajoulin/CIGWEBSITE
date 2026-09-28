@@ -1,0 +1,6 @@
+import { redirect } from 'next/navigation';
+
+/** Shorthand address — the canonical route is /learn. */
+export default function Page() {
+  redirect('/learn');
+}

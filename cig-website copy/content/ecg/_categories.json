@@ -1,0 +1,56 @@
+[
+  {
+    "id": "sinus",
+    "label": "Sinus rhythms",
+    "blurb": "The sinoatrial node is in charge: every QRS is preceded by a P wave with a constant PR interval. Only the rate differs.",
+    "accent": "green"
+  },
+  {
+    "id": "atrial",
+    "label": "Atrial arrhythmias",
+    "blurb": "The atria depolarise from somewhere other than the sinus node — chaotically in fibrillation, as a single re-entrant circuit in flutter.",
+    "accent": "amber"
+  },
+  {
+    "id": "supraventricular",
+    "label": "Supraventricular tachycardias",
+    "blurb": "A fast, regular, narrow-complex rhythm arising at or above the atrioventricular node, usually by re-entry.",
+    "accent": "amber"
+  },
+  {
+    "id": "ventricular",
+    "label": "Ventricular arrhythmias",
+    "blurb": "Depolarisation begins in ventricular myocardium and spreads cell to cell, so the QRS is broad. These are the peri-arrest rhythms.",
+    "accent": "red"
+  },
+  {
+    "id": "block",
+    "label": "Atrioventricular block",
+    "blurb": "Conduction from atria to ventricles is delayed, intermittently interrupted, or completely absent — read the P waves against the QRS complexes.",
+    "accent": "amber"
+  },
+  {
+    "id": "bundle-branch",
+    "label": "Intraventricular conduction",
+    "blurb": "The atrioventricular node conducts normally, but one bundle branch does not: the ventricles are activated in sequence rather than together, so the QRS is broad and repolarisation follows it.",
+    "accent": "amber"
+  },
+  {
+    "id": "chamber",
+    "label": "Chamber enlargement",
+    "blurb": "More myocardium generates a larger vector. Voltage criteria are supportive, not diagnostic — the echocardiogram measures the muscle.",
+    "accent": "cyan"
+  },
+  {
+    "id": "ischaemia",
+    "label": "Ischaemia & injury",
+    "blurb": "The ST segment and T wave report the state of the myocardium: acute injury, evolving infarction and pericardial inflammation each have a signature.",
+    "accent": "red"
+  },
+  {
+    "id": "metabolic",
+    "label": "Metabolic & electrolyte",
+    "blurb": "Potassium sets the resting membrane potential, so it rewrites repolarisation on the surface ECG before it stops the heart.",
+    "accent": "cyan"
+  }
+]

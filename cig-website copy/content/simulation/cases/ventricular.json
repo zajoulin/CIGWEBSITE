@@ -1,0 +1,245 @@
+[
+  {
+    "id": "case-vt-broad-complex",
+    "title": "Broad, fast, regular — and the patient is talking",
+    "levels": ["beginner", "intermediate", "advanced", "simulation"],
+    "difficulty": "advanced",
+    "patient": {
+      "age": 67,
+      "sex": "male",
+      "descriptor": "67-year-old man",
+      "setting": "Emergency department, resuscitation area"
+    },
+    "presentingComplaint": "Sudden onset of rapid palpitations twenty minutes ago with chest discomfort and light-headedness.",
+    "history": [
+      "Anterior myocardial infarction four years ago with impaired left ventricular function",
+      "On aspirin, bisoprolol, ramipril and atorvastatin",
+      "Two previous episodes of similar palpitations, one requiring hospital treatment",
+      "No recent change in medication"
+    ],
+    "symptoms": [
+      "Rapid, regular pounding in the chest",
+      "Central chest discomfort",
+      "Light-headed on sitting up",
+      "No loss of consciousness"
+    ],
+    "examinationFindings": [
+      "Pale, alert and talking in short sentences",
+      "Regular fast pulse of small volume; cool peripheries",
+      "Jugular venous pressure raised with intermittent cannon a waves",
+      "Variable intensity of the first heart sound",
+      "Chest clear"
+    ],
+    "vitals": {
+      "heartRate": 176,
+      "spo2": 94,
+      "respiratoryRate": 24,
+      "bpSystolic": 92,
+      "bpDiastolic": 60,
+      "temperature": 36.5,
+      "alarm": "critical",
+      "alarmText": "BROAD COMPLEX TACHYCARDIA",
+      "bedside": "Conscious, talking, but pale with a systolic pressure in the nineties. A broad-complex tachycardia in a patient with a previous infarct is ventricular tachycardia until proved otherwise."
+    },
+    "ecgRhythmId": "ventricular-tachycardia",
+    "ecg": {
+      "rate": "176 bpm",
+      "rhythm": "Regular broad-complex tachycardia",
+      "pWaves": "No P waves are related to the QRS complexes. Occasional dissociated P waves can be found marching through at a slower, independent rate",
+      "prInterval": "Not applicable — there is atrioventricular dissociation",
+      "qrs": "0.17 s, broad and monomorphic, with a slurred upstroke and no discrete Q, R and S components",
+      "axis": "Extreme, with concordance across the precordial leads",
+      "stSegment": "Discordant depression, secondary to abnormal ventricular activation",
+      "tWaves": "Discordant inversion",
+      "keyFindings": [
+        "A regular, broad-complex tachycardia at 176 bpm",
+        "Atrioventricular dissociation — independent P waves, cannon a waves and variable S1 at the bedside",
+        "Very broad QRS (0.17 s) with a slurred upstroke and precordial concordance",
+        "A history of previous myocardial infarction, which alone makes ventricular tachycardia far more likely than any alternative"
+      ],
+      "keyLeads": ["II", "V1", "V6"],
+      "highlight": "qrs"
+    },
+    "interpretation": "Regular monomorphic broad-complex tachycardia at 176 bpm with evidence of atrioventricular dissociation — findings consistent with ventricular tachycardia. In a patient with previous myocardial infarction, a broad-complex tachycardia should be treated as ventricular tachycardia unless proved otherwise.",
+    "auscultation": [
+      {
+        "siteId": "mitral",
+        "soundId": "normal-s1-s2",
+        "note": "The intensity of the first heart sound varies from beat to beat, because the dissociated atria contract at a different phase of each ventricular cycle. This is an audible sign of atrioventricular dissociation."
+      },
+      {
+        "siteId": "tricuspid",
+        "soundId": "normal-s1-s2",
+        "note": "Look at the neck while you listen: intermittent cannon a waves are produced when the right atrium contracts against a closed tricuspid valve."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-rhythm",
+        "kind": "rhythm",
+        "prompt": "What is the underlying rhythm?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Monomorphic ventricular tachycardia",
+            "correct": true,
+            "feedback": "Correct. A regular broad-complex tachycardia with atrioventricular dissociation in a patient with previous infarction."
+          },
+          {
+            "id": "b",
+            "text": "Supraventricular tachycardia with aberrant conduction",
+            "feedback": "Possible in principle, but far less likely: dissociated P waves, a QRS of 0.17 s, precordial concordance and a history of infarction all point to ventricular origin."
+          },
+          {
+            "id": "c",
+            "text": "Atrial flutter with 2:1 block and bundle branch block",
+            "feedback": "That would give a rate near 150 with identifiable flutter waves, and the QRS would carry a recognisable bundle branch morphology."
+          },
+          {
+            "id": "d",
+            "text": "Ventricular fibrillation",
+            "feedback": "Ventricular fibrillation has no organised complexes at all and no cardiac output. This patient is conscious with a pulse."
+          }
+        ],
+        "explanation": "The safest rule in medicine's most dangerous tracing: a broad-complex tachycardia is ventricular tachycardia until proved otherwise, particularly with a history of structural heart disease.",
+        "highlight": "qrs",
+        "leads": ["V1", "V6"]
+      },
+      {
+        "id": "q-dissociation",
+        "kind": "systematic",
+        "step": "P waves",
+        "prompt": "Which finding most strongly confirms a ventricular origin?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Atrioventricular dissociation, with capture or fusion beats if present",
+            "correct": true,
+            "feedback": "Correct. Dissociation, capture beats and fusion beats are effectively diagnostic of ventricular tachycardia, though they are seen in only a minority of tracings."
+          },
+          {
+            "id": "b",
+            "text": "A rate above 150 bpm",
+            "feedback": "Rate does not distinguish ventricular from supraventricular tachycardia."
+          },
+          {
+            "id": "c",
+            "text": "The presence of chest discomfort",
+            "feedback": "Symptoms reflect haemodynamics, not the origin of the rhythm. A well-tolerated broad-complex tachycardia is still very often ventricular."
+          },
+          {
+            "id": "d",
+            "text": "A normal blood pressure",
+            "feedback": "A dangerous misconception: many patients maintain their blood pressure in ventricular tachycardia for a considerable time."
+          }
+        ],
+        "explanation": "Haemodynamic stability tells you how urgent the situation is. It tells you nothing about where the rhythm comes from.",
+        "highlight": "p",
+        "leads": ["II"]
+      },
+      {
+        "id": "q-qrs",
+        "kind": "systematic",
+        "step": "QRS",
+        "prompt": "Which QRS features favour a ventricular origin?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Very broad complexes (> 0.16 s), a slurred upstroke, extreme axis and precordial concordance",
+            "correct": true,
+            "feedback": "Correct. These features are all incorporated into the published diagnostic algorithms for broad-complex tachycardia."
+          },
+          {
+            "id": "b",
+            "text": "A QRS of exactly 0.12 s with a typical bundle branch morphology",
+            "feedback": "A typical bundle branch pattern at the lower end of the broad range would favour a supraventricular rhythm with aberrancy."
+          },
+          {
+            "id": "c",
+            "text": "A short PR interval with a delta wave",
+            "feedback": "That is pre-excitation, which is a different mechanism of broad-complex tachycardia and matters because nodal blocking drugs can be dangerous."
+          },
+          {
+            "id": "d",
+            "text": "Peaked T waves",
+            "feedback": "That suggests hyperkalaemia, which can produce a broad complex rhythm but with a different overall appearance."
+          }
+        ],
+        "explanation": "Precordial concordance — all precordial QRS complexes pointing the same way — is a specific sign, because no bundle branch pattern produces it.",
+        "highlight": "qrs",
+        "leads": ["V1", "V6"]
+      },
+      {
+        "id": "q-interpretation",
+        "kind": "interpretation",
+        "prompt": "Given the previous infarct and this tracing, what is the most likely interpretation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Scar-related monomorphic ventricular tachycardia",
+            "correct": true,
+            "feedback": "Correct. Surviving myocyte bundles within and around an old infarct scar create the slow-conduction zone that sustains a re-entrant circuit."
+          },
+          {
+            "id": "b",
+            "text": "Sinus tachycardia with pre-existing bundle branch block",
+            "feedback": "Sinus tachycardia would have P waves related to every QRS at a constant interval."
+          },
+          {
+            "id": "c",
+            "text": "Atrial fibrillation with rapid conduction over an accessory pathway",
+            "feedback": "That produces an irregular, bizarre, often very fast broad-complex tachycardia. This rhythm is regular and monomorphic."
+          },
+          {
+            "id": "d",
+            "text": "Artefact from patient movement",
+            "feedback": "Artefact is a genuine cause of pseudo-ventricular-tachycardia, but it is usually recognisable by underlying complexes marching through — and the patient here is symptomatic with a matching pulse."
+          }
+        ],
+        "explanation": "Previous myocardial infarction is the single strongest predictor of ventricular origin in a broad-complex tachycardia — stronger than any ECG criterion.",
+        "highlight": "qrs"
+      },
+      {
+        "id": "q-action",
+        "kind": "action",
+        "prompt": "He is conscious with a systolic pressure of 92 mmHg and chest discomfort. Which principle applies in this educational scenario?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Treat as ventricular tachycardia, involve senior help immediately, and prepare for synchronised cardioversion if adverse features are present",
+            "correct": true,
+            "feedback": "Correct. Chest pain, hypotension, syncope or heart failure are the adverse features that indicate immediate synchronised cardioversion under sedation."
+          },
+          {
+            "id": "b",
+            "text": "Give verapamil, since the rhythm is probably supraventricular",
+            "feedback": "This is one of the most dangerous errors in acute cardiology. Verapamil in ventricular tachycardia can cause haemodynamic collapse."
+          },
+          {
+            "id": "c",
+            "text": "Observe for two hours to see whether it terminates spontaneously",
+            "feedback": "Sustained ventricular tachycardia with adverse features requires immediate treatment."
+          },
+          {
+            "id": "d",
+            "text": "Give unsynchronised defibrillation",
+            "feedback": "In a patient with a pulse, cardioversion must be synchronised; an unsynchronised shock risks inducing ventricular fibrillation."
+          }
+        ],
+        "explanation": "Educational scenario only. Broad-complex tachycardia is managed under senior supervision following current resuscitation council guidance.",
+        "highlight": "qrs"
+      }
+    ],
+    "explanation": "Monomorphic ventricular tachycardia after myocardial infarction is a re-entrant arrhythmia. Islands of surviving myocardium within the infarct scar conduct slowly, creating a circuit around which the impulse can travel indefinitely. Because activation begins in ventricular muscle rather than in the conducting system, it spreads cell to cell — slowly — so the QRS is very broad with a slurred upstroke and no discrete Q, R and S components. The atria continue under sinus control and are unrelated to the ventricles, which produces atrioventricular dissociation on the tracing and, at the bedside, intermittent cannon a waves and a first heart sound that varies in intensity. The clinical rule is unambiguous: a broad-complex tachycardia is ventricular tachycardia until proved otherwise, and treating it as supraventricular is far more dangerous than the reverse.",
+    "learningObjectives": [
+      "Apply the rule that broad-complex tachycardia is ventricular until proved otherwise",
+      "Identify atrioventricular dissociation on the tracing and at the bedside",
+      "List the QRS features that favour a ventricular origin",
+      "Recognise that haemodynamic stability does not indicate a supraventricular origin"
+    ],
+    "clinicalContext": "The surface ECG cannot always be certain of the mechanism. A previous tracing in sinus rhythm, the clinical history and — definitively — electrophysiological study resolve the remaining uncertainty.",
+    "relatedDiseases": ["ventricular-arrhythmias", "myocardial-infarction", "cardiomyopathy"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials"],
+    "references": ["esc-va-2022", "aha-ecg-part1"]
+  }
+]

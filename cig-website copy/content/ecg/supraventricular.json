@@ -1,0 +1,127 @@
+[
+  {
+    "id": "supraventricular-tachycardia",
+    "name": "Supraventricular Tachycardia",
+    "abbr": "SVT",
+    "categoryId": "supraventricular",
+    "featured": true,
+    "tagline": "Fast, regular, narrow — and it starts and stops like a switch.",
+    "rateRange": "150–250 bpm",
+    "regularity": "Regular, with no beat-to-beat variation",
+    "summary": "A regular narrow-complex tachycardia arising at or above the atrioventricular node, most commonly by re-entry within the node itself (AVNRT) or through an accessory pathway (AVRT). P waves are usually invisible because atrial and ventricular activation are almost simultaneous, so the retrograde P is buried in or immediately after the QRS.",
+    "mechanism": "In typical AV nodal re-entrant tachycardia the node has two functionally distinct pathways: a slow pathway with a short refractory period and a fast pathway with a long one. A well-timed atrial ectopic finds the fast pathway refractory, travels down the slow pathway, and by the time it arrives the fast pathway has recovered — so it conducts retrogradely back to the atria and re-enters the slow pathway. A self-sustaining circuit is created inside the node. Because the ventricles are activated antegradely through the His–Purkinje system, the QRS stays narrow; because the atria are activated retrogradely at almost the same moment, the P wave hides in the QRS. The circuit is fixed, so the rate is metronomically regular, and it terminates abruptly the instant the node is interrupted.",
+    "recognition": [
+      "Regular narrow-complex tachycardia at 150–250 bpm",
+      "No visible P waves, or a retrograde P distorting the end of the QRS (pseudo-R′ in V1, pseudo-S in inferior leads)",
+      "Abrupt onset and abrupt termination — the patient can often say exactly when it started",
+      "Rate fixed and unvarying, unlike sinus tachycardia",
+      "Terminates with vagal manoeuvres or adenosine, which is both diagnostic and therapeutic"
+    ],
+    "causes": [
+      "Dual atrioventricular nodal physiology, present in a proportion of otherwise normal hearts",
+      "Accessory pathways, including Wolff–Parkinson–White syndrome",
+      "Triggered by caffeine, alcohol, stress, stimulants or an atrial ectopic beat at a critical moment",
+      "Typically presents in young patients with structurally normal hearts"
+    ],
+    "significance": "Usually well tolerated in a young, structurally normal heart, causing palpitations, chest discomfort, breathlessness or presyncope. It becomes dangerous with underlying coronary or structural disease, at very fast rates, or when it persists long enough to impair ventricular function. Pre-excited atrial fibrillation conducting down an accessory pathway is a genuine emergency and is a reason to avoid AV nodal blocking drugs when pre-excitation is suspected.",
+    "management": "Vagal manoeuvres first — the modified Valsalva has the best evidence. If unsuccessful, intravenous adenosine given as a rapid bolus, warning the patient about the transient unpleasant flush and chest pressure. Synchronised cardioversion if the patient is unstable. Recurrent symptomatic episodes are treated definitively by catheter ablation of the slow pathway or the accessory pathway.",
+    "waveform": {
+      "rate": 186,
+      "irregularity": 0.01,
+      "atrial": "retrograde",
+      "pAmplitude": 0.08,
+      "prInterval": 0,
+      "qrsDuration": 0.085,
+      "qrsAmplitude": 1.0,
+      "qrsShape": "narrow",
+      "qAmplitude": 0.02,
+      "sAmplitude": 0.2,
+      "stShift": -0.05,
+      "stShape": "downsloping",
+      "tAmplitude": 0.16,
+      "tShape": "normal",
+      "qtInterval": 0.26,
+      "wander": 0.05,
+      "noise": 0.06
+    },
+    "vitals": {
+      "heartRate": 186,
+      "spo2": 96,
+      "respiratoryRate": 22,
+      "bpSystolic": 96,
+      "bpDiastolic": 62,
+      "temperature": 36.6,
+      "alarm": "warning",
+      "alarmText": "TACHYCARDIA",
+      "bedside": "Young adult, sudden-onset pounding palpitations while sitting still; anxious but alert and perfusing."
+    },
+    "highlights": [
+      {
+        "feature": "rr",
+        "label": "R–R interval",
+        "note": "Short and absolutely constant. A fixed circuit produces a fixed cycle length — there is none of the beat-to-beat wobble seen in sinus tachycardia.",
+        "abnormal": true
+      },
+      {
+        "feature": "p",
+        "label": "Retrograde P wave",
+        "note": "Atria and ventricles depolarise almost simultaneously, so the P wave is buried in the QRS or emerges just after it as a pseudo-R′ in V1 or a pseudo-S wave inferiorly.",
+        "abnormal": true
+      },
+      {
+        "feature": "qrs",
+        "label": "Narrow QRS",
+        "note": "The ventricles are still activated through the His–Purkinje system, so the complex stays narrow. That is what places the circuit above the ventricles."
+      },
+      {
+        "feature": "st",
+        "label": "Rate-related ST depression",
+        "note": "Mild downsloping ST depression is common at these rates and usually reflects demand rather than a fixed coronary lesion — it typically resolves once the rhythm terminates.",
+        "abnormal": true
+      }
+    ],
+    "narration": [
+      {
+        "title": "A critically timed ectopic",
+        "text": "An atrial ectopic beat arrives while the fast atrioventricular nodal pathway is still refractory, so it can only travel down the slow pathway.",
+        "duration": 1.2,
+        "highlight": "baseline"
+      },
+      {
+        "title": "The circuit closes",
+        "text": "By the time the impulse reaches the bottom of the slow pathway, the fast pathway has recovered. It conducts back up to the atria and re-enters the slow pathway — a loop is established.",
+        "duration": 1.4,
+        "highlight": "rr"
+      },
+      {
+        "title": "Narrow complexes at 180+",
+        "text": "Each turn of the circuit delivers an impulse into the His–Purkinje system, so the QRS stays narrow while the rate sits between 150 and 250, metronomically regular.",
+        "duration": 1.3,
+        "highlight": "qrs"
+      },
+      {
+        "title": "Where did the P waves go?",
+        "text": "The atria are activated backwards at almost the same instant as the ventricles, so the retrograde P wave hides inside the QRS or just after it.",
+        "duration": 1.3,
+        "highlight": "p"
+      },
+      {
+        "title": "Breaking the circuit",
+        "text": "A vagal manoeuvre or adenosine blocks the atrioventricular node for a few seconds. The loop cannot complete, and the tachycardia stops as abruptly as it began.",
+        "duration": 1.4,
+        "highlight": "baseline"
+      }
+    ],
+    "measurements": [
+      { "label": "Rate", "value": "186 bpm", "normal": "60–100 bpm", "abnormal": true },
+      { "label": "Rhythm", "value": "Regular, fixed cycle length", "normal": "Regular" },
+      { "label": "P waves", "value": "Not visible / retrograde", "normal": "Upright before each QRS", "abnormal": true },
+      { "label": "QRS duration", "value": "0.085 s", "normal": "< 0.12 s" },
+      { "label": "ST segment", "value": "1 mm downsloping depression", "normal": "Isoelectric", "abnormal": true }
+    ],
+    "relatedDiseases": ["supraventricular-tachycardia", "conduction-disorders"],
+    "relatedKeyPoints": ["arrhythmia-principles", "ecg-essentials"],
+    "relatedStructures": ["av-node", "bundle-of-his", "right-atrium"],
+    "references": ["esc-svt-2019", "aha-ecg-part1", "braunwald"]
+  }
+]

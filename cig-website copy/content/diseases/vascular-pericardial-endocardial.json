@@ -1,0 +1,971 @@
+[
+  {
+    "id": "peripheral-arterial-disease",
+    "name": "Peripheral Arterial Disease",
+    "abbr": "PAD",
+    "categoryId": "vascular",
+    "featured": false,
+    "animationId": "peripheral-arterial-disease",
+    "tagline": "Atherosclerotic obstruction of the limb arteries — a marker of systemic atherosclerosis and a powerful predictor of coronary and cerebrovascular events.",
+    "overview": "Peripheral arterial disease is atherosclerotic narrowing or occlusion of arteries supplying the limbs, most often the lower limbs. It ranges from asymptomatic disease detectable only by an abnormal ankle–brachial index, through intermittent claudication, to chronic limb-threatening ischaemia with rest pain and tissue loss. Because it reflects the same process occurring in the coronary and cerebral circulations, a patient with peripheral arterial disease is at high risk of myocardial infarction and stroke — which is why the diagnosis mandates aggressive systemic secondary prevention regardless of limb symptoms.",
+    "riskFactors": {
+      "modifiable": [
+        "Smoking — the strongest modifiable risk factor for PAD",
+        "Diabetes mellitus",
+        "Hypertension",
+        "Dyslipidaemia",
+        "Chronic kidney disease",
+        "Physical inactivity",
+        "Obesity"
+      ],
+      "nonModifiable": [
+        "Increasing age",
+        "Male sex",
+        "Family history of atherosclerotic disease",
+        "Established coronary or cerebrovascular disease"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Atherosclerotic plaque formation",
+        "text": "The same lipid-driven inflammatory process seen in coronary arteries develops in the aortoiliac, femoropopliteal and infrapopliteal segments."
+      },
+      {
+        "title": "Progressive stenosis",
+        "text": "Resting flow is preserved until stenosis is severe, because distal vasodilatation compensates and collateral channels develop."
+      },
+      {
+        "title": "Exercise-induced ischaemia",
+        "text": "Muscular demand during walking exceeds the maximal deliverable flow. Anaerobic metabolism and metabolite accumulation produce the cramping pain of claudication, relieved by rest within minutes."
+      },
+      {
+        "title": "Progression to rest pain",
+        "text": "When obstruction is severe enough that resting metabolic demand cannot be met, ischaemic rest pain occurs — classically in the forefoot, worse lying flat and relieved by hanging the leg down."
+      },
+      {
+        "title": "Tissue loss",
+        "text": "Critically reduced perfusion prevents healing of minor trauma, producing ulceration and gangrene. In diabetes, neuropathy masks the pain and infection accelerates tissue loss."
+      },
+      {
+        "title": "Acute limb ischaemia",
+        "text": "Sudden occlusion from thrombosis of a diseased segment or embolism produces the six Ps and threatens the limb within hours."
+      }
+    ],
+    "anatomyInvolved": [
+      "Aortoiliac segment",
+      "Femoropopliteal segment — the commonest site, particularly the adductor canal",
+      "Infrapopliteal (tibial) vessels, especially in diabetes and renal disease",
+      "Collateral arterial networks",
+      "Skeletal muscle, skin and nerve of the affected limb"
+    ],
+    "relatedStructures": [
+      "systemic-arteries",
+      "aorta"
+    ],
+    "physiologyChanges": [
+      "Reduced ankle perfusion pressure and an ankle–brachial index below 0.9",
+      "Loss of exercise-induced flow reserve in the limb",
+      "Anaerobic muscle metabolism during exertion",
+      "Impaired microvascular reactivity and endothelial dysfunction",
+      "Falsely elevated ankle pressures from medial calcification in diabetes and renal disease"
+    ],
+    "progression": [
+      {
+        "stage": "Asymptomatic",
+        "text": "Abnormal ankle–brachial index without symptoms; already associated with substantially increased cardiovascular risk."
+      },
+      {
+        "stage": "Intermittent claudication",
+        "text": "Reproducible exertional muscle pain relieved by rest, at a consistent claudication distance."
+      },
+      {
+        "stage": "Ischaemic rest pain",
+        "text": "Pain at rest, typically nocturnal, relieved by dependency. Indicates chronic limb-threatening ischaemia."
+      },
+      {
+        "stage": "Tissue loss",
+        "text": "Ulceration or gangrene; urgent revascularisation assessment is needed to avoid amputation."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Cramping pain in calf, thigh or buttock on walking, relieved by rest",
+        "A consistent and reproducible claudication distance",
+        "Rest pain in the forefoot, worse at night and relieved by hanging the leg out of bed",
+        "Non-healing ulcers, usually at pressure points or the tips of the toes",
+        "Erectile dysfunction with aortoiliac disease (Leriche syndrome)"
+      ],
+      "signs": [
+        "Absent or reduced peripheral pulses",
+        "Arterial bruits over the femoral or iliac arteries",
+        "Cool, pale limb with hair loss, shiny atrophic skin and brittle nails",
+        "Prolonged capillary refill and Buerger's test with elevation pallor and dependent rubor",
+        "Punched-out, painful arterial ulcers at pressure points",
+        "Ankle–brachial index below 0.9"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Ankle–brachial pressure index",
+        "findings": "The key bedside test. Below 0.9 indicates PAD; above 1.4 suggests incompressible calcified vessels and requires toe pressures instead."
+      },
+      {
+        "modality": "Exercise ABPI",
+        "findings": "A fall in ankle pressure after exercise confirms disease when resting values are borderline."
+      },
+      {
+        "modality": "Duplex ultrasound",
+        "findings": "First-line imaging showing site, length and severity of stenosis and flow velocities."
+      },
+      {
+        "modality": "CT or MR angiography",
+        "findings": "Full anatomical mapping for revascularisation planning."
+      },
+      {
+        "modality": "Digital subtraction angiography",
+        "findings": "Reserved for use at the time of endovascular intervention."
+      },
+      {
+        "modality": "Cardiovascular risk assessment",
+        "findings": "Lipids, HbA1c, renal function and assessment for coexisting coronary and carotid disease."
+      }
+    ],
+    "complications": [
+      "Chronic limb-threatening ischaemia and amputation",
+      "Acute limb ischaemia",
+      "Non-healing ulcers and infection",
+      "Myocardial infarction and stroke — the leading causes of death in these patients",
+      "Marked impairment of mobility and quality of life"
+    ],
+    "treatment": {
+      "principles": "Two parallel objectives: protect the patient from cardiovascular death through aggressive secondary prevention, and protect the limb through exercise therapy and, where needed, revascularisation. Supervised exercise therapy is remarkably effective for claudication and is often superior to early intervention. Educational summary only.",
+      "groups": [
+        {
+          "name": "Smoking cessation",
+          "detail": "The single most important intervention for both limb and systemic outcomes."
+        },
+        {
+          "name": "Supervised exercise therapy",
+          "detail": "Structured walking programmes that substantially improve claudication distance and quality of life."
+        },
+        {
+          "name": "Secondary prevention",
+          "detail": "High-intensity statin, antithrombotic therapy, blood pressure and glycaemic control."
+        },
+        {
+          "name": "Endovascular revascularisation",
+          "detail": "Angioplasty and stenting, generally first-line for shorter lesions."
+        },
+        {
+          "name": "Surgical bypass",
+          "detail": "For long-segment occlusion or failed endovascular therapy, using vein or prosthetic conduit."
+        },
+        {
+          "name": "Wound and foot care",
+          "detail": "Multidisciplinary foot care, offloading, infection control and podiatry, particularly in diabetes."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "An ankle–brachial index below 0.9 diagnoses PAD; above 1.4 suggests calcified, incompressible vessels.",
+      "Smoking is the strongest modifiable risk factor.",
+      "Patients are far more likely to die of myocardial infarction or stroke than to lose a limb.",
+      "Supervised exercise therapy is first-line for claudication and rivals revascularisation.",
+      "Rest pain and tissue loss define chronic limb-threatening ischaemia and require urgent assessment.",
+      "In diabetes, neuropathy masks symptoms — examine the feet rather than relying on the history."
+    ],
+    "references": [
+      "esc-prevention-2021",
+      "esc-guidelines-hub",
+      "braunwald",
+      "moore"
+    ],
+    "relatedKeyPoints": [
+      "cardiovascular-examination",
+      "hemodynamics",
+      "cardiovascular-pharmacology"
+    ]
+  },
+  {
+    "id": "chronic-venous-insufficiency",
+    "name": "Chronic Venous Insufficiency",
+    "abbr": "CVI",
+    "categoryId": "vascular",
+    "featured": false,
+    "animationId": "chronic-venous-insufficiency",
+    "tagline": "Failure of venous valves and the calf muscle pump causing sustained venous hypertension, skin changes and, ultimately, venous ulceration.",
+    "overview": "Chronic venous insufficiency results when blood fails to return efficiently from the legs, whether because valves are incompetent, veins are obstructed, or the calf muscle pump is ineffective. The consequence is sustained ambulatory venous hypertension, which drives capillary leakage, inflammation, fibrosis and skin breakdown. It is extremely common and a major cause of chronic wounds and disability. Primary valvular incompetence is the commonest cause; post-thrombotic syndrome after deep vein thrombosis is the most important secondary cause.",
+    "riskFactors": {
+      "modifiable": [
+        "Obesity",
+        "Prolonged standing occupations",
+        "Physical inactivity and reduced calf muscle pump function",
+        "Deep vein thrombosis, which is itself preventable"
+      ],
+      "nonModifiable": [
+        "Increasing age",
+        "Female sex",
+        "Family history of varicose veins",
+        "Multiple pregnancies",
+        "Previous leg trauma or surgery",
+        "Tall stature"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Valve incompetence",
+        "text": "Vein wall weakness and dilatation separate valve cusps so they no longer meet, allowing reflux of blood down the vein under gravity."
+      },
+      {
+        "title": "Loss of the muscle pump advantage",
+        "text": "Normally calf contraction empties the deep veins and valves prevent backflow, keeping ambulatory venous pressure low. With incompetent valves, pressure fails to fall on walking."
+      },
+      {
+        "title": "Sustained venous hypertension",
+        "text": "Persistently high venous pressure is transmitted to the capillary bed, raising capillary hydrostatic pressure."
+      },
+      {
+        "title": "Capillary leakage and inflammation",
+        "text": "Fluid, proteins and red cells extravasate. Haemoglobin breakdown deposits haemosiderin, producing the characteristic brown staining; leucocyte trapping and activation sustain inflammation."
+      },
+      {
+        "title": "Fibrosis and skin change",
+        "text": "Chronic inflammation causes dermal fibrosis and subcutaneous induration (lipodermatosclerosis), producing the inverted champagne bottle appearance of the lower leg."
+      },
+      {
+        "title": "Ulceration",
+        "text": "Impaired microcirculation and nutrient exchange leave the skin unable to heal minor trauma, producing shallow, exudative ulcers in the gaiter area."
+      }
+    ],
+    "anatomyInvolved": [
+      "Great and small saphenous veins and their tributaries",
+      "Deep femoral and popliteal veins",
+      "Perforating veins connecting superficial to deep systems",
+      "Venous valves",
+      "Calf muscle pump",
+      "Skin and subcutaneous tissue of the gaiter area"
+    ],
+    "relatedStructures": [
+      "systemic-veins",
+      "inferior-vena-cava"
+    ],
+    "physiologyChanges": [
+      "Failure of ambulatory venous pressure to fall during exercise",
+      "Raised capillary hydrostatic pressure with increased filtration",
+      "Impaired lymphatic compensation and interstitial oedema",
+      "Chronic inflammatory activation in the dermis",
+      "Reduced tissue oxygen delivery despite adequate arterial inflow"
+    ],
+    "progression": [
+      {
+        "stage": "Telangiectasia and reticular veins",
+        "text": "Cosmetic changes without functional consequence."
+      },
+      {
+        "stage": "Varicose veins",
+        "text": "Dilated, tortuous superficial veins with aching, heaviness and itching."
+      },
+      {
+        "stage": "Oedema and skin changes",
+        "text": "Ankle oedema, haemosiderin pigmentation, venous eczema and lipodermatosclerosis."
+      },
+      {
+        "stage": "Ulceration",
+        "text": "Healed or active venous ulcers in the gaiter area, often recurrent and slow to heal."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Aching, heaviness and throbbing in the legs, worse at the end of the day and on standing",
+        "Itching and skin irritation",
+        "Ankle swelling that improves overnight with elevation",
+        "Night cramps and restless legs",
+        "Slow-healing or recurrent leg wounds"
+      ],
+      "signs": [
+        "Visible varicose veins in the distribution of the saphenous systems",
+        "Pitting oedema, initially at the ankle",
+        "Haemosiderin staining and venous eczema",
+        "Lipodermatosclerosis with the inverted champagne bottle leg",
+        "Atrophie blanche — white atrophic scarring",
+        "Shallow, exudative, relatively painless ulcers in the gaiter area, typically above the medial malleolus"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Venous duplex ultrasound",
+        "findings": "The key investigation — identifies reflux (typically over 0.5 s), obstruction, and maps which segments are incompetent."
+      },
+      {
+        "modality": "Ankle–brachial pressure index",
+        "findings": "Essential before applying compression, to exclude significant arterial disease."
+      },
+      {
+        "modality": "Clinical classification",
+        "findings": "The CEAP system (clinical, aetiological, anatomical, pathophysiological) standardises description and severity."
+      },
+      {
+        "modality": "Wound assessment",
+        "findings": "Ulcer size, depth, exudate and signs of infection; biopsy if an ulcer fails to heal or looks atypical."
+      },
+      {
+        "modality": "Venography or cross-sectional imaging",
+        "findings": "Reserved for suspected central venous obstruction such as May–Thurner syndrome."
+      }
+    ],
+    "complications": [
+      "Venous ulceration, often chronic and recurrent",
+      "Cellulitis and wound infection",
+      "Bleeding from a ruptured varicosity",
+      "Superficial thrombophlebitis",
+      "Lipodermatosclerosis with fixed ankle deformity",
+      "Rarely, malignant transformation in a longstanding ulcer (Marjolin's ulcer)"
+    ],
+    "treatment": {
+      "principles": "Compression is the foundation of treatment and of ulcer healing, provided arterial supply is adequate. Correcting superficial reflux reduces recurrence. Educational summary only.",
+      "groups": [
+        {
+          "name": "Compression therapy",
+          "detail": "Graduated compression stockings, and multilayer compression bandaging for active ulceration — only after excluding significant arterial disease."
+        },
+        {
+          "name": "Leg elevation and exercise",
+          "detail": "Elevation above heart level, and calf muscle pump exercises including ankle dorsiflexion."
+        },
+        {
+          "name": "Skin care",
+          "detail": "Emollients, treatment of venous eczema, and appropriate wound dressings."
+        },
+        {
+          "name": "Endovenous ablation",
+          "detail": "Radiofrequency, laser or mechanochemical ablation of incompetent superficial veins — now first-line over open surgery."
+        },
+        {
+          "name": "Sclerotherapy",
+          "detail": "Foam or liquid sclerotherapy for tributaries and recurrent veins."
+        },
+        {
+          "name": "Surgery and deep venous intervention",
+          "detail": "Ligation and stripping where ablation is unsuitable; stenting for iliac vein obstruction in selected patients."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "The core abnormality is failure of ambulatory venous pressure to fall during walking.",
+      "Venous ulcers are shallow, exudative and in the gaiter area; arterial ulcers are punched-out and painful at pressure points.",
+      "Always check the ankle–brachial index before applying compression.",
+      "Compression is the mainstay of both ulcer healing and prevention of recurrence.",
+      "Treating superficial reflux reduces ulcer recurrence rather than merely improving appearance.",
+      "Post-thrombotic syndrome is the most important preventable secondary cause."
+    ],
+    "references": [
+      "moore",
+      "guyton",
+      "ncbi-bookshelf",
+      "esc-guidelines-hub"
+    ],
+    "relatedKeyPoints": [
+      "hemodynamics",
+      "cardiovascular-examination"
+    ]
+  },
+  {
+    "id": "pericardial-disease",
+    "name": "Pericardial Disease",
+    "abbr": "Pericarditis",
+    "categoryId": "pericardial",
+    "featured": false,
+    "animationId": "pericardial-disease",
+    "tagline": "Inflammation, effusion and constriction of the pericardial sac — from self-limiting pericarditis to life-threatening tamponade.",
+    "overview": "The pericardium is a two-layered sac containing a small volume of lubricating fluid. Disease of the pericardium presents in three overlapping ways: acute pericarditis, an inflammatory syndrome with characteristic pain and ECG changes; pericardial effusion, which may be silent or may compress the heart; and constrictive pericarditis, in which a rigid pericardium restricts diastolic filling. The critical determinant in effusion is not the volume of fluid but the speed at which it accumulates — a rapidly accumulating 200 mL can cause tamponade while a slowly accumulating litre may not. Most acute pericarditis in high-income settings is idiopathic or presumed viral; tuberculosis is a leading cause worldwide.",
+    "riskFactors": {
+      "modifiable": [
+        "Viral infection",
+        "Tuberculosis and other infections",
+        "Uraemia in untreated renal failure",
+        "Cardiac surgery and percutaneous procedures",
+        "Chest radiotherapy",
+        "Certain drugs causing drug-induced lupus"
+      ],
+      "nonModifiable": [
+        "Autoimmune disease such as lupus and rheumatoid arthritis",
+        "Malignancy, particularly lung and breast cancer and lymphoma",
+        "Recent myocardial infarction",
+        "Chest trauma",
+        "Male sex and younger age for idiopathic pericarditis"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Pericardial inflammation",
+        "text": "An infectious, autoimmune, metabolic or traumatic insult inflames the pericardial layers. Inflamed surfaces rub together, producing a friction rub and sharp pleuritic pain."
+      },
+      {
+        "title": "Pain referral",
+        "text": "Inflammation irritating the adjacent diaphragmatic pleura stimulates the phrenic nerve, referring pain to the trapezius ridge — a highly specific feature."
+      },
+      {
+        "title": "Effusion formation",
+        "text": "Inflammation increases capillary permeability and fluid exudation into the pericardial space."
+      },
+      {
+        "title": "Rising intrapericardial pressure",
+        "text": "The parietal pericardium is relatively non-compliant acutely. Once the pericardial reserve volume is exceeded, further fluid causes a steep rise in intrapericardial pressure."
+      },
+      {
+        "title": "Tamponade physiology",
+        "text": "Raised pressure compresses the thin-walled right-sided chambers, limiting diastolic filling. Filling pressures equalise across chambers, stroke volume falls, and compensatory tachycardia and vasoconstriction maintain output until decompensation."
+      },
+      {
+        "title": "Enhanced ventricular interdependence",
+        "text": "With a fixed total cardiac volume, inspiratory increase in right ventricular filling displaces the septum leftwards and reduces left ventricular filling — producing pulsus paradoxus."
+      },
+      {
+        "title": "Constriction",
+        "text": "Chronic inflammation causes pericardial fibrosis, thickening and calcification. Early diastolic filling is unimpeded but stops abruptly when the pericardial limit is reached, producing the dip-and-plateau pressure waveform and a pericardial knock."
+      }
+    ],
+    "anatomyInvolved": [
+      "Fibrous and serous pericardium and the pericardial space",
+      "Right atrium and right ventricle, the first chambers to collapse in tamponade",
+      "Phrenic nerves running on the lateral pericardium",
+      "Great vessels within the pericardial reflections",
+      "Systemic and pulmonary venous return"
+    ],
+    "relatedStructures": [
+      "right-atrium",
+      "right-ventricle",
+      "inferior-vena-cava",
+      "left-ventricle"
+    ],
+    "physiologyChanges": [
+      "Raised intrapericardial pressure with equalisation of diastolic pressures across chambers",
+      "Reduced ventricular filling and stroke volume",
+      "Exaggerated ventricular interdependence causing pulsus paradoxus",
+      "Elevated jugular venous pressure with a prominent x descent in tamponade and a prominent y descent in constriction",
+      "Kussmaul's sign in constriction — a paradoxical inspiratory rise in JVP",
+      "Dip-and-plateau (square root sign) ventricular pressure waveform in constriction"
+    ],
+    "progression": [
+      {
+        "stage": "Acute pericarditis",
+        "text": "Symptoms lasting under four to six weeks; most resolve completely with treatment."
+      },
+      {
+        "stage": "Incessant or recurrent",
+        "text": "Symptoms persisting beyond four to six weeks, or recurring after a symptom-free interval — recurrence affects a substantial minority."
+      },
+      {
+        "stage": "Effusion and tamponade",
+        "text": "Accumulating fluid with progressive haemodynamic compromise; a medical emergency requiring drainage."
+      },
+      {
+        "stage": "Constrictive pericarditis",
+        "text": "Chronic fibrosis and calcification producing right heart failure with preserved systolic function."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Sharp, pleuritic central chest pain, worse lying flat and relieved by sitting forward",
+        "Pain radiating to the trapezius ridge — highly specific for pericardial inflammation",
+        "Fever and viral prodrome",
+        "Breathlessness, particularly with effusion or constriction",
+        "Fatigue, oedema and abdominal swelling in constriction"
+      ],
+      "signs": [
+        "Pericardial friction rub — scratchy, best heard at the left sternal edge leaning forward",
+        "In tamponade: Beck's triad of hypotension, raised JVP and muffled heart sounds",
+        "Pulsus paradoxus — an inspiratory fall in systolic pressure of more than 10 mmHg",
+        "Tachycardia and signs of poor perfusion",
+        "In constriction: raised JVP with prominent y descent, Kussmaul's sign, pericardial knock, hepatomegaly and ascites out of proportion to peripheral oedema"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "ECG",
+        "findings": "In acute pericarditis, widespread concave (saddle-shaped) ST elevation with PR depression, and PR elevation in aVR. Electrical alternans and low voltage suggest a large effusion."
+      },
+      {
+        "modality": "Echocardiography",
+        "findings": "The key test — effusion size, diastolic right atrial and right ventricular collapse, exaggerated respiratory variation in transvalvular flows, and a plethoric IVC in tamponade."
+      },
+      {
+        "modality": "Inflammatory markers and troponin",
+        "findings": "Raised CRP supports the diagnosis and guides treatment duration; troponin elevation indicates accompanying myocarditis."
+      },
+      {
+        "modality": "Chest radiograph",
+        "findings": "A globular, water-bottle cardiac silhouette with large effusions; pericardial calcification in chronic constriction."
+      },
+      {
+        "modality": "Cardiac CT and MRI",
+        "findings": "Pericardial thickening, calcification and inflammation with late gadolinium enhancement; particularly valuable in constriction."
+      },
+      {
+        "modality": "Pericardiocentesis with fluid analysis",
+        "findings": "Both therapeutic in tamponade and diagnostic — cytology, culture, adenosine deaminase and mycobacterial testing."
+      }
+    ],
+    "complications": [
+      "Cardiac tamponade",
+      "Recurrent pericarditis",
+      "Constrictive pericarditis",
+      "Myopericarditis with ventricular dysfunction and arrhythmia",
+      "Complications of pericardiocentesis including cardiac perforation"
+    ],
+    "treatment": {
+      "principles": "Most acute pericarditis is treated with anti-inflammatory therapy, and adding colchicine substantially reduces recurrence. Tamponade requires drainage, not diuretics — reducing preload in tamponade worsens the haemodynamics. Constriction is treated definitively by pericardiectomy. Educational summary only.",
+      "groups": [
+        {
+          "name": "Anti-inflammatory therapy",
+          "detail": "NSAIDs or aspirin at anti-inflammatory doses with tapering guided by symptoms and CRP."
+        },
+        {
+          "name": "Colchicine",
+          "detail": "Added to first-line therapy, it roughly halves the risk of recurrence."
+        },
+        {
+          "name": "Corticosteroids and immunotherapy",
+          "detail": "Reserved for specific indications, since steroids increase recurrence risk; interleukin-1 blockers are used in refractory recurrent disease."
+        },
+        {
+          "name": "Pericardiocentesis",
+          "detail": "Urgent, echo-guided drainage for tamponade; also diagnostic in suspected malignant or tuberculous effusion."
+        },
+        {
+          "name": "Pericardial window and pericardiectomy",
+          "detail": "Surgical drainage for recurrent effusion and pericardiectomy for established constriction."
+        },
+        {
+          "name": "Treating the underlying cause",
+          "detail": "Antituberculous therapy, dialysis for uraemic pericarditis, oncological treatment for malignant effusion."
+        },
+        {
+          "name": "Activity restriction",
+          "detail": "Exercise restriction until symptoms resolve and markers normalise, particularly if there is myocardial involvement."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Pericarditic pain is pleuritic, worse lying flat, relieved sitting forward, and may radiate to the trapezius ridge.",
+      "Widespread saddle-shaped ST elevation with PR depression distinguishes it from the regional changes of infarction.",
+      "In tamponade the rate of fluid accumulation matters far more than the volume.",
+      "Beck's triad and pulsus paradoxus are the bedside hallmarks of tamponade.",
+      "Tamponade is preload-dependent — treat with drainage, never with diuretics or vasodilators.",
+      "Colchicine substantially reduces the risk of recurrent pericarditis.",
+      "Constriction causes right heart failure with normal systolic function and shows Kussmaul's sign."
+    ],
+    "references": [
+      "braunwald",
+      "esc-guidelines-hub",
+      "aha-professional",
+      "guyton"
+    ],
+    "relatedKeyPoints": [
+      "ecg-essentials",
+      "cardiovascular-examination",
+      "hemodynamics",
+      "cardiac-imaging"
+    ]
+  },
+  {
+    "id": "infective-endocarditis",
+    "name": "Infective Endocarditis",
+    "abbr": "IE",
+    "categoryId": "endocardial",
+    "featured": false,
+    "animationId": "infective-endocarditis",
+    "tagline": "Microbial infection of the endocardial surface, usually a valve, producing vegetations that destroy tissue and embolise systemically.",
+    "overview": "Infective endocarditis is infection of the endocardium, most commonly involving the cardiac valves. It begins where endothelial damage allows a sterile platelet–fibrin thrombus to form; transient bacteraemia then seeds this nidus, and organisms proliferate within a growing vegetation that is partly protected from host defences and antibiotics. The consequences are threefold: local destruction with valve regurgitation and abscess, systemic embolisation of infected material, and immune complex phenomena. Despite modern therapy it remains a serious disease with substantial mortality, and its epidemiology has shifted towards older patients, healthcare-associated infection, prosthetic valves and intracardiac devices.",
+    "riskFactors": {
+      "modifiable": [
+        "Injection drug use",
+        "Indwelling intravascular catheters and haemodialysis access",
+        "Poor dental hygiene and untreated dental sepsis",
+        "Invasive procedures causing bacteraemia",
+        "Immunosuppression"
+      ],
+      "nonModifiable": [
+        "Prosthetic heart valves and prior valve repair with prosthetic material",
+        "Previous infective endocarditis",
+        "Congenital heart disease, especially cyanotic and repaired lesions with residual defects",
+        "Rheumatic and degenerative valve disease",
+        "Intracardiac devices such as pacemakers and defibrillators",
+        "Increasing age"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Endothelial injury",
+        "text": "Turbulent flow across an abnormal valve, a jet lesion, or direct trauma from a catheter or lead damages the endocardial surface."
+      },
+      {
+        "title": "Sterile vegetation formation",
+        "text": "Platelets and fibrin deposit at the site of injury, forming non-bacterial thrombotic endocarditis — the nidus for infection."
+      },
+      {
+        "title": "Bacteraemia and adherence",
+        "text": "Organisms entering the bloodstream from the mouth, skin, gut or a catheter adhere to the thrombus using surface adhesins. Staphylococcus aureus can also adhere to intact endothelium."
+      },
+      {
+        "title": "Vegetation growth",
+        "text": "Bacteria proliferate and are progressively encased in fibrin and platelets, sheltered from neutrophils and achieving high local density — which is why prolonged, bactericidal, parenteral therapy is required."
+      },
+      {
+        "title": "Local destruction",
+        "text": "The infection erodes leaflets, causing perforation and chordal rupture with acute regurgitation, and may extend into surrounding tissue to form abscesses, pseudoaneurysms and fistulae."
+      },
+      {
+        "title": "Conduction involvement",
+        "text": "Aortic root abscess extending towards the membranous septum can interrupt the bundle of His, so a new conduction abnormality is an important warning sign."
+      },
+      {
+        "title": "Systemic embolisation",
+        "text": "Fragments of vegetation embolise — to the brain, spleen, kidneys and limbs from left-sided disease, and to the lungs from right-sided disease — causing infarction, abscess and mycotic aneurysm."
+      },
+      {
+        "title": "Immune phenomena",
+        "text": "Circulating immune complexes deposit in tissues, producing glomerulonephritis, Osler's nodes and Roth spots."
+      }
+    ],
+    "anatomyInvolved": [
+      "Cardiac valves, particularly mitral and aortic on the left and tricuspid on the right",
+      "Valve annuli and the aortic root, where abscesses form",
+      "Chordae tendineae and leaflet tissue",
+      "Interventricular septum and conduction system adjacent to the aortic root",
+      "Intracardiac devices and prosthetic material",
+      "Distant organs affected by embolisation"
+    ],
+    "relatedStructures": [
+      "mitral-valve",
+      "aortic-valve",
+      "tricuspid-valve",
+      "bundle-of-his",
+      "left-atrium"
+    ],
+    "physiologyChanges": [
+      "Acute valvular regurgitation with a rapid rise in filling pressures",
+      "Reduced forward cardiac output in severe regurgitation",
+      "Systemic inflammatory response with fever and vasodilatation",
+      "Conduction disturbance from perivalvular extension",
+      "Embolic obstruction of distal arterial beds"
+    ],
+    "progression": [
+      {
+        "stage": "Predisposing lesion",
+        "text": "An abnormal or prosthetic valve, device lead, or damaged endothelium provides the substrate."
+      },
+      {
+        "stage": "Early infection",
+        "text": "Fever, malaise and non-specific symptoms — often mistaken for a viral illness, delaying diagnosis."
+      },
+      {
+        "stage": "Established endocarditis",
+        "text": "Vegetations enlarge, murmurs appear or change, and embolic and immune phenomena develop."
+      },
+      {
+        "stage": "Complicated disease",
+        "text": "Heart failure from acute regurgitation, perivalvular abscess, conduction block, stroke or persistent bacteraemia."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Fever, often with rigors and night sweats",
+        "Malaise, fatigue, anorexia and weight loss",
+        "Breathlessness from valvular regurgitation and heart failure",
+        "Focal neurological symptoms from embolic stroke",
+        "Back pain from vertebral osteomyelitis or discitis",
+        "Symptoms may be indolent over weeks in subacute disease"
+      ],
+      "signs": [
+        "Fever with a new or changed regurgitant murmur — the classic combination",
+        "Signs of heart failure in significant regurgitation",
+        "Splinter haemorrhages, Janeway lesions (painless palmar macules) and Osler's nodes (painful digital pulp nodules)",
+        "Roth spots on fundoscopy",
+        "Splenomegaly and haematuria",
+        "Peripheral stigmata are now uncommon; their absence never excludes the diagnosis"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Blood cultures",
+        "findings": "At least three sets from separate venepuncture sites before antibiotics — the single most important investigation. Do not delay culture collection."
+      },
+      {
+        "modality": "Transthoracic echocardiography",
+        "findings": "First-line imaging for vegetations, regurgitation and ventricular function; a normal study does not exclude the diagnosis."
+      },
+      {
+        "modality": "Transoesophageal echocardiography",
+        "findings": "Substantially more sensitive, and essential for prosthetic valves, suspected abscess and negative but clinically suspicious transthoracic studies."
+      },
+      {
+        "modality": "Diagnostic criteria",
+        "findings": "The modified Duke criteria combine microbiological, imaging and clinical evidence to classify definite, possible and rejected endocarditis."
+      },
+      {
+        "modality": "Cross-sectional and nuclear imaging",
+        "findings": "Cardiac CT for perivalvular complications; PET-CT and labelled leucocyte scintigraphy for prosthetic valve and device infection and for embolic foci."
+      },
+      {
+        "modality": "Baseline and serial ECG",
+        "findings": "A new conduction abnormality suggests perivalvular abscess and warrants urgent reassessment."
+      }
+    ],
+    "complications": [
+      "Acute severe valvular regurgitation and heart failure — the commonest cause of death",
+      "Perivalvular abscess, pseudoaneurysm and fistula",
+      "Complete heart block",
+      "Embolic stroke and intracranial mycotic aneurysm",
+      "Splenic and renal infarction and abscess",
+      "Immune complex glomerulonephritis",
+      "Persistent or relapsing infection",
+      "Prosthetic valve dehiscence"
+    ],
+    "treatment": {
+      "principles": "Management requires prolonged bactericidal parenteral antibiotics guided by cultures and susceptibilities, delivered through an endocarditis team, with early identification of patients who need surgery. The main indications for surgery are heart failure from valve dysfunction, uncontrolled infection, and prevention of embolism. Educational summary only.",
+      "groups": [
+        {
+          "name": "Antimicrobial therapy",
+          "detail": "Prolonged, high-dose, bactericidal parenteral regimens selected by organism and valve type, typically for several weeks."
+        },
+        {
+          "name": "Endocarditis team management",
+          "detail": "Multidisciplinary care with cardiology, cardiac surgery, microbiology, infectious diseases and imaging — associated with better outcomes."
+        },
+        {
+          "name": "Surgery",
+          "detail": "Valve repair or replacement for heart failure, uncontrolled or resistant infection, abscess, or large mobile vegetations with high embolic risk."
+        },
+        {
+          "name": "Device removal",
+          "detail": "Complete extraction of infected pacemaker or defibrillator systems is generally required for cure."
+        },
+        {
+          "name": "Source control",
+          "detail": "Dental assessment and treatment, removal of infected catheters and drainage of metastatic abscesses."
+        },
+        {
+          "name": "Prevention",
+          "detail": "Meticulous oral hygiene for all at-risk patients, with antibiotic prophylaxis before defined dental procedures restricted to the highest-risk groups."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Fever plus a new regurgitant murmur is endocarditis until proven otherwise.",
+      "Take at least three sets of blood cultures from separate sites before starting antibiotics.",
+      "A normal transthoracic echocardiogram does not exclude the diagnosis — proceed to transoesophageal imaging when suspicion is high.",
+      "The modified Duke criteria combine microbiological, imaging and clinical evidence.",
+      "A new conduction abnormality suggests aortic root abscess extending towards the bundle of His.",
+      "Heart failure from valve destruction, not sepsis, is the commonest cause of death.",
+      "Right-sided endocarditis embolises to the lungs; left-sided disease embolises systemically."
+    ],
+    "references": [
+      "esc-guidelines-hub",
+      "aha-professional",
+      "braunwald",
+      "ncbi-bookshelf"
+    ],
+    "relatedKeyPoints": [
+      "valvular-disease",
+      "cardiovascular-examination",
+      "cardiac-imaging"
+    ]
+  },
+  {
+    "id": "rheumatic-heart-disease",
+    "name": "Rheumatic Heart Disease",
+    "abbr": "RHD",
+    "categoryId": "endocardial",
+    "featured": false,
+    "animationId": "rheumatic-heart-disease",
+    "tagline": "Chronic valvular damage following acute rheumatic fever — a preventable disease that remains a leading cause of cardiovascular death in young people worldwide.",
+    "overview": "Rheumatic heart disease is the chronic sequel of acute rheumatic fever, an autoimmune response to group A streptococcal pharyngitis. Molecular mimicry between streptococcal antigens and human tissue produces a multisystem inflammatory illness, and it is the carditis component that leaves permanent damage. The mitral valve is affected most often, followed by the aortic valve. Damage accumulates with each recurrence, which is why long-term secondary antibiotic prophylaxis is the single most effective intervention. It is a disease of poverty and crowding, and its persistence is a marker of health inequity rather than of clinical inevitability.",
+    "riskFactors": {
+      "modifiable": [
+        "Untreated or inadequately treated streptococcal pharyngitis",
+        "Household crowding and poor housing",
+        "Limited access to primary healthcare",
+        "Non-adherence to secondary prophylaxis",
+        "Malnutrition"
+      ],
+      "nonModifiable": [
+        "Age 5–15 years at the time of acute rheumatic fever",
+        "Genetic susceptibility including HLA associations",
+        "Family history of rheumatic fever",
+        "Living in an endemic region",
+        "Prior episode of acute rheumatic fever"
+      ]
+    },
+    "pathophysiology": [
+      {
+        "title": "Streptococcal pharyngitis",
+        "text": "Infection with group A Streptococcus pyogenes, particularly rheumatogenic M-protein strains, in a susceptible host."
+      },
+      {
+        "title": "Molecular mimicry",
+        "text": "Antibodies and T cells raised against streptococcal M protein and carbohydrate cross-react with human proteins including cardiac myosin and valvular laminin."
+      },
+      {
+        "title": "Acute rheumatic fever",
+        "text": "Two to four weeks later a multisystem illness develops — carditis, migratory polyarthritis, chorea, erythema marginatum and subcutaneous nodules — recognised using the revised Jones criteria."
+      },
+      {
+        "title": "Acute carditis",
+        "text": "Pancarditis affects endocardium, myocardium and pericardium. Valvular inflammation with verrucous vegetations along the leaflet closure lines causes acute regurgitation, typically mitral."
+      },
+      {
+        "title": "Aschoff bodies",
+        "text": "Characteristic granulomatous lesions with Anitschkow cells appear in the myocardium — the histological signature of rheumatic carditis."
+      },
+      {
+        "title": "Chronic scarring",
+        "text": "Over years, healing produces commissural fusion, leaflet thickening and calcification, and chordal shortening and fusion, converting regurgitation into predominant stenosis."
+      },
+      {
+        "title": "Effect of recurrence",
+        "text": "Each further episode of acute rheumatic fever adds damage, so the cumulative burden depends heavily on whether recurrences are prevented."
+      }
+    ],
+    "anatomyInvolved": [
+      "Mitral valve — involved in the great majority of cases",
+      "Aortic valve, the second most commonly affected",
+      "Tricuspid valve, usually only with left-sided disease",
+      "Chordae tendineae and commissures",
+      "Myocardium and pericardium in the acute phase",
+      "Left atrium, which dilates as mitral disease progresses"
+    ],
+    "relatedStructures": [
+      "mitral-valve",
+      "aortic-valve",
+      "tricuspid-valve",
+      "left-atrium"
+    ],
+    "physiologyChanges": [
+      "Acute valvular regurgitation during the acute carditis phase",
+      "Progressive mitral stenosis with a transmitral diastolic gradient over years",
+      "Left atrial hypertension and dilatation",
+      "Pulmonary venous and later pulmonary arterial hypertension",
+      "Right ventricular pressure overload with secondary tricuspid regurgitation"
+    ],
+    "progression": [
+      {
+        "stage": "Streptococcal pharyngitis",
+        "text": "The precipitating infection, often mild and untreated."
+      },
+      {
+        "stage": "Acute rheumatic fever",
+        "text": "Multisystem illness two to four weeks later, with carditis in a substantial proportion."
+      },
+      {
+        "stage": "Latent period",
+        "text": "Years to decades of clinically silent progression as scarring develops."
+      },
+      {
+        "stage": "Chronic rheumatic heart disease",
+        "text": "Established mitral stenosis, mixed valve disease, atrial fibrillation, pulmonary hypertension and heart failure — often presenting in early adulthood."
+      }
+    ],
+    "clinical": {
+      "symptoms": [
+        "Sore throat weeks before the acute illness, often forgotten by the patient",
+        "In acute rheumatic fever: fever, migratory large-joint arthritis, and involuntary movements in Sydenham's chorea",
+        "In chronic disease: exertional breathlessness, orthopnoea and fatigue",
+        "Palpitations from atrial fibrillation",
+        "Haemoptysis and, occasionally, embolic stroke as a presenting event"
+      ],
+      "signs": [
+        "In acute carditis: new murmur, tachycardia out of proportion to fever, pericardial rub, erythema marginatum and subcutaneous nodules",
+        "In chronic mitral stenosis: loud S1, opening snap and a mid-diastolic rumble, with malar flush",
+        "In chronic mitral regurgitation: apical pansystolic murmur radiating to the axilla",
+        "Irregularly irregular pulse with atrial fibrillation",
+        "Signs of pulmonary hypertension and right heart failure in advanced disease"
+      ]
+    },
+    "investigations": [
+      {
+        "modality": "Echocardiography",
+        "findings": "The cornerstone — characteristic morphology with commissural fusion, leaflet thickening and restricted posterior leaflet motion; also detects subclinical carditis in screening programmes."
+      },
+      {
+        "modality": "Streptococcal evidence",
+        "findings": "Throat culture, rapid antigen testing, and rising antistreptolysin O or anti-DNase B titres supporting recent infection."
+      },
+      {
+        "modality": "Inflammatory markers",
+        "findings": "Raised ESR and CRP as minor Jones criteria in acute rheumatic fever."
+      },
+      {
+        "modality": "ECG",
+        "findings": "PR prolongation as a minor criterion in acute disease; P mitrale and atrial fibrillation in chronic mitral disease."
+      },
+      {
+        "modality": "Chest radiograph",
+        "findings": "Left atrial enlargement and pulmonary venous congestion in chronic mitral stenosis."
+      },
+      {
+        "modality": "Jones criteria application",
+        "findings": "Revised criteria with separate thresholds for low-risk and moderate-to-high-risk populations, incorporating echocardiographic carditis."
+      }
+    ],
+    "complications": [
+      "Mitral stenosis and regurgitation, and aortic valve disease",
+      "Atrial fibrillation with thromboembolism and stroke",
+      "Pulmonary hypertension and right heart failure",
+      "Infective endocarditis on damaged valves",
+      "Recurrent acute rheumatic fever with cumulative damage",
+      "Complications in pregnancy, when the haemodynamic load is poorly tolerated",
+      "Premature death in young adults"
+    ],
+    "treatment": {
+      "principles": "Primary prevention means treating streptococcal pharyngitis promptly. Secondary prevention with long-term antibiotic prophylaxis prevents recurrence and is the single most effective measure for reducing the burden of chronic disease. Established valve disease is managed as for the specific lesion. Educational summary only.",
+      "groups": [
+        {
+          "name": "Primary prevention",
+          "detail": "Prompt diagnosis and antibiotic treatment of group A streptococcal pharyngitis."
+        },
+        {
+          "name": "Acute rheumatic fever management",
+          "detail": "Antibiotic eradication of the organism, anti-inflammatory therapy for arthritis and carditis, and management of heart failure and chorea."
+        },
+        {
+          "name": "Secondary prophylaxis",
+          "detail": "Long-term intramuscular benzathine penicillin, with duration determined by age and the severity of carditis — the intervention with the greatest impact."
+        },
+        {
+          "name": "Valve intervention",
+          "detail": "Percutaneous mitral balloon commissurotomy where anatomy is suitable, otherwise surgical repair or replacement."
+        },
+        {
+          "name": "Arrhythmia and anticoagulation",
+          "detail": "Rate or rhythm control with warfarin anticoagulation for atrial fibrillation in rheumatic mitral stenosis."
+        },
+        {
+          "name": "Public health measures",
+          "detail": "Echocardiographic screening in endemic populations, improved housing, and registers to support prophylaxis adherence."
+        }
+      ]
+    },
+    "keyTakeaways": [
+      "Caused by an autoimmune response to group A streptococcal pharyngitis through molecular mimicry.",
+      "The mitral valve is most commonly affected; commissural fusion produces the characteristic stenosis.",
+      "Aschoff bodies are the histological hallmark of rheumatic carditis.",
+      "Diagnosis of acute rheumatic fever uses the revised Jones criteria, with population-specific thresholds.",
+      "Each recurrence adds damage — secondary prophylaxis is the single most effective intervention.",
+      "It remains a major cause of cardiovascular death in young people in many parts of the world.",
+      "Rheumatic mitral stenosis with atrial fibrillation requires warfarin rather than a DOAC."
+    ],
+    "references": [
+      "who-cvd",
+      "aha-professional",
+      "aha-vhd-2020",
+      "braunwald",
+      "ncbi-bookshelf"
+    ],
+    "relatedKeyPoints": [
+      "valvular-disease",
+      "heart-sounds",
+      "cardiovascular-examination"
+    ]
+  }
+]
