@@ -130,7 +130,7 @@
     "position": "Medical team member",
     "role": "member",
     "teamId": "Medical",
-    "photo": "/brand/Shahed.jpeg",
+    "photo": "/brand/Shahed1.png",
     "bio": "I am a sixth-year medical student passionate about cardiovascular medicine, medical education, and student engagement. Through the Cardiology Interest Group, with the aim of making cardiovascular knowledge more accessible and engaging for students and the wider community.",
     "academicInterests": [
       "Medical Education",
@@ -181,19 +181,17 @@
     "position": "Medical team member",
     "role": "member",
     "teamId": "Medical",
-    "photo": null,
-    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "photo": "/Brand/Eid1.png",
+    "bio": "N/A",
     "academicInterests": [
-      "Clinical reasoning",
-      "Curriculum design",
-      "Assessment design"
+      "N/A"
+      
     ],
     "cardiovascularInterests": [
-      "Cardiac physiology",
-      "Cardiovascular pharmacology",
-      "Cardiac anatomy"
-    ],
-    "year": "Year — placeholder",
+      "N/A"    ],
+
+
+    "year": "N/A",
     "socials": {
       "email": "",
       "x": ""
@@ -207,18 +205,14 @@
     "role": "team-head",
     "teamId": "research",
     "photo": null,
-    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "bio": "N/A",
     "academicInterests": [
-      "Clinical research methods",
-      "Biostatistics",
-      "Evidence-based medicine"
+      "N/A"
     ],
     "cardiovascularInterests": [
-      "Preventive cardiology",
-      "Heart failure outcomes",
-      "Cardiovascular epidemiology"
+      "N/A"
     ],
-    "year": "Year — placeholder",
+    "year": "N/A",
     "socials": {
       "email": "",
       "x": ""
@@ -231,21 +225,21 @@
     "position": "Research Team Member",
     "role": "member",
     "teamId": "research",
-    "photo": null,
-    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "photo": "/brand/Rahaf1.png",
+    "bio": "I am a sixth-year medical student with a strong interest in cardiovascular medicine and clinical research. As a Research Leader at CIG, I contribute to developing and coordinating cardiovascular research projects and supporting student research initiatives.",
     "academicInterests": [
-      "Biostatistics",
-      "Epidemiology",
-      "Clinical research methods"
+      "Clinical research",
+      "Medical Education",
+      "Evidence-Based Medicine"
     ],
     "cardiovascularInterests": [
-      "Cardiovascular epidemiology",
-      "Arrhythmia research",
-      "Heart failure outcomes"
+      "Preventive Cardiology",
+      "Heart Failure",
+      "Cardiovascular Research"
     ],
-    "year": "Year — placeholder",
+    "year": "6th Year",
     "socials": {
-      "email": "",
+      "email": "Rahafalmahdi210@gmail.com",
       "x": ""
     },
     "placeholder": true
@@ -281,19 +275,15 @@
     "position": "Research Team Member",
     "role": "member",
     "teamId": "research",
-    "photo": null,
-    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "photo": "/brand/Jwan1.png",
+    "bio": "N/A",
     "academicInterests": [
-      "Epidemiology",
-      "Clinical research methods",
-      "Evidence-based medicine"
+      "N/A"
     ],
     "cardiovascularInterests": [
-      "Arrhythmia research",
-      "Heart failure outcomes",
-      "Cardiac imaging research"
+      "N/A"
     ],
-    "year": "Year — placeholder",
+    "year": "N/A",
     "socials": {
       "email": "",
       "x": ""
@@ -330,19 +320,15 @@
     "position": "Head — Planning Team",
     "role": "team-head",
     "teamId": "Planning",
-    "photo": null,
-    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "photo": "/brand/Mamoon1.png",
+    "bio": "N/A",
     "academicInterests": [
-      "Programme design",
-      "Student engagement",
-      "Conference organisation"
+      "N/A"
     ],
     "cardiovascularInterests": [
-      "Interventional cardiology",
-      "Cardiac surgery",
-      "Emergency cardiology"
+      "N/A"
     ],
-    "year": "Year — placeholder",
+    "year": "N/A",
     "socials": {
       "email": "",
       "x": ""
@@ -601,18 +587,14 @@
     "role": "member",
     "teamId": "Journal",
     "photo": null,
-    "bio": "Placeholder biography — replace with this person's own words. Two or three sentences describing their year of study, what drew them to cardiovascular medicine, and what they contribute to CIG.",
+    "bio": "N/A",
     "academicInterests": [
-      "Simulation-based education",
-      "Resuscitation",
-      "Clinical skills teaching"
+      "N/A"
     ],
     "cardiovascularInterests": [
-      "Acute coronary syndromes",
-      "Critical care cardiology",
-      "Echocardiography"
+      "N/A"
     ],
-    "year": "Year — placeholder",
+    "year": "N/A",
     "socials": {
       "email": "",
       "x": ""
@@ -719,31 +701,7 @@
     },
     "placeholder": true
   },
-  {
-    "id": "m-Affairs-1",
-    "name": "Ibrahim Maaliah",
-    "position": "Affairs Team Member",
-    "role": "member",
-    "teamId": "Affairs",
-    "photo": "/brand/Ibrahim1.png",
-    "bio": "Im a second-year medical student with a strong interest in cardiovascular medicine and a passion for expanding my knowledge in the field. As a member of the Affairs Team, I have built valuable connections with numerous doctors and healthcare professionals. I believe that learning is a collective journey, enriched by sharing knowledge, experiences, and perspectives with others",
-    "academicInterests": [
-      "Voluntary work",
-      "Medical education",
-      "Clinical research"
-    ],
-    "cardiovascularInterests": [
-      "Heart Failure",
-      "Interventional Cardiology"
-      
-    ],
-    "year": "2nd Year",
-    "socials": {
-      "email": "maaliahibrahim@gmail.com",
-      "x": ""
-    },
-    "placeholder": true
-  } ,
+  
  
 {
 "id": "head-FRC",

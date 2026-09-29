@@ -10,7 +10,7 @@
     "landmark": "Right infraclavicular fossa, or the right forearm/wrist",
     "howToFind": "Feel the lateral third of the right clavicle and place the electrode just below it over the deltopectoral groove, on flat skin away from bone and large muscle bellies.",
     "why": "RA is the negative pole of leads I and II and the positive pole of aVR. Because the limb leads record the frontal plane, moving this electrode rotates the entire calculated axis — the commonest reason a computer reports an 'axis deviation' that is not real.",
-    "views": "Frontal plane — contributes to leads I, II, III, aVR and aVL",
+    "views": "Frontal plane — contributes to leads I, II, aVR, aVL, and aVF",
     "pitfalls": [
       "Swapping RA and LA inverts lead I and produces a global negative in lead I with an upright aVR — a classic artefact mistaken for dextrocardia",
       "Placing it over the deltoid muscle belly adds movement artefact",
@@ -29,7 +29,7 @@
     "landmark": "Left infraclavicular fossa, or the left forearm/wrist",
     "howToFind": "Mirror the right arm electrode: just below the lateral third of the left clavicle, on flat skin.",
     "why": "LA is the positive pole of lead I and the negative pole of lead III. With RA and LL it forms Einthoven's triangle, whose geometry is the basis of the entire frontal-plane axis calculation.",
-    "views": "Frontal plane — contributes to leads I, II, III, aVR and aVL",
+    "views": "Frontal plane — contributes to leads I, III, aVR, aVL, and aVF",
     "pitfalls": [
       "Reversal with RA is the single commonest limb-lead error",
       "Asymmetric placement between the two arms distorts the axis",
@@ -52,7 +52,7 @@
     "pitfalls": [
       "Often blamed for artefact when in fact it is the electrode preventing it",
       "Poor skin contact here degrades every lead at once",
-      "Reversal with LL produces a near-flat lead II"
+      "Reversal with RA produces a near-flat lead II"
     ],
     "order": 3
   },
@@ -69,7 +69,7 @@
     "why": "LL is the positive pole of leads II, III and aVF — the three inferior leads. Together they look at the inferior wall of the left ventricle, so this electrode is what makes an inferior infarct visible.",
     "views": "Inferior wall — leads II, III and aVF",
     "pitfalls": [
-      "Reversal with RL flattens lead II",
+      "Reversal with RL is undetectable (produces essentially no change",
       "Placing it too high on the abdomen adds respiratory baseline wander",
       "Consistency matters for serial comparison in a patient with evolving inferior changes"
     ],
