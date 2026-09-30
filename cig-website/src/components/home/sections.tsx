@@ -167,16 +167,7 @@ export const EventsSection = ({ limit }: { limit?: number }) => {
           title="Upcoming sessions & events"
           lede="Sessions, workshops, journal clubs and clinical exposure days that CIG runs through the academic year."
         />
-        {anyPlaceholder ? (
-          <div className="disclaimer" style={{ marginBlock: 'var(--s-6)' }}>
-            <Icon name="info" size={16} />
-            <p>
-              <strong>Placeholder schedule.</strong> The entries below describe the shape of a CIG
-              event rather than announcing a real one. No date, venue or speaker is claimed. CIG
-              members replace them in <code className="mono">content/events.json</code>.
-            </p>
-          </div>
-        ) : null}
+       
         <div className="activity-grid" style={{ marginTop: 'var(--s-6)' }}>
           {shown.map((e, i) => (
             <Reveal key={e.id} delay={((i % 4) + 1) as 1}>
