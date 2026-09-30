@@ -9,18 +9,18 @@
     {
       "id": "webinar-1",
       "title": "Cardiology Webinar 1",
-      "category": "Journal Club",
+      "category": "Journal Club , Electrophysiology",
       "topic": "Preventive Cardiology",
-      "speakers": "Dr. Author Name, Dr. Guest Speaker",
+      "speakers": "Dr. Ahmad Keelani",
       "summary": "Discussion on published research with expert doctors.",
-      "abstract": "Full background and detailed synopsis of the webinar discussion, paper analysis, and clinical implications.",
+      "abstract": "Pulsed field ablation (PFA) may overcome key limitations of radiofrequency ablation (RFA) when treating premature ventricular contractions (PVCs) in anatomically complex regions (eg, left ventricular summit or intramural outflow tract [OT]). However, the safety and efficacy of PFA in OT PVCs remain to be determined.",
       "keyFindings": [
-        "Primary outcomes and key takeaway statistics from the discussed paper.",
-        "Practical clinical application discussed by the panel."
+        "Proceural efficiency and tissue selectivity of pulsed field abalation in ventricular arrhythmia managment",
+        "Identification of current clinical evidence gaps and future research directions for PVC ablation"
       ],
-      "tags": ["prevention", "medical education", "risk factors"],
+      "tags": ["electrophysiology", "[PVC]", "Medical education"],
       "image": "/brand/webinar 1.jpeg",
-      "paperLink": "https://pubmed.ncbi.nlm.nih.gov/"
+      "paperLink": "https://www.jacc.org/doi/10.1016/j.jacep.2026.03.032"
     }
   ],
   "empty": {
