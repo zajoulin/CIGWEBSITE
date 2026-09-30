@@ -1,0 +1,48 @@
+{
+  "eyebrow": "Publication",
+  "name": "The CIG Journal",
+  "short": "Journal",
+  "title": "The CIG Journal",
+  "lede": "CIG's Journal Club brings students and expert doctors together through interactive webinars to read, analyze, and discuss published cardiovascular research.",
+  "about": "CIG's Journal Club hosts webinars with doctors and expert guest speakers to analyze and discuss already published cardiovascular research papers.",
+  "issues": [
+    {
+      "id": "webinar-1",
+      "title": "Cardiology Webinar 1",
+      "category": "Journal Club , Electrophysiology",
+      "topic": "Preventive Cardiology",
+      "speakers": "Dr. Ahmad Keelani",
+      "summary": "Discussion on published research with expert doctors.",
+      "abstract": "Pulsed field ablation (PFA) may overcome key limitations of radiofrequency ablation (RFA) when treating premature ventricular contractions (PVCs) in anatomically complex regions (eg, left ventricular summit or intramural outflow tract [OT]). However, the safety and efficacy of PFA in OT PVCs remain to be determined.",
+      "keyFindings": [
+        "Proceural efficiency and tissue selectivity of pulsed field abalation in ventricular arrhythmia managment",
+        "Identification of current clinical evidence gaps and future research directions for PVC ablation"
+      ],
+      "tags": ["electrophysiology", "[PVC]", "Medical education"],
+      "image": "/brand/webinar 1.jpeg",
+      "paperLink": "https://www.jacc.org/doi/10.1016/j.jacep.2026.03.032"
+    }
+  ],
+  "empty": {
+    "title": "Journal Club webinars are coming soon.",
+    "detail": "Upcoming interactive webinars, guest speaker announcements, and paper discussion links will appear here."
+  },
+  "sections": [
+    {
+      "id": "journal-club",
+      "title": "Journal club",
+      "text": "CIG's journal club meets through the academic year to read one cardiovascular paper properly: the question it asked, the design it chose, what the numbers actually show and what the paper does not establish. It is the training ground for everything the Journal publishes.",
+      "icon": "book",
+      "href": "/activities",
+      "cta": "See the activities programme"
+    },
+    {
+      "id": "research",
+      "title": "From research to publication",
+      "text": "Projects that begin as a CIG research idea are written up by the students who ran them. If you have a question you would like to pursue, the research team is the place to start.",
+      "icon": "microscope",
+      "href": "/research",
+      "cta": "CIG Research"
+    }
+  ]
+}
