@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run gen:content && next dev",
     "build": "npm run gen:content && next build",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
