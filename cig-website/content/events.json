@@ -20,27 +20,6 @@
     "audience": "Open to all years",
     "text": "demo",
     "placeholder": true
-  },
-  {
-    "id": "event-placeholder-3",
-    "title": "Skills workshop — placeholder",
-    "kind": "Workshop",
-    "icon": "stethoscope",
-    "when": "Placeholder — date and time",
-    "where": "Placeholder — venue",
-    "audience": "Placeholder — capacity and year groups",
-    "text": "demo",
-    "placeholder": true
-  },
-  {
-    "id": "event-placeholder-4",
-    "title": "Clinical exposure day — placeholder",
-    "kind": "Clinical exposure",
-    "icon": "eye",
-    "when": "Placeholder — date",
-    "where": "Placeholder — department",
-    "audience": "Placeholder — eligibility",
-    "text": "demo",
-    "placeholder": true
   }
+  
 ]
