@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: org.name,
     title: `${org.name} (${org.abbr}) — ${org.university.name}`,
     description: org.heroSub,
-    images: [{ url: '/brand/cig-logo.png', alt: org.crest.alt }],
+    images: [{ url: '/brand/cig-logo.png', width: 1200, height: 630, alt: org.crest.alt }],
   },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },

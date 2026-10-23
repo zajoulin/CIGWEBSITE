@@ -17,8 +17,8 @@ import { CIG_LOCKUP, CIG_MARK } from '../../data/brand.generated';
 import { org } from '../../lib/content';
 
 /** Intrinsic pixel dimensions of the inlined artwork, so nothing is stretched. */
-const LOCKUP = { width: 480, height: 536 };
-const MARK = { width: 288, height: 293 };
+const LOCKUP = { width: 480, height: 532 };
+const MARK = { width: 288, height: 292 };
 
 export interface CrestProps {
   /**
