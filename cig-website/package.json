@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run gen:content && next dev",
     "build": "npm run gen:content && next build",
-"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "deploy": "npm run build && wrangler deploy",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
@@ -23,7 +23,6 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.7",
     "@types/node": "^22.7.5",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",

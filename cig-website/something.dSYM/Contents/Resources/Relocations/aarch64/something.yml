@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/aboodajoulin/Documents/GitHub/CIGWEBSITE/cig-website/something'
+relocations:     []
+...

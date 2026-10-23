@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  // Static export: `next build` writes a plain HTML site to ./out,
+  // which Cloudflare serves directly via wrangler's assets feature.
+  output: 'export',
+  images: { unoptimized: true },
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
